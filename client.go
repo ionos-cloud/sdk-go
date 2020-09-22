@@ -428,6 +428,12 @@ func (c *APIClient) prepareRequest(
 
 	// Adding Query Param
 	query := url.Query()
+	/* adding default query params */
+	for k, v := range c.cfg.DefaultQueryParams {
+		if _, ok := queryParams[k]; !ok {
+			queryParams[k] = v
+		}
+	}
 	for k, v := range queryParams {
 		for _, iv := range v {
 			query.Add(k, iv)

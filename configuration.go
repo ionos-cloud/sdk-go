@@ -12,6 +12,7 @@ package ionossdk
 import (
 	"fmt"
 	"net/http"
+	"net/url"
 	"os"
 	"strings"
 )
@@ -76,15 +77,16 @@ type ServerConfiguration struct {
 
 // Configuration stores the configuration of the API client
 type Configuration struct {
-	BasePath      string            `json:"basePath,omitempty"`
-	Host          string            `json:"host,omitempty"`
-	Scheme        string            `json:"scheme,omitempty"`
-	DefaultHeader map[string]string `json:"defaultHeader,omitempty"`
-	UserAgent     string            `json:"userAgent,omitempty"`
-	Debug         bool              `json:"debug,omitempty"`
-	Username      string            `json:"username,omitempty"`
-	Password      string            `json:"password,omitempty"`
-	Token         string            `json:"token,omitempty"`
+	BasePath      string           	`json:"basePath,omitempty"`
+	Host          string           	`json:"host,omitempty"`
+	Scheme        string           	`json:"scheme,omitempty"`
+	DefaultHeader map[string]string	`json:"defaultHeader,omitempty"`
+	DefaultQueryParams url.Values 	`json:"defaultQueryParams,omitempty"`
+	UserAgent     string          	`json:"userAgent,omitempty"`
+	Debug         bool            	`json:"debug,omitempty"`
+	Username      string          	`json:"username,omitempty"`
+	Password      string          	`json:"password,omitempty"`
+	Token         string          	`json:"token,omitempty"`
 	Servers       []ServerConfiguration
 	HTTPClient    *http.Client
 }
@@ -94,6 +96,7 @@ func NewConfiguration(username string, password string, token string) *Configura
 	cfg := &Configuration{
 		BasePath:      "https://api.ionos.com/cloudapi/v5",
 		DefaultHeader: make(map[string]string),
+		DefaultQueryParams: url.Values{},
 		UserAgent:     "ionos-cloud-sdk-go/v5",
 		Debug:         false,
 		Username:      username,
@@ -116,6 +119,14 @@ func NewConfigurationFromEnv() *Configuration {
 // AddDefaultHeader adds a new HTTP header to the default header in the request
 func (c *Configuration) AddDefaultHeader(key string, value string) {
 	c.DefaultHeader[key] = value
+}
+
+func (c *Configuration) AddDefaultQueryParam(key string, value string) {
+	if _, ok := c.DefaultQueryParams[key]; ok {
+		c.DefaultQueryParams[key] = append(c.DefaultQueryParams[key], value)
+	} else {
+		c.DefaultQueryParams[key] = []string{value}
+	}
 }
 
 // ServerUrl returns URL based on server settings
