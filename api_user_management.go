@@ -3540,14 +3540,14 @@ You can enable or disable a given S3 key
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId
  * @param keyId The unique access key ID of the S3 key
- * @param user Modified user
+ * @param s3Key Modified S3Key
  * @param optional nil or *UmUsersS3keysPutOpts - Optional Parameters:
  * @param "Pretty" (optional.Bool) -  Controls whether response is pretty-printed (with indentation and new lines)
  * @param "Depth" (optional.Int32) -  Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on
  * @param "XContractNumber" (optional.Int32) -  Users having more than 1 contract need to provide contract number, against which all API requests should be executed
 @return S3Key
 */
-func (a *UserManagementApiService) UmUsersS3keysPut(ctx _context.Context, userId string, keyId string, user S3Key, optionals *UmUsersS3keysPutOpts) (S3Key, *APIResponse, error) {
+func (a *UserManagementApiService) UmUsersS3keysPut(ctx _context.Context, userId string, keyId string, s3Key S3Key, optionals *UmUsersS3keysPutOpts) (S3Key, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodPut
 		localVarPostBody     interface{}
@@ -3594,7 +3594,7 @@ func (a *UserManagementApiService) UmUsersS3keysPut(ctx _context.Context, userId
 		localVarHeaderParams["X-Contract-Number"] = parameterToString(optionals.XContractNumber.Value(), "")
 	}
 	// body params
-	localVarPostBody = &user
+	localVarPostBody = &s3Key
 	if ctx != nil {
 		// API Key Authentication
 		if auth, ok := ctx.Value(ContextAPIKey).(APIKey); ok {

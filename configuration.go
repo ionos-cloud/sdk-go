@@ -15,6 +15,7 @@ import (
 	"net/url"
 	"os"
 	"strings"
+	"time"
 )
 
 // contextKeys are used to identify the type of value in the context.
@@ -27,6 +28,9 @@ const (
 	IonosUsernameEnvVar = "IONOS_USERNAME"
 	IonosPasswordEnvVar = "IONOS_PASSWORD"
 	IonosTokenEnvVar    = "IONOS_TOKEN"
+	defaultMaxRetries  = 3
+	defaultWaitTime    = time.Duration(100) * time.Millisecond
+	defaultMaxWaitTime = time.Duration(2000) * time.Millisecond
 )
 
 func (c contextKey) String() string {
@@ -89,6 +93,9 @@ type Configuration struct {
 	Token         string          	`json:"token,omitempty"`
 	Servers       []ServerConfiguration
 	HTTPClient    *http.Client
+	MaxRetries      int             `json:"maxRetries,omitempty"`
+	WaitTime        time.Duration   `json:"waitTime,omitempty"`
+	MaxWaitTime     time.Duration   `json:"maxWaitTime,omitempty"`
 }
 
 // NewConfiguration returns a new Configuration object
@@ -102,6 +109,9 @@ func NewConfiguration(username string, password string, token string) *Configura
 		Username:      username,
 		Password:      password,
 		Token:         token,
+		MaxRetries:    defaultMaxRetries,
+		MaxWaitTime:   defaultMaxWaitTime,
+		WaitTime:      defaultWaitTime,
 		Servers:       []ServerConfiguration{
 			{
 				Url: "https://api.ionos.com/cloudapi/v5",

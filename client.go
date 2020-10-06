@@ -218,29 +218,92 @@ func parameterToJson(obj interface{}) (string, error) {
 
 // callAPI do the request.
 func (c *APIClient) callAPI(request *http.Request) (*http.Response, error) {
-	if c.cfg.Debug {
-	        dump, err := httputil.DumpRequestOut(request, true)
-		if err != nil {
-		        return nil, err
+	retryCount := 0
+
+	var resp *http.Response
+	var err error
+
+	for {
+
+		retryCount ++
+
+		/* we need to clone the request with every retry time because Body closes after the request */
+		var clonedRequest *http.Request = request.Clone(request.Context())
+		if request.Body != nil {
+			clonedRequest.Body, err = request.GetBody()
+			if err != nil {
+				return nil, err
+			}
 		}
-		log.Printf("\n%s\n", string(dump))
-	}
 
-	resp, err := c.cfg.HTTPClient.Do(request)
-	if err != nil {
-		return resp, err
-	}
+		if c.cfg.Debug {
+			dump, err := httputil.DumpRequestOut(clonedRequest, true)
+			if err != nil {
+				return nil, err
+			}
+			log.Printf("\ntry no: %d\n", retryCount)
+			log.Printf("%s\n", string(dump))
+		}
 
-	if c.cfg.Debug {
-		dump, err := httputil.DumpResponse(resp, true)
+		resp, err = c.cfg.HTTPClient.Do(clonedRequest)
 		if err != nil {
 			return resp, err
 		}
-		log.Printf("\n%s\n", string(dump))
+
+		if c.cfg.Debug {
+			dump, err := httputil.DumpResponse(resp, true)
+			if err != nil {
+				return resp, err
+			}
+			log.Printf("\n%s\n", string(dump))
+		}
+
+		var backoffTime time.Duration
+
+		switch resp.StatusCode {
+		case http.StatusServiceUnavailable,
+			http.StatusGatewayTimeout,
+			http.StatusBadGateway:
+			backoffTime = c.GetConfig().WaitTime
+
+		case http.StatusTooManyRequests:
+			if retryAfterSeconds := resp.Header.Get("Retry-After"); retryAfterSeconds != "" {
+				waitTime, err := time.ParseDuration(retryAfterSeconds + "s")
+				if err != nil {
+					return resp, err
+				}
+				backoffTime = waitTime
+			} else {
+				backoffTime = c.GetConfig().WaitTime
+			}
+		default:
+			return resp, err
+
+		}
+
+		if retryCount >= c.GetConfig().MaxRetries {
+			if c.cfg.Debug {
+				fmt.Printf("number of maximum retries exceeded (%d retries)\n", c.cfg.MaxRetries)
+			}
+			break
+		} else {
+			c.backOff(backoffTime)
+		}
 	}
 
 	return resp, err
 }
+
+func (c *APIClient) backOff(t time.Duration) {
+	if t > c.GetConfig().MaxWaitTime {
+		t = c.GetConfig().MaxWaitTime
+	}
+	if c.cfg.Debug {
+		fmt.Printf("sleeping %s before retrying request\n", t.String())
+	}
+	time.Sleep(t)
+}
+
 
 func (c *APIClient) WaitForRequest(ctx context.Context, path string) (*APIResponse, error) {
 

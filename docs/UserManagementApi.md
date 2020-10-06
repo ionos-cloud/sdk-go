@@ -1373,7 +1373,7 @@ Name | Type | Description  | Notes
 
 ## UmUsersS3keysPut
 
-> S3Key UmUsersS3keysPut(ctx, userId, keyId, user, optional)
+> S3Key UmUsersS3keysPut(ctx, userId, keyId, s3Key, optional)
 
 Modify a S3 key having the given key id
 
@@ -1387,7 +1387,7 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **userId** | **string**|  | 
 **keyId** | **string**| The unique access key ID of the S3 key | 
-**user** | [**S3Key**](S3Key.md)| Modified user | 
+**s3Key** | [**S3Key**](S3Key.md)| Modified S3Key | 
  **optional** | ***UmUsersS3keysPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters

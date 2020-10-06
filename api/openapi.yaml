@@ -9715,7 +9715,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/S3Key'
-        description: Modified user
+        description: Modified S3Key
         required: true
       responses:
         "202":
@@ -9761,7 +9761,7 @@ paths:
       summary: Modify a S3 key having the given key id
       tags:
       - User Management
-      x-codegen-request-body-name: User
+      x-codegen-request-body-name: S3Key
   /um/users/{userId}/s3ssourl:
     get:
       description: You can retrieve S3 object storage single signon URL for the given
