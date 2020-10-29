@@ -14054,7 +14054,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/KubernetesNodePoolProperties'
+              $ref: '#/components/schemas/KubernetesNodePool'
         description: Details of Kubernetes Node Pool
         required: true
       responses:
@@ -14096,7 +14096,7 @@ paths:
       summary: Create a Kubernetes Node Pool
       tags:
       - Kubernetes
-      x-codegen-request-body-name: KubernetesNodePoolProperties
+      x-codegen-request-body-name: KubernetesNodePool
   /k8s/{k8sClusterId}/nodepools/{nodepoolId}:
     delete:
       description: This will remove a Kubernetes Node Pool.
