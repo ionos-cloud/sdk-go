@@ -1154,7 +1154,7 @@ func (a *UserManagementApiService) UmGroupsSharesDeleteExecute(r ApiUmGroupsShar
 	return localVarReturnValue, localVarAPIResponse, nil
 }
 
-type ApiUmGroupsSharesFindByResourceRequest struct {
+type ApiUmGroupsSharesFindByResourceIdRequest struct {
 	ctx _context.Context
 	ApiService *UserManagementApiService
 	groupId string
@@ -1164,33 +1164,33 @@ type ApiUmGroupsSharesFindByResourceRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiUmGroupsSharesFindByResourceRequest) Pretty(pretty bool) ApiUmGroupsSharesFindByResourceRequest {
+func (r ApiUmGroupsSharesFindByResourceIdRequest) Pretty(pretty bool) ApiUmGroupsSharesFindByResourceIdRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiUmGroupsSharesFindByResourceRequest) Depth(depth int32) ApiUmGroupsSharesFindByResourceRequest {
+func (r ApiUmGroupsSharesFindByResourceIdRequest) Depth(depth int32) ApiUmGroupsSharesFindByResourceIdRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiUmGroupsSharesFindByResourceRequest) XContractNumber(xContractNumber int32) ApiUmGroupsSharesFindByResourceRequest {
+func (r ApiUmGroupsSharesFindByResourceIdRequest) XContractNumber(xContractNumber int32) ApiUmGroupsSharesFindByResourceIdRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiUmGroupsSharesFindByResourceRequest) Execute() (GroupShare, *APIResponse, error) {
-	return r.ApiService.UmGroupsSharesFindByResourceExecute(r)
+func (r ApiUmGroupsSharesFindByResourceIdRequest) Execute() (GroupShare, *APIResponse, error) {
+	return r.ApiService.UmGroupsSharesFindByResourceIdExecute(r)
 }
 
 /*
- * UmGroupsSharesFindByResource Retrieve a group share
+ * UmGroupsSharesFindByResourceId Retrieve a group share
  * This will retrieve the properties of a group share.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param groupId
  * @param resourceId
- * @return ApiUmGroupsSharesFindByResourceRequest
+ * @return ApiUmGroupsSharesFindByResourceIdRequest
  */
-func (a *UserManagementApiService) UmGroupsSharesFindByResource(ctx _context.Context, groupId string, resourceId string) ApiUmGroupsSharesFindByResourceRequest {
-	return ApiUmGroupsSharesFindByResourceRequest{
+func (a *UserManagementApiService) UmGroupsSharesFindByResourceId(ctx _context.Context, groupId string, resourceId string) ApiUmGroupsSharesFindByResourceIdRequest {
+	return ApiUmGroupsSharesFindByResourceIdRequest{
 		ApiService: a,
 		ctx: ctx,
 		groupId: groupId,
@@ -1202,7 +1202,7 @@ func (a *UserManagementApiService) UmGroupsSharesFindByResource(ctx _context.Con
  * Execute executes the request
  * @return GroupShare
  */
-func (a *UserManagementApiService) UmGroupsSharesFindByResourceExecute(r ApiUmGroupsSharesFindByResourceRequest) (GroupShare, *APIResponse, error) {
+func (a *UserManagementApiService) UmGroupsSharesFindByResourceIdExecute(r ApiUmGroupsSharesFindByResourceIdRequest) (GroupShare, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -1212,7 +1212,7 @@ func (a *UserManagementApiService) UmGroupsSharesFindByResourceExecute(r ApiUmGr
 		localVarReturnValue  GroupShare
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserManagementApiService.UmGroupsSharesFindByResource")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserManagementApiService.UmGroupsSharesFindByResourceId")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -1276,7 +1276,7 @@ func (a *UserManagementApiService) UmGroupsSharesFindByResourceExecute(r ApiUmGr
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "UmGroupsSharesFindByResource",
+		Operation: "UmGroupsSharesFindByResourceId",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {
@@ -4078,7 +4078,7 @@ func (a *UserManagementApiService) UmUsersS3keysDeleteExecute(r ApiUmUsersS3keys
 	return localVarReturnValue, localVarAPIResponse, nil
 }
 
-type ApiUmUsersS3keysFindByKeyRequest struct {
+type ApiUmUsersS3keysFindByKeyIdRequest struct {
 	ctx _context.Context
 	ApiService *UserManagementApiService
 	userId string
@@ -4088,33 +4088,33 @@ type ApiUmUsersS3keysFindByKeyRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiUmUsersS3keysFindByKeyRequest) Pretty(pretty bool) ApiUmUsersS3keysFindByKeyRequest {
+func (r ApiUmUsersS3keysFindByKeyIdRequest) Pretty(pretty bool) ApiUmUsersS3keysFindByKeyIdRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiUmUsersS3keysFindByKeyRequest) Depth(depth int32) ApiUmUsersS3keysFindByKeyRequest {
+func (r ApiUmUsersS3keysFindByKeyIdRequest) Depth(depth int32) ApiUmUsersS3keysFindByKeyIdRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiUmUsersS3keysFindByKeyRequest) XContractNumber(xContractNumber int32) ApiUmUsersS3keysFindByKeyRequest {
+func (r ApiUmUsersS3keysFindByKeyIdRequest) XContractNumber(xContractNumber int32) ApiUmUsersS3keysFindByKeyIdRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiUmUsersS3keysFindByKeyRequest) Execute() (S3Key, *APIResponse, error) {
-	return r.ApiService.UmUsersS3keysFindByKeyExecute(r)
+func (r ApiUmUsersS3keysFindByKeyIdRequest) Execute() (S3Key, *APIResponse, error) {
+	return r.ApiService.UmUsersS3keysFindByKeyIdExecute(r)
 }
 
 /*
- * UmUsersS3keysFindByKey Retrieve given S3 key belonging to the given User
+ * UmUsersS3keysFindByKeyId Retrieve given S3 key belonging to the given User
  * You can retrieve S3 key belonging to the given User. This user Id can be found in the response body when a user is created or when you GET a list of users. The key Id can be found in the response body when a S3 key is created or when you GET a list of all S3 keys of a user
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param userId The unique ID of the user
  * @param keyId The unique access key ID of the S3 key
- * @return ApiUmUsersS3keysFindByKeyRequest
+ * @return ApiUmUsersS3keysFindByKeyIdRequest
  */
-func (a *UserManagementApiService) UmUsersS3keysFindByKey(ctx _context.Context, userId string, keyId string) ApiUmUsersS3keysFindByKeyRequest {
-	return ApiUmUsersS3keysFindByKeyRequest{
+func (a *UserManagementApiService) UmUsersS3keysFindByKeyId(ctx _context.Context, userId string, keyId string) ApiUmUsersS3keysFindByKeyIdRequest {
+	return ApiUmUsersS3keysFindByKeyIdRequest{
 		ApiService: a,
 		ctx: ctx,
 		userId: userId,
@@ -4126,7 +4126,7 @@ func (a *UserManagementApiService) UmUsersS3keysFindByKey(ctx _context.Context, 
  * Execute executes the request
  * @return S3Key
  */
-func (a *UserManagementApiService) UmUsersS3keysFindByKeyExecute(r ApiUmUsersS3keysFindByKeyRequest) (S3Key, *APIResponse, error) {
+func (a *UserManagementApiService) UmUsersS3keysFindByKeyIdExecute(r ApiUmUsersS3keysFindByKeyIdRequest) (S3Key, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -4136,7 +4136,7 @@ func (a *UserManagementApiService) UmUsersS3keysFindByKeyExecute(r ApiUmUsersS3k
 		localVarReturnValue  S3Key
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserManagementApiService.UmUsersS3keysFindByKey")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "UserManagementApiService.UmUsersS3keysFindByKeyId")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -4200,7 +4200,7 @@ func (a *UserManagementApiService) UmUsersS3keysFindByKeyExecute(r ApiUmUsersS3k
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "UmUsersS3keysFindByKey",
+		Operation: "UmUsersS3keysFindByKeyId",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {

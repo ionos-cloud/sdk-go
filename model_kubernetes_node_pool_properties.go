@@ -42,6 +42,10 @@ type KubernetesNodePoolProperties struct {
 	Lans *[]KubernetesNodePoolLan `json:"lans,omitempty"`
 	Labels *KubernetesNodePoolLabel `json:"labels,omitempty"`
 	Annotations *KubernetesNodePoolAnnotation `json:"annotations,omitempty"`
+	// Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
+	PublicIps *[]string `json:"publicIps,omitempty"`
+	// List of available versions for upgrading the node pool
+	AvailableUpgradeVersions *[]string `json:"availableUpgradeVersions,omitempty"`
 }
 
 
@@ -585,6 +589,78 @@ func (o *KubernetesNodePoolProperties) HasAnnotations() bool {
 }
 
 
+
+// GetPublicIps returns the PublicIps field value
+// If the value is explicit nil, the zero value for []string will be returned
+func (o *KubernetesNodePoolProperties) GetPublicIps() *[]string {
+	if o == nil {
+		return nil
+	}
+
+	return o.PublicIps
+}
+
+// GetPublicIpsOk returns a tuple with the PublicIps field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesNodePoolProperties) GetPublicIpsOk() (*[]string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.PublicIps, true
+}
+
+// SetPublicIps sets field value
+func (o *KubernetesNodePoolProperties) SetPublicIps(v []string) {
+	o.PublicIps = &v
+}
+
+// HasPublicIps returns a boolean if a field has been set.
+func (o *KubernetesNodePoolProperties) HasPublicIps() bool {
+	if o != nil && o.PublicIps != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetAvailableUpgradeVersions returns the AvailableUpgradeVersions field value
+// If the value is explicit nil, the zero value for []string will be returned
+func (o *KubernetesNodePoolProperties) GetAvailableUpgradeVersions() *[]string {
+	if o == nil {
+		return nil
+	}
+
+	return o.AvailableUpgradeVersions
+}
+
+// GetAvailableUpgradeVersionsOk returns a tuple with the AvailableUpgradeVersions field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesNodePoolProperties) GetAvailableUpgradeVersionsOk() (*[]string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.AvailableUpgradeVersions, true
+}
+
+// SetAvailableUpgradeVersions sets field value
+func (o *KubernetesNodePoolProperties) SetAvailableUpgradeVersions(v []string) {
+	o.AvailableUpgradeVersions = &v
+}
+
+// HasAvailableUpgradeVersions returns a boolean if a field has been set.
+func (o *KubernetesNodePoolProperties) HasAvailableUpgradeVersions() bool {
+	if o != nil && o.AvailableUpgradeVersions != nil {
+		return true
+	}
+
+	return false
+}
+
+
 func (o KubernetesNodePoolProperties) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 
@@ -660,6 +736,16 @@ func (o KubernetesNodePoolProperties) MarshalJSON() ([]byte, error) {
 
 	if o.Annotations != nil {
 		toSerialize["annotations"] = o.Annotations
+	}
+	
+
+	if o.PublicIps != nil {
+		toSerialize["publicIps"] = o.PublicIps
+	}
+	
+
+	if o.AvailableUpgradeVersions != nil {
+		toSerialize["availableUpgradeVersions"] = o.AvailableUpgradeVersions
 	}
 	
 	return json.Marshal(toSerialize)

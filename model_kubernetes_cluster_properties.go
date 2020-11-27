@@ -21,6 +21,10 @@ type KubernetesClusterProperties struct {
 	// The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster's nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions.
 	K8sVersion *string `json:"k8sVersion,omitempty"`
 	MaintenanceWindow *KubernetesMaintenanceWindow `json:"maintenanceWindow,omitempty"`
+	// List of available versions for upgrading the cluster
+	AvailableUpgradeVersions *[]string `json:"availableUpgradeVersions,omitempty"`
+	// List of versions that may be used for node pools under this cluster
+	ViableNodePoolVersions *[]string `json:"viableNodePoolVersions,omitempty"`
 }
 
 
@@ -132,6 +136,78 @@ func (o *KubernetesClusterProperties) HasMaintenanceWindow() bool {
 }
 
 
+
+// GetAvailableUpgradeVersions returns the AvailableUpgradeVersions field value
+// If the value is explicit nil, the zero value for []string will be returned
+func (o *KubernetesClusterProperties) GetAvailableUpgradeVersions() *[]string {
+	if o == nil {
+		return nil
+	}
+
+	return o.AvailableUpgradeVersions
+}
+
+// GetAvailableUpgradeVersionsOk returns a tuple with the AvailableUpgradeVersions field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesClusterProperties) GetAvailableUpgradeVersionsOk() (*[]string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.AvailableUpgradeVersions, true
+}
+
+// SetAvailableUpgradeVersions sets field value
+func (o *KubernetesClusterProperties) SetAvailableUpgradeVersions(v []string) {
+	o.AvailableUpgradeVersions = &v
+}
+
+// HasAvailableUpgradeVersions returns a boolean if a field has been set.
+func (o *KubernetesClusterProperties) HasAvailableUpgradeVersions() bool {
+	if o != nil && o.AvailableUpgradeVersions != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetViableNodePoolVersions returns the ViableNodePoolVersions field value
+// If the value is explicit nil, the zero value for []string will be returned
+func (o *KubernetesClusterProperties) GetViableNodePoolVersions() *[]string {
+	if o == nil {
+		return nil
+	}
+
+	return o.ViableNodePoolVersions
+}
+
+// GetViableNodePoolVersionsOk returns a tuple with the ViableNodePoolVersions field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesClusterProperties) GetViableNodePoolVersionsOk() (*[]string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.ViableNodePoolVersions, true
+}
+
+// SetViableNodePoolVersions sets field value
+func (o *KubernetesClusterProperties) SetViableNodePoolVersions(v []string) {
+	o.ViableNodePoolVersions = &v
+}
+
+// HasViableNodePoolVersions returns a boolean if a field has been set.
+func (o *KubernetesClusterProperties) HasViableNodePoolVersions() bool {
+	if o != nil && o.ViableNodePoolVersions != nil {
+		return true
+	}
+
+	return false
+}
+
+
 func (o KubernetesClusterProperties) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 
@@ -147,6 +223,16 @@ func (o KubernetesClusterProperties) MarshalJSON() ([]byte, error) {
 
 	if o.MaintenanceWindow != nil {
 		toSerialize["maintenanceWindow"] = o.MaintenanceWindow
+	}
+	
+
+	if o.AvailableUpgradeVersions != nil {
+		toSerialize["availableUpgradeVersions"] = o.AvailableUpgradeVersions
+	}
+	
+
+	if o.ViableNodePoolVersions != nil {
+		toSerialize["viableNodePoolVersions"] = o.ViableNodePoolVersions
 	}
 	
 	return json.Marshal(toSerialize)

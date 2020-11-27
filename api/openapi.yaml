@@ -77,6 +77,25 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -628,6 +647,25 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -869,6 +907,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -1396,6 +1453,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -2778,7 +2854,7 @@ paths:
       - User Management
     get:
       description: This will retrieve the properties of a group share.
-      operationId: umGroupsSharesFindByResource
+      operationId: umGroupsSharesFindByResourceId
       parameters:
       - in: path
         name: groupId
@@ -4066,6 +4142,25 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -4604,6 +4699,25 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -4867,6 +4981,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -5406,6 +5539,25 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -5638,7 +5790,7 @@ paths:
       - Load Balancer
     get:
       description: This will retrieve the properties of an attached nic.
-      operationId: datacentersLoadbalancersBalancednicsFindByNic
+      operationId: datacentersLoadbalancersBalancednicsFindByNicId
       parameters:
       - description: The unique ID of the datacenter
         in: path
@@ -5801,7 +5953,7 @@ paths:
   /locations/{regionId}:
     get:
       description: Retrieve a list of Locations within a world's region
-      operationId: locationsFindByRegion
+      operationId: locationsFindByRegionId
       parameters:
       - in: path
         name: regionId
@@ -5878,7 +6030,7 @@ paths:
   /locations/{regionId}/{locationId}:
     get:
       description: Retrieves the attributes of a given location
-      operationId: locationsFindByRegionAndId
+      operationId: locationsFindByRegionIdAndId
       parameters:
       - in: path
         name: regionId
@@ -6001,6 +6153,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -7155,11 +7326,30 @@ paths:
         name: filter.method
         schema:
           type: string
-      - description: Url filter
+      - description: Body filter
         in: query
         name: filter.body
         schema:
           type: string
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -7440,6 +7630,75 @@ paths:
       summary: List All Resources.
       tags:
       - User Management
+  /:
+    get:
+      description: Display API information
+      operationId: apiInfoGet
+      parameters:
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Info'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      summary: Display API information
+      tags:
+      - /
   /datacenters/{datacenterId}/servers:
     get:
       description: You can retrieve a list of servers within a datacenter
@@ -7484,6 +7743,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -8172,7 +8450,7 @@ paths:
     post:
       description: This will stop a server. The machine will be forcefully powered
         off, billing will cease, and the public IP, if one is allocated, will be deallocated.
-        The operation is not supported for CoreVPS servers.
+        The operation is not supported for Cube servers.
       operationId: datacentersServersStopPost
       parameters:
       - description: The unique ID of the datacenter
@@ -9586,7 +9864,7 @@ paths:
         Id can be found in the response body when a user is created or when you GET
         a list of users. The key Id can be found in the response body when a S3 key
         is created or when you GET a list of all S3 keys of a user
-      operationId: umUsersS3keysFindByKey
+      operationId: umUsersS3keysFindByKeyId
       parameters:
       - description: The unique ID of the user
         in: path
@@ -9715,7 +9993,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/S3Key'
-        description: Modified S3Key
+        description: Modified s3 key
         required: true
       responses:
         "202":
@@ -9866,6 +10144,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -11218,7 +11515,7 @@ paths:
     get:
       description: You can retrieve the details of a specific label using its URN.
         A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
-      operationId: labelsFindByLabelurn
+      operationId: labelsFindByUrn
       parameters:
       - description: The URN representing the unique ID of the label. A URN is for
           uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
@@ -11332,6 +11629,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -11760,6 +12076,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -12211,6 +12546,25 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with <code>limit</code> for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -13693,7 +14047,7 @@ paths:
       - Kubernetes
     get:
       description: This will retrieve a single Kubernetes Cluster.
-      operationId: k8sFindByClusterid
+      operationId: k8sFindBySClusterId
       parameters:
       - description: The unique ID of the Kubernetes Cluster
         in: path
@@ -13811,7 +14165,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/KubernetesCluster'
-        description: Details of of the Kubernetes Cluster
+        description: Properties of the Kubernetes Cluster
         required: true
       responses:
         "200":
@@ -13852,7 +14206,7 @@ paths:
       summary: Modify Kubernetes Cluster
       tags:
       - Kubernetes
-      x-codegen-request-body-name: kubernetescluster
+      x-codegen-request-body-name: kubernetesCluster
   /k8s/{k8sClusterId}/kubeconfig:
     get:
       description: You can retrieve kubernetes configuration file for the kubernetes
@@ -14312,7 +14666,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/KubernetesNodePoolPropertiesForPut'
+              $ref: '#/components/schemas/KubernetesNodePool'
         description: Details of the Kubernetes Node Pool
         required: true
       responses:
@@ -14354,7 +14708,7 @@ paths:
       summary: Modify Kubernetes Node Pool
       tags:
       - Kubernetes
-      x-codegen-request-body-name: KubernetesNodePoolProperties
+      x-codegen-request-body-name: KubernetesNodePool
   /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes:
     get:
       description: You can retrieve all nodes of Kubernetes Node Pool.
@@ -14800,6 +15154,7 @@ paths:
       - Kubernetes
   /k8s/versions/{clusterVersion}/compatibilities:
     get:
+      deprecated: true
       description: You can retrieve a list of available kubernetes versions for nodepools
         depending on the given kubernetes version running in the cluster.
       operationId: k8sVersionsCompatibilitiesGet
@@ -14883,6 +15238,27 @@ components:
       schema:
         format: int32
         type: integer
+    offset:
+      description: the first element (of the total list of elements) to include in
+        the response (use together with <code>limit</code> for pagination)
+      in: query
+      name: offset
+      schema:
+        default: 0
+        format: int32
+        minimum: 0
+        type: integer
+    limit:
+      description: the maximum number of elements to return (use together with <code>offset</code>
+        for pagination)
+      in: query
+      name: limit
+      schema:
+        default: 1000
+        format: int32
+        maximum: 10000
+        minimum: 1
+        type: integer
   responses:
     apiError:
       content:
@@ -14904,6 +15280,12 @@ components:
   schemas:
     AttachedVolumes:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -14998,6 +15380,16 @@ components:
             $ref: '#/components/schemas/Volume'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     DatacenterElementMetadata:
       example:
@@ -15253,13 +15645,13 @@ components:
           description: Image or snapshot ID to be used as template for this volume
           example: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
           type: string
-        imageAlias:
-          type: string
         imagePassword:
           description: Initial password to be set for installed OS. Works with public
             images only. Not modifiable, forbidden in update requests. Password rules
             allows all characters from a-z, A-Z, 0-9
           example: mypass123
+          type: string
+        imageAlias:
           type: string
         sshKeys:
           description: Public SSH keys are set on the image as authorized keys for
@@ -15395,6 +15787,12 @@ components:
       type: object
     Cdroms:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -15483,6 +15881,16 @@ components:
             $ref: '#/components/schemas/Image'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     Image:
       example:
@@ -15840,6 +16248,12 @@ components:
       type: object
     BalancedNics:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -15855,6 +16269,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             firewallrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -15927,6 +16347,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             firewallrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -16012,10 +16438,26 @@ components:
             $ref: '#/components/schemas/Nic'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
-    DatacenterEntities:
+    DataCenterEntities:
       example:
         servers:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -16031,6 +16473,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               cdroms:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16096,6 +16544,12 @@ components:
                     ramHotUnplug: true
                     imageType: HDD
               volumes:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16167,6 +16621,12 @@ components:
                     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
               nics:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16182,6 +16642,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16254,6 +16720,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16344,6 +16816,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               cdroms:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16409,6 +16887,12 @@ components:
                     ramHotUnplug: true
                     imageType: HDD
               volumes:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16480,6 +16964,12 @@ components:
                     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                     - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
               nics:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16495,6 +16985,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16567,6 +17063,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16647,6 +17149,12 @@ components:
               vmState: RUNNING
               ram: 4096
         volumes:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -16718,6 +17226,12 @@ components:
               - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
               - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
         lans:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -16733,6 +17247,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               nics:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16748,6 +17268,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16820,6 +17346,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16888,8 +17420,11 @@ components:
               pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
               public: true
               name: My resource
-              ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-                ] }'
+              ipFailover:
+              - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                ip: 192.18.2.231
+              - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                ip: 192.18.2.231
           - metadata:
               createdByUserId: user@example.com
               createdDate: 2015-12-04T14:34:09.809Z
@@ -16901,6 +17436,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               nics:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -16916,6 +17457,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -16988,6 +17535,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -17056,9 +17609,18 @@ components:
               pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
               public: true
               name: My resource
-              ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-                ] }'
+              ipFailover:
+              - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                ip: 192.18.2.231
+              - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                ip: 192.18.2.231
         loadbalancers:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -17074,6 +17636,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               balancednics:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -17089,6 +17657,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -17161,6 +17735,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -17240,6 +17820,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               balancednics:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -17255,6 +17841,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -17327,6 +17919,12 @@ components:
                     lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                   entities:
                     firewallrules:
+                      offset: 0
+                      _links:
+                        next: <NEXT-PAGE-URI>
+                        prev: <PREVIOUS-PAGE-URI>
+                        self: <THIS-PAGE-URI>
+                      limit: 1000
                       id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                       href: <RESOURCE-URI>
                       type: collection
@@ -17433,6 +18031,7 @@ components:
             change
           example: 8
           format: int32
+          readOnly: true
           type: integer
         features:
           description: List of features supported by the location this data center
@@ -17466,6 +18065,12 @@ components:
           lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
         entities:
           servers:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -17481,6 +18086,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 cdroms:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -17546,6 +18157,12 @@ components:
                       ramHotUnplug: true
                       imageType: HDD
                 volumes:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -17617,6 +18234,12 @@ components:
                       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
                 nics:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -17632,6 +18255,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -17704,6 +18333,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -17794,6 +18429,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 cdroms:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -17859,6 +18500,12 @@ components:
                       ramHotUnplug: true
                       imageType: HDD
                 volumes:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -17930,6 +18577,12 @@ components:
                       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                       - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
                 nics:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -17945,6 +18598,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18017,6 +18676,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18097,6 +18762,12 @@ components:
                 vmState: RUNNING
                 ram: 4096
           volumes:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -18168,6 +18839,12 @@ components:
                 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
           lans:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -18183,6 +18860,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 nics:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -18198,6 +18881,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18270,6 +18959,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18338,8 +19033,11 @@ components:
                 pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
                 public: true
                 name: My resource
-                ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid":
-                  "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }'
+                ipFailover:
+                - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                  ip: 192.18.2.231
+                - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                  ip: 192.18.2.231
             - metadata:
                 createdByUserId: user@example.com
                 createdDate: 2015-12-04T14:34:09.809Z
@@ -18351,6 +19049,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 nics:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -18366,6 +19070,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18438,6 +19148,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18506,9 +19222,18 @@ components:
                 pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
                 public: true
                 name: My resource
-                ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid":
-                  "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }'
+                ipFailover:
+                - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                  ip: 192.18.2.231
+                - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                  ip: 192.18.2.231
           loadbalancers:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -18524,6 +19249,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 balancednics:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -18539,6 +19270,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18611,6 +19348,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18690,6 +19433,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 balancednics:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -18705,6 +19454,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18777,6 +19532,12 @@ components:
                       lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                     entities:
                       firewallrules:
+                        offset: 0
+                        _links:
+                          next: <NEXT-PAGE-URI>
+                          prev: <PREVIOUS-PAGE-URI>
+                          self: <THIS-PAGE-URI>
+                        limit: 1000
                         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                         href: <RESOURCE-URI>
                         type: collection
@@ -18866,7 +19627,6 @@ components:
           - $ref: '#/components/schemas/Type'
           description: The type of object that has been created
           example: datacenter
-          nullable: true
           type: object
         href:
           description: URL to the object representation (absolute path)
@@ -18879,12 +19639,18 @@ components:
         properties:
           $ref: '#/components/schemas/DatacenterProperties'
         entities:
-          $ref: '#/components/schemas/DatacenterEntities'
+          $ref: '#/components/schemas/DataCenterEntities'
       required:
       - properties
       type: object
     Datacenters:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -18900,6 +19666,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             servers:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -18915,6 +19687,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   cdroms:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -18980,6 +19758,12 @@ components:
                         ramHotUnplug: true
                         imageType: HDD
                   volumes:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19051,6 +19835,12 @@ components:
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19066,6 +19856,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19138,6 +19934,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19228,6 +20030,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   cdroms:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19293,6 +20101,12 @@ components:
                         ramHotUnplug: true
                         imageType: HDD
                   volumes:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19364,6 +20178,12 @@ components:
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19379,6 +20199,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19451,6 +20277,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19531,6 +20363,12 @@ components:
                   vmState: RUNNING
                   ram: 4096
             volumes:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -19602,6 +20440,12 @@ components:
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
             lans:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -19617,6 +20461,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19632,6 +20482,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19704,6 +20560,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19772,8 +20634,11 @@ components:
                   pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
                   public: true
                   name: My resource
-                  ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid":
-                    "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }'
+                  ipFailover:
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
               - metadata:
                   createdByUserId: user@example.com
                   createdDate: 2015-12-04T14:34:09.809Z
@@ -19785,6 +20650,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19800,6 +20671,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19872,6 +20749,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -19940,9 +20823,18 @@ components:
                   pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
                   public: true
                   name: My resource
-                  ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid":
-                    "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }'
+                  ipFailover:
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
             loadbalancers:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -19958,6 +20850,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   balancednics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -19973,6 +20871,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20045,6 +20949,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20124,6 +21034,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   balancednics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20139,6 +21055,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20211,6 +21133,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20300,6 +21228,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             servers:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -20315,6 +21249,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   cdroms:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20380,6 +21320,12 @@ components:
                         ramHotUnplug: true
                         imageType: HDD
                   volumes:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20451,6 +21397,12 @@ components:
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20466,6 +21418,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20538,6 +21496,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20628,6 +21592,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   cdroms:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20693,6 +21663,12 @@ components:
                         ramHotUnplug: true
                         imageType: HDD
                   volumes:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20764,6 +21740,12 @@ components:
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                         - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -20779,6 +21761,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20851,6 +21839,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -20931,6 +21925,12 @@ components:
                   vmState: RUNNING
                   ram: 4096
             volumes:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -21002,6 +22002,12 @@ components:
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
             lans:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -21017,6 +22023,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -21032,6 +22044,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21104,6 +22122,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21172,8 +22196,11 @@ components:
                   pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
                   public: true
                   name: My resource
-                  ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid":
-                    "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }'
+                  ipFailover:
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
               - metadata:
                   createdByUserId: user@example.com
                   createdDate: 2015-12-04T14:34:09.809Z
@@ -21185,6 +22212,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   nics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -21200,6 +22233,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21272,6 +22311,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21340,9 +22385,18 @@ components:
                   pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
                   public: true
                   name: My resource
-                  ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid":
-                    "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"} ] }'
+                  ipFailover:
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
+                  - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+                    ip: 192.18.2.231
             loadbalancers:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -21358,6 +22412,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   balancednics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -21373,6 +22433,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21445,6 +22511,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21524,6 +22596,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   balancednics:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -21539,6 +22617,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21611,6 +22695,12 @@ components:
                         lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                       entities:
                         firewallrules:
+                          offset: 0
+                          _links:
+                            next: <NEXT-PAGE-URI>
+                            prev: <PREVIOUS-PAGE-URI>
+                            self: <THIS-PAGE-URI>
+                          limit: 1000
                           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                           href: <RESOURCE-URI>
                           type: collection
@@ -21713,6 +22803,16 @@ components:
             $ref: '#/components/schemas/Datacenter'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     FirewallRule:
       example:
@@ -21765,6 +22865,12 @@ components:
       type: object
     FirewallRules:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -21837,6 +22943,16 @@ components:
             $ref: '#/components/schemas/FirewallRule'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     FirewallruleProperties:
       example:
@@ -21928,15 +23044,26 @@ components:
       - protocol
       type: object
     IPFailover:
+      example:
+        nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+        ip: 192.18.2.231
       properties:
         ip:
+          example: 192.18.2.231
           type: string
         nicUuid:
+          example: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
           type: string
       type: object
     LanEntities:
       example:
         nics:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -21952,6 +23079,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               firewallrules:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -22024,6 +23157,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               firewallrules:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -22091,6 +23230,12 @@ components:
       type: object
     LanNics:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -22106,6 +23251,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             firewallrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -22178,6 +23329,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             firewallrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -22263,14 +23420,27 @@ components:
             $ref: '#/components/schemas/Nic'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     LanProperties:
       example:
         pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
         public: true
         name: My resource
-        ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-          ] }'
+        ipFailover:
+        - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+          ip: 192.18.2.231
+        - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+          ip: 192.18.2.231
       properties:
         name:
           description: A name of that resource
@@ -22278,8 +23448,6 @@ components:
           type: string
         ipFailover:
           description: IP failover configurations for lan
-          example: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-            ] }'
           items:
             $ref: '#/components/schemas/IPFailover'
           type: array
@@ -22306,6 +23474,12 @@ components:
           lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
         entities:
           nics:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -22321,6 +23495,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -22393,6 +23573,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -22461,8 +23647,11 @@ components:
           pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
           public: true
           name: My resource
-          ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-            ] }'
+          ipFailover:
+          - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+            ip: 192.18.2.231
+          - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+            ip: 192.18.2.231
       properties:
         id:
           description: The resource's unique identifier
@@ -22503,6 +23692,12 @@ components:
           lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
         entities:
           nics:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -22518,6 +23713,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -22590,6 +23791,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -22655,8 +23862,14 @@ components:
         href: <RESOURCE-URI>
         type: lan
         properties:
+          pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
           public: true
           name: My resource
+          ipFailover:
+          - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+            ip: 192.18.2.231
+          - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+            ip: 192.18.2.231
       properties:
         id:
           description: The resource's unique identifier
@@ -22686,6 +23899,12 @@ components:
       type: object
     Lans:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -22701,6 +23920,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             nics:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -22716,6 +23941,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -22788,6 +24019,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -22856,8 +24093,11 @@ components:
             pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
             public: true
             name: My resource
-            ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-              ] }'
+            ipFailover:
+            - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+              ip: 192.18.2.231
+            - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+              ip: 192.18.2.231
         - metadata:
             createdByUserId: user@example.com
             createdDate: 2015-12-04T14:34:09.809Z
@@ -22869,6 +24109,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             nics:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -22884,6 +24130,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -22956,6 +24208,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -23024,8 +24282,11 @@ components:
             pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
             public: true
             name: My resource
-            ipFailover: '{ "ipFailover": [ { "ip": "192.18.2.231", "nicUuid": "3c11273c-b3e1-4ca3-8134-84fd2dd4ebec"}
-              ] }'
+            ipFailover:
+            - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+              ip: 192.18.2.231
+            - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+              ip: 192.18.2.231
       properties:
         id:
           description: The resource's unique identifier
@@ -23045,11 +24306,21 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection
+          description: Array of items in lans collection
           items:
             $ref: '#/components/schemas/Lan'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     Loadbalancer:
       example:
@@ -23064,6 +24335,12 @@ components:
           lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
         entities:
           balancednics:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -23079,6 +24356,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -23151,6 +24434,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -23249,6 +24538,12 @@ components:
     LoadbalancerEntities:
       example:
         balancednics:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -23264,6 +24559,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               firewallrules:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -23336,6 +24637,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               firewallrules:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -23426,6 +24733,12 @@ components:
       type: object
     Loadbalancers:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -23441,6 +24754,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             balancednics:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -23456,6 +24775,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -23528,6 +24853,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -23607,6 +24938,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             balancednics:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -23622,6 +24959,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -23694,6 +25037,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -23786,6 +25135,16 @@ components:
             $ref: '#/components/schemas/Loadbalancer'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     Nic:
       example:
@@ -23800,6 +25159,12 @@ components:
           lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
         entities:
           firewallrules:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -23891,6 +25256,12 @@ components:
     NicEntities:
       example:
         firewallrules:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -23989,7 +25360,7 @@ components:
           example: false
           type: boolean
         nat:
-          description: Indicates if NAT is enabled on this NIC
+          description: Indicates if NAT is enabled on this NIC. This is now deprecated.
           example: true
           type: boolean
       required:
@@ -23997,6 +25368,12 @@ components:
       type: object
     Nics:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -24012,6 +25389,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             firewallrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -24084,6 +25467,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             firewallrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -24169,6 +25558,16 @@ components:
             $ref: '#/components/schemas/Nic'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     ResourceReference:
       example:
@@ -24197,6 +25596,12 @@ components:
     ServerEntities:
       example:
         cdroms:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -24262,6 +25667,12 @@ components:
               ramHotUnplug: true
               imageType: HDD
         volumes:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -24333,6 +25744,12 @@ components:
               - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
               - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
         nics:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
           id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
           href: <RESOURCE-URI>
           type: collection
@@ -24348,6 +25765,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               firewallrules:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -24420,6 +25843,12 @@ components:
               lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
             entities:
               firewallrules:
+                offset: 0
+                _links:
+                  next: <NEXT-PAGE-URI>
+                  prev: <PREVIOUS-PAGE-URI>
+                  self: <THIS-PAGE-URI>
+                limit: 1000
                 id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                 href: <RESOURCE-URI>
                 type: collection
@@ -26401,12 +27830,28 @@ components:
       type: object
     LanPropertiesPost:
       example:
+        pcc: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
         public: true
         name: My resource
+        ipFailover:
+        - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+          ip: 192.18.2.231
+        - nicUuid: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
+          ip: 192.18.2.231
       properties:
         name:
           description: A name of that resource
           example: My resource
+          type: string
+        ipFailover:
+          description: IP failover configurations for lan
+          items:
+            $ref: '#/components/schemas/IPFailover'
+          type: array
+        pcc:
+          description: Unique identifier of the private cross connect the given LAN
+            is connected to if any
+          example: 3c11273c-b3e1-4ca3-8134-84fd2dd4ebec
           type: string
         public:
           description: Does this LAN faces the public Internet or not
@@ -26976,6 +28421,12 @@ components:
       type: object
     Requests:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: requests
         href: <RESOURCE-URI>
         type: collection
@@ -27068,6 +28519,22 @@ components:
             $ref: '#/components/schemas/Request'
           readOnly: true
           type: array
+        offset:
+          description: the offset specified in the request (or, if none was specified,
+            the default offset of 0)
+          example: 0
+          type: number
+        limit:
+          description: the limit specified in the request (or, if none was specified,
+            the default limit of 0)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
+      required:
+      - _links
+      - limit
+      - offset
       type: object
     Resources:
       description: Collection to represent the resource
@@ -27148,6 +28615,10 @@ components:
           type: array
       type: object
     Info:
+      example:
+        name: CLOUD API
+        href: https://openapi-generator.tech
+        version: "1.0"
       properties:
         href:
           description: API entry point
@@ -27178,6 +28649,12 @@ components:
           lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
         entities:
           cdroms:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -27243,6 +28720,12 @@ components:
                 ramHotUnplug: true
                 imageType: HDD
           volumes:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -27314,6 +28797,12 @@ components:
                 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                 - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
           nics:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
             id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
             href: <RESOURCE-URI>
             type: collection
@@ -27329,6 +28818,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -27401,6 +28896,12 @@ components:
                 lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
               entities:
                 firewallrules:
+                  offset: 0
+                  _links:
+                    next: <NEXT-PAGE-URI>
+                    prev: <PREVIOUS-PAGE-URI>
+                    self: <THIS-PAGE-URI>
+                  limit: 1000
                   id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                   href: <RESOURCE-URI>
                   type: collection
@@ -27509,6 +29010,12 @@ components:
       type: object
     Servers:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -27524,6 +29031,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             cdroms:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -27589,6 +29102,12 @@ components:
                   ramHotUnplug: true
                   imageType: HDD
             volumes:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -27660,6 +29179,12 @@ components:
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
             nics:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -27675,6 +29200,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -27747,6 +29278,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -27837,6 +29374,12 @@ components:
             lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
           entities:
             cdroms:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -27902,6 +29445,12 @@ components:
                   ramHotUnplug: true
                   imageType: HDD
             volumes:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -27973,6 +29522,12 @@ components:
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/4JNoFQBsaGV974hDmloS5LOvSJjKpXs8Ed437ln712345
                   - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCyWh6LZ7f2wxnupVgtK2096bc69Vv9uT2A58lwN3ol0A6mxqlT0f4M1NbarVUxa+MVdxBLud5PvlkbYc9mY91OyzLGZMfVWvhAYz/tJSsDtsgRUl0GFVv332zDWk0i+mAVy0N408OORm5XqV6zvIDaiB/jopyjemUp2rnP7pXU4+98ilZw6ef9DF9y4YZ64mchL5//rcrGm1Lff3pC75X/polGONHeG6m4Vs8eIu+0epJ4PJBxO+rwRYp1zMnn90UCk21KvTcYops2cte7ouXQwkGUq3vmXxnSdvuivK/asdfghjkjhyutry545tgvbn76e4rf43
             nics:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
               id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
               href: <RESOURCE-URI>
               type: collection
@@ -27988,6 +29543,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -28060,6 +29621,12 @@ components:
                   lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
                 entities:
                   firewallrules:
+                    offset: 0
+                    _links:
+                      next: <NEXT-PAGE-URI>
+                      prev: <PREVIOUS-PAGE-URI>
+                      self: <THIS-PAGE-URI>
+                    limit: 1000
                     id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
                     href: <RESOURCE-URI>
                     type: collection
@@ -28163,6 +29730,16 @@ components:
             $ref: '#/components/schemas/Server'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     SnapshotProperties:
       example:
@@ -28636,6 +30213,12 @@ components:
       type: object
     Volumes:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -28730,6 +30313,16 @@ components:
             $ref: '#/components/schemas/Volume'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     BackupUnitProperties:
       example:
@@ -29076,6 +30669,12 @@ components:
       type: object
     LabelResources:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: labels
         href: <RESOURCE-URI>
         type: collection
@@ -29133,13 +30732,29 @@ components:
             $ref: '#/components/schemas/LabelResource'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     KubernetesClusterProperties:
       example:
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 13:00:00
+        viableNodePoolVersions:
+        - 1.17.7
+        - 1.18.2
         name: k8s
+        availableUpgradeVersions:
+        - 1.16.4
+        - 1.17.7
         k8sVersion: 1.15.4
       properties:
         name:
@@ -29158,6 +30773,23 @@ components:
           type: string
         maintenanceWindow:
           $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        availableUpgradeVersions:
+          description: List of available versions for upgrading the cluster
+          example:
+          - 1.16.4
+          - 1.17.7
+          items:
+            type: string
+          type: array
+        viableNodePoolVersions:
+          description: List of versions that may be used for node pools under this
+            cluster
+          example:
+          - 1.17.7
+          - 1.18.2
+          items:
+            type: string
+          type: array
       required:
       - name
       type: object
@@ -29213,9 +30845,16 @@ components:
                 coresCount: 4
                 storageSize: 100
                 name: k8s-node-pool
+                availableUpgradeVersions:
+                - 1.16.4
+                - 1.17.7
                 storageType: HDD
                 nodeCount: 2
                 cpuFamily: AMD_OPTERON
+                publicIps:
+                - 81.173.1.2
+                - 82.231.2.5
+                - 92.221.2.4
             - metadata:
                 createdByUserId: user@example.com
                 createdDate: 2015-12-04T14:34:09.809Z
@@ -29251,9 +30890,16 @@ components:
                 coresCount: 4
                 storageSize: 100
                 name: k8s-node-pool
+                availableUpgradeVersions:
+                - 1.16.4
+                - 1.17.7
                 storageType: HDD
                 nodeCount: 2
                 cpuFamily: AMD_OPTERON
+                publicIps:
+                - 81.173.1.2
+                - 82.231.2.5
+                - 92.221.2.4
         id: 1e072e52-2ed3-492f-b6b6-c6b116907527
         href: <RESOURCE-URI>
         type: k8s
@@ -29261,7 +30907,13 @@ components:
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
+          viableNodePoolVersions:
+          - 1.17.7
+          - 1.18.2
           name: k8s
+          availableUpgradeVersions:
+          - 1.16.4
+          - 1.17.7
           k8sVersion: 1.15.4
       properties:
         id:
@@ -29332,9 +30984,16 @@ components:
               coresCount: 4
               storageSize: 100
               name: k8s-node-pool
+              availableUpgradeVersions:
+              - 1.16.4
+              - 1.17.7
               storageType: HDD
               nodeCount: 2
               cpuFamily: AMD_OPTERON
+              publicIps:
+              - 81.173.1.2
+              - 82.231.2.5
+              - 92.221.2.4
           - metadata:
               createdByUserId: user@example.com
               createdDate: 2015-12-04T14:34:09.809Z
@@ -29370,9 +31029,16 @@ components:
               coresCount: 4
               storageSize: 100
               name: k8s-node-pool
+              availableUpgradeVersions:
+              - 1.16.4
+              - 1.17.7
               storageType: HDD
               nodeCount: 2
               cpuFamily: AMD_OPTERON
+              publicIps:
+              - 81.173.1.2
+              - 82.231.2.5
+              - 92.221.2.4
       properties:
         nodepools:
           $ref: '#/components/schemas/KubernetesNodePools'
@@ -29433,9 +31099,16 @@ components:
                   coresCount: 4
                   storageSize: 100
                   name: k8s-node-pool
+                  availableUpgradeVersions:
+                  - 1.16.4
+                  - 1.17.7
                   storageType: HDD
                   nodeCount: 2
                   cpuFamily: AMD_OPTERON
+                  publicIps:
+                  - 81.173.1.2
+                  - 82.231.2.5
+                  - 92.221.2.4
               - metadata:
                   createdByUserId: user@example.com
                   createdDate: 2015-12-04T14:34:09.809Z
@@ -29471,9 +31144,16 @@ components:
                   coresCount: 4
                   storageSize: 100
                   name: k8s-node-pool
+                  availableUpgradeVersions:
+                  - 1.16.4
+                  - 1.17.7
                   storageType: HDD
                   nodeCount: 2
                   cpuFamily: AMD_OPTERON
+                  publicIps:
+                  - 81.173.1.2
+                  - 82.231.2.5
+                  - 92.221.2.4
           id: 1e072e52-2ed3-492f-b6b6-c6b116907527
           href: <RESOURCE-URI>
           type: k8s
@@ -29481,7 +31161,13 @@ components:
             maintenanceWindow:
               dayOfTheWeek: Monday
               time: 13:00:00
+            viableNodePoolVersions:
+            - 1.17.7
+            - 1.18.2
             name: k8s
+            availableUpgradeVersions:
+            - 1.16.4
+            - 1.17.7
             k8sVersion: 1.15.4
         - metadata:
             createdByUserId: user@example.com
@@ -29533,9 +31219,16 @@ components:
                   coresCount: 4
                   storageSize: 100
                   name: k8s-node-pool
+                  availableUpgradeVersions:
+                  - 1.16.4
+                  - 1.17.7
                   storageType: HDD
                   nodeCount: 2
                   cpuFamily: AMD_OPTERON
+                  publicIps:
+                  - 81.173.1.2
+                  - 82.231.2.5
+                  - 92.221.2.4
               - metadata:
                   createdByUserId: user@example.com
                   createdDate: 2015-12-04T14:34:09.809Z
@@ -29571,9 +31264,16 @@ components:
                   coresCount: 4
                   storageSize: 100
                   name: k8s-node-pool
+                  availableUpgradeVersions:
+                  - 1.16.4
+                  - 1.17.7
                   storageType: HDD
                   nodeCount: 2
                   cpuFamily: AMD_OPTERON
+                  publicIps:
+                  - 81.173.1.2
+                  - 82.231.2.5
+                  - 92.221.2.4
           id: 1e072e52-2ed3-492f-b6b6-c6b116907527
           href: <RESOURCE-URI>
           type: k8s
@@ -29581,7 +31281,13 @@ components:
             maintenanceWindow:
               dayOfTheWeek: Monday
               time: 13:00:00
+            viableNodePoolVersions:
+            - 1.17.7
+            - 1.18.2
             name: k8s
+            availableUpgradeVersions:
+            - 1.16.4
+            - 1.17.7
             k8sVersion: 1.15.4
       properties:
         id:
@@ -29692,78 +31398,14 @@ components:
       required:
       - properties
       type: object
-    KubernetesNodePoolPropertiesForPut:
-      example:
-        autoScaling:
-          minNodeCount: 1
-          maxNodeCount: 1
-        datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
-        lans:
-        - id: 3
-        - id: 3
-        ramSize: 2048
-        availabilityZone: AUTO
-        k8sVersion: 1.15.4
-        maintenanceWindow:
-          dayOfTheWeek: Monday
-          time: 13:00:00
-        coresCount: 4
-        storageSize: 100
-        name: k8s-node-pool
-        storageType: HDD
-        nodeCount: 2
-        cpuFamily: AMD_OPTERON
+    KubernetesClusterPropertiesForPostAndPut:
       properties:
         name:
-          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
-            must be 63 characters or less and must be empty or begin and end with
-            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
-            dots (.), and alphanumerics between.
-          example: k8s-node-pool
+          description: A Kubernetes Cluster Name
+          example: k8s
           type: string
-        datacenterId:
-          description: A valid uuid of the datacenter on which user has access
-          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
-          type: string
-        nodeCount:
-          description: Number of nodes part of the Node Pool
-          example: 2
-          type: integer
-        cpuFamily:
-          description: A valid cpu family name
-          example: AMD_OPTERON
-          type: string
-        coresCount:
-          description: Number of cores for node
-          example: 4
-          type: integer
-        ramSize:
-          description: RAM size for node, minimum size 2048MB is recommended. Ram
-            size must be set to multiple of 1024MB.
-          example: 2048
-          type: integer
-        availabilityZone:
-          description: The availability zone in which the server should exist
-          enum:
-          - AUTO
-          - ZONE_1
-          - ZONE_2
-          example: AUTO
-          type: string
-        storageType:
-          description: Hardware type of the volume
-          enum:
-          - HDD
-          - SSD
-          example: HDD
-          type: string
-        storageSize:
-          description: The size of the volume in GB. The size should be greater than
-            10GB.
-          example: 100
-          type: integer
         k8sVersion:
-          description: The kubernetes version in which a nodepool is running. This
+          description: The kubernetes version in which a cluster is running. This
             imposes restrictions on what kubernetes versions can be run in a cluster's
             nodepools. Additionally, not all kubernetes versions are viable upgrade
             targets for all prior versions.
@@ -29771,25 +31413,10 @@ components:
           type: string
         maintenanceWindow:
           $ref: '#/components/schemas/KubernetesMaintenanceWindow'
-        autoScaling:
-          $ref: '#/components/schemas/KubernetesAutoScaling'
-        lans:
-          description: array of additional LANs attached to worker nodes
-          items:
-            $ref: '#/components/schemas/KubernetesNodePoolLan'
-          type: array
       required:
-      - availabilityZone
-      - coresCount
-      - cpuFamily
-      - datacenterId
       - name
-      - nodeCount
-      - ramSize
-      - storageSize
-      - storageType
       type: object
-    KubernetesNodePoolProperties:
+    KubernetesNodePoolPropertiesForPut:
       example:
         autoScaling:
           minNodeCount: 1
@@ -29816,6 +31443,10 @@ components:
         storageType: HDD
         nodeCount: 2
         cpuFamily: AMD_OPTERON
+        publicIps:
+        - 81.173.1.2
+        - 82.231.2.5
+        - 92.221.2.4
       properties:
         name:
           description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
@@ -29885,6 +31516,251 @@ components:
           $ref: '#/components/schemas/KubernetesNodePoolLabel'
         annotations:
           $ref: '#/components/schemas/KubernetesNodePoolAnnotation'
+        publicIps:
+          description: Optional array of reserved public IP addresses to be used by
+            the nodes. IPs must be from same location as the data center used for
+            the node pool. The array must contain one extra IP than maximum number
+            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
+            if auto scaling is used) The extra provided IP Will be used during rebuilding
+            of nodes.
+          example:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
+          items:
+            type: string
+          type: array
+      required:
+      - availabilityZone
+      - coresCount
+      - cpuFamily
+      - datacenterId
+      - name
+      - nodeCount
+      - ramSize
+      - storageSize
+      - storageType
+      type: object
+    KubernetesNodePoolProperties:
+      example:
+        autoScaling:
+          minNodeCount: 1
+          maxNodeCount: 1
+        datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+        lans:
+        - id: 3
+        - id: 3
+        annotations:
+          value: value
+          key: key
+        ramSize: 2048
+        availabilityZone: AUTO
+        k8sVersion: 1.15.4
+        labels:
+          value: value
+          key: key
+        maintenanceWindow:
+          dayOfTheWeek: Monday
+          time: 13:00:00
+        coresCount: 4
+        storageSize: 100
+        name: k8s-node-pool
+        availableUpgradeVersions:
+        - 1.16.4
+        - 1.17.7
+        storageType: HDD
+        nodeCount: 2
+        cpuFamily: AMD_OPTERON
+        publicIps:
+        - 81.173.1.2
+        - 82.231.2.5
+        - 92.221.2.4
+      properties:
+        name:
+          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
+            must be 63 characters or less and must be empty or begin and end with
+            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
+            dots (.), and alphanumerics between.
+          example: k8s-node-pool
+          type: string
+        datacenterId:
+          description: A valid uuid of the datacenter on which user has access
+          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
+          type: string
+        nodeCount:
+          description: Number of nodes part of the Node Pool
+          example: 2
+          type: integer
+        cpuFamily:
+          description: A valid cpu family name
+          example: AMD_OPTERON
+          type: string
+        coresCount:
+          description: Number of cores for node
+          example: 4
+          type: integer
+        ramSize:
+          description: RAM size for node, minimum size 2048MB is recommended. Ram
+            size must be set to multiple of 1024MB.
+          example: 2048
+          type: integer
+        availabilityZone:
+          description: The availability zone in which the server should exist
+          enum:
+          - AUTO
+          - ZONE_1
+          - ZONE_2
+          example: AUTO
+          type: string
+        storageType:
+          description: Hardware type of the volume
+          enum:
+          - HDD
+          - SSD
+          example: HDD
+          type: string
+        storageSize:
+          description: The size of the volume in GB. The size should be greater than
+            10GB.
+          example: 100
+          type: integer
+        k8sVersion:
+          description: The kubernetes version in which a nodepool is running. This
+            imposes restrictions on what kubernetes versions can be run in a cluster's
+            nodepools. Additionally, not all kubernetes versions are viable upgrade
+            targets for all prior versions.
+          example: 1.15.4
+          type: string
+        maintenanceWindow:
+          $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        autoScaling:
+          $ref: '#/components/schemas/KubernetesAutoScaling'
+        lans:
+          description: array of additional LANs attached to worker nodes
+          items:
+            $ref: '#/components/schemas/KubernetesNodePoolLan'
+          type: array
+        labels:
+          $ref: '#/components/schemas/KubernetesNodePoolLabel'
+        annotations:
+          $ref: '#/components/schemas/KubernetesNodePoolAnnotation'
+        publicIps:
+          description: Optional array of reserved public IP addresses to be used by
+            the nodes. IPs must be from same location as the data center used for
+            the node pool. The array must contain one extra IP than maximum number
+            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
+            if auto scaling is used) The extra provided IP Will be used during rebuilding
+            of nodes.
+          example:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
+          items:
+            type: string
+          type: array
+        availableUpgradeVersions:
+          description: List of available versions for upgrading the node pool
+          example:
+          - 1.16.4
+          - 1.17.7
+          items:
+            type: string
+          type: array
+      required:
+      - availabilityZone
+      - coresCount
+      - cpuFamily
+      - datacenterId
+      - name
+      - nodeCount
+      - ramSize
+      - storageSize
+      - storageType
+      type: object
+    KubernetesNodePoolPropertiesForPost:
+      properties:
+        name:
+          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
+            must be 63 characters or less and must be empty or begin and end with
+            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
+            dots (.), and alphanumerics between.
+          example: k8s-node-pool
+          type: string
+        datacenterId:
+          description: A valid uuid of the datacenter on which user has access
+          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
+          type: string
+        nodeCount:
+          description: Number of nodes part of the Node Pool
+          example: 2
+          type: integer
+        cpuFamily:
+          description: A valid cpu family name
+          example: AMD_OPTERON
+          type: string
+        coresCount:
+          description: Number of cores for node
+          example: 4
+          type: integer
+        ramSize:
+          description: RAM size for node, minimum size 2048MB is recommended. Ram
+            size must be set to multiple of 1024MB.
+          example: 2048
+          type: integer
+        availabilityZone:
+          description: The availability zone in which the server should exist
+          enum:
+          - AUTO
+          - ZONE_1
+          - ZONE_2
+          example: AUTO
+          type: string
+        storageType:
+          description: Hardware type of the volume
+          enum:
+          - HDD
+          - SSD
+          example: HDD
+          type: string
+        storageSize:
+          description: The size of the volume in GB. The size should be greater than
+            10GB.
+          example: 100
+          type: integer
+        k8sVersion:
+          description: The kubernetes version in which a nodepool is running. This
+            imposes restrictions on what kubernetes versions can be run in a cluster's
+            nodepools. Additionally, not all kubernetes versions are viable upgrade
+            targets for all prior versions.
+          example: 1.15.4
+          type: string
+        maintenanceWindow:
+          $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        autoScaling:
+          $ref: '#/components/schemas/KubernetesAutoScaling'
+        lans:
+          description: array of additional LANs attached to worker nodes
+          items:
+            $ref: '#/components/schemas/KubernetesNodePoolLan'
+          type: array
+        labels:
+          $ref: '#/components/schemas/KubernetesNodePoolLabel'
+        annotations:
+          $ref: '#/components/schemas/KubernetesNodePoolAnnotation'
+        publicIps:
+          description: Optional array of reserved public IP addresses to be used by
+            the nodes. IPs must be from same location as the data center used for
+            the node pool. The array must contain one extra IP than maximum number
+            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
+            if auto scaling is used) The extra provided IP Will be used during rebuilding
+            of nodes.
+          example:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
+          items:
+            type: string
+          type: array
       required:
       - availabilityZone
       - coresCount
@@ -29918,9 +31794,15 @@ components:
           lans:
           - id: 3
           - id: 3
+          annotations:
+            value: value
+            key: key
           ramSize: 2048
           availabilityZone: AUTO
           k8sVersion: 1.15.4
+          labels:
+            value: value
+            key: key
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
@@ -29930,6 +31812,10 @@ components:
           storageType: HDD
           nodeCount: 2
           cpuFamily: AMD_OPTERON
+          publicIps:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
       properties:
         id:
           description: The resource's unique identifier.
@@ -29992,9 +31878,16 @@ components:
           coresCount: 4
           storageSize: 100
           name: k8s-node-pool
+          availableUpgradeVersions:
+          - 1.16.4
+          - 1.17.7
           storageType: HDD
           nodeCount: 2
           cpuFamily: AMD_OPTERON
+          publicIps:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
       properties:
         id:
           description: The resource's unique identifier.
@@ -30061,9 +31954,16 @@ components:
             coresCount: 4
             storageSize: 100
             name: k8s-node-pool
+            availableUpgradeVersions:
+            - 1.16.4
+            - 1.17.7
             storageType: HDD
             nodeCount: 2
             cpuFamily: AMD_OPTERON
+            publicIps:
+            - 81.173.1.2
+            - 82.231.2.5
+            - 92.221.2.4
         - metadata:
             createdByUserId: user@example.com
             createdDate: 2015-12-04T14:34:09.809Z
@@ -30099,9 +31999,16 @@ components:
             coresCount: 4
             storageSize: 100
             name: k8s-node-pool
+            availableUpgradeVersions:
+            - 1.16.4
+            - 1.17.7
             storageType: HDD
             nodeCount: 2
             cpuFamily: AMD_OPTERON
+            publicIps:
+            - 81.173.1.2
+            - 82.231.2.5
+            - 92.221.2.4
       properties:
         id:
           description: Unique representation for Kubernetes Node Pool as a collection
@@ -30349,6 +32256,51 @@ components:
       - k8s
       - nodepool
       type: string
+    PaginationOffsetMandatory:
+      description: the offset specified in the request (or, if none was specified,
+        the default offset of 0)
+      example: 0
+      type: number
+    PaginationLimitMandatory:
+      description: the limit specified in the request (or, if none was specified,
+        the default limit of 0)
+      example: 1000
+      type: number
+    PaginationOffsetOptional:
+      description: the offset (if specified in the request)
+      example: 0
+      type: number
+    PaginationLimitOptional:
+      description: the limit (if specified in the request)
+      example: 1000
+      type: number
+    PaginationLinks:
+      example:
+        next: <NEXT-PAGE-URI>
+        prev: <PREVIOUS-PAGE-URI>
+        self: <THIS-PAGE-URI>
+      properties:
+        prev:
+          description: URL (with offset and limit parameters) of the previous page;
+            only present if offset is greater than 0
+          example: <PREVIOUS-PAGE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        self:
+          description: URL (with offset and limit parameters) of the current page
+          example: <THIS-PAGE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        next:
+          description: URL (with offset and limit parameters) of the next page; only
+            present if offset + limit is less than the total number of elements
+          example: <NEXT-PAGE-URI>
+          format: uri
+          readOnly: true
+          type: string
+      type: object
   securitySchemes:
     Basic Authentication:
       description: 'You will need to base64 encode the string containing your credentials.

@@ -18,6 +18,10 @@ import (
 type LanPropertiesPost struct {
 	// A name of that resource
 	Name *string `json:"name,omitempty"`
+	// IP failover configurations for lan
+	IpFailover *[]IPFailover `json:"ipFailover,omitempty"`
+	// Unique identifier of the private cross connect the given LAN is connected to if any
+	Pcc *string `json:"pcc,omitempty"`
 	// Does this LAN faces the public Internet or not
 	Public *bool `json:"public,omitempty"`
 }
@@ -52,6 +56,78 @@ func (o *LanPropertiesPost) SetName(v string) {
 // HasName returns a boolean if a field has been set.
 func (o *LanPropertiesPost) HasName() bool {
 	if o != nil && o.Name != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetIpFailover returns the IpFailover field value
+// If the value is explicit nil, the zero value for []IPFailover will be returned
+func (o *LanPropertiesPost) GetIpFailover() *[]IPFailover {
+	if o == nil {
+		return nil
+	}
+
+	return o.IpFailover
+}
+
+// GetIpFailoverOk returns a tuple with the IpFailover field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *LanPropertiesPost) GetIpFailoverOk() (*[]IPFailover, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.IpFailover, true
+}
+
+// SetIpFailover sets field value
+func (o *LanPropertiesPost) SetIpFailover(v []IPFailover) {
+	o.IpFailover = &v
+}
+
+// HasIpFailover returns a boolean if a field has been set.
+func (o *LanPropertiesPost) HasIpFailover() bool {
+	if o != nil && o.IpFailover != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetPcc returns the Pcc field value
+// If the value is explicit nil, the zero value for string will be returned
+func (o *LanPropertiesPost) GetPcc() *string {
+	if o == nil {
+		return nil
+	}
+
+	return o.Pcc
+}
+
+// GetPccOk returns a tuple with the Pcc field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *LanPropertiesPost) GetPccOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Pcc, true
+}
+
+// SetPcc sets field value
+func (o *LanPropertiesPost) SetPcc(v string) {
+	o.Pcc = &v
+}
+
+// HasPcc returns a boolean if a field has been set.
+func (o *LanPropertiesPost) HasPcc() bool {
+	if o != nil && o.Pcc != nil {
 		return true
 	}
 
@@ -100,6 +176,16 @@ func (o LanPropertiesPost) MarshalJSON() ([]byte, error) {
 
 	if o.Name != nil {
 		toSerialize["name"] = o.Name
+	}
+	
+
+	if o.IpFailover != nil {
+		toSerialize["ipFailover"] = o.IpFailover
+	}
+	
+
+	if o.Pcc != nil {
+		toSerialize["pcc"] = o.Pcc
 	}
 	
 

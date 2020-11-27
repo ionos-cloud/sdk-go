@@ -26,9 +26,9 @@ type VolumeProperties struct {
 	AvailabilityZone *string `json:"availabilityZone,omitempty"`
 	// Image or snapshot ID to be used as template for this volume
 	Image *string `json:"image,omitempty"`
-	ImageAlias *string `json:"imageAlias,omitempty"`
 	// Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9
 	ImagePassword *string `json:"imagePassword,omitempty"`
+	ImageAlias *string `json:"imageAlias,omitempty"`
 	// Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation.
 	SshKeys *[]string `json:"sshKeys,omitempty"`
 	// The bus type of the volume. Default is VIRTIO
@@ -235,42 +235,6 @@ func (o *VolumeProperties) HasImage() bool {
 
 
 
-// GetImageAlias returns the ImageAlias field value
-// If the value is explicit nil, the zero value for string will be returned
-func (o *VolumeProperties) GetImageAlias() *string {
-	if o == nil {
-		return nil
-	}
-
-	return o.ImageAlias
-}
-
-// GetImageAliasOk returns a tuple with the ImageAlias field value
-// and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *VolumeProperties) GetImageAliasOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-	return o.ImageAlias, true
-}
-
-// SetImageAlias sets field value
-func (o *VolumeProperties) SetImageAlias(v string) {
-	o.ImageAlias = &v
-}
-
-// HasImageAlias returns a boolean if a field has been set.
-func (o *VolumeProperties) HasImageAlias() bool {
-	if o != nil && o.ImageAlias != nil {
-		return true
-	}
-
-	return false
-}
-
-
-
 // GetImagePassword returns the ImagePassword field value
 // If the value is explicit nil, the zero value for string will be returned
 func (o *VolumeProperties) GetImagePassword() *string {
@@ -299,6 +263,42 @@ func (o *VolumeProperties) SetImagePassword(v string) {
 // HasImagePassword returns a boolean if a field has been set.
 func (o *VolumeProperties) HasImagePassword() bool {
 	if o != nil && o.ImagePassword != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetImageAlias returns the ImageAlias field value
+// If the value is explicit nil, the zero value for string will be returned
+func (o *VolumeProperties) GetImageAlias() *string {
+	if o == nil {
+		return nil
+	}
+
+	return o.ImageAlias
+}
+
+// GetImageAliasOk returns a tuple with the ImageAlias field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *VolumeProperties) GetImageAliasOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.ImageAlias, true
+}
+
+// SetImageAlias sets field value
+func (o *VolumeProperties) SetImageAlias(v string) {
+	o.ImageAlias = &v
+}
+
+// HasImageAlias returns a boolean if a field has been set.
+func (o *VolumeProperties) HasImageAlias() bool {
+	if o != nil && o.ImageAlias != nil {
 		return true
 	}
 
@@ -730,13 +730,13 @@ func (o VolumeProperties) MarshalJSON() ([]byte, error) {
 	}
 	
 
-	if o.ImageAlias != nil {
-		toSerialize["imageAlias"] = o.ImageAlias
+	if o.ImagePassword != nil {
+		toSerialize["imagePassword"] = o.ImagePassword
 	}
 	
 
-	if o.ImagePassword != nil {
-		toSerialize["imagePassword"] = o.ImagePassword
+	if o.ImageAlias != nil {
+		toSerialize["imageAlias"] = o.ImageAlias
 	}
 	
 

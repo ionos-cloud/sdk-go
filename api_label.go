@@ -359,6 +359,8 @@ type ApiDatacentersLabelsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersLabelsGetRequest) Pretty(pretty bool) ApiDatacentersLabelsGetRequest {
@@ -371,6 +373,14 @@ func (r ApiDatacentersLabelsGetRequest) Depth(depth int32) ApiDatacentersLabelsG
 }
 func (r ApiDatacentersLabelsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersLabelsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersLabelsGetRequest) Offset(offset int32) ApiDatacentersLabelsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersLabelsGetRequest) Limit(limit int32) ApiDatacentersLabelsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -424,6 +434,12 @@ func (a *LabelApiService) DatacentersLabelsGetExecute(r ApiDatacentersLabelsGetR
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1195,6 +1211,8 @@ type ApiDatacentersServersLabelsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersServersLabelsGetRequest) Pretty(pretty bool) ApiDatacentersServersLabelsGetRequest {
@@ -1207,6 +1225,14 @@ func (r ApiDatacentersServersLabelsGetRequest) Depth(depth int32) ApiDatacenters
 }
 func (r ApiDatacentersServersLabelsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersServersLabelsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersServersLabelsGetRequest) Offset(offset int32) ApiDatacentersServersLabelsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersServersLabelsGetRequest) Limit(limit int32) ApiDatacentersServersLabelsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -1263,6 +1289,12 @@ func (a *LabelApiService) DatacentersServersLabelsGetExecute(r ApiDatacentersSer
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2042,6 +2074,8 @@ type ApiDatacentersVolumesLabelsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersVolumesLabelsGetRequest) Pretty(pretty bool) ApiDatacentersVolumesLabelsGetRequest {
@@ -2054,6 +2088,14 @@ func (r ApiDatacentersVolumesLabelsGetRequest) Depth(depth int32) ApiDatacenters
 }
 func (r ApiDatacentersVolumesLabelsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersVolumesLabelsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersVolumesLabelsGetRequest) Offset(offset int32) ApiDatacentersVolumesLabelsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersVolumesLabelsGetRequest) Limit(limit int32) ApiDatacentersVolumesLabelsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -2110,6 +2152,12 @@ func (a *LabelApiService) DatacentersVolumesLabelsGetExecute(r ApiDatacentersVol
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -3374,7 +3422,7 @@ func (a *LabelApiService) IpblocksLabelsPutExecute(r ApiIpblocksLabelsPutRequest
 	return localVarReturnValue, localVarAPIResponse, nil
 }
 
-type ApiLabelsFindByLabelurnRequest struct {
+type ApiLabelsFindByUrnRequest struct {
 	ctx _context.Context
 	ApiService *LabelApiService
 	labelurn string
@@ -3383,32 +3431,32 @@ type ApiLabelsFindByLabelurnRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiLabelsFindByLabelurnRequest) Pretty(pretty bool) ApiLabelsFindByLabelurnRequest {
+func (r ApiLabelsFindByUrnRequest) Pretty(pretty bool) ApiLabelsFindByUrnRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiLabelsFindByLabelurnRequest) Depth(depth int32) ApiLabelsFindByLabelurnRequest {
+func (r ApiLabelsFindByUrnRequest) Depth(depth int32) ApiLabelsFindByUrnRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiLabelsFindByLabelurnRequest) XContractNumber(xContractNumber int32) ApiLabelsFindByLabelurnRequest {
+func (r ApiLabelsFindByUrnRequest) XContractNumber(xContractNumber int32) ApiLabelsFindByUrnRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiLabelsFindByLabelurnRequest) Execute() (Label, *APIResponse, error) {
-	return r.ApiService.LabelsFindByLabelurnExecute(r)
+func (r ApiLabelsFindByUrnRequest) Execute() (Label, *APIResponse, error) {
+	return r.ApiService.LabelsFindByUrnExecute(r)
 }
 
 /*
- * LabelsFindByLabelurn Returns the label by its URN.
+ * LabelsFindByUrn Returns the label by its URN.
  * You can retrieve the details of a specific label using its URN. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param labelurn The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
- * @return ApiLabelsFindByLabelurnRequest
+ * @return ApiLabelsFindByUrnRequest
  */
-func (a *LabelApiService) LabelsFindByLabelurn(ctx _context.Context, labelurn string) ApiLabelsFindByLabelurnRequest {
-	return ApiLabelsFindByLabelurnRequest{
+func (a *LabelApiService) LabelsFindByUrn(ctx _context.Context, labelurn string) ApiLabelsFindByUrnRequest {
+	return ApiLabelsFindByUrnRequest{
 		ApiService: a,
 		ctx: ctx,
 		labelurn: labelurn,
@@ -3419,7 +3467,7 @@ func (a *LabelApiService) LabelsFindByLabelurn(ctx _context.Context, labelurn st
  * Execute executes the request
  * @return Label
  */
-func (a *LabelApiService) LabelsFindByLabelurnExecute(r ApiLabelsFindByLabelurnRequest) (Label, *APIResponse, error) {
+func (a *LabelApiService) LabelsFindByUrnExecute(r ApiLabelsFindByUrnRequest) (Label, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -3429,7 +3477,7 @@ func (a *LabelApiService) LabelsFindByLabelurnExecute(r ApiLabelsFindByLabelurnR
 		localVarReturnValue  Label
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LabelApiService.LabelsFindByLabelurn")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LabelApiService.LabelsFindByUrn")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -3492,7 +3540,7 @@ func (a *LabelApiService) LabelsFindByLabelurnExecute(r ApiLabelsFindByLabelurnR
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "LabelsFindByLabelurn",
+		Operation: "LabelsFindByUrn",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {

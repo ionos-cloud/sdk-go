@@ -82,6 +82,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*DefaultApi* | [**ApiInfoGet**](docs/DefaultApi.md#apiinfoget) | **Get** / | Display API information
 *BackupUnitApi* | [**BackupunitsDelete**](docs/BackupUnitApi.md#backupunitsdelete) | **Delete** /backupunits/{backupunitId} | Delete a Backup Unit
 *BackupUnitApi* | [**BackupunitsFindById**](docs/BackupUnitApi.md#backupunitsfindbyid) | **Get** /backupunits/{backupunitId} | Returns the specified backup Unit
 *BackupUnitApi* | [**BackupunitsGet**](docs/BackupUnitApi.md#backupunitsget) | **Get** /backupunits | List Backup Units 
@@ -108,7 +109,7 @@ Class | Method | HTTP request | Description
 *ImageApi* | [**ImagesPatch**](docs/ImageApi.md#imagespatch) | **Patch** /images/{imageId} | Partially modify an Image
 *ImageApi* | [**ImagesPut**](docs/ImageApi.md#imagesput) | **Put** /images/{imageId} | Modify an Image
 *KubernetesApi* | [**K8sDelete**](docs/KubernetesApi.md#k8sdelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-*KubernetesApi* | [**K8sFindByClusterid**](docs/KubernetesApi.md#k8sfindbyclusterid) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+*KubernetesApi* | [**K8sFindBySClusterId**](docs/KubernetesApi.md#k8sfindbysclusterid) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
 *KubernetesApi* | [**K8sGet**](docs/KubernetesApi.md#k8sget) | **Get** /k8s | List Kubernetes Clusters
 *KubernetesApi* | [**K8sKubeconfigGet**](docs/KubernetesApi.md#k8skubeconfigget) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
 *KubernetesApi* | [**K8sNodepoolsDelete**](docs/KubernetesApi.md#k8snodepoolsdelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
@@ -145,7 +146,7 @@ Class | Method | HTTP request | Description
 *LabelApi* | [**IpblocksLabelsGet**](docs/LabelApi.md#ipblockslabelsget) | **Get** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
 *LabelApi* | [**IpblocksLabelsPost**](docs/LabelApi.md#ipblockslabelspost) | **Post** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
 *LabelApi* | [**IpblocksLabelsPut**](docs/LabelApi.md#ipblockslabelsput) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-*LabelApi* | [**LabelsFindByLabelurn**](docs/LabelApi.md#labelsfindbylabelurn) | **Get** /labels/{labelurn} | Returns the label by its URN.
+*LabelApi* | [**LabelsFindByUrn**](docs/LabelApi.md#labelsfindbyurn) | **Get** /labels/{labelurn} | Returns the label by its URN.
 *LabelApi* | [**LabelsGet**](docs/LabelApi.md#labelsget) | **Get** /labels | List Labels 
 *LabelApi* | [**SnapshotsLabelsDelete**](docs/LabelApi.md#snapshotslabelsdelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
 *LabelApi* | [**SnapshotsLabelsFindByKey**](docs/LabelApi.md#snapshotslabelsfindbykey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
@@ -162,7 +163,7 @@ Class | Method | HTTP request | Description
 *LanApi* | [**DatacentersLansPost**](docs/LanApi.md#datacenterslanspost) | **Post** /datacenters/{datacenterId}/lans | Create a Lan
 *LanApi* | [**DatacentersLansPut**](docs/LanApi.md#datacenterslansput) | **Put** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan
 *LoadBalancerApi* | [**DatacentersLoadbalancersBalancednicsDelete**](docs/LoadBalancerApi.md#datacentersloadbalancersbalancednicsdelete) | **Delete** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
-*LoadBalancerApi* | [**DatacentersLoadbalancersBalancednicsFindByNic**](docs/LoadBalancerApi.md#datacentersloadbalancersbalancednicsfindbynic) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
+*LoadBalancerApi* | [**DatacentersLoadbalancersBalancednicsFindByNicId**](docs/LoadBalancerApi.md#datacentersloadbalancersbalancednicsfindbynicid) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
 *LoadBalancerApi* | [**DatacentersLoadbalancersBalancednicsGet**](docs/LoadBalancerApi.md#datacentersloadbalancersbalancednicsget) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
 *LoadBalancerApi* | [**DatacentersLoadbalancersBalancednicsPost**](docs/LoadBalancerApi.md#datacentersloadbalancersbalancednicspost) | **Post** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
 *LoadBalancerApi* | [**DatacentersLoadbalancersDelete**](docs/LoadBalancerApi.md#datacentersloadbalancersdelete) | **Delete** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
@@ -171,8 +172,8 @@ Class | Method | HTTP request | Description
 *LoadBalancerApi* | [**DatacentersLoadbalancersPatch**](docs/LoadBalancerApi.md#datacentersloadbalancerspatch) | **Patch** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify a Loadbalancer
 *LoadBalancerApi* | [**DatacentersLoadbalancersPost**](docs/LoadBalancerApi.md#datacentersloadbalancerspost) | **Post** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer
 *LoadBalancerApi* | [**DatacentersLoadbalancersPut**](docs/LoadBalancerApi.md#datacentersloadbalancersput) | **Put** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer
-*LocationApi* | [**LocationsFindByRegion**](docs/LocationApi.md#locationsfindbyregion) | **Get** /locations/{regionId} | List Locations within a region
-*LocationApi* | [**LocationsFindByRegionAndId**](docs/LocationApi.md#locationsfindbyregionandid) | **Get** /locations/{regionId}/{locationId} | Retrieve a Location
+*LocationApi* | [**LocationsFindByRegionId**](docs/LocationApi.md#locationsfindbyregionid) | **Get** /locations/{regionId} | List Locations within a region
+*LocationApi* | [**LocationsFindByRegionIdAndId**](docs/LocationApi.md#locationsfindbyregionidandid) | **Get** /locations/{regionId}/{locationId} | Retrieve a Location
 *LocationApi* | [**LocationsGet**](docs/LocationApi.md#locationsget) | **Get** /locations | List Locations
 *NicApi* | [**DatacentersServersNicsDelete**](docs/NicApi.md#datacentersserversnicsdelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
 *NicApi* | [**DatacentersServersNicsFindById**](docs/NicApi.md#datacentersserversnicsfindbyid) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
@@ -224,7 +225,7 @@ Class | Method | HTTP request | Description
 *UserManagementApi* | [**UmGroupsPut**](docs/UserManagementApi.md#umgroupsput) | **Put** /um/groups/{groupId} | Modify a group
 *UserManagementApi* | [**UmGroupsResourcesGet**](docs/UserManagementApi.md#umgroupsresourcesget) | **Get** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
 *UserManagementApi* | [**UmGroupsSharesDelete**](docs/UserManagementApi.md#umgroupssharesdelete) | **Delete** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-*UserManagementApi* | [**UmGroupsSharesFindByResource**](docs/UserManagementApi.md#umgroupssharesfindbyresource) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
+*UserManagementApi* | [**UmGroupsSharesFindByResourceId**](docs/UserManagementApi.md#umgroupssharesfindbyresourceid) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
 *UserManagementApi* | [**UmGroupsSharesGet**](docs/UserManagementApi.md#umgroupssharesget) | **Get** /um/groups/{groupId}/shares | List Group Shares 
 *UserManagementApi* | [**UmGroupsSharesPost**](docs/UserManagementApi.md#umgroupssharespost) | **Post** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
 *UserManagementApi* | [**UmGroupsSharesPut**](docs/UserManagementApi.md#umgroupssharesput) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
@@ -242,7 +243,7 @@ Class | Method | HTTP request | Description
 *UserManagementApi* | [**UmUsersPost**](docs/UserManagementApi.md#umuserspost) | **Post** /um/users | Create a user
 *UserManagementApi* | [**UmUsersPut**](docs/UserManagementApi.md#umusersput) | **Put** /um/users/{userId} | Modify a user
 *UserManagementApi* | [**UmUsersS3keysDelete**](docs/UserManagementApi.md#umuserss3keysdelete) | **Delete** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-*UserManagementApi* | [**UmUsersS3keysFindByKey**](docs/UserManagementApi.md#umuserss3keysfindbykey) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
+*UserManagementApi* | [**UmUsersS3keysFindByKeyId**](docs/UserManagementApi.md#umuserss3keysfindbykeyid) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
 *UserManagementApi* | [**UmUsersS3keysGet**](docs/UserManagementApi.md#umuserss3keysget) | **Get** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
 *UserManagementApi* | [**UmUsersS3keysPost**](docs/UserManagementApi.md#umuserss3keyspost) | **Post** /um/users/{userId}/s3keys | Create a S3 key for the given user
 *UserManagementApi* | [**UmUsersS3keysPut**](docs/UserManagementApi.md#umuserss3keysput) | **Put** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
@@ -269,9 +270,9 @@ Class | Method | HTTP request | Description
  - [ConnectableDatacenter](docs/ConnectableDatacenter.md)
  - [Contract](docs/Contract.md)
  - [ContractProperties](docs/ContractProperties.md)
+ - [DataCenterEntities](docs/DataCenterEntities.md)
  - [Datacenter](docs/Datacenter.md)
  - [DatacenterElementMetadata](docs/DatacenterElementMetadata.md)
- - [DatacenterEntities](docs/DatacenterEntities.md)
  - [DatacenterProperties](docs/DatacenterProperties.md)
  - [Datacenters](docs/Datacenters.md)
  - [Error](docs/Error.md)
@@ -301,6 +302,7 @@ Class | Method | HTTP request | Description
  - [KubernetesCluster](docs/KubernetesCluster.md)
  - [KubernetesClusterEntities](docs/KubernetesClusterEntities.md)
  - [KubernetesClusterProperties](docs/KubernetesClusterProperties.md)
+ - [KubernetesClusterPropertiesForPostAndPut](docs/KubernetesClusterPropertiesForPostAndPut.md)
  - [KubernetesClusters](docs/KubernetesClusters.md)
  - [KubernetesConfig](docs/KubernetesConfig.md)
  - [KubernetesConfigProperties](docs/KubernetesConfigProperties.md)
@@ -313,6 +315,7 @@ Class | Method | HTTP request | Description
  - [KubernetesNodePoolLabel](docs/KubernetesNodePoolLabel.md)
  - [KubernetesNodePoolLan](docs/KubernetesNodePoolLan.md)
  - [KubernetesNodePoolProperties](docs/KubernetesNodePoolProperties.md)
+ - [KubernetesNodePoolPropertiesForPost](docs/KubernetesNodePoolPropertiesForPost.md)
  - [KubernetesNodePoolPropertiesForPut](docs/KubernetesNodePoolPropertiesForPut.md)
  - [KubernetesNodePools](docs/KubernetesNodePools.md)
  - [KubernetesNodeProperties](docs/KubernetesNodeProperties.md)
@@ -342,6 +345,7 @@ Class | Method | HTTP request | Description
  - [NicProperties](docs/NicProperties.md)
  - [Nics](docs/Nics.md)
  - [NoStateMetaData](docs/NoStateMetaData.md)
+ - [PaginationLinks](docs/PaginationLinks.md)
  - [Peer](docs/Peer.md)
  - [PrivateCrossConnect](docs/PrivateCrossConnect.md)
  - [PrivateCrossConnectProperties](docs/PrivateCrossConnectProperties.md)
@@ -429,6 +433,23 @@ Each of these functions takes a value of the given basic type and returns a poin
 * `PtrTime`
 
 ## Author
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

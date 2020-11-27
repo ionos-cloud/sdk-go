@@ -28,7 +28,7 @@ type NicProperties struct {
 	Lan *int32 `json:"lan"`
 	// Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports.
 	FirewallActive *bool `json:"firewallActive,omitempty"`
-	// Indicates if NAT is enabled on this NIC
+	// Indicates if NAT is enabled on this NIC. This is now deprecated.
 	Nat *bool `json:"nat,omitempty"`
 }
 

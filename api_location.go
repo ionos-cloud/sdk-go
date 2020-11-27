@@ -26,7 +26,7 @@ var (
 // LocationApiService LocationApi service
 type LocationApiService service
 
-type ApiLocationsFindByRegionRequest struct {
+type ApiLocationsFindByRegionIdRequest struct {
 	ctx _context.Context
 	ApiService *LocationApiService
 	regionId string
@@ -35,32 +35,32 @@ type ApiLocationsFindByRegionRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiLocationsFindByRegionRequest) Pretty(pretty bool) ApiLocationsFindByRegionRequest {
+func (r ApiLocationsFindByRegionIdRequest) Pretty(pretty bool) ApiLocationsFindByRegionIdRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiLocationsFindByRegionRequest) Depth(depth int32) ApiLocationsFindByRegionRequest {
+func (r ApiLocationsFindByRegionIdRequest) Depth(depth int32) ApiLocationsFindByRegionIdRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiLocationsFindByRegionRequest) XContractNumber(xContractNumber int32) ApiLocationsFindByRegionRequest {
+func (r ApiLocationsFindByRegionIdRequest) XContractNumber(xContractNumber int32) ApiLocationsFindByRegionIdRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiLocationsFindByRegionRequest) Execute() (Locations, *APIResponse, error) {
-	return r.ApiService.LocationsFindByRegionExecute(r)
+func (r ApiLocationsFindByRegionIdRequest) Execute() (Locations, *APIResponse, error) {
+	return r.ApiService.LocationsFindByRegionIdExecute(r)
 }
 
 /*
- * LocationsFindByRegion List Locations within a region
+ * LocationsFindByRegionId List Locations within a region
  * Retrieve a list of Locations within a world's region
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param regionId
- * @return ApiLocationsFindByRegionRequest
+ * @return ApiLocationsFindByRegionIdRequest
  */
-func (a *LocationApiService) LocationsFindByRegion(ctx _context.Context, regionId string) ApiLocationsFindByRegionRequest {
-	return ApiLocationsFindByRegionRequest{
+func (a *LocationApiService) LocationsFindByRegionId(ctx _context.Context, regionId string) ApiLocationsFindByRegionIdRequest {
+	return ApiLocationsFindByRegionIdRequest{
 		ApiService: a,
 		ctx: ctx,
 		regionId: regionId,
@@ -71,7 +71,7 @@ func (a *LocationApiService) LocationsFindByRegion(ctx _context.Context, regionI
  * Execute executes the request
  * @return Locations
  */
-func (a *LocationApiService) LocationsFindByRegionExecute(r ApiLocationsFindByRegionRequest) (Locations, *APIResponse, error) {
+func (a *LocationApiService) LocationsFindByRegionIdExecute(r ApiLocationsFindByRegionIdRequest) (Locations, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -81,7 +81,7 @@ func (a *LocationApiService) LocationsFindByRegionExecute(r ApiLocationsFindByRe
 		localVarReturnValue  Locations
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LocationApiService.LocationsFindByRegion")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LocationApiService.LocationsFindByRegionId")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -144,7 +144,7 @@ func (a *LocationApiService) LocationsFindByRegionExecute(r ApiLocationsFindByRe
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "LocationsFindByRegion",
+		Operation: "LocationsFindByRegionId",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {
@@ -185,7 +185,7 @@ func (a *LocationApiService) LocationsFindByRegionExecute(r ApiLocationsFindByRe
 	return localVarReturnValue, localVarAPIResponse, nil
 }
 
-type ApiLocationsFindByRegionAndIdRequest struct {
+type ApiLocationsFindByRegionIdAndIdRequest struct {
 	ctx _context.Context
 	ApiService *LocationApiService
 	regionId string
@@ -195,33 +195,33 @@ type ApiLocationsFindByRegionAndIdRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiLocationsFindByRegionAndIdRequest) Pretty(pretty bool) ApiLocationsFindByRegionAndIdRequest {
+func (r ApiLocationsFindByRegionIdAndIdRequest) Pretty(pretty bool) ApiLocationsFindByRegionIdAndIdRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiLocationsFindByRegionAndIdRequest) Depth(depth int32) ApiLocationsFindByRegionAndIdRequest {
+func (r ApiLocationsFindByRegionIdAndIdRequest) Depth(depth int32) ApiLocationsFindByRegionIdAndIdRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiLocationsFindByRegionAndIdRequest) XContractNumber(xContractNumber int32) ApiLocationsFindByRegionAndIdRequest {
+func (r ApiLocationsFindByRegionIdAndIdRequest) XContractNumber(xContractNumber int32) ApiLocationsFindByRegionIdAndIdRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiLocationsFindByRegionAndIdRequest) Execute() (Location, *APIResponse, error) {
-	return r.ApiService.LocationsFindByRegionAndIdExecute(r)
+func (r ApiLocationsFindByRegionIdAndIdRequest) Execute() (Location, *APIResponse, error) {
+	return r.ApiService.LocationsFindByRegionIdAndIdExecute(r)
 }
 
 /*
- * LocationsFindByRegionAndId Retrieve a Location
+ * LocationsFindByRegionIdAndId Retrieve a Location
  * Retrieves the attributes of a given location
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param regionId
  * @param locationId
- * @return ApiLocationsFindByRegionAndIdRequest
+ * @return ApiLocationsFindByRegionIdAndIdRequest
  */
-func (a *LocationApiService) LocationsFindByRegionAndId(ctx _context.Context, regionId string, locationId string) ApiLocationsFindByRegionAndIdRequest {
-	return ApiLocationsFindByRegionAndIdRequest{
+func (a *LocationApiService) LocationsFindByRegionIdAndId(ctx _context.Context, regionId string, locationId string) ApiLocationsFindByRegionIdAndIdRequest {
+	return ApiLocationsFindByRegionIdAndIdRequest{
 		ApiService: a,
 		ctx: ctx,
 		regionId: regionId,
@@ -233,7 +233,7 @@ func (a *LocationApiService) LocationsFindByRegionAndId(ctx _context.Context, re
  * Execute executes the request
  * @return Location
  */
-func (a *LocationApiService) LocationsFindByRegionAndIdExecute(r ApiLocationsFindByRegionAndIdRequest) (Location, *APIResponse, error) {
+func (a *LocationApiService) LocationsFindByRegionIdAndIdExecute(r ApiLocationsFindByRegionIdAndIdRequest) (Location, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -243,7 +243,7 @@ func (a *LocationApiService) LocationsFindByRegionAndIdExecute(r ApiLocationsFin
 		localVarReturnValue  Location
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LocationApiService.LocationsFindByRegionAndId")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LocationApiService.LocationsFindByRegionIdAndId")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -307,7 +307,7 @@ func (a *LocationApiService) LocationsFindByRegionAndIdExecute(r ApiLocationsFin
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "LocationsFindByRegionAndId",
+		Operation: "LocationsFindByRegionIdAndId",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {

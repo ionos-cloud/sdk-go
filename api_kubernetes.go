@@ -185,7 +185,7 @@ func (a *KubernetesApiService) K8sDeleteExecute(r ApiK8sDeleteRequest) (map[stri
 	return localVarReturnValue, localVarAPIResponse, nil
 }
 
-type ApiK8sFindByClusteridRequest struct {
+type ApiK8sFindBySClusterIdRequest struct {
 	ctx _context.Context
 	ApiService *KubernetesApiService
 	k8sClusterId string
@@ -194,32 +194,32 @@ type ApiK8sFindByClusteridRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiK8sFindByClusteridRequest) Pretty(pretty bool) ApiK8sFindByClusteridRequest {
+func (r ApiK8sFindBySClusterIdRequest) Pretty(pretty bool) ApiK8sFindBySClusterIdRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiK8sFindByClusteridRequest) Depth(depth int32) ApiK8sFindByClusteridRequest {
+func (r ApiK8sFindBySClusterIdRequest) Depth(depth int32) ApiK8sFindBySClusterIdRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiK8sFindByClusteridRequest) XContractNumber(xContractNumber int32) ApiK8sFindByClusteridRequest {
+func (r ApiK8sFindBySClusterIdRequest) XContractNumber(xContractNumber int32) ApiK8sFindBySClusterIdRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiK8sFindByClusteridRequest) Execute() (KubernetesCluster, *APIResponse, error) {
-	return r.ApiService.K8sFindByClusteridExecute(r)
+func (r ApiK8sFindBySClusterIdRequest) Execute() (KubernetesCluster, *APIResponse, error) {
+	return r.ApiService.K8sFindBySClusterIdExecute(r)
 }
 
 /*
- * K8sFindByClusterid Retrieve Kubernetes Cluster
+ * K8sFindBySClusterId Retrieve Kubernetes Cluster
  * This will retrieve a single Kubernetes Cluster.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param k8sClusterId The unique ID of the Kubernetes Cluster
- * @return ApiK8sFindByClusteridRequest
+ * @return ApiK8sFindBySClusterIdRequest
  */
-func (a *KubernetesApiService) K8sFindByClusterid(ctx _context.Context, k8sClusterId string) ApiK8sFindByClusteridRequest {
-	return ApiK8sFindByClusteridRequest{
+func (a *KubernetesApiService) K8sFindBySClusterId(ctx _context.Context, k8sClusterId string) ApiK8sFindBySClusterIdRequest {
+	return ApiK8sFindBySClusterIdRequest{
 		ApiService: a,
 		ctx: ctx,
 		k8sClusterId: k8sClusterId,
@@ -230,7 +230,7 @@ func (a *KubernetesApiService) K8sFindByClusterid(ctx _context.Context, k8sClust
  * Execute executes the request
  * @return KubernetesCluster
  */
-func (a *KubernetesApiService) K8sFindByClusteridExecute(r ApiK8sFindByClusteridRequest) (KubernetesCluster, *APIResponse, error) {
+func (a *KubernetesApiService) K8sFindBySClusterIdExecute(r ApiK8sFindBySClusterIdRequest) (KubernetesCluster, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -240,7 +240,7 @@ func (a *KubernetesApiService) K8sFindByClusteridExecute(r ApiK8sFindByClusterid
 		localVarReturnValue  KubernetesCluster
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "KubernetesApiService.K8sFindByClusterid")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "KubernetesApiService.K8sFindBySClusterId")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -303,7 +303,7 @@ func (a *KubernetesApiService) K8sFindByClusteridExecute(r ApiK8sFindByClusterid
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "K8sFindByClusterid",
+		Operation: "K8sFindBySClusterId",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {
@@ -1983,14 +1983,14 @@ type ApiK8sNodepoolsPutRequest struct {
 	ApiService *KubernetesApiService
 	k8sClusterId string
 	nodepoolId string
-	kubernetesNodePoolProperties *KubernetesNodePoolPropertiesForPut
+	kubernetesNodePool *KubernetesNodePool
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
 }
 
-func (r ApiK8sNodepoolsPutRequest) KubernetesNodePoolProperties(kubernetesNodePoolProperties KubernetesNodePoolPropertiesForPut) ApiK8sNodepoolsPutRequest {
-	r.kubernetesNodePoolProperties = &kubernetesNodePoolProperties
+func (r ApiK8sNodepoolsPutRequest) KubernetesNodePool(kubernetesNodePool KubernetesNodePool) ApiK8sNodepoolsPutRequest {
+	r.kubernetesNodePool = &kubernetesNodePool
 	return r
 }
 func (r ApiK8sNodepoolsPutRequest) Pretty(pretty bool) ApiK8sNodepoolsPutRequest {
@@ -2053,8 +2053,8 @@ func (a *KubernetesApiService) K8sNodepoolsPutExecute(r ApiK8sNodepoolsPutReques
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
-	if r.kubernetesNodePoolProperties == nil {
-		return localVarReturnValue, nil, reportError("kubernetesNodePoolProperties is required and must be specified")
+	if r.kubernetesNodePool == nil {
+		return localVarReturnValue, nil, reportError("kubernetesNodePool is required and must be specified")
 	}
 
 	if r.pretty != nil {
@@ -2084,7 +2084,7 @@ func (a *KubernetesApiService) K8sNodepoolsPutExecute(r ApiK8sNodepoolsPutReques
 		localVarHeaderParams["X-Contract-Number"] = parameterToString(*r.xContractNumber, "")
 	}
 	// body params
-	localVarPostBody = r.kubernetesNodePoolProperties
+	localVarPostBody = r.kubernetesNodePool
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
@@ -2320,14 +2320,14 @@ type ApiK8sPutRequest struct {
 	ctx _context.Context
 	ApiService *KubernetesApiService
 	k8sClusterId string
-	kubernetescluster *KubernetesCluster
+	kubernetesCluster *KubernetesCluster
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
 }
 
-func (r ApiK8sPutRequest) Kubernetescluster(kubernetescluster KubernetesCluster) ApiK8sPutRequest {
-	r.kubernetescluster = &kubernetescluster
+func (r ApiK8sPutRequest) KubernetesCluster(kubernetesCluster KubernetesCluster) ApiK8sPutRequest {
+	r.kubernetesCluster = &kubernetesCluster
 	return r
 }
 func (r ApiK8sPutRequest) Pretty(pretty bool) ApiK8sPutRequest {
@@ -2387,8 +2387,8 @@ func (a *KubernetesApiService) K8sPutExecute(r ApiK8sPutRequest) (KubernetesClus
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := _neturl.Values{}
 	localVarFormParams := _neturl.Values{}
-	if r.kubernetescluster == nil {
-		return localVarReturnValue, nil, reportError("kubernetescluster is required and must be specified")
+	if r.kubernetesCluster == nil {
+		return localVarReturnValue, nil, reportError("kubernetesCluster is required and must be specified")
 	}
 
 	if r.pretty != nil {
@@ -2418,7 +2418,7 @@ func (a *KubernetesApiService) K8sPutExecute(r ApiK8sPutRequest) (KubernetesClus
 		localVarHeaderParams["X-Contract-Number"] = parameterToString(*r.xContractNumber, "")
 	}
 	// body params
-	localVarPostBody = r.kubernetescluster
+	localVarPostBody = r.kubernetesCluster
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {

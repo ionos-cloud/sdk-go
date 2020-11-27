@@ -359,6 +359,8 @@ type ApiDatacentersLansGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersLansGetRequest) Pretty(pretty bool) ApiDatacentersLansGetRequest {
@@ -371,6 +373,14 @@ func (r ApiDatacentersLansGetRequest) Depth(depth int32) ApiDatacentersLansGetRe
 }
 func (r ApiDatacentersLansGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersLansGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersLansGetRequest) Offset(offset int32) ApiDatacentersLansGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersLansGetRequest) Limit(limit int32) ApiDatacentersLansGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -424,6 +434,12 @@ func (a *LanApiService) DatacentersLansGetExecute(r ApiDatacentersLansGetRequest
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -686,6 +702,8 @@ type ApiDatacentersLansNicsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersLansNicsGetRequest) Pretty(pretty bool) ApiDatacentersLansNicsGetRequest {
@@ -698,6 +716,14 @@ func (r ApiDatacentersLansNicsGetRequest) Depth(depth int32) ApiDatacentersLansN
 }
 func (r ApiDatacentersLansNicsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersLansNicsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersLansNicsGetRequest) Offset(offset int32) ApiDatacentersLansNicsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersLansNicsGetRequest) Limit(limit int32) ApiDatacentersLansNicsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -754,6 +780,12 @@ func (a *LanApiService) DatacentersLansNicsGetExecute(r ApiDatacentersLansNicsGe
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

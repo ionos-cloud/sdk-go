@@ -40,6 +40,10 @@ type KubernetesNodePoolPropertiesForPut struct {
 	AutoScaling *KubernetesAutoScaling `json:"autoScaling,omitempty"`
 	// array of additional LANs attached to worker nodes
 	Lans *[]KubernetesNodePoolLan `json:"lans,omitempty"`
+	Labels *KubernetesNodePoolLabel `json:"labels,omitempty"`
+	Annotations *KubernetesNodePoolAnnotation `json:"annotations,omitempty"`
+	// Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
+	PublicIps *[]string `json:"publicIps,omitempty"`
 }
 
 
@@ -511,6 +515,114 @@ func (o *KubernetesNodePoolPropertiesForPut) HasLans() bool {
 }
 
 
+
+// GetLabels returns the Labels field value
+// If the value is explicit nil, the zero value for KubernetesNodePoolLabel will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetLabels() *KubernetesNodePoolLabel {
+	if o == nil {
+		return nil
+	}
+
+	return o.Labels
+}
+
+// GetLabelsOk returns a tuple with the Labels field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetLabelsOk() (*KubernetesNodePoolLabel, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Labels, true
+}
+
+// SetLabels sets field value
+func (o *KubernetesNodePoolPropertiesForPut) SetLabels(v KubernetesNodePoolLabel) {
+	o.Labels = &v
+}
+
+// HasLabels returns a boolean if a field has been set.
+func (o *KubernetesNodePoolPropertiesForPut) HasLabels() bool {
+	if o != nil && o.Labels != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetAnnotations returns the Annotations field value
+// If the value is explicit nil, the zero value for KubernetesNodePoolAnnotation will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetAnnotations() *KubernetesNodePoolAnnotation {
+	if o == nil {
+		return nil
+	}
+
+	return o.Annotations
+}
+
+// GetAnnotationsOk returns a tuple with the Annotations field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetAnnotationsOk() (*KubernetesNodePoolAnnotation, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.Annotations, true
+}
+
+// SetAnnotations sets field value
+func (o *KubernetesNodePoolPropertiesForPut) SetAnnotations(v KubernetesNodePoolAnnotation) {
+	o.Annotations = &v
+}
+
+// HasAnnotations returns a boolean if a field has been set.
+func (o *KubernetesNodePoolPropertiesForPut) HasAnnotations() bool {
+	if o != nil && o.Annotations != nil {
+		return true
+	}
+
+	return false
+}
+
+
+
+// GetPublicIps returns the PublicIps field value
+// If the value is explicit nil, the zero value for []string will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetPublicIps() *[]string {
+	if o == nil {
+		return nil
+	}
+
+	return o.PublicIps
+}
+
+// GetPublicIpsOk returns a tuple with the PublicIps field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetPublicIpsOk() (*[]string, bool) {
+	if o == nil {
+		return nil, false
+	}
+	return o.PublicIps, true
+}
+
+// SetPublicIps sets field value
+func (o *KubernetesNodePoolPropertiesForPut) SetPublicIps(v []string) {
+	o.PublicIps = &v
+}
+
+// HasPublicIps returns a boolean if a field has been set.
+func (o *KubernetesNodePoolPropertiesForPut) HasPublicIps() bool {
+	if o != nil && o.PublicIps != nil {
+		return true
+	}
+
+	return false
+}
+
+
 func (o KubernetesNodePoolPropertiesForPut) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 
@@ -576,6 +688,21 @@ func (o KubernetesNodePoolPropertiesForPut) MarshalJSON() ([]byte, error) {
 
 	if o.Lans != nil {
 		toSerialize["lans"] = o.Lans
+	}
+	
+
+	if o.Labels != nil {
+		toSerialize["labels"] = o.Labels
+	}
+	
+
+	if o.Annotations != nil {
+		toSerialize["annotations"] = o.Annotations
+	}
+	
+
+	if o.PublicIps != nil {
+		toSerialize["publicIps"] = o.PublicIps
 	}
 	
 	return json.Marshal(toSerialize)

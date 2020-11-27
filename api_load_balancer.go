@@ -193,7 +193,7 @@ func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsDeleteExecu
 	return localVarReturnValue, localVarAPIResponse, nil
 }
 
-type ApiDatacentersLoadbalancersBalancednicsFindByNicRequest struct {
+type ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest struct {
 	ctx _context.Context
 	ApiService *LoadBalancerApiService
 	datacenterId string
@@ -204,34 +204,34 @@ type ApiDatacentersLoadbalancersBalancednicsFindByNicRequest struct {
 	xContractNumber *int32
 }
 
-func (r ApiDatacentersLoadbalancersBalancednicsFindByNicRequest) Pretty(pretty bool) ApiDatacentersLoadbalancersBalancednicsFindByNicRequest {
+func (r ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest) Pretty(pretty bool) ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest {
 	r.pretty = &pretty
 	return r
 }
-func (r ApiDatacentersLoadbalancersBalancednicsFindByNicRequest) Depth(depth int32) ApiDatacentersLoadbalancersBalancednicsFindByNicRequest {
+func (r ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest) Depth(depth int32) ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest {
 	r.depth = &depth
 	return r
 }
-func (r ApiDatacentersLoadbalancersBalancednicsFindByNicRequest) XContractNumber(xContractNumber int32) ApiDatacentersLoadbalancersBalancednicsFindByNicRequest {
+func (r ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest) XContractNumber(xContractNumber int32) ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest {
 	r.xContractNumber = &xContractNumber
 	return r
 }
 
-func (r ApiDatacentersLoadbalancersBalancednicsFindByNicRequest) Execute() (Nic, *APIResponse, error) {
-	return r.ApiService.DatacentersLoadbalancersBalancednicsFindByNicExecute(r)
+func (r ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest) Execute() (Nic, *APIResponse, error) {
+	return r.ApiService.DatacentersLoadbalancersBalancednicsFindByNicIdExecute(r)
 }
 
 /*
- * DatacentersLoadbalancersBalancednicsFindByNic Retrieve a nic attached to Load Balancer
+ * DatacentersLoadbalancersBalancednicsFindByNicId Retrieve a nic attached to Load Balancer
  * This will retrieve the properties of an attached nic.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param datacenterId The unique ID of the datacenter
  * @param loadbalancerId The unique ID of the Load Balancer
  * @param nicId The unique ID of the NIC
- * @return ApiDatacentersLoadbalancersBalancednicsFindByNicRequest
+ * @return ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest
  */
-func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNic(ctx _context.Context, datacenterId string, loadbalancerId string, nicId string) ApiDatacentersLoadbalancersBalancednicsFindByNicRequest {
-	return ApiDatacentersLoadbalancersBalancednicsFindByNicRequest{
+func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNicId(ctx _context.Context, datacenterId string, loadbalancerId string, nicId string) ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest {
+	return ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest{
 		ApiService: a,
 		ctx: ctx,
 		datacenterId: datacenterId,
@@ -244,7 +244,7 @@ func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNic(c
  * Execute executes the request
  * @return Nic
  */
-func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNicExecute(r ApiDatacentersLoadbalancersBalancednicsFindByNicRequest) (Nic, *APIResponse, error) {
+func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNicIdExecute(r ApiDatacentersLoadbalancersBalancednicsFindByNicIdRequest) (Nic, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
@@ -254,7 +254,7 @@ func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNicEx
 		localVarReturnValue  Nic
 	)
 
-	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LoadBalancerApiService.DatacentersLoadbalancersBalancednicsFindByNic")
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "LoadBalancerApiService.DatacentersLoadbalancersBalancednicsFindByNicId")
 	if err != nil {
 		return localVarReturnValue, nil, GenericOpenAPIError{error: err.Error()}
 	}
@@ -319,7 +319,7 @@ func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsFindByNicEx
 		Response: localVarHTTPResponse,
 		Method: localVarHTTPMethod,
 		RequestURL: localVarPath,
-		Operation: "DatacentersLoadbalancersBalancednicsFindByNic",
+		Operation: "DatacentersLoadbalancersBalancednicsFindByNicId",
 	}
 
 	if err != nil || localVarHTTPResponse == nil {
@@ -368,6 +368,8 @@ type ApiDatacentersLoadbalancersBalancednicsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersLoadbalancersBalancednicsGetRequest) Pretty(pretty bool) ApiDatacentersLoadbalancersBalancednicsGetRequest {
@@ -380,6 +382,14 @@ func (r ApiDatacentersLoadbalancersBalancednicsGetRequest) Depth(depth int32) Ap
 }
 func (r ApiDatacentersLoadbalancersBalancednicsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersLoadbalancersBalancednicsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersLoadbalancersBalancednicsGetRequest) Offset(offset int32) ApiDatacentersLoadbalancersBalancednicsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersLoadbalancersBalancednicsGetRequest) Limit(limit int32) ApiDatacentersLoadbalancersBalancednicsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -436,6 +446,12 @@ func (a *LoadBalancerApiService) DatacentersLoadbalancersBalancednicsGetExecute(
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1029,6 +1045,8 @@ type ApiDatacentersLoadbalancersGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersLoadbalancersGetRequest) Pretty(pretty bool) ApiDatacentersLoadbalancersGetRequest {
@@ -1041,6 +1059,14 @@ func (r ApiDatacentersLoadbalancersGetRequest) Depth(depth int32) ApiDatacenters
 }
 func (r ApiDatacentersLoadbalancersGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersLoadbalancersGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersLoadbalancersGetRequest) Offset(offset int32) ApiDatacentersLoadbalancersGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersLoadbalancersGetRequest) Limit(limit int32) ApiDatacentersLoadbalancersGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -1094,6 +1120,12 @@ func (a *LoadBalancerApiService) DatacentersLoadbalancersGetExecute(r ApiDatacen
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

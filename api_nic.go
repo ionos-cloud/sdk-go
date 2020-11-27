@@ -711,6 +711,8 @@ type ApiDatacentersServersNicsFirewallrulesGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersServersNicsFirewallrulesGetRequest) Pretty(pretty bool) ApiDatacentersServersNicsFirewallrulesGetRequest {
@@ -723,6 +725,14 @@ func (r ApiDatacentersServersNicsFirewallrulesGetRequest) Depth(depth int32) Api
 }
 func (r ApiDatacentersServersNicsFirewallrulesGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersServersNicsFirewallrulesGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersServersNicsFirewallrulesGetRequest) Offset(offset int32) ApiDatacentersServersNicsFirewallrulesGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersServersNicsFirewallrulesGetRequest) Limit(limit int32) ApiDatacentersServersNicsFirewallrulesGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -782,6 +792,12 @@ func (a *NicApiService) DatacentersServersNicsFirewallrulesGetExecute(r ApiDatac
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1416,6 +1432,8 @@ type ApiDatacentersServersNicsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersServersNicsGetRequest) Pretty(pretty bool) ApiDatacentersServersNicsGetRequest {
@@ -1428,6 +1446,14 @@ func (r ApiDatacentersServersNicsGetRequest) Depth(depth int32) ApiDatacentersSe
 }
 func (r ApiDatacentersServersNicsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersServersNicsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersServersNicsGetRequest) Offset(offset int32) ApiDatacentersServersNicsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersServersNicsGetRequest) Limit(limit int32) ApiDatacentersServersNicsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -1484,6 +1510,12 @@ func (a *NicApiService) DatacentersServersNicsGetExecute(r ApiDatacentersServers
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -350,6 +350,8 @@ type ApiDatacentersGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersGetRequest) Pretty(pretty bool) ApiDatacentersGetRequest {
@@ -362,6 +364,14 @@ func (r ApiDatacentersGetRequest) Depth(depth int32) ApiDatacentersGetRequest {
 }
 func (r ApiDatacentersGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersGetRequest) Offset(offset int32) ApiDatacentersGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersGetRequest) Limit(limit int32) ApiDatacentersGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -412,6 +422,12 @@ func (a *DataCenterApiService) DatacentersGetExecute(r ApiDatacentersGetRequest)
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -14,8 +14,8 @@ import (
 	"encoding/json"
 )
 
-// DatacenterEntities struct for DatacenterEntities
-type DatacenterEntities struct {
+// DataCenterEntities struct for DataCenterEntities
+type DataCenterEntities struct {
 	Servers *Servers `json:"servers,omitempty"`
 	Volumes *Volumes `json:"volumes,omitempty"`
 	Loadbalancers *Loadbalancers `json:"loadbalancers,omitempty"`
@@ -26,7 +26,7 @@ type DatacenterEntities struct {
 
 // GetServers returns the Servers field value
 // If the value is explicit nil, the zero value for Servers will be returned
-func (o *DatacenterEntities) GetServers() *Servers {
+func (o *DataCenterEntities) GetServers() *Servers {
 	if o == nil {
 		return nil
 	}
@@ -37,7 +37,7 @@ func (o *DatacenterEntities) GetServers() *Servers {
 // GetServersOk returns a tuple with the Servers field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *DatacenterEntities) GetServersOk() (*Servers, bool) {
+func (o *DataCenterEntities) GetServersOk() (*Servers, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -45,12 +45,12 @@ func (o *DatacenterEntities) GetServersOk() (*Servers, bool) {
 }
 
 // SetServers sets field value
-func (o *DatacenterEntities) SetServers(v Servers) {
+func (o *DataCenterEntities) SetServers(v Servers) {
 	o.Servers = &v
 }
 
 // HasServers returns a boolean if a field has been set.
-func (o *DatacenterEntities) HasServers() bool {
+func (o *DataCenterEntities) HasServers() bool {
 	if o != nil && o.Servers != nil {
 		return true
 	}
@@ -62,7 +62,7 @@ func (o *DatacenterEntities) HasServers() bool {
 
 // GetVolumes returns the Volumes field value
 // If the value is explicit nil, the zero value for Volumes will be returned
-func (o *DatacenterEntities) GetVolumes() *Volumes {
+func (o *DataCenterEntities) GetVolumes() *Volumes {
 	if o == nil {
 		return nil
 	}
@@ -73,7 +73,7 @@ func (o *DatacenterEntities) GetVolumes() *Volumes {
 // GetVolumesOk returns a tuple with the Volumes field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *DatacenterEntities) GetVolumesOk() (*Volumes, bool) {
+func (o *DataCenterEntities) GetVolumesOk() (*Volumes, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -81,12 +81,12 @@ func (o *DatacenterEntities) GetVolumesOk() (*Volumes, bool) {
 }
 
 // SetVolumes sets field value
-func (o *DatacenterEntities) SetVolumes(v Volumes) {
+func (o *DataCenterEntities) SetVolumes(v Volumes) {
 	o.Volumes = &v
 }
 
 // HasVolumes returns a boolean if a field has been set.
-func (o *DatacenterEntities) HasVolumes() bool {
+func (o *DataCenterEntities) HasVolumes() bool {
 	if o != nil && o.Volumes != nil {
 		return true
 	}
@@ -98,7 +98,7 @@ func (o *DatacenterEntities) HasVolumes() bool {
 
 // GetLoadbalancers returns the Loadbalancers field value
 // If the value is explicit nil, the zero value for Loadbalancers will be returned
-func (o *DatacenterEntities) GetLoadbalancers() *Loadbalancers {
+func (o *DataCenterEntities) GetLoadbalancers() *Loadbalancers {
 	if o == nil {
 		return nil
 	}
@@ -109,7 +109,7 @@ func (o *DatacenterEntities) GetLoadbalancers() *Loadbalancers {
 // GetLoadbalancersOk returns a tuple with the Loadbalancers field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *DatacenterEntities) GetLoadbalancersOk() (*Loadbalancers, bool) {
+func (o *DataCenterEntities) GetLoadbalancersOk() (*Loadbalancers, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -117,12 +117,12 @@ func (o *DatacenterEntities) GetLoadbalancersOk() (*Loadbalancers, bool) {
 }
 
 // SetLoadbalancers sets field value
-func (o *DatacenterEntities) SetLoadbalancers(v Loadbalancers) {
+func (o *DataCenterEntities) SetLoadbalancers(v Loadbalancers) {
 	o.Loadbalancers = &v
 }
 
 // HasLoadbalancers returns a boolean if a field has been set.
-func (o *DatacenterEntities) HasLoadbalancers() bool {
+func (o *DataCenterEntities) HasLoadbalancers() bool {
 	if o != nil && o.Loadbalancers != nil {
 		return true
 	}
@@ -134,7 +134,7 @@ func (o *DatacenterEntities) HasLoadbalancers() bool {
 
 // GetLans returns the Lans field value
 // If the value is explicit nil, the zero value for Lans will be returned
-func (o *DatacenterEntities) GetLans() *Lans {
+func (o *DataCenterEntities) GetLans() *Lans {
 	if o == nil {
 		return nil
 	}
@@ -145,7 +145,7 @@ func (o *DatacenterEntities) GetLans() *Lans {
 // GetLansOk returns a tuple with the Lans field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *DatacenterEntities) GetLansOk() (*Lans, bool) {
+func (o *DataCenterEntities) GetLansOk() (*Lans, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -153,12 +153,12 @@ func (o *DatacenterEntities) GetLansOk() (*Lans, bool) {
 }
 
 // SetLans sets field value
-func (o *DatacenterEntities) SetLans(v Lans) {
+func (o *DataCenterEntities) SetLans(v Lans) {
 	o.Lans = &v
 }
 
 // HasLans returns a boolean if a field has been set.
-func (o *DatacenterEntities) HasLans() bool {
+func (o *DataCenterEntities) HasLans() bool {
 	if o != nil && o.Lans != nil {
 		return true
 	}
@@ -167,7 +167,7 @@ func (o *DatacenterEntities) HasLans() bool {
 }
 
 
-func (o DatacenterEntities) MarshalJSON() ([]byte, error) {
+func (o DataCenterEntities) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 
 	if o.Servers != nil {
@@ -192,38 +192,38 @@ func (o DatacenterEntities) MarshalJSON() ([]byte, error) {
 	return json.Marshal(toSerialize)
 }
 
-type NullableDatacenterEntities struct {
-	value *DatacenterEntities
+type NullableDataCenterEntities struct {
+	value *DataCenterEntities
 	isSet bool
 }
 
-func (v NullableDatacenterEntities) Get() *DatacenterEntities {
+func (v NullableDataCenterEntities) Get() *DataCenterEntities {
 	return v.value
 }
 
-func (v *NullableDatacenterEntities) Set(val *DatacenterEntities) {
+func (v *NullableDataCenterEntities) Set(val *DataCenterEntities) {
 	v.value = val
 	v.isSet = true
 }
 
-func (v NullableDatacenterEntities) IsSet() bool {
+func (v NullableDataCenterEntities) IsSet() bool {
 	return v.isSet
 }
 
-func (v *NullableDatacenterEntities) Unset() {
+func (v *NullableDataCenterEntities) Unset() {
 	v.value = nil
 	v.isSet = false
 }
 
-func NewNullableDatacenterEntities(val *DatacenterEntities) *NullableDatacenterEntities {
-	return &NullableDatacenterEntities{value: val, isSet: true}
+func NewNullableDataCenterEntities(val *DataCenterEntities) *NullableDataCenterEntities {
+	return &NullableDataCenterEntities{value: val, isSet: true}
 }
 
-func (v NullableDatacenterEntities) MarshalJSON() ([]byte, error) {
+func (v NullableDataCenterEntities) MarshalJSON() ([]byte, error) {
 	return json.Marshal(v.value)
 }
 
-func (v *NullableDatacenterEntities) UnmarshalJSON(src []byte) error {
+func (v *NullableDataCenterEntities) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }

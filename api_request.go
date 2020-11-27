@@ -198,6 +198,8 @@ type ApiRequestsGetRequest struct {
 	filterCreatedDate *string
 	filterMethod *string
 	filterBody *string
+	offset *int32
+	limit *int32
 }
 
 func (r ApiRequestsGetRequest) Pretty(pretty bool) ApiRequestsGetRequest {
@@ -238,6 +240,14 @@ func (r ApiRequestsGetRequest) FilterMethod(filterMethod string) ApiRequestsGetR
 }
 func (r ApiRequestsGetRequest) FilterBody(filterBody string) ApiRequestsGetRequest {
 	r.filterBody = &filterBody
+	return r
+}
+func (r ApiRequestsGetRequest) Offset(offset int32) ApiRequestsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiRequestsGetRequest) Limit(limit int32) ApiRequestsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -309,6 +319,12 @@ func (a *RequestApiService) RequestsGetExecute(r ApiRequestsGetRequest) (Request
 	}
 	if r.filterBody != nil {
 		localVarQueryParams.Add("filter.body", parameterToString(*r.filterBody, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

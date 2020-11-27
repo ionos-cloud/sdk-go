@@ -368,6 +368,8 @@ type ApiDatacentersServersCdromsGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersServersCdromsGetRequest) Pretty(pretty bool) ApiDatacentersServersCdromsGetRequest {
@@ -380,6 +382,14 @@ func (r ApiDatacentersServersCdromsGetRequest) Depth(depth int32) ApiDatacenters
 }
 func (r ApiDatacentersServersCdromsGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersServersCdromsGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersServersCdromsGetRequest) Offset(offset int32) ApiDatacentersServersCdromsGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersServersCdromsGetRequest) Limit(limit int32) ApiDatacentersServersCdromsGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -436,6 +446,12 @@ func (a *ServerApiService) DatacentersServersCdromsGetExecute(r ApiDatacentersSe
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -1030,6 +1046,8 @@ type ApiDatacentersServersGetRequest struct {
 	depth *int32
 	upgradeNeeded *bool
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersServersGetRequest) Pretty(pretty bool) ApiDatacentersServersGetRequest {
@@ -1046,6 +1064,14 @@ func (r ApiDatacentersServersGetRequest) UpgradeNeeded(upgradeNeeded bool) ApiDa
 }
 func (r ApiDatacentersServersGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersServersGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersServersGetRequest) Offset(offset int32) ApiDatacentersServersGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersServersGetRequest) Limit(limit int32) ApiDatacentersServersGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -1102,6 +1128,12 @@ func (a *ServerApiService) DatacentersServersGetExecute(r ApiDatacentersServersG
 	}
 	if r.upgradeNeeded != nil {
 		localVarQueryParams.Add("upgradeNeeded", parameterToString(*r.upgradeNeeded, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
@@ -2059,7 +2091,7 @@ func (r ApiDatacentersServersStopPostRequest) Execute() (map[string]interface{},
 
 /*
  * DatacentersServersStopPost Stop a Server
- * This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.
+ * This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param datacenterId The unique ID of the datacenter
  * @param serverId The unique ID of the Server
@@ -2698,6 +2730,8 @@ type ApiDatacentersServersVolumesGetRequest struct {
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
+	offset *int32
+	limit *int32
 }
 
 func (r ApiDatacentersServersVolumesGetRequest) Pretty(pretty bool) ApiDatacentersServersVolumesGetRequest {
@@ -2710,6 +2744,14 @@ func (r ApiDatacentersServersVolumesGetRequest) Depth(depth int32) ApiDatacenter
 }
 func (r ApiDatacentersServersVolumesGetRequest) XContractNumber(xContractNumber int32) ApiDatacentersServersVolumesGetRequest {
 	r.xContractNumber = &xContractNumber
+	return r
+}
+func (r ApiDatacentersServersVolumesGetRequest) Offset(offset int32) ApiDatacentersServersVolumesGetRequest {
+	r.offset = &offset
+	return r
+}
+func (r ApiDatacentersServersVolumesGetRequest) Limit(limit int32) ApiDatacentersServersVolumesGetRequest {
+	r.limit = &limit
 	return r
 }
 
@@ -2766,6 +2808,12 @@ func (a *ServerApiService) DatacentersServersVolumesGetExecute(r ApiDatacentersS
 	}
 	if r.depth != nil {
 		localVarQueryParams.Add("depth", parameterToString(*r.depth, ""))
+	}
+	if r.offset != nil {
+		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))
+	}
+	if r.limit != nil {
+		localVarQueryParams.Add("limit", parameterToString(*r.limit, ""))
 	}
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}

@@ -24,7 +24,7 @@ type Datacenter struct {
 	Href *string `json:"href,omitempty"`
 	Metadata *DatacenterElementMetadata `json:"metadata,omitempty"`
 	Properties *DatacenterProperties `json:"properties"`
-	Entities *DatacenterEntities `json:"entities,omitempty"`
+	Entities *DataCenterEntities `json:"entities,omitempty"`
 }
 
 
@@ -210,8 +210,8 @@ func (o *Datacenter) HasProperties() bool {
 
 
 // GetEntities returns the Entities field value
-// If the value is explicit nil, the zero value for DatacenterEntities will be returned
-func (o *Datacenter) GetEntities() *DatacenterEntities {
+// If the value is explicit nil, the zero value for DataCenterEntities will be returned
+func (o *Datacenter) GetEntities() *DataCenterEntities {
 	if o == nil {
 		return nil
 	}
@@ -222,7 +222,7 @@ func (o *Datacenter) GetEntities() *DatacenterEntities {
 // GetEntitiesOk returns a tuple with the Entities field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *Datacenter) GetEntitiesOk() (*DatacenterEntities, bool) {
+func (o *Datacenter) GetEntitiesOk() (*DataCenterEntities, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -230,7 +230,7 @@ func (o *Datacenter) GetEntitiesOk() (*DatacenterEntities, bool) {
 }
 
 // SetEntities sets field value
-func (o *Datacenter) SetEntities(v DatacenterEntities) {
+func (o *Datacenter) SetEntities(v DataCenterEntities) {
 	o.Entities = &v
 }
 
