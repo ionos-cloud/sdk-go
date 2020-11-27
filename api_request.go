@@ -194,10 +194,6 @@ type ApiRequestsGetRequest struct {
 	filterStatus *string
 	filterCreatedAfter *string
 	filterCreatedBefore *string
-	filterUrl *string
-	filterCreatedDate *string
-	filterMethod *string
-	filterBody *string
 	offset *int32
 	limit *int32
 }
@@ -224,22 +220,6 @@ func (r ApiRequestsGetRequest) FilterCreatedAfter(filterCreatedAfter string) Api
 }
 func (r ApiRequestsGetRequest) FilterCreatedBefore(filterCreatedBefore string) ApiRequestsGetRequest {
 	r.filterCreatedBefore = &filterCreatedBefore
-	return r
-}
-func (r ApiRequestsGetRequest) FilterUrl(filterUrl string) ApiRequestsGetRequest {
-	r.filterUrl = &filterUrl
-	return r
-}
-func (r ApiRequestsGetRequest) FilterCreatedDate(filterCreatedDate string) ApiRequestsGetRequest {
-	r.filterCreatedDate = &filterCreatedDate
-	return r
-}
-func (r ApiRequestsGetRequest) FilterMethod(filterMethod string) ApiRequestsGetRequest {
-	r.filterMethod = &filterMethod
-	return r
-}
-func (r ApiRequestsGetRequest) FilterBody(filterBody string) ApiRequestsGetRequest {
-	r.filterBody = &filterBody
 	return r
 }
 func (r ApiRequestsGetRequest) Offset(offset int32) ApiRequestsGetRequest {
@@ -307,18 +287,6 @@ func (a *RequestApiService) RequestsGetExecute(r ApiRequestsGetRequest) (Request
 	}
 	if r.filterCreatedBefore != nil {
 		localVarQueryParams.Add("filter.createdBefore", parameterToString(*r.filterCreatedBefore, ""))
-	}
-	if r.filterUrl != nil {
-		localVarQueryParams.Add("filter.url", parameterToString(*r.filterUrl, ""))
-	}
-	if r.filterCreatedDate != nil {
-		localVarQueryParams.Add("filter.createdDate", parameterToString(*r.filterCreatedDate, ""))
-	}
-	if r.filterMethod != nil {
-		localVarQueryParams.Add("filter.method", parameterToString(*r.filterMethod, ""))
-	}
-	if r.filterBody != nil {
-		localVarQueryParams.Add("filter.body", parameterToString(*r.filterBody, ""))
 	}
 	if r.offset != nil {
 		localVarQueryParams.Add("offset", parameterToString(*r.offset, ""))

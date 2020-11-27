@@ -88,7 +88,7 @@ Name | Type | Description  | Notes
 
 ## RequestsGet
 
-> Requests RequestsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).FilterUrl(filterUrl).FilterCreatedDate(filterCreatedDate).FilterMethod(filterMethod).FilterBody(filterBody).Offset(offset).Limit(limit).Execute()
+> Requests RequestsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).Offset(offset).Limit(limit).Execute()
 
 List Requests
 
@@ -113,16 +113,12 @@ func main() {
     filterStatus := "filterStatus_example" // string | Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] (optional)
     filterCreatedAfter := "filterCreatedAfter_example" // string | Filter all the requests after the created date (optional)
     filterCreatedBefore := "filterCreatedBefore_example" // string | Filter all the requests before the created date (optional)
-    filterUrl := "filterUrl_example" // string | Url filter (optional)
-    filterCreatedDate := "filterCreatedDate_example" // string | Created date filter (optional)
-    filterMethod := "filterMethod_example" // string | Method filter (optional)
-    filterBody := "filterBody_example" // string | Body filter (optional)
     offset := int32(56) // int32 | the first element (of the total list of elements) to include in the response (use together with <code>limit</code> for pagination) (optional) (default to 0)
     limit := int32(56) // int32 | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.RequestApi.RequestsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).FilterUrl(filterUrl).FilterCreatedDate(filterCreatedDate).FilterMethod(filterMethod).FilterBody(filterBody).Offset(offset).Limit(limit).Execute()
+    resp, r, err := api_client.RequestApi.RequestsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestApi.RequestsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -149,10 +145,6 @@ Name | Type | Description  | Notes
  **filterStatus** | **string** | Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] | 
  **filterCreatedAfter** | **string** | Filter all the requests after the created date | 
  **filterCreatedBefore** | **string** | Filter all the requests before the created date | 
- **filterUrl** | **string** | Url filter | 
- **filterCreatedDate** | **string** | Created date filter | 
- **filterMethod** | **string** | Method filter | 
- **filterBody** | **string** | Body filter | 
  **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
  **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 

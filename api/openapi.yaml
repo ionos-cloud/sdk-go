@@ -7311,26 +7311,6 @@ paths:
         name: filter.createdBefore
         schema:
           type: string
-      - description: Url filter
-        in: query
-        name: filter.url
-        schema:
-          type: string
-      - description: Created date filter
-        in: query
-        name: filter.createdDate
-        schema:
-          type: string
-      - description: Method filter
-        in: query
-        name: filter.method
-        schema:
-          type: string
-      - description: Body filter
-        in: query
-        name: filter.body
-        schema:
-          type: string
       - description: the first element (of the total list of elements) to include
           in the response (use together with <code>limit</code> for pagination)
         in: query
