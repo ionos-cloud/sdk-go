@@ -28,7 +28,9 @@ func (o *LanEntities) GetNics() *LanNics {
 		return nil
 	}
 
+
 	return o.Nics
+
 }
 
 // GetNicsOk returns a tuple with the Nics field value
@@ -38,12 +40,17 @@ func (o *LanEntities) GetNicsOk() (*LanNics, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Nics, true
 }
 
 // SetNics sets field value
 func (o *LanEntities) SetNics(v LanNics) {
+
+
 	o.Nics = &v
+
 }
 
 // HasNics returns a boolean if a field has been set.

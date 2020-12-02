@@ -37,7 +37,9 @@ func (o *IpBlockProperties) GetIps() *[]string {
 		return nil
 	}
 
+
 	return o.Ips
+
 }
 
 // GetIpsOk returns a tuple with the Ips field value
@@ -47,12 +49,17 @@ func (o *IpBlockProperties) GetIpsOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Ips, true
 }
 
 // SetIps sets field value
 func (o *IpBlockProperties) SetIps(v []string) {
+
+
 	o.Ips = &v
+
 }
 
 // HasIps returns a boolean if a field has been set.
@@ -73,7 +80,9 @@ func (o *IpBlockProperties) GetLocation() *string {
 		return nil
 	}
 
+
 	return o.Location
+
 }
 
 // GetLocationOk returns a tuple with the Location field value
@@ -83,12 +92,17 @@ func (o *IpBlockProperties) GetLocationOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Location, true
 }
 
 // SetLocation sets field value
 func (o *IpBlockProperties) SetLocation(v string) {
+
+
 	o.Location = &v
+
 }
 
 // HasLocation returns a boolean if a field has been set.
@@ -109,7 +123,9 @@ func (o *IpBlockProperties) GetSize() *int32 {
 		return nil
 	}
 
+
 	return o.Size
+
 }
 
 // GetSizeOk returns a tuple with the Size field value
@@ -119,12 +135,17 @@ func (o *IpBlockProperties) GetSizeOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Size, true
 }
 
 // SetSize sets field value
 func (o *IpBlockProperties) SetSize(v int32) {
+
+
 	o.Size = &v
+
 }
 
 // HasSize returns a boolean if a field has been set.
@@ -145,7 +166,9 @@ func (o *IpBlockProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -155,12 +178,17 @@ func (o *IpBlockProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *IpBlockProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -181,7 +209,9 @@ func (o *IpBlockProperties) GetIpConsumers() *[]IpConsumer {
 		return nil
 	}
 
+
 	return o.IpConsumers
+
 }
 
 // GetIpConsumersOk returns a tuple with the IpConsumers field value
@@ -191,12 +221,17 @@ func (o *IpBlockProperties) GetIpConsumersOk() (*[]IpConsumer, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.IpConsumers, true
 }
 
 // SetIpConsumers sets field value
 func (o *IpBlockProperties) SetIpConsumers(v []IpConsumer) {
+
+
 	o.IpConsumers = &v
+
 }
 
 // HasIpConsumers returns a boolean if a field has been set.

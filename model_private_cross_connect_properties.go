@@ -35,7 +35,9 @@ func (o *PrivateCrossConnectProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -45,12 +47,17 @@ func (o *PrivateCrossConnectProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *PrivateCrossConnectProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -71,7 +78,9 @@ func (o *PrivateCrossConnectProperties) GetDescription() *string {
 		return nil
 	}
 
+
 	return o.Description
+
 }
 
 // GetDescriptionOk returns a tuple with the Description field value
@@ -81,12 +90,17 @@ func (o *PrivateCrossConnectProperties) GetDescriptionOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Description, true
 }
 
 // SetDescription sets field value
 func (o *PrivateCrossConnectProperties) SetDescription(v string) {
+
+
 	o.Description = &v
+
 }
 
 // HasDescription returns a boolean if a field has been set.
@@ -107,7 +121,9 @@ func (o *PrivateCrossConnectProperties) GetPeers() *[]Peer {
 		return nil
 	}
 
+
 	return o.Peers
+
 }
 
 // GetPeersOk returns a tuple with the Peers field value
@@ -117,12 +133,17 @@ func (o *PrivateCrossConnectProperties) GetPeersOk() (*[]Peer, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Peers, true
 }
 
 // SetPeers sets field value
 func (o *PrivateCrossConnectProperties) SetPeers(v []Peer) {
+
+
 	o.Peers = &v
+
 }
 
 // HasPeers returns a boolean if a field has been set.
@@ -143,7 +164,9 @@ func (o *PrivateCrossConnectProperties) GetConnectableDatacenters() *[]Connectab
 		return nil
 	}
 
+
 	return o.ConnectableDatacenters
+
 }
 
 // GetConnectableDatacentersOk returns a tuple with the ConnectableDatacenters field value
@@ -153,12 +176,17 @@ func (o *PrivateCrossConnectProperties) GetConnectableDatacentersOk() (*[]Connec
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ConnectableDatacenters, true
 }
 
 // SetConnectableDatacenters sets field value
 func (o *PrivateCrossConnectProperties) SetConnectableDatacenters(v []ConnectableDatacenter) {
+
+
 	o.ConnectableDatacenters = &v
+
 }
 
 // HasConnectableDatacenters returns a boolean if a field has been set.

@@ -28,7 +28,9 @@ func (o *KubernetesClusterEntities) GetNodepools() *KubernetesNodePools {
 		return nil
 	}
 
+
 	return o.Nodepools
+
 }
 
 // GetNodepoolsOk returns a tuple with the Nodepools field value
@@ -38,12 +40,17 @@ func (o *KubernetesClusterEntities) GetNodepoolsOk() (*KubernetesNodePools, bool
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Nodepools, true
 }
 
 // SetNodepools sets field value
 func (o *KubernetesClusterEntities) SetNodepools(v KubernetesNodePools) {
+
+
 	o.Nodepools = &v
+
 }
 
 // HasNodepools returns a boolean if a field has been set.

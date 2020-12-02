@@ -33,7 +33,9 @@ func (o *LocationProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -43,12 +45,17 @@ func (o *LocationProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *LocationProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -69,7 +76,9 @@ func (o *LocationProperties) GetFeatures() *[]string {
 		return nil
 	}
 
+
 	return o.Features
+
 }
 
 // GetFeaturesOk returns a tuple with the Features field value
@@ -79,12 +88,17 @@ func (o *LocationProperties) GetFeaturesOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Features, true
 }
 
 // SetFeatures sets field value
 func (o *LocationProperties) SetFeatures(v []string) {
+
+
 	o.Features = &v
+
 }
 
 // HasFeatures returns a boolean if a field has been set.
@@ -105,7 +119,9 @@ func (o *LocationProperties) GetImageAliases() *[]string {
 		return nil
 	}
 
+
 	return o.ImageAliases
+
 }
 
 // GetImageAliasesOk returns a tuple with the ImageAliases field value
@@ -115,12 +131,17 @@ func (o *LocationProperties) GetImageAliasesOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ImageAliases, true
 }
 
 // SetImageAliases sets field value
 func (o *LocationProperties) SetImageAliases(v []string) {
+
+
 	o.ImageAliases = &v
+
 }
 
 // HasImageAliases returns a boolean if a field has been set.

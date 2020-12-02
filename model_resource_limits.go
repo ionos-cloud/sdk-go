@@ -61,7 +61,9 @@ func (o *ResourceLimits) GetCoresPerServer() *int32 {
 		return nil
 	}
 
+
 	return o.CoresPerServer
+
 }
 
 // GetCoresPerServerOk returns a tuple with the CoresPerServer field value
@@ -71,12 +73,17 @@ func (o *ResourceLimits) GetCoresPerServerOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CoresPerServer, true
 }
 
 // SetCoresPerServer sets field value
 func (o *ResourceLimits) SetCoresPerServer(v int32) {
+
+
 	o.CoresPerServer = &v
+
 }
 
 // HasCoresPerServer returns a boolean if a field has been set.
@@ -97,7 +104,9 @@ func (o *ResourceLimits) GetCoresPerContract() *int32 {
 		return nil
 	}
 
+
 	return o.CoresPerContract
+
 }
 
 // GetCoresPerContractOk returns a tuple with the CoresPerContract field value
@@ -107,12 +116,17 @@ func (o *ResourceLimits) GetCoresPerContractOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CoresPerContract, true
 }
 
 // SetCoresPerContract sets field value
 func (o *ResourceLimits) SetCoresPerContract(v int32) {
+
+
 	o.CoresPerContract = &v
+
 }
 
 // HasCoresPerContract returns a boolean if a field has been set.
@@ -133,7 +147,9 @@ func (o *ResourceLimits) GetCoresProvisioned() *int32 {
 		return nil
 	}
 
+
 	return o.CoresProvisioned
+
 }
 
 // GetCoresProvisionedOk returns a tuple with the CoresProvisioned field value
@@ -143,12 +159,17 @@ func (o *ResourceLimits) GetCoresProvisionedOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CoresProvisioned, true
 }
 
 // SetCoresProvisioned sets field value
 func (o *ResourceLimits) SetCoresProvisioned(v int32) {
+
+
 	o.CoresProvisioned = &v
+
 }
 
 // HasCoresProvisioned returns a boolean if a field has been set.
@@ -169,7 +190,9 @@ func (o *ResourceLimits) GetRamPerServer() *int32 {
 		return nil
 	}
 
+
 	return o.RamPerServer
+
 }
 
 // GetRamPerServerOk returns a tuple with the RamPerServer field value
@@ -179,12 +202,17 @@ func (o *ResourceLimits) GetRamPerServerOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamPerServer, true
 }
 
 // SetRamPerServer sets field value
 func (o *ResourceLimits) SetRamPerServer(v int32) {
+
+
 	o.RamPerServer = &v
+
 }
 
 // HasRamPerServer returns a boolean if a field has been set.
@@ -205,7 +233,9 @@ func (o *ResourceLimits) GetRamPerContract() *int32 {
 		return nil
 	}
 
+
 	return o.RamPerContract
+
 }
 
 // GetRamPerContractOk returns a tuple with the RamPerContract field value
@@ -215,12 +245,17 @@ func (o *ResourceLimits) GetRamPerContractOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamPerContract, true
 }
 
 // SetRamPerContract sets field value
 func (o *ResourceLimits) SetRamPerContract(v int32) {
+
+
 	o.RamPerContract = &v
+
 }
 
 // HasRamPerContract returns a boolean if a field has been set.
@@ -241,7 +276,9 @@ func (o *ResourceLimits) GetRamProvisioned() *int32 {
 		return nil
 	}
 
+
 	return o.RamProvisioned
+
 }
 
 // GetRamProvisionedOk returns a tuple with the RamProvisioned field value
@@ -251,12 +288,17 @@ func (o *ResourceLimits) GetRamProvisionedOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamProvisioned, true
 }
 
 // SetRamProvisioned sets field value
 func (o *ResourceLimits) SetRamProvisioned(v int32) {
+
+
 	o.RamProvisioned = &v
+
 }
 
 // HasRamProvisioned returns a boolean if a field has been set.
@@ -277,7 +319,9 @@ func (o *ResourceLimits) GetHddLimitPerVolume() *int64 {
 		return nil
 	}
 
+
 	return o.HddLimitPerVolume
+
 }
 
 // GetHddLimitPerVolumeOk returns a tuple with the HddLimitPerVolume field value
@@ -287,12 +331,17 @@ func (o *ResourceLimits) GetHddLimitPerVolumeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.HddLimitPerVolume, true
 }
 
 // SetHddLimitPerVolume sets field value
 func (o *ResourceLimits) SetHddLimitPerVolume(v int64) {
+
+
 	o.HddLimitPerVolume = &v
+
 }
 
 // HasHddLimitPerVolume returns a boolean if a field has been set.
@@ -313,7 +362,9 @@ func (o *ResourceLimits) GetHddLimitPerContract() *int64 {
 		return nil
 	}
 
+
 	return o.HddLimitPerContract
+
 }
 
 // GetHddLimitPerContractOk returns a tuple with the HddLimitPerContract field value
@@ -323,12 +374,17 @@ func (o *ResourceLimits) GetHddLimitPerContractOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.HddLimitPerContract, true
 }
 
 // SetHddLimitPerContract sets field value
 func (o *ResourceLimits) SetHddLimitPerContract(v int64) {
+
+
 	o.HddLimitPerContract = &v
+
 }
 
 // HasHddLimitPerContract returns a boolean if a field has been set.
@@ -349,7 +405,9 @@ func (o *ResourceLimits) GetHddVolumeProvisioned() *int64 {
 		return nil
 	}
 
+
 	return o.HddVolumeProvisioned
+
 }
 
 // GetHddVolumeProvisionedOk returns a tuple with the HddVolumeProvisioned field value
@@ -359,12 +417,17 @@ func (o *ResourceLimits) GetHddVolumeProvisionedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.HddVolumeProvisioned, true
 }
 
 // SetHddVolumeProvisioned sets field value
 func (o *ResourceLimits) SetHddVolumeProvisioned(v int64) {
+
+
 	o.HddVolumeProvisioned = &v
+
 }
 
 // HasHddVolumeProvisioned returns a boolean if a field has been set.
@@ -385,7 +448,9 @@ func (o *ResourceLimits) GetSsdLimitPerVolume() *int64 {
 		return nil
 	}
 
+
 	return o.SsdLimitPerVolume
+
 }
 
 // GetSsdLimitPerVolumeOk returns a tuple with the SsdLimitPerVolume field value
@@ -395,12 +460,17 @@ func (o *ResourceLimits) GetSsdLimitPerVolumeOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SsdLimitPerVolume, true
 }
 
 // SetSsdLimitPerVolume sets field value
 func (o *ResourceLimits) SetSsdLimitPerVolume(v int64) {
+
+
 	o.SsdLimitPerVolume = &v
+
 }
 
 // HasSsdLimitPerVolume returns a boolean if a field has been set.
@@ -421,7 +491,9 @@ func (o *ResourceLimits) GetSsdLimitPerContract() *int64 {
 		return nil
 	}
 
+
 	return o.SsdLimitPerContract
+
 }
 
 // GetSsdLimitPerContractOk returns a tuple with the SsdLimitPerContract field value
@@ -431,12 +503,17 @@ func (o *ResourceLimits) GetSsdLimitPerContractOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SsdLimitPerContract, true
 }
 
 // SetSsdLimitPerContract sets field value
 func (o *ResourceLimits) SetSsdLimitPerContract(v int64) {
+
+
 	o.SsdLimitPerContract = &v
+
 }
 
 // HasSsdLimitPerContract returns a boolean if a field has been set.
@@ -457,7 +534,9 @@ func (o *ResourceLimits) GetSsdVolumeProvisioned() *int64 {
 		return nil
 	}
 
+
 	return o.SsdVolumeProvisioned
+
 }
 
 // GetSsdVolumeProvisionedOk returns a tuple with the SsdVolumeProvisioned field value
@@ -467,12 +546,17 @@ func (o *ResourceLimits) GetSsdVolumeProvisionedOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SsdVolumeProvisioned, true
 }
 
 // SetSsdVolumeProvisioned sets field value
 func (o *ResourceLimits) SetSsdVolumeProvisioned(v int64) {
+
+
 	o.SsdVolumeProvisioned = &v
+
 }
 
 // HasSsdVolumeProvisioned returns a boolean if a field has been set.
@@ -493,7 +577,9 @@ func (o *ResourceLimits) GetReservableIps() *int32 {
 		return nil
 	}
 
+
 	return o.ReservableIps
+
 }
 
 // GetReservableIpsOk returns a tuple with the ReservableIps field value
@@ -503,12 +589,17 @@ func (o *ResourceLimits) GetReservableIpsOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ReservableIps, true
 }
 
 // SetReservableIps sets field value
 func (o *ResourceLimits) SetReservableIps(v int32) {
+
+
 	o.ReservableIps = &v
+
 }
 
 // HasReservableIps returns a boolean if a field has been set.
@@ -529,7 +620,9 @@ func (o *ResourceLimits) GetReservedIpsOnContract() *int32 {
 		return nil
 	}
 
+
 	return o.ReservedIpsOnContract
+
 }
 
 // GetReservedIpsOnContractOk returns a tuple with the ReservedIpsOnContract field value
@@ -539,12 +632,17 @@ func (o *ResourceLimits) GetReservedIpsOnContractOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ReservedIpsOnContract, true
 }
 
 // SetReservedIpsOnContract sets field value
 func (o *ResourceLimits) SetReservedIpsOnContract(v int32) {
+
+
 	o.ReservedIpsOnContract = &v
+
 }
 
 // HasReservedIpsOnContract returns a boolean if a field has been set.
@@ -565,7 +663,9 @@ func (o *ResourceLimits) GetReservedIpsInUse() *int32 {
 		return nil
 	}
 
+
 	return o.ReservedIpsInUse
+
 }
 
 // GetReservedIpsInUseOk returns a tuple with the ReservedIpsInUse field value
@@ -575,12 +675,17 @@ func (o *ResourceLimits) GetReservedIpsInUseOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ReservedIpsInUse, true
 }
 
 // SetReservedIpsInUse sets field value
 func (o *ResourceLimits) SetReservedIpsInUse(v int32) {
+
+
 	o.ReservedIpsInUse = &v
+
 }
 
 // HasReservedIpsInUse returns a boolean if a field has been set.
@@ -601,7 +706,9 @@ func (o *ResourceLimits) GetK8sClusterLimitTotal() *int32 {
 		return nil
 	}
 
+
 	return o.K8sClusterLimitTotal
+
 }
 
 // GetK8sClusterLimitTotalOk returns a tuple with the K8sClusterLimitTotal field value
@@ -611,12 +718,17 @@ func (o *ResourceLimits) GetK8sClusterLimitTotalOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.K8sClusterLimitTotal, true
 }
 
 // SetK8sClusterLimitTotal sets field value
 func (o *ResourceLimits) SetK8sClusterLimitTotal(v int32) {
+
+
 	o.K8sClusterLimitTotal = &v
+
 }
 
 // HasK8sClusterLimitTotal returns a boolean if a field has been set.
@@ -637,7 +749,9 @@ func (o *ResourceLimits) GetK8sClustersProvisioned() *int32 {
 		return nil
 	}
 
+
 	return o.K8sClustersProvisioned
+
 }
 
 // GetK8sClustersProvisionedOk returns a tuple with the K8sClustersProvisioned field value
@@ -647,12 +761,17 @@ func (o *ResourceLimits) GetK8sClustersProvisionedOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.K8sClustersProvisioned, true
 }
 
 // SetK8sClustersProvisioned sets field value
 func (o *ResourceLimits) SetK8sClustersProvisioned(v int32) {
+
+
 	o.K8sClustersProvisioned = &v
+
 }
 
 // HasK8sClustersProvisioned returns a boolean if a field has been set.

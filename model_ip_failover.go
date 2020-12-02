@@ -29,7 +29,9 @@ func (o *IPFailover) GetIp() *string {
 		return nil
 	}
 
+
 	return o.Ip
+
 }
 
 // GetIpOk returns a tuple with the Ip field value
@@ -39,12 +41,17 @@ func (o *IPFailover) GetIpOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Ip, true
 }
 
 // SetIp sets field value
 func (o *IPFailover) SetIp(v string) {
+
+
 	o.Ip = &v
+
 }
 
 // HasIp returns a boolean if a field has been set.
@@ -65,7 +72,9 @@ func (o *IPFailover) GetNicUuid() *string {
 		return nil
 	}
 
+
 	return o.NicUuid
+
 }
 
 // GetNicUuidOk returns a tuple with the NicUuid field value
@@ -75,12 +84,17 @@ func (o *IPFailover) GetNicUuidOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicUuid, true
 }
 
 // SetNicUuid sets field value
 func (o *IPFailover) SetNicUuid(v string) {
+
+
 	o.NicUuid = &v
+
 }
 
 // HasNicUuid returns a boolean if a field has been set.

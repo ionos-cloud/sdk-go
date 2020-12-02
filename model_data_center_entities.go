@@ -31,7 +31,9 @@ func (o *DataCenterEntities) GetServers() *Servers {
 		return nil
 	}
 
+
 	return o.Servers
+
 }
 
 // GetServersOk returns a tuple with the Servers field value
@@ -41,12 +43,17 @@ func (o *DataCenterEntities) GetServersOk() (*Servers, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Servers, true
 }
 
 // SetServers sets field value
 func (o *DataCenterEntities) SetServers(v Servers) {
+
+
 	o.Servers = &v
+
 }
 
 // HasServers returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *DataCenterEntities) GetVolumes() *Volumes {
 		return nil
 	}
 
+
 	return o.Volumes
+
 }
 
 // GetVolumesOk returns a tuple with the Volumes field value
@@ -77,12 +86,17 @@ func (o *DataCenterEntities) GetVolumesOk() (*Volumes, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Volumes, true
 }
 
 // SetVolumes sets field value
 func (o *DataCenterEntities) SetVolumes(v Volumes) {
+
+
 	o.Volumes = &v
+
 }
 
 // HasVolumes returns a boolean if a field has been set.
@@ -103,7 +117,9 @@ func (o *DataCenterEntities) GetLoadbalancers() *Loadbalancers {
 		return nil
 	}
 
+
 	return o.Loadbalancers
+
 }
 
 // GetLoadbalancersOk returns a tuple with the Loadbalancers field value
@@ -113,12 +129,17 @@ func (o *DataCenterEntities) GetLoadbalancersOk() (*Loadbalancers, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Loadbalancers, true
 }
 
 // SetLoadbalancers sets field value
 func (o *DataCenterEntities) SetLoadbalancers(v Loadbalancers) {
+
+
 	o.Loadbalancers = &v
+
 }
 
 // HasLoadbalancers returns a boolean if a field has been set.
@@ -139,7 +160,9 @@ func (o *DataCenterEntities) GetLans() *Lans {
 		return nil
 	}
 
+
 	return o.Lans
+
 }
 
 // GetLansOk returns a tuple with the Lans field value
@@ -149,12 +172,17 @@ func (o *DataCenterEntities) GetLansOk() (*Lans, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Lans, true
 }
 
 // SetLans sets field value
 func (o *DataCenterEntities) SetLans(v Lans) {
+
+
 	o.Lans = &v
+
 }
 
 // HasLans returns a boolean if a field has been set.

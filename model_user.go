@@ -36,7 +36,9 @@ func (o *User) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -46,12 +48,17 @@ func (o *User) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *User) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -72,7 +79,9 @@ func (o *User) GetType() *Type {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -82,12 +91,17 @@ func (o *User) GetTypeOk() (*Type, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *User) SetType(v Type) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -108,7 +122,9 @@ func (o *User) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -118,12 +134,17 @@ func (o *User) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *User) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -144,7 +165,9 @@ func (o *User) GetMetadata() *UserMetadata {
 		return nil
 	}
 
+
 	return o.Metadata
+
 }
 
 // GetMetadataOk returns a tuple with the Metadata field value
@@ -154,12 +177,17 @@ func (o *User) GetMetadataOk() (*UserMetadata, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Metadata, true
 }
 
 // SetMetadata sets field value
 func (o *User) SetMetadata(v UserMetadata) {
+
+
 	o.Metadata = &v
+
 }
 
 // HasMetadata returns a boolean if a field has been set.
@@ -180,7 +208,9 @@ func (o *User) GetProperties() *UserProperties {
 		return nil
 	}
 
+
 	return o.Properties
+
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value
@@ -190,12 +220,17 @@ func (o *User) GetPropertiesOk() (*UserProperties, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Properties, true
 }
 
 // SetProperties sets field value
 func (o *User) SetProperties(v UserProperties) {
+
+
 	o.Properties = &v
+
 }
 
 // HasProperties returns a boolean if a field has been set.
@@ -216,7 +251,9 @@ func (o *User) GetEntities() *UsersEntities {
 		return nil
 	}
 
+
 	return o.Entities
+
 }
 
 // GetEntitiesOk returns a tuple with the Entities field value
@@ -226,12 +263,17 @@ func (o *User) GetEntitiesOk() (*UsersEntities, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Entities, true
 }
 
 // SetEntities sets field value
 func (o *User) SetEntities(v UsersEntities) {
+
+
 	o.Entities = &v
+
 }
 
 // HasEntities returns a boolean if a field has been set.

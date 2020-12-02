@@ -62,7 +62,9 @@ func (o *VolumeProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -72,12 +74,17 @@ func (o *VolumeProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *VolumeProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -98,7 +105,9 @@ func (o *VolumeProperties) GetType() *string {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -108,12 +117,17 @@ func (o *VolumeProperties) GetTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *VolumeProperties) SetType(v string) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -134,7 +148,9 @@ func (o *VolumeProperties) GetSize() *float32 {
 		return nil
 	}
 
+
 	return o.Size
+
 }
 
 // GetSizeOk returns a tuple with the Size field value
@@ -144,12 +160,17 @@ func (o *VolumeProperties) GetSizeOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Size, true
 }
 
 // SetSize sets field value
 func (o *VolumeProperties) SetSize(v float32) {
+
+
 	o.Size = &v
+
 }
 
 // HasSize returns a boolean if a field has been set.
@@ -170,7 +191,9 @@ func (o *VolumeProperties) GetAvailabilityZone() *string {
 		return nil
 	}
 
+
 	return o.AvailabilityZone
+
 }
 
 // GetAvailabilityZoneOk returns a tuple with the AvailabilityZone field value
@@ -180,12 +203,17 @@ func (o *VolumeProperties) GetAvailabilityZoneOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.AvailabilityZone, true
 }
 
 // SetAvailabilityZone sets field value
 func (o *VolumeProperties) SetAvailabilityZone(v string) {
+
+
 	o.AvailabilityZone = &v
+
 }
 
 // HasAvailabilityZone returns a boolean if a field has been set.
@@ -206,7 +234,9 @@ func (o *VolumeProperties) GetImage() *string {
 		return nil
 	}
 
+
 	return o.Image
+
 }
 
 // GetImageOk returns a tuple with the Image field value
@@ -216,12 +246,17 @@ func (o *VolumeProperties) GetImageOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Image, true
 }
 
 // SetImage sets field value
 func (o *VolumeProperties) SetImage(v string) {
+
+
 	o.Image = &v
+
 }
 
 // HasImage returns a boolean if a field has been set.
@@ -242,7 +277,9 @@ func (o *VolumeProperties) GetImagePassword() *string {
 		return nil
 	}
 
+
 	return o.ImagePassword
+
 }
 
 // GetImagePasswordOk returns a tuple with the ImagePassword field value
@@ -252,12 +289,17 @@ func (o *VolumeProperties) GetImagePasswordOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ImagePassword, true
 }
 
 // SetImagePassword sets field value
 func (o *VolumeProperties) SetImagePassword(v string) {
+
+
 	o.ImagePassword = &v
+
 }
 
 // HasImagePassword returns a boolean if a field has been set.
@@ -278,7 +320,9 @@ func (o *VolumeProperties) GetImageAlias() *string {
 		return nil
 	}
 
+
 	return o.ImageAlias
+
 }
 
 // GetImageAliasOk returns a tuple with the ImageAlias field value
@@ -288,12 +332,17 @@ func (o *VolumeProperties) GetImageAliasOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ImageAlias, true
 }
 
 // SetImageAlias sets field value
 func (o *VolumeProperties) SetImageAlias(v string) {
+
+
 	o.ImageAlias = &v
+
 }
 
 // HasImageAlias returns a boolean if a field has been set.
@@ -314,7 +363,9 @@ func (o *VolumeProperties) GetSshKeys() *[]string {
 		return nil
 	}
 
+
 	return o.SshKeys
+
 }
 
 // GetSshKeysOk returns a tuple with the SshKeys field value
@@ -324,12 +375,17 @@ func (o *VolumeProperties) GetSshKeysOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SshKeys, true
 }
 
 // SetSshKeys sets field value
 func (o *VolumeProperties) SetSshKeys(v []string) {
+
+
 	o.SshKeys = &v
+
 }
 
 // HasSshKeys returns a boolean if a field has been set.
@@ -350,7 +406,9 @@ func (o *VolumeProperties) GetBus() *string {
 		return nil
 	}
 
+
 	return o.Bus
+
 }
 
 // GetBusOk returns a tuple with the Bus field value
@@ -360,12 +418,17 @@ func (o *VolumeProperties) GetBusOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Bus, true
 }
 
 // SetBus sets field value
 func (o *VolumeProperties) SetBus(v string) {
+
+
 	o.Bus = &v
+
 }
 
 // HasBus returns a boolean if a field has been set.
@@ -386,7 +449,9 @@ func (o *VolumeProperties) GetLicenceType() *string {
 		return nil
 	}
 
+
 	return o.LicenceType
+
 }
 
 // GetLicenceTypeOk returns a tuple with the LicenceType field value
@@ -396,12 +461,17 @@ func (o *VolumeProperties) GetLicenceTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.LicenceType, true
 }
 
 // SetLicenceType sets field value
 func (o *VolumeProperties) SetLicenceType(v string) {
+
+
 	o.LicenceType = &v
+
 }
 
 // HasLicenceType returns a boolean if a field has been set.
@@ -422,7 +492,9 @@ func (o *VolumeProperties) GetCpuHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.CpuHotPlug
+
 }
 
 // GetCpuHotPlugOk returns a tuple with the CpuHotPlug field value
@@ -432,12 +504,17 @@ func (o *VolumeProperties) GetCpuHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuHotPlug, true
 }
 
 // SetCpuHotPlug sets field value
 func (o *VolumeProperties) SetCpuHotPlug(v bool) {
+
+
 	o.CpuHotPlug = &v
+
 }
 
 // HasCpuHotPlug returns a boolean if a field has been set.
@@ -458,7 +535,9 @@ func (o *VolumeProperties) GetRamHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.RamHotPlug
+
 }
 
 // GetRamHotPlugOk returns a tuple with the RamHotPlug field value
@@ -468,12 +547,17 @@ func (o *VolumeProperties) GetRamHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamHotPlug, true
 }
 
 // SetRamHotPlug sets field value
 func (o *VolumeProperties) SetRamHotPlug(v bool) {
+
+
 	o.RamHotPlug = &v
+
 }
 
 // HasRamHotPlug returns a boolean if a field has been set.
@@ -494,7 +578,9 @@ func (o *VolumeProperties) GetNicHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.NicHotPlug
+
 }
 
 // GetNicHotPlugOk returns a tuple with the NicHotPlug field value
@@ -504,12 +590,17 @@ func (o *VolumeProperties) GetNicHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicHotPlug, true
 }
 
 // SetNicHotPlug sets field value
 func (o *VolumeProperties) SetNicHotPlug(v bool) {
+
+
 	o.NicHotPlug = &v
+
 }
 
 // HasNicHotPlug returns a boolean if a field has been set.
@@ -530,7 +621,9 @@ func (o *VolumeProperties) GetNicHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.NicHotUnplug
+
 }
 
 // GetNicHotUnplugOk returns a tuple with the NicHotUnplug field value
@@ -540,12 +633,17 @@ func (o *VolumeProperties) GetNicHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicHotUnplug, true
 }
 
 // SetNicHotUnplug sets field value
 func (o *VolumeProperties) SetNicHotUnplug(v bool) {
+
+
 	o.NicHotUnplug = &v
+
 }
 
 // HasNicHotUnplug returns a boolean if a field has been set.
@@ -566,7 +664,9 @@ func (o *VolumeProperties) GetDiscVirtioHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.DiscVirtioHotPlug
+
 }
 
 // GetDiscVirtioHotPlugOk returns a tuple with the DiscVirtioHotPlug field value
@@ -576,12 +676,17 @@ func (o *VolumeProperties) GetDiscVirtioHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscVirtioHotPlug, true
 }
 
 // SetDiscVirtioHotPlug sets field value
 func (o *VolumeProperties) SetDiscVirtioHotPlug(v bool) {
+
+
 	o.DiscVirtioHotPlug = &v
+
 }
 
 // HasDiscVirtioHotPlug returns a boolean if a field has been set.
@@ -602,7 +707,9 @@ func (o *VolumeProperties) GetDiscVirtioHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.DiscVirtioHotUnplug
+
 }
 
 // GetDiscVirtioHotUnplugOk returns a tuple with the DiscVirtioHotUnplug field value
@@ -612,12 +719,17 @@ func (o *VolumeProperties) GetDiscVirtioHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscVirtioHotUnplug, true
 }
 
 // SetDiscVirtioHotUnplug sets field value
 func (o *VolumeProperties) SetDiscVirtioHotUnplug(v bool) {
+
+
 	o.DiscVirtioHotUnplug = &v
+
 }
 
 // HasDiscVirtioHotUnplug returns a boolean if a field has been set.
@@ -638,7 +750,9 @@ func (o *VolumeProperties) GetDeviceNumber() *int64 {
 		return nil
 	}
 
+
 	return o.DeviceNumber
+
 }
 
 // GetDeviceNumberOk returns a tuple with the DeviceNumber field value
@@ -648,12 +762,17 @@ func (o *VolumeProperties) GetDeviceNumberOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DeviceNumber, true
 }
 
 // SetDeviceNumber sets field value
 func (o *VolumeProperties) SetDeviceNumber(v int64) {
+
+
 	o.DeviceNumber = &v
+
 }
 
 // HasDeviceNumber returns a boolean if a field has been set.
@@ -674,7 +793,9 @@ func (o *VolumeProperties) GetBackupunitId() *string {
 		return nil
 	}
 
+
 	return o.BackupunitId
+
 }
 
 // GetBackupunitIdOk returns a tuple with the BackupunitId field value
@@ -684,12 +805,17 @@ func (o *VolumeProperties) GetBackupunitIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.BackupunitId, true
 }
 
 // SetBackupunitId sets field value
 func (o *VolumeProperties) SetBackupunitId(v string) {
+
+
 	o.BackupunitId = &v
+
 }
 
 // HasBackupunitId returns a boolean if a field has been set.

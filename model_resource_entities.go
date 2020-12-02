@@ -28,7 +28,9 @@ func (o *ResourceEntities) GetGroups() *ResourceGroups {
 		return nil
 	}
 
+
 	return o.Groups
+
 }
 
 // GetGroupsOk returns a tuple with the Groups field value
@@ -38,12 +40,17 @@ func (o *ResourceEntities) GetGroupsOk() (*ResourceGroups, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Groups, true
 }
 
 // SetGroups sets field value
 func (o *ResourceEntities) SetGroups(v ResourceGroups) {
+
+
 	o.Groups = &v
+
 }
 
 // HasGroups returns a boolean if a field has been set.

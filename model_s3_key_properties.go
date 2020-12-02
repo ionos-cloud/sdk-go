@@ -31,7 +31,9 @@ func (o *S3KeyProperties) GetSecretKey() *string {
 		return nil
 	}
 
+
 	return o.SecretKey
+
 }
 
 // GetSecretKeyOk returns a tuple with the SecretKey field value
@@ -41,12 +43,17 @@ func (o *S3KeyProperties) GetSecretKeyOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SecretKey, true
 }
 
 // SetSecretKey sets field value
 func (o *S3KeyProperties) SetSecretKey(v string) {
+
+
 	o.SecretKey = &v
+
 }
 
 // HasSecretKey returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *S3KeyProperties) GetActive() *bool {
 		return nil
 	}
 
+
 	return o.Active
+
 }
 
 // GetActiveOk returns a tuple with the Active field value
@@ -77,12 +86,17 @@ func (o *S3KeyProperties) GetActiveOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Active, true
 }
 
 // SetActive sets field value
 func (o *S3KeyProperties) SetActive(v bool) {
+
+
 	o.Active = &v
+
 }
 
 // HasActive returns a boolean if a field has been set.

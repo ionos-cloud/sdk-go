@@ -34,7 +34,9 @@ func (o *IpConsumer) GetIp() *string {
 		return nil
 	}
 
+
 	return o.Ip
+
 }
 
 // GetIpOk returns a tuple with the Ip field value
@@ -44,12 +46,17 @@ func (o *IpConsumer) GetIpOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Ip, true
 }
 
 // SetIp sets field value
 func (o *IpConsumer) SetIp(v string) {
+
+
 	o.Ip = &v
+
 }
 
 // HasIp returns a boolean if a field has been set.
@@ -70,7 +77,9 @@ func (o *IpConsumer) GetMac() *string {
 		return nil
 	}
 
+
 	return o.Mac
+
 }
 
 // GetMacOk returns a tuple with the Mac field value
@@ -80,12 +89,17 @@ func (o *IpConsumer) GetMacOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Mac, true
 }
 
 // SetMac sets field value
 func (o *IpConsumer) SetMac(v string) {
+
+
 	o.Mac = &v
+
 }
 
 // HasMac returns a boolean if a field has been set.
@@ -106,7 +120,9 @@ func (o *IpConsumer) GetNicId() *string {
 		return nil
 	}
 
+
 	return o.NicId
+
 }
 
 // GetNicIdOk returns a tuple with the NicId field value
@@ -116,12 +132,17 @@ func (o *IpConsumer) GetNicIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicId, true
 }
 
 // SetNicId sets field value
 func (o *IpConsumer) SetNicId(v string) {
+
+
 	o.NicId = &v
+
 }
 
 // HasNicId returns a boolean if a field has been set.
@@ -142,7 +163,9 @@ func (o *IpConsumer) GetServerId() *string {
 		return nil
 	}
 
+
 	return o.ServerId
+
 }
 
 // GetServerIdOk returns a tuple with the ServerId field value
@@ -152,12 +175,17 @@ func (o *IpConsumer) GetServerIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ServerId, true
 }
 
 // SetServerId sets field value
 func (o *IpConsumer) SetServerId(v string) {
+
+
 	o.ServerId = &v
+
 }
 
 // HasServerId returns a boolean if a field has been set.
@@ -178,7 +206,9 @@ func (o *IpConsumer) GetServerName() *string {
 		return nil
 	}
 
+
 	return o.ServerName
+
 }
 
 // GetServerNameOk returns a tuple with the ServerName field value
@@ -188,12 +218,17 @@ func (o *IpConsumer) GetServerNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ServerName, true
 }
 
 // SetServerName sets field value
 func (o *IpConsumer) SetServerName(v string) {
+
+
 	o.ServerName = &v
+
 }
 
 // HasServerName returns a boolean if a field has been set.
@@ -214,7 +249,9 @@ func (o *IpConsumer) GetDatacenterId() *string {
 		return nil
 	}
 
+
 	return o.DatacenterId
+
 }
 
 // GetDatacenterIdOk returns a tuple with the DatacenterId field value
@@ -224,12 +261,17 @@ func (o *IpConsumer) GetDatacenterIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DatacenterId, true
 }
 
 // SetDatacenterId sets field value
 func (o *IpConsumer) SetDatacenterId(v string) {
+
+
 	o.DatacenterId = &v
+
 }
 
 // HasDatacenterId returns a boolean if a field has been set.
@@ -250,7 +292,9 @@ func (o *IpConsumer) GetDatacenterName() *string {
 		return nil
 	}
 
+
 	return o.DatacenterName
+
 }
 
 // GetDatacenterNameOk returns a tuple with the DatacenterName field value
@@ -260,12 +304,17 @@ func (o *IpConsumer) GetDatacenterNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DatacenterName, true
 }
 
 // SetDatacenterName sets field value
 func (o *IpConsumer) SetDatacenterName(v string) {
+
+
 	o.DatacenterName = &v
+
 }
 
 // HasDatacenterName returns a boolean if a field has been set.

@@ -59,7 +59,9 @@ func (o *SnapshotProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -69,12 +71,17 @@ func (o *SnapshotProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *SnapshotProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -95,7 +102,9 @@ func (o *SnapshotProperties) GetDescription() *string {
 		return nil
 	}
 
+
 	return o.Description
+
 }
 
 // GetDescriptionOk returns a tuple with the Description field value
@@ -105,12 +114,17 @@ func (o *SnapshotProperties) GetDescriptionOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Description, true
 }
 
 // SetDescription sets field value
 func (o *SnapshotProperties) SetDescription(v string) {
+
+
 	o.Description = &v
+
 }
 
 // HasDescription returns a boolean if a field has been set.
@@ -131,7 +145,9 @@ func (o *SnapshotProperties) GetLocation() *string {
 		return nil
 	}
 
+
 	return o.Location
+
 }
 
 // GetLocationOk returns a tuple with the Location field value
@@ -141,12 +157,17 @@ func (o *SnapshotProperties) GetLocationOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Location, true
 }
 
 // SetLocation sets field value
 func (o *SnapshotProperties) SetLocation(v string) {
+
+
 	o.Location = &v
+
 }
 
 // HasLocation returns a boolean if a field has been set.
@@ -167,7 +188,9 @@ func (o *SnapshotProperties) GetSize() *float32 {
 		return nil
 	}
 
+
 	return o.Size
+
 }
 
 // GetSizeOk returns a tuple with the Size field value
@@ -177,12 +200,17 @@ func (o *SnapshotProperties) GetSizeOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Size, true
 }
 
 // SetSize sets field value
 func (o *SnapshotProperties) SetSize(v float32) {
+
+
 	o.Size = &v
+
 }
 
 // HasSize returns a boolean if a field has been set.
@@ -203,7 +231,9 @@ func (o *SnapshotProperties) GetSecAuthProtection() *bool {
 		return nil
 	}
 
+
 	return o.SecAuthProtection
+
 }
 
 // GetSecAuthProtectionOk returns a tuple with the SecAuthProtection field value
@@ -213,12 +243,17 @@ func (o *SnapshotProperties) GetSecAuthProtectionOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SecAuthProtection, true
 }
 
 // SetSecAuthProtection sets field value
 func (o *SnapshotProperties) SetSecAuthProtection(v bool) {
+
+
 	o.SecAuthProtection = &v
+
 }
 
 // HasSecAuthProtection returns a boolean if a field has been set.
@@ -239,7 +274,9 @@ func (o *SnapshotProperties) GetCpuHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.CpuHotPlug
+
 }
 
 // GetCpuHotPlugOk returns a tuple with the CpuHotPlug field value
@@ -249,12 +286,17 @@ func (o *SnapshotProperties) GetCpuHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuHotPlug, true
 }
 
 // SetCpuHotPlug sets field value
 func (o *SnapshotProperties) SetCpuHotPlug(v bool) {
+
+
 	o.CpuHotPlug = &v
+
 }
 
 // HasCpuHotPlug returns a boolean if a field has been set.
@@ -275,7 +317,9 @@ func (o *SnapshotProperties) GetCpuHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.CpuHotUnplug
+
 }
 
 // GetCpuHotUnplugOk returns a tuple with the CpuHotUnplug field value
@@ -285,12 +329,17 @@ func (o *SnapshotProperties) GetCpuHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuHotUnplug, true
 }
 
 // SetCpuHotUnplug sets field value
 func (o *SnapshotProperties) SetCpuHotUnplug(v bool) {
+
+
 	o.CpuHotUnplug = &v
+
 }
 
 // HasCpuHotUnplug returns a boolean if a field has been set.
@@ -311,7 +360,9 @@ func (o *SnapshotProperties) GetRamHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.RamHotPlug
+
 }
 
 // GetRamHotPlugOk returns a tuple with the RamHotPlug field value
@@ -321,12 +372,17 @@ func (o *SnapshotProperties) GetRamHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamHotPlug, true
 }
 
 // SetRamHotPlug sets field value
 func (o *SnapshotProperties) SetRamHotPlug(v bool) {
+
+
 	o.RamHotPlug = &v
+
 }
 
 // HasRamHotPlug returns a boolean if a field has been set.
@@ -347,7 +403,9 @@ func (o *SnapshotProperties) GetRamHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.RamHotUnplug
+
 }
 
 // GetRamHotUnplugOk returns a tuple with the RamHotUnplug field value
@@ -357,12 +415,17 @@ func (o *SnapshotProperties) GetRamHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamHotUnplug, true
 }
 
 // SetRamHotUnplug sets field value
 func (o *SnapshotProperties) SetRamHotUnplug(v bool) {
+
+
 	o.RamHotUnplug = &v
+
 }
 
 // HasRamHotUnplug returns a boolean if a field has been set.
@@ -383,7 +446,9 @@ func (o *SnapshotProperties) GetNicHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.NicHotPlug
+
 }
 
 // GetNicHotPlugOk returns a tuple with the NicHotPlug field value
@@ -393,12 +458,17 @@ func (o *SnapshotProperties) GetNicHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicHotPlug, true
 }
 
 // SetNicHotPlug sets field value
 func (o *SnapshotProperties) SetNicHotPlug(v bool) {
+
+
 	o.NicHotPlug = &v
+
 }
 
 // HasNicHotPlug returns a boolean if a field has been set.
@@ -419,7 +489,9 @@ func (o *SnapshotProperties) GetNicHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.NicHotUnplug
+
 }
 
 // GetNicHotUnplugOk returns a tuple with the NicHotUnplug field value
@@ -429,12 +501,17 @@ func (o *SnapshotProperties) GetNicHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicHotUnplug, true
 }
 
 // SetNicHotUnplug sets field value
 func (o *SnapshotProperties) SetNicHotUnplug(v bool) {
+
+
 	o.NicHotUnplug = &v
+
 }
 
 // HasNicHotUnplug returns a boolean if a field has been set.
@@ -455,7 +532,9 @@ func (o *SnapshotProperties) GetDiscVirtioHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.DiscVirtioHotPlug
+
 }
 
 // GetDiscVirtioHotPlugOk returns a tuple with the DiscVirtioHotPlug field value
@@ -465,12 +544,17 @@ func (o *SnapshotProperties) GetDiscVirtioHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscVirtioHotPlug, true
 }
 
 // SetDiscVirtioHotPlug sets field value
 func (o *SnapshotProperties) SetDiscVirtioHotPlug(v bool) {
+
+
 	o.DiscVirtioHotPlug = &v
+
 }
 
 // HasDiscVirtioHotPlug returns a boolean if a field has been set.
@@ -491,7 +575,9 @@ func (o *SnapshotProperties) GetDiscVirtioHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.DiscVirtioHotUnplug
+
 }
 
 // GetDiscVirtioHotUnplugOk returns a tuple with the DiscVirtioHotUnplug field value
@@ -501,12 +587,17 @@ func (o *SnapshotProperties) GetDiscVirtioHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscVirtioHotUnplug, true
 }
 
 // SetDiscVirtioHotUnplug sets field value
 func (o *SnapshotProperties) SetDiscVirtioHotUnplug(v bool) {
+
+
 	o.DiscVirtioHotUnplug = &v
+
 }
 
 // HasDiscVirtioHotUnplug returns a boolean if a field has been set.
@@ -527,7 +618,9 @@ func (o *SnapshotProperties) GetDiscScsiHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.DiscScsiHotPlug
+
 }
 
 // GetDiscScsiHotPlugOk returns a tuple with the DiscScsiHotPlug field value
@@ -537,12 +630,17 @@ func (o *SnapshotProperties) GetDiscScsiHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscScsiHotPlug, true
 }
 
 // SetDiscScsiHotPlug sets field value
 func (o *SnapshotProperties) SetDiscScsiHotPlug(v bool) {
+
+
 	o.DiscScsiHotPlug = &v
+
 }
 
 // HasDiscScsiHotPlug returns a boolean if a field has been set.
@@ -563,7 +661,9 @@ func (o *SnapshotProperties) GetDiscScsiHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.DiscScsiHotUnplug
+
 }
 
 // GetDiscScsiHotUnplugOk returns a tuple with the DiscScsiHotUnplug field value
@@ -573,12 +673,17 @@ func (o *SnapshotProperties) GetDiscScsiHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscScsiHotUnplug, true
 }
 
 // SetDiscScsiHotUnplug sets field value
 func (o *SnapshotProperties) SetDiscScsiHotUnplug(v bool) {
+
+
 	o.DiscScsiHotUnplug = &v
+
 }
 
 // HasDiscScsiHotUnplug returns a boolean if a field has been set.
@@ -599,7 +704,9 @@ func (o *SnapshotProperties) GetLicenceType() *string {
 		return nil
 	}
 
+
 	return o.LicenceType
+
 }
 
 // GetLicenceTypeOk returns a tuple with the LicenceType field value
@@ -609,12 +716,17 @@ func (o *SnapshotProperties) GetLicenceTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.LicenceType, true
 }
 
 // SetLicenceType sets field value
 func (o *SnapshotProperties) SetLicenceType(v string) {
+
+
 	o.LicenceType = &v
+
 }
 
 // HasLicenceType returns a boolean if a field has been set.

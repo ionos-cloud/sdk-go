@@ -18,7 +18,7 @@ import (
 // RequestMetadata struct for RequestMetadata
 type RequestMetadata struct {
 	// The last time the resource was created
-	CreatedDate *time.Time `json:"createdDate,omitempty"`
+	CreatedDate *IonosTime
 	// The user who created the resource.
 	CreatedBy *string `json:"createdBy,omitempty"`
 	// Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. 
@@ -35,7 +35,12 @@ func (o *RequestMetadata) GetCreatedDate() *time.Time {
 		return nil
 	}
 
-	return o.CreatedDate
+	if o.CreatedDate == nil {
+		return nil
+	}
+	return &o.CreatedDate.Time
+
+
 }
 
 // GetCreatedDateOk returns a tuple with the CreatedDate field value
@@ -45,12 +50,20 @@ func (o *RequestMetadata) GetCreatedDateOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.CreatedDate, true
+
+	if o.CreatedDate == nil {
+		return nil, false
+	}
+	return &o.CreatedDate.Time, true
+
 }
 
 // SetCreatedDate sets field value
 func (o *RequestMetadata) SetCreatedDate(v time.Time) {
-	o.CreatedDate = &v
+
+	o.CreatedDate = &IonosTime{v}
+
+
 }
 
 // HasCreatedDate returns a boolean if a field has been set.
@@ -71,7 +84,9 @@ func (o *RequestMetadata) GetCreatedBy() *string {
 		return nil
 	}
 
+
 	return o.CreatedBy
+
 }
 
 // GetCreatedByOk returns a tuple with the CreatedBy field value
@@ -81,12 +96,17 @@ func (o *RequestMetadata) GetCreatedByOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreatedBy, true
 }
 
 // SetCreatedBy sets field value
 func (o *RequestMetadata) SetCreatedBy(v string) {
+
+
 	o.CreatedBy = &v
+
 }
 
 // HasCreatedBy returns a boolean if a field has been set.
@@ -107,7 +127,9 @@ func (o *RequestMetadata) GetEtag() *string {
 		return nil
 	}
 
+
 	return o.Etag
+
 }
 
 // GetEtagOk returns a tuple with the Etag field value
@@ -117,12 +139,17 @@ func (o *RequestMetadata) GetEtagOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Etag, true
 }
 
 // SetEtag sets field value
 func (o *RequestMetadata) SetEtag(v string) {
+
+
 	o.Etag = &v
+
 }
 
 // HasEtag returns a boolean if a field has been set.
@@ -143,7 +170,9 @@ func (o *RequestMetadata) GetRequestStatus() *RequestStatus {
 		return nil
 	}
 
+
 	return o.RequestStatus
+
 }
 
 // GetRequestStatusOk returns a tuple with the RequestStatus field value
@@ -153,12 +182,17 @@ func (o *RequestMetadata) GetRequestStatusOk() (*RequestStatus, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RequestStatus, true
 }
 
 // SetRequestStatus sets field value
 func (o *RequestMetadata) SetRequestStatus(v RequestStatus) {
+
+
 	o.RequestStatus = &v
+
 }
 
 // HasRequestStatus returns a boolean if a field has been set.

@@ -35,7 +35,9 @@ func (o *KubernetesNodePool) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -45,12 +47,17 @@ func (o *KubernetesNodePool) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *KubernetesNodePool) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -71,7 +78,9 @@ func (o *KubernetesNodePool) GetType() *string {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -81,12 +90,17 @@ func (o *KubernetesNodePool) GetTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *KubernetesNodePool) SetType(v string) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -107,7 +121,9 @@ func (o *KubernetesNodePool) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -117,12 +133,17 @@ func (o *KubernetesNodePool) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *KubernetesNodePool) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -143,7 +164,9 @@ func (o *KubernetesNodePool) GetMetadata() *DatacenterElementMetadata {
 		return nil
 	}
 
+
 	return o.Metadata
+
 }
 
 // GetMetadataOk returns a tuple with the Metadata field value
@@ -153,12 +176,17 @@ func (o *KubernetesNodePool) GetMetadataOk() (*DatacenterElementMetadata, bool) 
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Metadata, true
 }
 
 // SetMetadata sets field value
 func (o *KubernetesNodePool) SetMetadata(v DatacenterElementMetadata) {
+
+
 	o.Metadata = &v
+
 }
 
 // HasMetadata returns a boolean if a field has been set.
@@ -179,7 +207,9 @@ func (o *KubernetesNodePool) GetProperties() *KubernetesNodePoolProperties {
 		return nil
 	}
 
+
 	return o.Properties
+
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value
@@ -189,12 +219,17 @@ func (o *KubernetesNodePool) GetPropertiesOk() (*KubernetesNodePoolProperties, b
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Properties, true
 }
 
 // SetProperties sets field value
 func (o *KubernetesNodePool) SetProperties(v KubernetesNodePoolProperties) {
+
+
 	o.Properties = &v
+
 }
 
 // HasProperties returns a boolean if a field has been set.

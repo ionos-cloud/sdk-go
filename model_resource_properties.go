@@ -31,7 +31,9 @@ func (o *ResourceProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -41,12 +43,17 @@ func (o *ResourceProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *ResourceProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *ResourceProperties) GetSecAuthProtection() *bool {
 		return nil
 	}
 
+
 	return o.SecAuthProtection
+
 }
 
 // GetSecAuthProtectionOk returns a tuple with the SecAuthProtection field value
@@ -77,12 +86,17 @@ func (o *ResourceProperties) GetSecAuthProtectionOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SecAuthProtection, true
 }
 
 // SetSecAuthProtection sets field value
 func (o *ResourceProperties) SetSecAuthProtection(v bool) {
+
+
 	o.SecAuthProtection = &v
+
 }
 
 // HasSecAuthProtection returns a boolean if a field has been set.

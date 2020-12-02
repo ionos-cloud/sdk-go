@@ -33,7 +33,9 @@ func (o *LoadbalancerProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -43,12 +45,17 @@ func (o *LoadbalancerProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *LoadbalancerProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -69,7 +76,9 @@ func (o *LoadbalancerProperties) GetIp() *string {
 		return nil
 	}
 
+
 	return o.Ip
+
 }
 
 // GetIpOk returns a tuple with the Ip field value
@@ -79,12 +88,17 @@ func (o *LoadbalancerProperties) GetIpOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Ip, true
 }
 
 // SetIp sets field value
 func (o *LoadbalancerProperties) SetIp(v string) {
+
+
 	o.Ip = &v
+
 }
 
 // HasIp returns a boolean if a field has been set.
@@ -105,7 +119,9 @@ func (o *LoadbalancerProperties) GetDhcp() *bool {
 		return nil
 	}
 
+
 	return o.Dhcp
+
 }
 
 // GetDhcpOk returns a tuple with the Dhcp field value
@@ -115,12 +131,17 @@ func (o *LoadbalancerProperties) GetDhcpOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Dhcp, true
 }
 
 // SetDhcp sets field value
 func (o *LoadbalancerProperties) SetDhcp(v bool) {
+
+
 	o.Dhcp = &v
+
 }
 
 // HasDhcp returns a boolean if a field has been set.

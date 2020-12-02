@@ -36,7 +36,9 @@ func (o *ContractProperties) GetContractNumber() *int64 {
 		return nil
 	}
 
+
 	return o.ContractNumber
+
 }
 
 // GetContractNumberOk returns a tuple with the ContractNumber field value
@@ -46,12 +48,17 @@ func (o *ContractProperties) GetContractNumberOk() (*int64, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ContractNumber, true
 }
 
 // SetContractNumber sets field value
 func (o *ContractProperties) SetContractNumber(v int64) {
+
+
 	o.ContractNumber = &v
+
 }
 
 // HasContractNumber returns a boolean if a field has been set.
@@ -72,7 +79,9 @@ func (o *ContractProperties) GetOwner() *string {
 		return nil
 	}
 
+
 	return o.Owner
+
 }
 
 // GetOwnerOk returns a tuple with the Owner field value
@@ -82,12 +91,17 @@ func (o *ContractProperties) GetOwnerOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Owner, true
 }
 
 // SetOwner sets field value
 func (o *ContractProperties) SetOwner(v string) {
+
+
 	o.Owner = &v
+
 }
 
 // HasOwner returns a boolean if a field has been set.
@@ -108,7 +122,9 @@ func (o *ContractProperties) GetStatus() *string {
 		return nil
 	}
 
+
 	return o.Status
+
 }
 
 // GetStatusOk returns a tuple with the Status field value
@@ -118,12 +134,17 @@ func (o *ContractProperties) GetStatusOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Status, true
 }
 
 // SetStatus sets field value
 func (o *ContractProperties) SetStatus(v string) {
+
+
 	o.Status = &v
+
 }
 
 // HasStatus returns a boolean if a field has been set.
@@ -144,7 +165,9 @@ func (o *ContractProperties) GetRegDomain() *string {
 		return nil
 	}
 
+
 	return o.RegDomain
+
 }
 
 // GetRegDomainOk returns a tuple with the RegDomain field value
@@ -154,12 +177,17 @@ func (o *ContractProperties) GetRegDomainOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RegDomain, true
 }
 
 // SetRegDomain sets field value
 func (o *ContractProperties) SetRegDomain(v string) {
+
+
 	o.RegDomain = &v
+
 }
 
 // HasRegDomain returns a boolean if a field has been set.
@@ -180,7 +208,9 @@ func (o *ContractProperties) GetResourceLimits() *ResourceLimits {
 		return nil
 	}
 
+
 	return o.ResourceLimits
+
 }
 
 // GetResourceLimitsOk returns a tuple with the ResourceLimits field value
@@ -190,12 +220,17 @@ func (o *ContractProperties) GetResourceLimitsOk() (*ResourceLimits, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ResourceLimits, true
 }
 
 // SetResourceLimits sets field value
 func (o *ContractProperties) SetResourceLimits(v ResourceLimits) {
+
+
 	o.ResourceLimits = &v
+
 }
 
 // HasResourceLimits returns a boolean if a field has been set.

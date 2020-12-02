@@ -29,7 +29,9 @@ func (o *KubernetesNodePoolLan) GetId() *int32 {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -39,12 +41,17 @@ func (o *KubernetesNodePoolLan) GetIdOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *KubernetesNodePoolLan) SetId(v int32) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.

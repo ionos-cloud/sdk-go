@@ -45,7 +45,9 @@ func (o *FirewallruleProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -55,12 +57,17 @@ func (o *FirewallruleProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *FirewallruleProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -81,7 +88,9 @@ func (o *FirewallruleProperties) GetProtocol() *string {
 		return nil
 	}
 
+
 	return o.Protocol
+
 }
 
 // GetProtocolOk returns a tuple with the Protocol field value
@@ -91,12 +100,17 @@ func (o *FirewallruleProperties) GetProtocolOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Protocol, true
 }
 
 // SetProtocol sets field value
 func (o *FirewallruleProperties) SetProtocol(v string) {
+
+
 	o.Protocol = &v
+
 }
 
 // HasProtocol returns a boolean if a field has been set.
@@ -117,7 +131,9 @@ func (o *FirewallruleProperties) GetSourceMac() *string {
 		return nil
 	}
 
+
 	return o.SourceMac
+
 }
 
 // GetSourceMacOk returns a tuple with the SourceMac field value
@@ -127,12 +143,17 @@ func (o *FirewallruleProperties) GetSourceMacOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SourceMac, true
 }
 
 // SetSourceMac sets field value
 func (o *FirewallruleProperties) SetSourceMac(v string) {
+
+
 	o.SourceMac = &v
+
 }
 
 // HasSourceMac returns a boolean if a field has been set.
@@ -153,7 +174,9 @@ func (o *FirewallruleProperties) GetSourceIp() *string {
 		return nil
 	}
 
+
 	return o.SourceIp
+
 }
 
 // GetSourceIpOk returns a tuple with the SourceIp field value
@@ -163,12 +186,17 @@ func (o *FirewallruleProperties) GetSourceIpOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SourceIp, true
 }
 
 // SetSourceIp sets field value
 func (o *FirewallruleProperties) SetSourceIp(v string) {
+
+
 	o.SourceIp = &v
+
 }
 
 // HasSourceIp returns a boolean if a field has been set.
@@ -189,7 +217,9 @@ func (o *FirewallruleProperties) GetTargetIp() *string {
 		return nil
 	}
 
+
 	return o.TargetIp
+
 }
 
 // GetTargetIpOk returns a tuple with the TargetIp field value
@@ -199,12 +229,17 @@ func (o *FirewallruleProperties) GetTargetIpOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.TargetIp, true
 }
 
 // SetTargetIp sets field value
 func (o *FirewallruleProperties) SetTargetIp(v string) {
+
+
 	o.TargetIp = &v
+
 }
 
 // HasTargetIp returns a boolean if a field has been set.
@@ -225,7 +260,9 @@ func (o *FirewallruleProperties) GetIcmpCode() *int32 {
 		return nil
 	}
 
+
 	return o.IcmpCode
+
 }
 
 // GetIcmpCodeOk returns a tuple with the IcmpCode field value
@@ -235,12 +272,17 @@ func (o *FirewallruleProperties) GetIcmpCodeOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.IcmpCode, true
 }
 
 // SetIcmpCode sets field value
 func (o *FirewallruleProperties) SetIcmpCode(v int32) {
+
+
 	o.IcmpCode = &v
+
 }
 
 // HasIcmpCode returns a boolean if a field has been set.
@@ -261,7 +303,9 @@ func (o *FirewallruleProperties) GetIcmpType() *int32 {
 		return nil
 	}
 
+
 	return o.IcmpType
+
 }
 
 // GetIcmpTypeOk returns a tuple with the IcmpType field value
@@ -271,12 +315,17 @@ func (o *FirewallruleProperties) GetIcmpTypeOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.IcmpType, true
 }
 
 // SetIcmpType sets field value
 func (o *FirewallruleProperties) SetIcmpType(v int32) {
+
+
 	o.IcmpType = &v
+
 }
 
 // HasIcmpType returns a boolean if a field has been set.
@@ -297,7 +346,9 @@ func (o *FirewallruleProperties) GetPortRangeStart() *int32 {
 		return nil
 	}
 
+
 	return o.PortRangeStart
+
 }
 
 // GetPortRangeStartOk returns a tuple with the PortRangeStart field value
@@ -307,12 +358,17 @@ func (o *FirewallruleProperties) GetPortRangeStartOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.PortRangeStart, true
 }
 
 // SetPortRangeStart sets field value
 func (o *FirewallruleProperties) SetPortRangeStart(v int32) {
+
+
 	o.PortRangeStart = &v
+
 }
 
 // HasPortRangeStart returns a boolean if a field has been set.
@@ -333,7 +389,9 @@ func (o *FirewallruleProperties) GetPortRangeEnd() *int32 {
 		return nil
 	}
 
+
 	return o.PortRangeEnd
+
 }
 
 // GetPortRangeEndOk returns a tuple with the PortRangeEnd field value
@@ -343,12 +401,17 @@ func (o *FirewallruleProperties) GetPortRangeEndOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.PortRangeEnd, true
 }
 
 // SetPortRangeEnd sets field value
 func (o *FirewallruleProperties) SetPortRangeEnd(v int32) {
+
+
 	o.PortRangeEnd = &v
+
 }
 
 // HasPortRangeEnd returns a boolean if a field has been set.

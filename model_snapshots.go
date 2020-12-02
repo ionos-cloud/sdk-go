@@ -35,7 +35,9 @@ func (o *Snapshots) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -45,12 +47,17 @@ func (o *Snapshots) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *Snapshots) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -71,7 +78,9 @@ func (o *Snapshots) GetType() *Type {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -81,12 +90,17 @@ func (o *Snapshots) GetTypeOk() (*Type, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *Snapshots) SetType(v Type) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -107,7 +121,9 @@ func (o *Snapshots) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -117,12 +133,17 @@ func (o *Snapshots) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *Snapshots) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -143,7 +164,9 @@ func (o *Snapshots) GetItems() *[]Snapshot {
 		return nil
 	}
 
+
 	return o.Items
+
 }
 
 // GetItemsOk returns a tuple with the Items field value
@@ -153,12 +176,17 @@ func (o *Snapshots) GetItemsOk() (*[]Snapshot, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Items, true
 }
 
 // SetItems sets field value
 func (o *Snapshots) SetItems(v []Snapshot) {
+
+
 	o.Items = &v
+
 }
 
 // HasItems returns a boolean if a field has been set.

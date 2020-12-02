@@ -35,7 +35,9 @@ func (o *LanProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -45,12 +47,17 @@ func (o *LanProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *LanProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -71,7 +78,9 @@ func (o *LanProperties) GetIpFailover() *[]IPFailover {
 		return nil
 	}
 
+
 	return o.IpFailover
+
 }
 
 // GetIpFailoverOk returns a tuple with the IpFailover field value
@@ -81,12 +90,17 @@ func (o *LanProperties) GetIpFailoverOk() (*[]IPFailover, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.IpFailover, true
 }
 
 // SetIpFailover sets field value
 func (o *LanProperties) SetIpFailover(v []IPFailover) {
+
+
 	o.IpFailover = &v
+
 }
 
 // HasIpFailover returns a boolean if a field has been set.
@@ -107,7 +121,9 @@ func (o *LanProperties) GetPcc() *string {
 		return nil
 	}
 
+
 	return o.Pcc
+
 }
 
 // GetPccOk returns a tuple with the Pcc field value
@@ -117,12 +133,17 @@ func (o *LanProperties) GetPccOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Pcc, true
 }
 
 // SetPcc sets field value
 func (o *LanProperties) SetPcc(v string) {
+
+
 	o.Pcc = &v
+
 }
 
 // HasPcc returns a boolean if a field has been set.
@@ -143,7 +164,9 @@ func (o *LanProperties) GetPublic() *bool {
 		return nil
 	}
 
+
 	return o.Public
+
 }
 
 // GetPublicOk returns a tuple with the Public field value
@@ -153,12 +176,17 @@ func (o *LanProperties) GetPublicOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Public, true
 }
 
 // SetPublic sets field value
 func (o *LanProperties) SetPublic(v bool) {
+
+
 	o.Public = &v
+
 }
 
 // HasPublic returns a boolean if a field has been set.

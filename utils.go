@@ -12,6 +12,7 @@ package ionossdk
 
 import (
 	"encoding/json"
+	"strings"
 	"time"
 )
 
@@ -333,3 +334,33 @@ func (v *NullableTime) UnmarshalJSON(src []byte) error {
 	v.isSet = true
 	return json.Unmarshal(src, &v.value)
 }
+
+type IonosTime struct {
+	time.Time
+}
+
+func (t *IonosTime) UnmarshalJSON(data []byte) error {
+	str := string(data)
+	if strlen(str) == 0 {
+		t = nil
+		return nil
+	}
+	if str[0] == '"' {
+		str = str[1:]
+	}
+	if str[len(str) - 1] == '"' {
+		str = str[:len(str) - 1]
+	}
+	if !strings.Contains(str, "Z") {
+		/* forcefully adding timezone suffix to be able to parse the
+		 * string using RFC3339 */
+		str += "Z"
+	}
+	tt, err := time.Parse(time.RFC3339, str)
+	if err != nil {
+		return err
+	}
+	*t = IonosTime{tt}
+	return nil
+}
+

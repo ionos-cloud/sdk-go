@@ -20,13 +20,13 @@ type KubernetesNodeMetadata struct {
 	// Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. 
 	Etag *string `json:"etag,omitempty"`
 	// The last time the resource was created
-	CreatedDate *time.Time `json:"createdDate,omitempty"`
+	CreatedDate *IonosTime
 	// The last time the resource has been modified
-	LastModifiedDate *time.Time `json:"lastModifiedDate,omitempty"`
+	LastModifiedDate *IonosTime
 	// State of the resource.
 	State *string `json:"state,omitempty"`
 	// The last time the software updated on node.
-	LastSoftwareUpdatedDate *time.Time `json:"lastSoftwareUpdatedDate,omitempty"`
+	LastSoftwareUpdatedDate *IonosTime
 }
 
 
@@ -38,7 +38,9 @@ func (o *KubernetesNodeMetadata) GetEtag() *string {
 		return nil
 	}
 
+
 	return o.Etag
+
 }
 
 // GetEtagOk returns a tuple with the Etag field value
@@ -48,12 +50,17 @@ func (o *KubernetesNodeMetadata) GetEtagOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Etag, true
 }
 
 // SetEtag sets field value
 func (o *KubernetesNodeMetadata) SetEtag(v string) {
+
+
 	o.Etag = &v
+
 }
 
 // HasEtag returns a boolean if a field has been set.
@@ -74,7 +81,12 @@ func (o *KubernetesNodeMetadata) GetCreatedDate() *time.Time {
 		return nil
 	}
 
-	return o.CreatedDate
+	if o.CreatedDate == nil {
+		return nil
+	}
+	return &o.CreatedDate.Time
+
+
 }
 
 // GetCreatedDateOk returns a tuple with the CreatedDate field value
@@ -84,12 +96,20 @@ func (o *KubernetesNodeMetadata) GetCreatedDateOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.CreatedDate, true
+
+	if o.CreatedDate == nil {
+		return nil, false
+	}
+	return &o.CreatedDate.Time, true
+
 }
 
 // SetCreatedDate sets field value
 func (o *KubernetesNodeMetadata) SetCreatedDate(v time.Time) {
-	o.CreatedDate = &v
+
+	o.CreatedDate = &IonosTime{v}
+
+
 }
 
 // HasCreatedDate returns a boolean if a field has been set.
@@ -110,7 +130,12 @@ func (o *KubernetesNodeMetadata) GetLastModifiedDate() *time.Time {
 		return nil
 	}
 
-	return o.LastModifiedDate
+	if o.LastModifiedDate == nil {
+		return nil
+	}
+	return &o.LastModifiedDate.Time
+
+
 }
 
 // GetLastModifiedDateOk returns a tuple with the LastModifiedDate field value
@@ -120,12 +145,20 @@ func (o *KubernetesNodeMetadata) GetLastModifiedDateOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.LastModifiedDate, true
+
+	if o.LastModifiedDate == nil {
+		return nil, false
+	}
+	return &o.LastModifiedDate.Time, true
+
 }
 
 // SetLastModifiedDate sets field value
 func (o *KubernetesNodeMetadata) SetLastModifiedDate(v time.Time) {
-	o.LastModifiedDate = &v
+
+	o.LastModifiedDate = &IonosTime{v}
+
+
 }
 
 // HasLastModifiedDate returns a boolean if a field has been set.
@@ -146,7 +179,9 @@ func (o *KubernetesNodeMetadata) GetState() *string {
 		return nil
 	}
 
+
 	return o.State
+
 }
 
 // GetStateOk returns a tuple with the State field value
@@ -156,12 +191,17 @@ func (o *KubernetesNodeMetadata) GetStateOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.State, true
 }
 
 // SetState sets field value
 func (o *KubernetesNodeMetadata) SetState(v string) {
+
+
 	o.State = &v
+
 }
 
 // HasState returns a boolean if a field has been set.
@@ -182,7 +222,12 @@ func (o *KubernetesNodeMetadata) GetLastSoftwareUpdatedDate() *time.Time {
 		return nil
 	}
 
-	return o.LastSoftwareUpdatedDate
+	if o.LastSoftwareUpdatedDate == nil {
+		return nil
+	}
+	return &o.LastSoftwareUpdatedDate.Time
+
+
 }
 
 // GetLastSoftwareUpdatedDateOk returns a tuple with the LastSoftwareUpdatedDate field value
@@ -192,12 +237,20 @@ func (o *KubernetesNodeMetadata) GetLastSoftwareUpdatedDateOk() (*time.Time, boo
 	if o == nil {
 		return nil, false
 	}
-	return o.LastSoftwareUpdatedDate, true
+
+	if o.LastSoftwareUpdatedDate == nil {
+		return nil, false
+	}
+	return &o.LastSoftwareUpdatedDate.Time, true
+
 }
 
 // SetLastSoftwareUpdatedDate sets field value
 func (o *KubernetesNodeMetadata) SetLastSoftwareUpdatedDate(v time.Time) {
-	o.LastSoftwareUpdatedDate = &v
+
+	o.LastSoftwareUpdatedDate = &IonosTime{v}
+
+
 }
 
 // HasLastSoftwareUpdatedDate returns a boolean if a field has been set.

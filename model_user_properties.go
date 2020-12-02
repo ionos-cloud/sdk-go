@@ -43,7 +43,9 @@ func (o *UserProperties) GetFirstname() *string {
 		return nil
 	}
 
+
 	return o.Firstname
+
 }
 
 // GetFirstnameOk returns a tuple with the Firstname field value
@@ -53,12 +55,17 @@ func (o *UserProperties) GetFirstnameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Firstname, true
 }
 
 // SetFirstname sets field value
 func (o *UserProperties) SetFirstname(v string) {
+
+
 	o.Firstname = &v
+
 }
 
 // HasFirstname returns a boolean if a field has been set.
@@ -79,7 +86,9 @@ func (o *UserProperties) GetLastname() *string {
 		return nil
 	}
 
+
 	return o.Lastname
+
 }
 
 // GetLastnameOk returns a tuple with the Lastname field value
@@ -89,12 +98,17 @@ func (o *UserProperties) GetLastnameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Lastname, true
 }
 
 // SetLastname sets field value
 func (o *UserProperties) SetLastname(v string) {
+
+
 	o.Lastname = &v
+
 }
 
 // HasLastname returns a boolean if a field has been set.
@@ -115,7 +129,9 @@ func (o *UserProperties) GetEmail() *string {
 		return nil
 	}
 
+
 	return o.Email
+
 }
 
 // GetEmailOk returns a tuple with the Email field value
@@ -125,12 +141,17 @@ func (o *UserProperties) GetEmailOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Email, true
 }
 
 // SetEmail sets field value
 func (o *UserProperties) SetEmail(v string) {
+
+
 	o.Email = &v
+
 }
 
 // HasEmail returns a boolean if a field has been set.
@@ -151,7 +172,9 @@ func (o *UserProperties) GetAdministrator() *bool {
 		return nil
 	}
 
+
 	return o.Administrator
+
 }
 
 // GetAdministratorOk returns a tuple with the Administrator field value
@@ -161,12 +184,17 @@ func (o *UserProperties) GetAdministratorOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Administrator, true
 }
 
 // SetAdministrator sets field value
 func (o *UserProperties) SetAdministrator(v bool) {
+
+
 	o.Administrator = &v
+
 }
 
 // HasAdministrator returns a boolean if a field has been set.
@@ -187,7 +215,9 @@ func (o *UserProperties) GetForceSecAuth() *bool {
 		return nil
 	}
 
+
 	return o.ForceSecAuth
+
 }
 
 // GetForceSecAuthOk returns a tuple with the ForceSecAuth field value
@@ -197,12 +227,17 @@ func (o *UserProperties) GetForceSecAuthOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ForceSecAuth, true
 }
 
 // SetForceSecAuth sets field value
 func (o *UserProperties) SetForceSecAuth(v bool) {
+
+
 	o.ForceSecAuth = &v
+
 }
 
 // HasForceSecAuth returns a boolean if a field has been set.
@@ -223,7 +258,9 @@ func (o *UserProperties) GetSecAuthActive() *bool {
 		return nil
 	}
 
+
 	return o.SecAuthActive
+
 }
 
 // GetSecAuthActiveOk returns a tuple with the SecAuthActive field value
@@ -233,12 +270,17 @@ func (o *UserProperties) GetSecAuthActiveOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SecAuthActive, true
 }
 
 // SetSecAuthActive sets field value
 func (o *UserProperties) SetSecAuthActive(v bool) {
+
+
 	o.SecAuthActive = &v
+
 }
 
 // HasSecAuthActive returns a boolean if a field has been set.
@@ -259,7 +301,9 @@ func (o *UserProperties) GetS3CanonicalUserId() *string {
 		return nil
 	}
 
+
 	return o.S3CanonicalUserId
+
 }
 
 // GetS3CanonicalUserIdOk returns a tuple with the S3CanonicalUserId field value
@@ -269,12 +313,17 @@ func (o *UserProperties) GetS3CanonicalUserIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.S3CanonicalUserId, true
 }
 
 // SetS3CanonicalUserId sets field value
 func (o *UserProperties) SetS3CanonicalUserId(v string) {
+
+
 	o.S3CanonicalUserId = &v
+
 }
 
 // HasS3CanonicalUserId returns a boolean if a field has been set.
@@ -295,7 +344,9 @@ func (o *UserProperties) GetPassword() *string {
 		return nil
 	}
 
+
 	return o.Password
+
 }
 
 // GetPasswordOk returns a tuple with the Password field value
@@ -305,12 +356,17 @@ func (o *UserProperties) GetPasswordOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Password, true
 }
 
 // SetPassword sets field value
 func (o *UserProperties) SetPassword(v string) {
+
+
 	o.Password = &v
+
 }
 
 // HasPassword returns a boolean if a field has been set.

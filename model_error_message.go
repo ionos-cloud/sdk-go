@@ -31,7 +31,9 @@ func (o *ErrorMessage) GetErrorCode() *string {
 		return nil
 	}
 
+
 	return o.ErrorCode
+
 }
 
 // GetErrorCodeOk returns a tuple with the ErrorCode field value
@@ -41,12 +43,17 @@ func (o *ErrorMessage) GetErrorCodeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ErrorCode, true
 }
 
 // SetErrorCode sets field value
 func (o *ErrorMessage) SetErrorCode(v string) {
+
+
 	o.ErrorCode = &v
+
 }
 
 // HasErrorCode returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *ErrorMessage) GetMessage() *string {
 		return nil
 	}
 
+
 	return o.Message
+
 }
 
 // GetMessageOk returns a tuple with the Message field value
@@ -77,12 +86,17 @@ func (o *ErrorMessage) GetMessageOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Message, true
 }
 
 // SetMessage sets field value
 func (o *ErrorMessage) SetMessage(v string) {
+
+
 	o.Message = &v
+
 }
 
 // HasMessage returns a boolean if a field has been set.

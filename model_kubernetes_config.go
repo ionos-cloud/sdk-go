@@ -34,7 +34,9 @@ func (o *KubernetesConfig) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -44,12 +46,17 @@ func (o *KubernetesConfig) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *KubernetesConfig) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -70,7 +77,9 @@ func (o *KubernetesConfig) GetType() *string {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -80,12 +89,17 @@ func (o *KubernetesConfig) GetTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *KubernetesConfig) SetType(v string) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -106,7 +120,9 @@ func (o *KubernetesConfig) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -116,12 +132,17 @@ func (o *KubernetesConfig) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *KubernetesConfig) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -142,7 +163,9 @@ func (o *KubernetesConfig) GetProperties() *KubernetesConfigProperties {
 		return nil
 	}
 
+
 	return o.Properties
+
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value
@@ -152,12 +175,17 @@ func (o *KubernetesConfig) GetPropertiesOk() (*KubernetesConfigProperties, bool)
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Properties, true
 }
 
 // SetProperties sets field value
 func (o *KubernetesConfig) SetProperties(v KubernetesConfigProperties) {
+
+
 	o.Properties = &v
+
 }
 
 // HasProperties returns a boolean if a field has been set.

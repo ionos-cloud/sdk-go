@@ -28,7 +28,9 @@ func (o *NicEntities) GetFirewallrules() *FirewallRules {
 		return nil
 	}
 
+
 	return o.Firewallrules
+
 }
 
 // GetFirewallrulesOk returns a tuple with the Firewallrules field value
@@ -38,12 +40,17 @@ func (o *NicEntities) GetFirewallrulesOk() (*FirewallRules, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Firewallrules, true
 }
 
 // SetFirewallrules sets field value
 func (o *NicEntities) SetFirewallrules(v FirewallRules) {
+
+
 	o.Firewallrules = &v
+
 }
 
 // HasFirewallrules returns a boolean if a field has been set.

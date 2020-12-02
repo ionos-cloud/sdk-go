@@ -31,7 +31,9 @@ func (o *LabelResourceProperties) GetKey() *string {
 		return nil
 	}
 
+
 	return o.Key
+
 }
 
 // GetKeyOk returns a tuple with the Key field value
@@ -41,12 +43,17 @@ func (o *LabelResourceProperties) GetKeyOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Key, true
 }
 
 // SetKey sets field value
 func (o *LabelResourceProperties) SetKey(v string) {
+
+
 	o.Key = &v
+
 }
 
 // HasKey returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *LabelResourceProperties) GetValue() *string {
 		return nil
 	}
 
+
 	return o.Value
+
 }
 
 // GetValueOk returns a tuple with the Value field value
@@ -77,12 +86,17 @@ func (o *LabelResourceProperties) GetValueOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Value, true
 }
 
 // SetValue sets field value
 func (o *LabelResourceProperties) SetValue(v string) {
+
+
 	o.Value = &v
+
 }
 
 // HasValue returns a boolean if a field has been set.

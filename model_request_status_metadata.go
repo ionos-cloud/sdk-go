@@ -32,7 +32,9 @@ func (o *RequestStatusMetadata) GetStatus() *string {
 		return nil
 	}
 
+
 	return o.Status
+
 }
 
 // GetStatusOk returns a tuple with the Status field value
@@ -42,12 +44,17 @@ func (o *RequestStatusMetadata) GetStatusOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Status, true
 }
 
 // SetStatus sets field value
 func (o *RequestStatusMetadata) SetStatus(v string) {
+
+
 	o.Status = &v
+
 }
 
 // HasStatus returns a boolean if a field has been set.
@@ -68,7 +75,9 @@ func (o *RequestStatusMetadata) GetMessage() *string {
 		return nil
 	}
 
+
 	return o.Message
+
 }
 
 // GetMessageOk returns a tuple with the Message field value
@@ -78,12 +87,17 @@ func (o *RequestStatusMetadata) GetMessageOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Message, true
 }
 
 // SetMessage sets field value
 func (o *RequestStatusMetadata) SetMessage(v string) {
+
+
 	o.Message = &v
+
 }
 
 // HasMessage returns a boolean if a field has been set.
@@ -104,7 +118,9 @@ func (o *RequestStatusMetadata) GetEtag() *string {
 		return nil
 	}
 
+
 	return o.Etag
+
 }
 
 // GetEtagOk returns a tuple with the Etag field value
@@ -114,12 +130,17 @@ func (o *RequestStatusMetadata) GetEtagOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Etag, true
 }
 
 // SetEtag sets field value
 func (o *RequestStatusMetadata) SetEtag(v string) {
+
+
 	o.Etag = &v
+
 }
 
 // HasEtag returns a boolean if a field has been set.
@@ -140,7 +161,9 @@ func (o *RequestStatusMetadata) GetTargets() *[]RequestTarget {
 		return nil
 	}
 
+
 	return o.Targets
+
 }
 
 // GetTargetsOk returns a tuple with the Targets field value
@@ -150,12 +173,17 @@ func (o *RequestStatusMetadata) GetTargetsOk() (*[]RequestTarget, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Targets, true
 }
 
 // SetTargets sets field value
 func (o *RequestStatusMetadata) SetTargets(v []RequestTarget) {
+
+
 	o.Targets = &v
+
 }
 
 // HasTargets returns a boolean if a field has been set.

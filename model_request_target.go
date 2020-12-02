@@ -29,7 +29,9 @@ func (o *RequestTarget) GetTarget() *ResourceReference {
 		return nil
 	}
 
+
 	return o.Target
+
 }
 
 // GetTargetOk returns a tuple with the Target field value
@@ -39,12 +41,17 @@ func (o *RequestTarget) GetTargetOk() (*ResourceReference, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Target, true
 }
 
 // SetTarget sets field value
 func (o *RequestTarget) SetTarget(v ResourceReference) {
+
+
 	o.Target = &v
+
 }
 
 // HasTarget returns a boolean if a field has been set.
@@ -65,7 +72,9 @@ func (o *RequestTarget) GetStatus() *string {
 		return nil
 	}
 
+
 	return o.Status
+
 }
 
 // GetStatusOk returns a tuple with the Status field value
@@ -75,12 +84,17 @@ func (o *RequestTarget) GetStatusOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Status, true
 }
 
 // SetStatus sets field value
 func (o *RequestTarget) SetStatus(v string) {
+
+
 	o.Status = &v
+
 }
 
 // HasStatus returns a boolean if a field has been set.

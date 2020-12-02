@@ -29,7 +29,9 @@ func (o *BackupUnitSSO) GetSsoUrl() *string {
 		return nil
 	}
 
+
 	return o.SsoUrl
+
 }
 
 // GetSsoUrlOk returns a tuple with the SsoUrl field value
@@ -39,12 +41,17 @@ func (o *BackupUnitSSO) GetSsoUrlOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SsoUrl, true
 }
 
 // SetSsoUrl sets field value
 func (o *BackupUnitSSO) SetSsoUrl(v string) {
+
+
 	o.SsoUrl = &v
+
 }
 
 // HasSsoUrl returns a boolean if a field has been set.

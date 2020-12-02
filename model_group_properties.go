@@ -47,7 +47,9 @@ func (o *GroupProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -57,12 +59,17 @@ func (o *GroupProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *GroupProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -83,7 +90,9 @@ func (o *GroupProperties) GetCreateDataCenter() *bool {
 		return nil
 	}
 
+
 	return o.CreateDataCenter
+
 }
 
 // GetCreateDataCenterOk returns a tuple with the CreateDataCenter field value
@@ -93,12 +102,17 @@ func (o *GroupProperties) GetCreateDataCenterOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreateDataCenter, true
 }
 
 // SetCreateDataCenter sets field value
 func (o *GroupProperties) SetCreateDataCenter(v bool) {
+
+
 	o.CreateDataCenter = &v
+
 }
 
 // HasCreateDataCenter returns a boolean if a field has been set.
@@ -119,7 +133,9 @@ func (o *GroupProperties) GetCreateSnapshot() *bool {
 		return nil
 	}
 
+
 	return o.CreateSnapshot
+
 }
 
 // GetCreateSnapshotOk returns a tuple with the CreateSnapshot field value
@@ -129,12 +145,17 @@ func (o *GroupProperties) GetCreateSnapshotOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreateSnapshot, true
 }
 
 // SetCreateSnapshot sets field value
 func (o *GroupProperties) SetCreateSnapshot(v bool) {
+
+
 	o.CreateSnapshot = &v
+
 }
 
 // HasCreateSnapshot returns a boolean if a field has been set.
@@ -155,7 +176,9 @@ func (o *GroupProperties) GetReserveIp() *bool {
 		return nil
 	}
 
+
 	return o.ReserveIp
+
 }
 
 // GetReserveIpOk returns a tuple with the ReserveIp field value
@@ -165,12 +188,17 @@ func (o *GroupProperties) GetReserveIpOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ReserveIp, true
 }
 
 // SetReserveIp sets field value
 func (o *GroupProperties) SetReserveIp(v bool) {
+
+
 	o.ReserveIp = &v
+
 }
 
 // HasReserveIp returns a boolean if a field has been set.
@@ -191,7 +219,9 @@ func (o *GroupProperties) GetAccessActivityLog() *bool {
 		return nil
 	}
 
+
 	return o.AccessActivityLog
+
 }
 
 // GetAccessActivityLogOk returns a tuple with the AccessActivityLog field value
@@ -201,12 +231,17 @@ func (o *GroupProperties) GetAccessActivityLogOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.AccessActivityLog, true
 }
 
 // SetAccessActivityLog sets field value
 func (o *GroupProperties) SetAccessActivityLog(v bool) {
+
+
 	o.AccessActivityLog = &v
+
 }
 
 // HasAccessActivityLog returns a boolean if a field has been set.
@@ -227,7 +262,9 @@ func (o *GroupProperties) GetCreatePcc() *bool {
 		return nil
 	}
 
+
 	return o.CreatePcc
+
 }
 
 // GetCreatePccOk returns a tuple with the CreatePcc field value
@@ -237,12 +274,17 @@ func (o *GroupProperties) GetCreatePccOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreatePcc, true
 }
 
 // SetCreatePcc sets field value
 func (o *GroupProperties) SetCreatePcc(v bool) {
+
+
 	o.CreatePcc = &v
+
 }
 
 // HasCreatePcc returns a boolean if a field has been set.
@@ -263,7 +305,9 @@ func (o *GroupProperties) GetS3Privilege() *bool {
 		return nil
 	}
 
+
 	return o.S3Privilege
+
 }
 
 // GetS3PrivilegeOk returns a tuple with the S3Privilege field value
@@ -273,12 +317,17 @@ func (o *GroupProperties) GetS3PrivilegeOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.S3Privilege, true
 }
 
 // SetS3Privilege sets field value
 func (o *GroupProperties) SetS3Privilege(v bool) {
+
+
 	o.S3Privilege = &v
+
 }
 
 // HasS3Privilege returns a boolean if a field has been set.
@@ -299,7 +348,9 @@ func (o *GroupProperties) GetCreateBackupUnit() *bool {
 		return nil
 	}
 
+
 	return o.CreateBackupUnit
+
 }
 
 // GetCreateBackupUnitOk returns a tuple with the CreateBackupUnit field value
@@ -309,12 +360,17 @@ func (o *GroupProperties) GetCreateBackupUnitOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreateBackupUnit, true
 }
 
 // SetCreateBackupUnit sets field value
 func (o *GroupProperties) SetCreateBackupUnit(v bool) {
+
+
 	o.CreateBackupUnit = &v
+
 }
 
 // HasCreateBackupUnit returns a boolean if a field has been set.
@@ -335,7 +391,9 @@ func (o *GroupProperties) GetCreateInternetAccess() *bool {
 		return nil
 	}
 
+
 	return o.CreateInternetAccess
+
 }
 
 // GetCreateInternetAccessOk returns a tuple with the CreateInternetAccess field value
@@ -345,12 +403,17 @@ func (o *GroupProperties) GetCreateInternetAccessOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreateInternetAccess, true
 }
 
 // SetCreateInternetAccess sets field value
 func (o *GroupProperties) SetCreateInternetAccess(v bool) {
+
+
 	o.CreateInternetAccess = &v
+
 }
 
 // HasCreateInternetAccess returns a boolean if a field has been set.
@@ -371,7 +434,9 @@ func (o *GroupProperties) GetCreateK8sCluster() *bool {
 		return nil
 	}
 
+
 	return o.CreateK8sCluster
+
 }
 
 // GetCreateK8sClusterOk returns a tuple with the CreateK8sCluster field value
@@ -381,12 +446,17 @@ func (o *GroupProperties) GetCreateK8sClusterOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreateK8sCluster, true
 }
 
 // SetCreateK8sCluster sets field value
 func (o *GroupProperties) SetCreateK8sCluster(v bool) {
+
+
 	o.CreateK8sCluster = &v
+
 }
 
 // HasCreateK8sCluster returns a boolean if a field has been set.

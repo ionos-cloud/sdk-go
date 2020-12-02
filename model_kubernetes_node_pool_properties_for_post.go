@@ -55,7 +55,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -65,12 +67,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -91,7 +98,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetDatacenterId() *string {
 		return nil
 	}
 
+
 	return o.DatacenterId
+
 }
 
 // GetDatacenterIdOk returns a tuple with the DatacenterId field value
@@ -101,12 +110,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetDatacenterIdOk() (*string, bool
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DatacenterId, true
 }
 
 // SetDatacenterId sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetDatacenterId(v string) {
+
+
 	o.DatacenterId = &v
+
 }
 
 // HasDatacenterId returns a boolean if a field has been set.
@@ -127,7 +141,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetNodeCount() *int32 {
 		return nil
 	}
 
+
 	return o.NodeCount
+
 }
 
 // GetNodeCountOk returns a tuple with the NodeCount field value
@@ -137,12 +153,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetNodeCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NodeCount, true
 }
 
 // SetNodeCount sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetNodeCount(v int32) {
+
+
 	o.NodeCount = &v
+
 }
 
 // HasNodeCount returns a boolean if a field has been set.
@@ -163,7 +184,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetCpuFamily() *string {
 		return nil
 	}
 
+
 	return o.CpuFamily
+
 }
 
 // GetCpuFamilyOk returns a tuple with the CpuFamily field value
@@ -173,12 +196,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetCpuFamilyOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuFamily, true
 }
 
 // SetCpuFamily sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetCpuFamily(v string) {
+
+
 	o.CpuFamily = &v
+
 }
 
 // HasCpuFamily returns a boolean if a field has been set.
@@ -199,7 +227,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetCoresCount() *int32 {
 		return nil
 	}
 
+
 	return o.CoresCount
+
 }
 
 // GetCoresCountOk returns a tuple with the CoresCount field value
@@ -209,12 +239,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetCoresCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CoresCount, true
 }
 
 // SetCoresCount sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetCoresCount(v int32) {
+
+
 	o.CoresCount = &v
+
 }
 
 // HasCoresCount returns a boolean if a field has been set.
@@ -235,7 +270,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetRamSize() *int32 {
 		return nil
 	}
 
+
 	return o.RamSize
+
 }
 
 // GetRamSizeOk returns a tuple with the RamSize field value
@@ -245,12 +282,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetRamSizeOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamSize, true
 }
 
 // SetRamSize sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetRamSize(v int32) {
+
+
 	o.RamSize = &v
+
 }
 
 // HasRamSize returns a boolean if a field has been set.
@@ -271,7 +313,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetAvailabilityZone() *string {
 		return nil
 	}
 
+
 	return o.AvailabilityZone
+
 }
 
 // GetAvailabilityZoneOk returns a tuple with the AvailabilityZone field value
@@ -281,12 +325,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetAvailabilityZoneOk() (*string, 
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.AvailabilityZone, true
 }
 
 // SetAvailabilityZone sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetAvailabilityZone(v string) {
+
+
 	o.AvailabilityZone = &v
+
 }
 
 // HasAvailabilityZone returns a boolean if a field has been set.
@@ -307,7 +356,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetStorageType() *string {
 		return nil
 	}
 
+
 	return o.StorageType
+
 }
 
 // GetStorageTypeOk returns a tuple with the StorageType field value
@@ -317,12 +368,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetStorageTypeOk() (*string, bool)
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.StorageType, true
 }
 
 // SetStorageType sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetStorageType(v string) {
+
+
 	o.StorageType = &v
+
 }
 
 // HasStorageType returns a boolean if a field has been set.
@@ -343,7 +399,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetStorageSize() *int32 {
 		return nil
 	}
 
+
 	return o.StorageSize
+
 }
 
 // GetStorageSizeOk returns a tuple with the StorageSize field value
@@ -353,12 +411,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetStorageSizeOk() (*int32, bool) 
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.StorageSize, true
 }
 
 // SetStorageSize sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetStorageSize(v int32) {
+
+
 	o.StorageSize = &v
+
 }
 
 // HasStorageSize returns a boolean if a field has been set.
@@ -379,7 +442,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetK8sVersion() *string {
 		return nil
 	}
 
+
 	return o.K8sVersion
+
 }
 
 // GetK8sVersionOk returns a tuple with the K8sVersion field value
@@ -389,12 +454,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetK8sVersionOk() (*string, bool) 
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.K8sVersion, true
 }
 
 // SetK8sVersion sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetK8sVersion(v string) {
+
+
 	o.K8sVersion = &v
+
 }
 
 // HasK8sVersion returns a boolean if a field has been set.
@@ -415,7 +485,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetMaintenanceWindow() *Kubernetes
 		return nil
 	}
 
+
 	return o.MaintenanceWindow
+
 }
 
 // GetMaintenanceWindowOk returns a tuple with the MaintenanceWindow field value
@@ -425,12 +497,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetMaintenanceWindowOk() (*Kuberne
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.MaintenanceWindow, true
 }
 
 // SetMaintenanceWindow sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetMaintenanceWindow(v KubernetesMaintenanceWindow) {
+
+
 	o.MaintenanceWindow = &v
+
 }
 
 // HasMaintenanceWindow returns a boolean if a field has been set.
@@ -451,7 +528,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetAutoScaling() *KubernetesAutoSc
 		return nil
 	}
 
+
 	return o.AutoScaling
+
 }
 
 // GetAutoScalingOk returns a tuple with the AutoScaling field value
@@ -461,12 +540,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetAutoScalingOk() (*KubernetesAut
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.AutoScaling, true
 }
 
 // SetAutoScaling sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetAutoScaling(v KubernetesAutoScaling) {
+
+
 	o.AutoScaling = &v
+
 }
 
 // HasAutoScaling returns a boolean if a field has been set.
@@ -487,7 +571,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetLans() *[]KubernetesNodePoolLan
 		return nil
 	}
 
+
 	return o.Lans
+
 }
 
 // GetLansOk returns a tuple with the Lans field value
@@ -497,12 +583,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetLansOk() (*[]KubernetesNodePool
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Lans, true
 }
 
 // SetLans sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetLans(v []KubernetesNodePoolLan) {
+
+
 	o.Lans = &v
+
 }
 
 // HasLans returns a boolean if a field has been set.
@@ -523,7 +614,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetLabels() *KubernetesNodePoolLab
 		return nil
 	}
 
+
 	return o.Labels
+
 }
 
 // GetLabelsOk returns a tuple with the Labels field value
@@ -533,12 +626,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetLabelsOk() (*KubernetesNodePool
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Labels, true
 }
 
 // SetLabels sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetLabels(v KubernetesNodePoolLabel) {
+
+
 	o.Labels = &v
+
 }
 
 // HasLabels returns a boolean if a field has been set.
@@ -559,7 +657,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetAnnotations() *KubernetesNodePo
 		return nil
 	}
 
+
 	return o.Annotations
+
 }
 
 // GetAnnotationsOk returns a tuple with the Annotations field value
@@ -569,12 +669,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetAnnotationsOk() (*KubernetesNod
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Annotations, true
 }
 
 // SetAnnotations sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetAnnotations(v KubernetesNodePoolAnnotation) {
+
+
 	o.Annotations = &v
+
 }
 
 // HasAnnotations returns a boolean if a field has been set.
@@ -595,7 +700,9 @@ func (o *KubernetesNodePoolPropertiesForPost) GetPublicIps() *[]string {
 		return nil
 	}
 
+
 	return o.PublicIps
+
 }
 
 // GetPublicIpsOk returns a tuple with the PublicIps field value
@@ -605,12 +712,17 @@ func (o *KubernetesNodePoolPropertiesForPost) GetPublicIpsOk() (*[]string, bool)
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.PublicIps, true
 }
 
 // SetPublicIps sets field value
 func (o *KubernetesNodePoolPropertiesForPost) SetPublicIps(v []string) {
+
+
 	o.PublicIps = &v
+
 }
 
 // HasPublicIps returns a boolean if a field has been set.

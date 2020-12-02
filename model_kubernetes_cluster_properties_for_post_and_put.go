@@ -32,7 +32,9 @@ func (o *KubernetesClusterPropertiesForPostAndPut) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -42,12 +44,17 @@ func (o *KubernetesClusterPropertiesForPostAndPut) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *KubernetesClusterPropertiesForPostAndPut) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -68,7 +75,9 @@ func (o *KubernetesClusterPropertiesForPostAndPut) GetK8sVersion() *string {
 		return nil
 	}
 
+
 	return o.K8sVersion
+
 }
 
 // GetK8sVersionOk returns a tuple with the K8sVersion field value
@@ -78,12 +87,17 @@ func (o *KubernetesClusterPropertiesForPostAndPut) GetK8sVersionOk() (*string, b
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.K8sVersion, true
 }
 
 // SetK8sVersion sets field value
 func (o *KubernetesClusterPropertiesForPostAndPut) SetK8sVersion(v string) {
+
+
 	o.K8sVersion = &v
+
 }
 
 // HasK8sVersion returns a boolean if a field has been set.
@@ -104,7 +118,9 @@ func (o *KubernetesClusterPropertiesForPostAndPut) GetMaintenanceWindow() *Kuber
 		return nil
 	}
 
+
 	return o.MaintenanceWindow
+
 }
 
 // GetMaintenanceWindowOk returns a tuple with the MaintenanceWindow field value
@@ -114,12 +130,17 @@ func (o *KubernetesClusterPropertiesForPostAndPut) GetMaintenanceWindowOk() (*Ku
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.MaintenanceWindow, true
 }
 
 // SetMaintenanceWindow sets field value
 func (o *KubernetesClusterPropertiesForPostAndPut) SetMaintenanceWindow(v KubernetesMaintenanceWindow) {
+
+
 	o.MaintenanceWindow = &v
+
 }
 
 // HasMaintenanceWindow returns a boolean if a field has been set.

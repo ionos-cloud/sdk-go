@@ -29,7 +29,9 @@ func (o *GroupEntities) GetUsers() *GroupMembers {
 		return nil
 	}
 
+
 	return o.Users
+
 }
 
 // GetUsersOk returns a tuple with the Users field value
@@ -39,12 +41,17 @@ func (o *GroupEntities) GetUsersOk() (*GroupMembers, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Users, true
 }
 
 // SetUsers sets field value
 func (o *GroupEntities) SetUsers(v GroupMembers) {
+
+
 	o.Users = &v
+
 }
 
 // HasUsers returns a boolean if a field has been set.
@@ -65,7 +72,9 @@ func (o *GroupEntities) GetResources() *ResourceGroups {
 		return nil
 	}
 
+
 	return o.Resources
+
 }
 
 // GetResourcesOk returns a tuple with the Resources field value
@@ -75,12 +84,17 @@ func (o *GroupEntities) GetResourcesOk() (*ResourceGroups, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Resources, true
 }
 
 // SetResources sets field value
 func (o *GroupEntities) SetResources(v ResourceGroups) {
+
+
 	o.Resources = &v
+
 }
 
 // HasResources returns a boolean if a field has been set.

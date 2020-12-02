@@ -31,7 +31,9 @@ func (o *KubernetesAutoScaling) GetMinNodeCount() *int32 {
 		return nil
 	}
 
+
 	return o.MinNodeCount
+
 }
 
 // GetMinNodeCountOk returns a tuple with the MinNodeCount field value
@@ -41,12 +43,17 @@ func (o *KubernetesAutoScaling) GetMinNodeCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.MinNodeCount, true
 }
 
 // SetMinNodeCount sets field value
 func (o *KubernetesAutoScaling) SetMinNodeCount(v int32) {
+
+
 	o.MinNodeCount = &v
+
 }
 
 // HasMinNodeCount returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *KubernetesAutoScaling) GetMaxNodeCount() *int32 {
 		return nil
 	}
 
+
 	return o.MaxNodeCount
+
 }
 
 // GetMaxNodeCountOk returns a tuple with the MaxNodeCount field value
@@ -77,12 +86,17 @@ func (o *KubernetesAutoScaling) GetMaxNodeCountOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.MaxNodeCount, true
 }
 
 // SetMaxNodeCount sets field value
 func (o *KubernetesAutoScaling) SetMaxNodeCount(v int32) {
+
+
 	o.MaxNodeCount = &v
+
 }
 
 // HasMaxNodeCount returns a boolean if a field has been set.

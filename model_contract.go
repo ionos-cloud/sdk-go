@@ -30,7 +30,9 @@ func (o *Contract) GetType() *Type {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -40,12 +42,17 @@ func (o *Contract) GetTypeOk() (*Type, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *Contract) SetType(v Type) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -66,7 +73,9 @@ func (o *Contract) GetProperties() *ContractProperties {
 		return nil
 	}
 
+
 	return o.Properties
+
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value
@@ -76,12 +85,17 @@ func (o *Contract) GetPropertiesOk() (*ContractProperties, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Properties, true
 }
 
 // SetProperties sets field value
 func (o *Contract) SetProperties(v ContractProperties) {
+
+
 	o.Properties = &v
+
 }
 
 // HasProperties returns a boolean if a field has been set.

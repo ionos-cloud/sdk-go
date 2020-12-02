@@ -41,7 +41,9 @@ func (o *ServerProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -51,12 +53,17 @@ func (o *ServerProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *ServerProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -77,7 +84,9 @@ func (o *ServerProperties) GetCores() *int32 {
 		return nil
 	}
 
+
 	return o.Cores
+
 }
 
 // GetCoresOk returns a tuple with the Cores field value
@@ -87,12 +96,17 @@ func (o *ServerProperties) GetCoresOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Cores, true
 }
 
 // SetCores sets field value
 func (o *ServerProperties) SetCores(v int32) {
+
+
 	o.Cores = &v
+
 }
 
 // HasCores returns a boolean if a field has been set.
@@ -113,7 +127,9 @@ func (o *ServerProperties) GetRam() *int32 {
 		return nil
 	}
 
+
 	return o.Ram
+
 }
 
 // GetRamOk returns a tuple with the Ram field value
@@ -123,12 +139,17 @@ func (o *ServerProperties) GetRamOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Ram, true
 }
 
 // SetRam sets field value
 func (o *ServerProperties) SetRam(v int32) {
+
+
 	o.Ram = &v
+
 }
 
 // HasRam returns a boolean if a field has been set.
@@ -149,7 +170,9 @@ func (o *ServerProperties) GetAvailabilityZone() *string {
 		return nil
 	}
 
+
 	return o.AvailabilityZone
+
 }
 
 // GetAvailabilityZoneOk returns a tuple with the AvailabilityZone field value
@@ -159,12 +182,17 @@ func (o *ServerProperties) GetAvailabilityZoneOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.AvailabilityZone, true
 }
 
 // SetAvailabilityZone sets field value
 func (o *ServerProperties) SetAvailabilityZone(v string) {
+
+
 	o.AvailabilityZone = &v
+
 }
 
 // HasAvailabilityZone returns a boolean if a field has been set.
@@ -185,7 +213,9 @@ func (o *ServerProperties) GetVmState() *string {
 		return nil
 	}
 
+
 	return o.VmState
+
 }
 
 // GetVmStateOk returns a tuple with the VmState field value
@@ -195,12 +225,17 @@ func (o *ServerProperties) GetVmStateOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.VmState, true
 }
 
 // SetVmState sets field value
 func (o *ServerProperties) SetVmState(v string) {
+
+
 	o.VmState = &v
+
 }
 
 // HasVmState returns a boolean if a field has been set.
@@ -221,7 +256,9 @@ func (o *ServerProperties) GetBootCdrom() *ResourceReference {
 		return nil
 	}
 
+
 	return o.BootCdrom
+
 }
 
 // GetBootCdromOk returns a tuple with the BootCdrom field value
@@ -231,12 +268,17 @@ func (o *ServerProperties) GetBootCdromOk() (*ResourceReference, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.BootCdrom, true
 }
 
 // SetBootCdrom sets field value
 func (o *ServerProperties) SetBootCdrom(v ResourceReference) {
+
+
 	o.BootCdrom = &v
+
 }
 
 // HasBootCdrom returns a boolean if a field has been set.
@@ -257,7 +299,9 @@ func (o *ServerProperties) GetBootVolume() *ResourceReference {
 		return nil
 	}
 
+
 	return o.BootVolume
+
 }
 
 // GetBootVolumeOk returns a tuple with the BootVolume field value
@@ -267,12 +311,17 @@ func (o *ServerProperties) GetBootVolumeOk() (*ResourceReference, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.BootVolume, true
 }
 
 // SetBootVolume sets field value
 func (o *ServerProperties) SetBootVolume(v ResourceReference) {
+
+
 	o.BootVolume = &v
+
 }
 
 // HasBootVolume returns a boolean if a field has been set.
@@ -293,7 +342,9 @@ func (o *ServerProperties) GetCpuFamily() *string {
 		return nil
 	}
 
+
 	return o.CpuFamily
+
 }
 
 // GetCpuFamilyOk returns a tuple with the CpuFamily field value
@@ -303,12 +354,17 @@ func (o *ServerProperties) GetCpuFamilyOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuFamily, true
 }
 
 // SetCpuFamily sets field value
 func (o *ServerProperties) SetCpuFamily(v string) {
+
+
 	o.CpuFamily = &v
+
 }
 
 // HasCpuFamily returns a boolean if a field has been set.

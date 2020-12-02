@@ -30,7 +30,9 @@ func (o *ServerEntities) GetCdroms() *Cdroms {
 		return nil
 	}
 
+
 	return o.Cdroms
+
 }
 
 // GetCdromsOk returns a tuple with the Cdroms field value
@@ -40,12 +42,17 @@ func (o *ServerEntities) GetCdromsOk() (*Cdroms, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Cdroms, true
 }
 
 // SetCdroms sets field value
 func (o *ServerEntities) SetCdroms(v Cdroms) {
+
+
 	o.Cdroms = &v
+
 }
 
 // HasCdroms returns a boolean if a field has been set.
@@ -66,7 +73,9 @@ func (o *ServerEntities) GetVolumes() *AttachedVolumes {
 		return nil
 	}
 
+
 	return o.Volumes
+
 }
 
 // GetVolumesOk returns a tuple with the Volumes field value
@@ -76,12 +85,17 @@ func (o *ServerEntities) GetVolumesOk() (*AttachedVolumes, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Volumes, true
 }
 
 // SetVolumes sets field value
 func (o *ServerEntities) SetVolumes(v AttachedVolumes) {
+
+
 	o.Volumes = &v
+
 }
 
 // HasVolumes returns a boolean if a field has been set.
@@ -102,7 +116,9 @@ func (o *ServerEntities) GetNics() *Nics {
 		return nil
 	}
 
+
 	return o.Nics
+
 }
 
 // GetNicsOk returns a tuple with the Nics field value
@@ -112,12 +128,17 @@ func (o *ServerEntities) GetNicsOk() (*Nics, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Nics, true
 }
 
 // SetNics sets field value
 func (o *ServerEntities) SetNics(v Nics) {
+
+
 	o.Nics = &v
+
 }
 
 // HasNics returns a boolean if a field has been set.

@@ -37,7 +37,9 @@ func (o *LabelProperties) GetKey() *string {
 		return nil
 	}
 
+
 	return o.Key
+
 }
 
 // GetKeyOk returns a tuple with the Key field value
@@ -47,12 +49,17 @@ func (o *LabelProperties) GetKeyOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Key, true
 }
 
 // SetKey sets field value
 func (o *LabelProperties) SetKey(v string) {
+
+
 	o.Key = &v
+
 }
 
 // HasKey returns a boolean if a field has been set.
@@ -73,7 +80,9 @@ func (o *LabelProperties) GetValue() *string {
 		return nil
 	}
 
+
 	return o.Value
+
 }
 
 // GetValueOk returns a tuple with the Value field value
@@ -83,12 +92,17 @@ func (o *LabelProperties) GetValueOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Value, true
 }
 
 // SetValue sets field value
 func (o *LabelProperties) SetValue(v string) {
+
+
 	o.Value = &v
+
 }
 
 // HasValue returns a boolean if a field has been set.
@@ -109,7 +123,9 @@ func (o *LabelProperties) GetResourceId() *string {
 		return nil
 	}
 
+
 	return o.ResourceId
+
 }
 
 // GetResourceIdOk returns a tuple with the ResourceId field value
@@ -119,12 +135,17 @@ func (o *LabelProperties) GetResourceIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ResourceId, true
 }
 
 // SetResourceId sets field value
 func (o *LabelProperties) SetResourceId(v string) {
+
+
 	o.ResourceId = &v
+
 }
 
 // HasResourceId returns a boolean if a field has been set.
@@ -145,7 +166,9 @@ func (o *LabelProperties) GetResourceType() *string {
 		return nil
 	}
 
+
 	return o.ResourceType
+
 }
 
 // GetResourceTypeOk returns a tuple with the ResourceType field value
@@ -155,12 +178,17 @@ func (o *LabelProperties) GetResourceTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ResourceType, true
 }
 
 // SetResourceType sets field value
 func (o *LabelProperties) SetResourceType(v string) {
+
+
 	o.ResourceType = &v
+
 }
 
 // HasResourceType returns a boolean if a field has been set.
@@ -181,7 +209,9 @@ func (o *LabelProperties) GetResourceHref() *string {
 		return nil
 	}
 
+
 	return o.ResourceHref
+
 }
 
 // GetResourceHrefOk returns a tuple with the ResourceHref field value
@@ -191,12 +221,17 @@ func (o *LabelProperties) GetResourceHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ResourceHref, true
 }
 
 // SetResourceHref sets field value
 func (o *LabelProperties) SetResourceHref(v string) {
+
+
 	o.ResourceHref = &v
+
 }
 
 // HasResourceHref returns a boolean if a field has been set.

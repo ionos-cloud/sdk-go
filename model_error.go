@@ -30,7 +30,9 @@ func (o *Error) GetHttpStatus() *int32 {
 		return nil
 	}
 
+
 	return o.HttpStatus
+
 }
 
 // GetHttpStatusOk returns a tuple with the HttpStatus field value
@@ -40,12 +42,17 @@ func (o *Error) GetHttpStatusOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.HttpStatus, true
 }
 
 // SetHttpStatus sets field value
 func (o *Error) SetHttpStatus(v int32) {
+
+
 	o.HttpStatus = &v
+
 }
 
 // HasHttpStatus returns a boolean if a field has been set.
@@ -66,7 +73,9 @@ func (o *Error) GetMessages() *[]ErrorMessage {
 		return nil
 	}
 
+
 	return o.Messages
+
 }
 
 // GetMessagesOk returns a tuple with the Messages field value
@@ -76,12 +85,17 @@ func (o *Error) GetMessagesOk() (*[]ErrorMessage, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Messages, true
 }
 
 // SetMessages sets field value
 func (o *Error) SetMessages(v []ErrorMessage) {
+
+
 	o.Messages = &v
+
 }
 
 // HasMessages returns a boolean if a field has been set.

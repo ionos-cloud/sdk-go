@@ -61,7 +61,9 @@ func (o *ImageProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -71,12 +73,17 @@ func (o *ImageProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *ImageProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -97,7 +104,9 @@ func (o *ImageProperties) GetDescription() *string {
 		return nil
 	}
 
+
 	return o.Description
+
 }
 
 // GetDescriptionOk returns a tuple with the Description field value
@@ -107,12 +116,17 @@ func (o *ImageProperties) GetDescriptionOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Description, true
 }
 
 // SetDescription sets field value
 func (o *ImageProperties) SetDescription(v string) {
+
+
 	o.Description = &v
+
 }
 
 // HasDescription returns a boolean if a field has been set.
@@ -133,7 +147,9 @@ func (o *ImageProperties) GetLocation() *string {
 		return nil
 	}
 
+
 	return o.Location
+
 }
 
 // GetLocationOk returns a tuple with the Location field value
@@ -143,12 +159,17 @@ func (o *ImageProperties) GetLocationOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Location, true
 }
 
 // SetLocation sets field value
 func (o *ImageProperties) SetLocation(v string) {
+
+
 	o.Location = &v
+
 }
 
 // HasLocation returns a boolean if a field has been set.
@@ -169,7 +190,9 @@ func (o *ImageProperties) GetSize() *float32 {
 		return nil
 	}
 
+
 	return o.Size
+
 }
 
 // GetSizeOk returns a tuple with the Size field value
@@ -179,12 +202,17 @@ func (o *ImageProperties) GetSizeOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Size, true
 }
 
 // SetSize sets field value
 func (o *ImageProperties) SetSize(v float32) {
+
+
 	o.Size = &v
+
 }
 
 // HasSize returns a boolean if a field has been set.
@@ -205,7 +233,9 @@ func (o *ImageProperties) GetCpuHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.CpuHotPlug
+
 }
 
 // GetCpuHotPlugOk returns a tuple with the CpuHotPlug field value
@@ -215,12 +245,17 @@ func (o *ImageProperties) GetCpuHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuHotPlug, true
 }
 
 // SetCpuHotPlug sets field value
 func (o *ImageProperties) SetCpuHotPlug(v bool) {
+
+
 	o.CpuHotPlug = &v
+
 }
 
 // HasCpuHotPlug returns a boolean if a field has been set.
@@ -241,7 +276,9 @@ func (o *ImageProperties) GetCpuHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.CpuHotUnplug
+
 }
 
 // GetCpuHotUnplugOk returns a tuple with the CpuHotUnplug field value
@@ -251,12 +288,17 @@ func (o *ImageProperties) GetCpuHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CpuHotUnplug, true
 }
 
 // SetCpuHotUnplug sets field value
 func (o *ImageProperties) SetCpuHotUnplug(v bool) {
+
+
 	o.CpuHotUnplug = &v
+
 }
 
 // HasCpuHotUnplug returns a boolean if a field has been set.
@@ -277,7 +319,9 @@ func (o *ImageProperties) GetRamHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.RamHotPlug
+
 }
 
 // GetRamHotPlugOk returns a tuple with the RamHotPlug field value
@@ -287,12 +331,17 @@ func (o *ImageProperties) GetRamHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamHotPlug, true
 }
 
 // SetRamHotPlug sets field value
 func (o *ImageProperties) SetRamHotPlug(v bool) {
+
+
 	o.RamHotPlug = &v
+
 }
 
 // HasRamHotPlug returns a boolean if a field has been set.
@@ -313,7 +362,9 @@ func (o *ImageProperties) GetRamHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.RamHotUnplug
+
 }
 
 // GetRamHotUnplugOk returns a tuple with the RamHotUnplug field value
@@ -323,12 +374,17 @@ func (o *ImageProperties) GetRamHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.RamHotUnplug, true
 }
 
 // SetRamHotUnplug sets field value
 func (o *ImageProperties) SetRamHotUnplug(v bool) {
+
+
 	o.RamHotUnplug = &v
+
 }
 
 // HasRamHotUnplug returns a boolean if a field has been set.
@@ -349,7 +405,9 @@ func (o *ImageProperties) GetNicHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.NicHotPlug
+
 }
 
 // GetNicHotPlugOk returns a tuple with the NicHotPlug field value
@@ -359,12 +417,17 @@ func (o *ImageProperties) GetNicHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicHotPlug, true
 }
 
 // SetNicHotPlug sets field value
 func (o *ImageProperties) SetNicHotPlug(v bool) {
+
+
 	o.NicHotPlug = &v
+
 }
 
 // HasNicHotPlug returns a boolean if a field has been set.
@@ -385,7 +448,9 @@ func (o *ImageProperties) GetNicHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.NicHotUnplug
+
 }
 
 // GetNicHotUnplugOk returns a tuple with the NicHotUnplug field value
@@ -395,12 +460,17 @@ func (o *ImageProperties) GetNicHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.NicHotUnplug, true
 }
 
 // SetNicHotUnplug sets field value
 func (o *ImageProperties) SetNicHotUnplug(v bool) {
+
+
 	o.NicHotUnplug = &v
+
 }
 
 // HasNicHotUnplug returns a boolean if a field has been set.
@@ -421,7 +491,9 @@ func (o *ImageProperties) GetDiscVirtioHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.DiscVirtioHotPlug
+
 }
 
 // GetDiscVirtioHotPlugOk returns a tuple with the DiscVirtioHotPlug field value
@@ -431,12 +503,17 @@ func (o *ImageProperties) GetDiscVirtioHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscVirtioHotPlug, true
 }
 
 // SetDiscVirtioHotPlug sets field value
 func (o *ImageProperties) SetDiscVirtioHotPlug(v bool) {
+
+
 	o.DiscVirtioHotPlug = &v
+
 }
 
 // HasDiscVirtioHotPlug returns a boolean if a field has been set.
@@ -457,7 +534,9 @@ func (o *ImageProperties) GetDiscVirtioHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.DiscVirtioHotUnplug
+
 }
 
 // GetDiscVirtioHotUnplugOk returns a tuple with the DiscVirtioHotUnplug field value
@@ -467,12 +546,17 @@ func (o *ImageProperties) GetDiscVirtioHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscVirtioHotUnplug, true
 }
 
 // SetDiscVirtioHotUnplug sets field value
 func (o *ImageProperties) SetDiscVirtioHotUnplug(v bool) {
+
+
 	o.DiscVirtioHotUnplug = &v
+
 }
 
 // HasDiscVirtioHotUnplug returns a boolean if a field has been set.
@@ -493,7 +577,9 @@ func (o *ImageProperties) GetDiscScsiHotPlug() *bool {
 		return nil
 	}
 
+
 	return o.DiscScsiHotPlug
+
 }
 
 // GetDiscScsiHotPlugOk returns a tuple with the DiscScsiHotPlug field value
@@ -503,12 +589,17 @@ func (o *ImageProperties) GetDiscScsiHotPlugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscScsiHotPlug, true
 }
 
 // SetDiscScsiHotPlug sets field value
 func (o *ImageProperties) SetDiscScsiHotPlug(v bool) {
+
+
 	o.DiscScsiHotPlug = &v
+
 }
 
 // HasDiscScsiHotPlug returns a boolean if a field has been set.
@@ -529,7 +620,9 @@ func (o *ImageProperties) GetDiscScsiHotUnplug() *bool {
 		return nil
 	}
 
+
 	return o.DiscScsiHotUnplug
+
 }
 
 // GetDiscScsiHotUnplugOk returns a tuple with the DiscScsiHotUnplug field value
@@ -539,12 +632,17 @@ func (o *ImageProperties) GetDiscScsiHotUnplugOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DiscScsiHotUnplug, true
 }
 
 // SetDiscScsiHotUnplug sets field value
 func (o *ImageProperties) SetDiscScsiHotUnplug(v bool) {
+
+
 	o.DiscScsiHotUnplug = &v
+
 }
 
 // HasDiscScsiHotUnplug returns a boolean if a field has been set.
@@ -565,7 +663,9 @@ func (o *ImageProperties) GetLicenceType() *string {
 		return nil
 	}
 
+
 	return o.LicenceType
+
 }
 
 // GetLicenceTypeOk returns a tuple with the LicenceType field value
@@ -575,12 +675,17 @@ func (o *ImageProperties) GetLicenceTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.LicenceType, true
 }
 
 // SetLicenceType sets field value
 func (o *ImageProperties) SetLicenceType(v string) {
+
+
 	o.LicenceType = &v
+
 }
 
 // HasLicenceType returns a boolean if a field has been set.
@@ -601,7 +706,9 @@ func (o *ImageProperties) GetImageType() *string {
 		return nil
 	}
 
+
 	return o.ImageType
+
 }
 
 // GetImageTypeOk returns a tuple with the ImageType field value
@@ -611,12 +718,17 @@ func (o *ImageProperties) GetImageTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.ImageType, true
 }
 
 // SetImageType sets field value
 func (o *ImageProperties) SetImageType(v string) {
+
+
 	o.ImageType = &v
+
 }
 
 // HasImageType returns a boolean if a field has been set.
@@ -637,7 +749,9 @@ func (o *ImageProperties) GetPublic() *bool {
 		return nil
 	}
 
+
 	return o.Public
+
 }
 
 // GetPublicOk returns a tuple with the Public field value
@@ -647,12 +761,17 @@ func (o *ImageProperties) GetPublicOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Public, true
 }
 
 // SetPublic sets field value
 func (o *ImageProperties) SetPublic(v bool) {
+
+
 	o.Public = &v
+
 }
 
 // HasPublic returns a boolean if a field has been set.

@@ -29,7 +29,9 @@ func (o *KubernetesConfigProperties) GetKubeconfig() *string {
 		return nil
 	}
 
+
 	return o.Kubeconfig
+
 }
 
 // GetKubeconfigOk returns a tuple with the Kubeconfig field value
@@ -39,12 +41,17 @@ func (o *KubernetesConfigProperties) GetKubeconfigOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Kubeconfig, true
 }
 
 // SetKubeconfig sets field value
 func (o *KubernetesConfigProperties) SetKubeconfig(v string) {
+
+
 	o.Kubeconfig = &v
+
 }
 
 // HasKubeconfig returns a boolean if a field has been set.

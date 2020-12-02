@@ -31,7 +31,9 @@ func (o *GroupShareProperties) GetEditPrivilege() *bool {
 		return nil
 	}
 
+
 	return o.EditPrivilege
+
 }
 
 // GetEditPrivilegeOk returns a tuple with the EditPrivilege field value
@@ -41,12 +43,17 @@ func (o *GroupShareProperties) GetEditPrivilegeOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.EditPrivilege, true
 }
 
 // SetEditPrivilege sets field value
 func (o *GroupShareProperties) SetEditPrivilege(v bool) {
+
+
 	o.EditPrivilege = &v
+
 }
 
 // HasEditPrivilege returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *GroupShareProperties) GetSharePrivilege() *bool {
 		return nil
 	}
 
+
 	return o.SharePrivilege
+
 }
 
 // GetSharePrivilegeOk returns a tuple with the SharePrivilege field value
@@ -77,12 +86,17 @@ func (o *GroupShareProperties) GetSharePrivilegeOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SharePrivilege, true
 }
 
 // SetSharePrivilege sets field value
 func (o *GroupShareProperties) SetSharePrivilege(v bool) {
+
+
 	o.SharePrivilege = &v
+
 }
 
 // HasSharePrivilege returns a boolean if a field has been set.

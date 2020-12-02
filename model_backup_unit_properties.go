@@ -33,7 +33,9 @@ func (o *BackupUnitProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -43,12 +45,17 @@ func (o *BackupUnitProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *BackupUnitProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -69,7 +76,9 @@ func (o *BackupUnitProperties) GetPassword() *string {
 		return nil
 	}
 
+
 	return o.Password
+
 }
 
 // GetPasswordOk returns a tuple with the Password field value
@@ -79,12 +88,17 @@ func (o *BackupUnitProperties) GetPasswordOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Password, true
 }
 
 // SetPassword sets field value
 func (o *BackupUnitProperties) SetPassword(v string) {
+
+
 	o.Password = &v
+
 }
 
 // HasPassword returns a boolean if a field has been set.
@@ -105,7 +119,9 @@ func (o *BackupUnitProperties) GetEmail() *string {
 		return nil
 	}
 
+
 	return o.Email
+
 }
 
 // GetEmailOk returns a tuple with the Email field value
@@ -115,12 +131,17 @@ func (o *BackupUnitProperties) GetEmailOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Email, true
 }
 
 // SetEmail sets field value
 func (o *BackupUnitProperties) SetEmail(v string) {
+
+
 	o.Email = &v
+
 }
 
 // HasEmail returns a boolean if a field has been set.

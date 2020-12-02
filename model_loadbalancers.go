@@ -40,7 +40,9 @@ func (o *Loadbalancers) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -50,12 +52,17 @@ func (o *Loadbalancers) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *Loadbalancers) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -76,7 +83,9 @@ func (o *Loadbalancers) GetType() *Type {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -86,12 +95,17 @@ func (o *Loadbalancers) GetTypeOk() (*Type, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *Loadbalancers) SetType(v Type) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -112,7 +126,9 @@ func (o *Loadbalancers) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -122,12 +138,17 @@ func (o *Loadbalancers) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *Loadbalancers) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -148,7 +169,9 @@ func (o *Loadbalancers) GetItems() *[]Loadbalancer {
 		return nil
 	}
 
+
 	return o.Items
+
 }
 
 // GetItemsOk returns a tuple with the Items field value
@@ -158,12 +181,17 @@ func (o *Loadbalancers) GetItemsOk() (*[]Loadbalancer, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Items, true
 }
 
 // SetItems sets field value
 func (o *Loadbalancers) SetItems(v []Loadbalancer) {
+
+
 	o.Items = &v
+
 }
 
 // HasItems returns a boolean if a field has been set.
@@ -184,7 +212,9 @@ func (o *Loadbalancers) GetOffset() *float32 {
 		return nil
 	}
 
+
 	return o.Offset
+
 }
 
 // GetOffsetOk returns a tuple with the Offset field value
@@ -194,12 +224,17 @@ func (o *Loadbalancers) GetOffsetOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Offset, true
 }
 
 // SetOffset sets field value
 func (o *Loadbalancers) SetOffset(v float32) {
+
+
 	o.Offset = &v
+
 }
 
 // HasOffset returns a boolean if a field has been set.
@@ -220,7 +255,9 @@ func (o *Loadbalancers) GetLimit() *float32 {
 		return nil
 	}
 
+
 	return o.Limit
+
 }
 
 // GetLimitOk returns a tuple with the Limit field value
@@ -230,12 +267,17 @@ func (o *Loadbalancers) GetLimitOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Limit, true
 }
 
 // SetLimit sets field value
 func (o *Loadbalancers) SetLimit(v float32) {
+
+
 	o.Limit = &v
+
 }
 
 // HasLimit returns a boolean if a field has been set.
@@ -256,7 +298,9 @@ func (o *Loadbalancers) GetLinks() *PaginationLinks {
 		return nil
 	}
 
+
 	return o.Links
+
 }
 
 // GetLinksOk returns a tuple with the Links field value
@@ -266,12 +310,17 @@ func (o *Loadbalancers) GetLinksOk() (*PaginationLinks, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Links, true
 }
 
 // SetLinks sets field value
 func (o *Loadbalancers) SetLinks(v PaginationLinks) {
+
+
 	o.Links = &v
+
 }
 
 // HasLinks returns a boolean if a field has been set.

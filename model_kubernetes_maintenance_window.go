@@ -31,7 +31,9 @@ func (o *KubernetesMaintenanceWindow) GetDayOfTheWeek() *string {
 		return nil
 	}
 
+
 	return o.DayOfTheWeek
+
 }
 
 // GetDayOfTheWeekOk returns a tuple with the DayOfTheWeek field value
@@ -41,12 +43,17 @@ func (o *KubernetesMaintenanceWindow) GetDayOfTheWeekOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.DayOfTheWeek, true
 }
 
 // SetDayOfTheWeek sets field value
 func (o *KubernetesMaintenanceWindow) SetDayOfTheWeek(v string) {
+
+
 	o.DayOfTheWeek = &v
+
 }
 
 // HasDayOfTheWeek returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *KubernetesMaintenanceWindow) GetTime() *string {
 		return nil
 	}
 
+
 	return o.Time
+
 }
 
 // GetTimeOk returns a tuple with the Time field value
@@ -77,12 +86,17 @@ func (o *KubernetesMaintenanceWindow) GetTimeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Time, true
 }
 
 // SetTime sets field value
 func (o *KubernetesMaintenanceWindow) SetTime(v string) {
+
+
 	o.Time = &v
+
 }
 
 // HasTime returns a boolean if a field has been set.

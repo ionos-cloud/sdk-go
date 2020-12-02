@@ -30,7 +30,9 @@ func (o *ConnectableDatacenter) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -40,12 +42,17 @@ func (o *ConnectableDatacenter) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *ConnectableDatacenter) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -66,7 +73,9 @@ func (o *ConnectableDatacenter) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -76,12 +85,17 @@ func (o *ConnectableDatacenter) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *ConnectableDatacenter) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -102,7 +116,9 @@ func (o *ConnectableDatacenter) GetLocation() *string {
 		return nil
 	}
 
+
 	return o.Location
+
 }
 
 // GetLocationOk returns a tuple with the Location field value
@@ -112,12 +128,17 @@ func (o *ConnectableDatacenter) GetLocationOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Location, true
 }
 
 // SetLocation sets field value
 func (o *ConnectableDatacenter) SetLocation(v string) {
+
+
 	o.Location = &v
+
 }
 
 // HasLocation returns a boolean if a field has been set.

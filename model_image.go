@@ -35,7 +35,9 @@ func (o *Image) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -45,12 +47,17 @@ func (o *Image) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *Image) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -71,7 +78,9 @@ func (o *Image) GetType() *Type {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -81,12 +90,17 @@ func (o *Image) GetTypeOk() (*Type, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *Image) SetType(v Type) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -107,7 +121,9 @@ func (o *Image) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -117,12 +133,17 @@ func (o *Image) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *Image) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -143,7 +164,9 @@ func (o *Image) GetMetadata() *DatacenterElementMetadata {
 		return nil
 	}
 
+
 	return o.Metadata
+
 }
 
 // GetMetadataOk returns a tuple with the Metadata field value
@@ -153,12 +176,17 @@ func (o *Image) GetMetadataOk() (*DatacenterElementMetadata, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Metadata, true
 }
 
 // SetMetadata sets field value
 func (o *Image) SetMetadata(v DatacenterElementMetadata) {
+
+
 	o.Metadata = &v
+
 }
 
 // HasMetadata returns a boolean if a field has been set.
@@ -179,7 +207,9 @@ func (o *Image) GetProperties() *ImageProperties {
 		return nil
 	}
 
+
 	return o.Properties
+
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value
@@ -189,12 +219,17 @@ func (o *Image) GetPropertiesOk() (*ImageProperties, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Properties, true
 }
 
 // SetProperties sets field value
 func (o *Image) SetProperties(v ImageProperties) {
+
+
 	o.Properties = &v
+
 }
 
 // HasProperties returns a boolean if a field has been set.

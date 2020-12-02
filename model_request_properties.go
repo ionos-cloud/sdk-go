@@ -31,7 +31,9 @@ func (o *RequestProperties) GetMethod() *string {
 		return nil
 	}
 
+
 	return o.Method
+
 }
 
 // GetMethodOk returns a tuple with the Method field value
@@ -41,12 +43,17 @@ func (o *RequestProperties) GetMethodOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Method, true
 }
 
 // SetMethod sets field value
 func (o *RequestProperties) SetMethod(v string) {
+
+
 	o.Method = &v
+
 }
 
 // HasMethod returns a boolean if a field has been set.
@@ -67,7 +74,9 @@ func (o *RequestProperties) GetHeaders() *map[string]string {
 		return nil
 	}
 
+
 	return o.Headers
+
 }
 
 // GetHeadersOk returns a tuple with the Headers field value
@@ -77,12 +86,17 @@ func (o *RequestProperties) GetHeadersOk() (*map[string]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Headers, true
 }
 
 // SetHeaders sets field value
 func (o *RequestProperties) SetHeaders(v map[string]string) {
+
+
 	o.Headers = &v
+
 }
 
 // HasHeaders returns a boolean if a field has been set.
@@ -103,7 +117,9 @@ func (o *RequestProperties) GetBody() *string {
 		return nil
 	}
 
+
 	return o.Body
+
 }
 
 // GetBodyOk returns a tuple with the Body field value
@@ -113,12 +129,17 @@ func (o *RequestProperties) GetBodyOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Body, true
 }
 
 // SetBody sets field value
 func (o *RequestProperties) SetBody(v string) {
+
+
 	o.Body = &v
+
 }
 
 // HasBody returns a boolean if a field has been set.
@@ -139,7 +160,9 @@ func (o *RequestProperties) GetUrl() *string {
 		return nil
 	}
 
+
 	return o.Url
+
 }
 
 // GetUrlOk returns a tuple with the Url field value
@@ -149,12 +172,17 @@ func (o *RequestProperties) GetUrlOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Url, true
 }
 
 // SetUrl sets field value
 func (o *RequestProperties) SetUrl(v string) {
+
+
 	o.Url = &v
+
 }
 
 // HasUrl returns a boolean if a field has been set.

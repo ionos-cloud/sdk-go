@@ -39,7 +39,9 @@ func (o *DatacenterProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -49,12 +51,17 @@ func (o *DatacenterProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *DatacenterProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -75,7 +82,9 @@ func (o *DatacenterProperties) GetDescription() *string {
 		return nil
 	}
 
+
 	return o.Description
+
 }
 
 // GetDescriptionOk returns a tuple with the Description field value
@@ -85,12 +94,17 @@ func (o *DatacenterProperties) GetDescriptionOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Description, true
 }
 
 // SetDescription sets field value
 func (o *DatacenterProperties) SetDescription(v string) {
+
+
 	o.Description = &v
+
 }
 
 // HasDescription returns a boolean if a field has been set.
@@ -111,7 +125,9 @@ func (o *DatacenterProperties) GetLocation() *string {
 		return nil
 	}
 
+
 	return o.Location
+
 }
 
 // GetLocationOk returns a tuple with the Location field value
@@ -121,12 +137,17 @@ func (o *DatacenterProperties) GetLocationOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Location, true
 }
 
 // SetLocation sets field value
 func (o *DatacenterProperties) SetLocation(v string) {
+
+
 	o.Location = &v
+
 }
 
 // HasLocation returns a boolean if a field has been set.
@@ -147,7 +168,9 @@ func (o *DatacenterProperties) GetVersion() *int32 {
 		return nil
 	}
 
+
 	return o.Version
+
 }
 
 // GetVersionOk returns a tuple with the Version field value
@@ -157,12 +180,17 @@ func (o *DatacenterProperties) GetVersionOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Version, true
 }
 
 // SetVersion sets field value
 func (o *DatacenterProperties) SetVersion(v int32) {
+
+
 	o.Version = &v
+
 }
 
 // HasVersion returns a boolean if a field has been set.
@@ -183,7 +211,9 @@ func (o *DatacenterProperties) GetFeatures() *[]string {
 		return nil
 	}
 
+
 	return o.Features
+
 }
 
 // GetFeaturesOk returns a tuple with the Features field value
@@ -193,12 +223,17 @@ func (o *DatacenterProperties) GetFeaturesOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Features, true
 }
 
 // SetFeatures sets field value
 func (o *DatacenterProperties) SetFeatures(v []string) {
+
+
 	o.Features = &v
+
 }
 
 // HasFeatures returns a boolean if a field has been set.
@@ -219,7 +254,9 @@ func (o *DatacenterProperties) GetSecAuthProtection() *bool {
 		return nil
 	}
 
+
 	return o.SecAuthProtection
+
 }
 
 // GetSecAuthProtectionOk returns a tuple with the SecAuthProtection field value
@@ -229,12 +266,17 @@ func (o *DatacenterProperties) GetSecAuthProtectionOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.SecAuthProtection, true
 }
 
 // SetSecAuthProtection sets field value
 func (o *DatacenterProperties) SetSecAuthProtection(v bool) {
+
+
 	o.SecAuthProtection = &v
+
 }
 
 // HasSecAuthProtection returns a boolean if a field has been set.

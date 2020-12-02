@@ -36,7 +36,9 @@ func (o *KubernetesCluster) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -46,12 +48,17 @@ func (o *KubernetesCluster) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *KubernetesCluster) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -72,7 +79,9 @@ func (o *KubernetesCluster) GetType() *string {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -82,12 +91,17 @@ func (o *KubernetesCluster) GetTypeOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *KubernetesCluster) SetType(v string) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -108,7 +122,9 @@ func (o *KubernetesCluster) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -118,12 +134,17 @@ func (o *KubernetesCluster) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *KubernetesCluster) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -144,7 +165,9 @@ func (o *KubernetesCluster) GetMetadata() *DatacenterElementMetadata {
 		return nil
 	}
 
+
 	return o.Metadata
+
 }
 
 // GetMetadataOk returns a tuple with the Metadata field value
@@ -154,12 +177,17 @@ func (o *KubernetesCluster) GetMetadataOk() (*DatacenterElementMetadata, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Metadata, true
 }
 
 // SetMetadata sets field value
 func (o *KubernetesCluster) SetMetadata(v DatacenterElementMetadata) {
+
+
 	o.Metadata = &v
+
 }
 
 // HasMetadata returns a boolean if a field has been set.
@@ -180,7 +208,9 @@ func (o *KubernetesCluster) GetProperties() *KubernetesClusterProperties {
 		return nil
 	}
 
+
 	return o.Properties
+
 }
 
 // GetPropertiesOk returns a tuple with the Properties field value
@@ -190,12 +220,17 @@ func (o *KubernetesCluster) GetPropertiesOk() (*KubernetesClusterProperties, boo
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Properties, true
 }
 
 // SetProperties sets field value
 func (o *KubernetesCluster) SetProperties(v KubernetesClusterProperties) {
+
+
 	o.Properties = &v
+
 }
 
 // HasProperties returns a boolean if a field has been set.
@@ -216,7 +251,9 @@ func (o *KubernetesCluster) GetEntities() *KubernetesClusterEntities {
 		return nil
 	}
 
+
 	return o.Entities
+
 }
 
 // GetEntitiesOk returns a tuple with the Entities field value
@@ -226,12 +263,17 @@ func (o *KubernetesCluster) GetEntitiesOk() (*KubernetesClusterEntities, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Entities, true
 }
 
 // SetEntities sets field value
 func (o *KubernetesCluster) SetEntities(v KubernetesClusterEntities) {
+
+
 	o.Entities = &v
+
 }
 
 // HasEntities returns a boolean if a field has been set.

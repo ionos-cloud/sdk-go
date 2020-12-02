@@ -20,9 +20,9 @@ type UserMetadata struct {
 	// Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. 
 	Etag *string `json:"etag,omitempty"`
 	// time of creation of the user
-	CreatedDate *time.Time `json:"createdDate,omitempty"`
+	CreatedDate *IonosTime
 	// time of last login by the user
-	LastLogin *time.Time `json:"lastLogin,omitempty"`
+	LastLogin *IonosTime
 }
 
 
@@ -34,7 +34,9 @@ func (o *UserMetadata) GetEtag() *string {
 		return nil
 	}
 
+
 	return o.Etag
+
 }
 
 // GetEtagOk returns a tuple with the Etag field value
@@ -44,12 +46,17 @@ func (o *UserMetadata) GetEtagOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Etag, true
 }
 
 // SetEtag sets field value
 func (o *UserMetadata) SetEtag(v string) {
+
+
 	o.Etag = &v
+
 }
 
 // HasEtag returns a boolean if a field has been set.
@@ -70,7 +77,12 @@ func (o *UserMetadata) GetCreatedDate() *time.Time {
 		return nil
 	}
 
-	return o.CreatedDate
+	if o.CreatedDate == nil {
+		return nil
+	}
+	return &o.CreatedDate.Time
+
+
 }
 
 // GetCreatedDateOk returns a tuple with the CreatedDate field value
@@ -80,12 +92,20 @@ func (o *UserMetadata) GetCreatedDateOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.CreatedDate, true
+
+	if o.CreatedDate == nil {
+		return nil, false
+	}
+	return &o.CreatedDate.Time, true
+
 }
 
 // SetCreatedDate sets field value
 func (o *UserMetadata) SetCreatedDate(v time.Time) {
-	o.CreatedDate = &v
+
+	o.CreatedDate = &IonosTime{v}
+
+
 }
 
 // HasCreatedDate returns a boolean if a field has been set.
@@ -106,7 +126,12 @@ func (o *UserMetadata) GetLastLogin() *time.Time {
 		return nil
 	}
 
-	return o.LastLogin
+	if o.LastLogin == nil {
+		return nil
+	}
+	return &o.LastLogin.Time
+
+
 }
 
 // GetLastLoginOk returns a tuple with the LastLogin field value
@@ -116,12 +141,20 @@ func (o *UserMetadata) GetLastLoginOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.LastLogin, true
+
+	if o.LastLogin == nil {
+		return nil, false
+	}
+	return &o.LastLogin.Time, true
+
 }
 
 // SetLastLogin sets field value
 func (o *UserMetadata) SetLastLogin(v time.Time) {
-	o.LastLogin = &v
+
+	o.LastLogin = &IonosTime{v}
+
+
 }
 
 // HasLastLogin returns a boolean if a field has been set.

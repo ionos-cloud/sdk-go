@@ -33,7 +33,9 @@ func (o *KubernetesNodeProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -43,12 +45,17 @@ func (o *KubernetesNodeProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *KubernetesNodeProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -69,7 +76,9 @@ func (o *KubernetesNodeProperties) GetPublicIP() *string {
 		return nil
 	}
 
+
 	return o.PublicIP
+
 }
 
 // GetPublicIPOk returns a tuple with the PublicIP field value
@@ -79,12 +88,17 @@ func (o *KubernetesNodeProperties) GetPublicIPOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.PublicIP, true
 }
 
 // SetPublicIP sets field value
 func (o *KubernetesNodeProperties) SetPublicIP(v string) {
+
+
 	o.PublicIP = &v
+
 }
 
 // HasPublicIP returns a boolean if a field has been set.
@@ -105,7 +119,9 @@ func (o *KubernetesNodeProperties) GetK8sVersion() *string {
 		return nil
 	}
 
+
 	return o.K8sVersion
+
 }
 
 // GetK8sVersionOk returns a tuple with the K8sVersion field value
@@ -115,12 +131,17 @@ func (o *KubernetesNodeProperties) GetK8sVersionOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.K8sVersion, true
 }
 
 // SetK8sVersion sets field value
 func (o *KubernetesNodeProperties) SetK8sVersion(v string) {
+
+
 	o.K8sVersion = &v
+
 }
 
 // HasK8sVersion returns a boolean if a field has been set.

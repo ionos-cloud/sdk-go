@@ -41,7 +41,9 @@ func (o *NicProperties) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -51,12 +53,17 @@ func (o *NicProperties) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *NicProperties) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -77,7 +84,9 @@ func (o *NicProperties) GetMac() *string {
 		return nil
 	}
 
+
 	return o.Mac
+
 }
 
 // GetMacOk returns a tuple with the Mac field value
@@ -87,12 +96,17 @@ func (o *NicProperties) GetMacOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Mac, true
 }
 
 // SetMac sets field value
 func (o *NicProperties) SetMac(v string) {
+
+
 	o.Mac = &v
+
 }
 
 // HasMac returns a boolean if a field has been set.
@@ -113,7 +127,9 @@ func (o *NicProperties) GetIps() *[]string {
 		return nil
 	}
 
+
 	return o.Ips
+
 }
 
 // GetIpsOk returns a tuple with the Ips field value
@@ -123,12 +139,17 @@ func (o *NicProperties) GetIpsOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Ips, true
 }
 
 // SetIps sets field value
 func (o *NicProperties) SetIps(v []string) {
+
+
 	o.Ips = &v
+
 }
 
 // HasIps returns a boolean if a field has been set.
@@ -149,7 +170,9 @@ func (o *NicProperties) GetDhcp() *bool {
 		return nil
 	}
 
+
 	return o.Dhcp
+
 }
 
 // GetDhcpOk returns a tuple with the Dhcp field value
@@ -159,12 +182,17 @@ func (o *NicProperties) GetDhcpOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Dhcp, true
 }
 
 // SetDhcp sets field value
 func (o *NicProperties) SetDhcp(v bool) {
+
+
 	o.Dhcp = &v
+
 }
 
 // HasDhcp returns a boolean if a field has been set.
@@ -185,7 +213,9 @@ func (o *NicProperties) GetLan() *int32 {
 		return nil
 	}
 
+
 	return o.Lan
+
 }
 
 // GetLanOk returns a tuple with the Lan field value
@@ -195,12 +225,17 @@ func (o *NicProperties) GetLanOk() (*int32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Lan, true
 }
 
 // SetLan sets field value
 func (o *NicProperties) SetLan(v int32) {
+
+
 	o.Lan = &v
+
 }
 
 // HasLan returns a boolean if a field has been set.
@@ -221,7 +256,9 @@ func (o *NicProperties) GetFirewallActive() *bool {
 		return nil
 	}
 
+
 	return o.FirewallActive
+
 }
 
 // GetFirewallActiveOk returns a tuple with the FirewallActive field value
@@ -231,12 +268,17 @@ func (o *NicProperties) GetFirewallActiveOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.FirewallActive, true
 }
 
 // SetFirewallActive sets field value
 func (o *NicProperties) SetFirewallActive(v bool) {
+
+
 	o.FirewallActive = &v
+
 }
 
 // HasFirewallActive returns a boolean if a field has been set.
@@ -257,7 +299,9 @@ func (o *NicProperties) GetNat() *bool {
 		return nil
 	}
 
+
 	return o.Nat
+
 }
 
 // GetNatOk returns a tuple with the Nat field value
@@ -267,12 +311,17 @@ func (o *NicProperties) GetNatOk() (*bool, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Nat, true
 }
 
 // SetNat sets field value
 func (o *NicProperties) SetNat(v bool) {
+
+
 	o.Nat = &v
+
 }
 
 // HasNat returns a boolean if a field has been set.

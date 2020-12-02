@@ -33,7 +33,9 @@ func (o *PaginationLinks) GetPrev() *string {
 		return nil
 	}
 
+
 	return o.Prev
+
 }
 
 // GetPrevOk returns a tuple with the Prev field value
@@ -43,12 +45,17 @@ func (o *PaginationLinks) GetPrevOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Prev, true
 }
 
 // SetPrev sets field value
 func (o *PaginationLinks) SetPrev(v string) {
+
+
 	o.Prev = &v
+
 }
 
 // HasPrev returns a boolean if a field has been set.
@@ -69,7 +76,9 @@ func (o *PaginationLinks) GetSelf() *string {
 		return nil
 	}
 
+
 	return o.Self
+
 }
 
 // GetSelfOk returns a tuple with the Self field value
@@ -79,12 +88,17 @@ func (o *PaginationLinks) GetSelfOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Self, true
 }
 
 // SetSelf sets field value
 func (o *PaginationLinks) SetSelf(v string) {
+
+
 	o.Self = &v
+
 }
 
 // HasSelf returns a boolean if a field has been set.
@@ -105,7 +119,9 @@ func (o *PaginationLinks) GetNext() *string {
 		return nil
 	}
 
+
 	return o.Next
+
 }
 
 // GetNextOk returns a tuple with the Next field value
@@ -115,12 +131,17 @@ func (o *PaginationLinks) GetNextOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Next, true
 }
 
 // SetNext sets field value
 func (o *PaginationLinks) SetNext(v string) {
+
+
 	o.Next = &v
+
 }
 
 // HasNext returns a boolean if a field has been set.

@@ -20,13 +20,13 @@ type NoStateMetaData struct {
 	// Resource's Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11 . Entity Tag is also added as an 'ETag response header to requests which don't use 'depth' parameter. 
 	Etag *string `json:"etag,omitempty"`
 	// The time the Resource was created
-	CreatedDate *time.Time `json:"createdDate,omitempty"`
+	CreatedDate *IonosTime
 	// The user who has created the resource.
 	CreatedBy *string `json:"createdBy,omitempty"`
 	// The user id of the user who has created the resource.
 	CreatedByUserId *string `json:"createdByUserId,omitempty"`
 	// The last time the resource has been modified
-	LastModifiedDate *time.Time `json:"lastModifiedDate,omitempty"`
+	LastModifiedDate *IonosTime
 	// The user who last modified the resource.
 	LastModifiedBy *string `json:"lastModifiedBy,omitempty"`
 	// The user id of the user who has last modified the resource.
@@ -42,7 +42,9 @@ func (o *NoStateMetaData) GetEtag() *string {
 		return nil
 	}
 
+
 	return o.Etag
+
 }
 
 // GetEtagOk returns a tuple with the Etag field value
@@ -52,12 +54,17 @@ func (o *NoStateMetaData) GetEtagOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Etag, true
 }
 
 // SetEtag sets field value
 func (o *NoStateMetaData) SetEtag(v string) {
+
+
 	o.Etag = &v
+
 }
 
 // HasEtag returns a boolean if a field has been set.
@@ -78,7 +85,12 @@ func (o *NoStateMetaData) GetCreatedDate() *time.Time {
 		return nil
 	}
 
-	return o.CreatedDate
+	if o.CreatedDate == nil {
+		return nil
+	}
+	return &o.CreatedDate.Time
+
+
 }
 
 // GetCreatedDateOk returns a tuple with the CreatedDate field value
@@ -88,12 +100,20 @@ func (o *NoStateMetaData) GetCreatedDateOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.CreatedDate, true
+
+	if o.CreatedDate == nil {
+		return nil, false
+	}
+	return &o.CreatedDate.Time, true
+
 }
 
 // SetCreatedDate sets field value
 func (o *NoStateMetaData) SetCreatedDate(v time.Time) {
-	o.CreatedDate = &v
+
+	o.CreatedDate = &IonosTime{v}
+
+
 }
 
 // HasCreatedDate returns a boolean if a field has been set.
@@ -114,7 +134,9 @@ func (o *NoStateMetaData) GetCreatedBy() *string {
 		return nil
 	}
 
+
 	return o.CreatedBy
+
 }
 
 // GetCreatedByOk returns a tuple with the CreatedBy field value
@@ -124,12 +146,17 @@ func (o *NoStateMetaData) GetCreatedByOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreatedBy, true
 }
 
 // SetCreatedBy sets field value
 func (o *NoStateMetaData) SetCreatedBy(v string) {
+
+
 	o.CreatedBy = &v
+
 }
 
 // HasCreatedBy returns a boolean if a field has been set.
@@ -150,7 +177,9 @@ func (o *NoStateMetaData) GetCreatedByUserId() *string {
 		return nil
 	}
 
+
 	return o.CreatedByUserId
+
 }
 
 // GetCreatedByUserIdOk returns a tuple with the CreatedByUserId field value
@@ -160,12 +189,17 @@ func (o *NoStateMetaData) GetCreatedByUserIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.CreatedByUserId, true
 }
 
 // SetCreatedByUserId sets field value
 func (o *NoStateMetaData) SetCreatedByUserId(v string) {
+
+
 	o.CreatedByUserId = &v
+
 }
 
 // HasCreatedByUserId returns a boolean if a field has been set.
@@ -186,7 +220,12 @@ func (o *NoStateMetaData) GetLastModifiedDate() *time.Time {
 		return nil
 	}
 
-	return o.LastModifiedDate
+	if o.LastModifiedDate == nil {
+		return nil
+	}
+	return &o.LastModifiedDate.Time
+
+
 }
 
 // GetLastModifiedDateOk returns a tuple with the LastModifiedDate field value
@@ -196,12 +235,20 @@ func (o *NoStateMetaData) GetLastModifiedDateOk() (*time.Time, bool) {
 	if o == nil {
 		return nil, false
 	}
-	return o.LastModifiedDate, true
+
+	if o.LastModifiedDate == nil {
+		return nil, false
+	}
+	return &o.LastModifiedDate.Time, true
+
 }
 
 // SetLastModifiedDate sets field value
 func (o *NoStateMetaData) SetLastModifiedDate(v time.Time) {
-	o.LastModifiedDate = &v
+
+	o.LastModifiedDate = &IonosTime{v}
+
+
 }
 
 // HasLastModifiedDate returns a boolean if a field has been set.
@@ -222,7 +269,9 @@ func (o *NoStateMetaData) GetLastModifiedBy() *string {
 		return nil
 	}
 
+
 	return o.LastModifiedBy
+
 }
 
 // GetLastModifiedByOk returns a tuple with the LastModifiedBy field value
@@ -232,12 +281,17 @@ func (o *NoStateMetaData) GetLastModifiedByOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.LastModifiedBy, true
 }
 
 // SetLastModifiedBy sets field value
 func (o *NoStateMetaData) SetLastModifiedBy(v string) {
+
+
 	o.LastModifiedBy = &v
+
 }
 
 // HasLastModifiedBy returns a boolean if a field has been set.
@@ -258,7 +312,9 @@ func (o *NoStateMetaData) GetLastModifiedByUserId() *string {
 		return nil
 	}
 
+
 	return o.LastModifiedByUserId
+
 }
 
 // GetLastModifiedByUserIdOk returns a tuple with the LastModifiedByUserId field value
@@ -268,12 +324,17 @@ func (o *NoStateMetaData) GetLastModifiedByUserIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.LastModifiedByUserId, true
 }
 
 // SetLastModifiedByUserId sets field value
 func (o *NoStateMetaData) SetLastModifiedByUserId(v string) {
+
+
 	o.LastModifiedByUserId = &v
+
 }
 
 // HasLastModifiedByUserId returns a boolean if a field has been set.

@@ -28,7 +28,9 @@ func (o *LoadbalancerEntities) GetBalancednics() *BalancedNics {
 		return nil
 	}
 
+
 	return o.Balancednics
+
 }
 
 // GetBalancednicsOk returns a tuple with the Balancednics field value
@@ -38,12 +40,17 @@ func (o *LoadbalancerEntities) GetBalancednicsOk() (*BalancedNics, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Balancednics, true
 }
 
 // SetBalancednics sets field value
 func (o *LoadbalancerEntities) SetBalancednics(v BalancedNics) {
+
+
 	o.Balancednics = &v
+
 }
 
 // HasBalancednics returns a boolean if a field has been set.

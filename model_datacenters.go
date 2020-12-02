@@ -40,7 +40,9 @@ func (o *Datacenters) GetId() *string {
 		return nil
 	}
 
+
 	return o.Id
+
 }
 
 // GetIdOk returns a tuple with the Id field value
@@ -50,12 +52,17 @@ func (o *Datacenters) GetIdOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Id, true
 }
 
 // SetId sets field value
 func (o *Datacenters) SetId(v string) {
+
+
 	o.Id = &v
+
 }
 
 // HasId returns a boolean if a field has been set.
@@ -76,7 +83,9 @@ func (o *Datacenters) GetType() *Type {
 		return nil
 	}
 
+
 	return o.Type
+
 }
 
 // GetTypeOk returns a tuple with the Type field value
@@ -86,12 +95,17 @@ func (o *Datacenters) GetTypeOk() (*Type, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Type, true
 }
 
 // SetType sets field value
 func (o *Datacenters) SetType(v Type) {
+
+
 	o.Type = &v
+
 }
 
 // HasType returns a boolean if a field has been set.
@@ -112,7 +126,9 @@ func (o *Datacenters) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -122,12 +138,17 @@ func (o *Datacenters) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *Datacenters) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -148,7 +169,9 @@ func (o *Datacenters) GetItems() *[]Datacenter {
 		return nil
 	}
 
+
 	return o.Items
+
 }
 
 // GetItemsOk returns a tuple with the Items field value
@@ -158,12 +181,17 @@ func (o *Datacenters) GetItemsOk() (*[]Datacenter, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Items, true
 }
 
 // SetItems sets field value
 func (o *Datacenters) SetItems(v []Datacenter) {
+
+
 	o.Items = &v
+
 }
 
 // HasItems returns a boolean if a field has been set.
@@ -184,7 +212,9 @@ func (o *Datacenters) GetOffset() *float32 {
 		return nil
 	}
 
+
 	return o.Offset
+
 }
 
 // GetOffsetOk returns a tuple with the Offset field value
@@ -194,12 +224,17 @@ func (o *Datacenters) GetOffsetOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Offset, true
 }
 
 // SetOffset sets field value
 func (o *Datacenters) SetOffset(v float32) {
+
+
 	o.Offset = &v
+
 }
 
 // HasOffset returns a boolean if a field has been set.
@@ -220,7 +255,9 @@ func (o *Datacenters) GetLimit() *float32 {
 		return nil
 	}
 
+
 	return o.Limit
+
 }
 
 // GetLimitOk returns a tuple with the Limit field value
@@ -230,12 +267,17 @@ func (o *Datacenters) GetLimitOk() (*float32, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Limit, true
 }
 
 // SetLimit sets field value
 func (o *Datacenters) SetLimit(v float32) {
+
+
 	o.Limit = &v
+
 }
 
 // HasLimit returns a boolean if a field has been set.
@@ -256,7 +298,9 @@ func (o *Datacenters) GetLinks() *PaginationLinks {
 		return nil
 	}
 
+
 	return o.Links
+
 }
 
 // GetLinksOk returns a tuple with the Links field value
@@ -266,12 +310,17 @@ func (o *Datacenters) GetLinksOk() (*PaginationLinks, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Links, true
 }
 
 // SetLinks sets field value
 func (o *Datacenters) SetLinks(v PaginationLinks) {
+
+
 	o.Links = &v
+
 }
 
 // HasLinks returns a boolean if a field has been set.

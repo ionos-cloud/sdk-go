@@ -33,7 +33,9 @@ func (o *Info) GetHref() *string {
 		return nil
 	}
 
+
 	return o.Href
+
 }
 
 // GetHrefOk returns a tuple with the Href field value
@@ -43,12 +45,17 @@ func (o *Info) GetHrefOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Href, true
 }
 
 // SetHref sets field value
 func (o *Info) SetHref(v string) {
+
+
 	o.Href = &v
+
 }
 
 // HasHref returns a boolean if a field has been set.
@@ -69,7 +76,9 @@ func (o *Info) GetName() *string {
 		return nil
 	}
 
+
 	return o.Name
+
 }
 
 // GetNameOk returns a tuple with the Name field value
@@ -79,12 +88,17 @@ func (o *Info) GetNameOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Name, true
 }
 
 // SetName sets field value
 func (o *Info) SetName(v string) {
+
+
 	o.Name = &v
+
 }
 
 // HasName returns a boolean if a field has been set.
@@ -105,7 +119,9 @@ func (o *Info) GetVersion() *string {
 		return nil
 	}
 
+
 	return o.Version
+
 }
 
 // GetVersionOk returns a tuple with the Version field value
@@ -115,12 +131,17 @@ func (o *Info) GetVersionOk() (*string, bool) {
 	if o == nil {
 		return nil, false
 	}
+
+
 	return o.Version, true
 }
 
 // SetVersion sets field value
 func (o *Info) SetVersion(v string) {
+
+
 	o.Version = &v
+
 }
 
 // HasVersion returns a boolean if a field has been set.
