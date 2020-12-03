@@ -151,11 +151,7 @@ func (c *Configuration) AddDefaultHeader(key string, value string) {
 }
 
 func (c *Configuration) AddDefaultQueryParam(key string, value string) {
-   if _, ok := c.DefaultQueryParams[key]; ok {
-       c.DefaultQueryParams[key] = append(c.DefaultQueryParams[key], value)
-   } else {
-       c.DefaultQueryParams[key] = []string{value}
-   }
+	c.DefaultQueryParams[key] = []string{value}
 }
 
 // URL formats template on a index using given variables
