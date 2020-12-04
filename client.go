@@ -580,6 +580,13 @@ func (c *APIClient) WaitForRequest(ctx context.Context, path string) (*APIRespon
 
 		status := RequestStatus{}
 		err = c.decode(&status, localVarBody, resp.Header.Get("Content-Type"))
+		if err != nil {
+			return localVarAPIResponse, err
+		}
+
+		if resp.StatusCode != http.StatusOK {
+			return localVarAPIResponse, fmt.Errorf("WaitForRequest failed; received status code %d from API", resp.StatusCode)
+		}
 		if status.Metadata != nil && status.Metadata.Status != nil {
 			switch *status.Metadata.Status {
 			case RequestStatusDone:
