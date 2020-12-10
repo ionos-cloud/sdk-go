@@ -38,6 +38,10 @@ import "./ionossdk"
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 
+#### DefaultApi
+
+- [Display API information](#apiinfoget)
+
 #### BackupUnitApi
 
 - [Delete a Backup Unit](#backupunitsdelete)
@@ -81,7 +85,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 #### KubernetesApi
 
 - [Delete Kubernetes Cluster](#k8sdelete)
-- [Retrieve Kubernetes Cluster](#k8sfindbyclusterid)
+- [Retrieve Kubernetes Cluster](#k8sfindbysclusterid)
 - [List Kubernetes Clusters](#k8sget)
 - [Retrieve Kubernetes Configuration File](#k8skubeconfigget)
 - [Delete Kubernetes Node Pool](#k8snodepoolsdelete)
@@ -121,7 +125,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [List all Ip Block Labels](#ipblockslabelsget)
 - [Add a Label to IP Block](#ipblockslabelspost)
 - [Modify a Label of IP Block](#ipblockslabelsput)
-- [Returns the label by its URN.](#labelsfindbylabelurn)
+- [Returns the label by its URN.](#labelsfindbyurn)
 - [List Labels ](#labelsget)
 - [Delete a Label from Snapshot](#snapshotslabelsdelete)
 - [Retrieve a Label of Snapshot](#snapshotslabelsfindbykey)
@@ -144,7 +148,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 #### LoadBalancerApi
 
 - [Detach a nic from loadbalancer](#datacentersloadbalancersbalancednicsdelete)
-- [Retrieve a nic attached to Load Balancer](#datacentersloadbalancersbalancednicsfindbynic)
+- [Retrieve a nic attached to Load Balancer](#datacentersloadbalancersbalancednicsfindbynicid)
 - [List Load Balancer Members ](#datacentersloadbalancersbalancednicsget)
 - [Attach a nic to Load Balancer](#datacentersloadbalancersbalancednicspost)
 - [Delete a Loadbalancer.](#datacentersloadbalancersdelete)
@@ -156,8 +160,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 #### LocationApi
 
-- [List Locations within a region](#locationsfindbyregion)
-- [Retrieve a Location](#locationsfindbyregionandid)
+- [List Locations within a region](#locationsfindbyregionid)
+- [Retrieve a Location](#locationsfindbyregionidandid)
 - [List Locations](#locationsget)
 
 #### NicApi
@@ -227,7 +231,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [Modify a group](#umgroupsput)
 - [Retrieve resources assigned to a group](#umgroupsresourcesget)
 - [Remove a resource from a group](#umgroupssharesdelete)
-- [Retrieve a group share](#umgroupssharesfindbyresource)
+- [Retrieve a group share](#umgroupssharesfindbyresourceid)
 - [List Group Shares ](#umgroupssharesget)
 - [Add a resource to a group](#umgroupssharespost)
 - [Modify resource permissions of a group](#umgroupssharesput)
@@ -245,7 +249,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [Create a user](#umuserspost)
 - [Modify a user](#umusersput)
 - [Delete a S3 key](#umuserss3keysdelete)
-- [Retrieve given S3 key belonging to the given User](#umuserss3keysfindbykey)
+- [Retrieve given S3 key belonging to the given User](#umuserss3keysfindbykeyid)
 - [Retrieve a User&#39;s S3 keys](#umuserss3keysget)
 - [Create a S3 key for the given user](#umuserss3keyspost)
 - [Modify a S3 key having the given key id](#umuserss3keysput)
@@ -263,6 +267,58 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 - [Restore Volume Snapshot](#datacentersvolumesrestoresnapshotpost)
 
 ---
+
+
+
+# \DefaultApi
+
+All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**ApiInfoGet**](#ApiInfoGet) | **Get** / | Display API information
+
+
+
+## ApiInfoGet
+
+> Info ApiInfoGet(ctx, optional)
+
+Display API information
+
+Display API information
+
+### Required Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
+ **optional** | ***ApiInfoGetOpts** | optional parameters | nil if no parameters
+
+### Optional Parameters
+
+Optional parameters are passed through a pointer to a ApiInfoGetOpts struct
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
+ **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
+ **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+
+### Return type
+
+[**Info**](#Info)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+
 
 
 
@@ -748,6 +804,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -1388,7 +1446,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**K8sDelete**](#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-[**K8sFindByClusterid**](#K8sFindByClusterid) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
+[**K8sFindBySClusterId**](#K8sFindBySClusterId) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
 [**K8sGet**](#K8sGet) | **Get** /k8s | List Kubernetes Clusters
 [**K8sKubeconfigGet**](#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
 [**K8sNodepoolsDelete**](#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
@@ -1449,9 +1507,9 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
-## K8sFindByClusterid
+## K8sFindBySClusterId
 
-> KubernetesCluster K8sFindByClusterid(ctx, k8sClusterId, optional)
+> KubernetesCluster K8sFindBySClusterId(ctx, k8sClusterId, optional)
 
 Retrieve Kubernetes Cluster
 
@@ -1464,11 +1522,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | 
- **optional** | ***K8sFindByClusteridOpts** | optional parameters | nil if no parameters
+ **optional** | ***K8sFindBySClusterIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a K8sFindByClusteridOpts struct
+Optional parameters are passed through a pointer to a K8sFindBySClusterIdOpts struct
 
 
 Name | Type | Description  | Notes
@@ -1920,7 +1978,7 @@ Name | Type | Description  | Notes
 
 ## K8sNodepoolsPut
 
-> KubernetesNodePoolForPut K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId, kubernetesNodePoolProperties, optional)
+> KubernetesNodePoolForPut K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId, kubernetesNodePool, optional)
 
 Modify Kubernetes Node Pool
 
@@ -1934,7 +1992,7 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | 
 **nodepoolId** | **string**| The unique ID of the Kubernetes Node Pool | 
-**kubernetesNodePoolProperties** | [**KubernetesNodePoolPropertiesForPut**](#KubernetesNodePoolForPut)| Details of the Kubernetes Node Pool | 
+**kubernetesNodePool** | [**KubernetesNodePool**](#KubernetesNodePoolForPut)| Details of the Kubernetes Node Pool | 
  **optional** | ***K8sNodepoolsPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -2006,7 +2064,7 @@ Name | Type | Description  | Notes
 
 ## K8sPut
 
-> KubernetesCluster K8sPut(ctx, k8sClusterId, kubernetescluster, optional)
+> KubernetesCluster K8sPut(ctx, k8sClusterId, kubernetesCluster, optional)
 
 Modify Kubernetes Cluster
 
@@ -2019,7 +2077,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **k8sClusterId** | **string**| The unique ID of the Kubernetes Cluster | 
-**kubernetescluster** | [**KubernetesCluster**](#KubernetesCluster)| Details of of the Kubernetes Cluster | 
+**kubernetesCluster** | [**KubernetesCluster**](#KubernetesCluster)| Properties of the Kubernetes Cluster | 
  **optional** | ***K8sPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -2152,7 +2210,7 @@ Method | HTTP request | Description
 [**IpblocksLabelsGet**](#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
 [**IpblocksLabelsPost**](#IpblocksLabelsPost) | **Post** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
 [**IpblocksLabelsPut**](#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-[**LabelsFindByLabelurn**](#LabelsFindByLabelurn) | **Get** /labels/{labelurn} | Returns the label by its URN.
+[**LabelsFindByUrn**](#LabelsFindByUrn) | **Get** /labels/{labelurn} | Returns the label by its URN.
 [**LabelsGet**](#LabelsGet) | **Get** /labels | List Labels 
 [**SnapshotsLabelsDelete**](#SnapshotsLabelsDelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
 [**SnapshotsLabelsFindByKey**](#SnapshotsLabelsFindByKey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
@@ -2276,6 +2334,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -2497,6 +2557,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -2722,6 +2784,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -3042,9 +3106,9 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
-## LabelsFindByLabelurn
+## LabelsFindByUrn
 
-> Label LabelsFindByLabelurn(ctx, labelurn, optional)
+> Label LabelsFindByUrn(ctx, labelurn, optional)
 
 Returns the label by its URN.
 
@@ -3057,11 +3121,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **labelurn** | **string**| The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; | 
- **optional** | ***LabelsFindByLabelurnOpts** | optional parameters | nil if no parameters
+ **optional** | ***LabelsFindByUrnOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a LabelsFindByLabelurnOpts struct
+Optional parameters are passed through a pointer to a LabelsFindByUrnOpts struct
 
 
 Name | Type | Description  | Notes
@@ -3472,6 +3536,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -3560,6 +3626,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -3761,7 +3829,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**DatacentersLoadbalancersBalancednicsDelete**](#DatacentersLoadbalancersBalancednicsDelete) | **Delete** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Detach a nic from loadbalancer
-[**DatacentersLoadbalancersBalancednicsFindByNic**](#DatacentersLoadbalancersBalancednicsFindByNic) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
+[**DatacentersLoadbalancersBalancednicsFindByNicId**](#DatacentersLoadbalancersBalancednicsFindByNicId) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics/{nicId} | Retrieve a nic attached to Load Balancer
 [**DatacentersLoadbalancersBalancednicsGet**](#DatacentersLoadbalancersBalancednicsGet) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | List Load Balancer Members 
 [**DatacentersLoadbalancersBalancednicsPost**](#DatacentersLoadbalancersBalancednicsPost) | **Post** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId}/balancednics | Attach a nic to Load Balancer
 [**DatacentersLoadbalancersDelete**](#DatacentersLoadbalancersDelete) | **Delete** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Delete a Loadbalancer.
@@ -3818,9 +3886,9 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
-## DatacentersLoadbalancersBalancednicsFindByNic
+## DatacentersLoadbalancersBalancednicsFindByNicId
 
-> Nic DatacentersLoadbalancersBalancednicsFindByNic(ctx, datacenterId, loadbalancerId, nicId, optional)
+> Nic DatacentersLoadbalancersBalancednicsFindByNicId(ctx, datacenterId, loadbalancerId, nicId, optional)
 
 Retrieve a nic attached to Load Balancer
 
@@ -3835,11 +3903,11 @@ Name | Type | Description  | Notes
 **datacenterId** | **string**| The unique ID of the datacenter | 
 **loadbalancerId** | **string**| The unique ID of the Load Balancer | 
 **nicId** | **string**| The unique ID of the NIC | 
- **optional** | ***DatacentersLoadbalancersBalancednicsFindByNicOpts** | optional parameters | nil if no parameters
+ **optional** | ***DatacentersLoadbalancersBalancednicsFindByNicIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a DatacentersLoadbalancersBalancednicsFindByNicOpts struct
+Optional parameters are passed through a pointer to a DatacentersLoadbalancersBalancednicsFindByNicIdOpts struct
 
 
 Name | Type | Description  | Notes
@@ -3893,6 +3961,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -4065,6 +4135,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -4220,15 +4292,15 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LocationsFindByRegion**](#LocationsFindByRegion) | **Get** /locations/{regionId} | List Locations within a region
-[**LocationsFindByRegionAndId**](#LocationsFindByRegionAndId) | **Get** /locations/{regionId}/{locationId} | Retrieve a Location
+[**LocationsFindByRegionId**](#LocationsFindByRegionId) | **Get** /locations/{regionId} | List Locations within a region
+[**LocationsFindByRegionIdAndId**](#LocationsFindByRegionIdAndId) | **Get** /locations/{regionId}/{locationId} | Retrieve a Location
 [**LocationsGet**](#LocationsGet) | **Get** /locations | List Locations
 
 
 
-## LocationsFindByRegion
+## LocationsFindByRegionId
 
-> Locations LocationsFindByRegion(ctx, regionId, optional)
+> Locations LocationsFindByRegionId(ctx, regionId, optional)
 
 List Locations within a region
 
@@ -4241,11 +4313,11 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **regionId** | **string**|  | 
- **optional** | ***LocationsFindByRegionOpts** | optional parameters | nil if no parameters
+ **optional** | ***LocationsFindByRegionIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a LocationsFindByRegionOpts struct
+Optional parameters are passed through a pointer to a LocationsFindByRegionIdOpts struct
 
 
 Name | Type | Description  | Notes
@@ -4267,9 +4339,9 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
-## LocationsFindByRegionAndId
+## LocationsFindByRegionIdAndId
 
-> Location LocationsFindByRegionAndId(ctx, regionId, locationId, optional)
+> Location LocationsFindByRegionIdAndId(ctx, regionId, locationId, optional)
 
 Retrieve a Location
 
@@ -4283,11 +4355,11 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **regionId** | **string**|  | 
 **locationId** | **string**|  | 
- **optional** | ***LocationsFindByRegionAndIdOpts** | optional parameters | nil if no parameters
+ **optional** | ***LocationsFindByRegionIdAndIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a LocationsFindByRegionAndIdOpts struct
+Optional parameters are passed through a pointer to a LocationsFindByRegionIdAndIdOpts struct
 
 
 Name | Type | Description  | Notes
@@ -4589,6 +4661,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -4777,6 +4851,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -5236,10 +5312,8 @@ Name | Type | Description  | Notes
  **filterStatus** | **optional.**| Request status filter to fetch all the request based on a particular status [QUEUED, RUNNING, DONE, FAILED] | 
  **filterCreatedAfter** | **optional.**| Filter all the requests after the created date | 
  **filterCreatedBefore** | **optional.**| Filter all the requests before the created date | 
- **filterUrl** | **optional.**| Url filter | 
- **filterCreatedDate** | **optional.**| Created date filter | 
- **filterMethod** | **optional.**| Method filter | 
- **filterBody** | **optional.**| Url filter | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -5444,6 +5518,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -5617,6 +5693,8 @@ Name | Type | Description  | Notes
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **upgradeNeeded** | **optional.**| It can be used to filter which servers can be upgraded which can not be upgraded. | 
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -5855,7 +5933,7 @@ Name | Type | Description  | Notes
 
 Stop a Server
 
-This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for CoreVPS servers.
+This will stop a server. The machine will be forcefully powered off, billing will cease, and the public IP, if one is allocated, will be deallocated. The operation is not supported for Cube servers.
 
 ### Required Parameters
 
@@ -6055,6 +6133,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -6353,7 +6433,7 @@ Method | HTTP request | Description
 [**UmGroupsPut**](#UmGroupsPut) | **Put** /um/groups/{groupId} | Modify a group
 [**UmGroupsResourcesGet**](#UmGroupsResourcesGet) | **Get** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
 [**UmGroupsSharesDelete**](#UmGroupsSharesDelete) | **Delete** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-[**UmGroupsSharesFindByResource**](#UmGroupsSharesFindByResource) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
+[**UmGroupsSharesFindByResourceId**](#UmGroupsSharesFindByResourceId) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
 [**UmGroupsSharesGet**](#UmGroupsSharesGet) | **Get** /um/groups/{groupId}/shares | List Group Shares 
 [**UmGroupsSharesPost**](#UmGroupsSharesPost) | **Post** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
 [**UmGroupsSharesPut**](#UmGroupsSharesPut) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
@@ -6371,7 +6451,7 @@ Method | HTTP request | Description
 [**UmUsersPost**](#UmUsersPost) | **Post** /um/users | Create a user
 [**UmUsersPut**](#UmUsersPut) | **Put** /um/users/{userId} | Modify a user
 [**UmUsersS3keysDelete**](#UmUsersS3keysDelete) | **Delete** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-[**UmUsersS3keysFindByKey**](#UmUsersS3keysFindByKey) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
+[**UmUsersS3keysFindByKeyId**](#UmUsersS3keysFindByKeyId) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
 [**UmUsersS3keysGet**](#UmUsersS3keysGet) | **Get** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
 [**UmUsersS3keysPost**](#UmUsersS3keysPost) | **Post** /um/users/{userId}/s3keys | Create a S3 key for the given user
 [**UmUsersS3keysPut**](#UmUsersS3keysPut) | **Put** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
@@ -6666,9 +6746,9 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
-## UmGroupsSharesFindByResource
+## UmGroupsSharesFindByResourceId
 
-> GroupShare UmGroupsSharesFindByResource(ctx, groupId, resourceId, optional)
+> GroupShare UmGroupsSharesFindByResourceId(ctx, groupId, resourceId, optional)
 
 Retrieve a group share
 
@@ -6682,11 +6762,11 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **groupId** | **string**|  | 
 **resourceId** | **string**|  | 
- **optional** | ***UmGroupsSharesFindByResourceOpts** | optional parameters | nil if no parameters
+ **optional** | ***UmGroupsSharesFindByResourceIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a UmGroupsSharesFindByResourceOpts struct
+Optional parameters are passed through a pointer to a UmGroupsSharesFindByResourceIdOpts struct
 
 
 Name | Type | Description  | Notes
@@ -7420,9 +7500,9 @@ Name | Type | Description  | Notes
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
 
-## UmUsersS3keysFindByKey
+## UmUsersS3keysFindByKeyId
 
-> S3Key UmUsersS3keysFindByKey(ctx, userId, keyId, optional)
+> S3Key UmUsersS3keysFindByKeyId(ctx, userId, keyId, optional)
 
 Retrieve given S3 key belonging to the given User
 
@@ -7436,11 +7516,11 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **userId** | **string**| The unique ID of the user | 
 **keyId** | **string**| The unique access key ID of the S3 key | 
- **optional** | ***UmUsersS3keysFindByKeyOpts** | optional parameters | nil if no parameters
+ **optional** | ***UmUsersS3keysFindByKeyIdOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
 
-Optional parameters are passed through a pointer to a UmUsersS3keysFindByKeyOpts struct
+Optional parameters are passed through a pointer to a UmUsersS3keysFindByKeyIdOpts struct
 
 
 Name | Type | Description  | Notes
@@ -7561,7 +7641,7 @@ Name | Type | Description  | Notes
 **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
 **userId** | **string**|  | 
 **keyId** | **string**| The unique access key ID of the S3 key | 
-**s3Key** | [**S3Key**](#S3Key)| Modified S3Key | 
+**s3Key** | [**S3Key**](#S3Key)| Modified s3 key | 
  **optional** | ***UmUsersS3keysPutOpts** | optional parameters | nil if no parameters
 
 ### Optional Parameters
@@ -7811,6 +7891,8 @@ Name | Type | Description  | Notes
  **pretty** | **optional.**| Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
  **depth** | **optional.**| Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
  **xContractNumber** | **optional.**| Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+ **offset** | **optional.**| the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
+ **limit** | **optional.**| the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
 
 ### Return type
 
@@ -8043,9 +8125,9 @@ client := ionossdk.NewAPIClient(ionossdk.NewConfigurationFromEnv())
  - [ConnectableDatacenter](#ConnectableDatacenter)
  - [Contract](#Contract)
  - [ContractProperties](#ContractProperties)
+ - [DataCenterEntities](#DataCenterEntities)
  - [Datacenter](#Datacenter)
  - [DatacenterElementMetadata](#DatacenterElementMetadata)
- - [DatacenterEntities](#DatacenterEntities)
  - [DatacenterProperties](#DatacenterProperties)
  - [Datacenters](#Datacenters)
  - [Error](#Error)
@@ -8075,6 +8157,7 @@ client := ionossdk.NewAPIClient(ionossdk.NewConfigurationFromEnv())
  - [KubernetesCluster](#KubernetesCluster)
  - [KubernetesClusterEntities](#KubernetesClusterEntities)
  - [KubernetesClusterProperties](#KubernetesClusterProperties)
+ - [KubernetesClusterPropertiesForPostAndPut](#KubernetesClusterPropertiesForPostAndPut)
  - [KubernetesClusters](#KubernetesClusters)
  - [KubernetesConfig](#KubernetesConfig)
  - [KubernetesConfigProperties](#KubernetesConfigProperties)
@@ -8087,6 +8170,7 @@ client := ionossdk.NewAPIClient(ionossdk.NewConfigurationFromEnv())
  - [KubernetesNodePoolLabel](#KubernetesNodePoolLabel)
  - [KubernetesNodePoolLan](#KubernetesNodePoolLan)
  - [KubernetesNodePoolProperties](#KubernetesNodePoolProperties)
+ - [KubernetesNodePoolPropertiesForPost](#KubernetesNodePoolPropertiesForPost)
  - [KubernetesNodePoolPropertiesForPut](#KubernetesNodePoolPropertiesForPut)
  - [KubernetesNodePools](#KubernetesNodePools)
  - [KubernetesNodeProperties](#KubernetesNodeProperties)
@@ -8116,6 +8200,7 @@ client := ionossdk.NewAPIClient(ionossdk.NewConfigurationFromEnv())
  - [NicProperties](#NicProperties)
  - [Nics](#Nics)
  - [NoStateMetaData](#NoStateMetaData)
+ - [PaginationLinks](#PaginationLinks)
  - [Peer](#Peer)
  - [PrivateCrossConnect](#PrivateCrossConnect)
  - [PrivateCrossConnectProperties](#PrivateCrossConnectProperties)
@@ -8169,6 +8254,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Volume**](#Volume) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8226,6 +8314,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Nic**](#Nic) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8238,6 +8329,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Image**](#Image) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8275,17 +8369,29 @@ Name | Type | Description | Notes
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
+# DataCenterEntities
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Servers** | [**Servers**](#Servers) |  | [optional] 
+**Volumes** | [**Volumes**](#Volumes) |  | [optional] 
+**Loadbalancers** | [**Loadbalancers**](#Loadbalancers) |  | [optional] 
+**Lans** | [**Lans**](#Lans) |  | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
 # Datacenter
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Id** | **string** | The resource&#39;s unique identifier | [optional] [readonly] 
-**Type** | [**NullableType**](#Type) | The type of object that has been created | [optional] 
+**Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Metadata** | [**DatacenterElementMetadata**](#DatacenterElementMetadata) |  | [optional] 
 **Properties** | [**DatacenterProperties**](#DatacenterProperties) |  | 
-**Entities** | [**DatacenterEntities**](#DatacenterEntities) |  | [optional] 
+**Entities** | [**DataCenterEntities**](#DataCenterEntities) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8305,18 +8411,6 @@ Name | Type | Description | Notes
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
-# DatacenterEntities
-
-## Properties
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Servers** | [**Servers**](#Servers) |  | [optional] 
-**Volumes** | [**Volumes**](#Volumes) |  | [optional] 
-**Loadbalancers** | [**Loadbalancers**](#Loadbalancers) |  | [optional] 
-**Lans** | [**Lans**](#Lans) |  | [optional] 
-
-[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
-
 # DatacenterProperties
 
 ## Properties
@@ -8325,7 +8419,7 @@ Name | Type | Description | Notes
 **Name** | **string** | A name of that resource | [optional] 
 **Description** | **string** | A description for the datacenter, e.g. staging, production | [optional] 
 **Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests) | 
-**Version** | **int32** | The version of that Data Center. Gets incremented with every change | [optional] 
+**Version** | **int32** | The version of that Data Center. Gets incremented with every change | [optional] [readonly] 
 **Features** | **[]string** | List of features supported by the location this data center is part of | [optional] [readonly] 
 **SecAuthProtection** | **bool** | Boolean value representing if the data center requires extra protection e.g. two factor protection | [optional] 
 
@@ -8340,6 +8434,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Datacenter**](#Datacenter) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8385,6 +8482,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]FirewallRule**](#FirewallRule) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8682,6 +8782,19 @@ Name | Type | Description | Notes
 **Name** | **string** | A Kubernetes Cluster Name. Valid Kubernetes Cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
 **K8sVersion** | **string** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
 **MaintenanceWindow** | [**KubernetesMaintenanceWindow**](#KubernetesMaintenanceWindow) |  | [optional] 
+**AvailableUpgradeVersions** | **[]string** | List of available versions for upgrading the cluster | [optional] 
+**ViableNodePoolVersions** | **[]string** | List of versions that may be used for node pools under this cluster | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesClusterPropertiesForPostAndPut
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **string** | A Kubernetes Cluster Name | 
+**K8sVersion** | **string** | The kubernetes version in which a cluster is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
+**MaintenanceWindow** | [**KubernetesMaintenanceWindow**](#KubernetesMaintenanceWindow) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8831,6 +8944,32 @@ Name | Type | Description | Notes
 **Lans** | [**[]KubernetesNodePoolLan**](#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes | [optional] 
 **Labels** | [**KubernetesNodePoolLabel**](#KubernetesNodePoolLabel) |  | [optional] 
 **Annotations** | [**KubernetesNodePoolAnnotation**](#KubernetesNodePoolAnnotation) |  | [optional] 
+**PublicIps** | **[]string** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional] 
+**AvailableUpgradeVersions** | **[]string** | List of available versions for upgrading the node pool | [optional] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# KubernetesNodePoolPropertiesForPost
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Name** | **string** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | 
+**DatacenterId** | **string** | A valid uuid of the datacenter on which user has access | 
+**NodeCount** | **int32** | Number of nodes part of the Node Pool | 
+**CpuFamily** | **string** | A valid cpu family name | 
+**CoresCount** | **int32** | Number of cores for node | 
+**RamSize** | **int32** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
+**AvailabilityZone** | **string** | The availability zone in which the server should exist | 
+**StorageType** | **string** | Hardware type of the volume | 
+**StorageSize** | **int32** | The size of the volume in GB. The size should be greater than 10GB. | 
+**K8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
+**MaintenanceWindow** | [**KubernetesMaintenanceWindow**](#KubernetesMaintenanceWindow) |  | [optional] 
+**AutoScaling** | [**KubernetesAutoScaling**](#KubernetesAutoScaling) |  | [optional] 
+**Lans** | [**[]KubernetesNodePoolLan**](#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes | [optional] 
+**Labels** | [**KubernetesNodePoolLabel**](#KubernetesNodePoolLabel) |  | [optional] 
+**Annotations** | [**KubernetesNodePoolAnnotation**](#KubernetesNodePoolAnnotation) |  | [optional] 
+**PublicIps** | **[]string** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8852,6 +8991,9 @@ Name | Type | Description | Notes
 **MaintenanceWindow** | [**KubernetesMaintenanceWindow**](#KubernetesMaintenanceWindow) |  | [optional] 
 **AutoScaling** | [**KubernetesAutoScaling**](#KubernetesAutoScaling) |  | [optional] 
 **Lans** | [**[]KubernetesNodePoolLan**](#KubernetesNodePoolLan) | array of additional LANs attached to worker nodes | [optional] 
+**Labels** | [**KubernetesNodePoolLabel**](#KubernetesNodePoolLabel) |  | [optional] 
+**Annotations** | [**KubernetesNodePoolAnnotation**](#KubernetesNodePoolAnnotation) |  | [optional] 
+**PublicIps** | **[]string** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8948,6 +9090,9 @@ Name | Type | Description | Notes
 **Type** | **string** | The type of resource within a collection | [optional] [readonly] 
 **Href** | **string** | URL to the collection representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]LabelResource**](#LabelResource) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -8995,6 +9140,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Nic**](#Nic) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9030,6 +9178,8 @@ Name | Type | Description | Notes
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Name** | **string** | A name of that resource | [optional] 
+**IpFailover** | [**[]IPFailover**](#IPFailover) | IP failover configurations for lan | [optional] 
+**Pcc** | **string** | Unique identifier of the private cross connect the given LAN is connected to if any | [optional] 
 **Public** | **bool** | Does this LAN faces the public Internet or not | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
@@ -9042,7 +9192,10 @@ Name | Type | Description | Notes
 **Id** | **string** | The resource&#39;s unique identifier | [optional] [readonly] 
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
-**Items** | [**[]Lan**](#Lan) | Array of items in that collection | [optional] [readonly] 
+**Items** | [**[]Lan**](#Lan) | Array of items in lans collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9089,6 +9242,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Loadbalancer**](#Loadbalancer) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9162,7 +9318,7 @@ Name | Type | Description | Notes
 **Dhcp** | **bool** | Indicates if the nic will reserve an IP using DHCP | [optional] 
 **Lan** | **int32** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | 
 **FirewallActive** | **bool** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. | [optional] 
-**Nat** | **bool** | Indicates if NAT is enabled on this NIC | [optional] 
+**Nat** | **bool** | Indicates if NAT is enabled on this NIC. This is now deprecated. | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9175,6 +9331,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Nic**](#Nic) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9190,6 +9349,17 @@ Name | Type | Description | Notes
 **LastModifiedDate** | [**time.Time**](#time.Time) | The last time the resource has been modified | [optional] [readonly] 
 **LastModifiedBy** | **string** | The user who last modified the resource. | [optional] [readonly] 
 **LastModifiedByUserId** | **string** | The user id of the user who has last modified the resource. | [optional] [readonly] 
+
+[[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
+
+# PaginationLinks
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**Prev** | **string** | URL (with offset and limit parameters) of the previous page; only present if offset is greater than 0 | [optional] [readonly] 
+**Self** | **string** | URL (with offset and limit parameters) of the current page | [optional] [readonly] 
+**Next** | **string** | URL (with offset and limit parameters) of the next page; only present if offset + limit is less than the total number of elements | [optional] [readonly] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9323,6 +9493,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Request**](#Request) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset specified in the request (or, if none was specified, the default offset of 0) | 
+**Limit** | **float32** | the limit specified in the request (or, if none was specified, the default limit of 0) | 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9539,6 +9712,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Server**](#Server) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
@@ -9685,8 +9861,8 @@ Name | Type | Description | Notes
 **Size** | **float32** | The size of the volume in GB | 
 **AvailabilityZone** | **string** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront | [optional] 
 **Image** | **string** | Image or snapshot ID to be used as template for this volume | [optional] 
-**ImageAlias** | **string** |  | [optional] 
 **ImagePassword** | **string** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 | [optional] 
+**ImageAlias** | **string** |  | [optional] 
 **SshKeys** | **[]string** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional] 
 **Bus** | **string** | The bus type of the volume. Default is VIRTIO | [optional] 
 **LicenceType** | **string** | OS type of this volume | [optional] [readonly] 
@@ -9710,6 +9886,9 @@ Name | Type | Description | Notes
 **Type** | [**Type**](#Type) | The type of object that has been created | [optional] 
 **Href** | **string** | URL to the object representation (absolute path) | [optional] [readonly] 
 **Items** | [**[]Volume**](#Volume) | Array of items in that collection | [optional] [readonly] 
+**Offset** | **float32** | the offset (if specified in the request) | [optional] 
+**Limit** | **float32** | the limit (if specified in the request) | [optional] 
+**Links** | [**PaginationLinks**](#PaginationLinks) |  | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 
