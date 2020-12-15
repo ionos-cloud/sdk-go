@@ -1,6 +1,6 @@
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 
-# Go API client for ionossdk
+# Go API client for ionoscloud
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy to use API. 
 
@@ -26,7 +26,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```golang
-import sw "./ionossdk"
+import sw "./ionoscloud"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:

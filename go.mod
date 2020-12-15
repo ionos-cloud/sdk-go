@@ -1,4 +1,4 @@
-module github.com/ionos-cloud/ionos-cloud-sdk-go
+module github.com/ionos-cloud/sdk-go
 
 go 1.13
 
