@@ -28,7 +28,7 @@ type KubernetesNodePoolPropertiesForPut struct {
 	CoresCount *int32 `json:"coresCount"`
 	// RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB.
 	RamSize *int32 `json:"ramSize"`
-	// The availability zone in which the server should exist
+	// The availability zone in which the target VM should exist
 	AvailabilityZone *string `json:"availabilityZone"`
 	// Hardware type of the volume
 	StorageType *string `json:"storageType"`

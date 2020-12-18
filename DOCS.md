@@ -8932,7 +8932,7 @@ Name | Type | Description | Notes
 **CpuFamily** | **string** | A valid cpu family name | 
 **CoresCount** | **int32** | Number of cores for node | 
 **RamSize** | **int32** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
-**AvailabilityZone** | **string** | The availability zone in which the server should exist | 
+**AvailabilityZone** | **string** | The availability zone in which the target VM should exist | 
 **StorageType** | **string** | Hardware type of the volume | 
 **StorageSize** | **int32** | The size of the volume in GB. The size should be greater than 10GB. | 
 **K8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
@@ -8957,7 +8957,7 @@ Name | Type | Description | Notes
 **CpuFamily** | **string** | A valid cpu family name | 
 **CoresCount** | **int32** | Number of cores for node | 
 **RamSize** | **int32** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
-**AvailabilityZone** | **string** | The availability zone in which the server should exist | 
+**AvailabilityZone** | **string** | The availability zone in which the target VM should exist | 
 **StorageType** | **string** | Hardware type of the volume | 
 **StorageSize** | **int32** | The size of the volume in GB. The size should be greater than 10GB. | 
 **K8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
@@ -8981,7 +8981,7 @@ Name | Type | Description | Notes
 **CpuFamily** | **string** | A valid cpu family name | 
 **CoresCount** | **int32** | Number of cores for node | 
 **RamSize** | **int32** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | 
-**AvailabilityZone** | **string** | The availability zone in which the server should exist | 
+**AvailabilityZone** | **string** | The availability zone in which the target VM should exist | 
 **StorageType** | **string** | Hardware type of the volume | 
 **StorageSize** | **int32** | The size of the volume in GB. The size should be greater than 10GB. | 
 **K8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] 
@@ -9810,6 +9810,7 @@ Name | Type | Description | Notes
 **SecAuthActive** | **bool** | indicates if secure authentication is active for the user or not | [optional] 
 **S3CanonicalUserId** | **string** | Canonical (S3) id of the user for a given identity | [optional] 
 **Password** | **string** | User password | [optional] 
+**Active** | **bool** | indicates if the user is active | [optional] 
 
 [[Back to API list]](#documentation-for-api-endpoints) [[Back to Model list]](#documentation-for-models)
 

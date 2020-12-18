@@ -26051,6 +26051,7 @@ components:
               firstname: firstname
               administrator: true
               password: password
+              active: true
               forceSecAuth: true
               secAuthActive: true
               email: email
@@ -26126,6 +26127,7 @@ components:
               firstname: firstname
               administrator: true
               password: password
+              active: true
               forceSecAuth: true
               secAuthActive: true
               email: email
@@ -26270,6 +26272,7 @@ components:
                 firstname: firstname
                 administrator: true
                 password: password
+                active: true
                 forceSecAuth: true
                 secAuthActive: true
                 email: email
@@ -26345,6 +26348,7 @@ components:
                 firstname: firstname
                 administrator: true
                 password: password
+                active: true
                 forceSecAuth: true
                 secAuthActive: true
                 email: email
@@ -26514,6 +26518,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -26589,6 +26594,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -26691,6 +26697,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -26766,6 +26773,7 @@ components:
                   firstname: firstname
                   administrator: true
                   password: password
+                  active: true
                   forceSecAuth: true
                   secAuthActive: true
                   email: email
@@ -27034,6 +27042,7 @@ components:
         firstname: firstname
         administrator: true
         password: password
+        active: true
         forceSecAuth: true
         secAuthActive: true
         email: email
@@ -27066,6 +27075,9 @@ components:
         password:
           description: User password
           type: string
+        active:
+          description: indicates if the user is active
+          type: boolean
       type: object
     User:
       example:
@@ -27139,6 +27151,7 @@ components:
           firstname: firstname
           administrator: true
           password: password
+          active: true
           forceSecAuth: true
           secAuthActive: true
           email: email
@@ -27313,6 +27326,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -27388,6 +27402,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -30037,6 +30052,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -30112,6 +30128,7 @@ components:
             firstname: firstname
             administrator: true
             password: password
+            active: true
             forceSecAuth: true
             secAuthActive: true
             email: email
@@ -31457,7 +31474,7 @@ components:
           example: 2048
           type: integer
         availabilityZone:
-          description: The availability zone in which the server should exist
+          description: The availability zone in which the target VM should exist
           enum:
           - AUTO
           - ZONE_1
@@ -31585,7 +31602,7 @@ components:
           example: 2048
           type: integer
         availabilityZone:
-          description: The availability zone in which the server should exist
+          description: The availability zone in which the target VM should exist
           enum:
           - AUTO
           - ZONE_1
@@ -31688,7 +31705,7 @@ components:
           example: 2048
           type: integer
         availabilityZone:
-          description: The availability zone in which the server should exist
+          description: The availability zone in which the target VM should exist
           enum:
           - AUTO
           - ZONE_1
