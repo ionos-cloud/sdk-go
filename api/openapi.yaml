@@ -14027,7 +14027,7 @@ paths:
       - Kubernetes
     get:
       description: This will retrieve a single Kubernetes Cluster.
-      operationId: k8sFindBySClusterId
+      operationId: k8sFindByClusterId
       parameters:
       - description: The unique ID of the Kubernetes Cluster
         in: path
