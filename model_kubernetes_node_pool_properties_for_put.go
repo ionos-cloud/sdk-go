@@ -40,8 +40,10 @@ type KubernetesNodePoolPropertiesForPut struct {
 	AutoScaling *KubernetesAutoScaling `json:"autoScaling,omitempty"`
 	// array of additional LANs attached to worker nodes
 	Lans *[]KubernetesNodePoolLan `json:"lans,omitempty"`
-	Labels *KubernetesNodePoolLabel `json:"labels,omitempty"`
-	Annotations *KubernetesNodePoolAnnotation `json:"annotations,omitempty"`
+	// map of labels attached to node pool
+	Labels *map[string]string `json:"labels,omitempty"`
+	// map of annotations attached to node pool
+	Annotations *map[string]string `json:"annotations,omitempty"`
 	// Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
 	PublicIps *[]string `json:"publicIps,omitempty"`
 }
@@ -608,8 +610,8 @@ func (o *KubernetesNodePoolPropertiesForPut) HasLans() bool {
 
 
 // GetLabels returns the Labels field value
-// If the value is explicit nil, the zero value for KubernetesNodePoolLabel will be returned
-func (o *KubernetesNodePoolPropertiesForPut) GetLabels() *KubernetesNodePoolLabel {
+// If the value is explicit nil, the zero value for map[string]string will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetLabels() *map[string]string {
 	if o == nil {
 		return nil
 	}
@@ -622,7 +624,7 @@ func (o *KubernetesNodePoolPropertiesForPut) GetLabels() *KubernetesNodePoolLabe
 // GetLabelsOk returns a tuple with the Labels field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *KubernetesNodePoolPropertiesForPut) GetLabelsOk() (*KubernetesNodePoolLabel, bool) {
+func (o *KubernetesNodePoolPropertiesForPut) GetLabelsOk() (*map[string]string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -632,7 +634,7 @@ func (o *KubernetesNodePoolPropertiesForPut) GetLabelsOk() (*KubernetesNodePoolL
 }
 
 // SetLabels sets field value
-func (o *KubernetesNodePoolPropertiesForPut) SetLabels(v KubernetesNodePoolLabel) {
+func (o *KubernetesNodePoolPropertiesForPut) SetLabels(v map[string]string) {
 
 
 	o.Labels = &v
@@ -651,8 +653,8 @@ func (o *KubernetesNodePoolPropertiesForPut) HasLabels() bool {
 
 
 // GetAnnotations returns the Annotations field value
-// If the value is explicit nil, the zero value for KubernetesNodePoolAnnotation will be returned
-func (o *KubernetesNodePoolPropertiesForPut) GetAnnotations() *KubernetesNodePoolAnnotation {
+// If the value is explicit nil, the zero value for map[string]string will be returned
+func (o *KubernetesNodePoolPropertiesForPut) GetAnnotations() *map[string]string {
 	if o == nil {
 		return nil
 	}
@@ -665,7 +667,7 @@ func (o *KubernetesNodePoolPropertiesForPut) GetAnnotations() *KubernetesNodePoo
 // GetAnnotationsOk returns a tuple with the Annotations field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *KubernetesNodePoolPropertiesForPut) GetAnnotationsOk() (*KubernetesNodePoolAnnotation, bool) {
+func (o *KubernetesNodePoolPropertiesForPut) GetAnnotationsOk() (*map[string]string, bool) {
 	if o == nil {
 		return nil, false
 	}
@@ -675,7 +677,7 @@ func (o *KubernetesNodePoolPropertiesForPut) GetAnnotationsOk() (*KubernetesNode
 }
 
 // SetAnnotations sets field value
-func (o *KubernetesNodePoolPropertiesForPut) SetAnnotations(v KubernetesNodePoolAnnotation) {
+func (o *KubernetesNodePoolPropertiesForPut) SetAnnotations(v map[string]string) {
 
 
 	o.Annotations = &v
