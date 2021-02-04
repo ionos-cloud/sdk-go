@@ -10,7 +10,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## ContractsGet
 
-> Contract ContractsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Contract = ContractsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Contract
 

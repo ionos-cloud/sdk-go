@@ -18,7 +18,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersLansDelete
 
-> map[string]interface{} DatacentersLansDelete(ctx, datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersLansDelete(ctx, datacenterId, lanId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Lan.
 
@@ -92,7 +98,13 @@ Other parameters are passed through a pointer to a apiDatacentersLansDeleteReque
 
 ## DatacentersLansFindById
 
-> Lan DatacentersLansFindById(ctx, datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Lan = DatacentersLansFindById(ctx, datacenterId, lanId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Lan
 
@@ -166,7 +178,15 @@ Other parameters are passed through a pointer to a apiDatacentersLansFindByIdReq
 
 ## DatacentersLansGet
 
-> Lans DatacentersLansGet(ctx, datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Lans = DatacentersLansGet(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Lans
 
@@ -242,7 +262,13 @@ Other parameters are passed through a pointer to a apiDatacentersLansGetRequest 
 
 ## DatacentersLansNicsFindById
 
-> Nic DatacentersLansNicsFindById(ctx, datacenterId, lanId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersLansNicsFindById(ctx, datacenterId, lanId, nicId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a nic attached to lan
 
@@ -318,7 +344,15 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsFindByI
 
 ## DatacentersLansNicsGet
 
-> LanNics DatacentersLansNicsGet(ctx, datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result LanNics = DatacentersLansNicsGet(ctx, datacenterId, lanId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Lan Members 
 
@@ -396,7 +430,14 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsGetRequ
 
 ## DatacentersLansNicsPost
 
-> Nic DatacentersLansNicsPost(ctx, datacenterId, lanId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersLansNicsPost(ctx, datacenterId, lanId)
+														.Nic(nic)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Attach a nic
 
@@ -472,7 +513,14 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsPostReq
 
 ## DatacentersLansPatch
 
-> Lan DatacentersLansPatch(ctx, datacenterId, lanId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Lan = DatacentersLansPatch(ctx, datacenterId, lanId)
+														.Lan(lan)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Lan
 
@@ -548,7 +596,14 @@ Other parameters are passed through a pointer to a apiDatacentersLansPatchReques
 
 ## DatacentersLansPost
 
-> LanPost DatacentersLansPost(ctx, datacenterId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LanPost = DatacentersLansPost(ctx, datacenterId)
+														.Lan(lan)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Lan
 
@@ -622,7 +677,14 @@ Other parameters are passed through a pointer to a apiDatacentersLansPostRequest
 
 ## DatacentersLansPut
 
-> Lan DatacentersLansPut(ctx, datacenterId, lanId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Lan = DatacentersLansPut(ctx, datacenterId, lanId)
+														.Lan(lan)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Lan
 

@@ -36,7 +36,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersLabelsDelete
 
-> map[string]interface{} DatacentersLabelsDelete(ctx, datacenterId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersLabelsDelete(ctx, datacenterId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Label from Data Center
 
@@ -110,7 +116,13 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsDeleteReq
 
 ## DatacentersLabelsFindByKey
 
-> LabelResource DatacentersLabelsFindByKey(ctx, datacenterId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersLabelsFindByKey(ctx, datacenterId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Label of Data Center
 
@@ -184,7 +196,15 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsFindByKey
 
 ## DatacentersLabelsGet
 
-> LabelResources DatacentersLabelsGet(ctx, datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result LabelResources = DatacentersLabelsGet(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List all Data Center Labels
 
@@ -260,7 +280,14 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsGetReques
 
 ## DatacentersLabelsPost
 
-> LabelResource DatacentersLabelsPost(ctx, datacenterId).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersLabelsPost(ctx, datacenterId)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a Label to Data Center
 
@@ -334,7 +361,14 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPostReque
 
 ## DatacentersLabelsPut
 
-> LabelResource DatacentersLabelsPut(ctx, datacenterId, key).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersLabelsPut(ctx, datacenterId, key)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Label of Data Center
 
@@ -410,7 +444,13 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPutReques
 
 ## DatacentersServersLabelsDelete
 
-> map[string]interface{} DatacentersServersLabelsDelete(ctx, datacenterId, serverId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersLabelsDelete(ctx, datacenterId, serverId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Label from Server
 
@@ -486,7 +526,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsDe
 
 ## DatacentersServersLabelsFindByKey
 
-> LabelResource DatacentersServersLabelsFindByKey(ctx, datacenterId, serverId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersServersLabelsFindByKey(ctx, datacenterId, serverId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Label of Server
 
@@ -562,7 +608,15 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsFi
 
 ## DatacentersServersLabelsGet
 
-> LabelResources DatacentersServersLabelsGet(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result LabelResources = DatacentersServersLabelsGet(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List all Server Labels
 
@@ -640,7 +694,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsGe
 
 ## DatacentersServersLabelsPost
 
-> LabelResource DatacentersServersLabelsPost(ctx, datacenterId, serverId).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersServersLabelsPost(ctx, datacenterId, serverId)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a Label to Server
 
@@ -716,7 +777,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPo
 
 ## DatacentersServersLabelsPut
 
-> LabelResource DatacentersServersLabelsPut(ctx, datacenterId, serverId, key).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersServersLabelsPut(ctx, datacenterId, serverId, key)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Label of Server
 
@@ -794,7 +862,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPu
 
 ## DatacentersVolumesLabelsDelete
 
-> map[string]interface{} DatacentersVolumesLabelsDelete(ctx, datacenterId, volumeId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersVolumesLabelsDelete(ctx, datacenterId, volumeId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Label from Volume
 
@@ -870,7 +944,13 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsDe
 
 ## DatacentersVolumesLabelsFindByKey
 
-> LabelResource DatacentersVolumesLabelsFindByKey(ctx, datacenterId, volumeId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersVolumesLabelsFindByKey(ctx, datacenterId, volumeId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Label of Volume
 
@@ -946,7 +1026,15 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsFi
 
 ## DatacentersVolumesLabelsGet
 
-> LabelResources DatacentersVolumesLabelsGet(ctx, datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result LabelResources = DatacentersVolumesLabelsGet(ctx, datacenterId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List all Volume Labels
 
@@ -1024,7 +1112,14 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsGe
 
 ## DatacentersVolumesLabelsPost
 
-> LabelResource DatacentersVolumesLabelsPost(ctx, datacenterId, volumeId).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersVolumesLabelsPost(ctx, datacenterId, volumeId)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a Label to Volume
 
@@ -1100,7 +1195,14 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPo
 
 ## DatacentersVolumesLabelsPut
 
-> LabelResource DatacentersVolumesLabelsPut(ctx, datacenterId, volumeId, key).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = DatacentersVolumesLabelsPut(ctx, datacenterId, volumeId, key)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Label of Volume
 
@@ -1178,7 +1280,13 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPu
 
 ## IpblocksLabelsDelete
 
-> map[string]interface{} IpblocksLabelsDelete(ctx, ipblockId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = IpblocksLabelsDelete(ctx, ipblockId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Label from IP Block
 
@@ -1252,7 +1360,13 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsDeleteReques
 
 ## IpblocksLabelsFindByKey
 
-> LabelResource IpblocksLabelsFindByKey(ctx, ipblockId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = IpblocksLabelsFindByKey(ctx, ipblockId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Label of IP Block
 
@@ -1326,7 +1440,13 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsFindByKeyReq
 
 ## IpblocksLabelsGet
 
-> LabelResources IpblocksLabelsGet(ctx, ipblockId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResources = IpblocksLabelsGet(ctx, ipblockId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List all Ip Block Labels
 
@@ -1398,7 +1518,14 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsGetRequest s
 
 ## IpblocksLabelsPost
 
-> LabelResource IpblocksLabelsPost(ctx, ipblockId).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = IpblocksLabelsPost(ctx, ipblockId)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a Label to IP Block
 
@@ -1472,7 +1599,14 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPostRequest 
 
 ## IpblocksLabelsPut
 
-> LabelResource IpblocksLabelsPut(ctx, ipblockId, key).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = IpblocksLabelsPut(ctx, ipblockId, key)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Label of IP Block
 
@@ -1548,7 +1682,13 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPutRequest s
 
 ## LabelsFindByUrn
 
-> Label LabelsFindByUrn(ctx, labelurn).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Label = LabelsFindByUrn(ctx, labelurn)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Returns the label by its URN.
 
@@ -1620,7 +1760,13 @@ Other parameters are passed through a pointer to a apiLabelsFindByUrnRequest str
 
 ## LabelsGet
 
-> Labels LabelsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Labels = LabelsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Labels 
 
@@ -1687,7 +1833,13 @@ Other parameters are passed through a pointer to a apiLabelsGetRequest struct vi
 
 ## SnapshotsLabelsDelete
 
-> map[string]interface{} SnapshotsLabelsDelete(ctx, snapshotId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = SnapshotsLabelsDelete(ctx, snapshotId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Label from Snapshot
 
@@ -1761,7 +1913,13 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsDeleteReque
 
 ## SnapshotsLabelsFindByKey
 
-> LabelResource SnapshotsLabelsFindByKey(ctx, snapshotId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = SnapshotsLabelsFindByKey(ctx, snapshotId, key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Label of Snapshot
 
@@ -1835,7 +1993,13 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsFindByKeyRe
 
 ## SnapshotsLabelsGet
 
-> LabelResources SnapshotsLabelsGet(ctx, snapshotId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResources = SnapshotsLabelsGet(ctx, snapshotId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List all Snapshot Labels
 
@@ -1907,7 +2071,14 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsGetRequest 
 
 ## SnapshotsLabelsPost
 
-> LabelResource SnapshotsLabelsPost(ctx, snapshotId).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = SnapshotsLabelsPost(ctx, snapshotId)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a Label to Snapshot
 
@@ -1981,7 +2152,14 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsPostRequest
 
 ## SnapshotsLabelsPut
 
-> LabelResource SnapshotsLabelsPut(ctx, snapshotId, key).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result LabelResource = SnapshotsLabelsPut(ctx, snapshotId, key)
+														.Label(label)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Label of Snapshot
 

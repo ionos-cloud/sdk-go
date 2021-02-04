@@ -15,7 +15,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersDelete
 
-> map[string]interface{} DatacentersDelete(ctx, datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersDelete(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Data Center
 
@@ -87,7 +93,13 @@ Other parameters are passed through a pointer to a apiDatacentersDeleteRequest s
 
 ## DatacentersFindById
 
-> Datacenter DatacentersFindById(ctx, datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Datacenter = DatacentersFindById(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Data Center
 
@@ -159,7 +171,15 @@ Other parameters are passed through a pointer to a apiDatacentersFindByIdRequest
 
 ## DatacentersGet
 
-> Datacenters DatacentersGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Datacenters = DatacentersGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Data Centers under your account
 
@@ -230,7 +250,14 @@ Other parameters are passed through a pointer to a apiDatacentersGetRequest stru
 
 ## DatacentersPatch
 
-> Datacenter DatacentersPatch(ctx, datacenterId).Datacenter(datacenter).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Datacenter = DatacentersPatch(ctx, datacenterId)
+														.Datacenter(datacenter)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Data Center
 
@@ -304,7 +331,14 @@ Other parameters are passed through a pointer to a apiDatacentersPatchRequest st
 
 ## DatacentersPost
 
-> Datacenter DatacentersPost(ctx).Datacenter(datacenter).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Datacenter = DatacentersPost(ctx)
+														.Datacenter(datacenter)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Data Center
 
@@ -373,7 +407,14 @@ Other parameters are passed through a pointer to a apiDatacentersPostRequest str
 
 ## DatacentersPut
 
-> Datacenter DatacentersPut(ctx, datacenterId).Datacenter(datacenter).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Datacenter = DatacentersPut(ctx, datacenterId)
+														.Datacenter(datacenter)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Data Center
 

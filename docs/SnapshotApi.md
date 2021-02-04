@@ -14,7 +14,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## SnapshotsDelete
 
-> map[string]interface{} SnapshotsDelete(ctx, snapshotId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = SnapshotsDelete(ctx, snapshotId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Snapshot
 
@@ -86,7 +92,13 @@ Other parameters are passed through a pointer to a apiSnapshotsDeleteRequest str
 
 ## SnapshotsFindById
 
-> Snapshot SnapshotsFindById(ctx, snapshotId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Snapshot = SnapshotsFindById(ctx, snapshotId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Snapshot by its uuid.
 
@@ -158,7 +170,13 @@ Other parameters are passed through a pointer to a apiSnapshotsFindByIdRequest s
 
 ## SnapshotsGet
 
-> Snapshots SnapshotsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Snapshots = SnapshotsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Snapshots 
 
@@ -225,7 +243,14 @@ Other parameters are passed through a pointer to a apiSnapshotsGetRequest struct
 
 ## SnapshotsPatch
 
-> Snapshot SnapshotsPatch(ctx, snapshotId).Snapshot(snapshot).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Snapshot = SnapshotsPatch(ctx, snapshotId)
+														.Snapshot(snapshot)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Snapshot
 
@@ -299,7 +324,14 @@ Other parameters are passed through a pointer to a apiSnapshotsPatchRequest stru
 
 ## SnapshotsPut
 
-> Snapshot SnapshotsPut(ctx, snapshotId).Snapshot(snapshot).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Snapshot = SnapshotsPut(ctx, snapshotId)
+														.Snapshot(snapshot)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Snapshot
 

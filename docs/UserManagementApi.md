@@ -39,7 +39,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## UmGroupsDelete
 
-> map[string]interface{} UmGroupsDelete(ctx, groupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = UmGroupsDelete(ctx, groupId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Group
 
@@ -111,7 +117,13 @@ Other parameters are passed through a pointer to a apiUmGroupsDeleteRequest stru
 
 ## UmGroupsFindById
 
-> Group UmGroupsFindById(ctx, groupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Group = UmGroupsFindById(ctx, groupId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Group
 
@@ -183,7 +195,13 @@ Other parameters are passed through a pointer to a apiUmGroupsFindByIdRequest st
 
 ## UmGroupsGet
 
-> Groups UmGroupsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Groups = UmGroupsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List All Groups.
 
@@ -250,7 +268,14 @@ Other parameters are passed through a pointer to a apiUmGroupsGetRequest struct 
 
 ## UmGroupsPost
 
-> Group UmGroupsPost(ctx).Group(group).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Group = UmGroupsPost(ctx)
+														.Group(group)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Group
 
@@ -319,7 +344,14 @@ Other parameters are passed through a pointer to a apiUmGroupsPostRequest struct
 
 ## UmGroupsPut
 
-> Group UmGroupsPut(ctx, groupId).Group(group).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Group = UmGroupsPut(ctx, groupId)
+														.Group(group)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a group
 
@@ -393,7 +425,13 @@ Other parameters are passed through a pointer to a apiUmGroupsPutRequest struct 
 
 ## UmGroupsResourcesGet
 
-> ResourceGroups UmGroupsResourcesGet(ctx, groupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result ResourceGroups = UmGroupsResourcesGet(ctx, groupId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve resources assigned to a group
 
@@ -463,7 +501,13 @@ Other parameters are passed through a pointer to a apiUmGroupsResourcesGetReques
 
 ## UmGroupsSharesDelete
 
-> map[string]interface{} UmGroupsSharesDelete(ctx, groupId, resourceId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = UmGroupsSharesDelete(ctx, groupId, resourceId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Remove a resource from a group
 
@@ -537,7 +581,13 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesDeleteReques
 
 ## UmGroupsSharesFindByResourceId
 
-> GroupShare UmGroupsSharesFindByResourceId(ctx, groupId, resourceId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result GroupShare = UmGroupsSharesFindByResourceId(ctx, groupId, resourceId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a group share
 
@@ -611,7 +661,13 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesFindByResour
 
 ## UmGroupsSharesGet
 
-> GroupShares UmGroupsSharesGet(ctx, groupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result GroupShares = UmGroupsSharesGet(ctx, groupId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Group Shares 
 
@@ -683,7 +739,14 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesGetRequest s
 
 ## UmGroupsSharesPost
 
-> GroupShare UmGroupsSharesPost(ctx, groupId, resourceId).Resource(resource).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result GroupShare = UmGroupsSharesPost(ctx, groupId, resourceId)
+														.Resource(resource)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a resource to a group
 
@@ -759,7 +822,14 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPostRequest 
 
 ## UmGroupsSharesPut
 
-> GroupShare UmGroupsSharesPut(ctx, groupId, resourceId).Resource(resource).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result GroupShare = UmGroupsSharesPut(ctx, groupId, resourceId)
+														.Resource(resource)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify resource permissions of a group
 
@@ -835,7 +905,13 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPutRequest s
 
 ## UmGroupsUsersDelete
 
-> map[string]interface{} UmGroupsUsersDelete(ctx, groupId, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = UmGroupsUsersDelete(ctx, groupId, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Remove a user from a group
 
@@ -909,7 +985,13 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersDeleteRequest
 
 ## UmGroupsUsersGet
 
-> GroupMembers UmGroupsUsersGet(ctx, groupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result GroupMembers = UmGroupsUsersGet(ctx, groupId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Group Members 
 
@@ -981,7 +1063,14 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersGetRequest st
 
 ## UmGroupsUsersPost
 
-> User UmGroupsUsersPost(ctx, groupId).User(user).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result User = UmGroupsUsersPost(ctx, groupId)
+														.User(user)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Add a user to a group
 
@@ -1055,7 +1144,13 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersPostRequest s
 
 ## UmResourcesFindByType
 
-> Resources UmResourcesFindByType(ctx, resourceType).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Resources = UmResourcesFindByType(ctx, resourceType)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a list of Resources by type.
 
@@ -1127,7 +1222,13 @@ Other parameters are passed through a pointer to a apiUmResourcesFindByTypeReque
 
 ## UmResourcesFindByTypeAndId
 
-> Resource UmResourcesFindByTypeAndId(ctx, resourceType, resourceId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Resource = UmResourcesFindByTypeAndId(ctx, resourceType, resourceId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Resource by type.
 
@@ -1201,7 +1302,13 @@ Other parameters are passed through a pointer to a apiUmResourcesFindByTypeAndId
 
 ## UmResourcesGet
 
-> Resources UmResourcesGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Resources = UmResourcesGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List All Resources.
 
@@ -1268,7 +1375,13 @@ Other parameters are passed through a pointer to a apiUmResourcesGetRequest stru
 
 ## UmUsersDelete
 
-> map[string]interface{} UmUsersDelete(ctx, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = UmUsersDelete(ctx, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a User
 
@@ -1340,7 +1453,13 @@ Other parameters are passed through a pointer to a apiUmUsersDeleteRequest struc
 
 ## UmUsersFindById
 
-> User UmUsersFindById(ctx, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result User = UmUsersFindById(ctx, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a User
 
@@ -1412,7 +1531,13 @@ Other parameters are passed through a pointer to a apiUmUsersFindByIdRequest str
 
 ## UmUsersGet
 
-> Users UmUsersGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Users = UmUsersGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List all Users 
 
@@ -1479,7 +1604,13 @@ Other parameters are passed through a pointer to a apiUmUsersGetRequest struct v
 
 ## UmUsersGroupsGet
 
-> ResourceGroups UmUsersGroupsGet(ctx, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result ResourceGroups = UmUsersGroupsGet(ctx, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a User's group resources
 
@@ -1551,7 +1682,13 @@ Other parameters are passed through a pointer to a apiUmUsersGroupsGetRequest st
 
 ## UmUsersOwnsGet
 
-> ResourcesUsers UmUsersOwnsGet(ctx, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result ResourcesUsers = UmUsersOwnsGet(ctx, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a User's own resources
 
@@ -1623,7 +1760,14 @@ Other parameters are passed through a pointer to a apiUmUsersOwnsGetRequest stru
 
 ## UmUsersPost
 
-> User UmUsersPost(ctx).User(user).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result User = UmUsersPost(ctx)
+														.User(user)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a user
 
@@ -1692,7 +1836,14 @@ Other parameters are passed through a pointer to a apiUmUsersPostRequest struct 
 
 ## UmUsersPut
 
-> User UmUsersPut(ctx, userId).User(user).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result User = UmUsersPut(ctx, userId)
+														.User(user)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a user
 
@@ -1766,7 +1917,13 @@ Other parameters are passed through a pointer to a apiUmUsersPutRequest struct v
 
 ## UmUsersS3keysDelete
 
-> map[string]interface{} UmUsersS3keysDelete(ctx, userId, keyId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = UmUsersS3keysDelete(ctx, userId, keyId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a S3 key
 
@@ -1840,7 +1997,13 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysDeleteRequest
 
 ## UmUsersS3keysFindByKeyId
 
-> S3Key UmUsersS3keysFindByKeyId(ctx, userId, keyId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result S3Key = UmUsersS3keysFindByKeyId(ctx, userId, keyId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve given S3 key belonging to the given User
 
@@ -1914,7 +2077,13 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysFindByKeyIdRe
 
 ## UmUsersS3keysGet
 
-> S3Keys UmUsersS3keysGet(ctx, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result S3Keys = UmUsersS3keysGet(ctx, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a User's S3 keys
 
@@ -1986,7 +2155,13 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysGetRequest st
 
 ## UmUsersS3keysPost
 
-> S3Key UmUsersS3keysPost(ctx, userId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result S3Key = UmUsersS3keysPost(ctx, userId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a S3 key for the given user
 
@@ -2058,7 +2233,14 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPostRequest s
 
 ## UmUsersS3keysPut
 
-> S3Key UmUsersS3keysPut(ctx, userId, keyId).S3Key(s3Key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result S3Key = UmUsersS3keysPut(ctx, userId, keyId)
+														.S3Key(s3Key)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a S3 key having the given key id
 
@@ -2134,7 +2316,12 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPutRequest st
 
 ## UmUsersS3ssourlGet
 
-> S3ObjectStorageSSO UmUsersS3ssourlGet(ctx, userId).Pretty(pretty).XContractNumber(xContractNumber).Execute()
+```go
+var result S3ObjectStorageSSO = UmUsersS3ssourlGet(ctx, userId)
+														.Pretty(pretty)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve S3 object storage single signon URL for the given user
 

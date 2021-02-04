@@ -21,7 +21,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersServersNicsDelete
 
-> map[string]interface{} DatacentersServersNicsDelete(ctx, datacenterId, serverId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersNicsDelete(ctx, datacenterId, serverId, nicId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Nic
 
@@ -97,7 +103,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsDele
 
 ## DatacentersServersNicsFindById
 
-> Nic DatacentersServersNicsFindById(ctx, datacenterId, serverId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersServersNicsFindById(ctx, datacenterId, serverId, nicId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Nic
 
@@ -173,7 +185,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFind
 
 ## DatacentersServersNicsFirewallrulesDelete
 
-> map[string]interface{} DatacentersServersNicsFirewallrulesDelete(ctx, datacenterId, serverId, nicId, firewallruleId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersNicsFirewallrulesDelete(ctx, datacenterId, serverId, nicId, firewallruleId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Firewall Rule
 
@@ -251,7 +269,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ## DatacentersServersNicsFirewallrulesFindById
 
-> FirewallRule DatacentersServersNicsFirewallrulesFindById(ctx, datacenterId, serverId, nicId, firewallruleId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result FirewallRule = DatacentersServersNicsFirewallrulesFindById(ctx, datacenterId, serverId, nicId, firewallruleId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Firewall Rule
 
@@ -329,7 +353,15 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ## DatacentersServersNicsFirewallrulesGet
 
-> FirewallRules DatacentersServersNicsFirewallrulesGet(ctx, datacenterId, serverId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result FirewallRules = DatacentersServersNicsFirewallrulesGet(ctx, datacenterId, serverId, nicId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Firewall Rules 
 
@@ -409,7 +441,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ## DatacentersServersNicsFirewallrulesPatch
 
-> FirewallRule DatacentersServersNicsFirewallrulesPatch(ctx, datacenterId, serverId, nicId, firewallruleId).Firewallrule(firewallrule).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result FirewallRule = DatacentersServersNicsFirewallrulesPatch(ctx, datacenterId, serverId, nicId, firewallruleId)
+														.Firewallrule(firewallrule)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Firewall Rule
 
@@ -489,7 +528,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ## DatacentersServersNicsFirewallrulesPost
 
-> FirewallRule DatacentersServersNicsFirewallrulesPost(ctx, datacenterId, serverId, nicId).Firewallrule(firewallrule).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result FirewallRule = DatacentersServersNicsFirewallrulesPost(ctx, datacenterId, serverId, nicId)
+														.Firewallrule(firewallrule)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Firewall Rule
 
@@ -567,7 +613,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ## DatacentersServersNicsFirewallrulesPut
 
-> FirewallRule DatacentersServersNicsFirewallrulesPut(ctx, datacenterId, serverId, nicId, firewallruleId).Firewallrule(firewallrule).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result FirewallRule = DatacentersServersNicsFirewallrulesPut(ctx, datacenterId, serverId, nicId, firewallruleId)
+														.Firewallrule(firewallrule)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Firewall Rule
 
@@ -647,7 +700,15 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ## DatacentersServersNicsGet
 
-> Nics DatacentersServersNicsGet(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Nics = DatacentersServersNicsGet(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Nics 
 
@@ -725,7 +786,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsGetR
 
 ## DatacentersServersNicsPatch
 
-> Nic DatacentersServersNicsPatch(ctx, datacenterId, serverId, nicId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersServersNicsPatch(ctx, datacenterId, serverId, nicId)
+														.Nic(nic)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Nic
 
@@ -803,7 +871,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPatc
 
 ## DatacentersServersNicsPost
 
-> Nic DatacentersServersNicsPost(ctx, datacenterId, serverId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersServersNicsPost(ctx, datacenterId, serverId)
+														.Nic(nic)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Nic
 
@@ -879,7 +954,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPost
 
 ## DatacentersServersNicsPut
 
-> Nic DatacentersServersNicsPut(ctx, datacenterId, serverId, nicId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersServersNicsPut(ctx, datacenterId, serverId, nicId)
+														.Nic(nic)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Nic
 

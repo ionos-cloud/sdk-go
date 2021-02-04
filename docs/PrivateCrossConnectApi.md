@@ -14,7 +14,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## PccsDelete
 
-> map[string]interface{} PccsDelete(ctx, pccId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = PccsDelete(ctx, pccId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Private Cross-Connect
 
@@ -86,7 +92,13 @@ Other parameters are passed through a pointer to a apiPccsDeleteRequest struct v
 
 ## PccsFindById
 
-> PrivateCrossConnect PccsFindById(ctx, pccId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result PrivateCrossConnect = PccsFindById(ctx, pccId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Private Cross-Connect
 
@@ -158,7 +170,13 @@ Other parameters are passed through a pointer to a apiPccsFindByIdRequest struct
 
 ## PccsGet
 
-> PrivateCrossConnects PccsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result PrivateCrossConnects = PccsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Private Cross-Connects 
 
@@ -225,7 +243,14 @@ Other parameters are passed through a pointer to a apiPccsGetRequest struct via 
 
 ## PccsPatch
 
-> PrivateCrossConnect PccsPatch(ctx, pccId).Pcc(pcc).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result PrivateCrossConnect = PccsPatch(ctx, pccId)
+														.Pcc(pcc)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a private cross-connect
 
@@ -299,7 +324,14 @@ Other parameters are passed through a pointer to a apiPccsPatchRequest struct vi
 
 ## PccsPost
 
-> PrivateCrossConnect PccsPost(ctx).Pcc(pcc).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result PrivateCrossConnect = PccsPost(ctx)
+														.Pcc(pcc)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Private Cross-Connect
 

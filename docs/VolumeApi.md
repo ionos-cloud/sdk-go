@@ -17,7 +17,17 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersVolumesCreateSnapshotPost
 
-> Snapshot DatacentersVolumesCreateSnapshotPost(ctx, datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Name(name).Description(description).SecAuthProtection(secAuthProtection).LicenceType(licenceType).Execute()
+```go
+var result Snapshot = DatacentersVolumesCreateSnapshotPost(ctx, datacenterId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Name(name)
+														.Description(description)
+														.SecAuthProtection(secAuthProtection)
+														.LicenceType(licenceType)
+														.Execute()
+```
 
 Create Volume Snapshot
 
@@ -99,7 +109,13 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesCreateSn
 
 ## DatacentersVolumesDelete
 
-> map[string]interface{} DatacentersVolumesDelete(ctx, datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersVolumesDelete(ctx, datacenterId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Volume
 
@@ -173,7 +189,13 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesDeleteRe
 
 ## DatacentersVolumesFindById
 
-> Volume DatacentersVolumesFindById(ctx, datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Volume = DatacentersVolumesFindById(ctx, datacenterId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Volume
 
@@ -247,7 +269,15 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesFindById
 
 ## DatacentersVolumesGet
 
-> Volumes DatacentersVolumesGet(ctx, datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Volumes = DatacentersVolumesGet(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Volumes 
 
@@ -323,7 +353,14 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesGetReque
 
 ## DatacentersVolumesPatch
 
-> Volume DatacentersVolumesPatch(ctx, datacenterId, volumeId).Volume(volume).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Volume = DatacentersVolumesPatch(ctx, datacenterId, volumeId)
+														.Volume(volume)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Volume
 
@@ -399,7 +436,14 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPatchReq
 
 ## DatacentersVolumesPost
 
-> Volume DatacentersVolumesPost(ctx, datacenterId).Volume(volume).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Volume = DatacentersVolumesPost(ctx, datacenterId)
+														.Volume(volume)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Volume
 
@@ -473,7 +517,14 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPostRequ
 
 ## DatacentersVolumesPut
 
-> Volume DatacentersVolumesPut(ctx, datacenterId, volumeId).Volume(volume).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Volume = DatacentersVolumesPut(ctx, datacenterId, volumeId)
+														.Volume(volume)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Volume
 
@@ -549,7 +600,14 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPutReque
 
 ## DatacentersVolumesRestoreSnapshotPost
 
-> map[string]interface{} DatacentersVolumesRestoreSnapshotPost(ctx, datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).SnapshotId(snapshotId).Execute()
+```go
+var result map[string]interface{} = DatacentersVolumesRestoreSnapshotPost(ctx, datacenterId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.SnapshotId(snapshotId)
+														.Execute()
+```
 
 Restore Volume Snapshot
 

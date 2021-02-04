@@ -16,7 +16,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## BackupunitsDelete
 
-> map[string]interface{} BackupunitsDelete(ctx, backupunitId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = BackupunitsDelete(ctx, backupunitId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Backup Unit
 
@@ -88,7 +94,13 @@ Other parameters are passed through a pointer to a apiBackupunitsDeleteRequest s
 
 ## BackupunitsFindById
 
-> BackupUnit BackupunitsFindById(ctx, backupunitId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result BackupUnit = BackupunitsFindById(ctx, backupunitId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Returns the specified backup Unit
 
@@ -160,7 +172,13 @@ Other parameters are passed through a pointer to a apiBackupunitsFindByIdRequest
 
 ## BackupunitsGet
 
-> BackupUnits BackupunitsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result BackupUnits = BackupunitsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Backup Units 
 
@@ -227,7 +245,14 @@ Other parameters are passed through a pointer to a apiBackupunitsGetRequest stru
 
 ## BackupunitsPatch
 
-> BackupUnit BackupunitsPatch(ctx, backupunitId).BackupUnitProperties(backupUnitProperties).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result BackupUnit = BackupunitsPatch(ctx, backupunitId)
+														.BackupUnitProperties(backupUnitProperties)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Backup Unit
 
@@ -301,7 +326,14 @@ Other parameters are passed through a pointer to a apiBackupunitsPatchRequest st
 
 ## BackupunitsPost
 
-> BackupUnit BackupunitsPost(ctx).BackupUnit(backupUnit).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result BackupUnit = BackupunitsPost(ctx)
+														.BackupUnit(backupUnit)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Backup Unit
 
@@ -370,7 +402,14 @@ Other parameters are passed through a pointer to a apiBackupunitsPostRequest str
 
 ## BackupunitsPut
 
-> BackupUnit BackupunitsPut(ctx, backupunitId).BackupUnit(backupUnit).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result BackupUnit = BackupunitsPut(ctx, backupunitId)
+														.BackupUnit(backupUnit)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Backup Unit
 
@@ -444,7 +483,12 @@ Other parameters are passed through a pointer to a apiBackupunitsPutRequest stru
 
 ## BackupunitsSsourlGet
 
-> BackupUnitSSO BackupunitsSsourlGet(ctx, backupunitId).Pretty(pretty).XContractNumber(xContractNumber).Execute()
+```go
+var result BackupUnitSSO = BackupunitsSsourlGet(ctx, backupunitId)
+														.Pretty(pretty)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Returns a single signon URL for the specified backup Unit.
 

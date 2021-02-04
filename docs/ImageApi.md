@@ -14,7 +14,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## ImagesDelete
 
-> map[string]interface{} ImagesDelete(ctx, imageId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = ImagesDelete(ctx, imageId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete an Image
 
@@ -86,7 +92,13 @@ Other parameters are passed through a pointer to a apiImagesDeleteRequest struct
 
 ## ImagesFindById
 
-> Image ImagesFindById(ctx, imageId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Image = ImagesFindById(ctx, imageId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve an Image
 
@@ -158,7 +170,13 @@ Other parameters are passed through a pointer to a apiImagesFindByIdRequest stru
 
 ## ImagesGet
 
-> Images ImagesGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Images = ImagesGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Images 
 
@@ -225,7 +243,14 @@ Other parameters are passed through a pointer to a apiImagesGetRequest struct vi
 
 ## ImagesPatch
 
-> Image ImagesPatch(ctx, imageId).Image(image).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Image = ImagesPatch(ctx, imageId)
+														.Image(image)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify an Image
 
@@ -299,7 +324,14 @@ Other parameters are passed through a pointer to a apiImagesPatchRequest struct 
 
 ## ImagesPut
 
-> Image ImagesPut(ctx, imageId).Image(image).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Image = ImagesPut(ctx, imageId)
+														.Image(image)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify an Image
 

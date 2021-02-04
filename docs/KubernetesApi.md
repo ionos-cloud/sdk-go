@@ -27,7 +27,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## K8sDelete
 
-> map[string]interface{} K8sDelete(ctx, k8sClusterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = K8sDelete(ctx, k8sClusterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete Kubernetes Cluster
 
@@ -99,7 +105,13 @@ Other parameters are passed through a pointer to a apiK8sDeleteRequest struct vi
 
 ## K8sFindByClusterId
 
-> KubernetesCluster K8sFindByClusterId(ctx, k8sClusterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesCluster = K8sFindByClusterId(ctx, k8sClusterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve Kubernetes Cluster
 
@@ -171,7 +183,13 @@ Other parameters are passed through a pointer to a apiK8sFindByClusterIdRequest 
 
 ## K8sGet
 
-> KubernetesClusters K8sGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesClusters = K8sGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Kubernetes Clusters
 
@@ -238,7 +256,13 @@ Other parameters are passed through a pointer to a apiK8sGetRequest struct via t
 
 ## K8sKubeconfigGet
 
-> KubernetesConfig K8sKubeconfigGet(ctx, k8sClusterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesConfig = K8sKubeconfigGet(ctx, k8sClusterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve Kubernetes Configuration File
 
@@ -310,7 +334,13 @@ Other parameters are passed through a pointer to a apiK8sKubeconfigGetRequest st
 
 ## K8sNodepoolsDelete
 
-> map[string]interface{} K8sNodepoolsDelete(ctx, k8sClusterId, nodepoolId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = K8sNodepoolsDelete(ctx, k8sClusterId, nodepoolId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete Kubernetes Node Pool
 
@@ -384,7 +414,13 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsDeleteRequest 
 
 ## K8sNodepoolsFindById
 
-> KubernetesNodePool K8sNodepoolsFindById(ctx, k8sClusterId, nodepoolId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesNodePool = K8sNodepoolsFindById(ctx, k8sClusterId, nodepoolId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve Kubernetes Node Pool
 
@@ -458,7 +494,13 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsFindByIdReques
 
 ## K8sNodepoolsGet
 
-> KubernetesNodePools K8sNodepoolsGet(ctx, k8sClusterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesNodePools = K8sNodepoolsGet(ctx, k8sClusterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Kubernetes Node Pools
 
@@ -530,7 +572,13 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsGetRequest str
 
 ## K8sNodepoolsNodesDelete
 
-> map[string]interface{} K8sNodepoolsNodesDelete(ctx, k8sClusterId, nodepoolId, nodeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = K8sNodepoolsNodesDelete(ctx, k8sClusterId, nodepoolId, nodeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete Kubernetes node
 
@@ -606,7 +654,13 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesDeleteReq
 
 ## K8sNodepoolsNodesFindById
 
-> KubernetesNode K8sNodepoolsNodesFindById(ctx, k8sClusterId, nodepoolId, nodeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesNode = K8sNodepoolsNodesFindById(ctx, k8sClusterId, nodepoolId, nodeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve Kubernetes node
 
@@ -682,7 +736,13 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesFindByIdR
 
 ## K8sNodepoolsNodesGet
 
-> KubernetesNodes K8sNodepoolsNodesGet(ctx, k8sClusterId, nodepoolId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesNodes = K8sNodepoolsNodesGet(ctx, k8sClusterId, nodepoolId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve Kubernetes nodes.
 
@@ -756,7 +816,13 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesGetReques
 
 ## K8sNodepoolsNodesReplacePost
 
-> map[string]interface{} K8sNodepoolsNodesReplacePost(ctx, k8sClusterId, nodepoolId, nodeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = K8sNodepoolsNodesReplacePost(ctx, k8sClusterId, nodepoolId, nodeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Recreate the Kubernetes node
 
@@ -832,7 +898,14 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesReplacePo
 
 ## K8sNodepoolsPost
 
-> KubernetesNodePool K8sNodepoolsPost(ctx, k8sClusterId).KubernetesNodePool(kubernetesNodePool).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesNodePool = K8sNodepoolsPost(ctx, k8sClusterId)
+														.KubernetesNodePool(kubernetesNodePool)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Kubernetes Node Pool
 
@@ -906,7 +979,14 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest st
 
 ## K8sNodepoolsPut
 
-> KubernetesNodePoolForPut K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId).KubernetesNodePool(kubernetesNodePool).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesNodePoolForPut = K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId)
+														.KubernetesNodePool(kubernetesNodePool)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify Kubernetes Node Pool
 
@@ -982,7 +1062,14 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPutRequest str
 
 ## K8sPost
 
-> KubernetesCluster K8sPost(ctx).KubernetesCluster(kubernetesCluster).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesCluster = K8sPost(ctx)
+														.KubernetesCluster(kubernetesCluster)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create Kubernetes Cluster
 
@@ -1051,7 +1138,14 @@ Other parameters are passed through a pointer to a apiK8sPostRequest struct via 
 
 ## K8sPut
 
-> KubernetesCluster K8sPut(ctx, k8sClusterId).KubernetesCluster(kubernetesCluster).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result KubernetesCluster = K8sPut(ctx, k8sClusterId)
+														.KubernetesCluster(kubernetesCluster)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify Kubernetes Cluster
 
@@ -1125,7 +1219,10 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 
 ## K8sVersionsCompatibilitiesGet
 
-> []string K8sVersionsCompatibilitiesGet(ctx, clusterVersion).Execute()
+```go
+var result []string = K8sVersionsCompatibilitiesGet(ctx, clusterVersion)
+														.Execute()
+```
 
 Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
 
@@ -1191,7 +1288,10 @@ Other parameters are passed through a pointer to a apiK8sVersionsCompatibilities
 
 ## K8sVersionsDefaultGet
 
-> string K8sVersionsDefaultGet(ctx).Execute()
+```go
+var result string = K8sVersionsDefaultGet(ctx)
+														.Execute()
+```
 
 Retrieve the current default kubernetes version for clusters and nodepools.
 
@@ -1249,7 +1349,10 @@ Other parameters are passed through a pointer to a apiK8sVersionsDefaultGetReque
 
 ## K8sVersionsGet
 
-> []string K8sVersionsGet(ctx).Execute()
+```go
+var result []string = K8sVersionsGet(ctx)
+														.Execute()
+```
 
 Retrieve available Kubernetes versions
 

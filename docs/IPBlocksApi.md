@@ -15,7 +15,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## IpblocksDelete
 
-> map[string]interface{} IpblocksDelete(ctx, ipblockId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = IpblocksDelete(ctx, ipblockId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete IP Block
 
@@ -87,7 +93,13 @@ Other parameters are passed through a pointer to a apiIpblocksDeleteRequest stru
 
 ## IpblocksFindById
 
-> IpBlock IpblocksFindById(ctx, ipblockId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result IpBlock = IpblocksFindById(ctx, ipblockId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve an IP Block
 
@@ -159,7 +171,13 @@ Other parameters are passed through a pointer to a apiIpblocksFindByIdRequest st
 
 ## IpblocksGet
 
-> IpBlocks IpblocksGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result IpBlocks = IpblocksGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List IP Blocks 
 
@@ -226,7 +244,14 @@ Other parameters are passed through a pointer to a apiIpblocksGetRequest struct 
 
 ## IpblocksPatch
 
-> IpBlock IpblocksPatch(ctx, ipblockId).Ipblock(ipblock).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result IpBlock = IpblocksPatch(ctx, ipblockId)
+														.Ipblock(ipblock)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify IP Block
 
@@ -300,7 +325,14 @@ Other parameters are passed through a pointer to a apiIpblocksPatchRequest struc
 
 ## IpblocksPost
 
-> IpBlock IpblocksPost(ctx).Ipblock(ipblock).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result IpBlock = IpblocksPost(ctx)
+														.Ipblock(ipblock)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Reserve IP Block
 
@@ -369,7 +401,14 @@ Other parameters are passed through a pointer to a apiIpblocksPostRequest struct
 
 ## IpblocksPut
 
-> IpBlock IpblocksPut(ctx, ipblockId).Ipblock(ipblock).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result IpBlock = IpblocksPut(ctx, ipblockId)
+														.Ipblock(ipblock)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify IP Block
 

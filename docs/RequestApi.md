@@ -12,7 +12,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## RequestsFindById
 
-> Request RequestsFindById(ctx, requestId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Request = RequestsFindById(ctx, requestId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Request
 
@@ -84,7 +90,18 @@ Other parameters are passed through a pointer to a apiRequestsFindByIdRequest st
 
 ## RequestsGet
 
-> Requests RequestsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).Offset(offset).Limit(limit).Execute()
+```go
+var result Requests = RequestsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.FilterStatus(filterStatus)
+														.FilterCreatedAfter(filterCreatedAfter)
+														.FilterCreatedBefore(filterCreatedBefore)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Requests
 
@@ -161,7 +178,13 @@ Other parameters are passed through a pointer to a apiRequestsGetRequest struct 
 
 ## RequestsStatusGet
 
-> RequestStatus RequestsStatusGet(ctx, requestId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result RequestStatus = RequestsStatusGet(ctx, requestId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve Request Status
 

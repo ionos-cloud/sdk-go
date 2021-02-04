@@ -12,7 +12,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## LocationsFindByRegionId
 
-> Locations LocationsFindByRegionId(ctx, regionId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Locations = LocationsFindByRegionId(ctx, regionId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Locations within a region
 
@@ -84,7 +90,13 @@ Other parameters are passed through a pointer to a apiLocationsFindByRegionIdReq
 
 ## LocationsFindByRegionIdAndId
 
-> Location LocationsFindByRegionIdAndId(ctx, regionId, locationId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Location = LocationsFindByRegionIdAndId(ctx, regionId, locationId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Location
 
@@ -158,7 +170,13 @@ Other parameters are passed through a pointer to a apiLocationsFindByRegionIdAnd
 
 ## LocationsGet
 
-> Locations LocationsGet(ctx).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Locations = LocationsGet(ctx)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 List Locations
 

@@ -19,7 +19,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersLoadbalancersBalancednicsDelete
 
-> map[string]interface{} DatacentersLoadbalancersBalancednicsDelete(ctx, datacenterId, loadbalancerId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersLoadbalancersBalancednicsDelete(ctx, datacenterId, loadbalancerId, nicId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Detach a nic from loadbalancer
 
@@ -95,7 +101,13 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersBa
 
 ## DatacentersLoadbalancersBalancednicsFindByNicId
 
-> Nic DatacentersLoadbalancersBalancednicsFindByNicId(ctx, datacenterId, loadbalancerId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersLoadbalancersBalancednicsFindByNicId(ctx, datacenterId, loadbalancerId, nicId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a nic attached to Load Balancer
 
@@ -171,7 +183,15 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersBa
 
 ## DatacentersLoadbalancersBalancednicsGet
 
-> BalancedNics DatacentersLoadbalancersBalancednicsGet(ctx, datacenterId, loadbalancerId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result BalancedNics = DatacentersLoadbalancersBalancednicsGet(ctx, datacenterId, loadbalancerId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Load Balancer Members 
 
@@ -249,7 +269,14 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersBa
 
 ## DatacentersLoadbalancersBalancednicsPost
 
-> Nic DatacentersLoadbalancersBalancednicsPost(ctx, datacenterId, loadbalancerId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Nic = DatacentersLoadbalancersBalancednicsPost(ctx, datacenterId, loadbalancerId)
+														.Nic(nic)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Attach a nic to Load Balancer
 
@@ -325,7 +352,13 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersBa
 
 ## DatacentersLoadbalancersDelete
 
-> map[string]interface{} DatacentersLoadbalancersDelete(ctx, datacenterId, loadbalancerId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersLoadbalancersDelete(ctx, datacenterId, loadbalancerId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Loadbalancer.
 
@@ -399,7 +432,13 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersDe
 
 ## DatacentersLoadbalancersFindById
 
-> Loadbalancer DatacentersLoadbalancersFindById(ctx, datacenterId, loadbalancerId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Loadbalancer = DatacentersLoadbalancersFindById(ctx, datacenterId, loadbalancerId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a loadbalancer
 
@@ -473,7 +512,15 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersFi
 
 ## DatacentersLoadbalancersGet
 
-> Loadbalancers DatacentersLoadbalancersGet(ctx, datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Loadbalancers = DatacentersLoadbalancersGet(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Load Balancers
 
@@ -549,7 +596,14 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersGe
 
 ## DatacentersLoadbalancersPatch
 
-> Loadbalancer DatacentersLoadbalancersPatch(ctx, datacenterId, loadbalancerId).Loadbalancer(loadbalancer).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Loadbalancer = DatacentersLoadbalancersPatch(ctx, datacenterId, loadbalancerId)
+														.Loadbalancer(loadbalancer)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Loadbalancer
 
@@ -625,7 +679,14 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersPa
 
 ## DatacentersLoadbalancersPost
 
-> Loadbalancer DatacentersLoadbalancersPost(ctx, datacenterId).Loadbalancer(loadbalancer).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Loadbalancer = DatacentersLoadbalancersPost(ctx, datacenterId)
+														.Loadbalancer(loadbalancer)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Load Balancer
 
@@ -699,7 +760,14 @@ Other parameters are passed through a pointer to a apiDatacentersLoadbalancersPo
 
 ## DatacentersLoadbalancersPut
 
-> Loadbalancer DatacentersLoadbalancersPut(ctx, datacenterId, loadbalancerId).Loadbalancer(loadbalancer).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Loadbalancer = DatacentersLoadbalancersPut(ctx, datacenterId, loadbalancerId)
+														.Loadbalancer(loadbalancer)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Load Balancer
 

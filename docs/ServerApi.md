@@ -27,7 +27,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ## DatacentersServersCdromsDelete
 
-> map[string]interface{} DatacentersServersCdromsDelete(ctx, datacenterId, serverId, cdromId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersCdromsDelete(ctx, datacenterId, serverId, cdromId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Detach a CD-ROM
 
@@ -103,7 +109,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsDe
 
 ## DatacentersServersCdromsFindById
 
-> Image DatacentersServersCdromsFindById(ctx, datacenterId, serverId, cdromId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Image = DatacentersServersCdromsFindById(ctx, datacenterId, serverId, cdromId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve an attached CD-ROM
 
@@ -179,7 +191,15 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsFi
 
 ## DatacentersServersCdromsGet
 
-> Cdroms DatacentersServersCdromsGet(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Cdroms = DatacentersServersCdromsGet(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List attached CD-ROMs 
 
@@ -257,7 +277,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsGe
 
 ## DatacentersServersCdromsPost
 
-> Image DatacentersServersCdromsPost(ctx, datacenterId, serverId).Cdrom(cdrom).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Image = DatacentersServersCdromsPost(ctx, datacenterId, serverId)
+														.Cdrom(cdrom)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Attach a CD-ROM
 
@@ -333,7 +360,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsPo
 
 ## DatacentersServersDelete
 
-> map[string]interface{} DatacentersServersDelete(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersDelete(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Delete a Server
 
@@ -407,7 +440,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersDeleteRe
 
 ## DatacentersServersFindById
 
-> Server DatacentersServersFindById(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Server = DatacentersServersFindById(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve a Server
 
@@ -481,7 +520,16 @@ Other parameters are passed through a pointer to a apiDatacentersServersFindById
 
 ## DatacentersServersGet
 
-> Servers DatacentersServersGet(ctx, datacenterId).Pretty(pretty).Depth(depth).UpgradeNeeded(upgradeNeeded).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result Servers = DatacentersServersGet(ctx, datacenterId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.UpgradeNeeded(upgradeNeeded)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Servers 
 
@@ -559,7 +607,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersGetReque
 
 ## DatacentersServersPatch
 
-> Server DatacentersServersPatch(ctx, datacenterId, serverId).Server(server).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Server = DatacentersServersPatch(ctx, datacenterId, serverId)
+														.Server(server)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Partially modify a Server
 
@@ -635,7 +690,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersPatchReq
 
 ## DatacentersServersPost
 
-> Server DatacentersServersPost(ctx, datacenterId).Server(server).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Server = DatacentersServersPost(ctx, datacenterId)
+														.Server(server)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Create a Server
 
@@ -709,7 +771,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersPostRequ
 
 ## DatacentersServersPut
 
-> Server DatacentersServersPut(ctx, datacenterId, serverId).Server(server).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Server = DatacentersServersPut(ctx, datacenterId, serverId)
+														.Server(server)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Modify a Server
 
@@ -785,7 +854,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersPutReque
 
 ## DatacentersServersRebootPost
 
-> map[string]interface{} DatacentersServersRebootPost(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersRebootPost(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Reboot a Server
 
@@ -859,7 +934,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersRebootPo
 
 ## DatacentersServersStartPost
 
-> map[string]interface{} DatacentersServersStartPost(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersStartPost(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Start a Server
 
@@ -933,7 +1014,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersStartPos
 
 ## DatacentersServersStopPost
 
-> map[string]interface{} DatacentersServersStopPost(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersStopPost(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Stop a Server
 
@@ -1007,7 +1094,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersStopPost
 
 ## DatacentersServersUpgradePost
 
-> map[string]interface{} DatacentersServersUpgradePost(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersUpgradePost(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Upgrade a Server
 
@@ -1081,7 +1174,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersUpgradeP
 
 ## DatacentersServersVolumesDelete
 
-> map[string]interface{} DatacentersServersVolumesDelete(ctx, datacenterId, serverId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result map[string]interface{} = DatacentersServersVolumesDelete(ctx, datacenterId, serverId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Detach a volume
 
@@ -1157,7 +1256,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesD
 
 ## DatacentersServersVolumesFindById
 
-> Volume DatacentersServersVolumesFindById(ctx, datacenterId, serverId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Volume = DatacentersServersVolumesFindById(ctx, datacenterId, serverId, volumeId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Retrieve an attached volume
 
@@ -1233,7 +1338,15 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesF
 
 ## DatacentersServersVolumesGet
 
-> AttachedVolumes DatacentersServersVolumesGet(ctx, datacenterId, serverId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+```go
+var result AttachedVolumes = DatacentersServersVolumesGet(ctx, datacenterId, serverId)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Offset(offset)
+														.Limit(limit)
+														.Execute()
+```
 
 List Attached Volumes
 
@@ -1311,7 +1424,14 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesG
 
 ## DatacentersServersVolumesPost
 
-> Volume DatacentersServersVolumesPost(ctx, datacenterId, serverId).Volume(volume).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+```go
+var result Volume = DatacentersServersVolumesPost(ctx, datacenterId, serverId)
+														.Volume(volume)
+														.Pretty(pretty)
+														.Depth(depth)
+														.XContractNumber(xContractNumber)
+														.Execute()
+```
 
 Attach a volume
 
