@@ -12,10 +12,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result Info = ApiInfoGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Display API information
@@ -69,10 +69,6 @@ Other parameters are passed through a pointer to a apiApiInfoGetRequest struct v
 ### Return type
 
 [**Info**](Info.md)
-
-### Authorization
-
-No authorization required
 
 ### HTTP request headers
 

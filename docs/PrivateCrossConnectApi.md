@@ -16,10 +16,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = PccsDelete(ctx, pccId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Private Cross-Connect
@@ -79,10 +79,6 @@ Other parameters are passed through a pointer to a apiPccsDeleteRequest struct v
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -94,10 +90,10 @@ Other parameters are passed through a pointer to a apiPccsDeleteRequest struct v
 
 ```go
 var result PrivateCrossConnect = PccsFindById(ctx, pccId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Private Cross-Connect
@@ -157,10 +153,6 @@ Other parameters are passed through a pointer to a apiPccsFindByIdRequest struct
 
 [**PrivateCrossConnect**](PrivateCrossConnect.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -172,10 +164,10 @@ Other parameters are passed through a pointer to a apiPccsFindByIdRequest struct
 
 ```go
 var result PrivateCrossConnects = PccsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Private Cross-Connects 
@@ -230,10 +222,6 @@ Other parameters are passed through a pointer to a apiPccsGetRequest struct via 
 
 [**PrivateCrossConnects**](PrivateCrossConnects.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -245,11 +233,11 @@ Other parameters are passed through a pointer to a apiPccsGetRequest struct via 
 
 ```go
 var result PrivateCrossConnect = PccsPatch(ctx, pccId)
-														.Pcc(pcc)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pcc(pcc)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a private cross-connect
@@ -311,10 +299,6 @@ Other parameters are passed through a pointer to a apiPccsPatchRequest struct vi
 
 [**PrivateCrossConnect**](PrivateCrossConnect.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -326,11 +310,11 @@ Other parameters are passed through a pointer to a apiPccsPatchRequest struct vi
 
 ```go
 var result PrivateCrossConnect = PccsPost(ctx)
-														.Pcc(pcc)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pcc(pcc)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Private Cross-Connect
@@ -386,10 +370,6 @@ Other parameters are passed through a pointer to a apiPccsPostRequest struct via
 ### Return type
 
 [**PrivateCrossConnect**](PrivateCrossConnect.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

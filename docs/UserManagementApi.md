@@ -41,10 +41,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = UmGroupsDelete(ctx, groupId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Group
@@ -104,10 +104,6 @@ Other parameters are passed through a pointer to a apiUmGroupsDeleteRequest stru
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -119,10 +115,10 @@ Other parameters are passed through a pointer to a apiUmGroupsDeleteRequest stru
 
 ```go
 var result Group = UmGroupsFindById(ctx, groupId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Group
@@ -182,10 +178,6 @@ Other parameters are passed through a pointer to a apiUmGroupsFindByIdRequest st
 
 [**Group**](Group.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -197,10 +189,10 @@ Other parameters are passed through a pointer to a apiUmGroupsFindByIdRequest st
 
 ```go
 var result Groups = UmGroupsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List All Groups.
@@ -255,10 +247,6 @@ Other parameters are passed through a pointer to a apiUmGroupsGetRequest struct 
 
 [**Groups**](Groups.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -270,11 +258,11 @@ Other parameters are passed through a pointer to a apiUmGroupsGetRequest struct 
 
 ```go
 var result Group = UmGroupsPost(ctx)
-														.Group(group)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Group(group)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Group
@@ -331,10 +319,6 @@ Other parameters are passed through a pointer to a apiUmGroupsPostRequest struct
 
 [**Group**](Group.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -346,11 +330,11 @@ Other parameters are passed through a pointer to a apiUmGroupsPostRequest struct
 
 ```go
 var result Group = UmGroupsPut(ctx, groupId)
-														.Group(group)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Group(group)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a group
@@ -412,10 +396,6 @@ Other parameters are passed through a pointer to a apiUmGroupsPutRequest struct 
 
 [**Group**](Group.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -427,10 +407,10 @@ Other parameters are passed through a pointer to a apiUmGroupsPutRequest struct 
 
 ```go
 var result ResourceGroups = UmGroupsResourcesGet(ctx, groupId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve resources assigned to a group
@@ -488,10 +468,6 @@ Other parameters are passed through a pointer to a apiUmGroupsResourcesGetReques
 
 [**ResourceGroups**](ResourceGroups.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -503,10 +479,10 @@ Other parameters are passed through a pointer to a apiUmGroupsResourcesGetReques
 
 ```go
 var result map[string]interface{} = UmGroupsSharesDelete(ctx, groupId, resourceId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Remove a resource from a group
@@ -568,10 +544,6 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesDeleteReques
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -583,10 +555,10 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesDeleteReques
 
 ```go
 var result GroupShare = UmGroupsSharesFindByResourceId(ctx, groupId, resourceId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a group share
@@ -648,10 +620,6 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesFindByResour
 
 [**GroupShare**](GroupShare.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -663,10 +631,10 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesFindByResour
 
 ```go
 var result GroupShares = UmGroupsSharesGet(ctx, groupId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Group Shares 
@@ -726,10 +694,6 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesGetRequest s
 
 [**GroupShares**](GroupShares.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -741,11 +705,11 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesGetRequest s
 
 ```go
 var result GroupShare = UmGroupsSharesPost(ctx, groupId, resourceId)
-														.Resource(resource)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Resource(resource)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a resource to a group
@@ -809,10 +773,6 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPostRequest 
 
 [**GroupShare**](GroupShare.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -824,11 +784,11 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPostRequest 
 
 ```go
 var result GroupShare = UmGroupsSharesPut(ctx, groupId, resourceId)
-														.Resource(resource)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Resource(resource)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify resource permissions of a group
@@ -892,10 +852,6 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPutRequest s
 
 [**GroupShare**](GroupShare.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -907,10 +863,10 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPutRequest s
 
 ```go
 var result map[string]interface{} = UmGroupsUsersDelete(ctx, groupId, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Remove a user from a group
@@ -972,10 +928,6 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersDeleteRequest
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -987,10 +939,10 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersDeleteRequest
 
 ```go
 var result GroupMembers = UmGroupsUsersGet(ctx, groupId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Group Members 
@@ -1050,10 +1002,6 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersGetRequest st
 
 [**GroupMembers**](GroupMembers.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1065,11 +1013,11 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersGetRequest st
 
 ```go
 var result User = UmGroupsUsersPost(ctx, groupId)
-														.User(user)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .User(user)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a user to a group
@@ -1131,10 +1079,6 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersPostRequest s
 
 [**User**](User.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1146,10 +1090,10 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersPostRequest s
 
 ```go
 var result Resources = UmResourcesFindByType(ctx, resourceType)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a list of Resources by type.
@@ -1209,10 +1153,6 @@ Other parameters are passed through a pointer to a apiUmResourcesFindByTypeReque
 
 [**Resources**](Resources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1224,10 +1164,10 @@ Other parameters are passed through a pointer to a apiUmResourcesFindByTypeReque
 
 ```go
 var result Resource = UmResourcesFindByTypeAndId(ctx, resourceType, resourceId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Resource by type.
@@ -1289,10 +1229,6 @@ Other parameters are passed through a pointer to a apiUmResourcesFindByTypeAndId
 
 [**Resource**](Resource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1304,10 +1240,10 @@ Other parameters are passed through a pointer to a apiUmResourcesFindByTypeAndId
 
 ```go
 var result Resources = UmResourcesGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List All Resources.
@@ -1362,10 +1298,6 @@ Other parameters are passed through a pointer to a apiUmResourcesGetRequest stru
 
 [**Resources**](Resources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1377,10 +1309,10 @@ Other parameters are passed through a pointer to a apiUmResourcesGetRequest stru
 
 ```go
 var result map[string]interface{} = UmUsersDelete(ctx, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a User
@@ -1440,10 +1372,6 @@ Other parameters are passed through a pointer to a apiUmUsersDeleteRequest struc
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1455,10 +1383,10 @@ Other parameters are passed through a pointer to a apiUmUsersDeleteRequest struc
 
 ```go
 var result User = UmUsersFindById(ctx, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a User
@@ -1518,10 +1446,6 @@ Other parameters are passed through a pointer to a apiUmUsersFindByIdRequest str
 
 [**User**](User.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1533,10 +1457,10 @@ Other parameters are passed through a pointer to a apiUmUsersFindByIdRequest str
 
 ```go
 var result Users = UmUsersGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List all Users 
@@ -1591,10 +1515,6 @@ Other parameters are passed through a pointer to a apiUmUsersGetRequest struct v
 
 [**Users**](Users.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1606,10 +1526,10 @@ Other parameters are passed through a pointer to a apiUmUsersGetRequest struct v
 
 ```go
 var result ResourceGroups = UmUsersGroupsGet(ctx, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a User's group resources
@@ -1669,10 +1589,6 @@ Other parameters are passed through a pointer to a apiUmUsersGroupsGetRequest st
 
 [**ResourceGroups**](ResourceGroups.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1684,10 +1600,10 @@ Other parameters are passed through a pointer to a apiUmUsersGroupsGetRequest st
 
 ```go
 var result ResourcesUsers = UmUsersOwnsGet(ctx, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a User's own resources
@@ -1747,10 +1663,6 @@ Other parameters are passed through a pointer to a apiUmUsersOwnsGetRequest stru
 
 [**ResourcesUsers**](ResourcesUsers.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1762,11 +1674,11 @@ Other parameters are passed through a pointer to a apiUmUsersOwnsGetRequest stru
 
 ```go
 var result User = UmUsersPost(ctx)
-														.User(user)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .User(user)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a user
@@ -1823,10 +1735,6 @@ Other parameters are passed through a pointer to a apiUmUsersPostRequest struct 
 
 [**User**](User.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1838,11 +1746,11 @@ Other parameters are passed through a pointer to a apiUmUsersPostRequest struct 
 
 ```go
 var result User = UmUsersPut(ctx, userId)
-														.User(user)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .User(user)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a user
@@ -1904,10 +1812,6 @@ Other parameters are passed through a pointer to a apiUmUsersPutRequest struct v
 
 [**User**](User.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1919,10 +1823,10 @@ Other parameters are passed through a pointer to a apiUmUsersPutRequest struct v
 
 ```go
 var result map[string]interface{} = UmUsersS3keysDelete(ctx, userId, keyId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a S3 key
@@ -1984,10 +1888,6 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysDeleteRequest
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1999,10 +1899,10 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysDeleteRequest
 
 ```go
 var result S3Key = UmUsersS3keysFindByKeyId(ctx, userId, keyId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve given S3 key belonging to the given User
@@ -2064,10 +1964,6 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysFindByKeyIdRe
 
 [**S3Key**](S3Key.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -2079,10 +1975,10 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysFindByKeyIdRe
 
 ```go
 var result S3Keys = UmUsersS3keysGet(ctx, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a User's S3 keys
@@ -2142,10 +2038,6 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysGetRequest st
 
 [**S3Keys**](S3Keys.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -2157,10 +2049,10 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysGetRequest st
 
 ```go
 var result S3Key = UmUsersS3keysPost(ctx, userId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a S3 key for the given user
@@ -2220,10 +2112,6 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPostRequest s
 
 [**S3Key**](S3Key.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -2235,11 +2123,11 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPostRequest s
 
 ```go
 var result S3Key = UmUsersS3keysPut(ctx, userId, keyId)
-														.S3Key(s3Key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .S3Key(s3Key)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a S3 key having the given key id
@@ -2303,10 +2191,6 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPutRequest st
 
 [**S3Key**](S3Key.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -2318,9 +2202,9 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPutRequest st
 
 ```go
 var result S3ObjectStorageSSO = UmUsersS3ssourlGet(ctx, userId)
-														.Pretty(pretty)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve S3 object storage single signon URL for the given user
@@ -2377,10 +2261,6 @@ Other parameters are passed through a pointer to a apiUmUsersS3ssourlGetRequest 
 ### Return type
 
 [**S3ObjectStorageSSO**](S3ObjectStorageSSO.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

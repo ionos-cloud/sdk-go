@@ -14,10 +14,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result Request = RequestsFindById(ctx, requestId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Request
@@ -77,10 +77,6 @@ Other parameters are passed through a pointer to a apiRequestsFindByIdRequest st
 
 [**Request**](Request.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -92,15 +88,15 @@ Other parameters are passed through a pointer to a apiRequestsFindByIdRequest st
 
 ```go
 var result Requests = RequestsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.FilterStatus(filterStatus)
-														.FilterCreatedAfter(filterCreatedAfter)
-														.FilterCreatedBefore(filterCreatedBefore)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .FilterStatus(filterStatus)
+                      .FilterCreatedAfter(filterCreatedAfter)
+                      .FilterCreatedBefore(filterCreatedBefore)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Requests
@@ -165,10 +161,6 @@ Other parameters are passed through a pointer to a apiRequestsGetRequest struct 
 
 [**Requests**](Requests.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -180,10 +172,10 @@ Other parameters are passed through a pointer to a apiRequestsGetRequest struct 
 
 ```go
 var result RequestStatus = RequestsStatusGet(ctx, requestId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve Request Status
@@ -242,10 +234,6 @@ Other parameters are passed through a pointer to a apiRequestsStatusGetRequest s
 ### Return type
 
 [**RequestStatus**](RequestStatus.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

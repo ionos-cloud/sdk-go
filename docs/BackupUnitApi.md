@@ -18,10 +18,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = BackupunitsDelete(ctx, backupunitId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Backup Unit
@@ -81,10 +81,6 @@ Other parameters are passed through a pointer to a apiBackupunitsDeleteRequest s
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -96,10 +92,10 @@ Other parameters are passed through a pointer to a apiBackupunitsDeleteRequest s
 
 ```go
 var result BackupUnit = BackupunitsFindById(ctx, backupunitId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Returns the specified backup Unit
@@ -159,10 +155,6 @@ Other parameters are passed through a pointer to a apiBackupunitsFindByIdRequest
 
 [**BackupUnit**](BackupUnit.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -174,10 +166,10 @@ Other parameters are passed through a pointer to a apiBackupunitsFindByIdRequest
 
 ```go
 var result BackupUnits = BackupunitsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Backup Units 
@@ -232,10 +224,6 @@ Other parameters are passed through a pointer to a apiBackupunitsGetRequest stru
 
 [**BackupUnits**](BackupUnits.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -247,11 +235,11 @@ Other parameters are passed through a pointer to a apiBackupunitsGetRequest stru
 
 ```go
 var result BackupUnit = BackupunitsPatch(ctx, backupunitId)
-														.BackupUnitProperties(backupUnitProperties)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .BackupUnitProperties(backupUnitProperties)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Backup Unit
@@ -313,10 +301,6 @@ Other parameters are passed through a pointer to a apiBackupunitsPatchRequest st
 
 [**BackupUnit**](BackupUnit.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -328,11 +312,11 @@ Other parameters are passed through a pointer to a apiBackupunitsPatchRequest st
 
 ```go
 var result BackupUnit = BackupunitsPost(ctx)
-														.BackupUnit(backupUnit)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .BackupUnit(backupUnit)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Backup Unit
@@ -389,10 +373,6 @@ Other parameters are passed through a pointer to a apiBackupunitsPostRequest str
 
 [**BackupUnit**](BackupUnit.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -404,11 +384,11 @@ Other parameters are passed through a pointer to a apiBackupunitsPostRequest str
 
 ```go
 var result BackupUnit = BackupunitsPut(ctx, backupunitId)
-														.BackupUnit(backupUnit)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .BackupUnit(backupUnit)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Backup Unit
@@ -470,10 +450,6 @@ Other parameters are passed through a pointer to a apiBackupunitsPutRequest stru
 
 [**BackupUnit**](BackupUnit.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -485,9 +461,9 @@ Other parameters are passed through a pointer to a apiBackupunitsPutRequest stru
 
 ```go
 var result BackupUnitSSO = BackupunitsSsourlGet(ctx, backupunitId)
-														.Pretty(pretty)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Returns a single signon URL for the specified backup Unit.
@@ -544,10 +520,6 @@ Other parameters are passed through a pointer to a apiBackupunitsSsourlGetReques
 ### Return type
 
 [**BackupUnitSSO**](BackupUnitSSO.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

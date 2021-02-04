@@ -14,10 +14,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result Locations = LocationsFindByRegionId(ctx, regionId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Locations within a region
@@ -77,10 +77,6 @@ Other parameters are passed through a pointer to a apiLocationsFindByRegionIdReq
 
 [**Locations**](Locations.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -92,10 +88,10 @@ Other parameters are passed through a pointer to a apiLocationsFindByRegionIdReq
 
 ```go
 var result Location = LocationsFindByRegionIdAndId(ctx, regionId, locationId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Location
@@ -157,10 +153,6 @@ Other parameters are passed through a pointer to a apiLocationsFindByRegionIdAnd
 
 [**Location**](Location.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -172,10 +164,10 @@ Other parameters are passed through a pointer to a apiLocationsFindByRegionIdAnd
 
 ```go
 var result Locations = LocationsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Locations
@@ -229,10 +221,6 @@ Other parameters are passed through a pointer to a apiLocationsGetRequest struct
 ### Return type
 
 [**Locations**](Locations.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

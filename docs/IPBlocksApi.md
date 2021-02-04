@@ -17,10 +17,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = IpblocksDelete(ctx, ipblockId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete IP Block
@@ -80,10 +80,6 @@ Other parameters are passed through a pointer to a apiIpblocksDeleteRequest stru
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -95,10 +91,10 @@ Other parameters are passed through a pointer to a apiIpblocksDeleteRequest stru
 
 ```go
 var result IpBlock = IpblocksFindById(ctx, ipblockId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve an IP Block
@@ -158,10 +154,6 @@ Other parameters are passed through a pointer to a apiIpblocksFindByIdRequest st
 
 [**IpBlock**](IpBlock.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -173,10 +165,10 @@ Other parameters are passed through a pointer to a apiIpblocksFindByIdRequest st
 
 ```go
 var result IpBlocks = IpblocksGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List IP Blocks 
@@ -231,10 +223,6 @@ Other parameters are passed through a pointer to a apiIpblocksGetRequest struct 
 
 [**IpBlocks**](IpBlocks.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -246,11 +234,11 @@ Other parameters are passed through a pointer to a apiIpblocksGetRequest struct 
 
 ```go
 var result IpBlock = IpblocksPatch(ctx, ipblockId)
-														.Ipblock(ipblock)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Ipblock(ipblock)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify IP Block
@@ -312,10 +300,6 @@ Other parameters are passed through a pointer to a apiIpblocksPatchRequest struc
 
 [**IpBlock**](IpBlock.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -327,11 +311,11 @@ Other parameters are passed through a pointer to a apiIpblocksPatchRequest struc
 
 ```go
 var result IpBlock = IpblocksPost(ctx)
-														.Ipblock(ipblock)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Ipblock(ipblock)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Reserve IP Block
@@ -388,10 +372,6 @@ Other parameters are passed through a pointer to a apiIpblocksPostRequest struct
 
 [**IpBlock**](IpBlock.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -403,11 +383,11 @@ Other parameters are passed through a pointer to a apiIpblocksPostRequest struct
 
 ```go
 var result IpBlock = IpblocksPut(ctx, ipblockId)
-														.Ipblock(ipblock)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Ipblock(ipblock)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify IP Block
@@ -468,10 +448,6 @@ Other parameters are passed through a pointer to a apiIpblocksPutRequest struct 
 ### Return type
 
 [**IpBlock**](IpBlock.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

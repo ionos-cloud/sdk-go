@@ -20,10 +20,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = DatacentersLansDelete(ctx, datacenterId, lanId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Lan.
@@ -85,10 +85,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansDeleteReque
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -100,10 +96,10 @@ Other parameters are passed through a pointer to a apiDatacentersLansDeleteReque
 
 ```go
 var result Lan = DatacentersLansFindById(ctx, datacenterId, lanId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Lan
@@ -165,10 +161,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansFindByIdReq
 
 [**Lan**](Lan.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -180,12 +172,12 @@ Other parameters are passed through a pointer to a apiDatacentersLansFindByIdReq
 
 ```go
 var result Lans = DatacentersLansGet(ctx, datacenterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Lans
@@ -249,10 +241,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansGetRequest 
 
 [**Lans**](Lans.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -264,10 +252,10 @@ Other parameters are passed through a pointer to a apiDatacentersLansGetRequest 
 
 ```go
 var result Nic = DatacentersLansNicsFindById(ctx, datacenterId, lanId, nicId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a nic attached to lan
@@ -331,10 +319,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsFindByI
 
 [**Nic**](Nic.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -346,12 +330,12 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsFindByI
 
 ```go
 var result LanNics = DatacentersLansNicsGet(ctx, datacenterId, lanId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Lan Members 
@@ -417,10 +401,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsGetRequ
 
 [**LanNics**](LanNics.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -432,11 +412,11 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsGetRequ
 
 ```go
 var result Nic = DatacentersLansNicsPost(ctx, datacenterId, lanId)
-														.Nic(nic)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Nic(nic)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Attach a nic
@@ -500,10 +480,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsPostReq
 
 [**Nic**](Nic.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -515,11 +491,11 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsPostReq
 
 ```go
 var result Lan = DatacentersLansPatch(ctx, datacenterId, lanId)
-														.Lan(lan)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Lan(lan)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Lan
@@ -583,10 +559,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansPatchReques
 
 [**Lan**](Lan.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -598,11 +570,11 @@ Other parameters are passed through a pointer to a apiDatacentersLansPatchReques
 
 ```go
 var result LanPost = DatacentersLansPost(ctx, datacenterId)
-														.Lan(lan)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Lan(lan)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Lan
@@ -664,10 +636,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansPostRequest
 
 [**LanPost**](LanPost.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -679,11 +647,11 @@ Other parameters are passed through a pointer to a apiDatacentersLansPostRequest
 
 ```go
 var result Lan = DatacentersLansPut(ctx, datacenterId, lanId)
-														.Lan(lan)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Lan(lan)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Lan
@@ -746,10 +714,6 @@ Other parameters are passed through a pointer to a apiDatacentersLansPutRequest 
 ### Return type
 
 [**Lan**](Lan.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

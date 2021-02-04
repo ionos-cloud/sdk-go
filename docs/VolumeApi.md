@@ -19,14 +19,14 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result Snapshot = DatacentersVolumesCreateSnapshotPost(ctx, datacenterId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Name(name)
-														.Description(description)
-														.SecAuthProtection(secAuthProtection)
-														.LicenceType(licenceType)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Name(name)
+                      .Description(description)
+                      .SecAuthProtection(secAuthProtection)
+                      .LicenceType(licenceType)
+                      .Execute()
 ```
 
 Create Volume Snapshot
@@ -96,10 +96,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesCreateSn
 
 [**Snapshot**](Snapshot.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/x-www-form-urlencoded
@@ -111,10 +107,10 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesCreateSn
 
 ```go
 var result map[string]interface{} = DatacentersVolumesDelete(ctx, datacenterId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Volume
@@ -176,10 +172,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesDeleteRe
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -191,10 +183,10 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesDeleteRe
 
 ```go
 var result Volume = DatacentersVolumesFindById(ctx, datacenterId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Volume
@@ -256,10 +248,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesFindById
 
 [**Volume**](Volume.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -271,12 +259,12 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesFindById
 
 ```go
 var result Volumes = DatacentersVolumesGet(ctx, datacenterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Volumes 
@@ -340,10 +328,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesGetReque
 
 [**Volumes**](Volumes.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -355,11 +339,11 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesGetReque
 
 ```go
 var result Volume = DatacentersVolumesPatch(ctx, datacenterId, volumeId)
-														.Volume(volume)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Volume(volume)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Volume
@@ -423,10 +407,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPatchReq
 
 [**Volume**](Volume.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -438,11 +418,11 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPatchReq
 
 ```go
 var result Volume = DatacentersVolumesPost(ctx, datacenterId)
-														.Volume(volume)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Volume(volume)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Volume
@@ -504,10 +484,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPostRequ
 
 [**Volume**](Volume.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -519,11 +495,11 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPostRequ
 
 ```go
 var result Volume = DatacentersVolumesPut(ctx, datacenterId, volumeId)
-														.Volume(volume)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Volume(volume)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Volume
@@ -587,10 +563,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPutReque
 
 [**Volume**](Volume.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -602,11 +574,11 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesPutReque
 
 ```go
 var result map[string]interface{} = DatacentersVolumesRestoreSnapshotPost(ctx, datacenterId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.SnapshotId(snapshotId)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .SnapshotId(snapshotId)
+                      .Execute()
 ```
 
 Restore Volume Snapshot
@@ -669,10 +641,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesRestoreS
 ### Return type
 
 **map[string]interface{}**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

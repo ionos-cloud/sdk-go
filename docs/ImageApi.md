@@ -16,10 +16,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = ImagesDelete(ctx, imageId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete an Image
@@ -79,10 +79,6 @@ Other parameters are passed through a pointer to a apiImagesDeleteRequest struct
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -94,10 +90,10 @@ Other parameters are passed through a pointer to a apiImagesDeleteRequest struct
 
 ```go
 var result Image = ImagesFindById(ctx, imageId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve an Image
@@ -157,10 +153,6 @@ Other parameters are passed through a pointer to a apiImagesFindByIdRequest stru
 
 [**Image**](Image.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -172,10 +164,10 @@ Other parameters are passed through a pointer to a apiImagesFindByIdRequest stru
 
 ```go
 var result Images = ImagesGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Images 
@@ -230,10 +222,6 @@ Other parameters are passed through a pointer to a apiImagesGetRequest struct vi
 
 [**Images**](Images.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -245,11 +233,11 @@ Other parameters are passed through a pointer to a apiImagesGetRequest struct vi
 
 ```go
 var result Image = ImagesPatch(ctx, imageId)
-														.Image(image)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Image(image)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify an Image
@@ -311,10 +299,6 @@ Other parameters are passed through a pointer to a apiImagesPatchRequest struct 
 
 [**Image**](Image.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -326,11 +310,11 @@ Other parameters are passed through a pointer to a apiImagesPatchRequest struct 
 
 ```go
 var result Image = ImagesPut(ctx, imageId)
-														.Image(image)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Image(image)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify an Image
@@ -391,10 +375,6 @@ Other parameters are passed through a pointer to a apiImagesPutRequest struct vi
 ### Return type
 
 [**Image**](Image.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

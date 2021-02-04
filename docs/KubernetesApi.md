@@ -29,10 +29,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = K8sDelete(ctx, k8sClusterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete Kubernetes Cluster
@@ -92,10 +92,6 @@ Other parameters are passed through a pointer to a apiK8sDeleteRequest struct vi
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -107,10 +103,10 @@ Other parameters are passed through a pointer to a apiK8sDeleteRequest struct vi
 
 ```go
 var result KubernetesCluster = K8sFindByClusterId(ctx, k8sClusterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve Kubernetes Cluster
@@ -170,10 +166,6 @@ Other parameters are passed through a pointer to a apiK8sFindByClusterIdRequest 
 
 [**KubernetesCluster**](KubernetesCluster.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -185,10 +177,10 @@ Other parameters are passed through a pointer to a apiK8sFindByClusterIdRequest 
 
 ```go
 var result KubernetesClusters = K8sGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Kubernetes Clusters
@@ -243,10 +235,6 @@ Other parameters are passed through a pointer to a apiK8sGetRequest struct via t
 
 [**KubernetesClusters**](KubernetesClusters.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -258,10 +246,10 @@ Other parameters are passed through a pointer to a apiK8sGetRequest struct via t
 
 ```go
 var result KubernetesConfig = K8sKubeconfigGet(ctx, k8sClusterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve Kubernetes Configuration File
@@ -321,10 +309,6 @@ Other parameters are passed through a pointer to a apiK8sKubeconfigGetRequest st
 
 [**KubernetesConfig**](KubernetesConfig.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -336,10 +320,10 @@ Other parameters are passed through a pointer to a apiK8sKubeconfigGetRequest st
 
 ```go
 var result map[string]interface{} = K8sNodepoolsDelete(ctx, k8sClusterId, nodepoolId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete Kubernetes Node Pool
@@ -401,10 +385,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsDeleteRequest 
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -416,10 +396,10 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsDeleteRequest 
 
 ```go
 var result KubernetesNodePool = K8sNodepoolsFindById(ctx, k8sClusterId, nodepoolId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve Kubernetes Node Pool
@@ -481,10 +461,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsFindByIdReques
 
 [**KubernetesNodePool**](KubernetesNodePool.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -496,10 +472,10 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsFindByIdReques
 
 ```go
 var result KubernetesNodePools = K8sNodepoolsGet(ctx, k8sClusterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Kubernetes Node Pools
@@ -559,10 +535,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsGetRequest str
 
 [**KubernetesNodePools**](KubernetesNodePools.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -574,10 +546,10 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsGetRequest str
 
 ```go
 var result map[string]interface{} = K8sNodepoolsNodesDelete(ctx, k8sClusterId, nodepoolId, nodeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete Kubernetes node
@@ -641,10 +613,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesDeleteReq
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -656,10 +624,10 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesDeleteReq
 
 ```go
 var result KubernetesNode = K8sNodepoolsNodesFindById(ctx, k8sClusterId, nodepoolId, nodeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve Kubernetes node
@@ -723,10 +691,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesFindByIdR
 
 [**KubernetesNode**](KubernetesNode.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -738,10 +702,10 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesFindByIdR
 
 ```go
 var result KubernetesNodes = K8sNodepoolsNodesGet(ctx, k8sClusterId, nodepoolId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve Kubernetes nodes.
@@ -803,10 +767,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesGetReques
 
 [**KubernetesNodes**](KubernetesNodes.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -818,10 +778,10 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesGetReques
 
 ```go
 var result map[string]interface{} = K8sNodepoolsNodesReplacePost(ctx, k8sClusterId, nodepoolId, nodeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Recreate the Kubernetes node
@@ -885,10 +845,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesReplacePo
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -900,11 +856,11 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesReplacePo
 
 ```go
 var result KubernetesNodePool = K8sNodepoolsPost(ctx, k8sClusterId)
-														.KubernetesNodePool(kubernetesNodePool)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .KubernetesNodePool(kubernetesNodePool)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Kubernetes Node Pool
@@ -966,10 +922,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest st
 
 [**KubernetesNodePool**](KubernetesNodePool.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -981,11 +933,11 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest st
 
 ```go
 var result KubernetesNodePoolForPut = K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId)
-														.KubernetesNodePool(kubernetesNodePool)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .KubernetesNodePool(kubernetesNodePool)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify Kubernetes Node Pool
@@ -1049,10 +1001,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPutRequest str
 
 [**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1064,11 +1012,11 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPutRequest str
 
 ```go
 var result KubernetesCluster = K8sPost(ctx)
-														.KubernetesCluster(kubernetesCluster)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .KubernetesCluster(kubernetesCluster)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create Kubernetes Cluster
@@ -1125,10 +1073,6 @@ Other parameters are passed through a pointer to a apiK8sPostRequest struct via 
 
 [**KubernetesCluster**](KubernetesCluster.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1140,11 +1084,11 @@ Other parameters are passed through a pointer to a apiK8sPostRequest struct via 
 
 ```go
 var result KubernetesCluster = K8sPut(ctx, k8sClusterId)
-														.KubernetesCluster(kubernetesCluster)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .KubernetesCluster(kubernetesCluster)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify Kubernetes Cluster
@@ -1206,10 +1150,6 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 
 [**KubernetesCluster**](KubernetesCluster.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1221,7 +1161,7 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 
 ```go
 var result []string = K8sVersionsCompatibilitiesGet(ctx, clusterVersion)
-														.Execute()
+                      .Execute()
 ```
 
 Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
@@ -1275,10 +1215,6 @@ Other parameters are passed through a pointer to a apiK8sVersionsCompatibilities
 
 **[]string**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1290,7 +1226,7 @@ Other parameters are passed through a pointer to a apiK8sVersionsCompatibilities
 
 ```go
 var result string = K8sVersionsDefaultGet(ctx)
-														.Execute()
+                      .Execute()
 ```
 
 Retrieve the current default kubernetes version for clusters and nodepools.
@@ -1336,10 +1272,6 @@ Other parameters are passed through a pointer to a apiK8sVersionsDefaultGetReque
 
 **string**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1351,7 +1283,7 @@ Other parameters are passed through a pointer to a apiK8sVersionsDefaultGetReque
 
 ```go
 var result []string = K8sVersionsGet(ctx)
-														.Execute()
+                      .Execute()
 ```
 
 Retrieve available Kubernetes versions
@@ -1396,10 +1328,6 @@ Other parameters are passed through a pointer to a apiK8sVersionsGetRequest stru
 ### Return type
 
 **[]string**
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

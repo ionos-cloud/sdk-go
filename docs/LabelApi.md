@@ -38,10 +38,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = DatacentersLabelsDelete(ctx, datacenterId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Label from Data Center
@@ -103,10 +103,6 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsDeleteReq
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -118,10 +114,10 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsDeleteReq
 
 ```go
 var result LabelResource = DatacentersLabelsFindByKey(ctx, datacenterId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Label of Data Center
@@ -183,10 +179,6 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsFindByKey
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -198,12 +190,12 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsFindByKey
 
 ```go
 var result LabelResources = DatacentersLabelsGet(ctx, datacenterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List all Data Center Labels
@@ -267,10 +259,6 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsGetReques
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -282,11 +270,11 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsGetReques
 
 ```go
 var result LabelResource = DatacentersLabelsPost(ctx, datacenterId)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a Label to Data Center
@@ -348,10 +336,6 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPostReque
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -363,11 +347,11 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPostReque
 
 ```go
 var result LabelResource = DatacentersLabelsPut(ctx, datacenterId, key)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Label of Data Center
@@ -431,10 +415,6 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPutReques
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -446,10 +426,10 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPutReques
 
 ```go
 var result map[string]interface{} = DatacentersServersLabelsDelete(ctx, datacenterId, serverId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Label from Server
@@ -513,10 +493,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsDe
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -528,10 +504,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsDe
 
 ```go
 var result LabelResource = DatacentersServersLabelsFindByKey(ctx, datacenterId, serverId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Label of Server
@@ -595,10 +571,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsFi
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -610,12 +582,12 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsFi
 
 ```go
 var result LabelResources = DatacentersServersLabelsGet(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List all Server Labels
@@ -681,10 +653,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsGe
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -696,11 +664,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsGe
 
 ```go
 var result LabelResource = DatacentersServersLabelsPost(ctx, datacenterId, serverId)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a Label to Server
@@ -764,10 +732,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPo
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -779,11 +743,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPo
 
 ```go
 var result LabelResource = DatacentersServersLabelsPut(ctx, datacenterId, serverId, key)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Label of Server
@@ -849,10 +813,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPu
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -864,10 +824,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPu
 
 ```go
 var result map[string]interface{} = DatacentersVolumesLabelsDelete(ctx, datacenterId, volumeId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Label from Volume
@@ -931,10 +891,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsDe
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -946,10 +902,10 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsDe
 
 ```go
 var result LabelResource = DatacentersVolumesLabelsFindByKey(ctx, datacenterId, volumeId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Label of Volume
@@ -1013,10 +969,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsFi
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1028,12 +980,12 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsFi
 
 ```go
 var result LabelResources = DatacentersVolumesLabelsGet(ctx, datacenterId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List all Volume Labels
@@ -1099,10 +1051,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsGe
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1114,11 +1062,11 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsGe
 
 ```go
 var result LabelResource = DatacentersVolumesLabelsPost(ctx, datacenterId, volumeId)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a Label to Volume
@@ -1182,10 +1130,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPo
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1197,11 +1141,11 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPo
 
 ```go
 var result LabelResource = DatacentersVolumesLabelsPut(ctx, datacenterId, volumeId, key)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Label of Volume
@@ -1267,10 +1211,6 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPu
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1282,10 +1222,10 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPu
 
 ```go
 var result map[string]interface{} = IpblocksLabelsDelete(ctx, ipblockId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Label from IP Block
@@ -1347,10 +1287,6 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsDeleteReques
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1362,10 +1298,10 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsDeleteReques
 
 ```go
 var result LabelResource = IpblocksLabelsFindByKey(ctx, ipblockId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Label of IP Block
@@ -1427,10 +1363,6 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsFindByKeyReq
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1442,10 +1374,10 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsFindByKeyReq
 
 ```go
 var result LabelResources = IpblocksLabelsGet(ctx, ipblockId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List all Ip Block Labels
@@ -1505,10 +1437,6 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsGetRequest s
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1520,11 +1448,11 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsGetRequest s
 
 ```go
 var result LabelResource = IpblocksLabelsPost(ctx, ipblockId)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a Label to IP Block
@@ -1586,10 +1514,6 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPostRequest 
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1601,11 +1525,11 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPostRequest 
 
 ```go
 var result LabelResource = IpblocksLabelsPut(ctx, ipblockId, key)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Label of IP Block
@@ -1669,10 +1593,6 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPutRequest s
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -1684,10 +1604,10 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPutRequest s
 
 ```go
 var result Label = LabelsFindByUrn(ctx, labelurn)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Returns the label by its URN.
@@ -1747,10 +1667,6 @@ Other parameters are passed through a pointer to a apiLabelsFindByUrnRequest str
 
 [**Label**](Label.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1762,10 +1678,10 @@ Other parameters are passed through a pointer to a apiLabelsFindByUrnRequest str
 
 ```go
 var result Labels = LabelsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Labels 
@@ -1820,10 +1736,6 @@ Other parameters are passed through a pointer to a apiLabelsGetRequest struct vi
 
 [**Labels**](Labels.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1835,10 +1747,10 @@ Other parameters are passed through a pointer to a apiLabelsGetRequest struct vi
 
 ```go
 var result map[string]interface{} = SnapshotsLabelsDelete(ctx, snapshotId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Label from Snapshot
@@ -1900,10 +1812,6 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsDeleteReque
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1915,10 +1823,10 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsDeleteReque
 
 ```go
 var result LabelResource = SnapshotsLabelsFindByKey(ctx, snapshotId, key)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Label of Snapshot
@@ -1980,10 +1888,6 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsFindByKeyRe
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1995,10 +1899,10 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsFindByKeyRe
 
 ```go
 var result LabelResources = SnapshotsLabelsGet(ctx, snapshotId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List all Snapshot Labels
@@ -2058,10 +1962,6 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsGetRequest 
 
 [**LabelResources**](LabelResources.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -2073,11 +1973,11 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsGetRequest 
 
 ```go
 var result LabelResource = SnapshotsLabelsPost(ctx, snapshotId)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Add a Label to Snapshot
@@ -2139,10 +2039,6 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsPostRequest
 
 [**LabelResource**](LabelResource.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -2154,11 +2050,11 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsPostRequest
 
 ```go
 var result LabelResource = SnapshotsLabelsPut(ctx, snapshotId, key)
-														.Label(label)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Label of Snapshot
@@ -2221,10 +2117,6 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsPutRequest 
 ### Return type
 
 [**LabelResource**](LabelResource.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

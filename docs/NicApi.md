@@ -23,10 +23,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = DatacentersServersNicsDelete(ctx, datacenterId, serverId, nicId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Nic
@@ -90,10 +90,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsDele
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -105,10 +101,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsDele
 
 ```go
 var result Nic = DatacentersServersNicsFindById(ctx, datacenterId, serverId, nicId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Nic
@@ -172,10 +168,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFind
 
 [**Nic**](Nic.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -187,10 +179,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFind
 
 ```go
 var result map[string]interface{} = DatacentersServersNicsFirewallrulesDelete(ctx, datacenterId, serverId, nicId, firewallruleId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Firewall Rule
@@ -256,10 +248,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -271,10 +259,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ```go
 var result FirewallRule = DatacentersServersNicsFirewallrulesFindById(ctx, datacenterId, serverId, nicId, firewallruleId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Firewall Rule
@@ -340,10 +328,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 [**FirewallRule**](FirewallRule.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -355,12 +339,12 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ```go
 var result FirewallRules = DatacentersServersNicsFirewallrulesGet(ctx, datacenterId, serverId, nicId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Firewall Rules 
@@ -428,10 +412,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 [**FirewallRules**](FirewallRules.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -443,11 +423,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ```go
 var result FirewallRule = DatacentersServersNicsFirewallrulesPatch(ctx, datacenterId, serverId, nicId, firewallruleId)
-														.Firewallrule(firewallrule)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Firewallrule(firewallrule)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Firewall Rule
@@ -515,10 +495,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 [**FirewallRule**](FirewallRule.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -530,11 +506,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ```go
 var result FirewallRule = DatacentersServersNicsFirewallrulesPost(ctx, datacenterId, serverId, nicId)
-														.Firewallrule(firewallrule)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Firewallrule(firewallrule)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Firewall Rule
@@ -600,10 +576,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 [**FirewallRule**](FirewallRule.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -615,11 +587,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ```go
 var result FirewallRule = DatacentersServersNicsFirewallrulesPut(ctx, datacenterId, serverId, nicId, firewallruleId)
-														.Firewallrule(firewallrule)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Firewallrule(firewallrule)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Firewall Rule
@@ -687,10 +659,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 [**FirewallRule**](FirewallRule.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -702,12 +670,12 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 ```go
 var result Nics = DatacentersServersNicsGet(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Nics 
@@ -773,10 +741,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsGetR
 
 [**Nics**](Nics.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -788,11 +752,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsGetR
 
 ```go
 var result Nic = DatacentersServersNicsPatch(ctx, datacenterId, serverId, nicId)
-														.Nic(nic)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Nic(nic)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Nic
@@ -858,10 +822,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPatc
 
 [**Nic**](Nic.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -873,11 +833,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPatc
 
 ```go
 var result Nic = DatacentersServersNicsPost(ctx, datacenterId, serverId)
-														.Nic(nic)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Nic(nic)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Nic
@@ -941,10 +901,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPost
 
 [**Nic**](Nic.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -956,11 +912,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPost
 
 ```go
 var result Nic = DatacentersServersNicsPut(ctx, datacenterId, serverId, nicId)
-														.Nic(nic)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Nic(nic)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Nic
@@ -1025,10 +981,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPutR
 ### Return type
 
 [**Nic**](Nic.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

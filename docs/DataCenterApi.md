@@ -17,10 +17,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = DatacentersDelete(ctx, datacenterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Data Center
@@ -80,10 +80,6 @@ Other parameters are passed through a pointer to a apiDatacentersDeleteRequest s
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -95,10 +91,10 @@ Other parameters are passed through a pointer to a apiDatacentersDeleteRequest s
 
 ```go
 var result Datacenter = DatacentersFindById(ctx, datacenterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Data Center
@@ -158,10 +154,6 @@ Other parameters are passed through a pointer to a apiDatacentersFindByIdRequest
 
 [**Datacenter**](Datacenter.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -173,12 +165,12 @@ Other parameters are passed through a pointer to a apiDatacentersFindByIdRequest
 
 ```go
 var result Datacenters = DatacentersGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Data Centers under your account
@@ -237,10 +229,6 @@ Other parameters are passed through a pointer to a apiDatacentersGetRequest stru
 
 [**Datacenters**](Datacenters.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -252,11 +240,11 @@ Other parameters are passed through a pointer to a apiDatacentersGetRequest stru
 
 ```go
 var result Datacenter = DatacentersPatch(ctx, datacenterId)
-														.Datacenter(datacenter)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Datacenter(datacenter)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Data Center
@@ -318,10 +306,6 @@ Other parameters are passed through a pointer to a apiDatacentersPatchRequest st
 
 [**Datacenter**](Datacenter.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -333,11 +317,11 @@ Other parameters are passed through a pointer to a apiDatacentersPatchRequest st
 
 ```go
 var result Datacenter = DatacentersPost(ctx)
-														.Datacenter(datacenter)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Datacenter(datacenter)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Data Center
@@ -394,10 +378,6 @@ Other parameters are passed through a pointer to a apiDatacentersPostRequest str
 
 [**Datacenter**](Datacenter.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -409,11 +389,11 @@ Other parameters are passed through a pointer to a apiDatacentersPostRequest str
 
 ```go
 var result Datacenter = DatacentersPut(ctx, datacenterId)
-														.Datacenter(datacenter)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Datacenter(datacenter)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Data Center
@@ -474,10 +454,6 @@ Other parameters are passed through a pointer to a apiDatacentersPutRequest stru
 ### Return type
 
 [**Datacenter**](Datacenter.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 

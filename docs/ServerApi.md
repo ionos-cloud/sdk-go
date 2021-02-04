@@ -29,10 +29,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = DatacentersServersCdromsDelete(ctx, datacenterId, serverId, cdromId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Detach a CD-ROM
@@ -96,10 +96,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsDe
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -111,10 +107,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsDe
 
 ```go
 var result Image = DatacentersServersCdromsFindById(ctx, datacenterId, serverId, cdromId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve an attached CD-ROM
@@ -178,10 +174,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsFi
 
 [**Image**](Image.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -193,12 +185,12 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsFi
 
 ```go
 var result Cdroms = DatacentersServersCdromsGet(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List attached CD-ROMs 
@@ -264,10 +256,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsGe
 
 [**Cdroms**](Cdroms.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -279,11 +267,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsGe
 
 ```go
 var result Image = DatacentersServersCdromsPost(ctx, datacenterId, serverId)
-														.Cdrom(cdrom)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Cdrom(cdrom)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Attach a CD-ROM
@@ -347,10 +335,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsPo
 
 [**Image**](Image.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -362,10 +346,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsPo
 
 ```go
 var result map[string]interface{} = DatacentersServersDelete(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Server
@@ -427,10 +411,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersDeleteRe
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -442,10 +422,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersDeleteRe
 
 ```go
 var result Server = DatacentersServersFindById(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Server
@@ -507,10 +487,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersFindById
 
 [**Server**](Server.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -522,13 +498,13 @@ Other parameters are passed through a pointer to a apiDatacentersServersFindById
 
 ```go
 var result Servers = DatacentersServersGet(ctx, datacenterId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.UpgradeNeeded(upgradeNeeded)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .UpgradeNeeded(upgradeNeeded)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Servers 
@@ -594,10 +570,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersGetReque
 
 [**Servers**](Servers.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -609,11 +581,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersGetReque
 
 ```go
 var result Server = DatacentersServersPatch(ctx, datacenterId, serverId)
-														.Server(server)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Server(server)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Server
@@ -677,10 +649,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersPatchReq
 
 [**Server**](Server.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -692,11 +660,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersPatchReq
 
 ```go
 var result Server = DatacentersServersPost(ctx, datacenterId)
-														.Server(server)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Server(server)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Create a Server
@@ -758,10 +726,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersPostRequ
 
 [**Server**](Server.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -773,11 +737,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersPostRequ
 
 ```go
 var result Server = DatacentersServersPut(ctx, datacenterId, serverId)
-														.Server(server)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Server(server)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Server
@@ -841,10 +805,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersPutReque
 
 [**Server**](Server.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -856,10 +816,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersPutReque
 
 ```go
 var result map[string]interface{} = DatacentersServersRebootPost(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Reboot a Server
@@ -921,10 +881,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersRebootPo
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -936,10 +892,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersRebootPo
 
 ```go
 var result map[string]interface{} = DatacentersServersStartPost(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Start a Server
@@ -1001,10 +957,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersStartPos
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1016,10 +968,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersStartPos
 
 ```go
 var result map[string]interface{} = DatacentersServersStopPost(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Stop a Server
@@ -1081,10 +1033,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersStopPost
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1096,10 +1044,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersStopPost
 
 ```go
 var result map[string]interface{} = DatacentersServersUpgradePost(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Upgrade a Server
@@ -1161,10 +1109,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersUpgradeP
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1176,10 +1120,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersUpgradeP
 
 ```go
 var result map[string]interface{} = DatacentersServersVolumesDelete(ctx, datacenterId, serverId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Detach a volume
@@ -1243,10 +1187,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesD
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1258,10 +1198,10 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesD
 
 ```go
 var result Volume = DatacentersServersVolumesFindById(ctx, datacenterId, serverId, volumeId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve an attached volume
@@ -1325,10 +1265,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesF
 
 [**Volume**](Volume.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1340,12 +1276,12 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesF
 
 ```go
 var result AttachedVolumes = DatacentersServersVolumesGet(ctx, datacenterId, serverId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Offset(offset)
-														.Limit(limit)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Offset(offset)
+                      .Limit(limit)
+                      .Execute()
 ```
 
 List Attached Volumes
@@ -1411,10 +1347,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesG
 
 [**AttachedVolumes**](AttachedVolumes.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -1426,11 +1358,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesG
 
 ```go
 var result Volume = DatacentersServersVolumesPost(ctx, datacenterId, serverId)
-														.Volume(volume)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Volume(volume)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Attach a volume
@@ -1493,10 +1425,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesP
 ### Return type
 
 [**Volume**](Volume.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication)
 
 ### HTTP request headers
 

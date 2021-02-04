@@ -16,10 +16,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
 ```go
 var result map[string]interface{} = SnapshotsDelete(ctx, snapshotId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Delete a Snapshot
@@ -79,10 +79,6 @@ Other parameters are passed through a pointer to a apiSnapshotsDeleteRequest str
 
 **map[string]interface{}**
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -94,10 +90,10 @@ Other parameters are passed through a pointer to a apiSnapshotsDeleteRequest str
 
 ```go
 var result Snapshot = SnapshotsFindById(ctx, snapshotId)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Retrieve a Snapshot by its uuid.
@@ -157,10 +153,6 @@ Other parameters are passed through a pointer to a apiSnapshotsFindByIdRequest s
 
 [**Snapshot**](Snapshot.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -172,10 +164,10 @@ Other parameters are passed through a pointer to a apiSnapshotsFindByIdRequest s
 
 ```go
 var result Snapshots = SnapshotsGet(ctx)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 List Snapshots 
@@ -230,10 +222,6 @@ Other parameters are passed through a pointer to a apiSnapshotsGetRequest struct
 
 [**Snapshots**](Snapshots.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: Not defined
@@ -245,11 +233,11 @@ Other parameters are passed through a pointer to a apiSnapshotsGetRequest struct
 
 ```go
 var result Snapshot = SnapshotsPatch(ctx, snapshotId)
-														.Snapshot(snapshot)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Snapshot(snapshot)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Partially modify a Snapshot
@@ -311,10 +299,6 @@ Other parameters are passed through a pointer to a apiSnapshotsPatchRequest stru
 
 [**Snapshot**](Snapshot.md)
 
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
-
 ### HTTP request headers
 
 - **Content-Type**: application/json
@@ -326,11 +310,11 @@ Other parameters are passed through a pointer to a apiSnapshotsPatchRequest stru
 
 ```go
 var result Snapshot = SnapshotsPut(ctx, snapshotId)
-														.Snapshot(snapshot)
-														.Pretty(pretty)
-														.Depth(depth)
-														.XContractNumber(xContractNumber)
-														.Execute()
+                      .Snapshot(snapshot)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
 ```
 
 Modify a Snapshot
@@ -391,10 +375,6 @@ Other parameters are passed through a pointer to a apiSnapshotsPutRequest struct
 ### Return type
 
 [**Snapshot**](Snapshot.md)
-
-### Authorization
-
-[Basic Authentication](../README.md#Basic Authentication), [Token Authentication](../README.md#Token Authentication)
 
 ### HTTP request headers
 
