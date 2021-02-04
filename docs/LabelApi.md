@@ -2,35 +2,35 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**DatacentersLabelsDelete**](LabelApi.md#DatacentersLabelsDelete) | **Delete** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center
-[**DatacentersLabelsFindByKey**](LabelApi.md#DatacentersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center
-[**DatacentersLabelsGet**](LabelApi.md#DatacentersLabelsGet) | **Get** /datacenters/{datacenterId}/labels | List all Data Center Labels
-[**DatacentersLabelsPost**](LabelApi.md#DatacentersLabelsPost) | **Post** /datacenters/{datacenterId}/labels | Add a Label to Data Center
-[**DatacentersLabelsPut**](LabelApi.md#DatacentersLabelsPut) | **Put** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center
-[**DatacentersServersLabelsDelete**](LabelApi.md#DatacentersServersLabelsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server
-[**DatacentersServersLabelsFindByKey**](LabelApi.md#DatacentersServersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server
-[**DatacentersServersLabelsGet**](LabelApi.md#DatacentersServersLabelsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels
-[**DatacentersServersLabelsPost**](LabelApi.md#DatacentersServersLabelsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server
-[**DatacentersServersLabelsPut**](LabelApi.md#DatacentersServersLabelsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server
-[**DatacentersVolumesLabelsDelete**](LabelApi.md#DatacentersVolumesLabelsDelete) | **Delete** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume
-[**DatacentersVolumesLabelsFindByKey**](LabelApi.md#DatacentersVolumesLabelsFindByKey) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume
-[**DatacentersVolumesLabelsGet**](LabelApi.md#DatacentersVolumesLabelsGet) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels
-[**DatacentersVolumesLabelsPost**](LabelApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume
-[**DatacentersVolumesLabelsPut**](LabelApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume
-[**IpblocksLabelsDelete**](LabelApi.md#IpblocksLabelsDelete) | **Delete** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block
-[**IpblocksLabelsFindByKey**](LabelApi.md#IpblocksLabelsFindByKey) | **Get** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block
-[**IpblocksLabelsGet**](LabelApi.md#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List all Ip Block Labels
-[**IpblocksLabelsPost**](LabelApi.md#IpblocksLabelsPost) | **Post** /ipblocks/{ipblockId}/labels | Add a Label to IP Block
-[**IpblocksLabelsPut**](LabelApi.md#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block
-[**LabelsFindByUrn**](LabelApi.md#LabelsFindByUrn) | **Get** /labels/{labelurn} | Returns the label by its URN.
-[**LabelsGet**](LabelApi.md#LabelsGet) | **Get** /labels | List Labels 
-[**SnapshotsLabelsDelete**](LabelApi.md#SnapshotsLabelsDelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot
-[**SnapshotsLabelsFindByKey**](LabelApi.md#SnapshotsLabelsFindByKey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot
-[**SnapshotsLabelsGet**](LabelApi.md#SnapshotsLabelsGet) | **Get** /snapshots/{snapshotId}/labels | List all Snapshot Labels
-[**SnapshotsLabelsPost**](LabelApi.md#SnapshotsLabelsPost) | **Post** /snapshots/{snapshotId}/labels | Add a Label to Snapshot
-[**SnapshotsLabelsPut**](LabelApi.md#SnapshotsLabelsPut) | **Put** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot
+|Method | HTTP request | Description|
+|------------- | ------------- | -------------|
+|[**DatacentersLabelsDelete**](LabelApi.md#DatacentersLabelsDelete) | **Delete** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center|
+|[**DatacentersLabelsFindByKey**](LabelApi.md#DatacentersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center|
+|[**DatacentersLabelsGet**](LabelApi.md#DatacentersLabelsGet) | **Get** /datacenters/{datacenterId}/labels | List all Data Center Labels|
+|[**DatacentersLabelsPost**](LabelApi.md#DatacentersLabelsPost) | **Post** /datacenters/{datacenterId}/labels | Add a Label to Data Center|
+|[**DatacentersLabelsPut**](LabelApi.md#DatacentersLabelsPut) | **Put** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center|
+|[**DatacentersServersLabelsDelete**](LabelApi.md#DatacentersServersLabelsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server|
+|[**DatacentersServersLabelsFindByKey**](LabelApi.md#DatacentersServersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server|
+|[**DatacentersServersLabelsGet**](LabelApi.md#DatacentersServersLabelsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels|
+|[**DatacentersServersLabelsPost**](LabelApi.md#DatacentersServersLabelsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server|
+|[**DatacentersServersLabelsPut**](LabelApi.md#DatacentersServersLabelsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server|
+|[**DatacentersVolumesLabelsDelete**](LabelApi.md#DatacentersVolumesLabelsDelete) | **Delete** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume|
+|[**DatacentersVolumesLabelsFindByKey**](LabelApi.md#DatacentersVolumesLabelsFindByKey) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume|
+|[**DatacentersVolumesLabelsGet**](LabelApi.md#DatacentersVolumesLabelsGet) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels|
+|[**DatacentersVolumesLabelsPost**](LabelApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume|
+|[**DatacentersVolumesLabelsPut**](LabelApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume|
+|[**IpblocksLabelsDelete**](LabelApi.md#IpblocksLabelsDelete) | **Delete** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block|
+|[**IpblocksLabelsFindByKey**](LabelApi.md#IpblocksLabelsFindByKey) | **Get** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block|
+|[**IpblocksLabelsGet**](LabelApi.md#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List all Ip Block Labels|
+|[**IpblocksLabelsPost**](LabelApi.md#IpblocksLabelsPost) | **Post** /ipblocks/{ipblockId}/labels | Add a Label to IP Block|
+|[**IpblocksLabelsPut**](LabelApi.md#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block|
+|[**LabelsFindByUrn**](LabelApi.md#LabelsFindByUrn) | **Get** /labels/{labelurn} | Returns the label by its URN.|
+|[**LabelsGet**](LabelApi.md#LabelsGet) | **Get** /labels | List Labels |
+|[**SnapshotsLabelsDelete**](LabelApi.md#SnapshotsLabelsDelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot|
+|[**SnapshotsLabelsFindByKey**](LabelApi.md#SnapshotsLabelsFindByKey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot|
+|[**SnapshotsLabelsGet**](LabelApi.md#SnapshotsLabelsGet) | **Get** /snapshots/{snapshotId}/labels | List all Snapshot Labels|
+|[**SnapshotsLabelsPost**](LabelApi.md#SnapshotsLabelsPost) | **Post** /snapshots/{snapshotId}/labels | Add a Label to Snapshot|
+|[**SnapshotsLabelsPut**](LabelApi.md#SnapshotsLabelsPut) | **Put** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot|
 
 
 
@@ -76,24 +76,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Data Center | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Data Center | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersLabelsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -108,9 +108,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersLabelsFindByKey
@@ -155,24 +152,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Data Center | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Data Center | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersLabelsFindByKeyRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -187,9 +184,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersLabelsGet
@@ -235,24 +229,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Data Center | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Data Center | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersLabelsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
- **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
- **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]|
+| **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]|
 
 ### Return type
 
@@ -267,9 +261,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersLabelsPost
@@ -314,23 +305,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Data Center | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Data Center | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersLabelsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **label** | [**LabelResource**](LabelResource.md) | Label to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -345,9 +336,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersLabelsPut
@@ -393,25 +381,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Data Center | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Data Center | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersLabelsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **label** | [**LabelResource**](LabelResource.md) | Modified Label | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -426,9 +414,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersLabelsDelete
@@ -474,26 +459,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersLabelsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -508,9 +493,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersLabelsFindByKey
@@ -556,26 +538,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersLabelsFindByKeyRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -590,9 +572,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersLabelsGet
@@ -639,26 +618,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersLabelsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
- **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
- **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]|
+| **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]|
 
 ### Return type
 
@@ -673,9 +652,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersLabelsPost
@@ -721,25 +697,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersLabelsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **label** | [**LabelResource**](LabelResource.md) | Label to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -754,9 +730,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersLabelsPut
@@ -803,27 +776,27 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersLabelsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **label** | [**LabelResource**](LabelResource.md) | Modified Label | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -838,9 +811,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersVolumesLabelsDelete
@@ -886,26 +856,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**volumeId** | **string** | The unique ID of the Volume | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**volumeId** | **string** | The unique ID of the Volume | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -920,9 +890,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersVolumesLabelsFindByKey
@@ -968,26 +935,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**volumeId** | **string** | The unique ID of the Volume | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**volumeId** | **string** | The unique ID of the Volume | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsFindByKeyRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1002,9 +969,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersVolumesLabelsGet
@@ -1051,26 +1015,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**volumeId** | **string** | The unique ID of the Volume | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**volumeId** | **string** | The unique ID of the Volume | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
- **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
- **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]|
+| **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]|
 
 ### Return type
 
@@ -1085,9 +1049,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersVolumesLabelsPost
@@ -1133,25 +1094,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**volumeId** | **string** | The unique ID of the Volume | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**volumeId** | **string** | The unique ID of the Volume | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **label** | [**LabelResource**](LabelResource.md) | Label to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1166,9 +1127,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersVolumesLabelsPut
@@ -1215,27 +1173,27 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the Datacenter | 
-**volumeId** | **string** | The unique ID of the Volume | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the Datacenter | |
+|**volumeId** | **string** | The unique ID of the Volume | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **label** | [**LabelResource**](LabelResource.md) | Modified Label | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1250,9 +1208,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## IpblocksLabelsDelete
@@ -1297,24 +1252,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**ipblockId** | **string** | The unique ID of the Ip Block | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**ipblockId** | **string** | The unique ID of the Ip Block | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiIpblocksLabelsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1329,9 +1284,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## IpblocksLabelsFindByKey
@@ -1376,24 +1328,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**ipblockId** | **string** | The unique ID of the Ip Block | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**ipblockId** | **string** | The unique ID of the Ip Block | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiIpblocksLabelsFindByKeyRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1408,9 +1360,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## IpblocksLabelsGet
@@ -1454,22 +1403,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**ipblockId** | **string** | The unique ID of the Ip Block | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**ipblockId** | **string** | The unique ID of the Ip Block | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiIpblocksLabelsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1484,9 +1433,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## IpblocksLabelsPost
@@ -1531,23 +1477,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**ipblockId** | **string** | The unique ID of the Ip Block | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**ipblockId** | **string** | The unique ID of the Ip Block | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiIpblocksLabelsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **label** | [**LabelResource**](LabelResource.md) | Label to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1562,9 +1508,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## IpblocksLabelsPut
@@ -1610,25 +1553,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**ipblockId** | **string** | The unique ID of the Ip Block | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**ipblockId** | **string** | The unique ID of the Ip Block | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiIpblocksLabelsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **label** | [**LabelResource**](LabelResource.md) | Modified Label | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1643,9 +1586,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## LabelsFindByUrn
@@ -1689,22 +1629,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**labelurn** | **string** | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**labelurn** | **string** | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiLabelsFindByUrnRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1719,9 +1659,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## LabelsGet
@@ -1770,11 +1707,11 @@ func main() {
 Other parameters are passed through a pointer to a apiLabelsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1789,9 +1726,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## SnapshotsLabelsDelete
@@ -1836,24 +1770,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**snapshotId** | **string** | The unique ID of the Snapshot | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSnapshotsLabelsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1868,9 +1802,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## SnapshotsLabelsFindByKey
@@ -1915,24 +1846,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**snapshotId** | **string** | The unique ID of the Snapshot | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSnapshotsLabelsFindByKeyRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1947,9 +1878,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## SnapshotsLabelsGet
@@ -1993,22 +1921,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**snapshotId** | **string** | The unique ID of the Snapshot | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**snapshotId** | **string** | The unique ID of the Snapshot | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSnapshotsLabelsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2023,9 +1951,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## SnapshotsLabelsPost
@@ -2070,23 +1995,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**snapshotId** | **string** | The unique ID of the Snapshot | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**snapshotId** | **string** | The unique ID of the Snapshot | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSnapshotsLabelsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **label** | [**LabelResource**](LabelResource.md) | Label to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2101,9 +2026,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## SnapshotsLabelsPut
@@ -2149,25 +2071,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**snapshotId** | **string** | The unique ID of the Snapshot | 
-**key** | **string** | The key of the Label | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**key** | **string** | The key of the Label | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiSnapshotsLabelsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **label** | [**LabelResource**](LabelResource.md) | Modified Label | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2182,7 +2104,4 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 

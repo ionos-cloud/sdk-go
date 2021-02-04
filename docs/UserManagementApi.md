@@ -2,38 +2,38 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**UmGroupsDelete**](UserManagementApi.md#UmGroupsDelete) | **Delete** /um/groups/{groupId} | Delete a Group
-[**UmGroupsFindById**](UserManagementApi.md#UmGroupsFindById) | **Get** /um/groups/{groupId} | Retrieve a Group
-[**UmGroupsGet**](UserManagementApi.md#UmGroupsGet) | **Get** /um/groups | List All Groups.
-[**UmGroupsPost**](UserManagementApi.md#UmGroupsPost) | **Post** /um/groups | Create a Group
-[**UmGroupsPut**](UserManagementApi.md#UmGroupsPut) | **Put** /um/groups/{groupId} | Modify a group
-[**UmGroupsResourcesGet**](UserManagementApi.md#UmGroupsResourcesGet) | **Get** /um/groups/{groupId}/resources | Retrieve resources assigned to a group
-[**UmGroupsSharesDelete**](UserManagementApi.md#UmGroupsSharesDelete) | **Delete** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group
-[**UmGroupsSharesFindByResourceId**](UserManagementApi.md#UmGroupsSharesFindByResourceId) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share
-[**UmGroupsSharesGet**](UserManagementApi.md#UmGroupsSharesGet) | **Get** /um/groups/{groupId}/shares | List Group Shares 
-[**UmGroupsSharesPost**](UserManagementApi.md#UmGroupsSharesPost) | **Post** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group
-[**UmGroupsSharesPut**](UserManagementApi.md#UmGroupsSharesPut) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group
-[**UmGroupsUsersDelete**](UserManagementApi.md#UmGroupsUsersDelete) | **Delete** /um/groups/{groupId}/users/{userId} | Remove a user from a group
-[**UmGroupsUsersGet**](UserManagementApi.md#UmGroupsUsersGet) | **Get** /um/groups/{groupId}/users | List Group Members 
-[**UmGroupsUsersPost**](UserManagementApi.md#UmGroupsUsersPost) | **Post** /um/groups/{groupId}/users | Add a user to a group
-[**UmResourcesFindByType**](UserManagementApi.md#UmResourcesFindByType) | **Get** /um/resources/{resourceType} | Retrieve a list of Resources by type.
-[**UmResourcesFindByTypeAndId**](UserManagementApi.md#UmResourcesFindByTypeAndId) | **Get** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.
-[**UmResourcesGet**](UserManagementApi.md#UmResourcesGet) | **Get** /um/resources | List All Resources.
-[**UmUsersDelete**](UserManagementApi.md#UmUsersDelete) | **Delete** /um/users/{userId} | Delete a User
-[**UmUsersFindById**](UserManagementApi.md#UmUsersFindById) | **Get** /um/users/{userId} | Retrieve a User
-[**UmUsersGet**](UserManagementApi.md#UmUsersGet) | **Get** /um/users | List all Users 
-[**UmUsersGroupsGet**](UserManagementApi.md#UmUsersGroupsGet) | **Get** /um/users/{userId}/groups | Retrieve a User&#39;s group resources
-[**UmUsersOwnsGet**](UserManagementApi.md#UmUsersOwnsGet) | **Get** /um/users/{userId}/owns | Retrieve a User&#39;s own resources
-[**UmUsersPost**](UserManagementApi.md#UmUsersPost) | **Post** /um/users | Create a user
-[**UmUsersPut**](UserManagementApi.md#UmUsersPut) | **Put** /um/users/{userId} | Modify a user
-[**UmUsersS3keysDelete**](UserManagementApi.md#UmUsersS3keysDelete) | **Delete** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key
-[**UmUsersS3keysFindByKeyId**](UserManagementApi.md#UmUsersS3keysFindByKeyId) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User
-[**UmUsersS3keysGet**](UserManagementApi.md#UmUsersS3keysGet) | **Get** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys
-[**UmUsersS3keysPost**](UserManagementApi.md#UmUsersS3keysPost) | **Post** /um/users/{userId}/s3keys | Create a S3 key for the given user
-[**UmUsersS3keysPut**](UserManagementApi.md#UmUsersS3keysPut) | **Put** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id
-[**UmUsersS3ssourlGet**](UserManagementApi.md#UmUsersS3ssourlGet) | **Get** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user
+|Method | HTTP request | Description|
+|------------- | ------------- | -------------|
+|[**UmGroupsDelete**](UserManagementApi.md#UmGroupsDelete) | **Delete** /um/groups/{groupId} | Delete a Group|
+|[**UmGroupsFindById**](UserManagementApi.md#UmGroupsFindById) | **Get** /um/groups/{groupId} | Retrieve a Group|
+|[**UmGroupsGet**](UserManagementApi.md#UmGroupsGet) | **Get** /um/groups | List All Groups.|
+|[**UmGroupsPost**](UserManagementApi.md#UmGroupsPost) | **Post** /um/groups | Create a Group|
+|[**UmGroupsPut**](UserManagementApi.md#UmGroupsPut) | **Put** /um/groups/{groupId} | Modify a group|
+|[**UmGroupsResourcesGet**](UserManagementApi.md#UmGroupsResourcesGet) | **Get** /um/groups/{groupId}/resources | Retrieve resources assigned to a group|
+|[**UmGroupsSharesDelete**](UserManagementApi.md#UmGroupsSharesDelete) | **Delete** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group|
+|[**UmGroupsSharesFindByResourceId**](UserManagementApi.md#UmGroupsSharesFindByResourceId) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share|
+|[**UmGroupsSharesGet**](UserManagementApi.md#UmGroupsSharesGet) | **Get** /um/groups/{groupId}/shares | List Group Shares |
+|[**UmGroupsSharesPost**](UserManagementApi.md#UmGroupsSharesPost) | **Post** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group|
+|[**UmGroupsSharesPut**](UserManagementApi.md#UmGroupsSharesPut) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group|
+|[**UmGroupsUsersDelete**](UserManagementApi.md#UmGroupsUsersDelete) | **Delete** /um/groups/{groupId}/users/{userId} | Remove a user from a group|
+|[**UmGroupsUsersGet**](UserManagementApi.md#UmGroupsUsersGet) | **Get** /um/groups/{groupId}/users | List Group Members |
+|[**UmGroupsUsersPost**](UserManagementApi.md#UmGroupsUsersPost) | **Post** /um/groups/{groupId}/users | Add a user to a group|
+|[**UmResourcesFindByType**](UserManagementApi.md#UmResourcesFindByType) | **Get** /um/resources/{resourceType} | Retrieve a list of Resources by type.|
+|[**UmResourcesFindByTypeAndId**](UserManagementApi.md#UmResourcesFindByTypeAndId) | **Get** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.|
+|[**UmResourcesGet**](UserManagementApi.md#UmResourcesGet) | **Get** /um/resources | List All Resources.|
+|[**UmUsersDelete**](UserManagementApi.md#UmUsersDelete) | **Delete** /um/users/{userId} | Delete a User|
+|[**UmUsersFindById**](UserManagementApi.md#UmUsersFindById) | **Get** /um/users/{userId} | Retrieve a User|
+|[**UmUsersGet**](UserManagementApi.md#UmUsersGet) | **Get** /um/users | List all Users |
+|[**UmUsersGroupsGet**](UserManagementApi.md#UmUsersGroupsGet) | **Get** /um/users/{userId}/groups | Retrieve a User&#39;s group resources|
+|[**UmUsersOwnsGet**](UserManagementApi.md#UmUsersOwnsGet) | **Get** /um/users/{userId}/owns | Retrieve a User&#39;s own resources|
+|[**UmUsersPost**](UserManagementApi.md#UmUsersPost) | **Post** /um/users | Create a user|
+|[**UmUsersPut**](UserManagementApi.md#UmUsersPut) | **Put** /um/users/{userId} | Modify a user|
+|[**UmUsersS3keysDelete**](UserManagementApi.md#UmUsersS3keysDelete) | **Delete** /um/users/{userId}/s3keys/{keyId} | Delete a S3 key|
+|[**UmUsersS3keysFindByKeyId**](UserManagementApi.md#UmUsersS3keysFindByKeyId) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve given S3 key belonging to the given User|
+|[**UmUsersS3keysGet**](UserManagementApi.md#UmUsersS3keysGet) | **Get** /um/users/{userId}/s3keys | Retrieve a User&#39;s S3 keys|
+|[**UmUsersS3keysPost**](UserManagementApi.md#UmUsersS3keysPost) | **Post** /um/users/{userId}/s3keys | Create a S3 key for the given user|
+|[**UmUsersS3keysPut**](UserManagementApi.md#UmUsersS3keysPut) | **Put** /um/users/{userId}/s3keys/{keyId} | Modify a S3 key having the given key id|
+|[**UmUsersS3ssourlGet**](UserManagementApi.md#UmUsersS3ssourlGet) | **Get** /um/users/{userId}/s3ssourl | Retrieve S3 object storage single signon URL for the given user|
 
 
 
@@ -78,22 +78,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** | The unique ID of the group | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** | The unique ID of the group | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -108,9 +108,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsFindById
@@ -154,22 +151,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** | The unique ID of the group | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** | The unique ID of the group | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsFindByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -184,9 +181,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsGet
@@ -235,11 +229,11 @@ func main() {
 Other parameters are passed through a pointer to a apiUmGroupsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -254,9 +248,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsPost
@@ -306,12 +297,12 @@ func main() {
 Other parameters are passed through a pointer to a apiUmGroupsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **group** | [**Group**](Group.md) | Group to be created | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **group** | [**Group**](Group.md) | Group to be created | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -326,9 +317,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsPut
@@ -373,23 +361,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** | The unique ID of the group | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** | The unique ID of the group | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **group** | [**Group**](Group.md) | Modified properties of the Group | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **group** | [**Group**](Group.md) | Modified properties of the Group | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -404,9 +392,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsResourcesGet
@@ -448,22 +433,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** | The unique ID of the group | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** | The unique ID of the group | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsResourcesGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -478,9 +463,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsSharesDelete
@@ -525,24 +507,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
-**resourceId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
+|**resourceId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsSharesDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -557,9 +539,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsSharesFindByResourceId
@@ -604,24 +583,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
-**resourceId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
+|**resourceId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsSharesFindByResourceIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -636,9 +615,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsSharesGet
@@ -682,22 +658,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsSharesGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -712,9 +688,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsSharesPost
@@ -760,25 +733,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
-**resourceId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
+|**resourceId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsSharesPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **resource** | [**GroupShare**](GroupShare.md) | Resource to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **resource** | [**GroupShare**](GroupShare.md) | Resource to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -793,9 +766,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsSharesPut
@@ -841,25 +811,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
-**resourceId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
+|**resourceId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsSharesPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **resource** | [**GroupShare**](GroupShare.md) | Modified Resource | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **resource** | [**GroupShare**](GroupShare.md) | Modified Resource | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -874,9 +844,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsUsersDelete
@@ -921,24 +888,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
-**userId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
+|**userId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsUsersDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -953,9 +920,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsUsersGet
@@ -999,22 +963,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsUsersGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1029,9 +993,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmGroupsUsersPost
@@ -1076,23 +1037,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**groupId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**groupId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmGroupsUsersPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **user** | [**User**](User.md) | User to be added | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **user** | [**User**](User.md) | User to be added | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1107,9 +1068,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmResourcesFindByType
@@ -1153,22 +1111,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**resourceType** | **string** | The resource Type | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**resourceType** | **string** | The resource Type | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmResourcesFindByTypeRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1183,9 +1141,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmResourcesFindByTypeAndId
@@ -1230,24 +1185,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**resourceType** | **string** | The resource Type | 
-**resourceId** | **string** | The resource Uuid | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**resourceType** | **string** | The resource Type | |
+|**resourceId** | **string** | The resource Uuid | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmResourcesFindByTypeAndIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1262,9 +1217,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmResourcesGet
@@ -1313,11 +1265,11 @@ func main() {
 Other parameters are passed through a pointer to a apiUmResourcesGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1332,9 +1284,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersDelete
@@ -1378,22 +1327,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1408,9 +1357,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersFindById
@@ -1454,22 +1400,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersFindByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1484,9 +1430,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersGet
@@ -1535,11 +1478,11 @@ func main() {
 Other parameters are passed through a pointer to a apiUmUsersGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1554,9 +1497,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersGroupsGet
@@ -1600,22 +1540,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersGroupsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1630,9 +1570,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersOwnsGet
@@ -1676,22 +1613,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersOwnsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1706,9 +1643,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersPost
@@ -1758,12 +1692,12 @@ func main() {
 Other parameters are passed through a pointer to a apiUmUsersPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **user** | [**User**](User.md) | User to be created | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **user** | [**User**](User.md) | User to be created | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1778,9 +1712,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersPut
@@ -1825,23 +1756,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **user** | [**User**](User.md) | Modified user | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **user** | [**User**](User.md) | Modified user | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1856,9 +1787,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersS3keysDelete
@@ -1903,24 +1831,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
-**keyId** | **string** | The unique access key ID of the S3 key | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
+|**keyId** | **string** | The unique access key ID of the S3 key | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersS3keysDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1935,9 +1863,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersS3keysFindByKeyId
@@ -1982,24 +1907,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
-**keyId** | **string** | The unique access key ID of the S3 key | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
+|**keyId** | **string** | The unique access key ID of the S3 key | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersS3keysFindByKeyIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2014,9 +1939,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersS3keysGet
@@ -2060,22 +1982,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersS3keysGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2090,9 +2012,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersS3keysPost
@@ -2136,22 +2055,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersS3keysPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2166,9 +2085,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersS3keysPut
@@ -2214,25 +2130,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** |  | 
-**keyId** | **string** | The unique access key ID of the S3 key | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** |  | |
+|**keyId** | **string** | The unique access key ID of the S3 key | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersS3keysPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **s3Key** | [**S3Key**](S3Key.md) | Modified s3 key | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **s3Key** | [**S3Key**](S3Key.md) | Modified s3 key | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2247,9 +2163,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## UmUsersS3ssourlGet
@@ -2292,21 +2205,21 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**userId** | **string** | The unique ID of the user | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**userId** | **string** | The unique ID of the user | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiUmUsersS3ssourlGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -2321,7 +2234,4 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 

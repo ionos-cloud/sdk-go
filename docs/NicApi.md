@@ -2,20 +2,20 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**DatacentersServersNicsDelete**](NicApi.md#DatacentersServersNicsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic
-[**DatacentersServersNicsFindById**](NicApi.md#DatacentersServersNicsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic
-[**DatacentersServersNicsFirewallrulesDelete**](NicApi.md#DatacentersServersNicsFirewallrulesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule
-[**DatacentersServersNicsFirewallrulesFindById**](NicApi.md#DatacentersServersNicsFirewallrulesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule
-[**DatacentersServersNicsFirewallrulesGet**](NicApi.md#DatacentersServersNicsFirewallrulesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules 
-[**DatacentersServersNicsFirewallrulesPatch**](NicApi.md#DatacentersServersNicsFirewallrulesPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule
-[**DatacentersServersNicsFirewallrulesPost**](NicApi.md#DatacentersServersNicsFirewallrulesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule
-[**DatacentersServersNicsFirewallrulesPut**](NicApi.md#DatacentersServersNicsFirewallrulesPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule
-[**DatacentersServersNicsGet**](NicApi.md#DatacentersServersNicsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics 
-[**DatacentersServersNicsPatch**](NicApi.md#DatacentersServersNicsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic
-[**DatacentersServersNicsPost**](NicApi.md#DatacentersServersNicsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic
-[**DatacentersServersNicsPut**](NicApi.md#DatacentersServersNicsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic
+|Method | HTTP request | Description|
+|------------- | ------------- | -------------|
+|[**DatacentersServersNicsDelete**](NicApi.md#DatacentersServersNicsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Nic|
+|[**DatacentersServersNicsFindById**](NicApi.md#DatacentersServersNicsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Nic|
+|[**DatacentersServersNicsFirewallrulesDelete**](NicApi.md#DatacentersServersNicsFirewallrulesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule|
+|[**DatacentersServersNicsFirewallrulesFindById**](NicApi.md#DatacentersServersNicsFirewallrulesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule|
+|[**DatacentersServersNicsFirewallrulesGet**](NicApi.md#DatacentersServersNicsFirewallrulesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules |
+|[**DatacentersServersNicsFirewallrulesPatch**](NicApi.md#DatacentersServersNicsFirewallrulesPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify a Firewall Rule|
+|[**DatacentersServersNicsFirewallrulesPost**](NicApi.md#DatacentersServersNicsFirewallrulesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule|
+|[**DatacentersServersNicsFirewallrulesPut**](NicApi.md#DatacentersServersNicsFirewallrulesPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule|
+|[**DatacentersServersNicsGet**](NicApi.md#DatacentersServersNicsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics | List Nics |
+|[**DatacentersServersNicsPatch**](NicApi.md#DatacentersServersNicsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify a Nic|
+|[**DatacentersServersNicsPost**](NicApi.md#DatacentersServersNicsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Nic|
+|[**DatacentersServersNicsPut**](NicApi.md#DatacentersServersNicsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Nic|
 
 
 
@@ -62,26 +62,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -96,9 +96,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFindById
@@ -144,26 +141,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFindByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -178,9 +175,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFirewallrulesDelete
@@ -227,28 +221,28 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
-**firewallruleId** | **string** | The unique ID of the Firewall Rule | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
+|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFirewallrulesDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -263,9 +257,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFirewallrulesFindById
@@ -312,28 +303,28 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
-**firewallruleId** | **string** | The unique ID of the Firewall Rule | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
+|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFirewallrulesFindByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -348,9 +339,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFirewallrulesGet
@@ -398,28 +386,28 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFirewallrulesGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
- **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
- **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]|
+| **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]|
 
 ### Return type
 
@@ -434,9 +422,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFirewallrulesPatch
@@ -484,29 +469,29 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
-**firewallruleId** | **string** | The unique ID of the Firewall Rule | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
+|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFirewallrulesPatchRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
 
- **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md) | Modified Firewall Rule | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md) | Modified Firewall Rule | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -521,9 +506,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFirewallrulesPost
@@ -570,27 +552,27 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the server | 
-**nicId** | **string** | The unique ID of the NIC | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the server | |
+|**nicId** | **string** | The unique ID of the NIC | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFirewallrulesPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **firewallrule** | [**FirewallRule**](FirewallRule.md) | Firewall Rule to be created | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **firewallrule** | [**FirewallRule**](FirewallRule.md) | Firewall Rule to be created | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -605,9 +587,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsFirewallrulesPut
@@ -655,29 +634,29 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
-**firewallruleId** | **string** | The unique ID of the Firewall Rule | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
+|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsFirewallrulesPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
 
- **firewallrule** | [**FirewallRule**](FirewallRule.md) | Modified Firewall Rule | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **firewallrule** | [**FirewallRule**](FirewallRule.md) | Modified Firewall Rule | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -692,9 +671,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsGet
@@ -741,26 +717,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
- **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]
- **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with &lt;code&gt;limit&lt;/code&gt; for pagination) | [default to 0]|
+| **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 1000]|
 
 ### Return type
 
@@ -775,9 +751,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsPatch
@@ -824,27 +797,27 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsPatchRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **nic** | [**NicProperties**](NicProperties.md) | Modified properties of Nic | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **nic** | [**NicProperties**](NicProperties.md) | Modified properties of Nic | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -859,9 +832,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsPost
@@ -907,25 +877,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **nic** | [**Nic**](Nic.md) | Nic to be created | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **nic** | [**Nic**](Nic.md) | Nic to be created | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -940,9 +910,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## DatacentersServersNicsPut
@@ -989,27 +956,27 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**datacenterId** | **string** | The unique ID of the datacenter | 
-**serverId** | **string** | The unique ID of the Server | 
-**nicId** | **string** | The unique ID of the NIC | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**serverId** | **string** | The unique ID of the Server | |
+|**nicId** | **string** | The unique ID of the NIC | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersServersNicsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **nic** | [**Nic**](Nic.md) | Modified Nic | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **nic** | [**Nic**](Nic.md) | Modified Nic | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1024,7 +991,4 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 

@@ -2,26 +2,26 @@
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 
-Method | HTTP request | Description
-------------- | ------------- | -------------
-[**K8sDelete**](KubernetesApi.md#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes Cluster
-[**K8sFindByClusterId**](KubernetesApi.md#K8sFindByClusterId) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster
-[**K8sGet**](KubernetesApi.md#K8sGet) | **Get** /k8s | List Kubernetes Clusters
-[**K8sKubeconfigGet**](KubernetesApi.md#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File
-[**K8sNodepoolsDelete**](KubernetesApi.md#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool
-[**K8sNodepoolsFindById**](KubernetesApi.md#K8sNodepoolsFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool
-[**K8sNodepoolsGet**](KubernetesApi.md#K8sNodepoolsGet) | **Get** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools
-[**K8sNodepoolsNodesDelete**](KubernetesApi.md#K8sNodepoolsNodesDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node
-[**K8sNodepoolsNodesFindById**](KubernetesApi.md#K8sNodepoolsNodesFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node
-[**K8sNodepoolsNodesGet**](KubernetesApi.md#K8sNodepoolsNodesGet) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.
-[**K8sNodepoolsNodesReplacePost**](KubernetesApi.md#K8sNodepoolsNodesReplacePost) | **Post** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node
-[**K8sNodepoolsPost**](KubernetesApi.md#K8sNodepoolsPost) | **Post** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool
-[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool
-[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create Kubernetes Cluster
-[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify Kubernetes Cluster
-[**K8sVersionsCompatibilitiesGet**](KubernetesApi.md#K8sVersionsCompatibilitiesGet) | **Get** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.
-[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | Retrieve available Kubernetes versions
+|Method | HTTP request | Description|
+|------------- | ------------- | -------------|
+|[**K8sDelete**](KubernetesApi.md#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes Cluster|
+|[**K8sFindByClusterId**](KubernetesApi.md#K8sFindByClusterId) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster|
+|[**K8sGet**](KubernetesApi.md#K8sGet) | **Get** /k8s | List Kubernetes Clusters|
+|[**K8sKubeconfigGet**](KubernetesApi.md#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File|
+|[**K8sNodepoolsDelete**](KubernetesApi.md#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool|
+|[**K8sNodepoolsFindById**](KubernetesApi.md#K8sNodepoolsFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool|
+|[**K8sNodepoolsGet**](KubernetesApi.md#K8sNodepoolsGet) | **Get** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools|
+|[**K8sNodepoolsNodesDelete**](KubernetesApi.md#K8sNodepoolsNodesDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node|
+|[**K8sNodepoolsNodesFindById**](KubernetesApi.md#K8sNodepoolsNodesFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node|
+|[**K8sNodepoolsNodesGet**](KubernetesApi.md#K8sNodepoolsNodesGet) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.|
+|[**K8sNodepoolsNodesReplacePost**](KubernetesApi.md#K8sNodepoolsNodesReplacePost) | **Post** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node|
+|[**K8sNodepoolsPost**](KubernetesApi.md#K8sNodepoolsPost) | **Post** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool|
+|[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool|
+|[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create Kubernetes Cluster|
+|[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify Kubernetes Cluster|
+|[**K8sVersionsCompatibilitiesGet**](KubernetesApi.md#K8sVersionsCompatibilitiesGet) | **Get** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.|
+|[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.|
+|[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | Retrieve available Kubernetes versions|
 
 
 
@@ -66,22 +66,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -96,9 +96,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sFindByClusterId
@@ -142,22 +139,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sFindByClusterIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -172,9 +169,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sGet
@@ -223,11 +217,11 @@ func main() {
 Other parameters are passed through a pointer to a apiK8sGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -242,9 +236,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sKubeconfigGet
@@ -288,22 +279,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sKubeconfigGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -318,9 +309,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsDelete
@@ -365,24 +353,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -397,9 +385,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsFindById
@@ -444,24 +429,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsFindByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -476,9 +461,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsGet
@@ -522,22 +504,22 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -552,9 +534,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsNodesDelete
@@ -600,26 +579,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
-**nodeId** | **string** | The unique ID of the Kubernetes node | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**nodeId** | **string** | The unique ID of the Kubernetes node | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsNodesDeleteRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -634,9 +613,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsNodesFindById
@@ -682,26 +658,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
-**nodeId** | **string** | The unique ID of the Kubernetes Node. | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**nodeId** | **string** | The unique ID of the Kubernetes Node. | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsNodesFindByIdRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -716,9 +692,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsNodesGet
@@ -763,24 +736,24 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsNodesGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -795,9 +768,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsNodesReplacePost
@@ -843,26 +813,26 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
-**nodeId** | **string** | The unique ID of the Kubernetes Node. | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**nodeId** | **string** | The unique ID of the Kubernetes Node. | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsNodesReplacePostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -877,9 +847,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsPost
@@ -924,23 +891,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of Kubernetes Node Pool | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of Kubernetes Node Pool | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -955,9 +922,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sNodepoolsPut
@@ -1003,25 +967,25 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
-**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sNodepoolsPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
- **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of the Kubernetes Node Pool | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of the Kubernetes Node Pool | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1036,9 +1000,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sPost
@@ -1088,12 +1049,12 @@ func main() {
 Other parameters are passed through a pointer to a apiK8sPostRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1108,9 +1069,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sPut
@@ -1155,23 +1113,23 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sPutRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
- **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | 
- **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]
- **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]
- **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | 
+| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | |
+| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
 
 ### Return type
 
@@ -1186,9 +1144,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: application/json
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sVersionsCompatibilitiesGet
@@ -1229,18 +1184,18 @@ func main() {
 ### Path Parameters
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
-**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.
-**clusterVersion** | **string** |  | 
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**clusterVersion** | **string** |  | |
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiK8sVersionsCompatibilitiesGetRequest struct via the builder pattern
 
 
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
 
 
 ### Return type
@@ -1256,9 +1211,6 @@ Name | Type | Description  | Notes
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sVersionsDefaultGet
@@ -1317,9 +1269,6 @@ Other parameters are passed through a pointer to a apiK8sVersionsDefaultGetReque
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
 
 ## K8sVersionsGet
@@ -1378,7 +1327,4 @@ Other parameters are passed through a pointer to a apiK8sVersionsGetRequest stru
 - **Content-Type**: Not defined
 - **Accept**: application/json
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
-[[Back to Model list]](../README.md#documentation-for-models)
-[[Back to README]](../README.md)
 
