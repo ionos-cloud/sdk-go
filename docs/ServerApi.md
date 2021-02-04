@@ -82,9 +82,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsDe
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -161,9 +158,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsFi
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -240,8 +234,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsGe
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -319,8 +311,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsPo
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **cdrom** | [**Image**](Image.md) | CD-ROM to be attached | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -396,8 +386,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersDeleteRe
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -472,8 +460,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersFindById
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -549,7 +535,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersGetReque
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **upgradeNeeded** | **bool** | It can be used to filter which servers can be upgraded which can not be upgraded. | |
@@ -628,8 +613,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersPatchReq
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **server** | [**ServerProperties**](ServerProperties.md) | Modified properties of Server | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -704,7 +687,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersPostRequ
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **server** | [**Server**](Server.md) | Server to be created | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -781,8 +763,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersPutReque
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **server** | [**Server**](Server.md) | Modified Server | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -858,8 +838,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersRebootPo
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -934,8 +912,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersStartPos
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1010,8 +986,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersStopPost
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1086,8 +1060,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersUpgradeP
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1164,9 +1136,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesD
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1243,9 +1212,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesF
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1322,8 +1288,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesG
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1401,8 +1365,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesP
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **volume** | [**Volume**](Volume.md) | Volume to be attached (created and attached) | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|

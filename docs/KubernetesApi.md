@@ -78,7 +78,6 @@ Other parameters are passed through a pointer to a apiK8sDeleteRequest struct vi
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -151,7 +150,6 @@ Other parameters are passed through a pointer to a apiK8sFindByClusterIdRequest 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -291,7 +289,6 @@ Other parameters are passed through a pointer to a apiK8sKubeconfigGetRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -366,8 +363,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsDeleteRequest 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -442,8 +437,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsFindByIdReques
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -516,7 +509,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsGetRequest str
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -593,9 +585,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesDeleteReq
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -672,9 +661,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesFindByIdR
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -749,8 +735,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesGetReques
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -827,9 +811,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsNodesReplacePo
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -903,7 +884,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of Kubernetes Node Pool | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -980,8 +960,6 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPutRequest str
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of the Kubernetes Node Pool | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -1125,7 +1103,6 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -1196,7 +1173,6 @@ Other parameters are passed through a pointer to a apiK8sVersionsCompatibilities
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 
 ### Return type
 

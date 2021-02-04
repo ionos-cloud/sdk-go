@@ -66,7 +66,6 @@ Other parameters are passed through a pointer to a apiIpblocksDeleteRequest stru
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -139,7 +138,6 @@ Other parameters are passed through a pointer to a apiIpblocksFindByIdRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -280,7 +278,6 @@ Other parameters are passed through a pointer to a apiIpblocksPatchRequest struc
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **ipblock** | [**IpBlockProperties**](IpBlockProperties.md) | IP Block to be modified | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -424,7 +421,6 @@ Other parameters are passed through a pointer to a apiIpblocksPutRequest struct 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
 | **ipblock** | [**IpBlock**](IpBlock.md) | IP Block to be modified | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|

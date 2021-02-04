@@ -76,9 +76,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsDele
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -155,9 +152,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFind
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -236,10 +230,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -318,10 +308,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -400,9 +386,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -484,10 +467,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
-
 | **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md) | Modified Firewall Rule | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -566,9 +545,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **firewallrule** | [**FirewallRule**](FirewallRule.md) | Firewall Rule to be created | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -649,10 +625,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
-
 | **firewallrule** | [**FirewallRule**](FirewallRule.md) | Modified Firewall Rule | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -730,8 +702,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsGetR
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -811,9 +781,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPatc
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **nic** | [**NicProperties**](NicProperties.md) | Modified properties of Nic | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -890,8 +857,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPost
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
 | **nic** | [**Nic**](Nic.md) | Nic to be created | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
@@ -970,9 +935,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPutR
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-
-
-
 | **nic** | [**Nic**](Nic.md) | Modified Nic | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
