@@ -2,11 +2,11 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | **string** | The resource&#39;s unique identifier | 
-**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] 
-**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Id** | **string** | The resource&#39;s unique identifier | |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
 
 ## Methods
 
@@ -97,7 +97,5 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

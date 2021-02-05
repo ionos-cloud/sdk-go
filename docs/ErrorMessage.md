@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ErrorCode** | Pointer to **string** | Application internal error code | [optional] [readonly] 
-**Message** | Pointer to **string** | Human readable message | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**ErrorCode** | Pointer to **string** | Application internal error code | [optional] [readonly] |
+|**Message** | Pointer to **string** | Human readable message | [optional] [readonly] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetMessage sets Message field to given value.
 
 HasMessage returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

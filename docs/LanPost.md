@@ -2,14 +2,14 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] [readonly] 
-**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] 
-**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] 
-**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] 
-**Entities** | Pointer to [**LanEntities**](LanEntities.md) |  | [optional] 
-**Properties** | [**LanPropertiesPost**](LanPropertiesPost.md) |  | 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] [readonly] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
+|**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
+|**Entities** | Pointer to [**LanEntities**](LanEntities.md) |  | [optional] |
+|**Properties** | [**LanPropertiesPost**](LanPropertiesPost.md) |  | |
 
 ## Methods
 
@@ -175,7 +175,5 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

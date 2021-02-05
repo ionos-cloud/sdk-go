@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Ip** | Pointer to **string** |  | [optional] 
-**NicUuid** | Pointer to **string** |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Ip** | Pointer to **string** |  | [optional] |
+|**NicUuid** | Pointer to **string** |  | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetNicUuid sets NicUuid field to given value.
 
 HasNicUuid returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

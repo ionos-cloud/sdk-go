@@ -2,12 +2,12 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**IpFailover** | Pointer to [**[]IPFailover**](IPFailover.md) | IP failover configurations for lan | [optional] 
-**Pcc** | Pointer to **string** | Unique identifier of the private cross connect the given LAN is connected to if any | [optional] 
-**Public** | Pointer to **bool** | Does this LAN faces the public Internet or not | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**IpFailover** | Pointer to [**[]IPFailover**](IPFailover.md) | IP failover configurations for lan | [optional] |
+|**Pcc** | Pointer to **string** | Unique identifier of the private cross connect the given LAN is connected to if any | [optional] |
+|**Public** | Pointer to **bool** | Does this LAN faces the public Internet or not | [optional] |
 
 ## Methods
 
@@ -128,7 +128,5 @@ SetPublic sets Public field to given value.
 
 HasPublic returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

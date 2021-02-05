@@ -2,9 +2,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Nics** | Pointer to [**LanNics**](LanNics.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Nics** | Pointer to [**LanNics**](LanNics.md) |  | [optional] |
 
 ## Methods
 
@@ -50,7 +50,5 @@ SetNics sets Nics field to given value.
 
 HasNics returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

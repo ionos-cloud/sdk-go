@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Type** | Pointer to [**Type**](Type.md) | The type of the resource | [optional] 
-**Properties** | [**ContractProperties**](ContractProperties.md) |  | 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Type** | Pointer to [**Type**](Type.md) | The type of the resource | [optional] |
+|**Properties** | [**ContractProperties**](ContractProperties.md) |  | |
 
 ## Methods
 
@@ -71,7 +71,5 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

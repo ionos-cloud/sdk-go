@@ -2,9 +2,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Balancednics** | Pointer to [**BalancedNics**](BalancedNics.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Balancednics** | Pointer to [**BalancedNics**](BalancedNics.md) |  | [optional] |
 
 ## Methods
 
@@ -50,7 +50,5 @@ SetBalancednics sets Balancednics field to given value.
 
 HasBalancednics returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

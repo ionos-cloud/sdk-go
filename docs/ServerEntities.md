@@ -2,11 +2,11 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Cdroms** | Pointer to [**Cdroms**](Cdroms.md) |  | [optional] 
-**Volumes** | Pointer to [**AttachedVolumes**](AttachedVolumes.md) |  | [optional] 
-**Nics** | Pointer to [**Nics**](Nics.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Cdroms** | Pointer to [**Cdroms**](Cdroms.md) |  | [optional] |
+|**Volumes** | Pointer to [**AttachedVolumes**](AttachedVolumes.md) |  | [optional] |
+|**Nics** | Pointer to [**Nics**](Nics.md) |  | [optional] |
 
 ## Methods
 
@@ -102,7 +102,5 @@ SetNics sets Nics field to given value.
 
 HasNics returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

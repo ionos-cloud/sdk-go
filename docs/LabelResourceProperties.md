@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Key** | Pointer to **string** | A Label Key | [optional] 
-**Value** | Pointer to **string** | A Label Value | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Key** | Pointer to **string** | A Label Key | [optional] |
+|**Value** | Pointer to **string** | A Label Value | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetValue sets Value field to given value.
 
 HasValue returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

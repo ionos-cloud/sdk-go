@@ -2,25 +2,25 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**Description** | Pointer to **string** | Human readable description | [optional] 
-**Location** | Pointer to **string** | Location of that image/snapshot.  | [optional] [readonly] 
-**Size** | Pointer to **float32** | The size of the image in GB | [optional] [readonly] 
-**CpuHotPlug** | Pointer to **bool** | Is capable of CPU hot plug (no reboot required) | [optional] 
-**CpuHotUnplug** | Pointer to **bool** | Is capable of CPU hot unplug (no reboot required) | [optional] 
-**RamHotPlug** | Pointer to **bool** | Is capable of memory hot plug (no reboot required) | [optional] 
-**RamHotUnplug** | Pointer to **bool** | Is capable of memory hot unplug (no reboot required) | [optional] 
-**NicHotPlug** | Pointer to **bool** | Is capable of nic hot plug (no reboot required) | [optional] 
-**NicHotUnplug** | Pointer to **bool** | Is capable of nic hot unplug (no reboot required) | [optional] 
-**DiscVirtioHotPlug** | Pointer to **bool** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] 
-**DiscVirtioHotUnplug** | Pointer to **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
-**DiscScsiHotPlug** | Pointer to **bool** | Is capable of SCSI drive hot plug (no reboot required) | [optional] 
-**DiscScsiHotUnplug** | Pointer to **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] 
-**LicenceType** | **string** | OS type of this Image | 
-**ImageType** | Pointer to **string** | This indicates the type of image | [optional] [readonly] 
-**Public** | Pointer to **bool** | Indicates if the image is part of the public repository or not | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Description** | Pointer to **string** | Human readable description | [optional] |
+|**Location** | Pointer to **string** | Location of that image/snapshot.  | [optional] [readonly] |
+|**Size** | Pointer to **float32** | The size of the image in GB | [optional] [readonly] |
+|**CpuHotPlug** | Pointer to **bool** | Is capable of CPU hot plug (no reboot required) | [optional] |
+|**CpuHotUnplug** | Pointer to **bool** | Is capable of CPU hot unplug (no reboot required) | [optional] |
+|**RamHotPlug** | Pointer to **bool** | Is capable of memory hot plug (no reboot required) | [optional] |
+|**RamHotUnplug** | Pointer to **bool** | Is capable of memory hot unplug (no reboot required) | [optional] |
+|**NicHotPlug** | Pointer to **bool** | Is capable of nic hot plug (no reboot required) | [optional] |
+|**NicHotUnplug** | Pointer to **bool** | Is capable of nic hot unplug (no reboot required) | [optional] |
+|**DiscVirtioHotPlug** | Pointer to **bool** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] |
+|**DiscVirtioHotUnplug** | Pointer to **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
+|**DiscScsiHotPlug** | Pointer to **bool** | Is capable of SCSI drive hot plug (no reboot required) | [optional] |
+|**DiscScsiHotUnplug** | Pointer to **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
+|**LicenceType** | **string** | OS type of this Image | |
+|**ImageType** | Pointer to **string** | This indicates the type of image | [optional] [readonly] |
+|**Public** | Pointer to **bool** | Indicates if the image is part of the public repository or not | [optional] [readonly] |
 
 ## Methods
 
@@ -461,7 +461,5 @@ SetPublic sets Public field to given value.
 
 HasPublic returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

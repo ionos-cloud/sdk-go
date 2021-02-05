@@ -2,11 +2,11 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**Ip** | Pointer to **string** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically | [optional] 
-**Dhcp** | Pointer to **bool** | Indicates if the loadbalancer will reserve an IP using DHCP | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Ip** | Pointer to **string** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically | [optional] |
+|**Dhcp** | Pointer to **bool** | Indicates if the loadbalancer will reserve an IP using DHCP | [optional] |
 
 ## Methods
 
@@ -102,7 +102,5 @@ SetDhcp sets Dhcp field to given value.
 
 HasDhcp returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

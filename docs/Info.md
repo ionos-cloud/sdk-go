@@ -2,11 +2,11 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Href** | Pointer to **string** | API entry point | [optional] [readonly] 
-**Name** | Pointer to **string** | Name of the API | [optional] [readonly] 
-**Version** | Pointer to **string** | Version of the API | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Href** | Pointer to **string** | API entry point | [optional] [readonly] |
+|**Name** | Pointer to **string** | Name of the API | [optional] [readonly] |
+|**Version** | Pointer to **string** | Version of the API | [optional] [readonly] |
 
 ## Methods
 
@@ -102,7 +102,5 @@ SetVersion sets Version field to given value.
 
 HasVersion returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

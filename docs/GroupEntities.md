@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Users** | Pointer to [**GroupMembers**](GroupMembers.md) |  | [optional] 
-**Resources** | Pointer to [**ResourceGroups**](ResourceGroups.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Users** | Pointer to [**GroupMembers**](GroupMembers.md) |  | [optional] |
+|**Resources** | Pointer to [**ResourceGroups**](ResourceGroups.md) |  | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetResources sets Resources field to given value.
 
 HasResources returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

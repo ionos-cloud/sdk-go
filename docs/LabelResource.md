@@ -2,13 +2,13 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Label on a resource is identified using label key. | [optional] [readonly] 
-**Type** | Pointer to **string** | The type of object that has been created | [optional] [readonly] 
-**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] 
-**Metadata** | Pointer to [**NoStateMetaData**](NoStateMetaData.md) |  | [optional] 
-**Properties** | [**LabelResourceProperties**](LabelResourceProperties.md) |  | 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Id** | Pointer to **string** | Label on a resource is identified using label key. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of object that has been created | [optional] [readonly] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
+|**Metadata** | Pointer to [**NoStateMetaData**](NoStateMetaData.md) |  | [optional] |
+|**Properties** | [**LabelResourceProperties**](LabelResourceProperties.md) |  | |
 
 ## Methods
 
@@ -149,7 +149,5 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

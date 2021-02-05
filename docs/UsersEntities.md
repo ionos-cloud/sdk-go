@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Owns** | Pointer to [**ResourcesUsers**](ResourcesUsers.md) |  | [optional] 
-**Groups** | Pointer to [**GroupUsers**](GroupUsers.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Owns** | Pointer to [**ResourcesUsers**](ResourcesUsers.md) |  | [optional] |
+|**Groups** | Pointer to [**GroupUsers**](GroupUsers.md) |  | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetGroups sets Groups field to given value.
 
 HasGroups returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

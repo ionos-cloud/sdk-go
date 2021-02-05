@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**EditPrivilege** | Pointer to **bool** | edit privilege on a resource | [optional] 
-**SharePrivilege** | Pointer to **bool** | share privilege on a resource | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**EditPrivilege** | Pointer to **bool** | edit privilege on a resource | [optional] |
+|**SharePrivilege** | Pointer to **bool** | share privilege on a resource | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetSharePrivilege sets SharePrivilege field to given value.
 
 HasSharePrivilege returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

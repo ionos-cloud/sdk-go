@@ -2,12 +2,12 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**Description** | Pointer to **string** | Human readable description | [optional] 
-**Peers** | Pointer to [**[]Peer**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect | [optional] [readonly] 
-**ConnectableDatacenters** | Pointer to [**[]ConnectableDatacenter**](ConnectableDatacenter.md) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Description** | Pointer to **string** | Human readable description | [optional] |
+|**Peers** | Pointer to [**[]Peer**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect | [optional] [readonly] |
+|**ConnectableDatacenters** | Pointer to [**[]ConnectableDatacenter**](ConnectableDatacenter.md) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect | [optional] [readonly] |
 
 ## Methods
 
@@ -128,7 +128,5 @@ SetConnectableDatacenters sets ConnectableDatacenters field to given value.
 
 HasConnectableDatacenters returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

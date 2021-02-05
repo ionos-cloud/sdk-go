@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**HttpStatus** | Pointer to **int32** | HTTP status code of the operation | [optional] [readonly] 
-**Messages** | Pointer to [**[]ErrorMessage**](ErrorMessage.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**HttpStatus** | Pointer to **int32** | HTTP status code of the operation | [optional] [readonly] |
+|**Messages** | Pointer to [**[]ErrorMessage**](ErrorMessage.md) |  | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetMessages sets Messages field to given value.
 
 HasMessages returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

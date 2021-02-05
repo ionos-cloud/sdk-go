@@ -2,15 +2,15 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**Mac** | Pointer to **string** | The MAC address of the NIC | [optional] [readonly] 
-**Ips** | Pointer to **[]string** | Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically. | [optional] 
-**Dhcp** | Pointer to **bool** | Indicates if the nic will reserve an IP using DHCP | [optional] 
-**Lan** | **int32** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | 
-**FirewallActive** | Pointer to **bool** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. | [optional] 
-**Nat** | Pointer to **bool** | Indicates if NAT is enabled on this NIC. This is now deprecated. | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Mac** | Pointer to **string** | The MAC address of the NIC | [optional] [readonly] |
+|**Ips** | Pointer to **[]string** | Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically. | [optional] |
+|**Dhcp** | Pointer to **bool** | Indicates if the nic will reserve an IP using DHCP | [optional] |
+|**Lan** | **int32** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | |
+|**FirewallActive** | Pointer to **bool** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. | [optional] |
+|**Nat** | Pointer to **bool** | Indicates if NAT is enabled on this NIC. This is now deprecated. | [optional] |
 
 ## Methods
 
@@ -201,7 +201,5 @@ SetNat sets Nat field to given value.
 
 HasNat returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

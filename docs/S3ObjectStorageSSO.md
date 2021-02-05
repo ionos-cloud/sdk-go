@@ -2,9 +2,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**SsoUrl** | Pointer to **string** | The S3 object storage single sign on url | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**SsoUrl** | Pointer to **string** | The S3 object storage single sign on url | [optional] [readonly] |
 
 ## Methods
 
@@ -50,7 +50,5 @@ SetSsoUrl sets SsoUrl field to given value.
 
 HasSsoUrl returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -2,12 +2,12 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | Unique representation for Kubernetes Node Pool as a collection on a resource. | [optional] [readonly] 
-**Type** | Pointer to **string** | The type of resource within a collection | [optional] [readonly] 
-**Href** | Pointer to **string** | URL to the collection representation (absolute path) | [optional] [readonly] 
-**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in that collection | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Id** | Pointer to **string** | Unique representation for Kubernetes Node Pool as a collection on a resource. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of resource within a collection | [optional] [readonly] |
+|**Href** | Pointer to **string** | URL to the collection representation (absolute path) | [optional] [readonly] |
+|**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in that collection | [optional] [readonly] |
 
 ## Methods
 
@@ -128,7 +128,5 @@ SetItems sets Items field to given value.
 
 HasItems returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

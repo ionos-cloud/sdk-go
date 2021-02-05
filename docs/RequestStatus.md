@@ -2,12 +2,12 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] [readonly] 
-**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] 
-**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] 
-**Metadata** | Pointer to [**RequestStatusMetadata**](RequestStatusMetadata.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] [readonly] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
+|**Metadata** | Pointer to [**RequestStatusMetadata**](RequestStatusMetadata.md) |  | [optional] |
 
 ## Methods
 
@@ -128,7 +128,5 @@ SetMetadata sets Metadata field to given value.
 
 HasMetadata returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

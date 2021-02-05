@@ -2,17 +2,17 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Firstname** | Pointer to **string** | first name of the user | [optional] 
-**Lastname** | Pointer to **string** | last name of the user | [optional] 
-**Email** | Pointer to **string** | email address of the user | [optional] 
-**Administrator** | Pointer to **bool** | indicates if the user has admin rights or not | [optional] 
-**ForceSecAuth** | Pointer to **bool** | indicates if secure authentication should be forced on the user or not | [optional] 
-**SecAuthActive** | Pointer to **bool** | indicates if secure authentication is active for the user or not | [optional] 
-**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) id of the user for a given identity | [optional] 
-**Password** | Pointer to **string** | User password | [optional] 
-**Active** | Pointer to **bool** | indicates if the user is active | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Firstname** | Pointer to **string** | first name of the user | [optional] |
+|**Lastname** | Pointer to **string** | last name of the user | [optional] |
+|**Email** | Pointer to **string** | email address of the user | [optional] |
+|**Administrator** | Pointer to **bool** | indicates if the user has admin rights or not | [optional] |
+|**ForceSecAuth** | Pointer to **bool** | indicates if secure authentication should be forced on the user or not | [optional] |
+|**SecAuthActive** | Pointer to **bool** | indicates if secure authentication is active for the user or not | [optional] |
+|**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) id of the user for a given identity | [optional] |
+|**Password** | Pointer to **string** | User password | [optional] |
+|**Active** | Pointer to **bool** | indicates if the user is active | [optional] |
 
 ## Methods
 
@@ -258,7 +258,5 @@ SetActive sets Active field to given value.
 
 HasActive returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

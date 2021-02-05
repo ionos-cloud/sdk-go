@@ -2,12 +2,12 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Servers** | Pointer to [**Servers**](Servers.md) |  | [optional] 
-**Volumes** | Pointer to [**Volumes**](Volumes.md) |  | [optional] 
-**Loadbalancers** | Pointer to [**Loadbalancers**](Loadbalancers.md) |  | [optional] 
-**Lans** | Pointer to [**Lans**](Lans.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Servers** | Pointer to [**Servers**](Servers.md) |  | [optional] |
+|**Volumes** | Pointer to [**Volumes**](Volumes.md) |  | [optional] |
+|**Loadbalancers** | Pointer to [**Loadbalancers**](Loadbalancers.md) |  | [optional] |
+|**Lans** | Pointer to [**Lans**](Lans.md) |  | [optional] |
 
 ## Methods
 
@@ -128,7 +128,5 @@ SetLans sets Lans field to given value.
 
 HasLans returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

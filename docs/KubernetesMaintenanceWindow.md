@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**DayOfTheWeek** | Pointer to **string** | The day of the week for a maintenance window. | [optional] 
-**Time** | Pointer to **string** | The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes. | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**DayOfTheWeek** | Pointer to **string** | The day of the week for a maintenance window. | [optional] |
+|**Time** | Pointer to **string** | The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes. | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetTime sets Time field to given value.
 
 HasTime returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

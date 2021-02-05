@@ -2,13 +2,13 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**ContractNumber** | Pointer to **int64** | contract number | [optional] [readonly] 
-**Owner** | Pointer to **string** | owner of the contract | [optional] [readonly] 
-**Status** | Pointer to **string** | status of the contract | [optional] [readonly] 
-**RegDomain** | Pointer to **string** | Registration domain of the contract | [optional] [readonly] 
-**ResourceLimits** | Pointer to [**ResourceLimits**](ResourceLimits.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**ContractNumber** | Pointer to **int64** | contract number | [optional] [readonly] |
+|**Owner** | Pointer to **string** | owner of the contract | [optional] [readonly] |
+|**Status** | Pointer to **string** | status of the contract | [optional] [readonly] |
+|**RegDomain** | Pointer to **string** | Registration domain of the contract | [optional] [readonly] |
+|**ResourceLimits** | Pointer to [**ResourceLimits**](ResourceLimits.md) |  | [optional] |
 
 ## Methods
 
@@ -154,7 +154,5 @@ SetResourceLimits sets ResourceLimits field to given value.
 
 HasResourceLimits returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

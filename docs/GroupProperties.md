@@ -2,18 +2,18 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**CreateDataCenter** | Pointer to **bool** | create data center privilege | [optional] 
-**CreateSnapshot** | Pointer to **bool** | create snapshot privilege | [optional] 
-**ReserveIp** | Pointer to **bool** | reserve ip block privilege | [optional] 
-**AccessActivityLog** | Pointer to **bool** | activity log access privilege | [optional] 
-**CreatePcc** | Pointer to **bool** | create pcc privilege | [optional] 
-**S3Privilege** | Pointer to **bool** | S3 privilege | [optional] 
-**CreateBackupUnit** | Pointer to **bool** | create backup unit privilege | [optional] 
-**CreateInternetAccess** | Pointer to **bool** | create internet access privilege | [optional] 
-**CreateK8sCluster** | Pointer to **bool** | create kubernetes cluster privilege | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**CreateDataCenter** | Pointer to **bool** | create data center privilege | [optional] |
+|**CreateSnapshot** | Pointer to **bool** | create snapshot privilege | [optional] |
+|**ReserveIp** | Pointer to **bool** | reserve ip block privilege | [optional] |
+|**AccessActivityLog** | Pointer to **bool** | activity log access privilege | [optional] |
+|**CreatePcc** | Pointer to **bool** | create pcc privilege | [optional] |
+|**S3Privilege** | Pointer to **bool** | S3 privilege | [optional] |
+|**CreateBackupUnit** | Pointer to **bool** | create backup unit privilege | [optional] |
+|**CreateInternetAccess** | Pointer to **bool** | create internet access privilege | [optional] |
+|**CreateK8sCluster** | Pointer to **bool** | create kubernetes cluster privilege | [optional] |
 
 ## Methods
 
@@ -284,7 +284,5 @@ SetCreateK8sCluster sets CreateK8sCluster field to given value.
 
 HasCreateK8sCluster returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -2,9 +2,9 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Nodepools** | Pointer to [**KubernetesNodePools**](KubernetesNodePools.md) |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Nodepools** | Pointer to [**KubernetesNodePools**](KubernetesNodePools.md) |  | [optional] |
 
 ## Methods
 
@@ -50,7 +50,5 @@ SetNodepools sets Nodepools field to given value.
 
 HasNodepools returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

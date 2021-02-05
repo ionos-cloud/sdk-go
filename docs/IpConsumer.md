@@ -2,15 +2,15 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Ip** | Pointer to **string** |  | [optional] 
-**Mac** | Pointer to **string** |  | [optional] 
-**NicId** | Pointer to **string** |  | [optional] 
-**ServerId** | Pointer to **string** |  | [optional] 
-**ServerName** | Pointer to **string** |  | [optional] 
-**DatacenterId** | Pointer to **string** |  | [optional] 
-**DatacenterName** | Pointer to **string** |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Ip** | Pointer to **string** |  | [optional] |
+|**Mac** | Pointer to **string** |  | [optional] |
+|**NicId** | Pointer to **string** |  | [optional] |
+|**ServerId** | Pointer to **string** |  | [optional] |
+|**ServerName** | Pointer to **string** |  | [optional] |
+|**DatacenterId** | Pointer to **string** |  | [optional] |
+|**DatacenterName** | Pointer to **string** |  | [optional] |
 
 ## Methods
 
@@ -206,7 +206,5 @@ SetDatacenterName sets DatacenterName field to given value.
 
 HasDatacenterName returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

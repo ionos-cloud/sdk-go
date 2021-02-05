@@ -2,10 +2,10 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**SecretKey** | Pointer to **string** | secret of the s3 key | [optional] [readonly] 
-**Active** | Pointer to **bool** | denotes if the s3 key is active or not | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**SecretKey** | Pointer to **string** | secret of the s3 key | [optional] [readonly] |
+|**Active** | Pointer to **bool** | denotes if the s3 key is active or not | [optional] |
 
 ## Methods
 
@@ -76,7 +76,5 @@ SetActive sets Active field to given value.
 
 HasActive returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

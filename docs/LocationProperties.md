@@ -2,11 +2,11 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**Features** | Pointer to **[]string** | List of features supported by the location | [optional] [readonly] 
-**ImageAliases** | Pointer to **[]string** | List of image aliases available for the location | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Features** | Pointer to **[]string** | List of features supported by the location | [optional] [readonly] |
+|**ImageAliases** | Pointer to **[]string** | List of image aliases available for the location | [optional] [readonly] |
 
 ## Methods
 
@@ -102,7 +102,5 @@ SetImageAliases sets ImageAliases field to given value.
 
 HasImageAliases returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

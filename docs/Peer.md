@@ -2,13 +2,13 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Id** | Pointer to **string** |  | [optional] 
-**Name** | Pointer to **string** |  | [optional] 
-**DatacenterId** | Pointer to **string** |  | [optional] 
-**DatacenterName** | Pointer to **string** |  | [optional] 
-**Location** | Pointer to **string** |  | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Id** | Pointer to **string** |  | [optional] |
+|**Name** | Pointer to **string** |  | [optional] |
+|**DatacenterId** | Pointer to **string** |  | [optional] |
+|**DatacenterName** | Pointer to **string** |  | [optional] |
+|**Location** | Pointer to **string** |  | [optional] |
 
 ## Methods
 
@@ -154,7 +154,5 @@ SetLocation sets Location field to given value.
 
 HasLocation returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

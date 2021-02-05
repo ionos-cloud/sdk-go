@@ -2,13 +2,13 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Ips** | Pointer to **[]string** | A collection of IPs associated with the IP Block | [optional] [readonly] 
-**Location** | **string** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | 
-**Size** | **int32** | The size of the IP block | 
-**Name** | Pointer to **string** | A name of that resource | [optional] 
-**IpConsumers** | Pointer to [**[]IpConsumer**](IpConsumer.md) | Read-Only attribute. Lists consumption detail of an individual ip | [optional] [readonly] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Ips** | Pointer to **[]string** | A collection of IPs associated with the IP Block | [optional] [readonly] |
+|**Location** | **string** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | |
+|**Size** | **int32** | The size of the IP block | |
+|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**IpConsumers** | Pointer to [**[]IpConsumer**](IpConsumer.md) | Read-Only attribute. Lists consumption detail of an individual ip | [optional] [readonly] |
 
 ## Methods
 
@@ -144,7 +144,5 @@ SetIpConsumers sets IpConsumers field to given value.
 
 HasIpConsumers returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 

@@ -2,13 +2,13 @@
 
 ## Properties
 
-Name | Type | Description | Notes
------------- | ------------- | ------------- | -------------
-**Key** | Pointer to **string** | A Label Key | [optional] 
-**Value** | Pointer to **string** | A Label Value | [optional] 
-**ResourceId** | Pointer to **string** | The id of the resource | [optional] 
-**ResourceType** | Pointer to **string** | The type of the resource on which the label is applied. | [optional] 
-**ResourceHref** | Pointer to **string** | URL to the Resource (absolute path) on which the label is applied. | [optional] 
+|Name | Type | Description | Notes|
+|------------ | ------------- | ------------- | -------------|
+|**Key** | Pointer to **string** | A Label Key | [optional] |
+|**Value** | Pointer to **string** | A Label Value | [optional] |
+|**ResourceId** | Pointer to **string** | The id of the resource | [optional] |
+|**ResourceType** | Pointer to **string** | The type of the resource on which the label is applied. | [optional] |
+|**ResourceHref** | Pointer to **string** | URL to the Resource (absolute path) on which the label is applied. | [optional] |
 
 ## Methods
 
@@ -154,7 +154,5 @@ SetResourceHref sets ResourceHref field to given value.
 
 HasResourceHref returns a boolean if a field has been set.
 
-
-[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
 
