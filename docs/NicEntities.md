@@ -4,6 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**Flowlogs** | Pointer to [**FlowLogs**](FlowLogs.md) |  | [optional] |
 |**Firewallrules** | Pointer to [**FirewallRules**](FirewallRules.md) |  | [optional] |
 
 ## Methods
@@ -24,6 +25,31 @@ will change when the set of required properties is changed
 NewNicEntitiesWithDefaults instantiates a new NicEntities object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetFlowlogs
+
+`func (o *NicEntities) GetFlowlogs() FlowLogs`
+
+GetFlowlogs returns the Flowlogs field if non-nil, zero value otherwise.
+
+### GetFlowlogsOk
+
+`func (o *NicEntities) GetFlowlogsOk() (*FlowLogs, bool)`
+
+GetFlowlogsOk returns a tuple with the Flowlogs field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFlowlogs
+
+`func (o *NicEntities) SetFlowlogs(v FlowLogs)`
+
+SetFlowlogs sets Flowlogs field to given value.
+
+### HasFlowlogs
+
+`func (o *NicEntities) HasFlowlogs() bool`
+
+HasFlowlogs returns a boolean if a field has been set.
 
 ### GetFirewallrules
 

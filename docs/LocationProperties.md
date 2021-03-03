@@ -7,6 +7,7 @@
 |**Name** | Pointer to **string** | A name of that resource | [optional] |
 |**Features** | Pointer to **[]string** | List of features supported by the location | [optional] [readonly] |
 |**ImageAliases** | Pointer to **[]string** | List of image aliases available for the location | [optional] [readonly] |
+|**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetImageAliases sets ImageAliases field to given value.
 `func (o *LocationProperties) HasImageAliases() bool`
 
 HasImageAliases returns a boolean if a field has been set.
+
+### GetCpuArchitecture
+
+`func (o *LocationProperties) GetCpuArchitecture() []CpuArchitectureProperties`
+
+GetCpuArchitecture returns the CpuArchitecture field if non-nil, zero value otherwise.
+
+### GetCpuArchitectureOk
+
+`func (o *LocationProperties) GetCpuArchitectureOk() (*[]CpuArchitectureProperties, bool)`
+
+GetCpuArchitectureOk returns a tuple with the CpuArchitecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCpuArchitecture
+
+`func (o *LocationProperties) SetCpuArchitecture(v []CpuArchitectureProperties)`
+
+SetCpuArchitecture sets CpuArchitecture field to given value.
+
+### HasCpuArchitecture
+
+`func (o *LocationProperties) HasCpuArchitecture() bool`
+
+HasCpuArchitecture returns a boolean if a field has been set.
 
 
 

@@ -5,12 +5,11 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | A name of that resource | [optional] |
-|**Type** | Pointer to **string** | Hardware type of the volume. | [optional] |
+|**Type** | Pointer to **string** | Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server | [optional] |
 |**Size** | **float32** | The size of the volume in GB | |
-|**AvailabilityZone** | Pointer to **string** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront | [optional] |
+|**AvailabilityZone** | Pointer to **string** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront. It is not available for DAS (Direct Attached Storage) and subject of availability for SSD. | [optional] |
 |**Image** | Pointer to **string** | Image or snapshot ID to be used as template for this volume | [optional] |
 |**ImagePassword** | Pointer to **string** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 | [optional] |
-|**ImageAlias** | Pointer to **string** |  | [optional] |
 |**SshKeys** | Pointer to **[]string** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional] |
 |**Bus** | Pointer to **string** | The bus type of the volume. Default is VIRTIO | [optional] |
 |**LicenceType** | Pointer to **string** | OS type of this volume | [optional] [readonly] |
@@ -20,8 +19,10 @@
 |**NicHotUnplug** | Pointer to **bool** | Is capable of nic hot unplug (no reboot required) | [optional] |
 |**DiscVirtioHotPlug** | Pointer to **bool** | Is capable of Virt-IO drive hot plug (no reboot required) | [optional] |
 |**DiscVirtioHotUnplug** | Pointer to **bool** | Is capable of Virt-IO drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
-|**DeviceNumber** | Pointer to **int64** | The LUN ID of the storage volume. Null for volumes not mounted to any VM | [optional] [readonly] |
-|**BackupunitId** | Pointer to **string** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provied either public image or imageAlias in conjunction with this property. | [optional] |
+|**DeviceNumber** | Pointer to **int64** | The Logical Unit Number of the storage volume. Null for volumes not mounted to any VM | [optional] [readonly] |
+|**PciSlot** | Pointer to **int32** | The PCI slot number of the storage volume. Null for volumes not mounted to any VM | [optional] [readonly] |
+|**BackupunitId** | Pointer to **string** | The uuid of the Backup Unit that user has access to. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property. | [optional] |
+|**UserData** | Pointer to **string** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on a new volume creation. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property. | [optional] |
 
 ## Methods
 
@@ -186,31 +187,6 @@ SetImagePassword sets ImagePassword field to given value.
 `func (o *VolumeProperties) HasImagePassword() bool`
 
 HasImagePassword returns a boolean if a field has been set.
-
-### GetImageAlias
-
-`func (o *VolumeProperties) GetImageAlias() string`
-
-GetImageAlias returns the ImageAlias field if non-nil, zero value otherwise.
-
-### GetImageAliasOk
-
-`func (o *VolumeProperties) GetImageAliasOk() (*string, bool)`
-
-GetImageAliasOk returns a tuple with the ImageAlias field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetImageAlias
-
-`func (o *VolumeProperties) SetImageAlias(v string)`
-
-SetImageAlias sets ImageAlias field to given value.
-
-### HasImageAlias
-
-`func (o *VolumeProperties) HasImageAlias() bool`
-
-HasImageAlias returns a boolean if a field has been set.
 
 ### GetSshKeys
 
@@ -462,6 +438,31 @@ SetDeviceNumber sets DeviceNumber field to given value.
 
 HasDeviceNumber returns a boolean if a field has been set.
 
+### GetPciSlot
+
+`func (o *VolumeProperties) GetPciSlot() int32`
+
+GetPciSlot returns the PciSlot field if non-nil, zero value otherwise.
+
+### GetPciSlotOk
+
+`func (o *VolumeProperties) GetPciSlotOk() (*int32, bool)`
+
+GetPciSlotOk returns a tuple with the PciSlot field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPciSlot
+
+`func (o *VolumeProperties) SetPciSlot(v int32)`
+
+SetPciSlot sets PciSlot field to given value.
+
+### HasPciSlot
+
+`func (o *VolumeProperties) HasPciSlot() bool`
+
+HasPciSlot returns a boolean if a field has been set.
+
 ### GetBackupunitId
 
 `func (o *VolumeProperties) GetBackupunitId() string`
@@ -486,6 +487,31 @@ SetBackupunitId sets BackupunitId field to given value.
 `func (o *VolumeProperties) HasBackupunitId() bool`
 
 HasBackupunitId returns a boolean if a field has been set.
+
+### GetUserData
+
+`func (o *VolumeProperties) GetUserData() string`
+
+GetUserData returns the UserData field if non-nil, zero value otherwise.
+
+### GetUserDataOk
+
+`func (o *VolumeProperties) GetUserDataOk() (*string, bool)`
+
+GetUserDataOk returns a tuple with the UserData field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetUserData
+
+`func (o *VolumeProperties) SetUserData(v string)`
+
+SetUserData sets UserData field to given value.
+
+### HasUserData
+
+`func (o *VolumeProperties) HasUserData() bool`
+
+HasUserData returns a boolean if a field has been set.
 
 
 

@@ -5,7 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Id** | Pointer to **string** | Unique representation for Kubernetes Cluster as a collection on a resource. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of object that has been created | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of resource within a collection | [optional] [readonly] |
 |**Href** | Pointer to **string** | URL to the collection representation (absolute path) | [optional] [readonly] |
 |**Items** | Pointer to [**[]KubernetesCluster**](KubernetesCluster.md) | Array of items in that collection | [optional] [readonly] |
 

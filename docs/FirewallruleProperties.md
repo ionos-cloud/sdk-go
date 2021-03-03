@@ -13,6 +13,7 @@
 |**IcmpType** | Pointer to **int32** | Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types | [optional] |
 |**PortRangeStart** | Pointer to **int32** | Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports | [optional] |
 |**PortRangeEnd** | Pointer to **int32** | Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports | [optional] |
+|**Type** | Pointer to **string** | The type of firewall rule. If is not specified, it will take the default value INGRESS | [optional] |
 
 ## Methods
 
@@ -252,6 +253,31 @@ SetPortRangeEnd sets PortRangeEnd field to given value.
 `func (o *FirewallruleProperties) HasPortRangeEnd() bool`
 
 HasPortRangeEnd returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *FirewallruleProperties) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *FirewallruleProperties) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *FirewallruleProperties) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *FirewallruleProperties) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

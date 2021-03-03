@@ -14,6 +14,8 @@
 |**CreateBackupUnit** | Pointer to **bool** | create backup unit privilege | [optional] |
 |**CreateInternetAccess** | Pointer to **bool** | create internet access privilege | [optional] |
 |**CreateK8sCluster** | Pointer to **bool** | create kubernetes cluster privilege | [optional] |
+|**CreateFlowLog** | Pointer to **bool** | create Flow Logs privilege | [optional] |
+|**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
 
 ## Methods
 
@@ -283,6 +285,56 @@ SetCreateK8sCluster sets CreateK8sCluster field to given value.
 `func (o *GroupProperties) HasCreateK8sCluster() bool`
 
 HasCreateK8sCluster returns a boolean if a field has been set.
+
+### GetCreateFlowLog
+
+`func (o *GroupProperties) GetCreateFlowLog() bool`
+
+GetCreateFlowLog returns the CreateFlowLog field if non-nil, zero value otherwise.
+
+### GetCreateFlowLogOk
+
+`func (o *GroupProperties) GetCreateFlowLogOk() (*bool, bool)`
+
+GetCreateFlowLogOk returns a tuple with the CreateFlowLog field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreateFlowLog
+
+`func (o *GroupProperties) SetCreateFlowLog(v bool)`
+
+SetCreateFlowLog sets CreateFlowLog field to given value.
+
+### HasCreateFlowLog
+
+`func (o *GroupProperties) HasCreateFlowLog() bool`
+
+HasCreateFlowLog returns a boolean if a field has been set.
+
+### GetAccessAndManageMonitoring
+
+`func (o *GroupProperties) GetAccessAndManageMonitoring() bool`
+
+GetAccessAndManageMonitoring returns the AccessAndManageMonitoring field if non-nil, zero value otherwise.
+
+### GetAccessAndManageMonitoringOk
+
+`func (o *GroupProperties) GetAccessAndManageMonitoringOk() (*bool, bool)`
+
+GetAccessAndManageMonitoringOk returns a tuple with the AccessAndManageMonitoring field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageMonitoring
+
+`func (o *GroupProperties) SetAccessAndManageMonitoring(v bool)`
+
+SetAccessAndManageMonitoring sets AccessAndManageMonitoring field to given value.
+
+### HasAccessAndManageMonitoring
+
+`func (o *GroupProperties) HasAccessAndManageMonitoring() bool`
+
+HasAccessAndManageMonitoring returns a boolean if a field has been set.
 
 
 

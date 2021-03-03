@@ -1,6 +1,6 @@
 # \KubernetesApi
 
-All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
@@ -19,7 +19,6 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v5*
 |[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool|
 |[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create Kubernetes Cluster|
 |[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify Kubernetes Cluster|
-|[**K8sVersionsCompatibilitiesGet**](KubernetesApi.md#K8sVersionsCompatibilitiesGet) | **Get** /k8s/versions/{clusterVersion}/compatibilities | Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.|
 |[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.|
 |[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | Retrieve available Kubernetes versions|
 
@@ -245,7 +244,7 @@ Other parameters are passed through a pointer to a apiK8sGetRequest struct via t
 ## K8sKubeconfigGet
 
 ```go
-var result KubernetesConfig = K8sKubeconfigGet(ctx, k8sClusterId)
+var result string = K8sKubeconfigGet(ctx, k8sClusterId)
                       .Pretty(pretty)
                       .Depth(depth)
                       .XContractNumber(xContractNumber)
@@ -281,7 +280,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `KubernetesApi.K8sKubeconfigGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `K8sKubeconfigGet`: KubernetesConfig
+    // response from `K8sKubeconfigGet`: string
     fmt.Fprintf(os.Stdout, "Response from `KubernetesApi.K8sKubeconfigGet`: %v\n", resp)
 }
 ```
@@ -307,12 +306,12 @@ Other parameters are passed through a pointer to a apiK8sKubeconfigGetRequest st
 
 ### Return type
 
-[**KubernetesConfig**](KubernetesConfig.md)
+**string**
 
 ### HTTP request headers
 
 - **Content-Type**: Not defined
-- **Accept**: application/json
+- **Accept**: application/yamlapplication/x-yamlapplication/json
 
 
 
@@ -881,7 +880,7 @@ import (
 
 func main() {
     k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    kubernetesNodePool := *openapiclient.NewKubernetesNodePool(*openapiclient.NewKubernetesNodePoolProperties("k8s-node-pool", "1e072e52-2ed3-492f-b6b6-c6b116907521", int32(2), "AMD_OPTERON", int32(4), int32(2048), "AUTO", "HDD", int32(100))) // KubernetesNodePool | Details of Kubernetes Node Pool
+    kubernetesNodePool := *openapiclient.NewKubernetesNodePool(*openapiclient.NewKubernetesNodePoolProperties("k8s-node-pool", "1e072e52-2ed3-492f-b6b6-c6b116907521", int32(2), "AMD_OPTERON", int32(4), int32(2048), "AUTO", "HDD", int32(100))) // KubernetesNodePool | Details of the Kubernetes Node Pool
     pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
     depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -913,7 +912,7 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of Kubernetes Node Pool | |
+| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of the Kubernetes Node Pool | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1036,7 +1035,7 @@ import (
 )
 
 func main() {
-    kubernetesCluster := *openapiclient.NewKubernetesCluster(*openapiclient.NewKubernetesClusterProperties("k8s")) // KubernetesCluster | Properties of the Kubernetes Cluster
+    kubernetesCluster := *openapiclient.NewKubernetesCluster(*openapiclient.NewKubernetesClusterProperties("k8s")) // KubernetesCluster | Details of the Kubernetes Cluster
     pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
     depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1064,7 +1063,7 @@ Other parameters are passed through a pointer to a apiK8sPostRequest struct via 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | |
+| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Details of the Kubernetes Cluster | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1109,7 +1108,7 @@ import (
 
 func main() {
     k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    kubernetesCluster := *openapiclient.NewKubernetesCluster(*openapiclient.NewKubernetesClusterProperties("k8s")) // KubernetesCluster | Properties of the Kubernetes Cluster
+    kubernetesCluster := *openapiclient.NewKubernetesCluster(*openapiclient.NewKubernetesClusterProperties("k8s")) // KubernetesCluster | Details of of the Kubernetes Cluster
     pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
     depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1141,7 +1140,7 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Properties of the Kubernetes Cluster | |
+| **kubernetesCluster** | [**KubernetesCluster**](KubernetesCluster.md) | Details of of the Kubernetes Cluster | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1153,71 +1152,6 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 ### HTTP request headers
 
 - **Content-Type**: application/json
-- **Accept**: application/json
-
-
-
-## K8sVersionsCompatibilitiesGet
-
-```go
-var result []string = K8sVersionsCompatibilitiesGet(ctx, clusterVersion)
-                      .Execute()
-```
-
-Retrieves a list of available kubernetes versions for nodepools depending on the given kubernetes version running in the cluster.
-
-
-
-### Example
-
-```go
-package main
-
-import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "./openapi"
-)
-
-func main() {
-    clusterVersion := "clusterVersion_example" // string | 
-
-    configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.KubernetesApi.K8sVersionsCompatibilitiesGet(context.Background(), clusterVersion).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `KubernetesApi.K8sVersionsCompatibilitiesGet``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `K8sVersionsCompatibilitiesGet`: []string
-    fmt.Fprintf(os.Stdout, "Response from `KubernetesApi.K8sVersionsCompatibilitiesGet`: %v\n", resp)
-}
-```
-
-### Path Parameters
-
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**clusterVersion** | **string** |  | |
-
-### Other Parameters
-
-Other parameters are passed through a pointer to a apiK8sVersionsCompatibilitiesGetRequest struct via the builder pattern
-
-
-|Name | Type | Description  | Notes|
-|------------- | ------------- | ------------- | -------------|
-
-### Return type
-
-**[]string**
-
-### HTTP request headers
-
-- **Content-Type**: Not defined
 - **Accept**: application/json
 
 

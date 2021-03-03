@@ -10,6 +10,7 @@
 |**Version** | Pointer to **int32** | The version of that Data Center. Gets incremented with every change | [optional] [readonly] |
 |**Features** | Pointer to **[]string** | List of features supported by the location this data center is part of | [optional] [readonly] |
 |**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection e.g. two factor protection | [optional] |
+|**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
 
 ## Methods
 
@@ -174,6 +175,31 @@ SetSecAuthProtection sets SecAuthProtection field to given value.
 `func (o *DatacenterProperties) HasSecAuthProtection() bool`
 
 HasSecAuthProtection returns a boolean if a field has been set.
+
+### GetCpuArchitecture
+
+`func (o *DatacenterProperties) GetCpuArchitecture() []CpuArchitectureProperties`
+
+GetCpuArchitecture returns the CpuArchitecture field if non-nil, zero value otherwise.
+
+### GetCpuArchitectureOk
+
+`func (o *DatacenterProperties) GetCpuArchitectureOk() (*[]CpuArchitectureProperties, bool)`
+
+GetCpuArchitectureOk returns a tuple with the CpuArchitecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCpuArchitecture
+
+`func (o *DatacenterProperties) SetCpuArchitecture(v []CpuArchitectureProperties)`
+
+SetCpuArchitecture sets CpuArchitecture field to given value.
+
+### HasCpuArchitecture
+
+`func (o *DatacenterProperties) HasCpuArchitecture() bool`
+
+HasCpuArchitecture returns a boolean if a field has been set.
 
 
 

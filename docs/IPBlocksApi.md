@@ -1,6 +1,6 @@
 # \IPBlocksApi
 
-All URIs are relative to *https://api.ionos.com/cloudapi/v5*
+All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|

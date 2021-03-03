@@ -16,17 +16,22 @@
 |**SsdLimitPerVolume** | **int64** | ssd limit per volume | |
 |**SsdLimitPerContract** | **int64** | ssd limit per contract | |
 |**SsdVolumeProvisioned** | **int64** | ssd volume provisioned | |
+|**DasVolumeProvisioned** | **int64** | DAS (Direct Attached Storage) volume provisioned | |
 |**ReservableIps** | **int32** | total reservable ip limit of the customer | |
 |**ReservedIpsOnContract** | **int32** | reserved ips on a contract | |
 |**ReservedIpsInUse** | **int32** | reserved ips in use | |
 |**K8sClusterLimitTotal** | **int32** | k8s clusters total limit | |
 |**K8sClustersProvisioned** | **int32** | k8s clusters provisioned | |
+|**NlbLimitTotal** | **int32** | NLB total limit | |
+|**NlbProvisioned** | **int32** | NLBs provisioned | |
+|**NatGatewayLimitTotal** | **int32** | NAT gateway total limit | |
+|**NatGatewayProvisioned** | **int32** | NAT gateways provisioned | |
 
 ## Methods
 
 ### NewResourceLimits
 
-`func NewResourceLimits(coresPerServer int32, coresPerContract int32, coresProvisioned int32, ramPerServer int32, ramPerContract int32, ramProvisioned int32, hddLimitPerVolume int64, hddLimitPerContract int64, hddVolumeProvisioned int64, ssdLimitPerVolume int64, ssdLimitPerContract int64, ssdVolumeProvisioned int64, reservableIps int32, reservedIpsOnContract int32, reservedIpsInUse int32, k8sClusterLimitTotal int32, k8sClustersProvisioned int32, ) *ResourceLimits`
+`func NewResourceLimits(coresPerServer int32, coresPerContract int32, coresProvisioned int32, ramPerServer int32, ramPerContract int32, ramProvisioned int32, hddLimitPerVolume int64, hddLimitPerContract int64, hddVolumeProvisioned int64, ssdLimitPerVolume int64, ssdLimitPerContract int64, ssdVolumeProvisioned int64, dasVolumeProvisioned int64, reservableIps int32, reservedIpsOnContract int32, reservedIpsInUse int32, k8sClusterLimitTotal int32, k8sClustersProvisioned int32, nlbLimitTotal int32, nlbProvisioned int32, natGatewayLimitTotal int32, natGatewayProvisioned int32, ) *ResourceLimits`
 
 NewResourceLimits instantiates a new ResourceLimits object
 This constructor will assign default values to properties that have it defined,
@@ -281,6 +286,26 @@ and a boolean to check if the value has been set.
 SetSsdVolumeProvisioned sets SsdVolumeProvisioned field to given value.
 
 
+### GetDasVolumeProvisioned
+
+`func (o *ResourceLimits) GetDasVolumeProvisioned() int64`
+
+GetDasVolumeProvisioned returns the DasVolumeProvisioned field if non-nil, zero value otherwise.
+
+### GetDasVolumeProvisionedOk
+
+`func (o *ResourceLimits) GetDasVolumeProvisionedOk() (*int64, bool)`
+
+GetDasVolumeProvisionedOk returns a tuple with the DasVolumeProvisioned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDasVolumeProvisioned
+
+`func (o *ResourceLimits) SetDasVolumeProvisioned(v int64)`
+
+SetDasVolumeProvisioned sets DasVolumeProvisioned field to given value.
+
+
 ### GetReservableIps
 
 `func (o *ResourceLimits) GetReservableIps() int32`
@@ -379,6 +404,86 @@ and a boolean to check if the value has been set.
 `func (o *ResourceLimits) SetK8sClustersProvisioned(v int32)`
 
 SetK8sClustersProvisioned sets K8sClustersProvisioned field to given value.
+
+
+### GetNlbLimitTotal
+
+`func (o *ResourceLimits) GetNlbLimitTotal() int32`
+
+GetNlbLimitTotal returns the NlbLimitTotal field if non-nil, zero value otherwise.
+
+### GetNlbLimitTotalOk
+
+`func (o *ResourceLimits) GetNlbLimitTotalOk() (*int32, bool)`
+
+GetNlbLimitTotalOk returns a tuple with the NlbLimitTotal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNlbLimitTotal
+
+`func (o *ResourceLimits) SetNlbLimitTotal(v int32)`
+
+SetNlbLimitTotal sets NlbLimitTotal field to given value.
+
+
+### GetNlbProvisioned
+
+`func (o *ResourceLimits) GetNlbProvisioned() int32`
+
+GetNlbProvisioned returns the NlbProvisioned field if non-nil, zero value otherwise.
+
+### GetNlbProvisionedOk
+
+`func (o *ResourceLimits) GetNlbProvisionedOk() (*int32, bool)`
+
+GetNlbProvisionedOk returns a tuple with the NlbProvisioned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNlbProvisioned
+
+`func (o *ResourceLimits) SetNlbProvisioned(v int32)`
+
+SetNlbProvisioned sets NlbProvisioned field to given value.
+
+
+### GetNatGatewayLimitTotal
+
+`func (o *ResourceLimits) GetNatGatewayLimitTotal() int32`
+
+GetNatGatewayLimitTotal returns the NatGatewayLimitTotal field if non-nil, zero value otherwise.
+
+### GetNatGatewayLimitTotalOk
+
+`func (o *ResourceLimits) GetNatGatewayLimitTotalOk() (*int32, bool)`
+
+GetNatGatewayLimitTotalOk returns a tuple with the NatGatewayLimitTotal field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNatGatewayLimitTotal
+
+`func (o *ResourceLimits) SetNatGatewayLimitTotal(v int32)`
+
+SetNatGatewayLimitTotal sets NatGatewayLimitTotal field to given value.
+
+
+### GetNatGatewayProvisioned
+
+`func (o *ResourceLimits) GetNatGatewayProvisioned() int32`
+
+GetNatGatewayProvisioned returns the NatGatewayProvisioned field if non-nil, zero value otherwise.
+
+### GetNatGatewayProvisionedOk
+
+`func (o *ResourceLimits) GetNatGatewayProvisionedOk() (*int32, bool)`
+
+GetNatGatewayProvisionedOk returns a tuple with the NatGatewayProvisioned field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNatGatewayProvisioned
+
+`func (o *ResourceLimits) SetNatGatewayProvisioned(v int32)`
+
+SetNatGatewayProvisioned sets NatGatewayProvisioned field to given value.
 
 
 

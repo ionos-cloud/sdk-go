@@ -8,6 +8,8 @@
 |**Volumes** | Pointer to [**Volumes**](Volumes.md) |  | [optional] |
 |**Loadbalancers** | Pointer to [**Loadbalancers**](Loadbalancers.md) |  | [optional] |
 |**Lans** | Pointer to [**Lans**](Lans.md) |  | [optional] |
+|**Networkloadbalancers** | Pointer to [**NetworkLoadBalancers**](NetworkLoadBalancers.md) |  | [optional] |
+|**Natgateways** | Pointer to [**NatGateways**](NatGateways.md) |  | [optional] |
 
 ## Methods
 
@@ -127,6 +129,56 @@ SetLans sets Lans field to given value.
 `func (o *DataCenterEntities) HasLans() bool`
 
 HasLans returns a boolean if a field has been set.
+
+### GetNetworkloadbalancers
+
+`func (o *DataCenterEntities) GetNetworkloadbalancers() NetworkLoadBalancers`
+
+GetNetworkloadbalancers returns the Networkloadbalancers field if non-nil, zero value otherwise.
+
+### GetNetworkloadbalancersOk
+
+`func (o *DataCenterEntities) GetNetworkloadbalancersOk() (*NetworkLoadBalancers, bool)`
+
+GetNetworkloadbalancersOk returns a tuple with the Networkloadbalancers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetworkloadbalancers
+
+`func (o *DataCenterEntities) SetNetworkloadbalancers(v NetworkLoadBalancers)`
+
+SetNetworkloadbalancers sets Networkloadbalancers field to given value.
+
+### HasNetworkloadbalancers
+
+`func (o *DataCenterEntities) HasNetworkloadbalancers() bool`
+
+HasNetworkloadbalancers returns a boolean if a field has been set.
+
+### GetNatgateways
+
+`func (o *DataCenterEntities) GetNatgateways() NatGateways`
+
+GetNatgateways returns the Natgateways field if non-nil, zero value otherwise.
+
+### GetNatgatewaysOk
+
+`func (o *DataCenterEntities) GetNatgatewaysOk() (*NatGateways, bool)`
+
+GetNatgatewaysOk returns a tuple with the Natgateways field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNatgateways
+
+`func (o *DataCenterEntities) SetNatgateways(v NatGateways)`
+
+SetNatgateways sets Natgateways field to given value.
+
+### HasNatgateways
+
+`func (o *DataCenterEntities) HasNatgateways() bool`
+
+HasNatgateways returns a boolean if a field has been set.
 
 
 

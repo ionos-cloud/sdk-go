@@ -10,7 +10,9 @@
 |**Dhcp** | Pointer to **bool** | Indicates if the nic will reserve an IP using DHCP | [optional] |
 |**Lan** | **int32** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | |
 |**FirewallActive** | Pointer to **bool** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. | [optional] |
-|**Nat** | Pointer to **bool** | Indicates if NAT is enabled on this NIC. This is now deprecated. | [optional] |
+|**FirewallType** | Pointer to **string** | The type of firewall rules that will be allowed on the NIC. If it is not specified it will take the default value INGRESS | [optional] |
+|**DeviceNumber** | Pointer to **int32** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter. | [optional] [readonly] |
+|**PciSlot** | Pointer to **int32** | The PCI slot number of the Nic. | [optional] [readonly] |
 
 ## Methods
 
@@ -176,30 +178,80 @@ SetFirewallActive sets FirewallActive field to given value.
 
 HasFirewallActive returns a boolean if a field has been set.
 
-### GetNat
+### GetFirewallType
 
-`func (o *NicProperties) GetNat() bool`
+`func (o *NicProperties) GetFirewallType() string`
 
-GetNat returns the Nat field if non-nil, zero value otherwise.
+GetFirewallType returns the FirewallType field if non-nil, zero value otherwise.
 
-### GetNatOk
+### GetFirewallTypeOk
 
-`func (o *NicProperties) GetNatOk() (*bool, bool)`
+`func (o *NicProperties) GetFirewallTypeOk() (*string, bool)`
 
-GetNatOk returns a tuple with the Nat field if it's non-nil, zero value otherwise
+GetFirewallTypeOk returns a tuple with the FirewallType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNat
+### SetFirewallType
 
-`func (o *NicProperties) SetNat(v bool)`
+`func (o *NicProperties) SetFirewallType(v string)`
 
-SetNat sets Nat field to given value.
+SetFirewallType sets FirewallType field to given value.
 
-### HasNat
+### HasFirewallType
 
-`func (o *NicProperties) HasNat() bool`
+`func (o *NicProperties) HasFirewallType() bool`
 
-HasNat returns a boolean if a field has been set.
+HasFirewallType returns a boolean if a field has been set.
+
+### GetDeviceNumber
+
+`func (o *NicProperties) GetDeviceNumber() int32`
+
+GetDeviceNumber returns the DeviceNumber field if non-nil, zero value otherwise.
+
+### GetDeviceNumberOk
+
+`func (o *NicProperties) GetDeviceNumberOk() (*int32, bool)`
+
+GetDeviceNumberOk returns a tuple with the DeviceNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDeviceNumber
+
+`func (o *NicProperties) SetDeviceNumber(v int32)`
+
+SetDeviceNumber sets DeviceNumber field to given value.
+
+### HasDeviceNumber
+
+`func (o *NicProperties) HasDeviceNumber() bool`
+
+HasDeviceNumber returns a boolean if a field has been set.
+
+### GetPciSlot
+
+`func (o *NicProperties) GetPciSlot() int32`
+
+GetPciSlot returns the PciSlot field if non-nil, zero value otherwise.
+
+### GetPciSlotOk
+
+`func (o *NicProperties) GetPciSlotOk() (*int32, bool)`
+
+GetPciSlotOk returns a tuple with the PciSlot field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPciSlot
+
+`func (o *NicProperties) SetPciSlot(v int32)`
+
+SetPciSlot sets PciSlot field to given value.
+
+### HasPciSlot
+
+`func (o *NicProperties) HasPciSlot() bool`
+
+HasPciSlot returns a boolean if a field has been set.
 
 
 

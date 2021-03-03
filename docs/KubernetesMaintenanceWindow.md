@@ -4,14 +4,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**DayOfTheWeek** | Pointer to **string** | The day of the week for a maintenance window. | [optional] |
-|**Time** | Pointer to **string** | The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes. | [optional] |
+|**DayOfTheWeek** | **string** | The day of the week for a maintenance window. | |
+|**Time** | **string** | The time to use for a maintenance window. Accepted formats are: HH:mm:ss; HH:mm:ss\&quot;Z\&quot;; HH:mm:ssZ. This time may varies by 15 minutes. | |
 
 ## Methods
 
 ### NewKubernetesMaintenanceWindow
 
-`func NewKubernetesMaintenanceWindow() *KubernetesMaintenanceWindow`
+`func NewKubernetesMaintenanceWindow(dayOfTheWeek string, time string, ) *KubernetesMaintenanceWindow`
 
 NewKubernetesMaintenanceWindow instantiates a new KubernetesMaintenanceWindow object
 This constructor will assign default values to properties that have it defined,
@@ -45,11 +45,6 @@ and a boolean to check if the value has been set.
 
 SetDayOfTheWeek sets DayOfTheWeek field to given value.
 
-### HasDayOfTheWeek
-
-`func (o *KubernetesMaintenanceWindow) HasDayOfTheWeek() bool`
-
-HasDayOfTheWeek returns a boolean if a field has been set.
 
 ### GetTime
 
@@ -70,11 +65,6 @@ and a boolean to check if the value has been set.
 
 SetTime sets Time field to given value.
 
-### HasTime
-
-`func (o *KubernetesMaintenanceWindow) HasTime() bool`
-
-HasTime returns a boolean if a field has been set.
 
 
 

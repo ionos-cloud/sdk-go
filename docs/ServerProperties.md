@@ -4,6 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**TemplateUuid** | Pointer to **string** | The UUID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource | [optional] |
 |**Name** | Pointer to **string** | A name of that resource | [optional] |
 |**Cores** | **int32** | The total number of cores for the server | |
 |**Ram** | **int32** | The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | |
@@ -11,7 +12,8 @@
 |**VmState** | Pointer to **string** | Status of the virtual Machine | [optional] [readonly] |
 |**BootCdrom** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 |**BootVolume** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
-|**CpuFamily** | Pointer to **string** | Cpu family of pserver | [optional] |
+|**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource | [optional] |
+|**Type** | Pointer to **string** | server usages: ENTERPRISE or CUBE | [optional] |
 
 ## Methods
 
@@ -31,6 +33,31 @@ will change when the set of required properties is changed
 NewServerPropertiesWithDefaults instantiates a new ServerProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetTemplateUuid
+
+`func (o *ServerProperties) GetTemplateUuid() string`
+
+GetTemplateUuid returns the TemplateUuid field if non-nil, zero value otherwise.
+
+### GetTemplateUuidOk
+
+`func (o *ServerProperties) GetTemplateUuidOk() (*string, bool)`
+
+GetTemplateUuidOk returns a tuple with the TemplateUuid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTemplateUuid
+
+`func (o *ServerProperties) SetTemplateUuid(v string)`
+
+SetTemplateUuid sets TemplateUuid field to given value.
+
+### HasTemplateUuid
+
+`func (o *ServerProperties) HasTemplateUuid() bool`
+
+HasTemplateUuid returns a boolean if a field has been set.
 
 ### GetName
 
@@ -221,6 +248,31 @@ SetCpuFamily sets CpuFamily field to given value.
 `func (o *ServerProperties) HasCpuFamily() bool`
 
 HasCpuFamily returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *ServerProperties) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *ServerProperties) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *ServerProperties) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *ServerProperties) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 
