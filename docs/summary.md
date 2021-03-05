@@ -1,295 +1,200 @@
 # Table of contents
 
 * [Introduction](README.md)
-* [Changelog](CHANGELOG.md)
+* [Changelog](changelog.md)
 
 ## API
 
-* [DefaultApi](DefaultApi.md)
-
-* [BackupUnitApi](BackupUnitApi.md)
-
-* [ContractApi](ContractApi.md)
-
-* [DataCenterApi](DataCenterApi.md)
-
-* [IPBlocksApi](IPBlocksApi.md)
-
-* [ImageApi](ImageApi.md)
-
-* [KubernetesApi](KubernetesApi.md)
-
-* [LabelApi](LabelApi.md)
-
-* [LanApi](LanApi.md)
-
-* [LoadBalancerApi](LoadBalancerApi.md)
-
-* [LocationApi](LocationApi.md)
-
-* [NicApi](NicApi.md)
-
-* [PrivateCrossConnectApi](PrivateCrossConnectApi.md)
-
-* [RequestApi](RequestApi.md)
-
-* [ServerApi](ServerApi.md)
-
-* [SnapshotApi](SnapshotApi.md)
-
-* [UserManagementApi](UserManagementApi.md)
-
-* [VolumeApi](VolumeApi.md)
-
+* [DefaultApi](api/defaultapi.md)
+* [BackupUnitsApi](api/backupunitsapi.md)
+* [ContractResourcesApi](api/contractresourcesapi.md)
+* [DataCentersApi](api/datacentersapi.md)
+* [FirewallRulesApi](api/firewallrulesapi.md)
+* [FlowLogsApi](api/flowlogsapi.md)
+* [IPBlocksApi](api/ipblocksapi.md)
+* [ImagesApi](api/imagesapi.md)
+* [KubernetesApi](api/kubernetesapi.md)
+* [LabelsApi](api/labelsapi.md)
+* [LansApi](api/lansapi.md)
+* [LoadBalancersApi](api/loadbalancersapi.md)
+* [LocationsApi](api/locationsapi.md)
+* [NATGatewaysApi](api/natgatewaysapi.md)
+* [NetworkInterfacesApi](api/networkinterfacesapi.md)
+* [NetworkLoadBalancersApi](api/networkloadbalancersapi.md)
+* [PrivateCrossConnectsApi](api/privatecrossconnectsapi.md)
+* [RequestsApi](api/requestsapi.md)
+* [ServersApi](api/serversapi.md)
+* [SnapshotsApi](api/snapshotsapi.md)
+* [TemplatesApi](api/templatesapi.md)
+* [UserManagementApi](api/usermanagementapi.md)
+* [UserS3KeysApi](api/users3keysapi.md)
+* [VolumesApi](api/volumesapi.md)
 
 ## Models
 
-* [AttachedVolumes](AttachedVolumes.md)
-
-* [BackupUnit](BackupUnit.md)
-
-* [BackupUnitProperties](BackupUnitProperties.md)
-
-* [BackupUnitSSO](BackupUnitSSO.md)
-
-* [BackupUnits](BackupUnits.md)
-
-* [BalancedNics](BalancedNics.md)
-
-* [Cdroms](Cdroms.md)
-
-* [ConnectableDatacenter](ConnectableDatacenter.md)
-
-* [Contract](Contract.md)
-
-* [ContractProperties](ContractProperties.md)
-
-* [DataCenterEntities](DataCenterEntities.md)
-
-* [Datacenter](Datacenter.md)
-
-* [DatacenterElementMetadata](DatacenterElementMetadata.md)
-
-* [DatacenterProperties](DatacenterProperties.md)
-
-* [Datacenters](Datacenters.md)
-
-* [Error](Error.md)
-
-* [ErrorMessage](ErrorMessage.md)
-
-* [FirewallRule](FirewallRule.md)
-
-* [FirewallRules](FirewallRules.md)
-
-* [FirewallruleProperties](FirewallruleProperties.md)
-
-* [Group](Group.md)
-
-* [GroupEntities](GroupEntities.md)
-
-* [GroupMembers](GroupMembers.md)
-
-* [GroupProperties](GroupProperties.md)
-
-* [GroupShare](GroupShare.md)
-
-* [GroupShareProperties](GroupShareProperties.md)
-
-* [GroupShares](GroupShares.md)
-
-* [GroupUsers](GroupUsers.md)
-
-* [Groups](Groups.md)
-
-* [IPFailover](IPFailover.md)
-
-* [Image](Image.md)
-
-* [ImageProperties](ImageProperties.md)
-
-* [Images](Images.md)
-
-* [Info](Info.md)
-
-* [IpBlock](IpBlock.md)
-
-* [IpBlockProperties](IpBlockProperties.md)
-
-* [IpBlocks](IpBlocks.md)
-
-* [IpConsumer](IpConsumer.md)
-
-* [KubernetesAutoScaling](KubernetesAutoScaling.md)
-
-* [KubernetesCluster](KubernetesCluster.md)
-
-* [KubernetesClusterEntities](KubernetesClusterEntities.md)
-
-* [KubernetesClusterProperties](KubernetesClusterProperties.md)
-
-* [KubernetesClusterPropertiesForPostAndPut](KubernetesClusterPropertiesForPostAndPut.md)
-
-* [KubernetesClusters](KubernetesClusters.md)
-
-* [KubernetesConfig](KubernetesConfig.md)
-
-* [KubernetesConfigProperties](KubernetesConfigProperties.md)
-
-* [KubernetesMaintenanceWindow](KubernetesMaintenanceWindow.md)
-
-* [KubernetesNode](KubernetesNode.md)
-
-* [KubernetesNodeMetadata](KubernetesNodeMetadata.md)
-
-* [KubernetesNodePool](KubernetesNodePool.md)
-
-* [KubernetesNodePoolForPut](KubernetesNodePoolForPut.md)
-
-* [KubernetesNodePoolLan](KubernetesNodePoolLan.md)
-
-* [KubernetesNodePoolProperties](KubernetesNodePoolProperties.md)
-
-* [KubernetesNodePoolPropertiesForPost](KubernetesNodePoolPropertiesForPost.md)
-
-* [KubernetesNodePoolPropertiesForPut](KubernetesNodePoolPropertiesForPut.md)
-
-* [KubernetesNodePools](KubernetesNodePools.md)
-
-* [KubernetesNodeProperties](KubernetesNodeProperties.md)
-
-* [KubernetesNodes](KubernetesNodes.md)
-
-* [Label](Label.md)
-
-* [LabelProperties](LabelProperties.md)
-
-* [LabelResource](LabelResource.md)
-
-* [LabelResourceProperties](LabelResourceProperties.md)
-
-* [LabelResources](LabelResources.md)
-
-* [Labels](Labels.md)
-
-* [Lan](Lan.md)
-
-* [LanEntities](LanEntities.md)
-
-* [LanNics](LanNics.md)
-
-* [LanPost](LanPost.md)
-
-* [LanProperties](LanProperties.md)
-
-* [LanPropertiesPost](LanPropertiesPost.md)
-
-* [Lans](Lans.md)
-
-* [Loadbalancer](Loadbalancer.md)
-
-* [LoadbalancerEntities](LoadbalancerEntities.md)
-
-* [LoadbalancerProperties](LoadbalancerProperties.md)
-
-* [Loadbalancers](Loadbalancers.md)
-
-* [Location](Location.md)
-
-* [LocationProperties](LocationProperties.md)
-
-* [Locations](Locations.md)
-
-* [Nic](Nic.md)
-
-* [NicEntities](NicEntities.md)
-
-* [NicProperties](NicProperties.md)
-
-* [Nics](Nics.md)
-
-* [NoStateMetaData](NoStateMetaData.md)
-
-* [PaginationLinks](PaginationLinks.md)
-
-* [Peer](Peer.md)
-
-* [PrivateCrossConnect](PrivateCrossConnect.md)
-
-* [PrivateCrossConnectProperties](PrivateCrossConnectProperties.md)
-
-* [PrivateCrossConnects](PrivateCrossConnects.md)
-
-* [Request](Request.md)
-
-* [RequestMetadata](RequestMetadata.md)
-
-* [RequestProperties](RequestProperties.md)
-
-* [RequestStatus](RequestStatus.md)
-
-* [RequestStatusMetadata](RequestStatusMetadata.md)
-
-* [RequestTarget](RequestTarget.md)
-
-* [Requests](Requests.md)
-
-* [Resource](Resource.md)
-
-* [ResourceEntities](ResourceEntities.md)
-
-* [ResourceGroups](ResourceGroups.md)
-
-* [ResourceLimits](ResourceLimits.md)
-
-* [ResourceProperties](ResourceProperties.md)
-
-* [ResourceReference](ResourceReference.md)
-
-* [Resources](Resources.md)
-
-* [ResourcesUsers](ResourcesUsers.md)
-
-* [S3Key](S3Key.md)
-
-* [S3KeyMetadata](S3KeyMetadata.md)
-
-* [S3KeyProperties](S3KeyProperties.md)
-
-* [S3Keys](S3Keys.md)
-
-* [S3ObjectStorageSSO](S3ObjectStorageSSO.md)
-
-* [Server](Server.md)
-
-* [ServerEntities](ServerEntities.md)
-
-* [ServerProperties](ServerProperties.md)
-
-* [Servers](Servers.md)
-
-* [Snapshot](Snapshot.md)
-
-* [SnapshotProperties](SnapshotProperties.md)
-
-* [Snapshots](Snapshots.md)
-
-* [Type](Type.md)
-
-* [User](User.md)
-
-* [UserMetadata](UserMetadata.md)
-
-* [UserProperties](UserProperties.md)
-
-* [Users](Users.md)
-
-* [UsersEntities](UsersEntities.md)
-
-* [Volume](Volume.md)
-
-* [VolumeProperties](VolumeProperties.md)
-
-* [Volumes](Volumes.md)
-
+* [AttachedVolumes](models/attachedvolumes.md)
+* [BackupUnit](models/backupunit.md)
+* [BackupUnitProperties](models/backupunitproperties.md)
+* [BackupUnitSSO](models/backupunitsso.md)
+* [BackupUnits](models/backupunits.md)
+* [BalancedNics](models/balancednics.md)
+* [Cdroms](models/cdroms.md)
+* [ConnectableDatacenter](models/connectabledatacenter.md)
+* [Contract](models/contract.md)
+* [ContractProperties](models/contractproperties.md)
+* [Contracts](models/contracts.md)
+* [CpuArchitectureProperties](models/cpuarchitectureproperties.md)
+* [DataCenterEntities](models/datacenterentities.md)
+* [Datacenter](models/datacenter.md)
+* [DatacenterElementMetadata](models/datacenterelementmetadata.md)
+* [DatacenterProperties](models/datacenterproperties.md)
+* [Datacenters](models/datacenters.md)
+* [Error](models/error.md)
+* [ErrorMessage](models/errormessage.md)
+* [FirewallRule](models/firewallrule.md)
+* [FirewallRules](models/firewallrules.md)
+* [FirewallruleProperties](models/firewallruleproperties.md)
+* [FlowLog](models/flowlog.md)
+* [FlowLogProperties](models/flowlogproperties.md)
+* [FlowLogPut](models/flowlogput.md)
+* [FlowLogs](models/flowlogs.md)
+* [Group](models/group.md)
+* [GroupEntities](models/groupentities.md)
+* [GroupMembers](models/groupmembers.md)
+* [GroupProperties](models/groupproperties.md)
+* [GroupShare](models/groupshare.md)
+* [GroupShareProperties](models/groupshareproperties.md)
+* [GroupShares](models/groupshares.md)
+* [GroupUsers](models/groupusers.md)
+* [Groups](models/groups.md)
+* [IPFailover](models/ipfailover.md)
+* [Image](models/image.md)
+* [ImageProperties](models/imageproperties.md)
+* [Images](models/images.md)
+* [Info](models/info.md)
+* [IpBlock](models/ipblock.md)
+* [IpBlockProperties](models/ipblockproperties.md)
+* [IpBlocks](models/ipblocks.md)
+* [IpConsumer](models/ipconsumer.md)
+* [KubernetesAutoScaling](models/kubernetesautoscaling.md)
+* [KubernetesCluster](models/kubernetescluster.md)
+* [KubernetesClusterEntities](models/kubernetesclusterentities.md)
+* [KubernetesClusterForPostAndPut](models/kubernetesclusterforpostandput.md)
+* [KubernetesClusterProperties](models/kubernetesclusterproperties.md)
+* [KubernetesClusterPropertiesForPostAndPut](models/kubernetesclusterpropertiesforpostandput.md)
+* [KubernetesClusters](models/kubernetesclusters.md)
+* [KubernetesMaintenanceWindow](models/kubernetesmaintenancewindow.md)
+* [KubernetesNode](models/kubernetesnode.md)
+* [KubernetesNodeMetadata](models/kubernetesnodemetadata.md)
+* [KubernetesNodePool](models/kubernetesnodepool.md)
+* [KubernetesNodePoolForPost](models/kubernetesnodepoolforpost.md)
+* [KubernetesNodePoolForPut](models/kubernetesnodepoolforput.md)
+* [KubernetesNodePoolLan](models/kubernetesnodepoollan.md)
+* [KubernetesNodePoolLanRoutes](models/kubernetesnodepoollanroutes.md)
+* [KubernetesNodePoolProperties](models/kubernetesnodepoolproperties.md)
+* [KubernetesNodePoolPropertiesForPost](models/kubernetesnodepoolpropertiesforpost.md)
+* [KubernetesNodePoolPropertiesForPut](models/kubernetesnodepoolpropertiesforput.md)
+* [KubernetesNodePools](models/kubernetesnodepools.md)
+* [KubernetesNodeProperties](models/kubernetesnodeproperties.md)
+* [KubernetesNodes](models/kubernetesnodes.md)
+* [Label](models/label.md)
+* [LabelProperties](models/labelproperties.md)
+* [LabelResource](models/labelresource.md)
+* [LabelResourceProperties](models/labelresourceproperties.md)
+* [LabelResources](models/labelresources.md)
+* [Labels](models/labels.md)
+* [Lan](models/lan.md)
+* [LanEntities](models/lanentities.md)
+* [LanNics](models/lannics.md)
+* [LanPost](models/lanpost.md)
+* [LanProperties](models/lanproperties.md)
+* [LanPropertiesPost](models/lanpropertiespost.md)
+* [Lans](models/lans.md)
+* [Loadbalancer](models/loadbalancer.md)
+* [LoadbalancerEntities](models/loadbalancerentities.md)
+* [LoadbalancerProperties](models/loadbalancerproperties.md)
+* [Loadbalancers](models/loadbalancers.md)
+* [Location](models/location.md)
+* [LocationProperties](models/locationproperties.md)
+* [Locations](models/locations.md)
+* [NatGateway](models/natgateway.md)
+* [NatGatewayEntities](models/natgatewayentities.md)
+* [NatGatewayLanProperties](models/natgatewaylanproperties.md)
+* [NatGatewayProperties](models/natgatewayproperties.md)
+* [NatGatewayPut](models/natgatewayput.md)
+* [NatGatewayRule](models/natgatewayrule.md)
+* [NatGatewayRuleProperties](models/natgatewayruleproperties.md)
+* [NatGatewayRuleProtocol](models/natgatewayruleprotocol.md)
+* [NatGatewayRulePut](models/natgatewayruleput.md)
+* [NatGatewayRuleType](models/natgatewayruletype.md)
+* [NatGatewayRules](models/natgatewayrules.md)
+* [NatGateways](models/natgateways.md)
+* [NetworkLoadBalancer](models/networkloadbalancer.md)
+* [NetworkLoadBalancerEntities](models/networkloadbalancerentities.md)
+* [NetworkLoadBalancerForwardingRule](models/networkloadbalancerforwardingrule.md)
+* [NetworkLoadBalancerForwardingRuleHealthCheck](models/networkloadbalancerforwardingrulehealthcheck.md)
+* [NetworkLoadBalancerForwardingRuleProperties](models/networkloadbalancerforwardingruleproperties.md)
+* [NetworkLoadBalancerForwardingRulePut](models/networkloadbalancerforwardingruleput.md)
+* [NetworkLoadBalancerForwardingRuleTarget](models/networkloadbalancerforwardingruletarget.md)
+* [NetworkLoadBalancerForwardingRuleTargetHealthCheck](models/networkloadbalancerforwardingruletargethealthcheck.md)
+* [NetworkLoadBalancerForwardingRules](models/networkloadbalancerforwardingrules.md)
+* [NetworkLoadBalancerProperties](models/networkloadbalancerproperties.md)
+* [NetworkLoadBalancerPut](models/networkloadbalancerput.md)
+* [NetworkLoadBalancers](models/networkloadbalancers.md)
+* [Nic](models/nic.md)
+* [NicEntities](models/nicentities.md)
+* [NicProperties](models/nicproperties.md)
+* [NicPut](models/nicput.md)
+* [Nics](models/nics.md)
+* [NoStateMetaData](models/nostatemetadata.md)
+* [PaginationLinks](models/paginationlinks.md)
+* [Peer](models/peer.md)
+* [PrivateCrossConnect](models/privatecrossconnect.md)
+* [PrivateCrossConnectProperties](models/privatecrossconnectproperties.md)
+* [PrivateCrossConnects](models/privatecrossconnects.md)
+* [Request](models/request.md)
+* [RequestMetadata](models/requestmetadata.md)
+* [RequestProperties](models/requestproperties.md)
+* [RequestStatus](models/requeststatus.md)
+* [RequestStatusMetadata](models/requeststatusmetadata.md)
+* [RequestTarget](models/requesttarget.md)
+* [Requests](models/requests.md)
+* [Resource](models/resource.md)
+* [ResourceEntities](models/resourceentities.md)
+* [ResourceGroups](models/resourcegroups.md)
+* [ResourceLimits](models/resourcelimits.md)
+* [ResourceProperties](models/resourceproperties.md)
+* [ResourceReference](models/resourcereference.md)
+* [Resources](models/resources.md)
+* [ResourcesUsers](models/resourcesusers.md)
+* [S3Key](models/s3key.md)
+* [S3KeyMetadata](models/s3keymetadata.md)
+* [S3KeyProperties](models/s3keyproperties.md)
+* [S3Keys](models/s3keys.md)
+* [S3ObjectStorageSSO](models/s3objectstoragesso.md)
+* [Server](models/server.md)
+* [ServerEntities](models/serverentities.md)
+* [ServerProperties](models/serverproperties.md)
+* [Servers](models/servers.md)
+* [Snapshot](models/snapshot.md)
+* [SnapshotProperties](models/snapshotproperties.md)
+* [Snapshots](models/snapshots.md)
+* [TargetPortRange](models/targetportrange.md)
+* [Template](models/template.md)
+* [TemplateProperties](models/templateproperties.md)
+* [Templates](models/templates.md)
+* [Token](models/token.md)
+* [Type](models/type.md)
+* [User](models/user.md)
+* [UserMetadata](models/usermetadata.md)
+* [UserPost](models/userpost.md)
+* [UserProperties](models/userproperties.md)
+* [UserPropertiesPost](models/userpropertiespost.md)
+* [UserPropertiesPut](models/userpropertiesput.md)
+* [UserPut](models/userput.md)
+* [Users](models/users.md)
+* [UsersEntities](models/usersentities.md)
+* [Volume](models/volume.md)
+* [VolumeProperties](models/volumeproperties.md)
+* [Volumes](models/volumes.md)
 
