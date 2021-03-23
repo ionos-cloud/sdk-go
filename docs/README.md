@@ -6,7 +6,7 @@ The IONOS Cloud SDK for GO provides you with access to the IONOS Cloud API. The 
 
 ## Getting Started
 
-Before you can begin you should have [signed-up](https://www.ionos.com/enterprise-cloud/signup) for a IONOS Cloud account. The credentials entered in the registration request will be used to authenticate against the API.
+An IONOS account is required for access to the Cloud API; credentials from your registration are used to authenticate against the IONOS Cloud API.
 
 ### Installation
 
