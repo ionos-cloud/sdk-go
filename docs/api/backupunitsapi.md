@@ -10,7 +10,7 @@ All URIs are relative to [https://api.ionos.com/cloudapi/v6](https://api.ionos.c
 | [**BackupunitsPatch**](backupunitsapi.md#BackupunitsPatch) | **Patch** /backupunits/{backupunitId} | Partially modify a Backup Unit |
 | [**BackupunitsPost**](backupunitsapi.md#BackupunitsPost) | **Post** /backupunits | Create a Backup Unit |
 | [**BackupunitsPut**](backupunitsapi.md#BackupunitsPut) | **Put** /backupunits/{backupunitId} | Modify a Backup Unit |
-| [**BackupunitsSsourlGet**](backupunitsapi.md#BackupunitsSsourlGet) | **Get** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified Backup Unit |
+| [**BackupunitsSsourlGet**](backupunitsapi.md#BackupunitsSsourlGet) | **Get** /backupunits/{backupunitId}/ssourl | Returns a single sign-on URL for the specified Backup Unit |
 
 ## BackupunitsDelete
 
@@ -58,18 +58,18 @@ func main() {
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
-| **backupunitId** | **string** | The unique ID of the backup Unit |  |
+| **ctx** | **context.Context** | Context for authentication, logging, cancellation, deadlines, tracing, and so on. |  |
+| **backupunitId** | **string** | The unique ID of the Backup Unit. |  |
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiBackupunitsDeleteRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBackupunitsDeleteRequest struct via the builder pattern.
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **pretty** | **bool** | Controls whether the response is pretty-printed \(with indentation and new lines\). | \[default to true\] |
+| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on. | \[default to 0\] |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -126,8 +126,8 @@ func main() {
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
-| **backupunitId** | **string** | The unique ID of the backup unit |  |
+| **ctx** | **context.Context** | Context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
+| **backupunitId** | **string** | The unique ID of the Backup Unit. |  |
 
 ### Other Parameters
 
@@ -137,7 +137,7 @@ Other parameters are passed through a pointer to a apiBackupunitsFindByIdRequest
 | :--- | :--- | :--- | :--- |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -199,7 +199,7 @@ Other parameters are passed through a pointer to a apiBackupunitsGetRequest stru
 | :--- | :--- | :--- | :--- |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -258,8 +258,8 @@ func main() {
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
-| **backupunitId** | **string** | The unique ID of the backup unit |  |
+| **ctx** | **context.Context** | Context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
+| **backupunitId** | **string** | The unique ID of the Backup Unit. |  |
 
 ### Other Parameters
 
@@ -267,10 +267,10 @@ Other parameters are passed through a pointer to a apiBackupunitsPatchRequest st
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **backupUnitProperties** | [**BackupUnitProperties**](../models/backupunitproperties.md) | Modified backup Unit properties |  |
+| **backupUnitProperties** | [**BackupUnitProperties**](../models/backupunitproperties.md) | Modified Backup Unit properties |  |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -328,14 +328,14 @@ func main() {
 
 ### Other Parameters
 
-Other parameters are passed through a pointer to a apiBackupunitsPostRequest struct via the builder pattern
+Other parameters are passed through a pointer to a apiBackupunitsPostRequest struct via the builder pattern.
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
 | **backupUnit** | [**BackupUnit**](../models/backupunit.md) | Payload containing data to create a new Backup Unit |  |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -394,8 +394,8 @@ func main() {
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
-| **backupunitId** | **string** | The unique ID of the backup unit |  |
+| **ctx** | **context.Context** | Context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
+| **backupunitId** | **string** | The unique ID of the backup unit. |  |
 
 ### Other Parameters
 
@@ -403,10 +403,10 @@ Other parameters are passed through a pointer to a apiBackupunitsPutRequest stru
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **backupUnit** | [**BackupUnit**](../models/backupunit.md) | Modified backup Unit |  |
+| **backupUnit** | [**BackupUnit**](../models/backupunit.md) | Modified Backup Unit |  |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -461,8 +461,8 @@ func main() {
 
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
-| **ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
-| **backupunitId** | **string** | The unique UUID of the backup unit |  |
+| **ctx** | **context.Context** | Context for authentication, logging, cancellation, deadlines, tracing, etc. |  |
+| **backupunitId** | **string** | The unique UUID of the Backup Unit. |  |
 
 ### Other Parameters
 
@@ -471,7 +471,7 @@ Other parameters are passed through a pointer to a apiBackupunitsSsourlGetReques
 | Name | Type | Description | Notes |
 | :--- | :--- | :--- | :--- |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 

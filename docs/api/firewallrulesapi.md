@@ -74,7 +74,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 | :--- | :--- | :--- | :--- |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -148,7 +148,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 | :--- | :--- | :--- | :--- |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -224,7 +224,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 | :--- | :--- | :--- | :--- |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 | **offset** | **int32** | the first element \(of the total list of elements\) to include in the response \(use together with limit for pagination\) | \[default to 0\] |
 | **limit** | **int32** | the maximum number of elements to return \(use together with offset for pagination\) | \[default to 1000\] |
 
@@ -303,7 +303,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 | **firewallrule** | [**FirewallruleProperties**](../models/firewallruleproperties.md) | Modified Firewall Rule |  |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -378,7 +378,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 | **firewallrule** | [**FirewallRule**](../models/firewallrule.md) | Firewall Rule to be created |  |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
@@ -455,7 +455,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 | **firewallrule** | [**FirewallRule**](../models/firewallrule.md) | Modified Firewall Rule |  |
 | **pretty** | **bool** | Controls whether response is pretty-printed \(with indentation and new lines\) | \[default to true\] |
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/\[ID\]  - depth=0: only direct properties are included. Children \(servers etc.\) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on | \[default to 0\] |
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed |  |
+| **xContractNumber** | **int32** | Users with more than one contract must provide the contract number, against which all API requests are to be executed. |  |
 
 ### Return type
 
