@@ -1,4 +1,10 @@
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
+[![SonarCloud](https://sonarcloud.io/images/project_badges/sonarcloud-orange.svg)](https://sonarcloud.io/dashboard?id=sdk-go)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=bugs&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=sqale_rating&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=reliability_rating&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=security_rating&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=vulnerabilities&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
 
 # GoLang API Client For IONOS Cloud
 
