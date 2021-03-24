@@ -1,3 +1,4 @@
+![CI](https://github.com/ionos-cloud/sdk-resources/workflows/CI/badge.svg)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=alert_status&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=sdk-go&metric=bugs&token=fb404d0cd27bc4bfd057afc86a3e76f1e4c2e340)](https://sonarcloud.io/dashboard?id=sdk-go)
