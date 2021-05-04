@@ -9,7 +9,7 @@ info:
     \ are consistent with their concepts and lend well to making the experience smooth\
     \ and intuitive."
   title: CLOUD API
-  version: "5.0"
+  version: 5.0-SDK.1
 servers:
 - url: https://api.ionos.com/cloudapi/v5
 tags:
@@ -7295,20 +7295,80 @@ paths:
         schema:
           format: int32
           type: integer
-      - description: Request status filter to fetch all the request based on a particular
-          status [QUEUED, RUNNING, DONE, FAILED]
+      - description: Request filter to fetch all requests based on a particular status
+          [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter
         in: query
         name: filter.status
         schema:
           type: string
-      - description: Filter all the requests after the created date
+      - description: Request filter to fetch all requests created after the specified
+          date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         in: query
         name: filter.createdAfter
         schema:
           type: string
-      - description: Filter all the requests before the created date
+      - description: Request filter to fetch all requests created before the specified
+          date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00
         in: query
         name: filter.createdBefore
+        schema:
+          type: string
+      - description: Response filter to select and display only the requests that
+          contains the specified createdDate. The value is case insensitive and it  depends
+          on depth query parameter that should have a value greater than 0. Date format
+          e.g. 2020-11-16T17:42:59Z
+        in: query
+        name: filter.createdDate
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified createdBy. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.createdBy
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified etag. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.etag
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified requestStatus. The value is case insensitive and
+          it depends on depth query parameter that should have a value greater than
+          0. '
+        in: query
+        name: filter.requestStatus
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified method. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.method
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified headers. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.headers
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified body. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.body
+        schema:
+          type: string
+      - description: 'Response filter to select and display only the requests that
+          contains the specified url. The value is case insensitive and it depends
+          on depth query parameter that should have a value greater than 0. '
+        in: query
+        name: filter.url
         schema:
           type: string
       - description: the first element (of the total list of elements) to include
@@ -7676,6 +7736,9 @@ paths:
             402 (trial access), 403 (insufficient permissions), 404 (not found), 405
             (unsupported HTTP method), 415 (unsupported content type, 422 (validation
             error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
       summary: Display API information
       tags:
       - /
@@ -9926,7 +9989,7 @@ paths:
       tags:
       - User Management
     put:
-      description: You can enable or disable a given S3 key
+      description: You can enable or disable a given S3 key.
       operationId: umUsersS3keysPut
       parameters:
       - in: path
@@ -9973,7 +10036,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/S3Key'
-        description: Modified s3 key
+        description: Modified S3 key
         required: true
       responses:
         "202":
@@ -13905,7 +13968,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/KubernetesCluster'
-        description: Properties of the Kubernetes Cluster
+        description: Details of the Kubernetes Cluster
         required: true
       responses:
         "202":
@@ -14145,7 +14208,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/KubernetesCluster'
-        description: Properties of the Kubernetes Cluster
+        description: Details of the Kubernetes Cluster
         required: true
       responses:
         "200":
@@ -14389,7 +14452,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/KubernetesNodePool'
-        description: Details of Kubernetes Node Pool
+        description: Details of the Kubernetes Node Pool
         required: true
       responses:
         "202":
@@ -15288,6 +15351,7 @@ components:
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
             imageAlias: imageAlias
+            userData: userData
             cpuHotPlug: true
             ramHotPlug: true
             type: HDD
@@ -15321,6 +15385,7 @@ components:
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
             imageAlias: imageAlias
+            userData: userData
             cpuHotPlug: true
             ramHotPlug: true
             type: HDD
@@ -15358,6 +15423,7 @@ components:
           description: Array of items in that collection
           items:
             $ref: '#/components/schemas/Volume'
+          readOnly: true
           type: array
         offset:
           description: the offset (if specified in the request)
@@ -15578,6 +15644,7 @@ components:
         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
         bus: VIRTIO
         imageAlias: imageAlias
+        userData: userData
         cpuHotPlug: true
         ramHotPlug: true
         type: HDD
@@ -15699,9 +15766,15 @@ components:
         backupunitId:
           description: The uuid of the Backup Unit that user has access to. The property
             is immutable and is only allowed to be set on a new volume creation. It
-            is mandatory to provied either public image or imageAlias in conjunction
+            is mandatory to provide either 'public image' or 'imageAlias' in conjunction
             with this property.
           example: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
+          type: string
+        userData:
+          description: The cloud-init configuration for the volume as base64 encoded
+            string. The property is immutable and is only allowed to be set on a new
+            volume creation. It is mandatory to provide either 'public image' or 'imageAlias'
+            that has cloud-init compatibility in conjunction with this property.
           type: string
       required:
       - size
@@ -15726,6 +15799,7 @@ components:
           image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
           bus: VIRTIO
           imageAlias: imageAlias
+          userData: userData
           cpuHotPlug: true
           ramHotPlug: true
           type: HDD
@@ -15793,11 +15867,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -15823,11 +15901,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -15860,6 +15942,7 @@ components:
           description: Array of items in that collection
           items:
             $ref: '#/components/schemas/Image'
+          readOnly: true
           type: array
         offset:
           description: the offset (if specified in the request)
@@ -15889,11 +15972,15 @@ components:
         properties:
           nicHotUnplug: true
           discVirtioHotPlug: true
+          imageAliases:
+          - imageAliases
+          - imageAliases
           cpuHotPlug: true
           ramHotPlug: true
           discScsiHotUnplug: true
           description: 'Image/Snapshot of Ubuntu '
           discVirtioHotUnplug: true
+          cloudInit: V1
           size: 100.0
           nicHotPlug: true
           public: true
@@ -15933,11 +16020,15 @@ components:
       example:
         nicHotUnplug: true
         discVirtioHotPlug: true
+        imageAliases:
+        - imageAliases
+        - imageAliases
         cpuHotPlug: true
         ramHotPlug: true
         discScsiHotUnplug: true
         description: 'Image/Snapshot of Ubuntu '
         discVirtioHotUnplug: true
+        cloudInit: V1
         size: 100.0
         nicHotPlug: true
         public: true
@@ -16033,6 +16124,19 @@ components:
           example: true
           readOnly: true
           type: boolean
+        imageAliases:
+          description: List of image aliases mapped for this Image
+          items:
+            type: string
+          readOnly: true
+          type: array
+        cloudInit:
+          description: Cloud init compatibility
+          enum:
+          - NONE
+          - V1
+          example: V1
+          type: string
       required:
       - licenceType
       type: object
@@ -16478,11 +16582,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -16508,11 +16616,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -16552,6 +16664,7 @@ components:
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
                     imageAlias: imageAlias
+                    userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
                     type: HDD
@@ -16585,6 +16698,7 @@ components:
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
                     imageAlias: imageAlias
+                    userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
                     type: HDD
@@ -16821,11 +16935,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -16851,11 +16969,15 @@ components:
                   properties:
                     nicHotUnplug: true
                     discVirtioHotPlug: true
+                    imageAliases:
+                    - imageAliases
+                    - imageAliases
                     cpuHotPlug: true
                     ramHotPlug: true
                     discScsiHotUnplug: true
                     description: 'Image/Snapshot of Ubuntu '
                     discVirtioHotUnplug: true
+                    cloudInit: V1
                     size: 100.0
                     nicHotPlug: true
                     public: true
@@ -16895,6 +17017,7 @@ components:
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
                     imageAlias: imageAlias
+                    userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
                     type: HDD
@@ -16928,6 +17051,7 @@ components:
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
                     imageAlias: imageAlias
+                    userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
                     type: HDD
@@ -17157,6 +17281,7 @@ components:
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
               imageAlias: imageAlias
+              userData: userData
               cpuHotPlug: true
               ramHotPlug: true
               type: HDD
@@ -17190,6 +17315,7 @@ components:
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
               imageAlias: imageAlias
+              userData: userData
               cpuHotPlug: true
               ramHotPlug: true
               type: HDD
@@ -18018,9 +18144,6 @@ components:
             is part of
           example: '[SSD]'
           items:
-            enum:
-            - SSD
-            - SSD_STORAGE_ZONING
             type: string
           readOnly: true
           type: array
@@ -18091,11 +18214,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -18121,11 +18248,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -18165,6 +18296,7 @@ components:
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
                       imageAlias: imageAlias
+                      userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
                       type: HDD
@@ -18198,6 +18330,7 @@ components:
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
                       imageAlias: imageAlias
+                      userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
                       type: HDD
@@ -18434,11 +18567,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -18464,11 +18601,15 @@ components:
                     properties:
                       nicHotUnplug: true
                       discVirtioHotPlug: true
+                      imageAliases:
+                      - imageAliases
+                      - imageAliases
                       cpuHotPlug: true
                       ramHotPlug: true
                       discScsiHotUnplug: true
                       description: 'Image/Snapshot of Ubuntu '
                       discVirtioHotUnplug: true
+                      cloudInit: V1
                       size: 100.0
                       nicHotPlug: true
                       public: true
@@ -18508,6 +18649,7 @@ components:
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
                       imageAlias: imageAlias
+                      userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
                       type: HDD
@@ -18541,6 +18683,7 @@ components:
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
                       imageAlias: imageAlias
+                      userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
                       type: HDD
@@ -18770,6 +18913,7 @@ components:
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
                 imageAlias: imageAlias
+                userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
                 type: HDD
@@ -18803,6 +18947,7 @@ components:
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
                 imageAlias: imageAlias
+                userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
                 type: HDD
@@ -19692,11 +19837,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -19722,11 +19871,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -19766,6 +19919,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -19799,6 +19953,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -20035,11 +20190,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -20065,11 +20224,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -20109,6 +20272,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -20142,6 +20306,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -20371,6 +20536,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -20404,6 +20570,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -21254,11 +21421,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -21284,11 +21455,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -21328,6 +21503,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -21361,6 +21537,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -21597,11 +21774,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -21627,11 +21808,15 @@ components:
                       properties:
                         nicHotUnplug: true
                         discVirtioHotPlug: true
+                        imageAliases:
+                        - imageAliases
+                        - imageAliases
                         cpuHotPlug: true
                         ramHotPlug: true
                         discScsiHotUnplug: true
                         description: 'Image/Snapshot of Ubuntu '
                         discVirtioHotUnplug: true
+                        cloudInit: V1
                         size: 100.0
                         nicHotPlug: true
                         public: true
@@ -21671,6 +21856,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -21704,6 +21890,7 @@ components:
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
                         imageAlias: imageAlias
+                        userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
                         type: HDD
@@ -21933,6 +22120,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -21966,6 +22154,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -25528,6 +25717,7 @@ components:
           description: Array of items in that collection
           items:
             $ref: '#/components/schemas/Nic'
+          readOnly: true
           type: array
         offset:
           description: the offset (if specified in the request)
@@ -25592,11 +25782,15 @@ components:
             properties:
               nicHotUnplug: true
               discVirtioHotPlug: true
+              imageAliases:
+              - imageAliases
+              - imageAliases
               cpuHotPlug: true
               ramHotPlug: true
               discScsiHotUnplug: true
               description: 'Image/Snapshot of Ubuntu '
               discVirtioHotUnplug: true
+              cloudInit: V1
               size: 100.0
               nicHotPlug: true
               public: true
@@ -25622,11 +25816,15 @@ components:
             properties:
               nicHotUnplug: true
               discVirtioHotPlug: true
+              imageAliases:
+              - imageAliases
+              - imageAliases
               cpuHotPlug: true
               ramHotPlug: true
               discScsiHotUnplug: true
               description: 'Image/Snapshot of Ubuntu '
               discVirtioHotUnplug: true
+              cloudInit: V1
               size: 100.0
               nicHotPlug: true
               public: true
@@ -25666,6 +25864,7 @@ components:
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
               imageAlias: imageAlias
+              userData: userData
               cpuHotPlug: true
               ramHotPlug: true
               type: HDD
@@ -25699,6 +25898,7 @@ components:
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
               imageAlias: imageAlias
+              userData: userData
               cpuHotPlug: true
               ramHotPlug: true
               type: HDD
@@ -26136,12 +26336,12 @@ components:
         active: true
       properties:
         secretKey:
-          description: secret of the s3 key
+          description: secret of the S3 key
           example: tFVkUARsoeCdntQs2jVSyGG6TMPfPZ+ghnsWj/gG
           readOnly: true
           type: string
         active:
-          description: denotes if the s3 key is active or not
+          description: denotes if the S3 key is active or not
           type: boolean
       type: object
     GroupUsers:
@@ -27576,11 +27776,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -27606,11 +27810,15 @@ components:
           properties:
             nicHotUnplug: true
             discVirtioHotPlug: true
+            imageAliases:
+            - imageAliases
+            - imageAliases
             cpuHotPlug: true
             ramHotPlug: true
             discScsiHotUnplug: true
             description: 'Image/Snapshot of Ubuntu '
             discVirtioHotUnplug: true
+            cloudInit: V1
             size: 100.0
             nicHotPlug: true
             public: true
@@ -27668,7 +27876,8 @@ components:
           ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
             "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
             "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-            "datacenterName" : "IpConsumerDC"} ] }'
+            "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+            "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
       properties:
         id:
           description: The resource's unique identifier
@@ -27703,7 +27912,8 @@ components:
         ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
           "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
           "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-          "datacenterName" : "IpConsumerDC"} ] }'
+          "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+          "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
       properties:
         ips:
           description: A collection of IPs associated with the IP Block
@@ -27732,7 +27942,8 @@ components:
           example: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
             "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
             "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-            "datacenterName" : "IpConsumerDC"} ] }'
+            "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+            "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
           items:
             $ref: '#/components/schemas/IpConsumer'
           readOnly: true
@@ -27767,7 +27978,8 @@ components:
             ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
               "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
               "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-              "datacenterName" : "IpConsumerDC"} ] }'
+              "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+              "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
         - metadata:
             createdByUserId: user@example.com
             createdDate: 2015-12-04T14:34:09.809Z
@@ -27788,7 +28000,8 @@ components:
             ipConsumers: '{ "ipConsumers": [ { "ip" : "192.18.2.11", "mac" : "02:01:3f:52:6e:57",
               "nicId" : "0e8ee463-1174-46f2-87ba-a5c79c14d8e5", "serverId" : "e6a3466f-8d6e-4cb6-8001-f4e245f222b7",
               "serverName" : "Unnamed Server", "datacenterId" : "6e54a9ec-aace-4176-8ee4-1c3a704fccfc",
-              "datacenterName" : "IpConsumerDC"} ] }'
+              "datacenterName" : "IpConsumerDC", "k8sNodePoolUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc12",
+              "k8sClusterUuid" : "6e54a9ec-aace-4176-8ee4-1c3a704fcc23"} ] }'
       properties:
         id:
           description: The resource's unique identifier
@@ -27860,9 +28073,6 @@ components:
           description: List of features supported by the location
           example: '[SSD]'
           items:
-            enum:
-            - SSD
-            - SSD_STORAGE_ZONING
             type: string
           readOnly: true
           type: array
@@ -28022,6 +28232,10 @@ components:
         datacenterId:
           type: string
         datacenterName:
+          type: string
+        k8sNodePoolUuid:
+          type: string
+        k8sClusterUuid:
           type: string
       type: object
     PrivateCrossConnectProperties:
@@ -28660,11 +28874,15 @@ components:
               properties:
                 nicHotUnplug: true
                 discVirtioHotPlug: true
+                imageAliases:
+                - imageAliases
+                - imageAliases
                 cpuHotPlug: true
                 ramHotPlug: true
                 discScsiHotUnplug: true
                 description: 'Image/Snapshot of Ubuntu '
                 discVirtioHotUnplug: true
+                cloudInit: V1
                 size: 100.0
                 nicHotPlug: true
                 public: true
@@ -28690,11 +28908,15 @@ components:
               properties:
                 nicHotUnplug: true
                 discVirtioHotPlug: true
+                imageAliases:
+                - imageAliases
+                - imageAliases
                 cpuHotPlug: true
                 ramHotPlug: true
                 discScsiHotUnplug: true
                 description: 'Image/Snapshot of Ubuntu '
                 discVirtioHotUnplug: true
+                cloudInit: V1
                 size: 100.0
                 nicHotPlug: true
                 public: true
@@ -28734,6 +28956,7 @@ components:
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
                 imageAlias: imageAlias
+                userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
                 type: HDD
@@ -28767,6 +28990,7 @@ components:
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
                 imageAlias: imageAlias
+                userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
                 type: HDD
@@ -29042,11 +29266,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -29072,11 +29300,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -29116,6 +29348,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -29149,6 +29382,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -29385,11 +29619,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -29415,11 +29653,15 @@ components:
                 properties:
                   nicHotUnplug: true
                   discVirtioHotPlug: true
+                  imageAliases:
+                  - imageAliases
+                  - imageAliases
                   cpuHotPlug: true
                   ramHotPlug: true
                   discScsiHotUnplug: true
                   description: 'Image/Snapshot of Ubuntu '
                   discVirtioHotUnplug: true
+                  cloudInit: V1
                   size: 100.0
                   nicHotPlug: true
                   public: true
@@ -29459,6 +29701,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -29492,6 +29735,7 @@ components:
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
                   imageAlias: imageAlias
+                  userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
                   type: HDD
@@ -30229,6 +30473,7 @@ components:
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
             imageAlias: imageAlias
+            userData: userData
             cpuHotPlug: true
             ramHotPlug: true
             type: HDD
@@ -30262,6 +30507,7 @@ components:
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
             imageAlias: imageAlias
+            userData: userData
             cpuHotPlug: true
             ramHotPlug: true
             type: HDD
@@ -30444,7 +30690,7 @@ components:
         type:
           description: The type of object that has been created
           enum:
-          - backupunit
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -30583,7 +30829,7 @@ components:
         type:
           description: The type of resource within a collection
           enum:
-          - label
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -30704,7 +30950,7 @@ components:
         type:
           description: The type of resource within a collection
           enum:
-          - label
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -30739,10 +30985,12 @@ components:
         viableNodePoolVersions:
         - 1.17.7
         - 1.18.2
+        public: true
         name: k8s
         availableUpgradeVersions:
         - 1.16.4
         - 1.17.7
+        gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
         name:
@@ -30778,6 +31026,16 @@ components:
           items:
             type: string
           type: array
+        public:
+          default: true
+          description: The indicator if the cluster is public or private. Be aware
+            that setting it to false is currently in beta phase.
+          type: boolean
+        gatewayIp:
+          description: The IP address of the gateway used by the cluster. This is
+            mandatory when `public` is set to `false` and should not be provided otherwise.
+          example: 192.170.0.1
+          type: string
       required:
       - name
       type: object
@@ -30894,10 +31152,12 @@ components:
           viableNodePoolVersions:
           - 1.17.7
           - 1.18.2
+          public: true
           name: k8s
           availableUpgradeVersions:
           - 1.16.4
           - 1.17.7
+          gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
         id:
@@ -31140,10 +31400,12 @@ components:
             viableNodePoolVersions:
             - 1.17.7
             - 1.18.2
+            public: true
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
         - metadata:
             createdByUserId: user@example.com
@@ -31256,10 +31518,12 @@ components:
             viableNodePoolVersions:
             - 1.17.7
             - 1.18.2
+            public: true
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
       properties:
         id:
@@ -31370,14 +31634,89 @@ components:
       required:
       - properties
       type: object
-    KubernetesClusterPropertiesForPostAndPut:
+    KubernetesNodePoolProperties:
+      example:
+        autoScaling:
+          minNodeCount: 1
+          maxNodeCount: 1
+        datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+        lans:
+        - id: 3
+        - id: 3
+        annotations:
+          key: annotations
+        ramSize: 2048
+        availabilityZone: AUTO
+        k8sVersion: 1.15.4
+        labels:
+          key: labels
+        maintenanceWindow:
+          dayOfTheWeek: Monday
+          time: 13:00:00
+        coresCount: 4
+        storageSize: 100
+        name: k8s-node-pool
+        availableUpgradeVersions:
+        - 1.16.4
+        - 1.17.7
+        storageType: HDD
+        nodeCount: 2
+        cpuFamily: AMD_OPTERON
+        publicIps:
+        - 81.173.1.2
+        - 82.231.2.5
+        - 92.221.2.4
       properties:
         name:
-          description: A Kubernetes Cluster Name
-          example: k8s
+          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
+            must be 63 characters or less and must be empty or begin and end with
+            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
+            dots (.), and alphanumerics between.
+          example: k8s-node-pool
           type: string
+        datacenterId:
+          description: A valid uuid of the datacenter on which user has access
+          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
+          type: string
+        nodeCount:
+          description: Number of nodes part of the Node Pool
+          example: 2
+          type: integer
+        cpuFamily:
+          description: A valid cpu family name
+          example: AMD_OPTERON
+          type: string
+        coresCount:
+          description: Number of cores for node
+          example: 4
+          type: integer
+        ramSize:
+          description: RAM size for node, minimum size is 2048MB. Ram size must be
+            set to multiple of 1024MB.
+          example: 2048
+          type: integer
+        availabilityZone:
+          description: The availability zone in which the target VM should exist
+          enum:
+          - AUTO
+          - ZONE_1
+          - ZONE_2
+          example: AUTO
+          type: string
+        storageType:
+          description: Hardware type of the volume
+          enum:
+          - HDD
+          - SSD
+          example: HDD
+          type: string
+        storageSize:
+          description: The size of the volume in GB. The size should be greater than
+            10GB.
+          example: 100
+          type: integer
         k8sVersion:
-          description: The kubernetes version in which a cluster is running. This
+          description: The kubernetes version in which a nodepool is running. This
             imposes restrictions on what kubernetes versions can be run in a cluster's
             nodepools. Additionally, not all kubernetes versions are viable upgrade
             targets for all prior versions.
@@ -31385,8 +31724,156 @@ components:
           type: string
         maintenanceWindow:
           $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        autoScaling:
+          $ref: '#/components/schemas/KubernetesAutoScaling'
+        lans:
+          description: array of additional LANs attached to worker nodes
+          items:
+            $ref: '#/components/schemas/KubernetesNodePoolLan'
+          type: array
+        labels:
+          additionalProperties:
+            type: string
+          description: map of labels attached to node pool
+          type: object
+        annotations:
+          additionalProperties:
+            type: string
+          description: map of annotations attached to node pool
+          type: object
+        publicIps:
+          description: Optional array of reserved public IP addresses to be used by
+            the nodes. IPs must be from same location as the data center used for
+            the node pool. The array must contain one extra IP than maximum number
+            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
+            if auto scaling is used) The extra provided IP Will be used during rebuilding
+            of nodes.
+          example:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
+          items:
+            type: string
+          type: array
+        availableUpgradeVersions:
+          description: List of available versions for upgrading the node pool
+          example:
+          - 1.16.4
+          - 1.17.7
+          items:
+            type: string
+          type: array
       required:
+      - availabilityZone
+      - coresCount
+      - cpuFamily
+      - datacenterId
       - name
+      - nodeCount
+      - ramSize
+      - storageSize
+      - storageType
+      type: object
+    KubernetesNodePoolPropertiesForPost:
+      properties:
+        name:
+          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
+            must be 63 characters or less and must be empty or begin and end with
+            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
+            dots (.), and alphanumerics between.
+          example: k8s-node-pool
+          type: string
+        datacenterId:
+          description: A valid uuid of the datacenter on which user has access
+          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
+          type: string
+        nodeCount:
+          description: Number of nodes part of the Node Pool
+          example: 2
+          type: integer
+        cpuFamily:
+          description: A valid cpu family name
+          example: AMD_OPTERON
+          type: string
+        coresCount:
+          description: Number of cores for node
+          example: 4
+          type: integer
+        ramSize:
+          description: RAM size for node, minimum size is 2048MB. Ram size must be
+            set to multiple of 1024MB.
+          example: 2048
+          type: integer
+        availabilityZone:
+          description: The availability zone in which the target VM should exist
+          enum:
+          - AUTO
+          - ZONE_1
+          - ZONE_2
+          example: AUTO
+          type: string
+        storageType:
+          description: Hardware type of the volume
+          enum:
+          - HDD
+          - SSD
+          example: HDD
+          type: string
+        storageSize:
+          description: The size of the volume in GB. The size should be greater than
+            10GB.
+          example: 100
+          type: integer
+        k8sVersion:
+          description: The kubernetes version in which a nodepool is running. This
+            imposes restrictions on what kubernetes versions can be run in a cluster's
+            nodepools. Additionally, not all kubernetes versions are viable upgrade
+            targets for all prior versions.
+          example: 1.15.4
+          type: string
+        maintenanceWindow:
+          $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        autoScaling:
+          $ref: '#/components/schemas/KubernetesAutoScaling'
+        lans:
+          description: array of additional LANs attached to worker nodes
+          items:
+            $ref: '#/components/schemas/KubernetesNodePoolLan'
+          type: array
+        labels:
+          additionalProperties:
+            type: string
+          description: map of labels attached to node pool
+          type: object
+        annotations:
+          additionalProperties:
+            type: string
+          description: map of annotations attached to node pool
+          type: object
+        publicIps:
+          description: Optional array of reserved public IP addresses to be used by
+            the nodes. IPs must be from same location as the data center used for
+            the node pool. The array must contain one extra IP than maximum number
+            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
+            if auto scaling is used) The extra provided IP Will be used during rebuilding
+            of nodes.
+          example:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
+          items:
+            type: string
+          type: array
+      required:
+      - availabilityZone
+      - coresCount
+      - cpuFamily
+      - datacenterId
+      - name
+      - nodeCount
+      - ramSize
+      - storageSize
+      - storageType
       type: object
     KubernetesNodePoolPropertiesForPut:
       example:
@@ -31517,314 +32004,6 @@ components:
       - storageSize
       - storageType
       type: object
-    KubernetesNodePoolProperties:
-      example:
-        autoScaling:
-          minNodeCount: 1
-          maxNodeCount: 1
-        datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
-        lans:
-        - id: 3
-        - id: 3
-        annotations:
-          key: annotations
-        ramSize: 2048
-        availabilityZone: AUTO
-        k8sVersion: 1.15.4
-        labels:
-          key: labels
-        maintenanceWindow:
-          dayOfTheWeek: Monday
-          time: 13:00:00
-        coresCount: 4
-        storageSize: 100
-        name: k8s-node-pool
-        availableUpgradeVersions:
-        - 1.16.4
-        - 1.17.7
-        storageType: HDD
-        nodeCount: 2
-        cpuFamily: AMD_OPTERON
-        publicIps:
-        - 81.173.1.2
-        - 82.231.2.5
-        - 92.221.2.4
-      properties:
-        name:
-          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
-            must be 63 characters or less and must be empty or begin and end with
-            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
-            dots (.), and alphanumerics between.
-          example: k8s-node-pool
-          type: string
-        datacenterId:
-          description: A valid uuid of the datacenter on which user has access
-          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
-          type: string
-        nodeCount:
-          description: Number of nodes part of the Node Pool
-          example: 2
-          type: integer
-        cpuFamily:
-          description: A valid cpu family name
-          example: AMD_OPTERON
-          type: string
-        coresCount:
-          description: Number of cores for node
-          example: 4
-          type: integer
-        ramSize:
-          description: RAM size for node, minimum size 2048MB is recommended. Ram
-            size must be set to multiple of 1024MB.
-          example: 2048
-          type: integer
-        availabilityZone:
-          description: The availability zone in which the target VM should exist
-          enum:
-          - AUTO
-          - ZONE_1
-          - ZONE_2
-          example: AUTO
-          type: string
-        storageType:
-          description: Hardware type of the volume
-          enum:
-          - HDD
-          - SSD
-          example: HDD
-          type: string
-        storageSize:
-          description: The size of the volume in GB. The size should be greater than
-            10GB.
-          example: 100
-          type: integer
-        k8sVersion:
-          description: The kubernetes version in which a nodepool is running. This
-            imposes restrictions on what kubernetes versions can be run in a cluster's
-            nodepools. Additionally, not all kubernetes versions are viable upgrade
-            targets for all prior versions.
-          example: 1.15.4
-          type: string
-        maintenanceWindow:
-          $ref: '#/components/schemas/KubernetesMaintenanceWindow'
-        autoScaling:
-          $ref: '#/components/schemas/KubernetesAutoScaling'
-        lans:
-          description: array of additional LANs attached to worker nodes
-          items:
-            $ref: '#/components/schemas/KubernetesNodePoolLan'
-          type: array
-        labels:
-          additionalProperties:
-            type: string
-          description: map of labels attached to node pool
-          type: object
-        annotations:
-          additionalProperties:
-            type: string
-          description: map of annotations attached to node pool
-          type: object
-        publicIps:
-          description: Optional array of reserved public IP addresses to be used by
-            the nodes. IPs must be from same location as the data center used for
-            the node pool. The array must contain one extra IP than maximum number
-            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
-            if auto scaling is used) The extra provided IP Will be used during rebuilding
-            of nodes.
-          example:
-          - 81.173.1.2
-          - 82.231.2.5
-          - 92.221.2.4
-          items:
-            type: string
-          type: array
-        availableUpgradeVersions:
-          description: List of available versions for upgrading the node pool
-          example:
-          - 1.16.4
-          - 1.17.7
-          items:
-            type: string
-          type: array
-      required:
-      - availabilityZone
-      - coresCount
-      - cpuFamily
-      - datacenterId
-      - name
-      - nodeCount
-      - ramSize
-      - storageSize
-      - storageType
-      type: object
-    KubernetesNodePoolPropertiesForPost:
-      properties:
-        name:
-          description: A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name
-            must be 63 characters or less and must be empty or begin and end with
-            an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_),
-            dots (.), and alphanumerics between.
-          example: k8s-node-pool
-          type: string
-        datacenterId:
-          description: A valid uuid of the datacenter on which user has access
-          example: 1e072e52-2ed3-492f-b6b6-c6b116907521
-          type: string
-        nodeCount:
-          description: Number of nodes part of the Node Pool
-          example: 2
-          type: integer
-        cpuFamily:
-          description: A valid cpu family name
-          example: AMD_OPTERON
-          type: string
-        coresCount:
-          description: Number of cores for node
-          example: 4
-          type: integer
-        ramSize:
-          description: RAM size for node, minimum size 2048MB is recommended. Ram
-            size must be set to multiple of 1024MB.
-          example: 2048
-          type: integer
-        availabilityZone:
-          description: The availability zone in which the target VM should exist
-          enum:
-          - AUTO
-          - ZONE_1
-          - ZONE_2
-          example: AUTO
-          type: string
-        storageType:
-          description: Hardware type of the volume
-          enum:
-          - HDD
-          - SSD
-          example: HDD
-          type: string
-        storageSize:
-          description: The size of the volume in GB. The size should be greater than
-            10GB.
-          example: 100
-          type: integer
-        k8sVersion:
-          description: The kubernetes version in which a nodepool is running. This
-            imposes restrictions on what kubernetes versions can be run in a cluster's
-            nodepools. Additionally, not all kubernetes versions are viable upgrade
-            targets for all prior versions.
-          example: 1.15.4
-          type: string
-        maintenanceWindow:
-          $ref: '#/components/schemas/KubernetesMaintenanceWindow'
-        autoScaling:
-          $ref: '#/components/schemas/KubernetesAutoScaling'
-        lans:
-          description: array of additional LANs attached to worker nodes
-          items:
-            $ref: '#/components/schemas/KubernetesNodePoolLan'
-          type: array
-        labels:
-          additionalProperties:
-            type: string
-          description: map of labels attached to node pool
-          type: object
-        annotations:
-          additionalProperties:
-            type: string
-          description: map of annotations attached to node pool
-          type: object
-        publicIps:
-          description: Optional array of reserved public IP addresses to be used by
-            the nodes. IPs must be from same location as the data center used for
-            the node pool. The array must contain one extra IP than maximum number
-            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
-            if auto scaling is used) The extra provided IP Will be used during rebuilding
-            of nodes.
-          example:
-          - 81.173.1.2
-          - 82.231.2.5
-          - 92.221.2.4
-          items:
-            type: string
-          type: array
-      required:
-      - availabilityZone
-      - coresCount
-      - cpuFamily
-      - datacenterId
-      - name
-      - nodeCount
-      - ramSize
-      - storageSize
-      - storageType
-      type: object
-    KubernetesNodePoolForPut:
-      example:
-        metadata:
-          createdByUserId: user@example.com
-          createdDate: 2015-12-04T14:34:09.809Z
-          createdBy: user@example.com
-          lastModifiedDate: 2015-12-04T14:34:09.809Z
-          lastModifiedBy: user@example.com
-          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
-          state: AVAILABLE
-          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
-        id: 1e072e52-2ed3-492f-b6b6-c6b116907527
-        href: <RESOURCE-URI>
-        type: nodepool
-        properties:
-          autoScaling:
-            minNodeCount: 1
-            maxNodeCount: 1
-          datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
-          lans:
-          - id: 3
-          - id: 3
-          annotations:
-            key: annotations
-          ramSize: 2048
-          availabilityZone: AUTO
-          k8sVersion: 1.15.4
-          labels:
-            key: labels
-          maintenanceWindow:
-            dayOfTheWeek: Monday
-            time: 13:00:00
-          coresCount: 4
-          storageSize: 100
-          name: k8s-node-pool
-          storageType: HDD
-          nodeCount: 2
-          cpuFamily: AMD_OPTERON
-          publicIps:
-          - 81.173.1.2
-          - 82.231.2.5
-          - 92.221.2.4
-      properties:
-        id:
-          description: The resource's unique identifier.
-          example: 1e072e52-2ed3-492f-b6b6-c6b116907527
-          readOnly: true
-          type: string
-        type:
-          description: The type of object
-          enum:
-          - nodepool
-          readOnly: true
-          type: string
-        href:
-          description: URL to the object representation (absolute path)
-          example: <RESOURCE-URI>
-          format: uri
-          readOnly: true
-          type: string
-        metadata:
-          $ref: '#/components/schemas/DatacenterElementMetadata'
-        properties:
-          $ref: '#/components/schemas/KubernetesNodePoolPropertiesForPut'
-      required:
-      - properties
-      type: object
     KubernetesNodePool:
       example:
         metadata:
@@ -31892,6 +32071,73 @@ components:
           $ref: '#/components/schemas/DatacenterElementMetadata'
         properties:
           $ref: '#/components/schemas/KubernetesNodePoolProperties'
+      required:
+      - properties
+      type: object
+    KubernetesNodePoolForPut:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+        href: <RESOURCE-URI>
+        type: nodepool
+        properties:
+          autoScaling:
+            minNodeCount: 1
+            maxNodeCount: 1
+          datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+          lans:
+          - id: 3
+          - id: 3
+          annotations:
+            key: annotations
+          ramSize: 2048
+          availabilityZone: AUTO
+          k8sVersion: 1.15.4
+          labels:
+            key: labels
+          maintenanceWindow:
+            dayOfTheWeek: Monday
+            time: 13:00:00
+          coresCount: 4
+          storageSize: 100
+          name: k8s-node-pool
+          storageType: HDD
+          nodeCount: 2
+          cpuFamily: AMD_OPTERON
+          publicIps:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
+      properties:
+        id:
+          description: The resource's unique identifier.
+          example: 1e072e52-2ed3-492f-b6b6-c6b116907527
+          readOnly: true
+          type: string
+        type:
+          description: The type of object
+          enum:
+          - nodepool
+          readOnly: true
+          type: string
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        metadata:
+          $ref: '#/components/schemas/DatacenterElementMetadata'
+        properties:
+          $ref: '#/components/schemas/KubernetesNodePoolPropertiesForPut'
       required:
       - properties
       type: object
@@ -32016,6 +32262,7 @@ components:
       type: object
     KubernetesNodeProperties:
       example:
+        privateIP: 192.168.23.2
         name: k8s-node
         publicIP: 192.168.23.2
         k8sVersion: 1.15.4
@@ -32028,6 +32275,10 @@ components:
           description: A valid public IP.
           example: 192.168.23.2
           type: string
+        privateIP:
+          description: A valid private IP.
+          example: 192.168.23.2
+          type: string
         k8sVersion:
           description: The kubernetes version in which a nodepool is running. This
             imposes restrictions on what kubernetes versions can be run in a cluster's
@@ -32038,7 +32289,6 @@ components:
       required:
       - k8sVersion
       - name
-      - publicIP
       type: object
     KubernetesNode:
       example:
@@ -32052,6 +32302,7 @@ components:
         href: <RESOURCE-URI>
         type: node
         properties:
+          privateIP: 192.168.23.2
           name: k8s-node
           publicIP: 192.168.23.2
           k8sVersion: 1.15.4
@@ -32096,6 +32347,7 @@ components:
           href: <RESOURCE-URI>
           type: node
           properties:
+            privateIP: 192.168.23.2
             name: k8s-node
             publicIP: 192.168.23.2
             k8sVersion: 1.15.4
@@ -32109,6 +32361,7 @@ components:
           href: <RESOURCE-URI>
           type: node
           properties:
+            privateIP: 192.168.23.2
             name: k8s-node
             publicIP: 192.168.23.2
             k8sVersion: 1.15.4
