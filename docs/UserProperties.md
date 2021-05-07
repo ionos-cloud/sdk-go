@@ -11,7 +11,6 @@
 |**ForceSecAuth** | Pointer to **bool** | indicates if secure authentication should be forced on the user or not | [optional] |
 |**SecAuthActive** | Pointer to **bool** | indicates if secure authentication is active for the user or not | [optional] |
 |**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) id of the user for a given identity | [optional] |
-|**Password** | Pointer to **string** | User password | [optional] |
 |**Active** | Pointer to **bool** | indicates if the user is active | [optional] |
 
 ## Methods
@@ -207,31 +206,6 @@ SetS3CanonicalUserId sets S3CanonicalUserId field to given value.
 `func (o *UserProperties) HasS3CanonicalUserId() bool`
 
 HasS3CanonicalUserId returns a boolean if a field has been set.
-
-### GetPassword
-
-`func (o *UserProperties) GetPassword() string`
-
-GetPassword returns the Password field if non-nil, zero value otherwise.
-
-### GetPasswordOk
-
-`func (o *UserProperties) GetPasswordOk() (*string, bool)`
-
-GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPassword
-
-`func (o *UserProperties) SetPassword(v string)`
-
-SetPassword sets Password field to given value.
-
-### HasPassword
-
-`func (o *UserProperties) HasPassword() bool`
-
-HasPassword returns a boolean if a field has been set.
 
 ### GetActive
 

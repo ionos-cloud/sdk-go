@@ -1698,7 +1698,7 @@ import (
 )
 
 func main() {
-    user := *openapiclient.NewUser(*openapiclient.NewUserProperties()) // User | User to be created
+    user := *openapiclient.NewUserPost(*openapiclient.NewUserPropertiesPost()) // UserPost | User to be created
     pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
     depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1726,7 +1726,7 @@ Other parameters are passed through a pointer to a apiUmUsersPostRequest struct 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**User**](User.md) | User to be created | |
+| **user** | [**UserPost**](UserPost.md) | User to be created | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
@@ -1771,7 +1771,7 @@ import (
 
 func main() {
     userId := "userId_example" // string | 
-    user := *openapiclient.NewUser(*openapiclient.NewUserProperties()) // User | Modified user
+    user := *openapiclient.NewUserPut(*openapiclient.NewUserPropertiesPut()) // UserPut | Modified user
     pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
     depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
@@ -1803,7 +1803,7 @@ Other parameters are passed through a pointer to a apiUmUsersPutRequest struct v
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**User**](User.md) | Modified user | |
+| **user** | [**UserPut**](UserPut.md) | Modified user | |
 | **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
 | **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |

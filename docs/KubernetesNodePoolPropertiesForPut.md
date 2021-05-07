@@ -5,14 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | **string** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
-|**DatacenterId** | **string** | A valid uuid of the datacenter on which user has access | |
 |**NodeCount** | **int32** | Number of nodes part of the Node Pool | |
-|**CpuFamily** | **string** | A valid cpu family name | |
-|**CoresCount** | **int32** | Number of cores for node | |
-|**RamSize** | **int32** | RAM size for node, minimum size 2048MB is recommended. Ram size must be set to multiple of 1024MB. | |
-|**AvailabilityZone** | **string** | The availability zone in which the target VM should exist | |
-|**StorageType** | **string** | Hardware type of the volume | |
-|**StorageSize** | **int32** | The size of the volume in GB. The size should be greater than 10GB. | |
 |**K8sVersion** | Pointer to **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] |
 |**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
 |**AutoScaling** | Pointer to [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] |
@@ -25,7 +18,7 @@
 
 ### NewKubernetesNodePoolPropertiesForPut
 
-`func NewKubernetesNodePoolPropertiesForPut(name string, datacenterId string, nodeCount int32, cpuFamily string, coresCount int32, ramSize int32, availabilityZone string, storageType string, storageSize int32, ) *KubernetesNodePoolPropertiesForPut`
+`func NewKubernetesNodePoolPropertiesForPut(name string, nodeCount int32, ) *KubernetesNodePoolPropertiesForPut`
 
 NewKubernetesNodePoolPropertiesForPut instantiates a new KubernetesNodePoolPropertiesForPut object
 This constructor will assign default values to properties that have it defined,
@@ -60,26 +53,6 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
-### GetDatacenterId
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetDatacenterId() string`
-
-GetDatacenterId returns the DatacenterId field if non-nil, zero value otherwise.
-
-### GetDatacenterIdOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetDatacenterIdOk() (*string, bool)`
-
-GetDatacenterIdOk returns a tuple with the DatacenterId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDatacenterId
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetDatacenterId(v string)`
-
-SetDatacenterId sets DatacenterId field to given value.
-
-
 ### GetNodeCount
 
 `func (o *KubernetesNodePoolPropertiesForPut) GetNodeCount() int32`
@@ -98,126 +71,6 @@ and a boolean to check if the value has been set.
 `func (o *KubernetesNodePoolPropertiesForPut) SetNodeCount(v int32)`
 
 SetNodeCount sets NodeCount field to given value.
-
-
-### GetCpuFamily
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetCpuFamily() string`
-
-GetCpuFamily returns the CpuFamily field if non-nil, zero value otherwise.
-
-### GetCpuFamilyOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetCpuFamilyOk() (*string, bool)`
-
-GetCpuFamilyOk returns a tuple with the CpuFamily field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCpuFamily
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetCpuFamily(v string)`
-
-SetCpuFamily sets CpuFamily field to given value.
-
-
-### GetCoresCount
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetCoresCount() int32`
-
-GetCoresCount returns the CoresCount field if non-nil, zero value otherwise.
-
-### GetCoresCountOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetCoresCountOk() (*int32, bool)`
-
-GetCoresCountOk returns a tuple with the CoresCount field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCoresCount
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetCoresCount(v int32)`
-
-SetCoresCount sets CoresCount field to given value.
-
-
-### GetRamSize
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetRamSize() int32`
-
-GetRamSize returns the RamSize field if non-nil, zero value otherwise.
-
-### GetRamSizeOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetRamSizeOk() (*int32, bool)`
-
-GetRamSizeOk returns a tuple with the RamSize field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRamSize
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetRamSize(v int32)`
-
-SetRamSize sets RamSize field to given value.
-
-
-### GetAvailabilityZone
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetAvailabilityZone() string`
-
-GetAvailabilityZone returns the AvailabilityZone field if non-nil, zero value otherwise.
-
-### GetAvailabilityZoneOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetAvailabilityZoneOk() (*string, bool)`
-
-GetAvailabilityZoneOk returns a tuple with the AvailabilityZone field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAvailabilityZone
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetAvailabilityZone(v string)`
-
-SetAvailabilityZone sets AvailabilityZone field to given value.
-
-
-### GetStorageType
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetStorageType() string`
-
-GetStorageType returns the StorageType field if non-nil, zero value otherwise.
-
-### GetStorageTypeOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetStorageTypeOk() (*string, bool)`
-
-GetStorageTypeOk returns a tuple with the StorageType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStorageType
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetStorageType(v string)`
-
-SetStorageType sets StorageType field to given value.
-
-
-### GetStorageSize
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetStorageSize() int32`
-
-GetStorageSize returns the StorageSize field if non-nil, zero value otherwise.
-
-### GetStorageSizeOk
-
-`func (o *KubernetesNodePoolPropertiesForPut) GetStorageSizeOk() (*int32, bool)`
-
-GetStorageSizeOk returns a tuple with the StorageSize field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStorageSize
-
-`func (o *KubernetesNodePoolPropertiesForPut) SetStorageSize(v int32)`
-
-SetStorageSize sets StorageSize field to given value.
 
 
 ### GetK8sVersion

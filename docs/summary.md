@@ -126,7 +126,15 @@
 
 * [KubernetesClusterEntities](KubernetesClusterEntities.md)
 
+* [KubernetesClusterForPost](KubernetesClusterForPost.md)
+
+* [KubernetesClusterForPut](KubernetesClusterForPut.md)
+
 * [KubernetesClusterProperties](KubernetesClusterProperties.md)
+
+* [KubernetesClusterPropertiesForPost](KubernetesClusterPropertiesForPost.md)
+
+* [KubernetesClusterPropertiesForPut](KubernetesClusterPropertiesForPut.md)
 
 * [KubernetesClusters](KubernetesClusters.md)
 
@@ -141,6 +149,8 @@
 * [KubernetesNodeMetadata](KubernetesNodeMetadata.md)
 
 * [KubernetesNodePool](KubernetesNodePool.md)
+
+* [KubernetesNodePoolForPost](KubernetesNodePoolForPost.md)
 
 * [KubernetesNodePoolForPut](KubernetesNodePoolForPut.md)
 
@@ -278,7 +288,15 @@
 
 * [UserMetadata](UserMetadata.md)
 
+* [UserPost](UserPost.md)
+
 * [UserProperties](UserProperties.md)
+
+* [UserPropertiesPost](UserPropertiesPost.md)
+
+* [UserPropertiesPut](UserPropertiesPut.md)
+
+* [UserPut](UserPut.md)
 
 * [Users](Users.md)
 
