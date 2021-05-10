@@ -1922,7 +1922,7 @@ func (r ApiDatacentersServersRemoteConsoleGetRequest) XContractNumber(xContractN
 	return r
 }
 
-func (r ApiDatacentersServersRemoteConsoleGetRequest) Execute() (string, *APIResponse, error) {
+func (r ApiDatacentersServersRemoteConsoleGetRequest) Execute() (RemoteConsoleUrl, *APIResponse, error) {
 	return r.ApiService.DatacentersServersRemoteConsoleGetExecute(r)
 }
 
@@ -1945,16 +1945,16 @@ func (a *ServersApiService) DatacentersServersRemoteConsoleGet(ctx _context.Cont
 
 /*
  * Execute executes the request
- * @return string
+ * @return RemoteConsoleUrl
  */
-func (a *ServersApiService) DatacentersServersRemoteConsoleGetExecute(r ApiDatacentersServersRemoteConsoleGetRequest) (string, *APIResponse, error) {
+func (a *ServersApiService) DatacentersServersRemoteConsoleGetExecute(r ApiDatacentersServersRemoteConsoleGetRequest) (RemoteConsoleUrl, *APIResponse, error) {
 	var (
 		localVarHTTPMethod   = _nethttp.MethodGet
 		localVarPostBody     interface{}
 		localVarFormFileName string
 		localVarFileName     string
 		localVarFileBytes    []byte
-		localVarReturnValue  string
+		localVarReturnValue  RemoteConsoleUrl
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "ServersApiService.DatacentersServersRemoteConsoleGet")
@@ -1986,7 +1986,7 @@ func (a *ServersApiService) DatacentersServersRemoteConsoleGetExecute(r ApiDatac
 	}
 
 	// to determine the Accept header
-	localVarHTTPHeaderAccepts := []string{"text"}
+	localVarHTTPHeaderAccepts := []string{"application/json"}
 
 	// set Accept header
 	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)

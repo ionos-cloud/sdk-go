@@ -40,6 +40,8 @@ type GroupProperties struct {
 	CreateFlowLog *bool `json:"createFlowLog,omitempty"`
 	// Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS).
 	AccessAndManageMonitoring *bool `json:"accessAndManageMonitoring,omitempty"`
+	// Privilege for a group to access and manage certificates.
+	AccessAndManageCertificates *bool `json:"accessAndManageCertificates,omitempty"`
 }
 
 
@@ -559,6 +561,49 @@ func (o *GroupProperties) HasAccessAndManageMonitoring() bool {
 }
 
 
+
+// GetAccessAndManageCertificates returns the AccessAndManageCertificates field value
+// If the value is explicit nil, the zero value for bool will be returned
+func (o *GroupProperties) GetAccessAndManageCertificates() *bool {
+	if o == nil {
+		return nil
+	}
+
+
+	return o.AccessAndManageCertificates
+
+}
+
+// GetAccessAndManageCertificatesOk returns a tuple with the AccessAndManageCertificates field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *GroupProperties) GetAccessAndManageCertificatesOk() (*bool, bool) {
+	if o == nil {
+		return nil, false
+	}
+
+
+	return o.AccessAndManageCertificates, true
+}
+
+// SetAccessAndManageCertificates sets field value
+func (o *GroupProperties) SetAccessAndManageCertificates(v bool) {
+
+
+	o.AccessAndManageCertificates = &v
+
+}
+
+// HasAccessAndManageCertificates returns a boolean if a field has been set.
+func (o *GroupProperties) HasAccessAndManageCertificates() bool {
+	if o != nil && o.AccessAndManageCertificates != nil {
+		return true
+	}
+
+	return false
+}
+
+
 func (o GroupProperties) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 
@@ -619,6 +664,11 @@ func (o GroupProperties) MarshalJSON() ([]byte, error) {
 
 	if o.AccessAndManageMonitoring != nil {
 		toSerialize["accessAndManageMonitoring"] = o.AccessAndManageMonitoring
+	}
+	
+
+	if o.AccessAndManageCertificates != nil {
+		toSerialize["accessAndManageCertificates"] = o.AccessAndManageCertificates
 	}
 	
 	return json.Marshal(toSerialize)

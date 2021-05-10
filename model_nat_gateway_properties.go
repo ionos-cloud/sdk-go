@@ -18,8 +18,6 @@ import (
 type NatGatewayProperties struct {
 	// Name of the NAT gateway
 	Name *string `json:"name"`
-	// Description of the NAT gateway
-	Description *string `json:"description,omitempty"`
 	// Collection of public IP addresses of the NAT gateway. Should be customer reserved IP addresses in that location
 	PublicIps *[]string `json:"publicIps"`
 	// Collection of LANs connected to the NAT gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet.
@@ -63,49 +61,6 @@ func (o *NatGatewayProperties) SetName(v string) {
 // HasName returns a boolean if a field has been set.
 func (o *NatGatewayProperties) HasName() bool {
 	if o != nil && o.Name != nil {
-		return true
-	}
-
-	return false
-}
-
-
-
-// GetDescription returns the Description field value
-// If the value is explicit nil, the zero value for string will be returned
-func (o *NatGatewayProperties) GetDescription() *string {
-	if o == nil {
-		return nil
-	}
-
-
-	return o.Description
-
-}
-
-// GetDescriptionOk returns a tuple with the Description field value
-// and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *NatGatewayProperties) GetDescriptionOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-
-
-	return o.Description, true
-}
-
-// SetDescription sets field value
-func (o *NatGatewayProperties) SetDescription(v string) {
-
-
-	o.Description = &v
-
-}
-
-// HasDescription returns a boolean if a field has been set.
-func (o *NatGatewayProperties) HasDescription() bool {
-	if o != nil && o.Description != nil {
 		return true
 	}
 
@@ -204,11 +159,6 @@ func (o NatGatewayProperties) MarshalJSON() ([]byte, error) {
 
 	if o.Name != nil {
 		toSerialize["name"] = o.Name
-	}
-	
-
-	if o.Description != nil {
-		toSerialize["description"] = o.Description
 	}
 	
 

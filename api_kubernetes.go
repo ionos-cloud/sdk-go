@@ -2154,13 +2154,13 @@ func (a *KubernetesApiService) K8sNodepoolsPutExecute(r ApiK8sNodepoolsPutReques
 type ApiK8sPostRequest struct {
 	ctx _context.Context
 	ApiService *KubernetesApiService
-	kubernetesCluster *KubernetesCluster
+	kubernetesCluster *KubernetesClusterForPost
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
 }
 
-func (r ApiK8sPostRequest) KubernetesCluster(kubernetesCluster KubernetesCluster) ApiK8sPostRequest {
+func (r ApiK8sPostRequest) KubernetesCluster(kubernetesCluster KubernetesClusterForPost) ApiK8sPostRequest {
 	r.kubernetesCluster = &kubernetesCluster
 	return r
 }
@@ -2320,13 +2320,13 @@ type ApiK8sPutRequest struct {
 	ctx _context.Context
 	ApiService *KubernetesApiService
 	k8sClusterId string
-	kubernetesCluster *KubernetesCluster
+	kubernetesCluster *KubernetesClusterForPut
 	pretty *bool
 	depth *int32
 	xContractNumber *int32
 }
 
-func (r ApiK8sPutRequest) KubernetesCluster(kubernetesCluster KubernetesCluster) ApiK8sPutRequest {
+func (r ApiK8sPutRequest) KubernetesCluster(kubernetesCluster KubernetesClusterForPut) ApiK8sPutRequest {
 	r.kubernetesCluster = &kubernetesCluster
 	return r
 }

@@ -43,7 +43,7 @@ func (r ApiTemplatesFindByIdRequest) Execute() (Template, *APIResponse, error) {
 }
 
 /*
- * TemplatesFindById Retrieve a Template
+ * TemplatesFindById Retrieve an available template
  * Retrieves the attributes of a given template.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param templateId

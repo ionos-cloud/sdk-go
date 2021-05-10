@@ -24,8 +24,8 @@ type NetworkLoadBalancerProperties struct {
 	Ips *[]string `json:"ips,omitempty"`
 	// Id of the balanced private target LAN. (outbound)
 	TargetLan *int32 `json:"targetLan"`
-	// Collection of gateway IP addresses with subnet mask of the Network Load Balancer. IPs must contains valid subnet mask. If user will not provide any IP then system will gerenrated one IP with /24 subnet.
-	GatewayIps *[]string `json:"gatewayIps,omitempty"`
+	// Collection of private IP addresses with subnet mask of the Network Load Balancer. IPs must contain valid subnet mask. If user will not provide any IP then the system will generate one IP with /24 subnet.
+	LbPrivateIps *[]string `json:"lbPrivateIps,omitempty"`
 }
 
 
@@ -202,41 +202,41 @@ func (o *NetworkLoadBalancerProperties) HasTargetLan() bool {
 
 
 
-// GetGatewayIps returns the GatewayIps field value
+// GetLbPrivateIps returns the LbPrivateIps field value
 // If the value is explicit nil, the zero value for []string will be returned
-func (o *NetworkLoadBalancerProperties) GetGatewayIps() *[]string {
+func (o *NetworkLoadBalancerProperties) GetLbPrivateIps() *[]string {
 	if o == nil {
 		return nil
 	}
 
 
-	return o.GatewayIps
+	return o.LbPrivateIps
 
 }
 
-// GetGatewayIpsOk returns a tuple with the GatewayIps field value
+// GetLbPrivateIpsOk returns a tuple with the LbPrivateIps field value
 // and a boolean to check if the value has been set.
 // NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *NetworkLoadBalancerProperties) GetGatewayIpsOk() (*[]string, bool) {
+func (o *NetworkLoadBalancerProperties) GetLbPrivateIpsOk() (*[]string, bool) {
 	if o == nil {
 		return nil, false
 	}
 
 
-	return o.GatewayIps, true
+	return o.LbPrivateIps, true
 }
 
-// SetGatewayIps sets field value
-func (o *NetworkLoadBalancerProperties) SetGatewayIps(v []string) {
+// SetLbPrivateIps sets field value
+func (o *NetworkLoadBalancerProperties) SetLbPrivateIps(v []string) {
 
 
-	o.GatewayIps = &v
+	o.LbPrivateIps = &v
 
 }
 
-// HasGatewayIps returns a boolean if a field has been set.
-func (o *NetworkLoadBalancerProperties) HasGatewayIps() bool {
-	if o != nil && o.GatewayIps != nil {
+// HasLbPrivateIps returns a boolean if a field has been set.
+func (o *NetworkLoadBalancerProperties) HasLbPrivateIps() bool {
+	if o != nil && o.LbPrivateIps != nil {
 		return true
 	}
 
@@ -267,8 +267,8 @@ func (o NetworkLoadBalancerProperties) MarshalJSON() ([]byte, error) {
 	}
 	
 
-	if o.GatewayIps != nil {
-		toSerialize["gatewayIps"] = o.GatewayIps
+	if o.LbPrivateIps != nil {
+		toSerialize["lbPrivateIps"] = o.LbPrivateIps
 	}
 	
 	return json.Marshal(toSerialize)

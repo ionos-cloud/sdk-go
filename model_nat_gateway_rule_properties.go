@@ -26,7 +26,7 @@ type NatGatewayRuleProperties struct {
 	SourceSubnet *string `json:"sourceSubnet"`
 	// Public IP address of the NAT gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT gateway resource
 	PublicIp *string `json:"publicIp"`
-	// Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. Useful for nat reflection/hairpin. If none is provided, rule will match any address.
+	// Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address.
 	TargetSubnet *string `json:"targetSubnet,omitempty"`
 	TargetPortRange *TargetPortRange `json:"targetPortRange,omitempty"`
 }
