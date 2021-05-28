@@ -9,7 +9,7 @@ info:
     \ are consistent with their concepts and lend well to making the experience smooth\
     \ and intuitive."
   title: CLOUD API
-  version: "6.0"
+  version: 6.0-SDK.1
 servers:
 - url: https://api.ionos.com/cloudapi/v6
 tags:
@@ -332,10 +332,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -1110,10 +1107,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -1688,10 +1682,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2072,10 +2063,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2252,10 +2240,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2342,10 +2327,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2433,10 +2415,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2524,10 +2503,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2614,10 +2590,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -2704,10 +2677,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -3028,10 +2998,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -3561,10 +3528,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -3935,10 +3899,7 @@ paths:
                   type: string
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -4204,10 +4165,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -4699,10 +4657,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -5229,10 +5184,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -6089,10 +6041,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -6695,10 +6644,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -7298,10 +7244,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -7883,10 +7826,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -8433,10 +8373,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -8799,10 +8736,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -9358,10 +9292,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -9914,10 +9845,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -10452,10 +10380,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -11011,10 +10936,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -11570,10 +11492,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -12487,10 +12406,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -13055,10 +12971,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -13554,10 +13467,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -13641,10 +13551,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -14485,10 +14392,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -14976,10 +14880,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -15532,10 +15433,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -16035,10 +15933,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -16383,10 +16278,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -16565,10 +16457,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -16888,10 +16777,7 @@ paths:
           type: integer
       responses:
         "202":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -17482,10 +17368,7 @@ paths:
           type: integer
       responses:
         "200":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -17941,10 +17824,7 @@ paths:
           type: integer
       responses:
         "200":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -18411,10 +18291,7 @@ paths:
           type: integer
       responses:
         "200":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -18844,10 +18721,7 @@ paths:
           type: integer
       responses:
         "200":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -19265,10 +19139,7 @@ paths:
           type: integer
       responses:
         "200":
-          content:
-            application/json:
-              schema:
-                type: object
+          content: {}
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -32518,27 +32389,21 @@ components:
           description: 'Only traffic originating from the respective MAC address is
             allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows all source
             MAC address'
-          enum:
-          - '@Valid MAC address@'
-          - "null"
           example: 00:0a:95:9d:68:16
+          pattern: ^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$
           type: string
         sourceIp:
           description: Only traffic originating from the respective IPv4 address is
             allowed. Value null allows all source IPs
-          enum:
-          - '@Valid IP address@'
-          - "null"
           example: 22.231.113.64
+          pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
           type: string
         targetIp:
           description: In case the target NIC has multiple IP addresses, only traffic
             directed to the respective IP address of the NIC is allowed. Value null
             allows all target IPs
-          enum:
-          - '@Valid IP address@'
-          - "null"
           example: 22.231.113.64
+          pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
           type: string
         icmpCode:
           description: Defines the allowed code (from 0 to 254) if protocol ICMP is
@@ -35242,10 +35107,8 @@ components:
         ip:
           description: IPv4 address of the loadbalancer. All attached NICs will inherit
             this IP. Leaving value null will assign IP automatically
-          enum:
-          - '@Valid IP address@'
-          - "null"
           example: 22.231.113.64
+          pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
           type: string
         dhcp:
           description: Indicates if the loadbalancer will reserve an IP using DHCP
