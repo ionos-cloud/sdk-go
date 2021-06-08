@@ -786,6 +786,7 @@ func strlen(s string) int {
 
 // GenericOpenAPIError Provides access to the body, error and model on returned errors.
 type GenericOpenAPIError struct {
+	statusCode int
 	body  []byte
 	error string
 	model interface{}
@@ -804,4 +805,8 @@ func (e GenericOpenAPIError) Body() []byte {
 // Model returns the unpacked model of the error
 func (e GenericOpenAPIError) Model() interface{} {
 	return e.model
+}
+
+func (e GenericOpenAPIError) StatusCode() int {
+	return e.statusCode
 }
