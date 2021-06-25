@@ -1,4 +1,4 @@
-# Introduction
+# GOLang SDK
 
 ## Overview
 
