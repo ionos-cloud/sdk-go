@@ -31070,6 +31070,16 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
+    S3Bucket:
+      example:
+        name: name
+      properties:
+        name:
+          description: Name of the S3 bucket.
+          type: string
+      required:
+      - name
+      type: object
     KubernetesClusterProperties:
       example:
         maintenanceWindow:
@@ -31079,10 +31089,18 @@ components:
         - 1.17.7
         - 1.18.2
         public: true
+        apiSubnetAllowList:
+        - 1.2.3.4/32
+        - 2002::1234:abcd:ffff:c0a8:101/64
+        - 1.2.3.4
+        - 2002::1234:abcd:ffff:c0a8:101
         name: k8s
         availableUpgradeVersions:
         - 1.16.4
         - 1.17.7
+        s3Buckets:
+        - name: name
+        - name: name
         gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
@@ -31129,6 +31147,25 @@ components:
             mandatory when `public` is set to `false` and should not be provided otherwise.
           example: 192.170.0.1
           type: string
+        apiSubnetAllowList:
+          description: 'Access to the K8s API server is restricted to these CIDRs.
+            Cluster-internal traffic is not affected by this restriction. If no allowlist
+            is specified, access is not restricted. If an IP without subnet mask is
+            provided, the default value will be used: 32 for IPv4 and 128 for IPv6.'
+          example:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
+          items:
+            type: string
+          type: array
+        s3Buckets:
+          description: List of S3 bucket configured for K8s usage. For now it contains
+            only one S3 bucket used to store K8s API audit logs
+          items:
+            $ref: '#/components/schemas/S3Bucket'
+          type: array
       required:
       - name
       type: object
@@ -31246,10 +31283,18 @@ components:
           - 1.17.7
           - 1.18.2
           public: true
+          apiSubnetAllowList:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
           name: k8s
           availableUpgradeVersions:
           - 1.16.4
           - 1.17.7
+          s3Buckets:
+          - name: name
+          - name: name
           gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
@@ -31390,7 +31435,15 @@ components:
             dayOfTheWeek: Monday
             time: 13:00:00
           public: true
+          apiSubnetAllowList:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
           name: k8s
+          s3Buckets:
+          - name: name
+          - name: name
           gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
@@ -31530,7 +31583,15 @@ components:
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
+          apiSubnetAllowList:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
           name: k8s
+          s3Buckets:
+          - name: name
+          - name: name
           k8sVersion: 1.15.4
       properties:
         id:
@@ -31774,10 +31835,18 @@ components:
             - 1.17.7
             - 1.18.2
             public: true
+            apiSubnetAllowList:
+            - 1.2.3.4/32
+            - 2002::1234:abcd:ffff:c0a8:101/64
+            - 1.2.3.4
+            - 2002::1234:abcd:ffff:c0a8:101
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            s3Buckets:
+            - name: name
+            - name: name
             gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
         - metadata:
@@ -31892,10 +31961,18 @@ components:
             - 1.17.7
             - 1.18.2
             public: true
+            apiSubnetAllowList:
+            - 1.2.3.4/32
+            - 2002::1234:abcd:ffff:c0a8:101/64
+            - 1.2.3.4
+            - 2002::1234:abcd:ffff:c0a8:101
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            s3Buckets:
+            - name: name
+            - name: name
             gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
       properties:
@@ -32013,7 +32090,15 @@ components:
           dayOfTheWeek: Monday
           time: 13:00:00
         public: true
+        apiSubnetAllowList:
+        - 1.2.3.4/32
+        - 2002::1234:abcd:ffff:c0a8:101/64
+        - 1.2.3.4
+        - 2002::1234:abcd:ffff:c0a8:101
         name: k8s
+        s3Buckets:
+        - name: name
+        - name: name
         gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
@@ -32043,6 +32128,25 @@ components:
             mandatory when `public` is set to `false` and should not be provided otherwise.
           example: 192.170.0.1
           type: string
+        apiSubnetAllowList:
+          description: 'Access to the K8s API server is restricted to these CIDRs.
+            Cluster-internal traffic is not affected by this restriction. If no allowlist
+            is specified, access is not restricted. If an IP without subnet mask is
+            provided, the default value will be used: 32 for IPv4 and 128 for IPv6.'
+          example:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
+          items:
+            type: string
+          type: array
+        s3Buckets:
+          description: List of S3 bucket configured for K8s usage. For now it contains
+            only one S3 bucket used to store K8s API audit logs
+          items:
+            $ref: '#/components/schemas/S3Bucket'
+          type: array
       required:
       - name
       type: object
@@ -32051,7 +32155,15 @@ components:
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 13:00:00
+        apiSubnetAllowList:
+        - 1.2.3.4/32
+        - 2002::1234:abcd:ffff:c0a8:101/64
+        - 1.2.3.4
+        - 2002::1234:abcd:ffff:c0a8:101
         name: k8s
+        s3Buckets:
+        - name: name
+        - name: name
         k8sVersion: 1.15.4
       properties:
         name:
@@ -32070,6 +32182,25 @@ components:
           type: string
         maintenanceWindow:
           $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        apiSubnetAllowList:
+          description: 'Access to the K8s API server is restricted to these CIDRs.
+            Cluster-internal traffic is not affected by this restriction. If no allowlist
+            is specified, access is not restricted. If an IP without subnet mask is
+            provided, the default value will be used: 32 for IPv4 and 128 for IPv6.'
+          example:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
+          items:
+            type: string
+          type: array
+        s3Buckets:
+          description: List of S3 bucket configured for K8s usage. For now it contains
+            only one S3 bucket used to store K8s API audit logs
+          items:
+            $ref: '#/components/schemas/S3Bucket'
+          type: array
       required:
       - name
       type: object
@@ -32877,6 +33008,8 @@ components:
           example: 3
           format: int32
           type: integer
+      required:
+      - id
       type: object
     KubernetesNodePoolLabel:
       additionalProperties:
