@@ -121,7 +121,7 @@ func NewConfiguration(username string, password string, token string) *Configura
 	cfg := &Configuration{
 		DefaultHeader:    make(map[string]string),
 		DefaultQueryParams: url.Values{},
-		UserAgent:        "ionos-cloud-sdk-node/v6.0.0-beta.2",
+		UserAgent:        "ionos-cloud-sdk-node/v6.0.0-beta.3",
 		Debug:            false,
 		Username:      username,
         Password:      password,
