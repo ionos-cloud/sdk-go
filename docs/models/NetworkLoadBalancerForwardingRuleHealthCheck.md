@@ -5,7 +5,6 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**ClientTimeout** | Pointer to **int32** | ClientTimeout is expressed in milliseconds. This inactivity timeout applies when the client is expected to acknowledge or send data. If unset the default of 50 seconds will be used. | [optional] |
-|**CheckTimeout** | Pointer to **int32** | It specifies the time (in milliseconds) for a target VM in this pool to answer the check. If a target VM has CheckInterval set and CheckTimeout is set too, then the smaller value of the two is used after the TCP connection is established. | [optional] |
 |**ConnectTimeout** | Pointer to **int32** | It specifies the maximum time (in milliseconds) to wait for a connection attempt to a target VM to succeed. If unset, the default of 5 seconds will be used. | [optional] |
 |**TargetTimeout** | Pointer to **int32** | TargetTimeout specifies the maximum inactivity time (in milliseconds) on the target VM side. If unset, the default of 50 seconds will be used. | [optional] |
 |**Retries** | Pointer to **int32** | Retries specifies the number of retries to perform on a target VM after a connection failure. If unset, the default value of 3 will be used. (valid range: [0, 65535]) | [optional] |
@@ -53,31 +52,6 @@ SetClientTimeout sets ClientTimeout field to given value.
 `func (o *NetworkLoadBalancerForwardingRuleHealthCheck) HasClientTimeout() bool`
 
 HasClientTimeout returns a boolean if a field has been set.
-
-### GetCheckTimeout
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetCheckTimeout() int32`
-
-GetCheckTimeout returns the CheckTimeout field if non-nil, zero value otherwise.
-
-### GetCheckTimeoutOk
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetCheckTimeoutOk() (*int32, bool)`
-
-GetCheckTimeoutOk returns a tuple with the CheckTimeout field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCheckTimeout
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) SetCheckTimeout(v int32)`
-
-SetCheckTimeout sets CheckTimeout field to given value.
-
-### HasCheckTimeout
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) HasCheckTimeout() bool`
-
-HasCheckTimeout returns a boolean if a field has been set.
 
 ### GetConnectTimeout
 

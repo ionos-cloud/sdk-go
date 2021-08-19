@@ -11,6 +11,8 @@
 |**ViableNodePoolVersions** | Pointer to **[]string** | List of versions that may be used for node pools under this cluster | [optional] |
 |**Public** | Pointer to **bool** | The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase. | [optional] [default to true]|
 |**GatewayIp** | Pointer to **string** | The IP address of the gateway used by the cluster. This is mandatory when &#x60;public&#x60; is set to &#x60;false&#x60; and should not be provided otherwise. | [optional] |
+|**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Cluster-internal traffic is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6. | [optional] |
+|**S3Buckets** | Pointer to [**[]S3Bucket**](S3Bucket.md) | List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs | [optional] |
 
 ## Methods
 
@@ -200,6 +202,56 @@ SetGatewayIp sets GatewayIp field to given value.
 `func (o *KubernetesClusterProperties) HasGatewayIp() bool`
 
 HasGatewayIp returns a boolean if a field has been set.
+
+### GetApiSubnetAllowList
+
+`func (o *KubernetesClusterProperties) GetApiSubnetAllowList() []string`
+
+GetApiSubnetAllowList returns the ApiSubnetAllowList field if non-nil, zero value otherwise.
+
+### GetApiSubnetAllowListOk
+
+`func (o *KubernetesClusterProperties) GetApiSubnetAllowListOk() (*[]string, bool)`
+
+GetApiSubnetAllowListOk returns a tuple with the ApiSubnetAllowList field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApiSubnetAllowList
+
+`func (o *KubernetesClusterProperties) SetApiSubnetAllowList(v []string)`
+
+SetApiSubnetAllowList sets ApiSubnetAllowList field to given value.
+
+### HasApiSubnetAllowList
+
+`func (o *KubernetesClusterProperties) HasApiSubnetAllowList() bool`
+
+HasApiSubnetAllowList returns a boolean if a field has been set.
+
+### GetS3Buckets
+
+`func (o *KubernetesClusterProperties) GetS3Buckets() []S3Bucket`
+
+GetS3Buckets returns the S3Buckets field if non-nil, zero value otherwise.
+
+### GetS3BucketsOk
+
+`func (o *KubernetesClusterProperties) GetS3BucketsOk() (*[]S3Bucket, bool)`
+
+GetS3BucketsOk returns a tuple with the S3Buckets field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetS3Buckets
+
+`func (o *KubernetesClusterProperties) SetS3Buckets(v []S3Bucket)`
+
+SetS3Buckets sets S3Buckets field to given value.
+
+### HasS3Buckets
+
+`func (o *KubernetesClusterProperties) HasS3Buckets() bool`
+
+HasS3Buckets returns a boolean if a field has been set.
 
 
 

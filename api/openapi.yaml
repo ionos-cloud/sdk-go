@@ -9,7 +9,7 @@ info:
     \ are consistent with their concepts and lend well to making the experience smooth\
     \ and intuitive."
   title: CLOUD API
-  version: 6.0-SDK.1
+  version: 6.0-SDK.3
 servers:
 - url: https://api.ionos.com/cloudapi/v6
 tags:
@@ -28,6 +28,8 @@ tags:
 - name: Load Balancers
 - name: NAT Gateways
 - name: Network Load Balancers
+- name: Application Load Balancers
+- name: Target Groups
 - name: Requests
 - name: Contract Resources
 - name: User Management
@@ -7805,25 +7807,6 @@ paths:
         schema:
           format: int32
           type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
-          type: integer
       responses:
         "202":
           content: {}
@@ -8462,25 +8445,6 @@ paths:
         schema:
           format: int32
           type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
-          type: integer
       responses:
         "200":
           content:
@@ -8992,25 +8956,6 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
-          type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
           type: integer
       requestBody:
         content:
@@ -10637,25 +10582,6 @@ paths:
         schema:
           format: int32
           type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
-          type: integer
       requestBody:
         content:
           application/json:
@@ -11815,6 +11741,2165 @@ paths:
       tags:
       - Network Load Balancers
       x-codegen-request-body-name: networkLoadBalancerForwardingRule
+  /datacenters/{datacenterId}/applicationloadbalancers:
+    get:
+      description: Retrieve a list of Application Load Balancers within the datacenter.
+      operationId: datacentersApplicationloadbalancersGet
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with limit for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with offset
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 1000
+          format: int32
+          maximum: 10000
+          minimum: 1
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancers'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: List Application Load Balancers
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    post:
+      description: Creates an Application Load Balancer within the datacenter.
+      operationId: datacentersApplicationloadbalancersPost
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApplicationLoadBalancer'
+        description: Application Load Balancer to be created
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancer'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Create an Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancer
+  /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}:
+    delete:
+      description: Removes the specified Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersDelete
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "202":
+          content: {}
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Remove an Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    get:
+      description: Retrieves the attributes of a given Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersFindByApplicationLoadBalancerId
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancer'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Retrieve an Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    patch:
+      description: Partially update the attributes of a given Application Load Balancer
+      operationId: datacentersApplicationloadbalancersPatch
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/ApplicationLoadBalancerProperties'
+        description: Application Load Balancer properties to be updated
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancer'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Partially update an Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerProperties
+    put:
+      description: Update the attributes of a given Application Load Balancer
+      operationId: datacentersApplicationloadbalancersPut
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApplicationLoadBalancerPut'
+        description: Modified Application Load Balancer
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancer'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Update an Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancer
+  /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules:
+    get:
+      description: You can retrieve a list of forwarding rules of the Application
+        Load Balancer.
+      operationId: datacentersApplicationloadbalancersForwardingrulesGet
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRules'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: List Application Load Balancer Forwarding Rules
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    post:
+      description: This will add a new forwarding rule to the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersForwardingrulesPost
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
+        description: forwarding rule to add
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Add an Application Load Balancer Forwarding Rule
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerForwardingRule
+  /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId}:
+    delete:
+      description: This will remove a forwarding rule from the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersForwardingrulesDelete
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the forwarding rule
+        in: path
+        name: forwardingRuleId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "202":
+          content: {}
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Remove Forwarding Rule from Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    get:
+      description: This will a forwarding rule of the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the forwarding rule
+        in: path
+        name: forwardingRuleId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Retrieve a Forwarding Rule of the Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    patch:
+      description: You can use to partially update a forwarding rule of an Application
+        Load Balancer.
+      operationId: datacentersApplicationloadbalancersForwardingrulesPatch
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the forwarding rule
+        in: path
+        name: forwardingRuleId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleProperties'
+        description: Properties of a forwarding rule to be updated
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Partially modify a forwarding rule of the Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerForwardingRuleProperties
+    put:
+      description: You can use to update a forwarding rule of the Application Load
+        Balancer.
+      operationId: datacentersApplicationloadbalancersForwardingrulesPut
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the forwarding rule
+        in: path
+        name: forwardingRuleId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRulePut'
+        description: Modified Application Load Balancer Forwarding Rule
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Modify a forwarding rule of the Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerForwardingRule
+  /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs:
+    get:
+      description: You can retrieve a list of Flow Logs of the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersFlowlogsGet
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlowLogs'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: List Application Load Balancer Flow Logs
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    post:
+      description: This will add a new Flow Log to the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersFlowlogsPost
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FlowLog'
+        description: Flow Log to add
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlowLog'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Add a Application Load Balancer Flow Log
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerFlowLog
+  /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId}:
+    delete:
+      description: This will remove a flow log from the application load balancer.
+      operationId: datacentersApplicationloadbalancersFlowlogsDelete
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the flow log
+        in: path
+        name: flowLogId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "202":
+          content: {}
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Remove Flow Log from Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    get:
+      description: This will return a Flow Log of the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersFlowlogsFindByFlowLogId
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Flow Log
+        in: path
+        name: flowLogId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlowLog'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Retrieve a Flow Log of the Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+    patch:
+      description: You can use to partially update a Flow Log of a Application Load
+        Balancer.
+      operationId: datacentersApplicationloadbalancersFlowlogsPatch
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Flow Log
+        in: path
+        name: flowLogId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/FlowLogProperties'
+        description: Properties of a Flow Log to be updated
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlowLog'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Partially modify a Flow Log of the Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerFlowLogProperties
+    put:
+      description: You can use to update a Flow Log of the Application Load Balancer.
+      operationId: datacentersApplicationloadbalancersFlowlogsPut
+      parameters:
+      - description: The unique ID of the datacenter
+        in: path
+        name: datacenterId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Application Load Balancer
+        in: path
+        name: applicationLoadBalancerId
+        required: true
+        schema:
+          type: string
+      - description: The unique ID of the Flow Log
+        in: path
+        name: flowLogId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/FlowLogPut'
+        description: Modified Application Load Balancer Flow Log
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/FlowLog'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Modify a Flow Log of the Application Load Balancer
+      tags:
+      - Application Load Balancers
+      x-prerelease: true
+      x-codegen-request-body-name: applicationLoadBalancerFlowLog
+  /targetgroups:
+    get:
+      description: You can retrieve a list of all Target Groups.
+      operationId: targetgroupsGet
+      parameters:
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TargetGroups'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: List Target Groups
+      tags:
+      - Target Groups
+      x-prerelease: true
+    post:
+      description: This will add a new Target Group.
+      operationId: targetgroupsPost
+      parameters:
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TargetGroup'
+        description: Target Group to add
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TargetGroup'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Add a Target Group
+      tags:
+      - Target Groups
+      x-prerelease: true
+      x-codegen-request-body-name: targetGroup
+  /targetgroups/{targetGroupId}:
+    delete:
+      description: Removes the specified Target Group.
+      operationId: targetGroupsDelete
+      parameters:
+      - description: The unique ID of the Target Group
+        in: path
+        name: targetGroupId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "202":
+          content: {}
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+            Location:
+              description: Callback URL to poll async operation status
+              schema:
+                pattern: https://[apiBaseUri]/requests/[requestId]/status
+                type: string
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Remove a Target Group
+      tags:
+      - Target Groups
+      x-prerelease: true
+    get:
+      description: Retrieves the attributes of a given Target Group.
+      operationId: targetgroupsFindByTargetGroupId
+      parameters:
+      - description: The unique ID of the Target Group
+        in: path
+        name: targetGroupId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      responses:
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TargetGroup'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Retrieve a Target Group
+      tags:
+      - Target Groups
+      x-prerelease: true
+    patch:
+      description: Partially update the attributes of a given Target Group
+      operationId: targetgroupsPatch
+      parameters:
+      - description: The unique ID of the Target Group
+        in: path
+        name: targetGroupId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          '*/*':
+            schema:
+              $ref: '#/components/schemas/TargetGroupProperties'
+        description: Target Group properties to be updated
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TargetGroup'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Partially update a Target Group
+      tags:
+      - Target Groups
+      x-prerelease: true
+      x-codegen-request-body-name: targetGroupProperties
+    put:
+      description: Update the attributes of a given Target Group
+      operationId: targetgroupsPut
+      parameters:
+      - description: The unique ID of the Target Group
+        in: path
+        name: targetGroupId
+        required: true
+        schema:
+          type: string
+      - description: Controls whether response is pretty-printed (with indentation
+          and new lines)
+        in: query
+        name: pretty
+        schema:
+          default: true
+          type: boolean
+      - description: "Controls the details depth of response objects. \nEg. GET /datacenters/[ID]\n\
+          \t- depth=0: only direct properties are included. Children (servers etc.)\
+          \ are not included\n\t- depth=1: direct properties and children references\
+          \ are included\n\t- depth=2: direct properties and children properties are\
+          \ included\n\t- depth=3: direct properties and children properties and children's\
+          \ children are included\n\t- depth=... and so on"
+        in: query
+        name: depth
+        schema:
+          default: 0
+          format: int32
+          maximum: 10
+          minimum: 0
+          type: integer
+      - description: Users having more than 1 contract need to provide contract number,
+          against which all API requests should be executed
+        in: header
+        name: X-Contract-Number
+        schema:
+          format: int32
+          type: integer
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TargetGroupPut'
+        description: Modified Target Group
+        required: true
+      responses:
+        "202":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TargetGroup'
+          description: successful operation
+          headers:
+            X-RateLimit-Remaining:
+              description: 'Number of requests which can still be made without triggering
+                a failure response. '
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Limit:
+              description: Average number of requests allowed per minute
+              schema:
+                format: int32
+                type: integer
+            X-RateLimit-Burst:
+              description: Maximum number of concurrent API requests allowed
+              schema:
+                format: int32
+                type: integer
+        default:
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Error'
+          description: 'Any erroneous status code: 400 (parse error), 401 (auth error),
+            402 (trial access), 403 (insufficient permissions), 404 (not found), 405
+            (unsupported HTTP method), 415 (unsupported content type, 422 (validation
+            error), 429 (request rate limit exceeded), 500 (server error), 503 (maintenance)'
+      security:
+      - Basic Authentication: []
+      - Token Authentication: []
+      summary: Update a Target Group
+      tags:
+      - Target Groups
+      x-prerelease: true
+      x-codegen-request-body-name: targetGroup
   /requests/{requestId}:
     get:
       description: Retrieves the attributes of a given request.
@@ -16098,7 +18183,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/KubernetesNodePool'
+              $ref: '#/components/schemas/KubernetesNodePoolForPut'
         description: Details of the Kubernetes Node Pool
         required: true
       responses:
@@ -16106,7 +18191,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/KubernetesNodePoolForPut'
+                $ref: '#/components/schemas/KubernetesNodePool'
           description: successful operation
           headers:
             X-RateLimit-Remaining:
@@ -16140,7 +18225,7 @@ paths:
       summary: Modify Kubernetes Node Pool
       tags:
       - Kubernetes
-      x-codegen-request-body-name: KubernetesNodePool
+      x-codegen-request-body-name: KubernetesNodePoolForPut
   /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes:
     get:
       description: You can retrieve all nodes of Kubernetes Node Pool.
@@ -16934,25 +19019,6 @@ paths:
         schema:
           format: int32
           type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
-          type: integer
       requestBody:
         content:
           application/json:
@@ -17446,25 +19512,6 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
-          type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
           type: integer
       responses:
         "200":
@@ -17996,25 +20043,6 @@ paths:
         name: X-Contract-Number
         schema:
           format: int32
-          type: integer
-      - description: the first element (of the total list of elements) to include
-          in the response (use together with limit for pagination)
-        in: query
-        name: offset
-        schema:
-          default: 0
-          format: int32
-          minimum: 0
-          type: integer
-      - description: the maximum number of elements to return (use together with offset
-          for pagination)
-        in: query
-        name: limit
-        schema:
-          default: 1000
-          format: int32
-          maximum: 10000
-          minimum: 1
           type: integer
       requestBody:
         content:
@@ -19510,6 +21538,20 @@ components:
       required: true
       schema:
         type: string
+    applicationLoadBalancerId:
+      description: The unique ID of the Application Load Balancer
+      in: path
+      name: applicationLoadBalancerId
+      required: true
+      schema:
+        type: string
+    targetGroupId:
+      description: The unique ID of the Target Group
+      in: path
+      name: targetGroupId
+      required: true
+      schema:
+        type: string
     natGatewayId:
       description: The unique ID of the NAT gateway
       in: path
@@ -19543,6 +21585,17 @@ components:
         default: 1000
         format: int32
         maximum: 10000
+        minimum: 1
+        type: integer
+    limitUser:
+      description: the maximum number of elements to return (use together with <code>offset</code>
+        for pagination)
+      in: query
+      name: limit
+      schema:
+        default: 100
+        format: int32
+        maximum: 100
         minimum: 1
         type: integer
   responses:
@@ -19914,6 +21967,7 @@ components:
           - SSD Standard
           - SSD Premium
           - DAS
+          - ISO
           example: HDD
           type: string
         size:
@@ -19959,6 +22013,7 @@ components:
           enum:
           - VIRTIO
           - IDE
+          - UNKNOWN
           example: VIRTIO
           type: string
         licenceType:
@@ -20362,6 +22417,7 @@ components:
           enum:
           - HDD
           - CDROM
+          - UNKNOWN
           example: HDD
           readOnly: true
           type: string
@@ -21054,12 +23110,11 @@ components:
                   href: <RESOURCE-URI>
                   type: forwarding-rule
                   properties:
-                    protocol: TCP
+                    protocol: HTTP
                     listenerIp: 81.173.1.2
                     healthCheck:
                       retries: 3
                       targetTimeout: 50000
-                      checkTimeout: 2000
                       connectTimeout: 5000
                       clientTimeout: 50
                     name: My Network Load Balancer forwarding rule
@@ -21093,12 +23148,11 @@ components:
                   href: <RESOURCE-URI>
                   type: forwarding-rule
                   properties:
-                    protocol: TCP
+                    protocol: HTTP
                     listenerIp: 81.173.1.2
                     healthCheck:
                       retries: 3
                       targetTimeout: 50000
-                      checkTimeout: 2000
                       connectTimeout: 5000
                       clientTimeout: 50
                     name: My Network Load Balancer forwarding rule
@@ -21212,12 +23266,11 @@ components:
                   href: <RESOURCE-URI>
                   type: forwarding-rule
                   properties:
-                    protocol: TCP
+                    protocol: HTTP
                     listenerIp: 81.173.1.2
                     healthCheck:
                       retries: 3
                       targetTimeout: 50000
-                      checkTimeout: 2000
                       connectTimeout: 5000
                       clientTimeout: 50
                     name: My Network Load Balancer forwarding rule
@@ -21251,12 +23304,11 @@ components:
                   href: <RESOURCE-URI>
                   type: forwarding-rule
                   properties:
-                    protocol: TCP
+                    protocol: HTTP
                     listenerIp: 81.173.1.2
                     healthCheck:
                       retries: 3
                       targetTimeout: 50000
-                      checkTimeout: 2000
                       connectTimeout: 5000
                       clientTimeout: 50
                     name: My Network Load Balancer forwarding rule
@@ -23883,12 +25935,11 @@ components:
                     href: <RESOURCE-URI>
                     type: forwarding-rule
                     properties:
-                      protocol: TCP
+                      protocol: HTTP
                       listenerIp: 81.173.1.2
                       healthCheck:
                         retries: 3
                         targetTimeout: 50000
-                        checkTimeout: 2000
                         connectTimeout: 5000
                         clientTimeout: 50
                       name: My Network Load Balancer forwarding rule
@@ -23922,12 +25973,11 @@ components:
                     href: <RESOURCE-URI>
                     type: forwarding-rule
                     properties:
-                      protocol: TCP
+                      protocol: HTTP
                       listenerIp: 81.173.1.2
                       healthCheck:
                         retries: 3
                         targetTimeout: 50000
-                        checkTimeout: 2000
                         connectTimeout: 5000
                         clientTimeout: 50
                       name: My Network Load Balancer forwarding rule
@@ -24041,12 +26091,11 @@ components:
                     href: <RESOURCE-URI>
                     type: forwarding-rule
                     properties:
-                      protocol: TCP
+                      protocol: HTTP
                       listenerIp: 81.173.1.2
                       healthCheck:
                         retries: 3
                         targetTimeout: 50000
-                        checkTimeout: 2000
                         connectTimeout: 5000
                         clientTimeout: 50
                       name: My Network Load Balancer forwarding rule
@@ -24080,12 +26129,11 @@ components:
                     href: <RESOURCE-URI>
                     type: forwarding-rule
                     properties:
-                      protocol: TCP
+                      protocol: HTTP
                       listenerIp: 81.173.1.2
                       healthCheck:
                         retries: 3
                         targetTimeout: 50000
-                        checkTimeout: 2000
                         connectTimeout: 5000
                         clientTimeout: 50
                       name: My Network Load Balancer forwarding rule
@@ -26693,12 +28741,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -26732,12 +28779,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -26851,12 +28897,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -26890,12 +28935,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -29464,12 +31508,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -29503,12 +31546,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -29622,12 +31664,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -29661,12 +31702,11 @@ components:
                       href: <RESOURCE-URI>
                       type: forwarding-rule
                       properties:
-                        protocol: TCP
+                        protocol: HTTP
                         listenerIp: 81.173.1.2
                         healthCheck:
                           retries: 3
                           targetTimeout: 50000
-                          checkTimeout: 2000
                           connectTimeout: 5000
                           clientTimeout: 50
                         name: My Network Load Balancer forwarding rule
@@ -36923,6 +38963,7 @@ components:
           - SHUTDOWN
           - SHUTOFF
           - CRASHED
+          - SUSPENDED
           example: RUNNING
           readOnly: true
           type: string
@@ -41550,7 +43591,7 @@ components:
         type:
           description: The type of object that has been created
           enum:
-          - backupunit
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -41689,7 +43730,7 @@ components:
         type:
           description: The type of resource within a collection
           enum:
-          - label
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -41810,7 +43851,7 @@ components:
         type:
           description: The type of resource within a collection
           enum:
-          - label
+          - collection
           example: collection
           readOnly: true
           type: string
@@ -41837,6 +43878,16 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
+    S3Bucket:
+      example:
+        name: name
+      properties:
+        name:
+          description: Name of the S3 bucket
+          type: string
+      required:
+      - name
+      type: object
     KubernetesClusterProperties:
       example:
         maintenanceWindow:
@@ -41846,10 +43897,18 @@ components:
         - 1.17.7
         - 1.18.2
         public: true
+        apiSubnetAllowList:
+        - 1.2.3.4/32
+        - 2002::1234:abcd:ffff:c0a8:101/64
+        - 1.2.3.4
+        - 2002::1234:abcd:ffff:c0a8:101
         name: k8s
         availableUpgradeVersions:
         - 1.16.4
         - 1.17.7
+        s3Buckets:
+        - name: name
+        - name: name
         gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
@@ -41896,6 +43955,25 @@ components:
             mandatory when `public` is set to `false` and should not be provided otherwise.
           example: 192.170.0.1
           type: string
+        apiSubnetAllowList:
+          description: 'Access to the K8s API server is restricted to these CIDRs.
+            Cluster-internal traffic is not affected by this restriction. If no allowlist
+            is specified, access is not restricted. If an IP without subnet mask is
+            provided, the default value will be used: 32 for IPv4 and 128 for IPv6.'
+          example:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
+          items:
+            type: string
+          type: array
+        s3Buckets:
+          description: List of S3 bucket configured for K8s usage. For now it contains
+            only an S3 bucket used to store K8s API audit logs
+          items:
+            $ref: '#/components/schemas/S3Bucket'
+          type: array
       required:
       - name
       type: object
@@ -42037,10 +44115,18 @@ components:
           - 1.17.7
           - 1.18.2
           public: true
+          apiSubnetAllowList:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
           name: k8s
           availableUpgradeVersions:
           - 1.16.4
           - 1.17.7
+          s3Buckets:
+          - name: name
+          - name: name
           gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
@@ -42205,7 +44291,15 @@ components:
             dayOfTheWeek: Monday
             time: 13:00:00
           public: true
+          apiSubnetAllowList:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
           name: k8s
+          s3Buckets:
+          - name: name
+          - name: name
           gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
@@ -42369,7 +44463,15 @@ components:
           maintenanceWindow:
             dayOfTheWeek: Monday
             time: 13:00:00
+          apiSubnetAllowList:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
           name: k8s
+          s3Buckets:
+          - name: name
+          - name: name
           k8sVersion: 1.15.4
       properties:
         id:
@@ -42661,10 +44763,18 @@ components:
             - 1.17.7
             - 1.18.2
             public: true
+            apiSubnetAllowList:
+            - 1.2.3.4/32
+            - 2002::1234:abcd:ffff:c0a8:101/64
+            - 1.2.3.4
+            - 2002::1234:abcd:ffff:c0a8:101
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            s3Buckets:
+            - name: name
+            - name: name
             gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
         - metadata:
@@ -42803,10 +44913,18 @@ components:
             - 1.17.7
             - 1.18.2
             public: true
+            apiSubnetAllowList:
+            - 1.2.3.4/32
+            - 2002::1234:abcd:ffff:c0a8:101/64
+            - 1.2.3.4
+            - 2002::1234:abcd:ffff:c0a8:101
             name: k8s
             availableUpgradeVersions:
             - 1.16.4
             - 1.17.7
+            s3Buckets:
+            - name: name
+            - name: name
             gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
       properties:
@@ -42891,7 +45009,15 @@ components:
           dayOfTheWeek: Monday
           time: 13:00:00
         public: true
+        apiSubnetAllowList:
+        - 1.2.3.4/32
+        - 2002::1234:abcd:ffff:c0a8:101/64
+        - 1.2.3.4
+        - 2002::1234:abcd:ffff:c0a8:101
         name: k8s
+        s3Buckets:
+        - name: name
+        - name: name
         gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
@@ -42921,6 +45047,25 @@ components:
             mandatory when `public` is set to `false` and should not be provided otherwise.
           example: 192.170.0.1
           type: string
+        apiSubnetAllowList:
+          description: 'Access to the K8s API server is restricted to these CIDRs.
+            Cluster-internal traffic is not affected by this restriction. If no allowlist
+            is specified, access is not restricted. If an IP without subnet mask is
+            provided, the default value will be used: 32 for IPv4 and 128 for IPv6.'
+          example:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
+          items:
+            type: string
+          type: array
+        s3Buckets:
+          description: List of S3 bucket configured for K8s usage. For now it contains
+            only an S3 bucket used to store K8s API audit logs
+          items:
+            $ref: '#/components/schemas/S3Bucket'
+          type: array
       required:
       - name
       type: object
@@ -42929,7 +45074,15 @@ components:
         maintenanceWindow:
           dayOfTheWeek: Monday
           time: 13:00:00
+        apiSubnetAllowList:
+        - 1.2.3.4/32
+        - 2002::1234:abcd:ffff:c0a8:101/64
+        - 1.2.3.4
+        - 2002::1234:abcd:ffff:c0a8:101
         name: k8s
+        s3Buckets:
+        - name: name
+        - name: name
         k8sVersion: 1.15.4
       properties:
         name:
@@ -42948,6 +45101,25 @@ components:
           type: string
         maintenanceWindow:
           $ref: '#/components/schemas/KubernetesMaintenanceWindow'
+        apiSubnetAllowList:
+          description: 'Access to the K8s API server is restricted to these CIDRs.
+            Cluster-internal traffic is not affected by this restriction. If no allowlist
+            is specified, access is not restricted. If an IP without subnet mask is
+            provided, the default value will be used: 32 for IPv4 and 128 for IPv6.'
+          example:
+          - 1.2.3.4/32
+          - 2002::1234:abcd:ffff:c0a8:101/64
+          - 1.2.3.4
+          - 2002::1234:abcd:ffff:c0a8:101
+          items:
+            type: string
+          type: array
+        s3Buckets:
+          description: List of S3 bucket configured for K8s usage. For now it contains
+            only an S3 bucket used to store K8s API audit logs
+          items:
+            $ref: '#/components/schemas/S3Bucket'
+          type: array
       required:
       - name
       type: object
@@ -43788,6 +45960,8 @@ components:
           items:
             $ref: '#/components/schemas/KubernetesNodePoolLanRoutes'
           type: array
+      required:
+      - id
       type: object
     NatGateway:
       example:
@@ -44746,12 +46920,11 @@ components:
               href: <RESOURCE-URI>
               type: forwarding-rule
               properties:
-                protocol: TCP
+                protocol: HTTP
                 listenerIp: 81.173.1.2
                 healthCheck:
                   retries: 3
                   targetTimeout: 50000
-                  checkTimeout: 2000
                   connectTimeout: 5000
                   clientTimeout: 50
                 name: My Network Load Balancer forwarding rule
@@ -44785,12 +46958,11 @@ components:
               href: <RESOURCE-URI>
               type: forwarding-rule
               properties:
-                protocol: TCP
+                protocol: HTTP
                 listenerIp: 81.173.1.2
                 healthCheck:
                   retries: 3
                   targetTimeout: 50000
-                  checkTimeout: 2000
                   connectTimeout: 5000
                   clientTimeout: 50
                 name: My Network Load Balancer forwarding rule
@@ -44974,12 +47146,11 @@ components:
             href: <RESOURCE-URI>
             type: forwarding-rule
             properties:
-              protocol: TCP
+              protocol: HTTP
               listenerIp: 81.173.1.2
               healthCheck:
                 retries: 3
                 targetTimeout: 50000
-                checkTimeout: 2000
                 connectTimeout: 5000
                 clientTimeout: 50
               name: My Network Load Balancer forwarding rule
@@ -45013,12 +47184,11 @@ components:
             href: <RESOURCE-URI>
             type: forwarding-rule
             properties:
-              protocol: TCP
+              protocol: HTTP
               listenerIp: 81.173.1.2
               healthCheck:
                 retries: 3
                 targetTimeout: 50000
-                checkTimeout: 2000
                 connectTimeout: 5000
                 clientTimeout: 50
               name: My Network Load Balancer forwarding rule
@@ -45136,12 +47306,11 @@ components:
                 href: <RESOURCE-URI>
                 type: forwarding-rule
                 properties:
-                  protocol: TCP
+                  protocol: HTTP
                   listenerIp: 81.173.1.2
                   healthCheck:
                     retries: 3
                     targetTimeout: 50000
-                    checkTimeout: 2000
                     connectTimeout: 5000
                     clientTimeout: 50
                   name: My Network Load Balancer forwarding rule
@@ -45175,12 +47344,11 @@ components:
                 href: <RESOURCE-URI>
                 type: forwarding-rule
                 properties:
-                  protocol: TCP
+                  protocol: HTTP
                   listenerIp: 81.173.1.2
                   healthCheck:
                     retries: 3
                     targetTimeout: 50000
-                    checkTimeout: 2000
                     connectTimeout: 5000
                     clientTimeout: 50
                   name: My Network Load Balancer forwarding rule
@@ -45294,12 +47462,11 @@ components:
                 href: <RESOURCE-URI>
                 type: forwarding-rule
                 properties:
-                  protocol: TCP
+                  protocol: HTTP
                   listenerIp: 81.173.1.2
                   healthCheck:
                     retries: 3
                     targetTimeout: 50000
-                    checkTimeout: 2000
                     connectTimeout: 5000
                     clientTimeout: 50
                   name: My Network Load Balancer forwarding rule
@@ -45333,12 +47500,11 @@ components:
                 href: <RESOURCE-URI>
                 type: forwarding-rule
                 properties:
-                  protocol: TCP
+                  protocol: HTTP
                   listenerIp: 81.173.1.2
                   healthCheck:
                     retries: 3
                     targetTimeout: 50000
-                    checkTimeout: 2000
                     connectTimeout: 5000
                     clientTimeout: 50
                   name: My Network Load Balancer forwarding rule
@@ -45453,6 +47619,748 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
+    ApplicationLoadBalancerProperties:
+      example:
+        lbPrivateIps:
+        - 81.173.1.5/24
+        - 22.231.2.5/24
+        name: My Application Load Balancer
+        listenerLan: 1
+        targetLan: 2
+        ips:
+        - 81.173.1.2
+        - 22.231.2.2
+        - 22.231.2.3
+      properties:
+        name:
+          description: A name of that Application Load Balancer
+          example: My Application Load Balancer
+          type: string
+        listenerLan:
+          description: Id of the listening LAN. (inbound)
+          example: 1
+          type: integer
+        ips:
+          description: Collection of IP addresses of the Application Load Balancer.
+            (inbound and outbound) IP of the listenerLan must be a customer reserved
+            IP for the public load balancer and private IP for the private load balancer.
+          example:
+          - 81.173.1.2
+          - 22.231.2.2
+          - 22.231.2.3
+          items:
+            type: string
+          type: array
+        targetLan:
+          description: Id of the balanced private target LAN. (outbound)
+          example: 2
+          type: integer
+        lbPrivateIps:
+          description: Collection of private IP addresses with subnet mask of the
+            Application Load Balancer. IPs must contain valid subnet mask. If user
+            will not provide any IP then the system will generate one IP with /24
+            subnet.
+          example:
+          - 81.173.1.5/24
+          - 22.231.2.5/24
+          items:
+            type: string
+          type: array
+      required:
+      - listenerLan
+      - name
+      - targetLan
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancerEntities:
+      example:
+        forwardingrules:
+          offset: 0
+          _links:
+            next: <NEXT-PAGE-URI>
+            prev: <PREVIOUS-PAGE-URI>
+            self: <THIS-PAGE-URI>
+          limit: 1000
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: collection
+          items:
+          - metadata:
+              createdByUserId: user@example.com
+              createdDate: 2015-12-04T14:34:09.809Z
+              createdBy: user@example.com
+              lastModifiedDate: 2015-12-04T14:34:09.809Z
+              lastModifiedBy: user@example.com
+              etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+              state: AVAILABLE
+              lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+            id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+            href: <RESOURCE-URI>
+            type: forwarding-rule
+            properties:
+              protocol: HTTP
+              listenerIp: 81.173.1.2
+              healthCheck:
+                clientTimeout: 50
+              name: My Application Load Balancer forwarding rule
+              listenerPort: 8080
+              serverCertificates:
+              - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+              - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+              httpRules:
+              - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                dropQuery: true
+                name: My Application Load Balancer http rule
+                location: www.ionos.com
+                type: FORWARD
+                responseMessage: Application Down
+                conditions:
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                contentType: text/html
+                statusCode: 301
+              - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                dropQuery: true
+                name: My Application Load Balancer http rule
+                location: www.ionos.com
+                type: FORWARD
+                responseMessage: Application Down
+                conditions:
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                contentType: text/html
+                statusCode: 301
+          - metadata:
+              createdByUserId: user@example.com
+              createdDate: 2015-12-04T14:34:09.809Z
+              createdBy: user@example.com
+              lastModifiedDate: 2015-12-04T14:34:09.809Z
+              lastModifiedBy: user@example.com
+              etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+              state: AVAILABLE
+              lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+            id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+            href: <RESOURCE-URI>
+            type: forwarding-rule
+            properties:
+              protocol: HTTP
+              listenerIp: 81.173.1.2
+              healthCheck:
+                clientTimeout: 50
+              name: My Application Load Balancer forwarding rule
+              listenerPort: 8080
+              serverCertificates:
+              - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+              - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+              httpRules:
+              - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                dropQuery: true
+                name: My Application Load Balancer http rule
+                location: www.ionos.com
+                type: FORWARD
+                responseMessage: Application Down
+                conditions:
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                contentType: text/html
+                statusCode: 301
+              - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                dropQuery: true
+                name: My Application Load Balancer http rule
+                location: www.ionos.com
+                type: FORWARD
+                responseMessage: Application Down
+                conditions:
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                - condition: STARTS_WITH
+                  negate: false
+                  type: HEADER
+                  value: Friday
+                  key: forward-at
+                contentType: text/html
+                statusCode: 301
+      properties:
+        forwardingrules:
+          $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRules'
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancer:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        entities:
+          forwardingrules:
+            offset: 0
+            _links:
+              next: <NEXT-PAGE-URI>
+              prev: <PREVIOUS-PAGE-URI>
+              self: <THIS-PAGE-URI>
+            limit: 1000
+            id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+            href: <RESOURCE-URI>
+            type: collection
+            items:
+            - metadata:
+                createdByUserId: user@example.com
+                createdDate: 2015-12-04T14:34:09.809Z
+                createdBy: user@example.com
+                lastModifiedDate: 2015-12-04T14:34:09.809Z
+                lastModifiedBy: user@example.com
+                etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                state: AVAILABLE
+                lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+              id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+              href: <RESOURCE-URI>
+              type: forwarding-rule
+              properties:
+                protocol: HTTP
+                listenerIp: 81.173.1.2
+                healthCheck:
+                  clientTimeout: 50
+                name: My Application Load Balancer forwarding rule
+                listenerPort: 8080
+                serverCertificates:
+                - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+                - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+                httpRules:
+                - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                  dropQuery: true
+                  name: My Application Load Balancer http rule
+                  location: www.ionos.com
+                  type: FORWARD
+                  responseMessage: Application Down
+                  conditions:
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  contentType: text/html
+                  statusCode: 301
+                - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                  dropQuery: true
+                  name: My Application Load Balancer http rule
+                  location: www.ionos.com
+                  type: FORWARD
+                  responseMessage: Application Down
+                  conditions:
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  contentType: text/html
+                  statusCode: 301
+            - metadata:
+                createdByUserId: user@example.com
+                createdDate: 2015-12-04T14:34:09.809Z
+                createdBy: user@example.com
+                lastModifiedDate: 2015-12-04T14:34:09.809Z
+                lastModifiedBy: user@example.com
+                etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                state: AVAILABLE
+                lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+              id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+              href: <RESOURCE-URI>
+              type: forwarding-rule
+              properties:
+                protocol: HTTP
+                listenerIp: 81.173.1.2
+                healthCheck:
+                  clientTimeout: 50
+                name: My Application Load Balancer forwarding rule
+                listenerPort: 8080
+                serverCertificates:
+                - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+                - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+                httpRules:
+                - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                  dropQuery: true
+                  name: My Application Load Balancer http rule
+                  location: www.ionos.com
+                  type: FORWARD
+                  responseMessage: Application Down
+                  conditions:
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  contentType: text/html
+                  statusCode: 301
+                - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                  dropQuery: true
+                  name: My Application Load Balancer http rule
+                  location: www.ionos.com
+                  type: FORWARD
+                  responseMessage: Application Down
+                  conditions:
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  - condition: STARTS_WITH
+                    negate: false
+                    type: HEADER
+                    value: Friday
+                    key: forward-at
+                  contentType: text/html
+                  statusCode: 301
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: applicationloadbalancer
+        properties:
+          lbPrivateIps:
+          - 81.173.1.5/24
+          - 22.231.2.5/24
+          name: My Application Load Balancer
+          listenerLan: 1
+          targetLan: 2
+          ips:
+          - 81.173.1.2
+          - 22.231.2.2
+          - 22.231.2.3
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: applicationloadbalancer
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        metadata:
+          $ref: '#/components/schemas/DatacenterElementMetadata'
+        properties:
+          $ref: '#/components/schemas/ApplicationLoadBalancerProperties'
+        entities:
+          $ref: '#/components/schemas/ApplicationLoadBalancerEntities'
+      required:
+      - properties
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancers:
+      example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: collection
+        items:
+        - metadata:
+            createdByUserId: user@example.com
+            createdDate: 2015-12-04T14:34:09.809Z
+            createdBy: user@example.com
+            lastModifiedDate: 2015-12-04T14:34:09.809Z
+            lastModifiedBy: user@example.com
+            etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+            state: AVAILABLE
+            lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+          entities:
+            forwardingrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
+              id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+              href: <RESOURCE-URI>
+              type: collection
+              items:
+              - metadata:
+                  createdByUserId: user@example.com
+                  createdDate: 2015-12-04T14:34:09.809Z
+                  createdBy: user@example.com
+                  lastModifiedDate: 2015-12-04T14:34:09.809Z
+                  lastModifiedBy: user@example.com
+                  etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                  state: AVAILABLE
+                  lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+                id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+                href: <RESOURCE-URI>
+                type: forwarding-rule
+                properties:
+                  protocol: HTTP
+                  listenerIp: 81.173.1.2
+                  healthCheck:
+                    clientTimeout: 50
+                  name: My Application Load Balancer forwarding rule
+                  listenerPort: 8080
+                  serverCertificates:
+                  - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+                  - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+                  httpRules:
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+              - metadata:
+                  createdByUserId: user@example.com
+                  createdDate: 2015-12-04T14:34:09.809Z
+                  createdBy: user@example.com
+                  lastModifiedDate: 2015-12-04T14:34:09.809Z
+                  lastModifiedBy: user@example.com
+                  etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                  state: AVAILABLE
+                  lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+                id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+                href: <RESOURCE-URI>
+                type: forwarding-rule
+                properties:
+                  protocol: HTTP
+                  listenerIp: 81.173.1.2
+                  healthCheck:
+                    clientTimeout: 50
+                  name: My Application Load Balancer forwarding rule
+                  listenerPort: 8080
+                  serverCertificates:
+                  - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+                  - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+                  httpRules:
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: applicationloadbalancer
+          properties:
+            lbPrivateIps:
+            - 81.173.1.5/24
+            - 22.231.2.5/24
+            name: My Application Load Balancer
+            listenerLan: 1
+            targetLan: 2
+            ips:
+            - 81.173.1.2
+            - 22.231.2.2
+            - 22.231.2.3
+        - metadata:
+            createdByUserId: user@example.com
+            createdDate: 2015-12-04T14:34:09.809Z
+            createdBy: user@example.com
+            lastModifiedDate: 2015-12-04T14:34:09.809Z
+            lastModifiedBy: user@example.com
+            etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+            state: AVAILABLE
+            lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+          entities:
+            forwardingrules:
+              offset: 0
+              _links:
+                next: <NEXT-PAGE-URI>
+                prev: <PREVIOUS-PAGE-URI>
+                self: <THIS-PAGE-URI>
+              limit: 1000
+              id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+              href: <RESOURCE-URI>
+              type: collection
+              items:
+              - metadata:
+                  createdByUserId: user@example.com
+                  createdDate: 2015-12-04T14:34:09.809Z
+                  createdBy: user@example.com
+                  lastModifiedDate: 2015-12-04T14:34:09.809Z
+                  lastModifiedBy: user@example.com
+                  etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                  state: AVAILABLE
+                  lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+                id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+                href: <RESOURCE-URI>
+                type: forwarding-rule
+                properties:
+                  protocol: HTTP
+                  listenerIp: 81.173.1.2
+                  healthCheck:
+                    clientTimeout: 50
+                  name: My Application Load Balancer forwarding rule
+                  listenerPort: 8080
+                  serverCertificates:
+                  - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+                  - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+                  httpRules:
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+              - metadata:
+                  createdByUserId: user@example.com
+                  createdDate: 2015-12-04T14:34:09.809Z
+                  createdBy: user@example.com
+                  lastModifiedDate: 2015-12-04T14:34:09.809Z
+                  lastModifiedBy: user@example.com
+                  etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+                  state: AVAILABLE
+                  lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+                id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+                href: <RESOURCE-URI>
+                type: forwarding-rule
+                properties:
+                  protocol: HTTP
+                  listenerIp: 81.173.1.2
+                  healthCheck:
+                    clientTimeout: 50
+                  name: My Application Load Balancer forwarding rule
+                  listenerPort: 8080
+                  serverCertificates:
+                  - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+                  - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+                  httpRules:
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+                  - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+                    dropQuery: true
+                    name: My Application Load Balancer http rule
+                    location: www.ionos.com
+                    type: FORWARD
+                    responseMessage: Application Down
+                    conditions:
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    - condition: STARTS_WITH
+                      negate: false
+                      type: HEADER
+                      value: Friday
+                      key: forward-at
+                    contentType: text/html
+                    statusCode: 301
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: applicationloadbalancer
+          properties:
+            lbPrivateIps:
+            - 81.173.1.5/24
+            - 22.231.2.5/24
+            name: My Application Load Balancer
+            listenerLan: 1
+            targetLan: 2
+            ips:
+            - 81.173.1.2
+            - 22.231.2.2
+            - 22.231.2.3
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: collection
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        items:
+          description: Array of items in that collection
+          items:
+            $ref: '#/components/schemas/ApplicationLoadBalancer'
+          readOnly: true
+          type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
+      type: object
+      x-prerelease: true
     NetworkLoadBalancerPut:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -45492,6 +48400,46 @@ components:
       required:
       - properties
       type: object
+    ApplicationLoadBalancerPut:
+      example:
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: applicationloadbalancer
+        properties:
+          lbPrivateIps:
+          - 81.173.1.5/24
+          - 22.231.2.5/24
+          name: My Application Load Balancer
+          listenerLan: 1
+          targetLan: 2
+          ips:
+          - 81.173.1.2
+          - 22.231.2.2
+          - 22.231.2.3
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: applicationloadbalancer
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        properties:
+          $ref: '#/components/schemas/ApplicationLoadBalancerProperties'
+      required:
+      - properties
+      type: object
+      x-prerelease: true
     NetworkLoadBalancerForwardingRule:
       example:
         metadata:
@@ -45507,12 +48455,11 @@ components:
         href: <RESOURCE-URI>
         type: forwarding-rule
         properties:
-          protocol: TCP
+          protocol: HTTP
           listenerIp: 81.173.1.2
           healthCheck:
             retries: 3
             targetTimeout: 50000
-            checkTimeout: 2000
             connectTimeout: 5000
             clientTimeout: 50
           name: My Network Load Balancer forwarding rule
@@ -45564,12 +48511,11 @@ components:
         href: <RESOURCE-URI>
         type: forwarding-rule
         properties:
-          protocol: TCP
+          protocol: HTTP
           listenerIp: 81.173.1.2
           healthCheck:
             retries: 3
             targetTimeout: 50000
-            checkTimeout: 2000
             connectTimeout: 5000
             clientTimeout: 50
           name: My Network Load Balancer forwarding rule
@@ -45638,12 +48584,11 @@ components:
           href: <RESOURCE-URI>
           type: forwarding-rule
           properties:
-            protocol: TCP
+            protocol: HTTP
             listenerIp: 81.173.1.2
             healthCheck:
               retries: 3
               targetTimeout: 50000
-              checkTimeout: 2000
               connectTimeout: 5000
               clientTimeout: 50
             name: My Network Load Balancer forwarding rule
@@ -45677,12 +48622,11 @@ components:
           href: <RESOURCE-URI>
           type: forwarding-rule
           properties:
-            protocol: TCP
+            protocol: HTTP
             listenerIp: 81.173.1.2
             healthCheck:
               retries: 3
               targetTimeout: 50000
-              checkTimeout: 2000
               connectTimeout: 5000
               clientTimeout: 50
             name: My Network Load Balancer forwarding rule
@@ -45740,12 +48684,11 @@ components:
       type: object
     NetworkLoadBalancerForwardingRuleProperties:
       example:
-        protocol: TCP
+        protocol: HTTP
         listenerIp: 81.173.1.2
         healthCheck:
           retries: 3
           targetTimeout: 50000
-          checkTimeout: 2000
           connectTimeout: 5000
           clientTimeout: 50
         name: My Network Load Balancer forwarding rule
@@ -45783,8 +48726,9 @@ components:
         protocol:
           description: Protocol of the balancing.
           enum:
+          - HTTP
           - TCP
-          example: TCP
+          example: HTTP
           type: string
         listenerIp:
           description: Listening IP. (inbound)
@@ -45814,7 +48758,6 @@ components:
       example:
         retries: 3
         targetTimeout: 50000
-        checkTimeout: 2000
         connectTimeout: 5000
         clientTimeout: 50
       properties:
@@ -45823,14 +48766,6 @@ components:
             timeout applies when the client is expected to acknowledge or send data.
             If unset the default of 50 seconds will be used.
           example: 50
-          format: int32
-          type: integer
-        checkTimeout:
-          description: It specifies the time (in milliseconds) for a target VM in
-            this pool to answer the check. If a target VM has CheckInterval set and
-            CheckTimeout is set too, then the smaller value of the two is used after
-            the TCP connection is established.
-          example: 2000
           format: int32
           type: integer
         connectTimeout:
@@ -45918,6 +48853,994 @@ components:
             even if it is not.
           type: boolean
       type: object
+    ApplicationLoadBalancerForwardingRule:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: forwarding-rule
+        properties:
+          protocol: HTTP
+          listenerIp: 81.173.1.2
+          healthCheck:
+            clientTimeout: 50
+          name: My Application Load Balancer forwarding rule
+          listenerPort: 8080
+          serverCertificates:
+          - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+          - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+          httpRules:
+          - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+            dropQuery: true
+            name: My Application Load Balancer http rule
+            location: www.ionos.com
+            type: FORWARD
+            responseMessage: Application Down
+            conditions:
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            contentType: text/html
+            statusCode: 301
+          - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+            dropQuery: true
+            name: My Application Load Balancer http rule
+            location: www.ionos.com
+            type: FORWARD
+            responseMessage: Application Down
+            conditions:
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            contentType: text/html
+            statusCode: 301
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: forwarding-rule
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        metadata:
+          $ref: '#/components/schemas/DatacenterElementMetadata'
+        properties:
+          $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleProperties'
+      required:
+      - properties
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancerForwardingRules:
+      example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: collection
+        items:
+        - metadata:
+            createdByUserId: user@example.com
+            createdDate: 2015-12-04T14:34:09.809Z
+            createdBy: user@example.com
+            lastModifiedDate: 2015-12-04T14:34:09.809Z
+            lastModifiedBy: user@example.com
+            etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+            state: AVAILABLE
+            lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: forwarding-rule
+          properties:
+            protocol: HTTP
+            listenerIp: 81.173.1.2
+            healthCheck:
+              clientTimeout: 50
+            name: My Application Load Balancer forwarding rule
+            listenerPort: 8080
+            serverCertificates:
+            - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+            - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+            httpRules:
+            - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+              dropQuery: true
+              name: My Application Load Balancer http rule
+              location: www.ionos.com
+              type: FORWARD
+              responseMessage: Application Down
+              conditions:
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              contentType: text/html
+              statusCode: 301
+            - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+              dropQuery: true
+              name: My Application Load Balancer http rule
+              location: www.ionos.com
+              type: FORWARD
+              responseMessage: Application Down
+              conditions:
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              contentType: text/html
+              statusCode: 301
+        - metadata:
+            createdByUserId: user@example.com
+            createdDate: 2015-12-04T14:34:09.809Z
+            createdBy: user@example.com
+            lastModifiedDate: 2015-12-04T14:34:09.809Z
+            lastModifiedBy: user@example.com
+            etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+            state: AVAILABLE
+            lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: forwarding-rule
+          properties:
+            protocol: HTTP
+            listenerIp: 81.173.1.2
+            healthCheck:
+              clientTimeout: 50
+            name: My Application Load Balancer forwarding rule
+            listenerPort: 8080
+            serverCertificates:
+            - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+            - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+            httpRules:
+            - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+              dropQuery: true
+              name: My Application Load Balancer http rule
+              location: www.ionos.com
+              type: FORWARD
+              responseMessage: Application Down
+              conditions:
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              contentType: text/html
+              statusCode: 301
+            - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+              dropQuery: true
+              name: My Application Load Balancer http rule
+              location: www.ionos.com
+              type: FORWARD
+              responseMessage: Application Down
+              conditions:
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              - condition: STARTS_WITH
+                negate: false
+                type: HEADER
+                value: Friday
+                key: forward-at
+              contentType: text/html
+              statusCode: 301
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: collection
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        items:
+          description: Array of items in that collection
+          items:
+            $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
+          readOnly: true
+          type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancerForwardingRuleProperties:
+      example:
+        protocol: HTTP
+        listenerIp: 81.173.1.2
+        healthCheck:
+          clientTimeout: 50
+        name: My Application Load Balancer forwarding rule
+        listenerPort: 8080
+        serverCertificates:
+        - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+        - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+        httpRules:
+        - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+          dropQuery: true
+          name: My Application Load Balancer http rule
+          location: www.ionos.com
+          type: FORWARD
+          responseMessage: Application Down
+          conditions:
+          - condition: STARTS_WITH
+            negate: false
+            type: HEADER
+            value: Friday
+            key: forward-at
+          - condition: STARTS_WITH
+            negate: false
+            type: HEADER
+            value: Friday
+            key: forward-at
+          contentType: text/html
+          statusCode: 301
+        - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+          dropQuery: true
+          name: My Application Load Balancer http rule
+          location: www.ionos.com
+          type: FORWARD
+          responseMessage: Application Down
+          conditions:
+          - condition: STARTS_WITH
+            negate: false
+            type: HEADER
+            value: Friday
+            key: forward-at
+          - condition: STARTS_WITH
+            negate: false
+            type: HEADER
+            value: Friday
+            key: forward-at
+          contentType: text/html
+          statusCode: 301
+      properties:
+        name:
+          description: A name of that Application Load Balancer forwarding rule
+          example: My Application Load Balancer forwarding rule
+          type: string
+        protocol:
+          description: Protocol of the balancing.
+          enum:
+          - HTTP
+          example: HTTP
+          type: string
+        listenerIp:
+          description: Listening IP. (inbound)
+          example: 81.173.1.2
+          type: string
+        listenerPort:
+          description: 'Listening port number. (inbound) (range: 1 to 65535)'
+          example: 8080
+          format: int32
+          type: integer
+        healthCheck:
+          $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleHealthCheck'
+        serverCertificates:
+          description: Array of items in that collection
+          example:
+          - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+          - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+          items:
+            format: uuid
+            type: string
+          type: array
+        httpRules:
+          description: Array of items in that collection
+          items:
+            $ref: '#/components/schemas/ApplicationLoadBalancerHttpRule'
+          type: array
+      required:
+      - listenerIp
+      - listenerPort
+      - name
+      - protocol
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancerForwardingRuleHealthCheck:
+      example:
+        clientTimeout: 50
+      properties:
+        clientTimeout:
+          description: ClientTimeout is expressed in milliseconds. This inactivity
+            timeout applies when the client is expected to acknowledge or send data.
+            If unset the default of 50 seconds will be used.
+          example: 50
+          format: int32
+          type: integer
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancerHttpRule:
+      example:
+        targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+        dropQuery: true
+        name: My Application Load Balancer http rule
+        location: www.ionos.com
+        type: FORWARD
+        responseMessage: Application Down
+        conditions:
+        - condition: STARTS_WITH
+          negate: false
+          type: HEADER
+          value: Friday
+          key: forward-at
+        - condition: STARTS_WITH
+          negate: false
+          type: HEADER
+          value: Friday
+          key: forward-at
+        contentType: text/html
+        statusCode: 301
+      properties:
+        name:
+          description: The name of a Application Load Balancer http rule; unique per
+            forwarding rule
+          example: My Application Load Balancer http rule
+          type: string
+        type:
+          description: Type of the Http Rule.
+          enum:
+          - FORWARD
+          - STATIC
+          - REDIRECT
+          example: FORWARD
+          type: string
+        targetGroup:
+          description: The UUID of the target group; mandatory and only valid for
+            FORWARD action.
+          example: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+          type: string
+        dropQuery:
+          description: Default is false; valid only for REDIRECT action.
+          example: true
+          type: boolean
+        location:
+          description: The location for redirecting; mandatory and valid only for
+            REDIRECT action.
+          example: www.ionos.com
+          type: string
+        statusCode:
+          description: Valid only for action REDIRECT and STATIC; on REDIRECT action
+            default is 301 and it can take the values 301, 302, 303, 307, 308; on
+            STATIC action default is 503 and it can take a value between 200 and 599
+          enum:
+          - 301
+          - 302
+          - 303
+          - 307
+          - 308
+          - 200
+          - 503
+          - 599
+          example: 301
+          format: int32
+          type: integer
+        responseMessage:
+          description: The response message of the request; mandatory for STATIC action
+          example: Application Down
+          type: string
+        contentType:
+          description: Valid only for action STATIC
+          example: text/html
+          type: string
+        conditions:
+          description: Array of items in that collection
+          items:
+            $ref: '#/components/schemas/ApplicationLoadBalancerHttpRuleCondition'
+          type: array
+      required:
+      - conditions
+      - name
+      - type
+      type: object
+      x-prerelease: true
+    ApplicationLoadBalancerHttpRuleCondition:
+      example:
+        condition: STARTS_WITH
+        negate: false
+        type: HEADER
+        value: Friday
+        key: forward-at
+      properties:
+        type:
+          description: Type of the Http Rule condition.
+          enum:
+          - HEADER
+          - PATH
+          - QUERY
+          - METHOD
+          - HOST
+          - COOKIE
+          - SOURCE_IP
+          example: HEADER
+          type: string
+        condition:
+          description: Matching rule for the Http Rule condition attribute; mandatory
+            for HEADER, PATH, QUERY, METHOD, HOST and COOKIE types; must be null when
+            type is SOURCE_IP.
+          enum:
+          - EXISTS
+          - CONTAINS
+          - EQUALS
+          - MATCHES
+          - STARTS_WITH
+          - ENDS_WITH
+          example: STARTS_WITH
+          type: string
+        negate:
+          description: 'Specifies whether the condition is negated or not; default:
+            false'
+          example: false
+          type: boolean
+        key:
+          description: Must be null when type is PATH, METHOD, HOST or SOURCE_IP.
+            Key can only be set when type is COOKIES, HEADER, QUERY.
+          example: forward-at
+          type: string
+        value:
+          description: Mandatory for conditions CONTAINS, EQUALS, MATCHES, STARTS_WITH,
+            ENDS_WITH; must be null when condition is EXISTS; should be a valid CIDR
+            if provided and if type is SOURCE_IP.
+          example: Friday
+          type: string
+      required:
+      - condition
+      - type
+      type: object
+      x-prerelease: true
+    TargetGroup:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: target-group
+        properties:
+          protocol: HTTP
+          healthCheck:
+            retries: 3
+            targetTimeout: 50000
+            checkTimeout: 2000
+            connectTimeout: 5000
+          name: My Target Group
+          httpHealthCheck:
+            path: /monitoring
+            regex: false
+            method: GET
+            matchType: STATUS_CODE
+            response: "200"
+            negate: false
+          targets:
+          - port: 8080
+            ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
+            weight: 123
+          - port: 8080
+            ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
+            weight: 123
+          algorithm: ROUND_ROBIN
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: target-group
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        metadata:
+          $ref: '#/components/schemas/DatacenterElementMetadata'
+        properties:
+          $ref: '#/components/schemas/TargetGroupProperties'
+      required:
+      - properties
+      type: object
+      x-prerelease: true
+    TargetGroups:
+      example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: collection
+        items:
+        - metadata:
+            createdByUserId: user@example.com
+            createdDate: 2015-12-04T14:34:09.809Z
+            createdBy: user@example.com
+            lastModifiedDate: 2015-12-04T14:34:09.809Z
+            lastModifiedBy: user@example.com
+            etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+            state: AVAILABLE
+            lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: target-group
+          properties:
+            protocol: HTTP
+            healthCheck:
+              retries: 3
+              targetTimeout: 50000
+              checkTimeout: 2000
+              connectTimeout: 5000
+            name: My Target Group
+            httpHealthCheck:
+              path: /monitoring
+              regex: false
+              method: GET
+              matchType: STATUS_CODE
+              response: "200"
+              negate: false
+            targets:
+            - port: 8080
+              ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
+              weight: 123
+            - port: 8080
+              ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
+              weight: 123
+            algorithm: ROUND_ROBIN
+        - metadata:
+            createdByUserId: user@example.com
+            createdDate: 2015-12-04T14:34:09.809Z
+            createdBy: user@example.com
+            lastModifiedDate: 2015-12-04T14:34:09.809Z
+            lastModifiedBy: user@example.com
+            etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+            state: AVAILABLE
+            lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+          id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          href: <RESOURCE-URI>
+          type: target-group
+          properties:
+            protocol: HTTP
+            healthCheck:
+              retries: 3
+              targetTimeout: 50000
+              checkTimeout: 2000
+              connectTimeout: 5000
+            name: My Target Group
+            httpHealthCheck:
+              path: /monitoring
+              regex: false
+              method: GET
+              matchType: STATUS_CODE
+              response: "200"
+              negate: false
+            targets:
+            - port: 8080
+              ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
+              weight: 123
+            - port: 8080
+              ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
+              weight: 123
+            algorithm: ROUND_ROBIN
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: collection
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        items:
+          description: Array of items in that collection
+          items:
+            $ref: '#/components/schemas/TargetGroup'
+          readOnly: true
+          type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
+      type: object
+      x-prerelease: true
+    TargetGroupPut:
+      example:
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: applicationloadbalancer
+        properties:
+          protocol: HTTP
+          healthCheck:
+            retries: 3
+            targetTimeout: 50000
+            checkTimeout: 2000
+            connectTimeout: 5000
+          name: My Target Group
+          httpHealthCheck:
+            path: /monitoring
+            regex: false
+            method: GET
+            matchType: STATUS_CODE
+            response: "200"
+            negate: false
+          targets:
+          - port: 8080
+            ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
+            weight: 123
+          - port: 8080
+            ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
+            weight: 123
+          algorithm: ROUND_ROBIN
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: applicationloadbalancer
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        properties:
+          $ref: '#/components/schemas/TargetGroupProperties'
+      required:
+      - properties
+      type: object
+      x-prerelease: true
+    TargetGroupProperties:
+      example:
+        protocol: HTTP
+        healthCheck:
+          retries: 3
+          targetTimeout: 50000
+          checkTimeout: 2000
+          connectTimeout: 5000
+        name: My Target Group
+        httpHealthCheck:
+          path: /monitoring
+          regex: false
+          method: GET
+          matchType: STATUS_CODE
+          response: "200"
+          negate: false
+        targets:
+        - port: 8080
+          ip: 22.231.2.2
+          healthCheck:
+            checkInterval: 2000
+            check: true
+            maintenance: true
+          weight: 123
+        - port: 8080
+          ip: 22.231.2.2
+          healthCheck:
+            checkInterval: 2000
+            check: true
+            maintenance: true
+          weight: 123
+        algorithm: ROUND_ROBIN
+      properties:
+        name:
+          description: A name of that Target Group
+          example: My Target Group
+          type: string
+        algorithm:
+          description: Algorithm for the balancing.
+          enum:
+          - ROUND_ROBIN
+          - LEAST_CONNECTION
+          - RANDOM
+          - SOURCE_IP
+          example: ROUND_ROBIN
+          type: string
+        protocol:
+          description: Protocol of the balancing.
+          enum:
+          - HTTP
+          example: HTTP
+          type: string
+        targets:
+          description: Array of items in that collection
+          items:
+            $ref: '#/components/schemas/TargetGroupTarget'
+          type: array
+        healthCheck:
+          $ref: '#/components/schemas/TargetGroupHealthCheck'
+        httpHealthCheck:
+          $ref: '#/components/schemas/TargetGroupHttpHealthCheck'
+      required:
+      - algorithm
+      - name
+      - protocol
+      type: object
+      x-prerelease: true
+    TargetGroupHealthCheck:
+      example:
+        retries: 3
+        targetTimeout: 50000
+        checkTimeout: 2000
+        connectTimeout: 5000
+      properties:
+        checkTimeout:
+          description: It specifies the time (in milliseconds) for a target VM in
+            this pool to answer the check. If a target VM has CheckInterval set and
+            CheckTimeout is set too, then the smaller value of the two is used after
+            the TCP connection is established.
+          example: 2000
+          format: int32
+          type: integer
+        connectTimeout:
+          description: It specifies the maximum time (in milliseconds) to wait for
+            a connection attempt to a target VM to succeed. If unset, the default
+            of 5 seconds will be used.
+          example: 5000
+          format: int32
+          type: integer
+        targetTimeout:
+          description: TargetTimeout specifies the maximum inactivity time (in milliseconds)
+            on the target VM side. If unset, the default of 50 seconds will be used.
+          example: 50000
+          format: int32
+          type: integer
+        retries:
+          description: 'Retries specifies the number of retries to perform on a target
+            VM after a connection failure. If unset, the default value of 3 will be
+            used. (valid range: [0, 65535])'
+          example: 3
+          format: int32
+          type: integer
+      type: object
+      x-prerelease: true
+    TargetGroupHttpHealthCheck:
+      example:
+        path: /monitoring
+        regex: false
+        method: GET
+        matchType: STATUS_CODE
+        response: "200"
+        negate: false
+      properties:
+        path:
+          description: 'The path for the HTTP health check; default: /.'
+          example: /monitoring
+          type: string
+        method:
+          description: The method for the HTTP health check.
+          enum:
+          - HEAD
+          - PUT
+          - POST
+          - GET
+          - TRACE
+          - PATCH
+          - OPTIONS
+          example: GET
+          type: string
+        matchType:
+          description: ""
+          enum:
+          - STATUS_CODE
+          - RESPONSE_BODY
+          example: STATUS_CODE
+          type: string
+        response:
+          description: The response returned by the request
+          example: "200"
+          type: string
+        regex:
+          description: ""
+          example: false
+          type: boolean
+        negate:
+          description: ""
+          example: false
+          type: boolean
+      required:
+      - matchType
+      - response
+      type: object
+      x-prerelease: true
+    TargetGroupTarget:
+      example:
+        port: 8080
+        ip: 22.231.2.2
+        healthCheck:
+          checkInterval: 2000
+          check: true
+          maintenance: true
+        weight: 123
+      properties:
+        ip:
+          description: IP of a balanced target VM
+          example: 22.231.2.2
+          type: string
+        port:
+          description: 'Port of the balanced target service. (range: 1 to 65535)'
+          example: 8080
+          format: int32
+          type: integer
+        weight:
+          description: Weight parameter is used to adjust the target VM's weight relative
+            to other target VMs. All target VMs will receive a load proportional to
+            their weight relative to the sum of all weights, so the higher the weight,
+            the higher the load. The default weight is 1, and the maximal value is
+            256. A value of 0 means the target VM will not participate in load-balancing
+            but will still accept persistent connections. If this parameter is used
+            to distribute the load according to target VM's capacity, it is recommended
+            to start with values which can both grow and shrink, for instance between
+            10 and 100 to leave enough room above and below for later adjustments.
+          example: 123
+          format: int32
+          type: integer
+        healthCheck:
+          $ref: '#/components/schemas/TargetGroupTargetHealthCheck'
+      required:
+      - ip
+      - port
+      - weight
+      type: object
+      x-prerelease: true
+    TargetGroupTargetHealthCheck:
+      example:
+        checkInterval: 2000
+        check: true
+        maintenance: true
+      properties:
+        check:
+          description: 'Check specifies whether the target VM''s health is checked.
+            If turned off, a target VM is always considered available. If turned on,
+            the target VM is available when accepting periodic TCP connections, to
+            ensure that it is really able to serve requests. The address and port
+            to send the tests to are those of the target VM. The health check only
+            consists of a connection attempt. If unspecified the default value: true
+            is used.'
+          type: boolean
+        checkInterval:
+          description: CheckInterval determines the duration (in milliseconds) between
+            consecutive health checks. If unspecified a default of 2000 ms is used.
+          example: 2000
+          format: int32
+          type: integer
+        maintenance:
+          description: Maintenance specifies if a target VM should be marked as down,
+            even if it is not.
+          type: boolean
+      type: object
+      x-prerelease: true
     Templates:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -45983,6 +49906,84 @@ components:
           readOnly: true
           type: array
       type: object
+    ApplicationLoadBalancerForwardingRulePut:
+      example:
+        id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+        href: <RESOURCE-URI>
+        type: forwarding-rule
+        properties:
+          protocol: HTTP
+          listenerIp: 81.173.1.2
+          healthCheck:
+            clientTimeout: 50
+          name: My Application Load Balancer forwarding rule
+          listenerPort: 8080
+          serverCertificates:
+          - 3839d24f-57bd-408e-96ee-8da3d2db5a03
+          - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
+          httpRules:
+          - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+            dropQuery: true
+            name: My Application Load Balancer http rule
+            location: www.ionos.com
+            type: FORWARD
+            responseMessage: Application Down
+            conditions:
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            contentType: text/html
+            statusCode: 301
+          - targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
+            dropQuery: true
+            name: My Application Load Balancer http rule
+            location: www.ionos.com
+            type: FORWARD
+            responseMessage: Application Down
+            conditions:
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            - condition: STARTS_WITH
+              negate: false
+              type: HEADER
+              value: Friday
+              key: forward-at
+            contentType: text/html
+            statusCode: 301
+      properties:
+        id:
+          description: The resource's unique identifier
+          example: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
+          readOnly: true
+          type: string
+        type:
+          allOf:
+          - $ref: '#/components/schemas/Type'
+          description: The type of object that has been created
+          example: forwarding-rule
+          type: object
+        href:
+          description: URL to the object representation (absolute path)
+          example: <RESOURCE-URI>
+          format: uri
+          readOnly: true
+          type: string
+        properties:
+          $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleProperties'
+      required:
+      - properties
+      type: object
+      x-prerelease: true
     Template:
       example:
         metadata:
@@ -46114,9 +50115,9 @@ components:
       - forwarding-rule
       - natgateway
       - natgateway-rule
-      - flow-log-nat
-      - flow-log-nlb
       - node
+      - applicationloadbalancer
+      - target-group
       type: string
     PaginationOffsetMandatory:
       description: the offset specified in the request (or, if none was specified,

@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **int32** | The LAN ID of an existing LAN at the related datacenter | [optional] |
+|**Id** | **int32** | The LAN ID of an existing LAN at the related datacenter | |
 |**Dhcp** | Pointer to **bool** | Indicates if the Kubernetes Node Pool LAN will reserve an IP using DHCP | [optional] |
 |**Routes** | Pointer to [**[]KubernetesNodePoolLanRoutes**](KubernetesNodePoolLanRoutes.md) | array of additional LANs attached to worker nodes | [optional] |
 
@@ -12,7 +12,7 @@
 
 ### NewKubernetesNodePoolLan
 
-`func NewKubernetesNodePoolLan() *KubernetesNodePoolLan`
+`func NewKubernetesNodePoolLan(id int32, ) *KubernetesNodePoolLan`
 
 NewKubernetesNodePoolLan instantiates a new KubernetesNodePoolLan object
 This constructor will assign default values to properties that have it defined,
@@ -46,11 +46,6 @@ and a boolean to check if the value has been set.
 
 SetId sets Id field to given value.
 
-### HasId
-
-`func (o *KubernetesNodePoolLan) HasId() bool`
-
-HasId returns a boolean if a field has been set.
 
 ### GetDhcp
 
