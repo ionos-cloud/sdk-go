@@ -10,6 +10,7 @@
 |**AvailabilityZone** | Pointer to **string** | The availability zone in which the volume should exist. The storage volume will be provisioned on as less physical storages as possible but cannot guarantee upfront. It is not available for DAS (Direct Attached Storage) and subject of availability for SSD. | [optional] |
 |**Image** | Pointer to **string** | Image or snapshot ID to be used as template for this volume | [optional] |
 |**ImagePassword** | Pointer to **string** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9 | [optional] |
+|**ImageAlias** | Pointer to **string** |  | [optional] |
 |**SshKeys** | Pointer to **[]string** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional] |
 |**Bus** | Pointer to **string** | The bus type of the volume. Default is VIRTIO | [optional] |
 |**LicenceType** | Pointer to **string** | OS type of this volume | [optional] [readonly] |
@@ -187,6 +188,31 @@ SetImagePassword sets ImagePassword field to given value.
 `func (o *VolumeProperties) HasImagePassword() bool`
 
 HasImagePassword returns a boolean if a field has been set.
+
+### GetImageAlias
+
+`func (o *VolumeProperties) GetImageAlias() string`
+
+GetImageAlias returns the ImageAlias field if non-nil, zero value otherwise.
+
+### GetImageAliasOk
+
+`func (o *VolumeProperties) GetImageAliasOk() (*string, bool)`
+
+GetImageAliasOk returns a tuple with the ImageAlias field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetImageAlias
+
+`func (o *VolumeProperties) SetImageAlias(v string)`
+
+SetImageAlias sets ImageAlias field to given value.
+
+### HasImageAlias
+
+`func (o *VolumeProperties) HasImageAlias() bool`
+
+HasImageAlias returns a boolean if a field has been set.
 
 ### GetSshKeys
 

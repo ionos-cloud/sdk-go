@@ -1,13 +1,11 @@
 openapi: 3.0.1
 info:
-  description: "An enterprise-grade Infrastructure is provided as a Service (IaaS)\
-    \ solution that can be managed through a browser-based \"Data Center Designer\"\
-    \ (DCD) tool or via an easy to use API. \n\nThe API allows you to perform a variety\
-    \ of management tasks such as spinning up additional servers, adding volumes,\
-    \ adjusting networking, and so forth. It is designed to allow users to leverage\
-    \ the same power and flexibility found within the DCD visual tool. Both tools\
-    \ are consistent with their concepts and lend well to making the experience smooth\
-    \ and intuitive."
+  description: "IONOS Enterprise-grade Infrastructure as a Service (IaaS) solutions\
+    \ can be managed through the Cloud API, in addition or as an alternative to the\
+    \ \"Data Center Designer\" (DCD) browser-based tool. \n\n Both methods employ\
+    \ consistent concepts and features, deliver similar power and flexibility, and\
+    \ can be used to perform a multitude of management tasks, including adding servers,\
+    \ volumes, configuring networks, and so on."
   title: CLOUD API
   version: 6.0-SDK.3
 servers:
@@ -111,8 +109,9 @@ paths:
       - /
   /datacenters:
     get:
-      description: You can retrieve a complete list of data centers provisioned under
-        your account
+      description: You can retrieve a list of data centers provisioned under your
+        account. Default list will contain first 100 items. For more items use pagination
+        query parameters
       operationId: datacentersGet
       parameters:
       - description: Controls whether response is pretty-printed (with indentation
@@ -14327,6 +14326,25 @@ paths:
         schema:
           format: int32
           type: integer
+      - description: the first element (of the total list of elements) to include
+          in the response (use together with limit for pagination)
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: the maximum number of elements to return (use together with <code>offset</code>
+          for pagination)
+        in: query
+        name: limit
+        schema:
+          default: 100
+          format: int32
+          maximum: 100
+          minimum: 1
+          type: integer
       responses:
         "200":
           content:
@@ -21646,6 +21664,7 @@ components:
             discVirtioHotPlug: true
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
+            imageAlias: imageAlias
             userData: userData
             cpuHotPlug: true
             ramHotPlug: true
@@ -21680,6 +21699,7 @@ components:
             discVirtioHotPlug: true
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
+            imageAlias: imageAlias
             userData: userData
             cpuHotPlug: true
             ramHotPlug: true
@@ -21936,6 +21956,7 @@ components:
         discVirtioHotPlug: true
         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
         bus: VIRTIO
+        imageAlias: imageAlias
         userData: userData
         cpuHotPlug: true
         ramHotPlug: true
@@ -21995,6 +22016,8 @@ components:
             images only. Not modifiable, forbidden in update requests. Password rules
             allows all characters from a-z, A-Z, 0-9
           example: mypass123
+          type: string
+        imageAlias:
           type: string
         sshKeys:
           description: Public SSH keys are set on the image as authorized keys for
@@ -22101,6 +22124,7 @@ components:
           discVirtioHotPlug: true
           image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
           bus: VIRTIO
+          imageAlias: imageAlias
           userData: userData
           cpuHotPlug: true
           ramHotPlug: true
@@ -23516,6 +23540,7 @@ components:
                     discVirtioHotPlug: true
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
+                    imageAlias: imageAlias
                     userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
@@ -23550,6 +23575,7 @@ components:
                     discVirtioHotPlug: true
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
+                    imageAlias: imageAlias
                     userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
@@ -23969,6 +23995,7 @@ components:
                     discVirtioHotPlug: true
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
+                    imageAlias: imageAlias
                     userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
@@ -24003,6 +24030,7 @@ components:
                     discVirtioHotPlug: true
                     image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                     bus: VIRTIO
+                    imageAlias: imageAlias
                     userData: userData
                     cpuHotPlug: true
                     ramHotPlug: true
@@ -24333,6 +24361,7 @@ components:
               discVirtioHotPlug: true
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
+              imageAlias: imageAlias
               userData: userData
               cpuHotPlug: true
               ramHotPlug: true
@@ -24367,6 +24396,7 @@ components:
               discVirtioHotPlug: true
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
+              imageAlias: imageAlias
               userData: userData
               cpuHotPlug: true
               ramHotPlug: true
@@ -26341,6 +26371,7 @@ components:
                       discVirtioHotPlug: true
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
+                      imageAlias: imageAlias
                       userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
@@ -26375,6 +26406,7 @@ components:
                       discVirtioHotPlug: true
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
+                      imageAlias: imageAlias
                       userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
@@ -26794,6 +26826,7 @@ components:
                       discVirtioHotPlug: true
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
+                      imageAlias: imageAlias
                       userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
@@ -26828,6 +26861,7 @@ components:
                       discVirtioHotPlug: true
                       image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                       bus: VIRTIO
+                      imageAlias: imageAlias
                       userData: userData
                       cpuHotPlug: true
                       ramHotPlug: true
@@ -27158,6 +27192,7 @@ components:
                 discVirtioHotPlug: true
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
+                imageAlias: imageAlias
                 userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
@@ -27192,6 +27227,7 @@ components:
                 discVirtioHotPlug: true
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
+                imageAlias: imageAlias
                 userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
@@ -29147,6 +29183,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -29181,6 +29218,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -29600,6 +29638,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -29634,6 +29673,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -29964,6 +30004,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -29998,6 +30039,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -31914,6 +31956,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -31948,6 +31991,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -32367,6 +32411,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -32401,6 +32446,7 @@ components:
                         discVirtioHotPlug: true
                         image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                         bus: VIRTIO
+                        imageAlias: imageAlias
                         userData: userData
                         cpuHotPlug: true
                         ramHotPlug: true
@@ -32731,6 +32777,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -32765,6 +32812,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -38578,6 +38626,7 @@ components:
               discVirtioHotPlug: true
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
+              imageAlias: imageAlias
               userData: userData
               cpuHotPlug: true
               ramHotPlug: true
@@ -38612,6 +38661,7 @@ components:
               discVirtioHotPlug: true
               image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
               bus: VIRTIO
+              imageAlias: imageAlias
               userData: userData
               cpuHotPlug: true
               ramHotPlug: true
@@ -41434,6 +41484,7 @@ components:
                 discVirtioHotPlug: true
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
+                imageAlias: imageAlias
                 userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
@@ -41468,6 +41519,7 @@ components:
                 discVirtioHotPlug: true
                 image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                 bus: VIRTIO
+                imageAlias: imageAlias
                 userData: userData
                 cpuHotPlug: true
                 ramHotPlug: true
@@ -41926,6 +41978,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -41960,6 +42013,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -42379,6 +42433,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -42413,6 +42468,7 @@ components:
                   discVirtioHotPlug: true
                   image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
                   bus: VIRTIO
+                  imageAlias: imageAlias
                   userData: userData
                   cpuHotPlug: true
                   ramHotPlug: true
@@ -42992,6 +43048,12 @@ components:
       type: object
     Users:
       example:
+        offset: 0
+        _links:
+          next: <NEXT-PAGE-URI>
+          prev: <PREVIOUS-PAGE-URI>
+          self: <THIS-PAGE-URI>
+        limit: 1000
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         href: <RESOURCE-URI>
         type: collection
@@ -43294,6 +43356,16 @@ components:
             $ref: '#/components/schemas/User'
           readOnly: true
           type: array
+        offset:
+          description: the offset (if specified in the request)
+          example: 0
+          type: number
+        limit:
+          description: the limit (if specified in the request)
+          example: 1000
+          type: number
+        _links:
+          $ref: '#/components/schemas/PaginationLinks'
       type: object
     S3Keys:
       example:
@@ -43373,6 +43445,7 @@ components:
             discVirtioHotPlug: true
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
+            imageAlias: imageAlias
             userData: userData
             cpuHotPlug: true
             ramHotPlug: true
@@ -43407,6 +43480,7 @@ components:
             discVirtioHotPlug: true
             image: d6ad1576-fde9-4696-aa41-1ebd75bdaf49
             bus: VIRTIO
+            imageAlias: imageAlias
             userData: userData
             cpuHotPlug: true
             ramHotPlug: true
@@ -43909,7 +43983,6 @@ components:
         s3Buckets:
         - name: name
         - name: name
-        gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
         name:
@@ -43950,11 +44023,6 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
-        gatewayIp:
-          description: The IP address of the gateway used by the cluster. This is
-            mandatory when `public` is set to `false` and should not be provided otherwise.
-          example: 192.170.0.1
-          type: string
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Cluster-internal traffic is not affected by this restriction. If no allowlist
@@ -44028,6 +44096,7 @@ components:
                   dhcp: true
                 annotations:
                   key: annotations
+                gatewayIp: 198.51.100.100
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
@@ -44083,6 +44152,7 @@ components:
                   dhcp: true
                 annotations:
                   key: annotations
+                gatewayIp: 198.51.100.100
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
@@ -44127,7 +44197,6 @@ components:
           s3Buckets:
           - name: name
           - name: name
-          gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
         id:
@@ -44207,6 +44276,7 @@ components:
                   dhcp: true
                 annotations:
                   key: annotations
+                gatewayIp: 198.51.100.100
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
@@ -44262,6 +44332,7 @@ components:
                   dhcp: true
                 annotations:
                   key: annotations
+                gatewayIp: 198.51.100.100
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
@@ -44300,7 +44371,6 @@ components:
           s3Buckets:
           - name: name
           - name: name
-          gatewayIp: 192.170.0.1
           k8sVersion: 1.15.4
       properties:
         id:
@@ -44380,6 +44450,7 @@ components:
                   dhcp: true
                 annotations:
                   key: annotations
+                gatewayIp: 198.51.100.100
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
@@ -44435,6 +44506,7 @@ components:
                   dhcp: true
                 annotations:
                   key: annotations
+                gatewayIp: 198.51.100.100
                 ramSize: 2048
                 availabilityZone: AUTO
                 k8sVersion: 1.15.4
@@ -44541,6 +44613,7 @@ components:
                 dhcp: true
               annotations:
                 key: annotations
+              gatewayIp: 198.51.100.100
               ramSize: 2048
               availabilityZone: AUTO
               k8sVersion: 1.15.4
@@ -44596,6 +44669,7 @@ components:
                 dhcp: true
               annotations:
                 key: annotations
+              gatewayIp: 198.51.100.100
               ramSize: 2048
               availabilityZone: AUTO
               k8sVersion: 1.15.4
@@ -44676,6 +44750,7 @@ components:
                     dhcp: true
                   annotations:
                     key: annotations
+                  gatewayIp: 198.51.100.100
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
@@ -44731,6 +44806,7 @@ components:
                     dhcp: true
                   annotations:
                     key: annotations
+                  gatewayIp: 198.51.100.100
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
@@ -44775,7 +44851,6 @@ components:
             s3Buckets:
             - name: name
             - name: name
-            gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
         - metadata:
             createdByUserId: user@example.com
@@ -44826,6 +44901,7 @@ components:
                     dhcp: true
                   annotations:
                     key: annotations
+                  gatewayIp: 198.51.100.100
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
@@ -44881,6 +44957,7 @@ components:
                     dhcp: true
                   annotations:
                     key: annotations
+                  gatewayIp: 198.51.100.100
                   ramSize: 2048
                   availabilityZone: AUTO
                   k8sVersion: 1.15.4
@@ -44925,7 +45002,6 @@ components:
             s3Buckets:
             - name: name
             - name: name
-            gatewayIp: 192.170.0.1
             k8sVersion: 1.15.4
       properties:
         id:
@@ -45018,7 +45094,6 @@ components:
         s3Buckets:
         - name: name
         - name: name
-        gatewayIp: 192.170.0.1
         k8sVersion: 1.15.4
       properties:
         name:
@@ -45042,11 +45117,6 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
-        gatewayIp:
-          description: The IP address of the gateway used by the cluster. This is
-            mandatory when `public` is set to `false` and should not be provided otherwise.
-          example: 192.170.0.1
-          type: string
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Cluster-internal traffic is not affected by this restriction. If no allowlist
@@ -45146,6 +45216,7 @@ components:
           dhcp: true
         annotations:
           key: annotations
+        gatewayIp: 198.51.100.100
         ramSize: 2048
         availabilityZone: AUTO
         k8sVersion: 1.15.4
@@ -45264,6 +45335,12 @@ components:
           items:
             type: string
           type: array
+        gatewayIp:
+          description: Public IP address for the gateway performing source NAT for
+            the node pool's nodes belonging to a private cluster. Required only if
+            the node pool belongs to a private cluster.
+          example: 198.51.100.100
+          type: string
       required:
       - availabilityZone
       - coresCount
@@ -45365,6 +45442,12 @@ components:
           items:
             type: string
           type: array
+        gatewayIp:
+          description: Public IP address for the gateway performing source NAT for
+            the node pool's nodes belonging to a private cluster. Required only if
+            the node pool belongs to a private cluster.
+          example: 198.51.100.100
+          type: string
       required:
       - availabilityZone
       - coresCount
@@ -45502,6 +45585,7 @@ components:
             dhcp: true
           annotations:
             key: annotations
+          gatewayIp: 198.51.100.100
           ramSize: 2048
           availabilityZone: AUTO
           k8sVersion: 1.15.4
@@ -45686,6 +45770,7 @@ components:
               dhcp: true
             annotations:
               key: annotations
+            gatewayIp: 198.51.100.100
             ramSize: 2048
             availabilityZone: AUTO
             k8sVersion: 1.15.4
@@ -45741,6 +45826,7 @@ components:
               dhcp: true
             annotations:
               key: annotations
+            gatewayIp: 198.51.100.100
             ramSize: 2048
             availabilityZone: AUTO
             k8sVersion: 1.15.4
@@ -49297,7 +49383,6 @@ components:
             $ref: '#/components/schemas/ApplicationLoadBalancerHttpRuleCondition'
           type: array
       required:
-      - conditions
       - name
       - type
       type: object
