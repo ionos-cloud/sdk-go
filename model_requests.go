@@ -26,7 +26,7 @@ type Requests struct {
 	Items *[]Request `json:"items,omitempty"`
 	// the offset specified in the request (or, if none was specified, the default offset of 0)
 	Offset *float32 `json:"offset"`
-	// the limit specified in the request (or, if none was specified, the default limit of 0)
+	// the limit specified in the request (or, if none was specified use the endpoint's default pagination limit)
 	Limit *float32 `json:"limit"`
 	Links *PaginationLinks `json:"_links"`
 }

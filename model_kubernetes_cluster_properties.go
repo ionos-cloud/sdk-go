@@ -27,8 +27,6 @@ type KubernetesClusterProperties struct {
 	ViableNodePoolVersions *[]string `json:"viableNodePoolVersions,omitempty"`
 	// The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase.
 	Public *bool `json:"public,omitempty"`
-	// The IP address of the gateway used by the cluster. This is mandatory when `public` is set to `false` and should not be provided otherwise.
-	GatewayIp *string `json:"gatewayIp,omitempty"`
 	// Access to the K8s API server is restricted to these CIDRs. Cluster-internal traffic is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value will be used: 32 for IPv4 and 128 for IPv6.
 	ApiSubnetAllowList *[]string `json:"apiSubnetAllowList,omitempty"`
 	// List of S3 bucket configured for K8s usage. For now it contains only one S3 bucket used to store K8s API audit logs
@@ -295,49 +293,6 @@ func (o *KubernetesClusterProperties) HasPublic() bool {
 
 
 
-// GetGatewayIp returns the GatewayIp field value
-// If the value is explicit nil, the zero value for string will be returned
-func (o *KubernetesClusterProperties) GetGatewayIp() *string {
-	if o == nil {
-		return nil
-	}
-
-
-	return o.GatewayIp
-
-}
-
-// GetGatewayIpOk returns a tuple with the GatewayIp field value
-// and a boolean to check if the value has been set.
-// NOTE: If the value is an explicit nil, `nil, true` will be returned
-func (o *KubernetesClusterProperties) GetGatewayIpOk() (*string, bool) {
-	if o == nil {
-		return nil, false
-	}
-
-
-	return o.GatewayIp, true
-}
-
-// SetGatewayIp sets field value
-func (o *KubernetesClusterProperties) SetGatewayIp(v string) {
-
-
-	o.GatewayIp = &v
-
-}
-
-// HasGatewayIp returns a boolean if a field has been set.
-func (o *KubernetesClusterProperties) HasGatewayIp() bool {
-	if o != nil && o.GatewayIp != nil {
-		return true
-	}
-
-	return false
-}
-
-
-
 // GetApiSubnetAllowList returns the ApiSubnetAllowList field value
 // If the value is explicit nil, the zero value for []string will be returned
 func (o *KubernetesClusterProperties) GetApiSubnetAllowList() *[]string {
@@ -453,11 +408,6 @@ func (o KubernetesClusterProperties) MarshalJSON() ([]byte, error) {
 
 	if o.Public != nil {
 		toSerialize["public"] = o.Public
-	}
-	
-
-	if o.GatewayIp != nil {
-		toSerialize["gatewayIp"] = o.GatewayIp
 	}
 	
 

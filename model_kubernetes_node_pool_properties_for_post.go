@@ -46,6 +46,8 @@ type KubernetesNodePoolPropertiesForPost struct {
 	Annotations *map[string]string `json:"annotations,omitempty"`
 	// Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes.
 	PublicIps *[]string `json:"publicIps,omitempty"`
+	// Public IP address for the gateway performing source NAT for the node pool's nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster.
+	GatewayIp *string `json:"gatewayIp,omitempty"`
 }
 
 
@@ -737,6 +739,49 @@ func (o *KubernetesNodePoolPropertiesForPost) HasPublicIps() bool {
 }
 
 
+
+// GetGatewayIp returns the GatewayIp field value
+// If the value is explicit nil, the zero value for string will be returned
+func (o *KubernetesNodePoolPropertiesForPost) GetGatewayIp() *string {
+	if o == nil {
+		return nil
+	}
+
+
+	return o.GatewayIp
+
+}
+
+// GetGatewayIpOk returns a tuple with the GatewayIp field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *KubernetesNodePoolPropertiesForPost) GetGatewayIpOk() (*string, bool) {
+	if o == nil {
+		return nil, false
+	}
+
+
+	return o.GatewayIp, true
+}
+
+// SetGatewayIp sets field value
+func (o *KubernetesNodePoolPropertiesForPost) SetGatewayIp(v string) {
+
+
+	o.GatewayIp = &v
+
+}
+
+// HasGatewayIp returns a boolean if a field has been set.
+func (o *KubernetesNodePoolPropertiesForPost) HasGatewayIp() bool {
+	if o != nil && o.GatewayIp != nil {
+		return true
+	}
+
+	return false
+}
+
+
 func (o KubernetesNodePoolPropertiesForPost) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 
@@ -817,6 +862,11 @@ func (o KubernetesNodePoolPropertiesForPost) MarshalJSON() ([]byte, error) {
 
 	if o.PublicIps != nil {
 		toSerialize["publicIps"] = o.PublicIps
+	}
+	
+
+	if o.GatewayIp != nil {
+		toSerialize["gatewayIp"] = o.GatewayIp
 	}
 	
 	return json.Marshal(toSerialize)
