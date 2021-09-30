@@ -20,7 +20,6 @@
 |**Labels** | Pointer to **map[string]string** | map of labels attached to node pool | [optional] |
 |**Annotations** | Pointer to **map[string]string** | map of annotations attached to node pool | [optional] |
 |**PublicIps** | Pointer to **[]string** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional] |
-|**GatewayIp** | Pointer to **string** | Public IP address for the gateway performing source NAT for the node pool&#39;s nodes belonging to a private cluster. Required only if the node pool belongs to a private cluster. | [optional] |
 
 ## Methods
 
@@ -395,31 +394,6 @@ SetPublicIps sets PublicIps field to given value.
 `func (o *KubernetesNodePoolPropertiesForPost) HasPublicIps() bool`
 
 HasPublicIps returns a boolean if a field has been set.
-
-### GetGatewayIp
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetGatewayIp() string`
-
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
-
-### GetGatewayIpOk
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetGatewayIpOk() (*string, bool)`
-
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayIp
-
-`func (o *KubernetesNodePoolPropertiesForPost) SetGatewayIp(v string)`
-
-SetGatewayIp sets GatewayIp field to given value.
-
-### HasGatewayIp
-
-`func (o *KubernetesNodePoolPropertiesForPost) HasGatewayIp() bool`
-
-HasGatewayIp returns a boolean if a field has been set.
 
 
 
