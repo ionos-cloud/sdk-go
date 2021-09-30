@@ -40,13 +40,13 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the datacenter
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the Server
     nicId := "nicId_example" // string | The unique ID of the NIC
     firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
-    pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
-    depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -64,7 +64,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 |**serverId** | **string** | The unique ID of the Server | |
 |**nicId** | **string** | The unique ID of the NIC | |
 |**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
@@ -76,9 +76,9 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 
 ### Return type
 
@@ -118,13 +118,13 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the datacenter
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the Server
     nicId := "nicId_example" // string | The unique ID of the NIC
     firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
-    pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
-    depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -144,7 +144,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 |**serverId** | **string** | The unique ID of the Server | |
 |**nicId** | **string** | The unique ID of the NIC | |
 |**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
@@ -156,9 +156,9 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 
 ### Return type
 
@@ -200,14 +200,14 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the datacenter
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the Server
     nicId := "nicId_example" // string | The unique ID of the NIC
-    pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
-    depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
-    offset := int32(56) // int32 | the first element (of the total list of elements) to include in the response (use together with limit for pagination) (optional) (default to 0)
-    limit := int32(56) // int32 | the maximum number of elements to return (use together with offset for pagination) (optional) (default to 1000)
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
+    offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
+    limit := int32(56) // int32 | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -227,7 +227,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 |**serverId** | **string** | The unique ID of the Server | |
 |**nicId** | **string** | The unique ID of the NIC | |
 
@@ -238,11 +238,11 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
-| **offset** | **int32** | the first element (of the total list of elements) to include in the response (use together with limit for pagination) | [default to 0]|
-| **limit** | **int32** | the maximum number of elements to return (use together with offset for pagination) | [default to 1000]|
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
+| **offset** | **int32** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [default to 0]|
+| **limit** | **int32** | The maximum number of elements to return (use together with offset for pagination). | [default to 1000]|
 
 ### Return type
 
@@ -283,14 +283,14 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the datacenter
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the Server
     nicId := "nicId_example" // string | The unique ID of the NIC
     firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
     firewallrule := *openapiclient.NewFirewallruleProperties("TCP") // FirewallruleProperties | Modified Firewall Rule
-    pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
-    depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -310,7 +310,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 |**serverId** | **string** | The unique ID of the Server | |
 |**nicId** | **string** | The unique ID of the NIC | |
 |**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
@@ -323,9 +323,9 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md) | Modified Firewall Rule | |
-| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 
 ### Return type
 
@@ -366,13 +366,13 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the datacenter
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the server
     nicId := "nicId_example" // string | The unique ID of the NIC
     firewallrule := *openapiclient.NewFirewallRule(*openapiclient.NewFirewallruleProperties("TCP")) // FirewallRule | Firewall Rule to be created
-    pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
-    depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -392,7 +392,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 |**serverId** | **string** | The unique ID of the server | |
 |**nicId** | **string** | The unique ID of the NIC | |
 
@@ -404,9 +404,9 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **firewallrule** | [**FirewallRule**](FirewallRule.md) | Firewall Rule to be created | |
-| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 
 ### Return type
 
@@ -447,14 +447,14 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the datacenter
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the Server
     nicId := "nicId_example" // string | The unique ID of the NIC
     firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
     firewallrule := *openapiclient.NewFirewallRule(*openapiclient.NewFirewallruleProperties("TCP")) // FirewallRule | Modified Firewall Rule
-    pretty := true // bool | Controls whether response is pretty-printed (with indentation and new lines) (optional) (default to true)
-    depth := int32(56) // int32 | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth=0: only direct properties are included. Children (servers etc.) are not included  - depth=1: direct properties and children references are included  - depth=2: direct properties and children properties are included  - depth=3: direct properties and children properties and children's children are included  - depth=... and so on (optional) (default to 0)
-    xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -474,7 +474,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the datacenter | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 |**serverId** | **string** | The unique ID of the Server | |
 |**nicId** | **string** | The unique ID of the NIC | |
 |**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
@@ -487,9 +487,9 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 | **firewallrule** | [**FirewallRule**](FirewallRule.md) | Modified Firewall Rule | |
-| **pretty** | **bool** | Controls whether response is pretty-printed (with indentation and new lines) | [default to true]|
-| **depth** | **int32** | Controls the details depth of response objects.  Eg. GET /datacenters/[ID]  - depth&#x3D;0: only direct properties are included. Children (servers etc.) are not included  - depth&#x3D;1: direct properties and children references are included  - depth&#x3D;2: direct properties and children properties are included  - depth&#x3D;3: direct properties and children properties and children&#39;s children are included  - depth&#x3D;... and so on | [default to 0]|
-| **xContractNumber** | **int32** | Users having more than 1 contract need to provide contract number, against which all API requests should be executed | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 
 ### Return type
 

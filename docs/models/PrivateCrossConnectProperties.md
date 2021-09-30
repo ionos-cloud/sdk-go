@@ -7,7 +7,7 @@
 |**Name** | Pointer to **string** | A name of that resource | [optional] |
 |**Description** | Pointer to **string** | Human readable description | [optional] |
 |**Peers** | Pointer to [**[]Peer**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private cross connect | [optional] [readonly] |
-|**ConnectableDatacenters** | Pointer to [**[]ConnectableDatacenter**](ConnectableDatacenter.md) | Read-Only attribute. Lists datacenters that can be joined to this private cross connect | [optional] [readonly] |
+|**ConnectableDatacenters** | Pointer to [**[]ConnectableDatacenter**](ConnectableDatacenter.md) | Read-Only attribute. Lists data centers that can be joined to this private cross connect | [optional] [readonly] |
 
 ## Methods
 

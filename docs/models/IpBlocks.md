@@ -8,6 +8,9 @@
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
 |**Items** | Pointer to [**[]IpBlock**](IpBlock.md) | Array of items in that collection | [optional] [readonly] |
+|**Offset** | Pointer to **float32** | the offset specified in the request (or, if none was specified, the default offset of 0) | [optional] |
+|**Limit** | Pointer to **float32** | the limit specified in the request (or, if none was specified use the endpoint&#39;s default pagination limit) | [optional] |
+|**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
 
 ## Methods
 
@@ -127,6 +130,81 @@ SetItems sets Items field to given value.
 `func (o *IpBlocks) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetOffset
+
+`func (o *IpBlocks) GetOffset() float32`
+
+GetOffset returns the Offset field if non-nil, zero value otherwise.
+
+### GetOffsetOk
+
+`func (o *IpBlocks) GetOffsetOk() (*float32, bool)`
+
+GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetOffset
+
+`func (o *IpBlocks) SetOffset(v float32)`
+
+SetOffset sets Offset field to given value.
+
+### HasOffset
+
+`func (o *IpBlocks) HasOffset() bool`
+
+HasOffset returns a boolean if a field has been set.
+
+### GetLimit
+
+`func (o *IpBlocks) GetLimit() float32`
+
+GetLimit returns the Limit field if non-nil, zero value otherwise.
+
+### GetLimitOk
+
+`func (o *IpBlocks) GetLimitOk() (*float32, bool)`
+
+GetLimitOk returns a tuple with the Limit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLimit
+
+`func (o *IpBlocks) SetLimit(v float32)`
+
+SetLimit sets Limit field to given value.
+
+### HasLimit
+
+`func (o *IpBlocks) HasLimit() bool`
+
+HasLimit returns a boolean if a field has been set.
+
+### GetLinks
+
+`func (o *IpBlocks) GetLinks() PaginationLinks`
+
+GetLinks returns the Links field if non-nil, zero value otherwise.
+
+### GetLinksOk
+
+`func (o *IpBlocks) GetLinksOk() (*PaginationLinks, bool)`
+
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLinks
+
+`func (o *IpBlocks) SetLinks(v PaginationLinks)`
+
+SetLinks sets Links field to given value.
+
+### HasLinks
+
+`func (o *IpBlocks) HasLinks() bool`
+
+HasLinks returns a boolean if a field has been set.
 
 
 

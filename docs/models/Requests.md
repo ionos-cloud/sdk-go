@@ -9,7 +9,7 @@
 |**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
 |**Items** | Pointer to [**[]Request**](Request.md) | Array of items in that collection | [optional] [readonly] |
 |**Offset** | **float32** | the offset specified in the request (or, if none was specified, the default offset of 0) | |
-|**Limit** | **float32** | the limit specified in the request (or, if none was specified, the default limit of 0) | |
+|**Limit** | **float32** | the limit specified in the request (or, if none was specified use the endpoint&#39;s default pagination limit) | |
 |**Links** | [**PaginationLinks**](PaginationLinks.md) |  | |
 
 ## Methods

@@ -5,7 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | name of the resource | [optional] |
-|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only Data Centers and Snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn&#39;t support multi factor protection at all. | [optional] |
+|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the resource is multi factor protected or not e.g. using two factor protection. Currently only data centers and Snapshots are allowed to be multi factor protected, The value of attribute if null is intentional and it means that the resource doesn&#39;t support multi factor protection at all. | [optional] |
 
 ## Methods
 
