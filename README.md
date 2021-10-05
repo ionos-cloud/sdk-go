@@ -1,4 +1,4 @@
-![CI](https://github.com/ionos-cloud/sdk-resources/workflows/%5B%20CI%20%5D%20CloudApi%20V5%20/%20GO/badge.svg)
+![CI](https://github.com/ionos-cloud/sdk-resources/workflows/%5B%20CI%20%5D%20CloudApi%20V5%20/%20Go/badge.svg)
 [![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
 [![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=alert_status)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
 [![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=bugs)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
