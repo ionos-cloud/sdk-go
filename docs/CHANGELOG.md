@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## v6.0.0-beta.7 (October, 2021)
+
+### Enhancements:
+
+* added support for filter query parameters on **GET** requests: `Filter()`
+* added support for overwriting the host-url value via `IONOS_API_URL` environment variable
+* added `gofmt` check's results
+
 ## v6.0.0-beta.6 (September, 2021)
 
 ### Features:
