@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## 5.1.9 (October, 2021)
+
+### Enhancements:
+
+* improved code in sync with Sonar Cloud requirements:
+  * added global constant `FilterQueryParam`
+  * renamed global constant `FORMAT_STRING` to `FormatStringErr`
+
 ## 5.1.8 (October, 2021)
 
 ### Enhancements:
