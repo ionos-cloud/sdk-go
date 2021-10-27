@@ -50,8 +50,12 @@ const (
 	RequestStatusFailed  = "FAILED"
 	RequestStatusDone    = "DONE"
 
-	Version = "6.0.0-beta.7"
+	Version = "6.0.0-beta.8"
 )
+
+// Constants for APIs
+const FilterQueryParam = "filter.%s"
+const FormatStringErr = "%s %s"
 
 // APIClient manages communication with the CLOUD API API v6.0-SDK.3
 // In most cases there should be only one, shared, APIClient.
