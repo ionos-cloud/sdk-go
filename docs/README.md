@@ -61,7 +61,7 @@ import(
 The username and password or the authentication token can be manually specified when initializing the SDK client:
 
 ```go
-client := ionoscloud.NewAPIClient(ionoscloud.NewConfiguration(username, password, token))
+client := ionoscloud.NewAPIClient(ionoscloud.NewConfiguration(username, password, token, apiUrl))
 ```
 
 Environment variables can also be used; the SDK uses the following variables:
@@ -69,6 +69,7 @@ Environment variables can also be used; the SDK uses the following variables:
 * IONOS\_USERNAME - to specify the username used to login
 * IONOS\_PASSWORD - to specify the password
 * IONOS\_TOKEN - if an authentication token is being used
+* IONOS\_API\_URL - to overwrite the api endpoint: `api.ionos.com` - if it is not set, the default value will be used
 
 In this case, the client configuration must be initialized using `NewConfigurationFromEnv()`
 
