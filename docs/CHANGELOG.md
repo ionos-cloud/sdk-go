@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## v6.0.0-beta.9 (November, 2021)
+
+### Enhancements:
+
+* added support for `maxResults` query parameter on **GET** requests
+
+### Features:
+
+* renamed Apis services: `LansApi` to `LANsApi`
+* renamed `BackupUnitProperties` to `BackupUnit` on `BackupunitsPatch` method 
+
+### Documentation:
+
+* updated descriptions 
+
 ## v6.0.0-beta.8 (October, 2021)
 
 ### Enhancements:
