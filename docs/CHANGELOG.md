@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## 5.1.10 (November, 2021)
+
+### Enhancements:
+
+* added support for `maxResults` query parameter on **GET** requests
+
 ## 5.1.9 (October, 2021)
 
 ### Enhancements:
@@ -27,7 +33,7 @@
 
 ### Documentation:
 
-*changed descriptions
+* changed descriptions
     
 ## 5.1.5 (August, 2021)
 
