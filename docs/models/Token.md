@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Token** | Pointer to **string** | The jwToken for the server | [optional] [readonly] |
+|**Token** | Pointer to **string** | The jwToken for the server. | [optional] [readonly] |
 
 ## Methods
 

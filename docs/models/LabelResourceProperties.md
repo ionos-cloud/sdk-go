@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Key** | Pointer to **string** | A Label Key | [optional] |
-|**Value** | Pointer to **string** | A Label Value | [optional] |
+|**Key** | Pointer to **string** | A label key | [optional] |
+|**Value** | Pointer to **string** | A label value | [optional] |
 
 ## Methods
 

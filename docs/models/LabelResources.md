@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | Unique representation for Label as a collection on a resource. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of resource within a collection | [optional] [readonly] |
-|**Href** | Pointer to **string** | URL to the collection representation (absolute path) | [optional] [readonly] |
-|**Items** | Pointer to [**[]LabelResource**](LabelResource.md) | Array of items in that collection | [optional] [readonly] |
-|**Offset** | Pointer to **float32** | the offset (if specified in the request) | [optional] |
-|**Limit** | Pointer to **float32** | the limit (if specified in the request) | [optional] |
+|**Id** | Pointer to **string** | A unique representation of the label as a resource collection. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
+|**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]LabelResource**](LabelResource.md) | Array of items in that collection. | [optional] [readonly] |
+|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
+|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
 
 ## Methods

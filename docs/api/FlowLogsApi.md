@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersServersNicsFlowlogsDelete**](FlowLogsApi.md#DatacentersServersNicsFlowlogsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Delete a Flow Log|
-|[**DatacentersServersNicsFlowlogsFindById**](FlowLogsApi.md#DatacentersServersNicsFlowlogsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve a Flow Log|
+|[**DatacentersServersNicsFlowlogsDelete**](FlowLogsApi.md#DatacentersServersNicsFlowlogsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Delete Flow Logs|
+|[**DatacentersServersNicsFlowlogsFindById**](FlowLogsApi.md#DatacentersServersNicsFlowlogsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve Flow Logs|
 |[**DatacentersServersNicsFlowlogsGet**](FlowLogsApi.md#DatacentersServersNicsFlowlogsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | List Flow Logs|
-|[**DatacentersServersNicsFlowlogsPatch**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially update a Flow Log|
-|[**DatacentersServersNicsFlowlogsPost**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create a Flow Log|
-|[**DatacentersServersNicsFlowlogsPut**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify a Flow Log|
+|[**DatacentersServersNicsFlowlogsPatch**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially modify Flow Logs|
+|[**DatacentersServersNicsFlowlogsPost**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create Flow Logs|
+|[**DatacentersServersNicsFlowlogsPut**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify Flow Logs|
 
 
 
@@ -22,7 +22,7 @@ var result  = DatacentersServersNicsFlowlogsDelete(ctx, datacenterId, serverId, 
                       .Execute()
 ```
 
-Delete a Flow Log
+Delete Flow Logs
 
 
 
@@ -40,9 +40,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -63,9 +63,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**flowlogId** | **string** | The unique ID of the Flow Log | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**flowlogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -97,7 +97,7 @@ var result FlowLog = DatacentersServersNicsFlowlogsFindById(ctx, datacenterId, s
                       .Execute()
 ```
 
-Retrieve a Flow Log
+Retrieve Flow Logs
 
 
 
@@ -115,9 +115,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -140,9 +140,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**flowlogId** | **string** | The unique ID of the Flow Log | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**flowlogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -194,8 +194,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
@@ -220,8 +220,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -256,7 +256,7 @@ var result FlowLog = DatacentersServersNicsFlowlogsPatch(ctx, datacenterId, serv
                       .Execute()
 ```
 
-Partially update a Flow Log
+Partially modify Flow Logs
 
 
 
@@ -274,10 +274,10 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log
-    flowlog := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | Modified Flow Log
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log.
+    flowlog := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | The Flow Log record to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -300,9 +300,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**flowlogId** | **string** | The unique ID of the Flow Log | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**flowlogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -311,7 +311,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFlow
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **flowlog** | [**FlowLogProperties**](FlowLogProperties.md) | Modified Flow Log | |
+| **flowlog** | [**FlowLogProperties**](FlowLogProperties.md) | The Flow Log record to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 
@@ -336,7 +336,7 @@ var result FlowLog = DatacentersServersNicsFlowlogsPost(ctx, datacenterId, serve
                       .Execute()
 ```
 
-Create a Flow Log
+Create Flow Logs
 
 
 
@@ -354,9 +354,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    flowlog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | Flow Log to be created
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    flowlog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | The Flow Log to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -379,8 +379,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -389,7 +389,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFlow
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **flowlog** | [**FlowLog**](FlowLog.md) | Flow Log to be created | |
+| **flowlog** | [**FlowLog**](FlowLog.md) | The Flow Log to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 
@@ -414,7 +414,7 @@ var result FlowLog = DatacentersServersNicsFlowlogsPut(ctx, datacenterId, server
                       .Execute()
 ```
 
-Modify a Flow Log
+Modify Flow Logs
 
 
 
@@ -432,10 +432,10 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log
-    flowlog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | Modified Flow Log
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log.
+    flowlog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | The modified Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -458,9 +458,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**flowlogId** | **string** | The unique ID of the Flow Log | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**flowlogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -469,7 +469,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFlow
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **flowlog** | [**FlowLogPut**](FlowLogPut.md) | Modified Flow Log | |
+| **flowlog** | [**FlowLogPut**](FlowLogPut.md) | The modified Flow Log. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 

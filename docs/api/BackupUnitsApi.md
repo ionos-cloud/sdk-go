@@ -4,13 +4,13 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**BackupunitsDelete**](BackupUnitsApi.md#BackupunitsDelete) | **Delete** /backupunits/{backupunitId} | Delete a Backup Unit|
-|[**BackupunitsFindById**](BackupUnitsApi.md#BackupunitsFindById) | **Get** /backupunits/{backupunitId} | Returns the specified Backup Unit|
-|[**BackupunitsGet**](BackupUnitsApi.md#BackupunitsGet) | **Get** /backupunits | List Backup Units|
-|[**BackupunitsPatch**](BackupUnitsApi.md#BackupunitsPatch) | **Patch** /backupunits/{backupunitId} | Partially modify a Backup Unit|
-|[**BackupunitsPost**](BackupUnitsApi.md#BackupunitsPost) | **Post** /backupunits | Create a Backup Unit|
-|[**BackupunitsPut**](BackupUnitsApi.md#BackupunitsPut) | **Put** /backupunits/{backupunitId} | Modify a Backup Unit|
-|[**BackupunitsSsourlGet**](BackupUnitsApi.md#BackupunitsSsourlGet) | **Get** /backupunits/{backupunitId}/ssourl | Returns a single signon URL for the specified Backup Unit|
+|[**BackupunitsDelete**](BackupUnitsApi.md#BackupunitsDelete) | **Delete** /backupunits/{backupunitId} | Delete backup units|
+|[**BackupunitsFindById**](BackupUnitsApi.md#BackupunitsFindById) | **Get** /backupunits/{backupunitId} | Retrieve backup units|
+|[**BackupunitsGet**](BackupUnitsApi.md#BackupunitsGet) | **Get** /backupunits | List backup units|
+|[**BackupunitsPatch**](BackupUnitsApi.md#BackupunitsPatch) | **Patch** /backupunits/{backupunitId} | Partially modify backup units|
+|[**BackupunitsPost**](BackupUnitsApi.md#BackupunitsPost) | **Post** /backupunits | Create backup units|
+|[**BackupunitsPut**](BackupUnitsApi.md#BackupunitsPut) | **Put** /backupunits/{backupunitId} | Modify backup units|
+|[**BackupunitsSsourlGet**](BackupUnitsApi.md#BackupunitsSsourlGet) | **Get** /backupunits/{backupunitId}/ssourl | Retrieve BU single sign-on URLs|
 
 
 
@@ -24,7 +24,7 @@ var result  = BackupunitsDelete(ctx, backupunitId)
                       .Execute()
 ```
 
-Delete a Backup Unit
+Delete backup units
 
 
 
@@ -41,7 +41,7 @@ import (
 )
 
 func main() {
-    backupunitId := "backupunitId_example" // string | The unique ID of the backup Unit
+    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -62,7 +62,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**backupunitId** | **string** | The unique ID of the backup Unit | |
+|**backupunitId** | **string** | The unique ID of the backup unit. | |
 
 ### Other Parameters
 
@@ -96,7 +96,7 @@ var result BackupUnit = BackupunitsFindById(ctx, backupunitId)
                       .Execute()
 ```
 
-Returns the specified Backup Unit
+Retrieve backup units
 
 
 
@@ -113,7 +113,7 @@ import (
 )
 
 func main() {
-    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit
+    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -136,7 +136,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**backupunitId** | **string** | The unique ID of the backup unit | |
+|**backupunitId** | **string** | The unique ID of the backup unit. | |
 
 ### Other Parameters
 
@@ -170,7 +170,7 @@ var result BackupUnits = BackupunitsGet(ctx)
                       .Execute()
 ```
 
-List Backup Units
+List backup units
 
 
 
@@ -233,14 +233,14 @@ Other parameters are passed through a pointer to a apiBackupunitsGetRequest stru
 
 ```go
 var result BackupUnit = BackupunitsPatch(ctx, backupunitId)
-                      .BackupUnitProperties(backupUnitProperties)
+                      .BackupUnit(backupUnit)
                       .Pretty(pretty)
                       .Depth(depth)
                       .XContractNumber(xContractNumber)
                       .Execute()
 ```
 
-Partially modify a Backup Unit
+Partially modify backup units
 
 
 
@@ -257,15 +257,15 @@ import (
 )
 
 func main() {
-    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit
-    backupUnitProperties := *openapiclient.NewBackupUnitProperties("BackupUnitName") // BackupUnitProperties | Modified backup Unit properties
+    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit.
+    backupUnit := *openapiclient.NewBackupUnitProperties("BackupUnitName") // BackupUnitProperties | The properties of the backup unit to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.BackupUnitsApi.BackupunitsPatch(context.Background(), backupunitId).BackupUnitProperties(backupUnitProperties).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.BackupUnitsApi.BackupunitsPatch(context.Background(), backupunitId).BackupUnit(backupUnit).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `BackupUnitsApi.BackupunitsPatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -281,7 +281,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**backupunitId** | **string** | The unique ID of the backup unit | |
+|**backupunitId** | **string** | The unique ID of the backup unit. | |
 
 ### Other Parameters
 
@@ -290,7 +290,7 @@ Other parameters are passed through a pointer to a apiBackupunitsPatchRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **backupUnitProperties** | [**BackupUnitProperties**](BackupUnitProperties.md) | Modified backup Unit properties | |
+| **backupUnit** | [**BackupUnitProperties**](BackupUnitProperties.md) | The properties of the backup unit to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -317,7 +317,7 @@ var result BackupUnit = BackupunitsPost(ctx)
                       .Execute()
 ```
 
-Create a Backup Unit
+Create backup units
 
 
 
@@ -334,7 +334,7 @@ import (
 )
 
 func main() {
-    backupUnit := *openapiclient.NewBackupUnit(*openapiclient.NewBackupUnitProperties("BackupUnitName")) // BackupUnit | Payload containing data to create a new Backup Unit
+    backupUnit := *openapiclient.NewBackupUnit(*openapiclient.NewBackupUnitProperties("BackupUnitName")) // BackupUnit | The backup unit to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -362,7 +362,7 @@ Other parameters are passed through a pointer to a apiBackupunitsPostRequest str
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **backupUnit** | [**BackupUnit**](BackupUnit.md) | Payload containing data to create a new Backup Unit | |
+| **backupUnit** | [**BackupUnit**](BackupUnit.md) | The backup unit to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -389,7 +389,7 @@ var result BackupUnit = BackupunitsPut(ctx, backupunitId)
                       .Execute()
 ```
 
-Modify a Backup Unit
+Modify backup units
 
 
 
@@ -406,8 +406,8 @@ import (
 )
 
 func main() {
-    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit
-    backupUnit := *openapiclient.NewBackupUnit(*openapiclient.NewBackupUnitProperties("BackupUnitName")) // BackupUnit | Modified backup Unit
+    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit.
+    backupUnit := *openapiclient.NewBackupUnit(*openapiclient.NewBackupUnitProperties("BackupUnitName")) // BackupUnit | The modified backup unit.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -430,7 +430,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**backupunitId** | **string** | The unique ID of the backup unit | |
+|**backupunitId** | **string** | The unique ID of the backup unit. | |
 
 ### Other Parameters
 
@@ -439,7 +439,7 @@ Other parameters are passed through a pointer to a apiBackupunitsPutRequest stru
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **backupUnit** | [**BackupUnit**](BackupUnit.md) | Modified backup Unit | |
+| **backupUnit** | [**BackupUnit**](BackupUnit.md) | The modified backup unit. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -464,7 +464,7 @@ var result BackupUnitSSO = BackupunitsSsourlGet(ctx, backupunitId)
                       .Execute()
 ```
 
-Returns a single signon URL for the specified Backup Unit
+Retrieve BU single sign-on URLs
 
 
 
@@ -481,7 +481,7 @@ import (
 )
 
 func main() {
-    backupunitId := "backupunitId_example" // string | The unique UUID of the backup unit
+    backupunitId := "backupunitId_example" // string | The unique ID of the backup unit.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
@@ -503,7 +503,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**backupunitId** | **string** | The unique UUID of the backup unit | |
+|**backupunitId** | **string** | The unique ID of the backup unit. | |
 
 ### Other Parameters
 

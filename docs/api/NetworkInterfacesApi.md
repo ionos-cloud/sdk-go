@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersServersNicsDelete**](NetworkInterfacesApi.md#DatacentersServersNicsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete a Network Interface|
-|[**DatacentersServersNicsFindById**](NetworkInterfacesApi.md#DatacentersServersNicsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve a Network Interface|
-|[**DatacentersServersNicsGet**](NetworkInterfacesApi.md#DatacentersServersNicsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics | List Network Interfaces|
-|[**DatacentersServersNicsPatch**](NetworkInterfacesApi.md#DatacentersServersNicsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially Modify a Network Interface|
-|[**DatacentersServersNicsPost**](NetworkInterfacesApi.md#DatacentersServersNicsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a Network Interface|
-|[**DatacentersServersNicsPut**](NetworkInterfacesApi.md#DatacentersServersNicsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify a Network Interface|
+|[**DatacentersServersNicsDelete**](NetworkInterfacesApi.md#DatacentersServersNicsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Delete NICs|
+|[**DatacentersServersNicsFindById**](NetworkInterfacesApi.md#DatacentersServersNicsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve NICs|
+|[**DatacentersServersNicsGet**](NetworkInterfacesApi.md#DatacentersServersNicsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics | List NICs|
+|[**DatacentersServersNicsPatch**](NetworkInterfacesApi.md#DatacentersServersNicsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs|
+|[**DatacentersServersNicsPost**](NetworkInterfacesApi.md#DatacentersServersNicsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics | Create NICs|
+|[**DatacentersServersNicsPut**](NetworkInterfacesApi.md#DatacentersServersNicsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs|
 
 
 
@@ -23,7 +23,7 @@ var result  = DatacentersServersNicsDelete(ctx, datacenterId, serverId, nicId)
                       .Execute()
 ```
 
-Delete a Network Interface
+Delete NICs
 
 
 
@@ -41,8 +41,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -64,8 +64,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -99,7 +99,7 @@ var result Nic = DatacentersServersNicsFindById(ctx, datacenterId, serverId, nic
                       .Execute()
 ```
 
-Retrieve a Network Interface
+Retrieve NICs
 
 
 
@@ -117,8 +117,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -142,8 +142,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -179,7 +179,7 @@ var result Nics = DatacentersServersNicsGet(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-List Network Interfaces
+List NICs
 
 
 
@@ -197,7 +197,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -223,7 +223,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -260,7 +260,7 @@ var result Nic = DatacentersServersNicsPatch(ctx, datacenterId, serverId, nicId)
                       .Execute()
 ```
 
-Partially Modify a Network Interface
+Partially modify NICs
 
 
 
@@ -278,9 +278,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    nic := *openapiclient.NewNicProperties(int32(2)) // NicProperties | Modified properties of Nic
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    nic := *openapiclient.NewNicProperties(int32(2)) // NicProperties | The properties of the NIC to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -304,8 +304,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -314,7 +314,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPatc
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **nic** | [**NicProperties**](NicProperties.md) | Modified properties of Nic | |
+| **nic** | [**NicProperties**](NicProperties.md) | The properties of the NIC to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -341,7 +341,7 @@ var result Nic = DatacentersServersNicsPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Create a Network Interface
+Create NICs
 
 
 
@@ -359,8 +359,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nic := *openapiclient.NewNic(*openapiclient.NewNicProperties(int32(2))) // Nic | Nic to be created
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nic := *openapiclient.NewNic(*openapiclient.NewNicProperties(int32(2))) // Nic | The NIC to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -384,7 +384,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -393,7 +393,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPost
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **nic** | [**Nic**](Nic.md) | Nic to be created | |
+| **nic** | [**Nic**](Nic.md) | The NIC to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -420,7 +420,7 @@ var result Nic = DatacentersServersNicsPut(ctx, datacenterId, serverId, nicId)
                       .Execute()
 ```
 
-Modify a Network Interface
+Modify NICs
 
 
 
@@ -438,9 +438,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    nic := *openapiclient.NewNicPut(*openapiclient.NewNicProperties(int32(2))) // NicPut | Modified Nic
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    nic := *openapiclient.NewNicPut(*openapiclient.NewNicProperties(int32(2))) // NicPut | The modified NIC
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -464,8 +464,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -474,7 +474,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsPutR
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **nic** | [**NicPut**](NicPut.md) | Modified Nic | |
+| **nic** | [**NicPut**](NicPut.md) | The modified NIC | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

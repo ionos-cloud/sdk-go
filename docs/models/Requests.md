@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
-|**Items** | Pointer to [**[]Request**](Request.md) | Array of items in that collection | [optional] [readonly] |
-|**Offset** | **float32** | the offset specified in the request (or, if none was specified, the default offset of 0) | |
-|**Limit** | **float32** | the limit specified in the request (or, if none was specified use the endpoint&#39;s default pagination limit) | |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]Request**](Request.md) | Array of items in that collection. | [optional] [readonly] |
+|**Offset** | **float32** | The offset specified in the request (or, if none was specified, the default offset of 0) | |
+|**Limit** | **float32** | The limit specified in the request (if none was specified, use the endpoint&#39;s default pagination limit). | |
 |**Links** | [**PaginationLinks**](PaginationLinks.md) |  | |
 
 ## Methods

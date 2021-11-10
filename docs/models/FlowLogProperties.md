@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A name of that resource | |
+|**Name** | **string** | The name of the  resource. | |
 |**Action** | **string** | Specifies the traffic action pattern. | |
 |**Direction** | **string** | Specifies the traffic direction pattern. | |
 |**Bucket** | **string** | S3 bucket name of an existing IONOS Cloud S3 bucket. | |

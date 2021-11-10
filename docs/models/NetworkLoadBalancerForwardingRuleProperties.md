@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A name of that Network Load Balancer forwarding rule | |
+|**Name** | **string** | The name of the Network Load Balancer forwarding rule. | |
 |**Algorithm** | **string** | Algorithm for the balancing. | |
 |**Protocol** | **string** | Protocol of the balancing. | |
 |**ListenerIp** | **string** | Listening IP. (inbound) | |
 |**ListenerPort** | **int32** | Listening port number. (inbound) (range: 1 to 65535) | |
 |**HealthCheck** | Pointer to [**NetworkLoadBalancerForwardingRuleHealthCheck**](NetworkLoadBalancerForwardingRuleHealthCheck.md) |  | [optional] |
-|**Targets** | [**[]NetworkLoadBalancerForwardingRuleTarget**](NetworkLoadBalancerForwardingRuleTarget.md) | Array of items in that collection | |
+|**Targets** | [**[]NetworkLoadBalancerForwardingRuleTarget**](NetworkLoadBalancerForwardingRuleTarget.md) | Array of items in that collection. | |
 
 ## Methods
 

@@ -4,24 +4,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersNetworkloadbalancersDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Remove an Network Load Balancer|
-|[**DatacentersNetworkloadbalancersFindByNetworkLoadBalancerId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFindByNetworkLoadBalancerId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Retrieve an Network Load Balancer|
-|[**DatacentersNetworkloadbalancersFlowlogsDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Remove Flow Log from Network Load Balancer|
-|[**DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Retrieve a Flow Log of the Network Load Balancer|
-|[**DatacentersNetworkloadbalancersFlowlogsGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | List Network Load Balancer Flow Logs|
-|[**DatacentersNetworkloadbalancersFlowlogsPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Partially modify a Flow Log of the Network Load Balancer|
-|[**DatacentersNetworkloadbalancersFlowlogsPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Add a Network Load Balancer Flow Log|
-|[**DatacentersNetworkloadbalancersFlowlogsPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Modify a Flow Log of the Network Load Balancer|
-|[**DatacentersNetworkloadbalancersForwardingrulesDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Remove Forwarding Rule from Network Load Balancer|
-|[**DatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve a Forwarding Rule of the Network Load Balancer|
-|[**DatacentersNetworkloadbalancersForwardingrulesGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | List Network Load Balancer Forwarding Rules|
-|[**DatacentersNetworkloadbalancersForwardingrulesPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify a forwarding rule of the Network Load Balancer|
-|[**DatacentersNetworkloadbalancersForwardingrulesPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Add a Network Load Balancer Forwarding Rule|
-|[**DatacentersNetworkloadbalancersForwardingrulesPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify a forwarding rule of the Network Load Balancer|
+|[**DatacentersNetworkloadbalancersDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Delete Network Load Balancers|
+|[**DatacentersNetworkloadbalancersFindByNetworkLoadBalancerId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFindByNetworkLoadBalancerId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Retrieve Network Load Balancers|
+|[**DatacentersNetworkloadbalancersFlowlogsDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Delete NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Retrieve NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersFlowlogsGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | List NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersFlowlogsPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Partially modify NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersFlowlogsPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Create NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersFlowlogsPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Modify NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersForwardingrulesDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete NLB forwarding rules|
+|[**DatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve NLB forwarding rules|
+|[**DatacentersNetworkloadbalancersForwardingrulesGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | List NLB forwarding rules|
+|[**DatacentersNetworkloadbalancersForwardingrulesPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify NLB forwarding rules|
+|[**DatacentersNetworkloadbalancersForwardingrulesPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Create NLB forwarding rules|
+|[**DatacentersNetworkloadbalancersForwardingrulesPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify NLB forwarding rules|
 |[**DatacentersNetworkloadbalancersGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers | List Network Load Balancers|
-|[**DatacentersNetworkloadbalancersPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Partially update an Network Load Balancer|
-|[**DatacentersNetworkloadbalancersPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers | Create an Network Load Balancer|
-|[**DatacentersNetworkloadbalancersPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Update an Network Load Balancer|
+|[**DatacentersNetworkloadbalancersPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Partially modify Network Load Balancers|
+|[**DatacentersNetworkloadbalancersPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers | Create Network Load Balancers|
+|[**DatacentersNetworkloadbalancersPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Modify Network Load Balancers|
 
 
 
@@ -35,7 +35,7 @@ var result  = DatacentersNetworkloadbalancersDelete(ctx, datacenterId, networkLo
                       .Execute()
 ```
 
-Remove an Network Load Balancer
+Delete Network Load Balancers
 
 
 
@@ -53,7 +53,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -75,7 +75,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -109,7 +109,7 @@ var result NetworkLoadBalancer = DatacentersNetworkloadbalancersFindByNetworkLoa
                       .Execute()
 ```
 
-Retrieve an Network Load Balancer
+Retrieve Network Load Balancers
 
 
 
@@ -127,7 +127,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -151,7 +151,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -185,7 +185,7 @@ var result  = DatacentersNetworkloadbalancersFlowlogsDelete(ctx, datacenterId, n
                       .Execute()
 ```
 
-Remove Flow Log from Network Load Balancer
+Delete NLB Flow Logs
 
 
 
@@ -203,8 +203,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    flowLogId := "flowLogId_example" // string | The unique ID of the flow log
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -226,8 +226,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**flowLogId** | **string** | The unique ID of the flow log | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -261,7 +261,7 @@ var result FlowLog = DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId(ctx,
                       .Execute()
 ```
 
-Retrieve a Flow Log of the Network Load Balancer
+Retrieve NLB Flow Logs
 
 
 
@@ -279,8 +279,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -304,8 +304,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**flowLogId** | **string** | The unique ID of the Flow Log | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -339,7 +339,7 @@ var result FlowLogs = DatacentersNetworkloadbalancersFlowlogsGet(ctx, datacenter
                       .Execute()
 ```
 
-List Network Load Balancer Flow Logs
+List NLB Flow Logs
 
 
 
@@ -357,7 +357,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -381,7 +381,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -416,7 +416,7 @@ var result FlowLog = DatacentersNetworkloadbalancersFlowlogsPatch(ctx, datacente
                       .Execute()
 ```
 
-Partially modify a Flow Log of the Network Load Balancer
+Partially modify NLB Flow Logs
 
 
 
@@ -434,9 +434,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log
-    networkLoadBalancerFlowLogProperties := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | Properties of a Flow Log to be updated
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
+    networkLoadBalancerFlowLogProperties := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | The properties of the Flow Log to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -460,8 +460,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**flowLogId** | **string** | The unique ID of the Flow Log | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -470,7 +470,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerFlowLogProperties** | [**FlowLogProperties**](FlowLogProperties.md) | Properties of a Flow Log to be updated | |
+| **networkLoadBalancerFlowLogProperties** | [**FlowLogProperties**](FlowLogProperties.md) | The properties of the Flow Log to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -497,7 +497,7 @@ var result FlowLog = DatacentersNetworkloadbalancersFlowlogsPost(ctx, datacenter
                       .Execute()
 ```
 
-Add a Network Load Balancer Flow Log
+Create NLB Flow Logs
 
 
 
@@ -515,8 +515,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    networkLoadBalancerFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | Flow Log to add
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    networkLoadBalancerFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | The Flow Log to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -540,7 +540,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -549,7 +549,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerFlowLog** | [**FlowLog**](FlowLog.md) | Flow Log to add | |
+| **networkLoadBalancerFlowLog** | [**FlowLog**](FlowLog.md) | The Flow Log to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -576,7 +576,7 @@ var result FlowLog = DatacentersNetworkloadbalancersFlowlogsPut(ctx, datacenterI
                       .Execute()
 ```
 
-Modify a Flow Log of the Network Load Balancer
+Modify NLB Flow Logs
 
 
 
@@ -594,9 +594,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log
-    networkLoadBalancerFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | Modified Network Load Balancer Flow Log
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
+    networkLoadBalancerFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | The modified NLB Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -620,8 +620,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**flowLogId** | **string** | The unique ID of the Flow Log | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -630,7 +630,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerFlowLog** | [**FlowLogPut**](FlowLogPut.md) | Modified Network Load Balancer Flow Log | |
+| **networkLoadBalancerFlowLog** | [**FlowLogPut**](FlowLogPut.md) | The modified NLB Flow Log. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -656,7 +656,7 @@ var result  = DatacentersNetworkloadbalancersForwardingrulesDelete(ctx, datacent
                       .Execute()
 ```
 
-Remove Forwarding Rule from Network Load Balancer
+Delete NLB forwarding rules
 
 
 
@@ -674,8 +674,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -697,8 +697,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**forwardingRuleId** | **string** | The unique ID of the forwarding rule | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**forwardingRuleId** | **string** | The unique ID of the forwarding rule. | |
 
 ### Other Parameters
 
@@ -732,7 +732,7 @@ var result NetworkLoadBalancerForwardingRule = DatacentersNetworkloadbalancersFo
                       .Execute()
 ```
 
-Retrieve a Forwarding Rule of the Network Load Balancer
+Retrieve NLB forwarding rules
 
 
 
@@ -750,8 +750,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -775,8 +775,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**forwardingRuleId** | **string** | The unique ID of the forwarding rule | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**forwardingRuleId** | **string** | The unique ID of the forwarding rule. | |
 
 ### Other Parameters
 
@@ -810,7 +810,7 @@ var result NetworkLoadBalancerForwardingRules = DatacentersNetworkloadbalancersF
                       .Execute()
 ```
 
-List Network Load Balancer Forwarding Rules
+List NLB forwarding rules
 
 
 
@@ -828,7 +828,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -852,7 +852,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -887,7 +887,7 @@ var result NetworkLoadBalancerForwardingRule = DatacentersNetworkloadbalancersFo
                       .Execute()
 ```
 
-Partially modify a forwarding rule of the Network Load Balancer
+Partially modify NLB forwarding rules
 
 
 
@@ -905,9 +905,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule
-    networkLoadBalancerForwardingRuleProperties := *openapiclient.NewNetworkLoadBalancerForwardingRuleProperties("My Network Load Balancer forwarding rule", "ROUND_ROBIN", "HTTP", "81.173.1.2", int32(8080), []openapiclient.NetworkLoadBalancerForwardingRuleTarget{*openapiclient.NewNetworkLoadBalancerForwardingRuleTarget("22.231.2.2", int32(8080), int32(123))}) // NetworkLoadBalancerForwardingRuleProperties | Properties of a forwarding rule to be updated
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule.
+    networkLoadBalancerForwardingRuleProperties := *openapiclient.NewNetworkLoadBalancerForwardingRuleProperties("My Network Load Balancer forwarding rule", "ROUND_ROBIN", "HTTP", "81.173.1.2", int32(8080), []openapiclient.NetworkLoadBalancerForwardingRuleTarget{*openapiclient.NewNetworkLoadBalancerForwardingRuleTarget("22.231.2.2", int32(8080), int32(123))}) // NetworkLoadBalancerForwardingRuleProperties | The properties of the forwarding rule to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -931,8 +931,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**forwardingRuleId** | **string** | The unique ID of the forwarding rule | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**forwardingRuleId** | **string** | The unique ID of the forwarding rule. | |
 
 ### Other Parameters
 
@@ -941,7 +941,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerForwardingRuleProperties** | [**NetworkLoadBalancerForwardingRuleProperties**](NetworkLoadBalancerForwardingRuleProperties.md) | Properties of a forwarding rule to be updated | |
+| **networkLoadBalancerForwardingRuleProperties** | [**NetworkLoadBalancerForwardingRuleProperties**](NetworkLoadBalancerForwardingRuleProperties.md) | The properties of the forwarding rule to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -968,7 +968,7 @@ var result NetworkLoadBalancerForwardingRule = DatacentersNetworkloadbalancersFo
                       .Execute()
 ```
 
-Add a Network Load Balancer Forwarding Rule
+Create NLB forwarding rules
 
 
 
@@ -986,8 +986,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    networkLoadBalancerForwardingRule := *openapiclient.NewNetworkLoadBalancerForwardingRule(*openapiclient.NewNetworkLoadBalancerForwardingRuleProperties("My Network Load Balancer forwarding rule", "ROUND_ROBIN", "HTTP", "81.173.1.2", int32(8080), []openapiclient.NetworkLoadBalancerForwardingRuleTarget{*openapiclient.NewNetworkLoadBalancerForwardingRuleTarget("22.231.2.2", int32(8080), int32(123))})) // NetworkLoadBalancerForwardingRule | forwarding rule to add
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    networkLoadBalancerForwardingRule := *openapiclient.NewNetworkLoadBalancerForwardingRule(*openapiclient.NewNetworkLoadBalancerForwardingRuleProperties("My Network Load Balancer forwarding rule", "ROUND_ROBIN", "HTTP", "81.173.1.2", int32(8080), []openapiclient.NetworkLoadBalancerForwardingRuleTarget{*openapiclient.NewNetworkLoadBalancerForwardingRuleTarget("22.231.2.2", int32(8080), int32(123))})) // NetworkLoadBalancerForwardingRule | The forwarding rule to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1011,7 +1011,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -1020,7 +1020,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md) | forwarding rule to add | |
+| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRule**](NetworkLoadBalancerForwardingRule.md) | The forwarding rule to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1047,7 +1047,7 @@ var result NetworkLoadBalancerForwardingRule = DatacentersNetworkloadbalancersFo
                       .Execute()
 ```
 
-Modify a forwarding rule of the Network Load Balancer
+Modify NLB forwarding rules
 
 
 
@@ -1065,9 +1065,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule
-    networkLoadBalancerForwardingRule := *openapiclient.NewNetworkLoadBalancerForwardingRulePut(*openapiclient.NewNetworkLoadBalancerForwardingRuleProperties("My Network Load Balancer forwarding rule", "ROUND_ROBIN", "HTTP", "81.173.1.2", int32(8080), []openapiclient.NetworkLoadBalancerForwardingRuleTarget{*openapiclient.NewNetworkLoadBalancerForwardingRuleTarget("22.231.2.2", int32(8080), int32(123))})) // NetworkLoadBalancerForwardingRulePut | Modified Network Load Balancer Forwarding Rule
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule.
+    networkLoadBalancerForwardingRule := *openapiclient.NewNetworkLoadBalancerForwardingRulePut(*openapiclient.NewNetworkLoadBalancerForwardingRuleProperties("My Network Load Balancer forwarding rule", "ROUND_ROBIN", "HTTP", "81.173.1.2", int32(8080), []openapiclient.NetworkLoadBalancerForwardingRuleTarget{*openapiclient.NewNetworkLoadBalancerForwardingRuleTarget("22.231.2.2", int32(8080), int32(123))})) // NetworkLoadBalancerForwardingRulePut | The modified NLB forwarding rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1091,8 +1091,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
-|**forwardingRuleId** | **string** | The unique ID of the forwarding rule | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
+|**forwardingRuleId** | **string** | The unique ID of the forwarding rule. | |
 
 ### Other Parameters
 
@@ -1101,7 +1101,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRulePut**](NetworkLoadBalancerForwardingRulePut.md) | Modified Network Load Balancer Forwarding Rule | |
+| **networkLoadBalancerForwardingRule** | [**NetworkLoadBalancerForwardingRulePut**](NetworkLoadBalancerForwardingRulePut.md) | The modified NLB forwarding rule. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1208,7 +1208,7 @@ var result NetworkLoadBalancer = DatacentersNetworkloadbalancersPatch(ctx, datac
                       .Execute()
 ```
 
-Partially update an Network Load Balancer
+Partially modify Network Load Balancers
 
 
 
@@ -1226,8 +1226,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    networkLoadBalancerProperties := *openapiclient.NewNetworkLoadBalancerProperties("My Network Load Balancer", int32(1), int32(2)) // NetworkLoadBalancerProperties | Network Load Balancer properties to be updated
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    networkLoadBalancerProperties := *openapiclient.NewNetworkLoadBalancerProperties("My Network Load Balancer", int32(1), int32(2)) // NetworkLoadBalancerProperties | The properties of the Network Load Balancer to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1251,7 +1251,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -1260,7 +1260,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancerProperties** | [**NetworkLoadBalancerProperties**](NetworkLoadBalancerProperties.md) | Network Load Balancer properties to be updated | |
+| **networkLoadBalancerProperties** | [**NetworkLoadBalancerProperties**](NetworkLoadBalancerProperties.md) | The properties of the Network Load Balancer to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1287,7 +1287,7 @@ var result NetworkLoadBalancer = DatacentersNetworkloadbalancersPost(ctx, datace
                       .Execute()
 ```
 
-Create an Network Load Balancer
+Create Network Load Balancers
 
 
 
@@ -1305,7 +1305,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancer := *openapiclient.NewNetworkLoadBalancer(*openapiclient.NewNetworkLoadBalancerProperties("My Network Load Balancer", int32(1), int32(2))) // NetworkLoadBalancer | Network Load Balancer to be created
+    networkLoadBalancer := *openapiclient.NewNetworkLoadBalancer(*openapiclient.NewNetworkLoadBalancerProperties("My Network Load Balancer", int32(1), int32(2))) // NetworkLoadBalancer | The Network Load Balancer to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1337,7 +1337,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancer** | [**NetworkLoadBalancer**](NetworkLoadBalancer.md) | Network Load Balancer to be created | |
+| **networkLoadBalancer** | [**NetworkLoadBalancer**](NetworkLoadBalancer.md) | The Network Load Balancer to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1364,7 +1364,7 @@ var result NetworkLoadBalancer = DatacentersNetworkloadbalancersPut(ctx, datacen
                       .Execute()
 ```
 
-Update an Network Load Balancer
+Modify Network Load Balancers
 
 
 
@@ -1382,8 +1382,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer
-    networkLoadBalancer := *openapiclient.NewNetworkLoadBalancerPut(*openapiclient.NewNetworkLoadBalancerProperties("My Network Load Balancer", int32(1), int32(2))) // NetworkLoadBalancerPut | Modified Network Load Balancer
+    networkLoadBalancerId := "networkLoadBalancerId_example" // string | The unique ID of the Network Load Balancer.
+    networkLoadBalancer := *openapiclient.NewNetworkLoadBalancerPut(*openapiclient.NewNetworkLoadBalancerProperties("My Network Load Balancer", int32(1), int32(2))) // NetworkLoadBalancerPut | The modified Network Load Balancer.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1407,7 +1407,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer | |
+|**networkLoadBalancerId** | **string** | The unique ID of the Network Load Balancer. | |
 
 ### Other Parameters
 
@@ -1416,7 +1416,7 @@ Other parameters are passed through a pointer to a apiDatacentersNetworkloadbala
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **networkLoadBalancer** | [**NetworkLoadBalancerPut**](NetworkLoadBalancerPut.md) | Modified Network Load Balancer | |
+| **networkLoadBalancer** | [**NetworkLoadBalancerPut**](NetworkLoadBalancerPut.md) | The modified Network Load Balancer. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

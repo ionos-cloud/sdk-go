@@ -4,33 +4,33 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersLabelsDelete**](LabelsApi.md#DatacentersLabelsDelete) | **Delete** /datacenters/{datacenterId}/labels/{key} | Delete a Label from Data Center|
-|[**DatacentersLabelsFindByKey**](LabelsApi.md#DatacentersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/labels/{key} | Retrieve a Label of Data Center|
-|[**DatacentersLabelsGet**](LabelsApi.md#DatacentersLabelsGet) | **Get** /datacenters/{datacenterId}/labels | List all Data Center Labels|
-|[**DatacentersLabelsPost**](LabelsApi.md#DatacentersLabelsPost) | **Post** /datacenters/{datacenterId}/labels | Add a Label to Data Center|
-|[**DatacentersLabelsPut**](LabelsApi.md#DatacentersLabelsPut) | **Put** /datacenters/{datacenterId}/labels/{key} | Modify a Label of Data Center|
-|[**DatacentersServersLabelsDelete**](LabelsApi.md#DatacentersServersLabelsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete a Label from Server|
-|[**DatacentersServersLabelsFindByKey**](LabelsApi.md#DatacentersServersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve a Label of Server|
-|[**DatacentersServersLabelsGet**](LabelsApi.md#DatacentersServersLabelsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels | List all Server Labels|
-|[**DatacentersServersLabelsPost**](LabelsApi.md#DatacentersServersLabelsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/labels | Add a Label to Server|
-|[**DatacentersServersLabelsPut**](LabelsApi.md#DatacentersServersLabelsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Label of Server|
-|[**DatacentersVolumesLabelsDelete**](LabelsApi.md#DatacentersVolumesLabelsDelete) | **Delete** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete a Label from Volume|
-|[**DatacentersVolumesLabelsFindByKey**](LabelsApi.md#DatacentersVolumesLabelsFindByKey) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve a Label of Volume|
-|[**DatacentersVolumesLabelsGet**](LabelsApi.md#DatacentersVolumesLabelsGet) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List all Volume Labels|
-|[**DatacentersVolumesLabelsPost**](LabelsApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Add a Label to Volume|
-|[**DatacentersVolumesLabelsPut**](LabelsApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Label of Volume|
-|[**IpblocksLabelsDelete**](LabelsApi.md#IpblocksLabelsDelete) | **Delete** /ipblocks/{ipblockId}/labels/{key} | Delete a Label from IP Block|
-|[**IpblocksLabelsFindByKey**](LabelsApi.md#IpblocksLabelsFindByKey) | **Get** /ipblocks/{ipblockId}/labels/{key} | Retrieve a Label of IP Block|
-|[**IpblocksLabelsGet**](LabelsApi.md#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List all Ip Block Labels|
-|[**IpblocksLabelsPost**](LabelsApi.md#IpblocksLabelsPost) | **Post** /ipblocks/{ipblockId}/labels | Add a Label to IP Block|
-|[**IpblocksLabelsPut**](LabelsApi.md#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify a Label of IP Block|
-|[**LabelsFindByUrn**](LabelsApi.md#LabelsFindByUrn) | **Get** /labels/{labelurn} | Returns the label by its URN.|
-|[**LabelsGet**](LabelsApi.md#LabelsGet) | **Get** /labels | List Labels |
-|[**SnapshotsLabelsDelete**](LabelsApi.md#SnapshotsLabelsDelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete a Label from Snapshot|
-|[**SnapshotsLabelsFindByKey**](LabelsApi.md#SnapshotsLabelsFindByKey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve a Label of Snapshot|
-|[**SnapshotsLabelsGet**](LabelsApi.md#SnapshotsLabelsGet) | **Get** /snapshots/{snapshotId}/labels | List all Snapshot Labels|
-|[**SnapshotsLabelsPost**](LabelsApi.md#SnapshotsLabelsPost) | **Post** /snapshots/{snapshotId}/labels | Add a Label to Snapshot|
-|[**SnapshotsLabelsPut**](LabelsApi.md#SnapshotsLabelsPut) | **Put** /snapshots/{snapshotId}/labels/{key} | Modify a Label of Snapshot|
+|[**DatacentersLabelsDelete**](LabelsApi.md#DatacentersLabelsDelete) | **Delete** /datacenters/{datacenterId}/labels/{key} | Delete data center labels|
+|[**DatacentersLabelsFindByKey**](LabelsApi.md#DatacentersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/labels/{key} | Retrieve data center labels|
+|[**DatacentersLabelsGet**](LabelsApi.md#DatacentersLabelsGet) | **Get** /datacenters/{datacenterId}/labels | List data center labels|
+|[**DatacentersLabelsPost**](LabelsApi.md#DatacentersLabelsPost) | **Post** /datacenters/{datacenterId}/labels | Create data center labels|
+|[**DatacentersLabelsPut**](LabelsApi.md#DatacentersLabelsPut) | **Put** /datacenters/{datacenterId}/labels/{key} | Modify data center labels|
+|[**DatacentersServersLabelsDelete**](LabelsApi.md#DatacentersServersLabelsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete server labels|
+|[**DatacentersServersLabelsFindByKey**](LabelsApi.md#DatacentersServersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve server labels|
+|[**DatacentersServersLabelsGet**](LabelsApi.md#DatacentersServersLabelsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels | List server labels|
+|[**DatacentersServersLabelsPost**](LabelsApi.md#DatacentersServersLabelsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/labels | Create server labels|
+|[**DatacentersServersLabelsPut**](LabelsApi.md#DatacentersServersLabelsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify server labels|
+|[**DatacentersVolumesLabelsDelete**](LabelsApi.md#DatacentersVolumesLabelsDelete) | **Delete** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete volume labels|
+|[**DatacentersVolumesLabelsFindByKey**](LabelsApi.md#DatacentersVolumesLabelsFindByKey) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve volume labels|
+|[**DatacentersVolumesLabelsGet**](LabelsApi.md#DatacentersVolumesLabelsGet) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels|
+|[**DatacentersVolumesLabelsPost**](LabelsApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create volume labels|
+|[**DatacentersVolumesLabelsPut**](LabelsApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify volume labels|
+|[**IpblocksLabelsDelete**](LabelsApi.md#IpblocksLabelsDelete) | **Delete** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels|
+|[**IpblocksLabelsFindByKey**](LabelsApi.md#IpblocksLabelsFindByKey) | **Get** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels|
+|[**IpblocksLabelsGet**](LabelsApi.md#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List IP block labels|
+|[**IpblocksLabelsPost**](LabelsApi.md#IpblocksLabelsPost) | **Post** /ipblocks/{ipblockId}/labels | Create IP block labels|
+|[**IpblocksLabelsPut**](LabelsApi.md#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify IP block labels|
+|[**LabelsFindByUrn**](LabelsApi.md#LabelsFindByUrn) | **Get** /labels/{labelurn} | Retrieve labels by URN|
+|[**LabelsGet**](LabelsApi.md#LabelsGet) | **Get** /labels | List labels |
+|[**SnapshotsLabelsDelete**](LabelsApi.md#SnapshotsLabelsDelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete snapshot labels|
+|[**SnapshotsLabelsFindByKey**](LabelsApi.md#SnapshotsLabelsFindByKey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve snapshot labels|
+|[**SnapshotsLabelsGet**](LabelsApi.md#SnapshotsLabelsGet) | **Get** /snapshots/{snapshotId}/labels | List snapshot labels|
+|[**SnapshotsLabelsPost**](LabelsApi.md#SnapshotsLabelsPost) | **Post** /snapshots/{snapshotId}/labels | Create snapshot labels|
+|[**SnapshotsLabelsPut**](LabelsApi.md#SnapshotsLabelsPut) | **Put** /snapshots/{snapshotId}/labels/{key} | Modify snapshot labels|
 
 
 
@@ -44,7 +44,7 @@ var result  = DatacentersLabelsDelete(ctx, datacenterId, key)
                       .Execute()
 ```
 
-Delete a Label from Data Center
+Delete data center labels
 
 
 
@@ -61,8 +61,8 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the Data Center
-    key := "key_example" // string | The key of the Label
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -83,8 +83,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the Data Center | |
-|**key** | **string** | The key of the Label | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -118,7 +118,7 @@ var result LabelResource = DatacentersLabelsFindByKey(ctx, datacenterId, key)
                       .Execute()
 ```
 
-Retrieve a Label of Data Center
+Retrieve data center labels
 
 
 
@@ -135,8 +135,8 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the Data Center
-    key := "key_example" // string | The key of the Label
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -159,8 +159,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the Data Center | |
-|**key** | **string** | The key of the Label | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -194,7 +194,7 @@ var result LabelResources = DatacentersLabelsGet(ctx, datacenterId)
                       .Execute()
 ```
 
-List all Data Center Labels
+List data center labels
 
 
 
@@ -211,7 +211,7 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the Data Center
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -234,7 +234,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the Data Center | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 
 ### Other Parameters
 
@@ -269,7 +269,7 @@ var result LabelResource = DatacentersLabelsPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Add a Label to Data Center
+Create data center labels
 
 
 
@@ -286,8 +286,8 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the Data Center
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Label to be added
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The label to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -310,7 +310,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the Data Center | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
 
 ### Other Parameters
 
@@ -319,7 +319,7 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPostReque
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **label** | [**LabelResource**](LabelResource.md) | The label to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -346,7 +346,7 @@ var result LabelResource = DatacentersLabelsPut(ctx, datacenterId, key)
                       .Execute()
 ```
 
-Modify a Label of Data Center
+Modify data center labels
 
 
 
@@ -363,9 +363,9 @@ import (
 )
 
 func main() {
-    datacenterId := "datacenterId_example" // string | The unique ID of the Data Center
-    key := "key_example" // string | The key of the Label
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Modified Label
+    datacenterId := "datacenterId_example" // string | The unique ID of the data center.
+    key := "key_example" // string | The label key
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The modified label
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -388,8 +388,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**datacenterId** | **string** | The unique ID of the Data Center | |
-|**key** | **string** | The key of the Label | |
+|**datacenterId** | **string** | The unique ID of the data center. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -398,7 +398,7 @@ Other parameters are passed through a pointer to a apiDatacentersLabelsPutReques
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **label** | [**LabelResource**](LabelResource.md) | The modified label | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -424,7 +424,7 @@ var result  = DatacentersServersLabelsDelete(ctx, datacenterId, serverId, key)
                       .Execute()
 ```
 
-Delete a Label from Server
+Delete server labels
 
 
 
@@ -442,8 +442,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    key := "key_example" // string | The key of the Label
+    serverId := "serverId_example" // string | The unique ID of the server.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -465,8 +465,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**key** | **string** | The key of the Label | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -500,7 +500,7 @@ var result LabelResource = DatacentersServersLabelsFindByKey(ctx, datacenterId, 
                       .Execute()
 ```
 
-Retrieve a Label of Server
+Retrieve server labels
 
 
 
@@ -518,8 +518,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    key := "key_example" // string | The key of the Label
+    serverId := "serverId_example" // string | The unique ID of the server.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -543,8 +543,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**key** | **string** | The key of the Label | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -578,7 +578,7 @@ var result LabelResources = DatacentersServersLabelsGet(ctx, datacenterId, serve
                       .Execute()
 ```
 
-List all Server Labels
+List server labels
 
 
 
@@ -596,7 +596,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -620,7 +620,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -655,7 +655,7 @@ var result LabelResource = DatacentersServersLabelsPost(ctx, datacenterId, serve
                       .Execute()
 ```
 
-Add a Label to Server
+Create server labels
 
 
 
@@ -673,8 +673,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Label to be added
+    serverId := "serverId_example" // string | The unique ID of the server.
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The label to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -698,7 +698,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -707,7 +707,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPo
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **label** | [**LabelResource**](LabelResource.md) | The label to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -734,7 +734,7 @@ var result LabelResource = DatacentersServersLabelsPut(ctx, datacenterId, server
                       .Execute()
 ```
 
-Modify a Label of Server
+Modify server labels
 
 
 
@@ -752,9 +752,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    key := "key_example" // string | The key of the Label
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Modified Label
+    serverId := "serverId_example" // string | The unique ID of the server.
+    key := "key_example" // string | The label key
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The modified label
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -778,8 +778,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**key** | **string** | The key of the Label | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -788,7 +788,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersLabelsPu
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **label** | [**LabelResource**](LabelResource.md) | The modified label | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -814,7 +814,7 @@ var result  = DatacentersVolumesLabelsDelete(ctx, datacenterId, volumeId, key)
                       .Execute()
 ```
 
-Delete a Label from Volume
+Delete volume labels
 
 
 
@@ -832,8 +832,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
-    key := "key_example" // string | The key of the Label
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -855,8 +855,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**volumeId** | **string** | The unique ID of the Volume | |
-|**key** | **string** | The key of the Label | |
+|**volumeId** | **string** | The unique ID of the volume. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -890,7 +890,7 @@ var result LabelResource = DatacentersVolumesLabelsFindByKey(ctx, datacenterId, 
                       .Execute()
 ```
 
-Retrieve a Label of Volume
+Retrieve volume labels
 
 
 
@@ -908,8 +908,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
-    key := "key_example" // string | The key of the Label
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -933,8 +933,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**volumeId** | **string** | The unique ID of the Volume | |
-|**key** | **string** | The key of the Label | |
+|**volumeId** | **string** | The unique ID of the volume. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -968,7 +968,7 @@ var result LabelResources = DatacentersVolumesLabelsGet(ctx, datacenterId, volum
                       .Execute()
 ```
 
-List all Volume Labels
+List volume labels
 
 
 
@@ -986,7 +986,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1010,7 +1010,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**volumeId** | **string** | The unique ID of the Volume | |
+|**volumeId** | **string** | The unique ID of the volume. | |
 
 ### Other Parameters
 
@@ -1045,7 +1045,7 @@ var result LabelResource = DatacentersVolumesLabelsPost(ctx, datacenterId, volum
                       .Execute()
 ```
 
-Add a Label to Volume
+Create volume labels
 
 
 
@@ -1063,8 +1063,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Label to be added
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The label to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1088,7 +1088,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**volumeId** | **string** | The unique ID of the Volume | |
+|**volumeId** | **string** | The unique ID of the volume. | |
 
 ### Other Parameters
 
@@ -1097,7 +1097,7 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPo
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **label** | [**LabelResource**](LabelResource.md) | The label to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1124,7 +1124,7 @@ var result LabelResource = DatacentersVolumesLabelsPut(ctx, datacenterId, volume
                       .Execute()
 ```
 
-Modify a Label of Volume
+Modify volume labels
 
 
 
@@ -1142,9 +1142,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
-    key := "key_example" // string | The key of the Label
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Modified Label
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
+    key := "key_example" // string | The label key
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The modified label
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1168,8 +1168,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**volumeId** | **string** | The unique ID of the Volume | |
-|**key** | **string** | The key of the Label | |
+|**volumeId** | **string** | The unique ID of the volume. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -1178,7 +1178,7 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPu
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **label** | [**LabelResource**](LabelResource.md) | The modified label | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1204,7 +1204,7 @@ var result  = IpblocksLabelsDelete(ctx, ipblockId, key)
                       .Execute()
 ```
 
-Delete a Label from IP Block
+Delete IP block labels
 
 
 
@@ -1221,8 +1221,8 @@ import (
 )
 
 func main() {
-    ipblockId := "ipblockId_example" // string | The unique ID of the Ip Block
-    key := "key_example" // string | The key of the Label
+    ipblockId := "ipblockId_example" // string | The unique ID of the IP block.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1243,8 +1243,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**ipblockId** | **string** | The unique ID of the Ip Block | |
-|**key** | **string** | The key of the Label | |
+|**ipblockId** | **string** | The unique ID of the IP block. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -1278,7 +1278,7 @@ var result LabelResource = IpblocksLabelsFindByKey(ctx, ipblockId, key)
                       .Execute()
 ```
 
-Retrieve a Label of IP Block
+Retrieve IP block labels
 
 
 
@@ -1295,8 +1295,8 @@ import (
 )
 
 func main() {
-    ipblockId := "ipblockId_example" // string | The unique ID of the Ip Block
-    key := "key_example" // string | The key of the Label
+    ipblockId := "ipblockId_example" // string | The unique ID of the IP block.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1319,8 +1319,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**ipblockId** | **string** | The unique ID of the Ip Block | |
-|**key** | **string** | The key of the Label | |
+|**ipblockId** | **string** | The unique ID of the IP block. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -1354,7 +1354,7 @@ var result LabelResources = IpblocksLabelsGet(ctx, ipblockId)
                       .Execute()
 ```
 
-List all Ip Block Labels
+List IP block labels
 
 
 
@@ -1371,7 +1371,7 @@ import (
 )
 
 func main() {
-    ipblockId := "ipblockId_example" // string | The unique ID of the Ip Block
+    ipblockId := "ipblockId_example" // string | The unique ID of the IP block.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1394,7 +1394,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**ipblockId** | **string** | The unique ID of the Ip Block | |
+|**ipblockId** | **string** | The unique ID of the IP block. | |
 
 ### Other Parameters
 
@@ -1429,7 +1429,7 @@ var result LabelResource = IpblocksLabelsPost(ctx, ipblockId)
                       .Execute()
 ```
 
-Add a Label to IP Block
+Create IP block labels
 
 
 
@@ -1446,8 +1446,8 @@ import (
 )
 
 func main() {
-    ipblockId := "ipblockId_example" // string | The unique ID of the Ip Block
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Label to be added
+    ipblockId := "ipblockId_example" // string | The unique ID of the IP block.
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The label to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1470,7 +1470,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**ipblockId** | **string** | The unique ID of the Ip Block | |
+|**ipblockId** | **string** | The unique ID of the IP block. | |
 
 ### Other Parameters
 
@@ -1479,7 +1479,7 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPostRequest 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **label** | [**LabelResource**](LabelResource.md) | The label to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1506,7 +1506,7 @@ var result LabelResource = IpblocksLabelsPut(ctx, ipblockId, key)
                       .Execute()
 ```
 
-Modify a Label of IP Block
+Modify IP block labels
 
 
 
@@ -1523,9 +1523,9 @@ import (
 )
 
 func main() {
-    ipblockId := "ipblockId_example" // string | The unique ID of the Ip Block
-    key := "key_example" // string | The key of the Label
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Modified Label
+    ipblockId := "ipblockId_example" // string | The unique ID of the IP block.
+    key := "key_example" // string | The label key
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The modified label
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1548,8 +1548,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**ipblockId** | **string** | The unique ID of the Ip Block | |
-|**key** | **string** | The key of the Label | |
+|**ipblockId** | **string** | The unique ID of the IP block. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -1558,7 +1558,7 @@ Other parameters are passed through a pointer to a apiIpblocksLabelsPutRequest s
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **label** | [**LabelResource**](LabelResource.md) | The modified label | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1584,7 +1584,7 @@ var result Label = LabelsFindByUrn(ctx, labelurn)
                       .Execute()
 ```
 
-Returns the label by its URN.
+Retrieve labels by URN
 
 
 
@@ -1601,7 +1601,7 @@ import (
 )
 
 func main() {
-    labelurn := "labelurn_example" // string | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:<resource_type>:<resource_uuid>:<key>
+    labelurn := "labelurn_example" // string | The label URN; URN is unique for each label, and consists of:  urn:label:<resource_type>:<resource_uuid>:<key><key>
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1624,7 +1624,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**labelurn** | **string** | The URN representing the unique ID of the label. A URN is for uniqueness of a Label and composed using urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt; | |
+|**labelurn** | **string** | The label URN; URN is unique for each label, and consists of:  urn:label:&lt;resource_type&gt;:&lt;resource_uuid&gt;:&lt;key&gt;&lt;key&gt; | |
 
 ### Other Parameters
 
@@ -1658,7 +1658,7 @@ var result Labels = LabelsGet(ctx)
                       .Execute()
 ```
 
-List Labels 
+List labels 
 
 
 
@@ -1727,7 +1727,7 @@ var result  = SnapshotsLabelsDelete(ctx, snapshotId, key)
                       .Execute()
 ```
 
-Delete a Label from Snapshot
+Delete snapshot labels
 
 
 
@@ -1744,8 +1744,8 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
-    key := "key_example" // string | The key of the Label
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1766,8 +1766,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
-|**key** | **string** | The key of the Label | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -1801,7 +1801,7 @@ var result LabelResource = SnapshotsLabelsFindByKey(ctx, snapshotId, key)
                       .Execute()
 ```
 
-Retrieve a Label of Snapshot
+Retrieve snapshot labels
 
 
 
@@ -1818,8 +1818,8 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
-    key := "key_example" // string | The key of the Label
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
+    key := "key_example" // string | The label key
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1842,8 +1842,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
-|**key** | **string** | The key of the Label | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -1877,7 +1877,7 @@ var result LabelResources = SnapshotsLabelsGet(ctx, snapshotId)
                       .Execute()
 ```
 
-List all Snapshot Labels
+List snapshot labels
 
 
 
@@ -1894,7 +1894,7 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1917,7 +1917,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
 
 ### Other Parameters
 
@@ -1952,7 +1952,7 @@ var result LabelResource = SnapshotsLabelsPost(ctx, snapshotId)
                       .Execute()
 ```
 
-Add a Label to Snapshot
+Create snapshot labels
 
 
 
@@ -1969,8 +1969,8 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Label to be added
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The label to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1993,7 +1993,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
 
 ### Other Parameters
 
@@ -2002,7 +2002,7 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsPostRequest
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Label to be added | |
+| **label** | [**LabelResource**](LabelResource.md) | The label to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -2029,7 +2029,7 @@ var result LabelResource = SnapshotsLabelsPut(ctx, snapshotId, key)
                       .Execute()
 ```
 
-Modify a Label of Snapshot
+Modify snapshot labels
 
 
 
@@ -2046,9 +2046,9 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
-    key := "key_example" // string | The key of the Label
-    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | Modified Label
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
+    key := "key_example" // string | The label key
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The modified label
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -2071,8 +2071,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
-|**key** | **string** | The key of the Label | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
+|**key** | **string** | The label key | |
 
 ### Other Parameters
 
@@ -2081,7 +2081,7 @@ Other parameters are passed through a pointer to a apiSnapshotsLabelsPutRequest 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **label** | [**LabelResource**](LabelResource.md) | Modified Label | |
+| **label** | [**LabelResource**](LabelResource.md) | The modified label | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

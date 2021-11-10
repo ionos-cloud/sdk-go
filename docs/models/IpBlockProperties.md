@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Ips** | Pointer to **[]string** | A collection of IPs associated with the IP Block | [optional] [readonly] |
-|**Location** | **string** | Location of that IP Block. Property cannot be modified after creation (disallowed in update requests) | |
-|**Size** | **int32** | The size of the IP block | |
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
-|**IpConsumers** | Pointer to [**[]IpConsumer**](IpConsumer.md) | Read-Only attribute. Lists consumption detail of an individual ip | [optional] [readonly] |
+|**Ips** | Pointer to **[]string** | Collection of IPs, associated with the IP Block. | [optional] [readonly] |
+|**Location** | **string** | Location of that IP block. Property cannot be modified after it is created (disallowed in update requests). | |
+|**Size** | **int32** | The size of the IP block. | |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**IpConsumers** | Pointer to [**[]IpConsumer**](IpConsumer.md) | Read-Only attribute. Lists consumption detail for an individual IP | [optional] [readonly] |
 
 ## Methods
 

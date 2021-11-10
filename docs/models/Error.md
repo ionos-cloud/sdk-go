@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**HttpStatus** | Pointer to **int32** | HTTP status code of the operation | [optional] [readonly] |
+|**HttpStatus** | Pointer to **int32** | HTTP status code of the operation. | [optional] [readonly] |
 |**Messages** | Pointer to [**[]ErrorMessage**](ErrorMessage.md) |  | [optional] |
 
 ## Methods

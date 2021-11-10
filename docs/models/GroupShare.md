@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Type** | Pointer to [**Type**](Type.md) | resource as generic type | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Properties** | [**GroupShareProperties**](GroupShareProperties.md) |  | |
 
 ## Methods

@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | **int32** | Id for the LAN connected to the NAT gateway | |
-|**GatewayIps** | Pointer to **[]string** | Collection of gateway IP addresses of the NAT gateway. Will be auto-generated if not provided. Should ideally be an IP belonging to the same subnet as the LAN | [optional] |
+|**Id** | **int32** | Id for the LAN connected to the NAT Gateway | |
+|**GatewayIps** | Pointer to **[]string** | Collection of gateway IP addresses of the NAT Gateway. Will be auto-generated if not provided. Should ideally be an IP belonging to the same subnet as the LAN | [optional] |
 
 ## Methods
 

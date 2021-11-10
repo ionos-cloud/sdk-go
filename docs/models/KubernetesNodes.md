@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | Unique representation for Kubernetes Node Pool as a collection on a resource. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of resource within a collection | [optional] [readonly] |
-|**Href** | Pointer to **string** | URL to the collection representation (absolute path) | [optional] [readonly] |
-|**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in that collection | [optional] [readonly] |
+|**Id** | Pointer to **string** | A unique representation of the Kubernetes node pool as a resource collection. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
+|**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in that collection. | [optional] [readonly] |
 
 ## Methods
 

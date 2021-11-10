@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A name of that resource (only alphanumeric characters are acceptable) | |
-|**Password** | Pointer to **string** | the password associated to that resource | [optional] |
+|**Name** | **string** | The name of the  resource (alphanumeric characters only). | |
+|**Password** | Pointer to **string** | The password associated with that resource. | [optional] |
 |**Email** | Pointer to **string** | The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user. | [optional] |
 
 ## Methods

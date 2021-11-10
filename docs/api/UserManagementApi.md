@@ -4,30 +4,30 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**UmGroupsDelete**](UserManagementApi.md#UmGroupsDelete) | **Delete** /um/groups/{groupId} | Delete a Group|
-|[**UmGroupsFindById**](UserManagementApi.md#UmGroupsFindById) | **Get** /um/groups/{groupId} | Retrieve a Group|
-|[**UmGroupsGet**](UserManagementApi.md#UmGroupsGet) | **Get** /um/groups | List All Groups.|
-|[**UmGroupsPost**](UserManagementApi.md#UmGroupsPost) | **Post** /um/groups | Create a Group|
-|[**UmGroupsPut**](UserManagementApi.md#UmGroupsPut) | **Put** /um/groups/{groupId} | Modify a group|
-|[**UmGroupsResourcesGet**](UserManagementApi.md#UmGroupsResourcesGet) | **Get** /um/groups/{groupId}/resources | Retrieve resources assigned to a group|
-|[**UmGroupsSharesDelete**](UserManagementApi.md#UmGroupsSharesDelete) | **Delete** /um/groups/{groupId}/shares/{resourceId} | Remove a resource from a group|
-|[**UmGroupsSharesFindByResourceId**](UserManagementApi.md#UmGroupsSharesFindByResourceId) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve a group share|
-|[**UmGroupsSharesGet**](UserManagementApi.md#UmGroupsSharesGet) | **Get** /um/groups/{groupId}/shares | List Group Shares |
-|[**UmGroupsSharesPost**](UserManagementApi.md#UmGroupsSharesPost) | **Post** /um/groups/{groupId}/shares/{resourceId} | Add a resource to a group|
-|[**UmGroupsSharesPut**](UserManagementApi.md#UmGroupsSharesPut) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify resource permissions of a group|
-|[**UmGroupsUsersDelete**](UserManagementApi.md#UmGroupsUsersDelete) | **Delete** /um/groups/{groupId}/users/{userId} | Remove a user from a group|
-|[**UmGroupsUsersGet**](UserManagementApi.md#UmGroupsUsersGet) | **Get** /um/groups/{groupId}/users | List Group Members |
-|[**UmGroupsUsersPost**](UserManagementApi.md#UmGroupsUsersPost) | **Post** /um/groups/{groupId}/users | Add a user to a group|
-|[**UmResourcesFindByType**](UserManagementApi.md#UmResourcesFindByType) | **Get** /um/resources/{resourceType} | Retrieve a list of Resources by type.|
-|[**UmResourcesFindByTypeAndId**](UserManagementApi.md#UmResourcesFindByTypeAndId) | **Get** /um/resources/{resourceType}/{resourceId} | Retrieve a Resource by type.|
-|[**UmResourcesGet**](UserManagementApi.md#UmResourcesGet) | **Get** /um/resources | List All Resources.|
-|[**UmUsersDelete**](UserManagementApi.md#UmUsersDelete) | **Delete** /um/users/{userId} | Delete a User|
-|[**UmUsersFindById**](UserManagementApi.md#UmUsersFindById) | **Get** /um/users/{userId} | Retrieve a User|
-|[**UmUsersGet**](UserManagementApi.md#UmUsersGet) | **Get** /um/users | List all Users |
-|[**UmUsersGroupsGet**](UserManagementApi.md#UmUsersGroupsGet) | **Get** /um/users/{userId}/groups | Retrieve a User&#39;s group resources|
-|[**UmUsersOwnsGet**](UserManagementApi.md#UmUsersOwnsGet) | **Get** /um/users/{userId}/owns | Retrieve a User&#39;s own resources|
-|[**UmUsersPost**](UserManagementApi.md#UmUsersPost) | **Post** /um/users | Create a user|
-|[**UmUsersPut**](UserManagementApi.md#UmUsersPut) | **Put** /um/users/{userId} | Modify a user|
+|[**UmGroupsDelete**](UserManagementApi.md#UmGroupsDelete) | **Delete** /um/groups/{groupId} | Delete groups|
+|[**UmGroupsFindById**](UserManagementApi.md#UmGroupsFindById) | **Get** /um/groups/{groupId} | Retrieve groups|
+|[**UmGroupsGet**](UserManagementApi.md#UmGroupsGet) | **Get** /um/groups | List all groups|
+|[**UmGroupsPost**](UserManagementApi.md#UmGroupsPost) | **Post** /um/groups | Create groups|
+|[**UmGroupsPut**](UserManagementApi.md#UmGroupsPut) | **Put** /um/groups/{groupId} | Modify groups|
+|[**UmGroupsResourcesGet**](UserManagementApi.md#UmGroupsResourcesGet) | **Get** /um/groups/{groupId}/resources | Retrieve group resources|
+|[**UmGroupsSharesDelete**](UserManagementApi.md#UmGroupsSharesDelete) | **Delete** /um/groups/{groupId}/shares/{resourceId} | Remove group shares|
+|[**UmGroupsSharesFindByResourceId**](UserManagementApi.md#UmGroupsSharesFindByResourceId) | **Get** /um/groups/{groupId}/shares/{resourceId} | Retrieve group shares|
+|[**UmGroupsSharesGet**](UserManagementApi.md#UmGroupsSharesGet) | **Get** /um/groups/{groupId}/shares | List group shares |
+|[**UmGroupsSharesPost**](UserManagementApi.md#UmGroupsSharesPost) | **Post** /um/groups/{groupId}/shares/{resourceId} | Add group shares|
+|[**UmGroupsSharesPut**](UserManagementApi.md#UmGroupsSharesPut) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify group share privileges|
+|[**UmGroupsUsersDelete**](UserManagementApi.md#UmGroupsUsersDelete) | **Delete** /um/groups/{groupId}/users/{userId} | Remove users from groups|
+|[**UmGroupsUsersGet**](UserManagementApi.md#UmGroupsUsersGet) | **Get** /um/groups/{groupId}/users | List group members|
+|[**UmGroupsUsersPost**](UserManagementApi.md#UmGroupsUsersPost) | **Post** /um/groups/{groupId}/users | Add group members|
+|[**UmResourcesFindByType**](UserManagementApi.md#UmResourcesFindByType) | **Get** /um/resources/{resourceType} | List resources by type|
+|[**UmResourcesFindByTypeAndId**](UserManagementApi.md#UmResourcesFindByTypeAndId) | **Get** /um/resources/{resourceType}/{resourceId} | Retrieve resources by type|
+|[**UmResourcesGet**](UserManagementApi.md#UmResourcesGet) | **Get** /um/resources | List all resources|
+|[**UmUsersDelete**](UserManagementApi.md#UmUsersDelete) | **Delete** /um/users/{userId} | Delete users|
+|[**UmUsersFindById**](UserManagementApi.md#UmUsersFindById) | **Get** /um/users/{userId} | Retrieve users|
+|[**UmUsersGet**](UserManagementApi.md#UmUsersGet) | **Get** /um/users | List all users |
+|[**UmUsersGroupsGet**](UserManagementApi.md#UmUsersGroupsGet) | **Get** /um/users/{userId}/groups | Retrieve group resources by user ID|
+|[**UmUsersOwnsGet**](UserManagementApi.md#UmUsersOwnsGet) | **Get** /um/users/{userId}/owns | Retrieve user resources by user ID|
+|[**UmUsersPost**](UserManagementApi.md#UmUsersPost) | **Post** /um/users | Create users|
+|[**UmUsersPut**](UserManagementApi.md#UmUsersPut) | **Put** /um/users/{userId} | Modify users|
 
 
 
@@ -41,7 +41,7 @@ var result  = UmGroupsDelete(ctx, groupId)
                       .Execute()
 ```
 
-Delete a Group
+Delete groups
 
 
 
@@ -58,7 +58,7 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | The unique ID of the group
+    groupId := "groupId_example" // string | The unique ID of the group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -79,7 +79,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** | The unique ID of the group | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -113,7 +113,7 @@ var result Group = UmGroupsFindById(ctx, groupId)
                       .Execute()
 ```
 
-Retrieve a Group
+Retrieve groups
 
 
 
@@ -130,7 +130,7 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | The unique ID of the group
+    groupId := "groupId_example" // string | The unique ID of the group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -153,7 +153,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** | The unique ID of the group | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -187,7 +187,7 @@ var result Groups = UmGroupsGet(ctx)
                       .Execute()
 ```
 
-List All Groups.
+List all groups
 
 
 
@@ -257,7 +257,7 @@ var result Group = UmGroupsPost(ctx)
                       .Execute()
 ```
 
-Create a Group
+Create groups
 
 
 
@@ -274,7 +274,7 @@ import (
 )
 
 func main() {
-    group := *openapiclient.NewGroup(*openapiclient.NewGroupProperties()) // Group | Group to be created
+    group := *openapiclient.NewGroup(*openapiclient.NewGroupProperties()) // Group | The group to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -302,7 +302,7 @@ Other parameters are passed through a pointer to a apiUmGroupsPostRequest struct
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **group** | [**Group**](Group.md) | Group to be created | |
+| **group** | [**Group**](Group.md) | The group to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -329,7 +329,7 @@ var result Group = UmGroupsPut(ctx, groupId)
                       .Execute()
 ```
 
-Modify a group
+Modify groups
 
 
 
@@ -346,8 +346,8 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | The unique ID of the group
-    group := *openapiclient.NewGroup(*openapiclient.NewGroupProperties()) // Group | Modified properties of the Group
+    groupId := "groupId_example" // string | The unique ID of the group.
+    group := *openapiclient.NewGroup(*openapiclient.NewGroupProperties()) // Group | The modified group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -370,7 +370,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** | The unique ID of the group | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -379,7 +379,7 @@ Other parameters are passed through a pointer to a apiUmGroupsPutRequest struct 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **group** | [**Group**](Group.md) | Modified properties of the Group | |
+| **group** | [**Group**](Group.md) | The modified group. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -405,7 +405,9 @@ var result ResourceGroups = UmGroupsResourcesGet(ctx, groupId)
                       .Execute()
 ```
 
-Retrieve resources assigned to a group
+Retrieve group resources
+
+
 
 ### Example
 
@@ -420,7 +422,7 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | The unique ID of the group
+    groupId := "groupId_example" // string | The unique ID of the group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -443,7 +445,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** | The unique ID of the group | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -477,7 +479,7 @@ var result  = UmGroupsSharesDelete(ctx, groupId, resourceId)
                       .Execute()
 ```
 
-Remove a resource from a group
+Remove group shares
 
 
 
@@ -494,8 +496,8 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
-    resourceId := "resourceId_example" // string | 
+    groupId := "groupId_example" // string | The unique ID of the group.
+    resourceId := "resourceId_example" // string | The unique ID of the resource.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -516,8 +518,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
-|**resourceId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
+|**resourceId** | **string** | The unique ID of the resource. | |
 
 ### Other Parameters
 
@@ -551,7 +553,7 @@ var result GroupShare = UmGroupsSharesFindByResourceId(ctx, groupId, resourceId)
                       .Execute()
 ```
 
-Retrieve a group share
+Retrieve group shares
 
 
 
@@ -568,8 +570,8 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
-    resourceId := "resourceId_example" // string | 
+    groupId := "groupId_example" // string | The unique ID of the group.
+    resourceId := "resourceId_example" // string | The unique ID of the resource.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -592,8 +594,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
-|**resourceId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
+|**resourceId** | **string** | The unique ID of the resource. | |
 
 ### Other Parameters
 
@@ -627,7 +629,7 @@ var result GroupShares = UmGroupsSharesGet(ctx, groupId)
                       .Execute()
 ```
 
-List Group Shares 
+List group shares 
 
 
 
@@ -644,7 +646,7 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
+    groupId := "groupId_example" // string | The unique ID of the group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -667,7 +669,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -702,7 +704,7 @@ var result GroupShare = UmGroupsSharesPost(ctx, groupId, resourceId)
                       .Execute()
 ```
 
-Add a resource to a group
+Add group shares
 
 
 
@@ -719,9 +721,9 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
-    resourceId := "resourceId_example" // string | 
-    resource := *openapiclient.NewGroupShare(*openapiclient.NewGroupShareProperties()) // GroupShare | Resource to be added
+    groupId := "groupId_example" // string | The unique ID of the group.
+    resourceId := "resourceId_example" // string | The unique ID of the resource.
+    resource := *openapiclient.NewGroupShare(*openapiclient.NewGroupShareProperties()) // GroupShare | The resource to add.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -744,8 +746,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
-|**resourceId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
+|**resourceId** | **string** | The unique ID of the resource. | |
 
 ### Other Parameters
 
@@ -754,7 +756,7 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPostRequest 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **resource** | [**GroupShare**](GroupShare.md) | Resource to be added | |
+| **resource** | [**GroupShare**](GroupShare.md) | The resource to add. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -781,7 +783,7 @@ var result GroupShare = UmGroupsSharesPut(ctx, groupId, resourceId)
                       .Execute()
 ```
 
-Modify resource permissions of a group
+Modify group share privileges
 
 
 
@@ -798,9 +800,9 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
-    resourceId := "resourceId_example" // string | 
-    resource := *openapiclient.NewGroupShare(*openapiclient.NewGroupShareProperties()) // GroupShare | Modified Resource
+    groupId := "groupId_example" // string | The unique ID of the group.
+    resourceId := "resourceId_example" // string | The unique ID of the resource.
+    resource := *openapiclient.NewGroupShare(*openapiclient.NewGroupShareProperties()) // GroupShare | The modified resource
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -823,8 +825,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
-|**resourceId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
+|**resourceId** | **string** | The unique ID of the resource. | |
 
 ### Other Parameters
 
@@ -833,7 +835,7 @@ Other parameters are passed through a pointer to a apiUmGroupsSharesPutRequest s
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **resource** | [**GroupShare**](GroupShare.md) | Modified Resource | |
+| **resource** | [**GroupShare**](GroupShare.md) | The modified resource | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -859,7 +861,7 @@ var result  = UmGroupsUsersDelete(ctx, groupId, userId)
                       .Execute()
 ```
 
-Remove a user from a group
+Remove users from groups
 
 
 
@@ -876,8 +878,8 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
-    userId := "userId_example" // string | 
+    groupId := "groupId_example" // string | The unique ID of the group.
+    userId := "userId_example" // string | The unique ID of the user.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -898,8 +900,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
-|**userId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
+|**userId** | **string** | The unique ID of the user. | |
 
 ### Other Parameters
 
@@ -933,7 +935,7 @@ var result GroupMembers = UmGroupsUsersGet(ctx, groupId)
                       .Execute()
 ```
 
-List Group Members 
+List group members
 
 
 
@@ -950,7 +952,7 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
+    groupId := "groupId_example" // string | The unique ID of the group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -973,7 +975,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -1008,7 +1010,7 @@ var result User = UmGroupsUsersPost(ctx, groupId)
                       .Execute()
 ```
 
-Add a user to a group
+Add group members
 
 
 
@@ -1025,8 +1027,8 @@ import (
 )
 
 func main() {
-    groupId := "groupId_example" // string | 
-    user := *openapiclient.NewUser(*openapiclient.NewUserProperties()) // User | User to be added
+    groupId := "groupId_example" // string | The unique ID of the group.
+    user := *openapiclient.NewUser(*openapiclient.NewUserProperties()) // User | The user to add.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1049,7 +1051,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**groupId** | **string** |  | |
+|**groupId** | **string** | The unique ID of the group. | |
 
 ### Other Parameters
 
@@ -1058,7 +1060,7 @@ Other parameters are passed through a pointer to a apiUmGroupsUsersPostRequest s
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**User**](User.md) | User to be added | |
+| **user** | [**User**](User.md) | The user to add. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1084,7 +1086,7 @@ var result Resources = UmResourcesFindByType(ctx, resourceType)
                       .Execute()
 ```
 
-Retrieve a list of Resources by type.
+List resources by type
 
 
 
@@ -1101,7 +1103,7 @@ import (
 )
 
 func main() {
-    resourceType := "resourceType_example" // string | The resource Type
+    resourceType := "resourceType_example" // string | The resource type
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1124,7 +1126,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**resourceType** | **string** | The resource Type | |
+|**resourceType** | **string** | The resource type | |
 
 ### Other Parameters
 
@@ -1158,7 +1160,7 @@ var result Resource = UmResourcesFindByTypeAndId(ctx, resourceType, resourceId)
                       .Execute()
 ```
 
-Retrieve a Resource by type.
+Retrieve resources by type
 
 
 
@@ -1175,8 +1177,8 @@ import (
 )
 
 func main() {
-    resourceType := "resourceType_example" // string | The resource Type
-    resourceId := "resourceId_example" // string | The resource Uuid
+    resourceType := "resourceType_example" // string | The resource type
+    resourceId := "resourceId_example" // string | The resource ID
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1199,8 +1201,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**resourceType** | **string** | The resource Type | |
-|**resourceId** | **string** | The resource Uuid | |
+|**resourceType** | **string** | The resource type | |
+|**resourceId** | **string** | The resource ID | |
 
 ### Other Parameters
 
@@ -1234,7 +1236,7 @@ var result Resources = UmResourcesGet(ctx)
                       .Execute()
 ```
 
-List All Resources.
+List all resources
 
 
 
@@ -1303,7 +1305,7 @@ var result  = UmUsersDelete(ctx, userId)
                       .Execute()
 ```
 
-Delete a User
+Delete users
 
 
 
@@ -1320,7 +1322,7 @@ import (
 )
 
 func main() {
-    userId := "userId_example" // string | The unique ID of the user
+    userId := "userId_example" // string | The unique ID of the user.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1341,7 +1343,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**userId** | **string** | The unique ID of the user | |
+|**userId** | **string** | The unique ID of the user. | |
 
 ### Other Parameters
 
@@ -1375,7 +1377,7 @@ var result User = UmUsersFindById(ctx, userId)
                       .Execute()
 ```
 
-Retrieve a User
+Retrieve users
 
 
 
@@ -1392,7 +1394,7 @@ import (
 )
 
 func main() {
-    userId := "userId_example" // string | The unique ID of the user
+    userId := "userId_example" // string | The unique ID of the user.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1415,7 +1417,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**userId** | **string** | The unique ID of the user | |
+|**userId** | **string** | The unique ID of the user. | |
 
 ### Other Parameters
 
@@ -1451,7 +1453,7 @@ var result Users = UmUsersGet(ctx)
                       .Execute()
 ```
 
-List all Users 
+List all users 
 
 
 
@@ -1472,7 +1474,7 @@ func main() {
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
-    limit := int32(56) // int32 | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 100)
+    limit := int32(56) // int32 | The maximum number of elements to return (use together with <code>offset</code> for pagination). (optional) (default to 100)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
@@ -1501,7 +1503,7 @@ Other parameters are passed through a pointer to a apiUmUsersGetRequest struct v
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 | **offset** | **int32** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [default to 0]|
-| **limit** | **int32** | the maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination) | [default to 100]|
+| **limit** | **int32** | The maximum number of elements to return (use together with &lt;code&gt;offset&lt;/code&gt; for pagination). | [default to 100]|
 
 ### Return type
 
@@ -1524,7 +1526,7 @@ var result ResourceGroups = UmUsersGroupsGet(ctx, userId)
                       .Execute()
 ```
 
-Retrieve a User's group resources
+Retrieve group resources by user ID
 
 
 
@@ -1541,7 +1543,7 @@ import (
 )
 
 func main() {
-    userId := "userId_example" // string | The unique ID of the user
+    userId := "userId_example" // string | The unique ID of the user.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1564,7 +1566,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**userId** | **string** | The unique ID of the user | |
+|**userId** | **string** | The unique ID of the user. | |
 
 ### Other Parameters
 
@@ -1598,7 +1600,7 @@ var result ResourcesUsers = UmUsersOwnsGet(ctx, userId)
                       .Execute()
 ```
 
-Retrieve a User's own resources
+Retrieve user resources by user ID
 
 
 
@@ -1615,7 +1617,7 @@ import (
 )
 
 func main() {
-    userId := "userId_example" // string | The unique ID of the user
+    userId := "userId_example" // string | The unique ID of the user.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1638,7 +1640,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**userId** | **string** | The unique ID of the user | |
+|**userId** | **string** | The unique ID of the user. | |
 
 ### Other Parameters
 
@@ -1673,7 +1675,7 @@ var result User = UmUsersPost(ctx)
                       .Execute()
 ```
 
-Create a user
+Create users
 
 
 
@@ -1690,7 +1692,7 @@ import (
 )
 
 func main() {
-    user := *openapiclient.NewUserPost(*openapiclient.NewUserPropertiesPost()) // UserPost | User to be created
+    user := *openapiclient.NewUserPost(*openapiclient.NewUserPropertiesPost()) // UserPost | The user to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1718,7 +1720,7 @@ Other parameters are passed through a pointer to a apiUmUsersPostRequest struct 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**UserPost**](UserPost.md) | User to be created | |
+| **user** | [**UserPost**](UserPost.md) | The user to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1745,7 +1747,7 @@ var result User = UmUsersPut(ctx, userId)
                       .Execute()
 ```
 
-Modify a user
+Modify users
 
 
 
@@ -1762,8 +1764,8 @@ import (
 )
 
 func main() {
-    userId := "userId_example" // string | 
-    user := *openapiclient.NewUserPut(*openapiclient.NewUserPropertiesPut()) // UserPut | Modified user
+    userId := "userId_example" // string | The unique ID of the user.
+    user := *openapiclient.NewUserPut(*openapiclient.NewUserPropertiesPut()) // UserPut | The modified user
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1786,7 +1788,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**userId** | **string** |  | |
+|**userId** | **string** | The unique ID of the user. | |
 
 ### Other Parameters
 
@@ -1795,7 +1797,7 @@ Other parameters are passed through a pointer to a apiUmUsersPutRequest struct v
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **user** | [**UserPut**](UserPut.md) | Modified user | |
+| **user** | [**UserPut**](UserPut.md) | The modified user | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

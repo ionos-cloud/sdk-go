@@ -4,21 +4,21 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
-|**DatacenterId** | **string** | A valid uuid of the datacenter on which user has access | |
-|**NodeCount** | **int32** | Number of nodes part of the Node Pool | |
-|**CpuFamily** | **string** | A valid cpu family name | |
-|**CoresCount** | **int32** | Number of cores for node | |
-|**RamSize** | **int32** | RAM size for node, minimum size is 2048MB. Ram size must be set to multiple of 1024MB. | |
-|**AvailabilityZone** | **string** | The availability zone in which the target VM should exist | |
-|**StorageType** | **string** | Hardware type of the volume | |
+|**Name** | **string** | A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
+|**DatacenterId** | **string** | A valid ID of the data center, to which the user has access. | |
+|**NodeCount** | **int32** | The number of nodes that make up the node pool. | |
+|**CpuFamily** | **string** | A valid CPU family name. | |
+|**CoresCount** | **int32** | The number of cores for the node. | |
+|**RamSize** | **int32** | The RAM size for the node. Must be set in multiples of 1024 MB, with minimum size is of 2048 MB. | |
+|**AvailabilityZone** | **string** | The availability zone in which the target VM should be provisioned. | |
+|**StorageType** | **string** | The type of hardware for the volume. | |
 |**StorageSize** | **int32** | The size of the volume in GB. The size should be greater than 10GB. | |
-|**K8sVersion** | Pointer to **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] |
+|**K8sVersion** | Pointer to **string** | The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions. | [optional] |
 |**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
 |**AutoScaling** | Pointer to [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] |
 |**Lans** | Pointer to [**[]KubernetesNodePoolLan**](KubernetesNodePoolLan.md) | array of additional LANs attached to worker nodes | [optional] |
-|**Labels** | Pointer to **map[string]string** | map of labels attached to node pool | [optional] |
-|**Annotations** | Pointer to **map[string]string** | map of annotations attached to node pool | [optional] |
+|**Labels** | Pointer to **map[string]string** | map of labels attached to node pool. | [optional] |
+|**Annotations** | Pointer to **map[string]string** | map of annotations attached to node pool. | [optional] |
 |**PublicIps** | Pointer to **[]string** | Optional array of reserved public IP addresses to be used by the nodes. IPs must be from same location as the data center used for the node pool. The array must contain one extra IP than maximum number of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1 if auto scaling is used) The extra provided IP Will be used during rebuilding of nodes. | [optional] |
 
 ## Methods

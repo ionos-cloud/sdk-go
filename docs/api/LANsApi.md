@@ -1,18 +1,18 @@
-# \LansApi
+# \LANsApi
 
 All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersLansDelete**](LansApi.md#DatacentersLansDelete) | **Delete** /datacenters/{datacenterId}/lans/{lanId} | Delete a Lan.|
-|[**DatacentersLansFindById**](LansApi.md#DatacentersLansFindById) | **Get** /datacenters/{datacenterId}/lans/{lanId} | Retrieve a Lan|
-|[**DatacentersLansGet**](LansApi.md#DatacentersLansGet) | **Get** /datacenters/{datacenterId}/lans | List Lans|
-|[**DatacentersLansNicsFindById**](LansApi.md#DatacentersLansNicsFindById) | **Get** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve a nic attached to lan|
-|[**DatacentersLansNicsGet**](LansApi.md#DatacentersLansNicsGet) | **Get** /datacenters/{datacenterId}/lans/{lanId}/nics | List Lan Members |
-|[**DatacentersLansNicsPost**](LansApi.md#DatacentersLansNicsPost) | **Post** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach a nic|
-|[**DatacentersLansPatch**](LansApi.md#DatacentersLansPatch) | **Patch** /datacenters/{datacenterId}/lans/{lanId} | Partially modify a Lan|
-|[**DatacentersLansPost**](LansApi.md#DatacentersLansPost) | **Post** /datacenters/{datacenterId}/lans | Create a Lan|
-|[**DatacentersLansPut**](LansApi.md#DatacentersLansPut) | **Put** /datacenters/{datacenterId}/lans/{lanId} | Modify a Lan|
+|[**DatacentersLansDelete**](LANsApi.md#DatacentersLansDelete) | **Delete** /datacenters/{datacenterId}/lans/{lanId} | Delete LANs|
+|[**DatacentersLansFindById**](LANsApi.md#DatacentersLansFindById) | **Get** /datacenters/{datacenterId}/lans/{lanId} | Retrieve LANs|
+|[**DatacentersLansGet**](LANsApi.md#DatacentersLansGet) | **Get** /datacenters/{datacenterId}/lans | List LANs|
+|[**DatacentersLansNicsFindById**](LANsApi.md#DatacentersLansNicsFindById) | **Get** /datacenters/{datacenterId}/lans/{lanId}/nics/{nicId} | Retrieve attached NICs|
+|[**DatacentersLansNicsGet**](LANsApi.md#DatacentersLansNicsGet) | **Get** /datacenters/{datacenterId}/lans/{lanId}/nics | List LAN members|
+|[**DatacentersLansNicsPost**](LANsApi.md#DatacentersLansNicsPost) | **Post** /datacenters/{datacenterId}/lans/{lanId}/nics | Attach NICs|
+|[**DatacentersLansPatch**](LANsApi.md#DatacentersLansPatch) | **Patch** /datacenters/{datacenterId}/lans/{lanId} | Partially modify LANs|
+|[**DatacentersLansPost**](LANsApi.md#DatacentersLansPost) | **Post** /datacenters/{datacenterId}/lans | Create LANs|
+|[**DatacentersLansPut**](LANsApi.md#DatacentersLansPut) | **Put** /datacenters/{datacenterId}/lans/{lanId} | Modify LANs|
 
 
 
@@ -26,7 +26,7 @@ var result  = DatacentersLansDelete(ctx, datacenterId, lanId)
                       .Execute()
 ```
 
-Delete a Lan.
+Delete LANs
 
 
 
@@ -44,16 +44,16 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
+    lanId := "lanId_example" // string | The unique ID of the LAN.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansDelete(context.Background(), datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansDelete(context.Background(), datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
 }
@@ -66,7 +66,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
+|**lanId** | **string** | The unique ID of the LAN. | |
 
 ### Other Parameters
 
@@ -100,7 +100,7 @@ var result Lan = DatacentersLansFindById(ctx, datacenterId, lanId)
                       .Execute()
 ```
 
-Retrieve a Lan
+Retrieve LANs
 
 
 
@@ -118,20 +118,20 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
+    lanId := "lanId_example" // string | The unique ID of the LAN.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansFindById(context.Background(), datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansFindById(context.Background(), datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansFindById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansFindById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansFindById`: Lan
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansFindById`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansFindById`: %v\n", resp)
 }
 ```
 
@@ -142,7 +142,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
+|**lanId** | **string** | The unique ID of the LAN. | |
 
 ### Other Parameters
 
@@ -178,7 +178,7 @@ var result Lans = DatacentersLansGet(ctx, datacenterId)
                       .Execute()
 ```
 
-List Lans
+List LANs
 
 
 
@@ -204,13 +204,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansGet(context.Background(), datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansGet(context.Background(), datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansGet`: Lans
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansGet`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansGet`: %v\n", resp)
 }
 ```
 
@@ -256,7 +256,7 @@ var result Nic = DatacentersLansNicsFindById(ctx, datacenterId, lanId, nicId)
                       .Execute()
 ```
 
-Retrieve a nic attached to lan
+Retrieve attached NICs
 
 
 
@@ -274,21 +274,21 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
-    nicId := "nicId_example" // string | The unique ID of the NIC
+    lanId := "lanId_example" // string | The unique ID of the LAN.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansNicsFindById(context.Background(), datacenterId, lanId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansNicsFindById(context.Background(), datacenterId, lanId, nicId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansNicsFindById``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansNicsFindById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansNicsFindById`: Nic
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansNicsFindById`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansNicsFindById`: %v\n", resp)
 }
 ```
 
@@ -299,8 +299,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**lanId** | **string** | The unique ID of the LAN. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -336,7 +336,7 @@ var result LanNics = DatacentersLansNicsGet(ctx, datacenterId, lanId)
                       .Execute()
 ```
 
-List Lan Members 
+List LAN members
 
 
 
@@ -354,7 +354,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
+    lanId := "lanId_example" // string | The unique ID of the LAN.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -363,13 +363,13 @@ func main() {
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansNicsGet(context.Background(), datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansNicsGet(context.Background(), datacenterId, lanId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansNicsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansNicsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansNicsGet`: LanNics
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansNicsGet`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansNicsGet`: %v\n", resp)
 }
 ```
 
@@ -380,7 +380,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
+|**lanId** | **string** | The unique ID of the LAN. | |
 
 ### Other Parameters
 
@@ -417,7 +417,7 @@ var result Nic = DatacentersLansNicsPost(ctx, datacenterId, lanId)
                       .Execute()
 ```
 
-Attach a nic
+Attach NICs
 
 
 
@@ -435,21 +435,21 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
-    nic := *openapiclient.NewNic(*openapiclient.NewNicProperties(int32(2))) // Nic | Nic to be attached
+    lanId := "lanId_example" // string | The unique ID of the LAN.
+    nic := *openapiclient.NewNic(*openapiclient.NewNicProperties(int32(2))) // Nic | The NIC to be attached.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansNicsPost(context.Background(), datacenterId, lanId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansNicsPost(context.Background(), datacenterId, lanId).Nic(nic).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansNicsPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansNicsPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansNicsPost`: Nic
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansNicsPost`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansNicsPost`: %v\n", resp)
 }
 ```
 
@@ -460,7 +460,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
+|**lanId** | **string** | The unique ID of the LAN. | |
 
 ### Other Parameters
 
@@ -469,7 +469,7 @@ Other parameters are passed through a pointer to a apiDatacentersLansNicsPostReq
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **nic** | [**Nic**](Nic.md) | Nic to be attached | |
+| **nic** | [**Nic**](Nic.md) | The NIC to be attached. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -496,7 +496,7 @@ var result Lan = DatacentersLansPatch(ctx, datacenterId, lanId)
                       .Execute()
 ```
 
-Partially modify a Lan
+Partially modify LANs
 
 
 
@@ -514,21 +514,21 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
-    lan := *openapiclient.NewLanProperties() // LanProperties | Modified Lan
+    lanId := "lanId_example" // string | The unique ID of the LAN.
+    lan := *openapiclient.NewLanProperties() // LanProperties | The properties of the LAN to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansPatch(context.Background(), datacenterId, lanId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansPatch(context.Background(), datacenterId, lanId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansPatch``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansPatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansPatch`: Lan
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansPatch`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansPatch`: %v\n", resp)
 }
 ```
 
@@ -539,7 +539,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
+|**lanId** | **string** | The unique ID of the LAN. | |
 
 ### Other Parameters
 
@@ -548,7 +548,7 @@ Other parameters are passed through a pointer to a apiDatacentersLansPatchReques
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **lan** | [**LanProperties**](LanProperties.md) | Modified Lan | |
+| **lan** | [**LanProperties**](LanProperties.md) | The properties of the LAN to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -575,7 +575,7 @@ var result LanPost = DatacentersLansPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create a Lan
+Create LANs
 
 
 
@@ -593,20 +593,20 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lan := *openapiclient.NewLanPost(*openapiclient.NewLanPropertiesPost()) // LanPost | Lan to be created
+    lan := *openapiclient.NewLanPost(*openapiclient.NewLanPropertiesPost()) // LanPost | The LAN to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansPost(context.Background(), datacenterId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansPost(context.Background(), datacenterId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansPost`: LanPost
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansPost`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansPost`: %v\n", resp)
 }
 ```
 
@@ -625,7 +625,7 @@ Other parameters are passed through a pointer to a apiDatacentersLansPostRequest
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **lan** | [**LanPost**](LanPost.md) | Lan to be created | |
+| **lan** | [**LanPost**](LanPost.md) | The LAN to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -652,7 +652,7 @@ var result Lan = DatacentersLansPut(ctx, datacenterId, lanId)
                       .Execute()
 ```
 
-Modify a Lan
+Modify LANs
 
 
 
@@ -670,21 +670,21 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lanId := "lanId_example" // string | The unique ID of the LAN
-    lan := *openapiclient.NewLan(*openapiclient.NewLanProperties()) // Lan | Modified Lan
+    lanId := "lanId_example" // string | The unique ID of the LAN.
+    lan := *openapiclient.NewLan(*openapiclient.NewLanProperties()) // Lan | The modified LAN
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
 
     configuration := openapiclient.NewConfiguration()
     api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.LansApi.DatacentersLansPut(context.Background(), datacenterId, lanId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, r, err := api_client.LANsApi.DatacentersLansPut(context.Background(), datacenterId, lanId).Lan(lan).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `LansApi.DatacentersLansPut``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansPut``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
     // response from `DatacentersLansPut`: Lan
-    fmt.Fprintf(os.Stdout, "Response from `LansApi.DatacentersLansPut`: %v\n", resp)
+    fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansPut`: %v\n", resp)
 }
 ```
 
@@ -695,7 +695,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**lanId** | **string** | The unique ID of the LAN | |
+|**lanId** | **string** | The unique ID of the LAN. | |
 
 ### Other Parameters
 
@@ -704,7 +704,7 @@ Other parameters are passed through a pointer to a apiDatacentersLansPutRequest 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **lan** | [**Lan**](Lan.md) | Modified Lan | |
+| **lan** | [**Lan**](Lan.md) | The modified LAN | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

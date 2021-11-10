@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersServersNicsFirewallrulesDelete**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete a Firewall Rule|
-|[**DatacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve a Firewall Rule|
-|[**DatacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List Firewall Rules|
-|[**DatacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially Modify a Firewall Rule|
-|[**DatacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule|
-|[**DatacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule|
+|[**DatacentersServersNicsFirewallrulesDelete**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Delete firewall rules|
+|[**DatacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve firewall rules|
+|[**DatacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List firewall rules|
+|[**DatacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify firewall rules|
+|[**DatacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create firewall rules|
+|[**DatacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify firewall rules|
 
 
 
@@ -23,7 +23,7 @@ var result  = DatacentersServersNicsFirewallrulesDelete(ctx, datacenterId, serve
                       .Execute()
 ```
 
-Delete a Firewall Rule
+Delete firewall rules
 
 
 
@@ -41,9 +41,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    firewallruleId := "firewallruleId_example" // string | The unique ID of the firewall rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -65,9 +65,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**firewallruleId** | **string** | The unique ID of the firewall rule. | |
 
 ### Other Parameters
 
@@ -101,7 +101,7 @@ var result FirewallRule = DatacentersServersNicsFirewallrulesFindById(ctx, datac
                       .Execute()
 ```
 
-Retrieve a Firewall Rule
+Retrieve firewall rules
 
 
 
@@ -119,9 +119,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    firewallruleId := "firewallruleId_example" // string | The unique ID of the firewall rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -145,9 +145,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**firewallruleId** | **string** | The unique ID of the firewall rule. | |
 
 ### Other Parameters
 
@@ -183,7 +183,7 @@ var result FirewallRules = DatacentersServersNicsFirewallrulesGet(ctx, datacente
                       .Execute()
 ```
 
-List Firewall Rules
+List firewall rules
 
 
 
@@ -201,8 +201,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -228,8 +228,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -266,7 +266,7 @@ var result FirewallRule = DatacentersServersNicsFirewallrulesPatch(ctx, datacent
                       .Execute()
 ```
 
-Partially Modify a Firewall Rule
+Partially modify firewall rules
 
 
 
@@ -284,10 +284,10 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
-    firewallrule := *openapiclient.NewFirewallruleProperties("TCP") // FirewallruleProperties | Modified Firewall Rule
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    firewallruleId := "firewallruleId_example" // string | The unique ID of the firewall rule.
+    firewallrule := *openapiclient.NewFirewallruleProperties("TCP") // FirewallruleProperties | The properties of the firewall rule to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -311,9 +311,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**firewallruleId** | **string** | The unique ID of the firewall rule. | |
 
 ### Other Parameters
 
@@ -322,7 +322,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md) | Modified Firewall Rule | |
+| **firewallrule** | [**FirewallruleProperties**](FirewallruleProperties.md) | The properties of the firewall rule to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -349,7 +349,7 @@ var result FirewallRule = DatacentersServersNicsFirewallrulesPost(ctx, datacente
                       .Execute()
 ```
 
-Create a Firewall Rule
+Create firewall rules
 
 
 
@@ -367,9 +367,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    firewallrule := *openapiclient.NewFirewallRule(*openapiclient.NewFirewallruleProperties("TCP")) // FirewallRule | Firewall Rule to be created
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    firewallrule := *openapiclient.NewFirewallRule(*openapiclient.NewFirewallruleProperties("TCP")) // FirewallRule | The firewall rule to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -393,8 +393,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the server | |
-|**nicId** | **string** | The unique ID of the NIC | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
 
 ### Other Parameters
 
@@ -403,7 +403,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **firewallrule** | [**FirewallRule**](FirewallRule.md) | Firewall Rule to be created | |
+| **firewallrule** | [**FirewallRule**](FirewallRule.md) | The firewall rule to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -430,7 +430,7 @@ var result FirewallRule = DatacentersServersNicsFirewallrulesPut(ctx, datacenter
                       .Execute()
 ```
 
-Modify a Firewall Rule
+Modify firewall rules
 
 
 
@@ -448,10 +448,10 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    nicId := "nicId_example" // string | The unique ID of the NIC
-    firewallruleId := "firewallruleId_example" // string | The unique ID of the Firewall Rule
-    firewallrule := *openapiclient.NewFirewallRule(*openapiclient.NewFirewallruleProperties("TCP")) // FirewallRule | Modified Firewall Rule
+    serverId := "serverId_example" // string | The unique ID of the server.
+    nicId := "nicId_example" // string | The unique ID of the NIC.
+    firewallruleId := "firewallruleId_example" // string | The unique ID of the firewall rule.
+    firewallrule := *openapiclient.NewFirewallRule(*openapiclient.NewFirewallruleProperties("TCP")) // FirewallRule | The modified firewall rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -475,9 +475,9 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**nicId** | **string** | The unique ID of the NIC | |
-|**firewallruleId** | **string** | The unique ID of the Firewall Rule | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**nicId** | **string** | The unique ID of the NIC. | |
+|**firewallruleId** | **string** | The unique ID of the firewall rule. | |
 
 ### Other Parameters
 
@@ -486,7 +486,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersNicsFire
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **firewallrule** | [**FirewallRule**](FirewallRule.md) | Modified Firewall Rule | |
+| **firewallrule** | [**FirewallRule**](FirewallRule.md) | The modified firewall rule. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

@@ -4,14 +4,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Firstname** | Pointer to **string** | first name of the user | [optional] |
-|**Lastname** | Pointer to **string** | last name of the user | [optional] |
-|**Email** | Pointer to **string** | email address of the user | [optional] |
-|**Administrator** | Pointer to **bool** | indicates if the user has admin rights or not | [optional] |
-|**ForceSecAuth** | Pointer to **bool** | indicates if secure authentication should be forced on the user or not | [optional] |
-|**SecAuthActive** | Pointer to **bool** | indicates if secure authentication is active for the user or not | [optional] |
-|**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) id of the user for a given identity | [optional] |
-|**Active** | Pointer to **bool** | indicates if the user is active | [optional] |
+|**Firstname** | Pointer to **string** | The first name of the user. | [optional] |
+|**Lastname** | Pointer to **string** | The last name of the user. | [optional] |
+|**Email** | Pointer to **string** | The email address of the user. | [optional] |
+|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
+|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
+|**SecAuthActive** | Pointer to **bool** | Indicates if secure authentication is active for the user. | [optional] |
+|**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) ID of the user for a given identity. | [optional] |
+|**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
 
 ## Methods
 

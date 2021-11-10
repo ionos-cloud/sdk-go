@@ -5,7 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Id** | **int32** | The LAN ID of an existing LAN at the related datacenter | |
-|**Dhcp** | Pointer to **bool** | Indicates if the Kubernetes Node Pool LAN will reserve an IP using DHCP | [optional] |
+|**Dhcp** | Pointer to **bool** | Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP. | [optional] |
 |**Routes** | Pointer to [**[]KubernetesNodePoolLanRoutes**](KubernetesNodePoolLanRoutes.md) | array of additional LANs attached to worker nodes | [optional] |
 
 ## Methods

@@ -4,15 +4,15 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**TemplateUuid** | Pointer to **string** | The UUID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource | [optional] |
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
-|**Cores** | **int32** | The total number of cores for the server | |
-|**Ram** | **int32** | The amount of memory for the server in MB, e.g. 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | |
-|**AvailabilityZone** | Pointer to **string** | The availability zone in which the server should exist | [optional] |
-|**VmState** | Pointer to **string** | Status of the virtual Machine | [optional] [readonly] |
+|**TemplateUuid** | Pointer to **string** | The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource. | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**Cores** | **int32** | The total number of cores for the server. | |
+|**Ram** | **int32** | The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | |
+|**AvailabilityZone** | Pointer to **string** | The availability zone in which the server should be provisioned. | [optional] |
+|**VmState** | Pointer to **string** | Status of the virtual machine. | [optional] [readonly] |
 |**BootCdrom** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 |**BootVolume** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
-|**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource | [optional] |
+|**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource. | [optional] |
 |**Type** | Pointer to **string** | server usages: ENTERPRISE or CUBE | [optional] |
 
 ## Methods

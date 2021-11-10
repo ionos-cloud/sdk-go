@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**ErrorCode** | Pointer to **string** | Application internal error code | [optional] [readonly] |
-|**Message** | Pointer to **string** | Human readable message | [optional] [readonly] |
+|**ErrorCode** | Pointer to **string** | Application internal error code. | [optional] [readonly] |
+|**Message** | Pointer to **string** | Human-readable message. | [optional] [readonly] |
 
 ## Methods
 

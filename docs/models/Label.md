@@ -5,8 +5,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Id** | Pointer to **string** | Label is identified using standard URN. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of object that has been created | [optional] [readonly] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path) | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of object that has been created. | [optional] [readonly] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Metadata** | Pointer to [**NoStateMetaData**](NoStateMetaData.md) |  | [optional] |
 |**Properties** | [**LabelProperties**](LabelProperties.md) |  | |
 

@@ -37,7 +37,7 @@ import (
 )
 
 func main() {
-    regionId := "regionId_example" // string | 
+    regionId := "regionId_example" // string | The unique ID of the region.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -60,7 +60,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**regionId** | **string** |  | |
+|**regionId** | **string** | The unique ID of the region. | |
 
 ### Other Parameters
 
@@ -111,8 +111,8 @@ import (
 )
 
 func main() {
-    regionId := "regionId_example" // string | 
-    locationId := "locationId_example" // string | 
+    regionId := "regionId_example" // string | The unique ID of the region.
+    locationId := "locationId_example" // string | The unique ID of the location.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -135,8 +135,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**regionId** | **string** |  | |
-|**locationId** | **string** |  | |
+|**regionId** | **string** | The unique ID of the region. | |
+|**locationId** | **string** | The unique ID of the location. | |
 
 ### Other Parameters
 

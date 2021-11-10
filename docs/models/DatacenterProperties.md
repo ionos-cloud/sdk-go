@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
-|**Description** | Pointer to **string** | A description for the datacenter, e.g. staging, production | [optional] |
-|**Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests) | |
-|**Version** | Pointer to **int32** | The version of that Data Center. Gets incremented with every change | [optional] [readonly] |
-|**Features** | Pointer to **[]string** | List of features supported by the location this data center is part of | [optional] [readonly] |
-|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection e.g. two factor protection | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**Description** | Pointer to **string** | A description for the datacenter, such as staging, production. | [optional] |
+|**Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests). | |
+|**Version** | Pointer to **int32** | The version of the data center; incremented with every change. | [optional] [readonly] |
+|**Features** | Pointer to **[]string** | List of features supported by the location where this data center is provisioned. | [optional] [readonly] |
+|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
 
 ## Methods

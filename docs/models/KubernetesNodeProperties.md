@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A Kubernetes Node Name. | |
+|**Name** | **string** | A Kubernetes node name. | |
 |**PublicIP** | Pointer to **string** | A valid public IP. | [optional] |
 |**PrivateIP** | Pointer to **string** | A valid private IP. | [optional] |
-|**K8sVersion** | **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | |
+|**K8sVersion** | **string** | The Kubernetes version the nodepool is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions. | |
 
 ## Methods
 

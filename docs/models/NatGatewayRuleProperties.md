@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | Name of the NAT gateway rule | |
-|**Type** | Pointer to [**NatGatewayRuleType**](NatGatewayRuleType.md) | Type of the NAT gateway rule. | [optional] |
-|**Protocol** | Pointer to [**NatGatewayRuleProtocol**](NatGatewayRuleProtocol.md) | Protocol of the NAT gateway rule. Defaults to ALL. If protocol is &#39;ICMP&#39; then targetPortRange start and end cannot be set. | [optional] |
-|**SourceSubnet** | **string** | Source subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address. | |
-|**PublicIp** | **string** | Public IP address of the NAT gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT gateway resource | |
-|**TargetSubnet** | Pointer to **string** | Target or destination subnet of the NAT gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address. | [optional] |
+|**Name** | **string** | The name of the NAT Gateway rule. | |
+|**Type** | Pointer to [**NatGatewayRuleType**](NatGatewayRuleType.md) | Type of the NAT Gateway rule. | [optional] |
+|**Protocol** | Pointer to [**NatGatewayRuleProtocol**](NatGatewayRuleProtocol.md) | Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is &#39;ICMP&#39; then targetPortRange start and end cannot be set. | [optional] |
+|**SourceSubnet** | **string** | Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address. | |
+|**PublicIp** | **string** | Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource | |
+|**TargetSubnet** | Pointer to **string** | Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address. | [optional] |
 |**TargetPortRange** | Pointer to [**TargetPortRange**](TargetPortRange.md) |  | [optional] |
 
 ## Methods

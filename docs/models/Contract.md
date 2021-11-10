@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Type** | Pointer to [**Type**](Type.md) | The type of the resource | [optional] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of the resource. | [optional] |
 |**Properties** | [**ContractProperties**](ContractProperties.md) |  | |
 
 ## Methods

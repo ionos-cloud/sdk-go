@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**ImagesDelete**](ImagesApi.md#ImagesDelete) | **Delete** /images/{imageId} | Delete an Image|
-|[**ImagesFindById**](ImagesApi.md#ImagesFindById) | **Get** /images/{imageId} | Retrieve an Image|
-|[**ImagesGet**](ImagesApi.md#ImagesGet) | **Get** /images | List Images|
-|[**ImagesPatch**](ImagesApi.md#ImagesPatch) | **Patch** /images/{imageId} | Partially modify an Image|
-|[**ImagesPut**](ImagesApi.md#ImagesPut) | **Put** /images/{imageId} | Modify an Image|
+|[**ImagesDelete**](ImagesApi.md#ImagesDelete) | **Delete** /images/{imageId} | Delete images|
+|[**ImagesFindById**](ImagesApi.md#ImagesFindById) | **Get** /images/{imageId} | Retrieve images|
+|[**ImagesGet**](ImagesApi.md#ImagesGet) | **Get** /images | List images|
+|[**ImagesPatch**](ImagesApi.md#ImagesPatch) | **Patch** /images/{imageId} | Partially modify images|
+|[**ImagesPut**](ImagesApi.md#ImagesPut) | **Put** /images/{imageId} | Modify images|
 
 
 
@@ -22,7 +22,7 @@ var result  = ImagesDelete(ctx, imageId)
                       .Execute()
 ```
 
-Delete an Image
+Delete images
 
 
 
@@ -39,7 +39,7 @@ import (
 )
 
 func main() {
-    imageId := "imageId_example" // string | 
+    imageId := "imageId_example" // string | The unique ID of the image.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -60,7 +60,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**imageId** | **string** |  | |
+|**imageId** | **string** | The unique ID of the image. | |
 
 ### Other Parameters
 
@@ -94,7 +94,7 @@ var result Image = ImagesFindById(ctx, imageId)
                       .Execute()
 ```
 
-Retrieve an Image
+Retrieve images
 
 
 
@@ -111,7 +111,7 @@ import (
 )
 
 func main() {
-    imageId := "imageId_example" // string | 
+    imageId := "imageId_example" // string | The unique ID of the image.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -134,7 +134,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**imageId** | **string** |  | |
+|**imageId** | **string** | The unique ID of the image. | |
 
 ### Other Parameters
 
@@ -168,7 +168,7 @@ var result Images = ImagesGet(ctx)
                       .Execute()
 ```
 
-List Images
+List images
 
 
 
@@ -238,7 +238,7 @@ var result Image = ImagesPatch(ctx, imageId)
                       .Execute()
 ```
 
-Partially modify an Image
+Partially modify images
 
 
 
@@ -255,8 +255,8 @@ import (
 )
 
 func main() {
-    imageId := "imageId_example" // string | 
-    image := *openapiclient.NewImageProperties("LINUX") // ImageProperties | Modified Image
+    imageId := "imageId_example" // string | The unique ID of the image.
+    image := *openapiclient.NewImageProperties("LINUX") // ImageProperties | The image properties to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -279,7 +279,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**imageId** | **string** |  | |
+|**imageId** | **string** | The unique ID of the image. | |
 
 ### Other Parameters
 
@@ -288,7 +288,7 @@ Other parameters are passed through a pointer to a apiImagesPatchRequest struct 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **image** | [**ImageProperties**](ImageProperties.md) | Modified Image | |
+| **image** | [**ImageProperties**](ImageProperties.md) | The image properties to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -315,7 +315,7 @@ var result Image = ImagesPut(ctx, imageId)
                       .Execute()
 ```
 
-Modify an Image
+Modify images
 
 
 
@@ -332,8 +332,8 @@ import (
 )
 
 func main() {
-    imageId := "imageId_example" // string | 
-    image := *openapiclient.NewImage(*openapiclient.NewImageProperties("LINUX")) // Image | Modified Image
+    imageId := "imageId_example" // string | The unique ID of the image.
+    image := *openapiclient.NewImage(*openapiclient.NewImageProperties("LINUX")) // Image | The modified image
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -356,7 +356,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**imageId** | **string** |  | |
+|**imageId** | **string** | The unique ID of the image. | |
 
 ### Other Parameters
 
@@ -365,7 +365,7 @@ Other parameters are passed through a pointer to a apiImagesPutRequest struct vi
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **image** | [**Image**](Image.md) | Modified Image | |
+| **image** | [**Image**](Image.md) | The modified image | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

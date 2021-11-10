@@ -4,17 +4,17 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
-|**CreateDataCenter** | Pointer to **bool** | create data center privilege | [optional] |
-|**CreateSnapshot** | Pointer to **bool** | create snapshot privilege | [optional] |
-|**ReserveIp** | Pointer to **bool** | reserve ip block privilege | [optional] |
-|**AccessActivityLog** | Pointer to **bool** | activity log access privilege | [optional] |
-|**CreatePcc** | Pointer to **bool** | create pcc privilege | [optional] |
-|**S3Privilege** | Pointer to **bool** | S3 privilege | [optional] |
-|**CreateBackupUnit** | Pointer to **bool** | create backup unit privilege | [optional] |
-|**CreateInternetAccess** | Pointer to **bool** | create internet access privilege | [optional] |
-|**CreateK8sCluster** | Pointer to **bool** | create kubernetes cluster privilege | [optional] |
-|**CreateFlowLog** | Pointer to **bool** | create Flow Logs privilege | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**CreateDataCenter** | Pointer to **bool** | Create data center privilege. | [optional] |
+|**CreateSnapshot** | Pointer to **bool** | Create snapshot privilege. | [optional] |
+|**ReserveIp** | Pointer to **bool** | Reserve IP block privilege. | [optional] |
+|**AccessActivityLog** | Pointer to **bool** | Activity log access privilege. | [optional] |
+|**CreatePcc** | Pointer to **bool** | Create pcc privilege. | [optional] |
+|**S3Privilege** | Pointer to **bool** | S3 privilege. | [optional] |
+|**CreateBackupUnit** | Pointer to **bool** | Create backup unit privilege. | [optional] |
+|**CreateInternetAccess** | Pointer to **bool** | Create internet access privilege. | [optional] |
+|**CreateK8sCluster** | Pointer to **bool** | Create Kubernetes cluster privilege. | [optional] |
+|**CreateFlowLog** | Pointer to **bool** | Create Flow Logs privilege. | [optional] |
 |**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
 |**AccessAndManageCertificates** | Pointer to **bool** | Privilege for a group to access and manage certificates. | [optional] |
 

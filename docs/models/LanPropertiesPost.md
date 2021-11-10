@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**IpFailover** | Pointer to [**[]IPFailover**](IPFailover.md) | IP failover configurations for lan | [optional] |
-|**Pcc** | Pointer to **string** | Unique identifier of the private cross connect the given LAN is connected to if any | [optional] |
-|**Public** | Pointer to **bool** | Does this LAN faces the public Internet or not | [optional] |
+|**Pcc** | Pointer to **string** | The unique identifier of the private Cross-Connect the LAN is connected to, if any. | [optional] |
+|**Public** | Pointer to **bool** | This LAN faces the public Internet. | [optional] |
 
 ## Methods
 

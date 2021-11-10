@@ -4,7 +4,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**ContractsGet**](ContractResourcesApi.md#ContractsGet) | **Get** /contracts | Retrieve a Contract|
+|[**ContractsGet**](ContractResourcesApi.md#ContractsGet) | **Get** /contracts | Retrieve contracts|
 
 
 
@@ -18,7 +18,7 @@ var result Contracts = ContractsGet(ctx)
                       .Execute()
 ```
 
-Retrieve a Contract
+Retrieve contracts
 
 
 

@@ -4,9 +4,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**RequestsFindById**](RequestsApi.md#RequestsFindById) | **Get** /requests/{requestId} | Retrieve a Request|
-|[**RequestsGet**](RequestsApi.md#RequestsGet) | **Get** /requests | List Requests|
-|[**RequestsStatusGet**](RequestsApi.md#RequestsStatusGet) | **Get** /requests/{requestId}/status | Retrieve Request Status|
+|[**RequestsFindById**](RequestsApi.md#RequestsFindById) | **Get** /requests/{requestId} | Retrieve requests|
+|[**RequestsGet**](RequestsApi.md#RequestsGet) | **Get** /requests | List requests|
+|[**RequestsStatusGet**](RequestsApi.md#RequestsStatusGet) | **Get** /requests/{requestId}/status | Retrieve request status|
 
 
 
@@ -20,7 +20,7 @@ var result Request = RequestsFindById(ctx, requestId)
                       .Execute()
 ```
 
-Retrieve a Request
+Retrieve requests
 
 
 
@@ -37,7 +37,7 @@ import (
 )
 
 func main() {
-    requestId := "requestId_example" // string | 
+    requestId := "requestId_example" // string | The unique ID of the request.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -60,7 +60,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**requestId** | **string** |  | |
+|**requestId** | **string** | The unique ID of the request. | |
 
 ### Other Parameters
 
@@ -107,7 +107,7 @@ var result Requests = RequestsGet(ctx)
                       .Execute()
 ```
 
-List Requests
+List requests
 
 
 
@@ -127,17 +127,17 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
-    filterStatus := "filterStatus_example" // string | Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn't depend on depth query parameter (optional)
-    filterCreatedAfter := "filterCreatedAfter_example" // string | Request filter to fetch all requests created after the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 (optional)
-    filterCreatedBefore := "filterCreatedBefore_example" // string | Request filter to fetch all requests created before the specified date. It doesn't depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 (optional)
-    filterCreatedDate := "filterCreatedDate_example" // string | Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z (optional)
-    filterCreatedBy := "filterCreatedBy_example" // string | Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
-    filterEtag := "filterEtag_example" // string | Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
-    filterRequestStatus := "filterRequestStatus_example" // string | Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
-    filterMethod := "filterMethod_example" // string | Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
-    filterHeaders := "filterHeaders_example" // string | Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
-    filterBody := "filterBody_example" // string | Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
-    filterUrl := "filterUrl_example" // string | Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  (optional)
+    filterStatus := "filterStatus_example" // string | Filter the list by request status [QUEUED, RUNNING, DONE, FAILED]. Filter is not affected by the depth query parameter. (optional)
+    filterCreatedAfter := "filterCreatedAfter_example" // string | Filter the list to only include the requests created after the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. (optional)
+    filterCreatedBefore := "filterCreatedBefore_example" // string | Filter the list to only include the requests created before the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. (optional)
+    filterCreatedDate := "filterCreatedDate_example" // string | Filter the list to only include the requests that contain the createdDate, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. (optional)
+    filterCreatedBy := "filterCreatedBy_example" // string | Filter the list to only include the requests that contain the createdBy, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+    filterEtag := "filterEtag_example" // string | Filter the list to only include the requests that contain the specified etag. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+    filterRequestStatus := "filterRequestStatus_example" // string | Filter the list to only include the requests that contain the specified requestStatus. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+    filterMethod := "filterMethod_example" // string | Filter the list to only include the requests that contain the specified method. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+    filterHeaders := "filterHeaders_example" // string | Filter the list to only include the requests that contain the specified headers. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+    filterBody := "filterBody_example" // string | Filter the list to only include the requests that contain the specified body. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
+    filterUrl := "filterUrl_example" // string | Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  (optional)
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
     limit := int32(56) // int32 | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
 
@@ -167,17 +167,17 @@ Other parameters are passed through a pointer to a apiRequestsGetRequest struct 
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
-| **filterStatus** | **string** | Request filter to fetch all requests based on a particular status [QUEUED, RUNNING, DONE, FAILED]. It doesn&#39;t depend on depth query parameter | |
-| **filterCreatedAfter** | **string** | Request filter to fetch all requests created after the specified date. It doesn&#39;t depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 | |
-| **filterCreatedBefore** | **string** | Request filter to fetch all requests created before the specified date. It doesn&#39;t depend on depth query parameter. Date format e.g. 2021-01-01+00:00:00 | |
-| **filterCreatedDate** | **string** | Response filter to select and display only the requests that contains the specified createdDate. The value is case insensitive and it  depends on depth query parameter that should have a value greater than 0. Date format e.g. 2020-11-16T17:42:59Z | |
-| **filterCreatedBy** | **string** | Response filter to select and display only the requests that contains the specified createdBy. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
-| **filterEtag** | **string** | Response filter to select and display only the requests that contains the specified etag. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
-| **filterRequestStatus** | **string** | Response filter to select and display only the requests that contains the specified requestStatus. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
-| **filterMethod** | **string** | Response filter to select and display only the requests that contains the specified method. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
-| **filterHeaders** | **string** | Response filter to select and display only the requests that contains the specified headers. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
-| **filterBody** | **string** | Response filter to select and display only the requests that contains the specified body. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
-| **filterUrl** | **string** | Response filter to select and display only the requests that contains the specified url. The value is case insensitive and it depends on depth query parameter that should have a value greater than 0.  | |
+| **filterStatus** | **string** | Filter the list by request status [QUEUED, RUNNING, DONE, FAILED]. Filter is not affected by the depth query parameter. | |
+| **filterCreatedAfter** | **string** | Filter the list to only include the requests created after the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. | |
+| **filterCreatedBefore** | **string** | Filter the list to only include the requests created before the date, specified in the yyyy-MM-dd HH:mm:ss format. Filter is not affected by the depth query parameter. | |
+| **filterCreatedDate** | **string** | Filter the list to only include the requests that contain the createdDate, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero. | |
+| **filterCreatedBy** | **string** | Filter the list to only include the requests that contain the createdBy, specified in the yyyy-MM-dd HH:mm:ss format. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
+| **filterEtag** | **string** | Filter the list to only include the requests that contain the specified etag. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
+| **filterRequestStatus** | **string** | Filter the list to only include the requests that contain the specified requestStatus. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
+| **filterMethod** | **string** | Filter the list to only include the requests that contain the specified method. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
+| **filterHeaders** | **string** | Filter the list to only include the requests that contain the specified headers. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
+| **filterBody** | **string** | Filter the list to only include the requests that contain the specified body. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
+| **filterUrl** | **string** | Filter the list to only include the requests that contain the specified URL. The value is not case-sensitive, and the filter requires that the depth query parameter value is greater than zero.  | |
 | **offset** | **int32** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [default to 0]|
 | **limit** | **int32** | The maximum number of elements to return (use together with offset for pagination). | [default to 1000]|
 
@@ -202,7 +202,7 @@ var result RequestStatus = RequestsStatusGet(ctx, requestId)
                       .Execute()
 ```
 
-Retrieve Request Status
+Retrieve request status
 
 
 
@@ -219,7 +219,7 @@ import (
 )
 
 func main() {
-    requestId := "requestId_example" // string | 
+    requestId := "requestId_example" // string | The unique ID of the request.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -242,7 +242,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**requestId** | **string** |  | |
+|**requestId** | **string** | The unique ID of the request. | |
 
 ### Other Parameters
 

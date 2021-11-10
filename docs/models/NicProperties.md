@@ -4,15 +4,15 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
-|**Mac** | Pointer to **string** | The MAC address of the NIC | [optional] [readonly] |
-|**Ips** | Pointer to **[]string** | Collection of IP addresses assigned to a nic. Explicitly assigned public IPs need to come from reserved IP blocks, Passing value null or empty array will assign an IP address automatically. | [optional] |
-|**Dhcp** | Pointer to **bool** | Indicates if the nic will reserve an IP using DHCP | [optional] |
-|**Lan** | **int32** | The LAN ID the NIC will sit on. If the LAN ID does not exist it will be implicitly created | |
-|**FirewallActive** | Pointer to **bool** | Activate or deactivate the firewall. By default an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, ip addresses and ports. | [optional] |
-|**FirewallType** | Pointer to **string** | The type of firewall rules that will be allowed on the NIC. If it is not specified it will take the default value INGRESS | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**Mac** | Pointer to **string** | The MAC address of the NIC. | [optional] [readonly] |
+|**Ips** | Pointer to **[]string** | Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically. | [optional] |
+|**Dhcp** | Pointer to **bool** | Indicates if the NIC will reserve an IP using DHCP. | [optional] |
+|**Lan** | **int32** | The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created. | |
+|**FirewallActive** | Pointer to **bool** | Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports. | [optional] |
+|**FirewallType** | Pointer to **string** | The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is taken. | [optional] |
 |**DeviceNumber** | Pointer to **int32** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was create from CloudAPI and no DCD changes were done on the Datacenter. | [optional] [readonly] |
-|**PciSlot** | Pointer to **int32** | The PCI slot number of the Nic. | [optional] [readonly] |
+|**PciSlot** | Pointer to **int32** | The PCI slot number of the NIC. | [optional] [readonly] |
 
 ## Methods
 

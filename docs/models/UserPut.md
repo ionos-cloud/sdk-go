@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier | [optional] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] |
 |**Properties** | [**UserPropertiesPut**](UserPropertiesPut.md) |  | |
 
 ## Methods

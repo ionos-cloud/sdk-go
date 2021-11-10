@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**SecretKey** | Pointer to **string** | secret of the S3 key | [optional] [readonly] |
-|**Active** | Pointer to **bool** | denotes if the S3 key is active or not | [optional] |
+|**SecretKey** | Pointer to **string** | Secret of the S3 key. | [optional] [readonly] |
+|**Active** | Pointer to **bool** | Denotes weather the S3 key is active. | [optional] |
 
 ## Methods
 

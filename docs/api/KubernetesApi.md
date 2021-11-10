@@ -4,23 +4,23 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**K8sDelete**](KubernetesApi.md#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes Cluster|
-|[**K8sFindByClusterId**](KubernetesApi.md#K8sFindByClusterId) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes Cluster|
-|[**K8sGet**](KubernetesApi.md#K8sGet) | **Get** /k8s | List Kubernetes Clusters|
-|[**K8sKubeconfigGet**](KubernetesApi.md#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes Configuration File|
-|[**K8sNodepoolsDelete**](KubernetesApi.md#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes Node Pool|
-|[**K8sNodepoolsFindById**](KubernetesApi.md#K8sNodepoolsFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes Node Pool|
-|[**K8sNodepoolsGet**](KubernetesApi.md#K8sNodepoolsGet) | **Get** /k8s/{k8sClusterId}/nodepools | List Kubernetes Node Pools|
-|[**K8sNodepoolsNodesDelete**](KubernetesApi.md#K8sNodepoolsNodesDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes node|
-|[**K8sNodepoolsNodesFindById**](KubernetesApi.md#K8sNodepoolsNodesFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes node|
-|[**K8sNodepoolsNodesGet**](KubernetesApi.md#K8sNodepoolsNodesGet) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Retrieve Kubernetes nodes.|
-|[**K8sNodepoolsNodesReplacePost**](KubernetesApi.md#K8sNodepoolsNodesReplacePost) | **Post** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate the Kubernetes node|
-|[**K8sNodepoolsPost**](KubernetesApi.md#K8sNodepoolsPost) | **Post** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool|
-|[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes Node Pool|
-|[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create Kubernetes Cluster|
-|[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify Kubernetes Cluster|
-|[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Retrieve the current default kubernetes version for clusters and nodepools.|
-|[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | Retrieve available Kubernetes versions|
+|[**K8sDelete**](KubernetesApi.md#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes clusters|
+|[**K8sFindByClusterId**](KubernetesApi.md#K8sFindByClusterId) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes clusters|
+|[**K8sGet**](KubernetesApi.md#K8sGet) | **Get** /k8s | List Kubernetes clusters|
+|[**K8sKubeconfigGet**](KubernetesApi.md#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes configuration files|
+|[**K8sNodepoolsDelete**](KubernetesApi.md#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes node pools|
+|[**K8sNodepoolsFindById**](KubernetesApi.md#K8sNodepoolsFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes node pools|
+|[**K8sNodepoolsGet**](KubernetesApi.md#K8sNodepoolsGet) | **Get** /k8s/{k8sClusterId}/nodepools | List Kubernetes node pools|
+|[**K8sNodepoolsNodesDelete**](KubernetesApi.md#K8sNodepoolsNodesDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes nodes|
+|[**K8sNodepoolsNodesFindById**](KubernetesApi.md#K8sNodepoolsNodesFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes nodes|
+|[**K8sNodepoolsNodesGet**](KubernetesApi.md#K8sNodepoolsNodesGet) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | List Kubernetes nodes|
+|[**K8sNodepoolsNodesReplacePost**](KubernetesApi.md#K8sNodepoolsNodesReplacePost) | **Post** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate Kubernetes nodes|
+|[**K8sNodepoolsPost**](KubernetesApi.md#K8sNodepoolsPost) | **Post** /k8s/{k8sClusterId}/nodepools | Create Kubernetes node pools|
+|[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes node pools|
+|[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create Kubernetes clusters|
+|[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify Kubernetes clusters|
+|[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Retrieve current default Kubernetes version|
+|[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | List Kubernetes versions|
 
 
 
@@ -34,7 +34,7 @@ var result  = K8sDelete(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Delete Kubernetes Cluster
+Delete Kubernetes clusters
 
 
 
@@ -51,7 +51,7 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -72,7 +72,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
 
 ### Other Parameters
 
@@ -106,7 +106,7 @@ var result KubernetesCluster = K8sFindByClusterId(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Retrieve Kubernetes Cluster
+Retrieve Kubernetes clusters
 
 
 
@@ -123,7 +123,7 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -146,7 +146,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
 
 ### Other Parameters
 
@@ -180,7 +180,7 @@ var result KubernetesClusters = K8sGet(ctx)
                       .Execute()
 ```
 
-List Kubernetes Clusters
+List Kubernetes clusters
 
 
 
@@ -249,7 +249,7 @@ var result string = K8sKubeconfigGet(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Retrieve Kubernetes Configuration File
+Retrieve Kubernetes configuration files
 
 
 
@@ -266,7 +266,7 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -289,7 +289,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
 
 ### Other Parameters
 
@@ -323,7 +323,7 @@ var result  = K8sNodepoolsDelete(ctx, k8sClusterId, nodepoolId)
                       .Execute()
 ```
 
-Delete Kubernetes Node Pool
+Delete Kubernetes node pools
 
 
 
@@ -340,8 +340,8 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -362,8 +362,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
 
 ### Other Parameters
 
@@ -397,7 +397,7 @@ var result KubernetesNodePool = K8sNodepoolsFindById(ctx, k8sClusterId, nodepool
                       .Execute()
 ```
 
-Retrieve Kubernetes Node Pool
+Retrieve Kubernetes node pools
 
 
 
@@ -414,8 +414,8 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -438,8 +438,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
 
 ### Other Parameters
 
@@ -473,7 +473,7 @@ var result KubernetesNodePools = K8sNodepoolsGet(ctx, k8sClusterId)
                       .Execute()
 ```
 
-List Kubernetes Node Pools
+List Kubernetes node pools
 
 
 
@@ -490,7 +490,7 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -513,7 +513,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
 
 ### Other Parameters
 
@@ -547,7 +547,7 @@ var result  = K8sNodepoolsNodesDelete(ctx, k8sClusterId, nodepoolId, nodeId)
                       .Execute()
 ```
 
-Delete Kubernetes node
+Delete Kubernetes nodes
 
 
 
@@ -564,9 +564,9 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
-    nodeId := "nodeId_example" // string | The unique ID of the Kubernetes node
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
+    nodeId := "nodeId_example" // string | The unique ID of the Kubernetes node.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -587,9 +587,9 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
-|**nodeId** | **string** | The unique ID of the Kubernetes node | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
+|**nodeId** | **string** | The unique ID of the Kubernetes node. | |
 
 ### Other Parameters
 
@@ -623,7 +623,7 @@ var result KubernetesNode = K8sNodepoolsNodesFindById(ctx, k8sClusterId, nodepoo
                       .Execute()
 ```
 
-Retrieve Kubernetes node
+Retrieve Kubernetes nodes
 
 
 
@@ -640,9 +640,9 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
-    nodeId := "nodeId_example" // string | The unique ID of the Kubernetes Node.
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
+    nodeId := "nodeId_example" // string | The unique ID of the Kubernetes node.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -665,9 +665,9 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
-|**nodeId** | **string** | The unique ID of the Kubernetes Node. | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
+|**nodeId** | **string** | The unique ID of the Kubernetes node. | |
 
 ### Other Parameters
 
@@ -701,7 +701,7 @@ var result KubernetesNodes = K8sNodepoolsNodesGet(ctx, k8sClusterId, nodepoolId)
                       .Execute()
 ```
 
-Retrieve Kubernetes nodes.
+List Kubernetes nodes
 
 
 
@@ -718,8 +718,8 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -742,8 +742,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
 
 ### Other Parameters
 
@@ -777,7 +777,7 @@ var result  = K8sNodepoolsNodesReplacePost(ctx, k8sClusterId, nodepoolId, nodeId
                       .Execute()
 ```
 
-Recreate the Kubernetes node
+Recreate Kubernetes nodes
 
 
 
@@ -794,9 +794,9 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
-    nodeId := "nodeId_example" // string | The unique ID of the Kubernetes Node.
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
+    nodeId := "nodeId_example" // string | The unique ID of the Kubernetes node.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -817,9 +817,9 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
-|**nodeId** | **string** | The unique ID of the Kubernetes Node. | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
+|**nodeId** | **string** | The unique ID of the Kubernetes node. | |
 
 ### Other Parameters
 
@@ -854,7 +854,7 @@ var result KubernetesNodePool = K8sNodepoolsPost(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Create a Kubernetes Node Pool
+Create Kubernetes node pools
 
 
 
@@ -871,8 +871,8 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    kubernetesNodePool := *openapiclient.NewKubernetesNodePool(*openapiclient.NewKubernetesNodePoolProperties("k8s-node-pool", "1e072e52-2ed3-492f-b6b6-c6b116907521", int32(2), "AMD_OPTERON", int32(4), int32(2048), "AUTO", "HDD", int32(100))) // KubernetesNodePool | Details of the Kubernetes Node Pool
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    kubernetesNodePool := *openapiclient.NewKubernetesNodePool(*openapiclient.NewKubernetesNodePoolProperties("k8s-node-pool", "1e072e52-2ed3-492f-b6b6-c6b116907521", int32(2), "AMD_OPTERON", int32(4), int32(2048), "AUTO", "HDD", int32(100))) // KubernetesNodePool | The Kubernetes node pool to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -895,7 +895,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
 
 ### Other Parameters
 
@@ -904,7 +904,7 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPostRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | Details of the Kubernetes Node Pool | |
+| **kubernetesNodePool** | [**KubernetesNodePool**](KubernetesNodePool.md) | The Kubernetes node pool to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -931,7 +931,7 @@ var result KubernetesNodePool = K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId)
                       .Execute()
 ```
 
-Modify Kubernetes Node Pool
+Modify Kubernetes node pools
 
 
 
@@ -948,9 +948,9 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes Node Pool
-    kubernetesNodePoolForPut := *openapiclient.NewKubernetesNodePoolForPut(*openapiclient.NewKubernetesNodePoolPropertiesForPut("k8s-node-pool", int32(2))) // KubernetesNodePoolForPut | Details of the Kubernetes Node Pool
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    nodepoolId := "nodepoolId_example" // string | The unique ID of the Kubernetes node pool.
+    kubernetesNodePoolForPut := *openapiclient.NewKubernetesNodePoolForPut(*openapiclient.NewKubernetesNodePoolPropertiesForPut("k8s-node-pool", int32(2))) // KubernetesNodePoolForPut | The modified Kubernetes node pool.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -973,8 +973,8 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
-|**nodepoolId** | **string** | The unique ID of the Kubernetes Node Pool | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**nodepoolId** | **string** | The unique ID of the Kubernetes node pool. | |
 
 ### Other Parameters
 
@@ -983,7 +983,7 @@ Other parameters are passed through a pointer to a apiK8sNodepoolsPutRequest str
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesNodePoolForPut** | [**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md) | Details of the Kubernetes Node Pool | |
+| **kubernetesNodePoolForPut** | [**KubernetesNodePoolForPut**](KubernetesNodePoolForPut.md) | The modified Kubernetes node pool. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1010,7 +1010,7 @@ var result KubernetesCluster = K8sPost(ctx)
                       .Execute()
 ```
 
-Create Kubernetes Cluster
+Create Kubernetes clusters
 
 
 
@@ -1027,7 +1027,7 @@ import (
 )
 
 func main() {
-    kubernetesCluster := *openapiclient.NewKubernetesClusterForPost(*openapiclient.NewKubernetesClusterPropertiesForPost("k8s")) // KubernetesClusterForPost | Details of the Kubernetes Cluster
+    kubernetesCluster := *openapiclient.NewKubernetesClusterForPost(*openapiclient.NewKubernetesClusterPropertiesForPost("k8s")) // KubernetesClusterForPost | The Kubernetes cluster to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1055,7 +1055,7 @@ Other parameters are passed through a pointer to a apiK8sPostRequest struct via 
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesCluster** | [**KubernetesClusterForPost**](KubernetesClusterForPost.md) | Details of the Kubernetes Cluster | |
+| **kubernetesCluster** | [**KubernetesClusterForPost**](KubernetesClusterForPost.md) | The Kubernetes cluster to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1082,7 +1082,7 @@ var result KubernetesCluster = K8sPut(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Modify Kubernetes Cluster
+Modify Kubernetes clusters
 
 
 
@@ -1099,8 +1099,8 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes Cluster
-    kubernetesCluster := *openapiclient.NewKubernetesClusterForPut(*openapiclient.NewKubernetesClusterPropertiesForPut("k8s")) // KubernetesClusterForPut | Details of of the Kubernetes Cluster
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    kubernetesCluster := *openapiclient.NewKubernetesClusterForPut(*openapiclient.NewKubernetesClusterPropertiesForPut("k8s")) // KubernetesClusterForPut | The modified Kubernetes cluster.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1123,7 +1123,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes Cluster | |
+|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
 
 ### Other Parameters
 
@@ -1132,7 +1132,7 @@ Other parameters are passed through a pointer to a apiK8sPutRequest struct via t
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **kubernetesCluster** | [**KubernetesClusterForPut**](KubernetesClusterForPut.md) | Details of of the Kubernetes Cluster | |
+| **kubernetesCluster** | [**KubernetesClusterForPut**](KubernetesClusterForPut.md) | The modified Kubernetes cluster. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1155,7 +1155,7 @@ var result string = K8sVersionsDefaultGet(ctx)
                       .Execute()
 ```
 
-Retrieve the current default kubernetes version for clusters and nodepools.
+Retrieve current default Kubernetes version
 
 
 
@@ -1212,7 +1212,7 @@ var result []string = K8sVersionsGet(ctx)
                       .Execute()
 ```
 
-Retrieve available Kubernetes versions
+List Kubernetes versions
 
 
 

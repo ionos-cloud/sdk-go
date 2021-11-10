@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Start** | Pointer to **int32** | Target port range start associated with the NAT gateway rule. | [optional] |
-|**End** | Pointer to **int32** | Target port range end associated with the NAT gateway rule. | [optional] |
+|**Start** | Pointer to **int32** | Target port range start associated with the NAT Gateway rule. | [optional] |
+|**End** | Pointer to **int32** | Target port range end associated with the NAT Gateway rule. | [optional] |
 
 ## Methods
 

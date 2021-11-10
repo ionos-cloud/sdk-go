@@ -6,7 +6,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**CpuFamily** | Pointer to **string** | A valid CPU family name. | [optional] |
 |**MaxCores** | Pointer to **int32** | The maximum number of cores available. | [optional] |
-|**MaxRam** | Pointer to **int32** | The maximum number of RAM in MB. | [optional] |
+|**MaxRam** | Pointer to **int32** | The maximum RAM size in MB. | [optional] |
 |**Vendor** | Pointer to **string** | A valid CPU vendor name. | [optional] |
 
 ## Methods

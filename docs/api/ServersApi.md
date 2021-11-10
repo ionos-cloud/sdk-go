@@ -4,28 +4,28 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersServersCdromsDelete**](ServersApi.md#DatacentersServersCdromsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM|
-|[**DatacentersServersCdromsFindById**](ServersApi.md#DatacentersServersCdromsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve an attached CD-ROM|
+|[**DatacentersServersCdromsDelete**](ServersApi.md#DatacentersServersCdromsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach CD-ROMs|
+|[**DatacentersServersCdromsFindById**](ServersApi.md#DatacentersServersCdromsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve attached CD-ROMs|
 |[**DatacentersServersCdromsGet**](ServersApi.md#DatacentersServersCdromsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs |
-|[**DatacentersServersCdromsPost**](ServersApi.md#DatacentersServersCdromsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM|
-|[**DatacentersServersDelete**](ServersApi.md#DatacentersServersDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId} | Delete a Server|
-|[**DatacentersServersFindById**](ServersApi.md#DatacentersServersFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId} | Retrieve a Server|
-|[**DatacentersServersGet**](ServersApi.md#DatacentersServersGet) | **Get** /datacenters/{datacenterId}/servers | List Servers |
-|[**DatacentersServersPatch**](ServersApi.md#DatacentersServersPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId} | Partially modify a Server|
-|[**DatacentersServersPost**](ServersApi.md#DatacentersServersPost) | **Post** /datacenters/{datacenterId}/servers | Create a Server|
-|[**DatacentersServersPut**](ServersApi.md#DatacentersServersPut) | **Put** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server|
-|[**DatacentersServersRebootPost**](ServersApi.md#DatacentersServersRebootPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot a Server|
-|[**DatacentersServersRemoteConsoleGet**](ServersApi.md#DatacentersServersRemoteConsoleGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/remoteconsole | Get the server remote console link|
-|[**DatacentersServersResumePost**](ServersApi.md#DatacentersServersResumePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume a Cube Server|
-|[**DatacentersServersStartPost**](ServersApi.md#DatacentersServersStartPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/start | Start a Server|
-|[**DatacentersServersStopPost**](ServersApi.md#DatacentersServersStopPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop a Server|
-|[**DatacentersServersSuspendPost**](ServersApi.md#DatacentersServersSuspendPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server|
-|[**DatacentersServersTokenGet**](ServersApi.md#DatacentersServersTokenGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/token | Get the server&#39;s jwToken|
-|[**DatacentersServersUpgradePost**](ServersApi.md#DatacentersServersUpgradePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server|
-|[**DatacentersServersVolumesDelete**](ServersApi.md#DatacentersServersVolumesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a volume|
-|[**DatacentersServersVolumesFindById**](ServersApi.md#DatacentersServersVolumesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve an attached volume|
-|[**DatacentersServersVolumesGet**](ServersApi.md#DatacentersServersVolumesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes | List Attached Volumes|
-|[**DatacentersServersVolumesPost**](ServersApi.md#DatacentersServersVolumesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a volume|
+|[**DatacentersServersCdromsPost**](ServersApi.md#DatacentersServersCdromsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach CD-ROMs|
+|[**DatacentersServersDelete**](ServersApi.md#DatacentersServersDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId} | Delete servers|
+|[**DatacentersServersFindById**](ServersApi.md#DatacentersServersFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId} | Retrieve servers by ID|
+|[**DatacentersServersGet**](ServersApi.md#DatacentersServersGet) | **Get** /datacenters/{datacenterId}/servers | List servers |
+|[**DatacentersServersPatch**](ServersApi.md#DatacentersServersPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId} | Partially modify servers|
+|[**DatacentersServersPost**](ServersApi.md#DatacentersServersPost) | **Post** /datacenters/{datacenterId}/servers | Create servers|
+|[**DatacentersServersPut**](ServersApi.md#DatacentersServersPut) | **Put** /datacenters/{datacenterId}/servers/{serverId} | Modify servers|
+|[**DatacentersServersRebootPost**](ServersApi.md#DatacentersServersRebootPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot servers|
+|[**DatacentersServersRemoteConsoleGet**](ServersApi.md#DatacentersServersRemoteConsoleGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/remoteconsole | Get Remote Console link|
+|[**DatacentersServersResumePost**](ServersApi.md#DatacentersServersResumePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume Cubes instances|
+|[**DatacentersServersStartPost**](ServersApi.md#DatacentersServersStartPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/start | Start servers|
+|[**DatacentersServersStopPost**](ServersApi.md#DatacentersServersStopPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop VMs|
+|[**DatacentersServersSuspendPost**](ServersApi.md#DatacentersServersSuspendPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend Cubes instances|
+|[**DatacentersServersTokenGet**](ServersApi.md#DatacentersServersTokenGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token|
+|[**DatacentersServersUpgradePost**](ServersApi.md#DatacentersServersUpgradePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade servers|
+|[**DatacentersServersVolumesDelete**](ServersApi.md#DatacentersServersVolumesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach volumes|
+|[**DatacentersServersVolumesFindById**](ServersApi.md#DatacentersServersVolumesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve attached volumes|
+|[**DatacentersServersVolumesGet**](ServersApi.md#DatacentersServersVolumesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes | List attached volumes|
+|[**DatacentersServersVolumesPost**](ServersApi.md#DatacentersServersVolumesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach volumes|
 
 
 
@@ -39,7 +39,7 @@ var result  = DatacentersServersCdromsDelete(ctx, datacenterId, serverId, cdromI
                       .Execute()
 ```
 
-Detach a CD-ROM
+Detach CD-ROMs
 
 
 
@@ -57,8 +57,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    cdromId := "cdromId_example" // string | The unique ID of the CD-ROM
+    serverId := "serverId_example" // string | The unique ID of the server.
+    cdromId := "cdromId_example" // string | The unique ID of the CD-ROM.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -80,8 +80,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**cdromId** | **string** | The unique ID of the CD-ROM | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**cdromId** | **string** | The unique ID of the CD-ROM. | |
 
 ### Other Parameters
 
@@ -115,7 +115,7 @@ var result Image = DatacentersServersCdromsFindById(ctx, datacenterId, serverId,
                       .Execute()
 ```
 
-Retrieve an attached CD-ROM
+Retrieve attached CD-ROMs
 
 
 
@@ -133,8 +133,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    cdromId := "cdromId_example" // string | The unique ID of the CD-ROM
+    serverId := "serverId_example" // string | The unique ID of the server.
+    cdromId := "cdromId_example" // string | The unique ID of the CD-ROM.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -158,8 +158,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**cdromId** | **string** | The unique ID of the CD-ROM | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**cdromId** | **string** | The unique ID of the CD-ROM. | |
 
 ### Other Parameters
 
@@ -213,7 +213,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -239,7 +239,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -276,7 +276,7 @@ var result Image = DatacentersServersCdromsPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Attach a CD-ROM
+Attach CD-ROMs
 
 
 
@@ -294,8 +294,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    cdrom := *openapiclient.NewImage(*openapiclient.NewImageProperties("LINUX")) // Image | CD-ROM to be attached
+    serverId := "serverId_example" // string | The unique ID of the server.
+    cdrom := *openapiclient.NewImage(*openapiclient.NewImageProperties("LINUX")) // Image | The CD-ROM to be attached.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -319,7 +319,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -328,7 +328,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersCdromsPo
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **cdrom** | [**Image**](Image.md) | CD-ROM to be attached | |
+| **cdrom** | [**Image**](Image.md) | The CD-ROM to be attached. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -354,7 +354,7 @@ var result  = DatacentersServersDelete(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Delete a Server
+Delete servers
 
 
 
@@ -372,7 +372,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -394,7 +394,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -428,7 +428,7 @@ var result Server = DatacentersServersFindById(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Retrieve a Server
+Retrieve servers by ID
 
 
 
@@ -446,7 +446,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -470,7 +470,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -507,7 +507,7 @@ var result Servers = DatacentersServersGet(ctx, datacenterId)
                       .Execute()
 ```
 
-List Servers 
+List servers 
 
 
 
@@ -527,7 +527,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    upgradeNeeded := true // bool | It can be used to filter which servers can be upgraded which can not be upgraded. (optional)
+    upgradeNeeded := true // bool | Filter servers that can or that cannot be upgraded. (optional)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
     limit := int32(56) // int32 | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
@@ -561,7 +561,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersGetReque
 |------------- | ------------- | ------------- | -------------|
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
-| **upgradeNeeded** | **bool** | It can be used to filter which servers can be upgraded which can not be upgraded. | |
+| **upgradeNeeded** | **bool** | Filter servers that can or that cannot be upgraded. | |
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
 | **offset** | **int32** | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). | [default to 0]|
 | **limit** | **int32** | The maximum number of elements to return (use together with offset for pagination). | [default to 1000]|
@@ -588,7 +588,7 @@ var result Server = DatacentersServersPatch(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Partially modify a Server
+Partially modify servers
 
 
 
@@ -606,8 +606,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the server
-    server := *openapiclient.NewServerProperties(int32(4), int32(4096)) // ServerProperties | Modified properties of Server
+    serverId := "serverId_example" // string | The unique ID of the server.
+    server := *openapiclient.NewServerProperties(int32(4), int32(4096)) // ServerProperties | The properties of the server to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -631,7 +631,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -640,7 +640,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersPatchReq
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **server** | [**ServerProperties**](ServerProperties.md) | Modified properties of Server | |
+| **server** | [**ServerProperties**](ServerProperties.md) | The properties of the server to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -667,7 +667,7 @@ var result Server = DatacentersServersPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create a Server
+Create servers
 
 
 
@@ -685,7 +685,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    server := *openapiclient.NewServer(*openapiclient.NewServerProperties(int32(4), int32(4096))) // Server | Server to be created
+    server := *openapiclient.NewServer(*openapiclient.NewServerProperties(int32(4), int32(4096))) // Server | The server to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -717,7 +717,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersPostRequ
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **server** | [**Server**](Server.md) | Server to be created | |
+| **server** | [**Server**](Server.md) | The server to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -744,7 +744,7 @@ var result Server = DatacentersServersPut(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Modify a Server
+Modify servers
 
 
 
@@ -762,8 +762,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the server
-    server := *openapiclient.NewServer(*openapiclient.NewServerProperties(int32(4), int32(4096))) // Server | Modified Server
+    serverId := "serverId_example" // string | The unique ID of the server.
+    server := *openapiclient.NewServer(*openapiclient.NewServerProperties(int32(4), int32(4096))) // Server | The modified server
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -787,7 +787,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -796,7 +796,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersPutReque
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **server** | [**Server**](Server.md) | Modified Server | |
+| **server** | [**Server**](Server.md) | The modified server | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -822,7 +822,7 @@ var result  = DatacentersServersRebootPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Reboot a Server
+Reboot servers
 
 
 
@@ -840,7 +840,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -862,7 +862,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -896,7 +896,7 @@ var result RemoteConsoleUrl = DatacentersServersRemoteConsoleGet(ctx, datacenter
                       .Execute()
 ```
 
-Get the server remote console link
+Get Remote Console link
 
 
 
@@ -914,7 +914,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -938,7 +938,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -972,7 +972,7 @@ var result  = DatacentersServersResumePost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Resume a Cube Server
+Resume Cubes instances
 
 
 
@@ -990,7 +990,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1012,7 +1012,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1046,7 +1046,7 @@ var result  = DatacentersServersStartPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Start a Server
+Start servers
 
 
 
@@ -1064,7 +1064,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1086,7 +1086,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1120,7 +1120,7 @@ var result  = DatacentersServersStopPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Stop a Server
+Stop VMs
 
 
 
@@ -1138,7 +1138,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1160,7 +1160,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1194,7 +1194,7 @@ var result  = DatacentersServersSuspendPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Suspend a Cube Server
+Suspend Cubes instances
 
 
 
@@ -1212,7 +1212,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1234,7 +1234,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1268,7 +1268,7 @@ var result Token = DatacentersServersTokenGet(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Get the server's jwToken
+Get JASON Web Token
 
 
 
@@ -1286,7 +1286,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1310,7 +1310,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1344,7 +1344,7 @@ var result  = DatacentersServersUpgradePost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Upgrade a Server
+Upgrade servers
 
 
 
@@ -1362,7 +1362,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1384,7 +1384,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1418,7 +1418,7 @@ var result  = DatacentersServersVolumesDelete(ctx, datacenterId, serverId, volum
                       .Execute()
 ```
 
-Detach a volume
+Detach volumes
 
 
 
@@ -1436,8 +1436,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
+    serverId := "serverId_example" // string | The unique ID of the server.
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1459,8 +1459,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**volumeId** | **string** | The unique ID of the Volume | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**volumeId** | **string** | The unique ID of the volume. | |
 
 ### Other Parameters
 
@@ -1494,7 +1494,7 @@ var result Volume = DatacentersServersVolumesFindById(ctx, datacenterId, serverI
                       .Execute()
 ```
 
-Retrieve an attached volume
+Retrieve attached volumes
 
 
 
@@ -1512,8 +1512,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    volumeId := "volumeId_example" // string | The unique ID of the Volume
+    serverId := "serverId_example" // string | The unique ID of the server.
+    volumeId := "volumeId_example" // string | The unique ID of the volume.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1537,8 +1537,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
-|**volumeId** | **string** | The unique ID of the Volume | |
+|**serverId** | **string** | The unique ID of the server. | |
+|**volumeId** | **string** | The unique ID of the volume. | |
 
 ### Other Parameters
 
@@ -1574,7 +1574,7 @@ var result AttachedVolumes = DatacentersServersVolumesGet(ctx, datacenterId, ser
                       .Execute()
 ```
 
-List Attached Volumes
+List attached volumes
 
 
 
@@ -1592,7 +1592,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
+    serverId := "serverId_example" // string | The unique ID of the server.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1618,7 +1618,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1655,7 +1655,7 @@ var result Volume = DatacentersServersVolumesPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Attach a volume
+Attach volumes
 
 
 
@@ -1673,8 +1673,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    serverId := "serverId_example" // string | The unique ID of the Server
-    volume := *openapiclient.NewVolume(*openapiclient.NewVolumeProperties(float32(100.0))) // Volume | Volume to be attached (created and attached)
+    serverId := "serverId_example" // string | The unique ID of the server.
+    volume := *openapiclient.NewVolume(*openapiclient.NewVolumeProperties(float32(100.0))) // Volume | The volume to be attached (or created and attached).
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1698,7 +1698,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**serverId** | **string** | The unique ID of the Server | |
+|**serverId** | **string** | The unique ID of the server. | |
 
 ### Other Parameters
 
@@ -1707,7 +1707,7 @@ Other parameters are passed through a pointer to a apiDatacentersServersVolumesP
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **volume** | [**Volume**](Volume.md) | Volume to be attached (created and attached) | |
+| **volume** | [**Volume**](Volume.md) | The volume to be attached (or created and attached). | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**SnapshotsDelete**](SnapshotsApi.md#SnapshotsDelete) | **Delete** /snapshots/{snapshotId} | Delete a Snapshot|
-|[**SnapshotsFindById**](SnapshotsApi.md#SnapshotsFindById) | **Get** /snapshots/{snapshotId} | Retrieve a Snapshot by its uuid.|
-|[**SnapshotsGet**](SnapshotsApi.md#SnapshotsGet) | **Get** /snapshots | List Snapshots|
-|[**SnapshotsPatch**](SnapshotsApi.md#SnapshotsPatch) | **Patch** /snapshots/{snapshotId} | Partially modify a Snapshot|
-|[**SnapshotsPut**](SnapshotsApi.md#SnapshotsPut) | **Put** /snapshots/{snapshotId} | Modify a Snapshot|
+|[**SnapshotsDelete**](SnapshotsApi.md#SnapshotsDelete) | **Delete** /snapshots/{snapshotId} | Delete snapshots|
+|[**SnapshotsFindById**](SnapshotsApi.md#SnapshotsFindById) | **Get** /snapshots/{snapshotId} | Retrieve snapshots by ID|
+|[**SnapshotsGet**](SnapshotsApi.md#SnapshotsGet) | **Get** /snapshots | List snapshots|
+|[**SnapshotsPatch**](SnapshotsApi.md#SnapshotsPatch) | **Patch** /snapshots/{snapshotId} | Partially modify snapshots|
+|[**SnapshotsPut**](SnapshotsApi.md#SnapshotsPut) | **Put** /snapshots/{snapshotId} | Modify snapshots|
 
 
 
@@ -22,7 +22,7 @@ var result  = SnapshotsDelete(ctx, snapshotId)
                       .Execute()
 ```
 
-Delete a Snapshot
+Delete snapshots
 
 
 
@@ -39,7 +39,7 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -60,7 +60,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
 
 ### Other Parameters
 
@@ -94,7 +94,7 @@ var result Snapshot = SnapshotsFindById(ctx, snapshotId)
                       .Execute()
 ```
 
-Retrieve a Snapshot by its uuid.
+Retrieve snapshots by ID
 
 
 
@@ -111,7 +111,7 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -134,7 +134,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
 
 ### Other Parameters
 
@@ -168,7 +168,7 @@ var result Snapshots = SnapshotsGet(ctx)
                       .Execute()
 ```
 
-List Snapshots
+List snapshots
 
 
 
@@ -238,7 +238,7 @@ var result Snapshot = SnapshotsPatch(ctx, snapshotId)
                       .Execute()
 ```
 
-Partially modify a Snapshot
+Partially modify snapshots
 
 
 
@@ -255,8 +255,8 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
-    snapshot := *openapiclient.NewSnapshotProperties() // SnapshotProperties | Modified Snapshot
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
+    snapshot := *openapiclient.NewSnapshotProperties() // SnapshotProperties | The properties of the snapshot to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -279,7 +279,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
 
 ### Other Parameters
 
@@ -288,7 +288,7 @@ Other parameters are passed through a pointer to a apiSnapshotsPatchRequest stru
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **snapshot** | [**SnapshotProperties**](SnapshotProperties.md) | Modified Snapshot | |
+| **snapshot** | [**SnapshotProperties**](SnapshotProperties.md) | The properties of the snapshot to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -315,7 +315,7 @@ var result Snapshot = SnapshotsPut(ctx, snapshotId)
                       .Execute()
 ```
 
-Modify a Snapshot
+Modify snapshots
 
 
 
@@ -332,8 +332,8 @@ import (
 )
 
 func main() {
-    snapshotId := "snapshotId_example" // string | The unique ID of the Snapshot
-    snapshot := *openapiclient.NewSnapshot(*openapiclient.NewSnapshotProperties()) // Snapshot | Modified Snapshot
+    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot.
+    snapshot := *openapiclient.NewSnapshot(*openapiclient.NewSnapshotProperties()) // Snapshot | The modified snapshot
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -356,7 +356,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**snapshotId** | **string** | The unique ID of the Snapshot | |
+|**snapshotId** | **string** | The unique ID of the snapshot. | |
 
 ### Other Parameters
 
@@ -365,7 +365,7 @@ Other parameters are passed through a pointer to a apiSnapshotsPutRequest struct
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **snapshot** | [**Snapshot**](Snapshot.md) | Modified Snapshot | |
+| **snapshot** | [**Snapshot**](Snapshot.md) | The modified snapshot | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

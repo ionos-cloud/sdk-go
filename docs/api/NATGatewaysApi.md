@@ -4,24 +4,24 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersNatgatewaysDelete**](NATGatewaysApi.md#DatacentersNatgatewaysDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Remove a NAT gateway|
-|[**DatacentersNatgatewaysFindByNatGatewayId**](NATGatewaysApi.md#DatacentersNatgatewaysFindByNatGatewayId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Retrieve a NAT gateway|
-|[**DatacentersNatgatewaysFlowlogsDelete**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Remove Flow Log from NAT Gateway|
-|[**DatacentersNatgatewaysFlowlogsFindByFlowLogId**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsFindByFlowLogId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Retrieve a Flow Log of the NAT Gateway|
+|[**DatacentersNatgatewaysDelete**](NATGatewaysApi.md#DatacentersNatgatewaysDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Delete NAT Gateways|
+|[**DatacentersNatgatewaysFindByNatGatewayId**](NATGatewaysApi.md#DatacentersNatgatewaysFindByNatGatewayId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Retrieve NAT Gateways|
+|[**DatacentersNatgatewaysFlowlogsDelete**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Delete NAT Gateway Flow Logs|
+|[**DatacentersNatgatewaysFlowlogsFindByFlowLogId**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsFindByFlowLogId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Retrieve NAT Gateway Flow Logs|
 |[**DatacentersNatgatewaysFlowlogsGet**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsGet) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | List NAT Gateway Flow Logs|
-|[**DatacentersNatgatewaysFlowlogsPatch**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Partially modify a Flow Log of the NAT Gateway|
-|[**DatacentersNatgatewaysFlowlogsPost**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Add a NAT Gateways Flow Log|
-|[**DatacentersNatgatewaysFlowlogsPut**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Modify a Flow Log of the NAT Gateway|
+|[**DatacentersNatgatewaysFlowlogsPatch**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Partially modify NAT Gateway Flow Logs|
+|[**DatacentersNatgatewaysFlowlogsPost**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create NAT Gateway Flow Logs|
+|[**DatacentersNatgatewaysFlowlogsPut**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Modify NAT Gateway Flow Logs|
 |[**DatacentersNatgatewaysGet**](NATGatewaysApi.md#DatacentersNatgatewaysGet) | **Get** /datacenters/{datacenterId}/natgateways | List NAT Gateways|
-|[**DatacentersNatgatewaysPatch**](NATGatewaysApi.md#DatacentersNatgatewaysPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Partially update a NAT gateway|
-|[**DatacentersNatgatewaysPost**](NATGatewaysApi.md#DatacentersNatgatewaysPost) | **Post** /datacenters/{datacenterId}/natgateways | Create a NAT Gateway|
-|[**DatacentersNatgatewaysPut**](NATGatewaysApi.md#DatacentersNatgatewaysPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Update a NAT gateway|
-|[**DatacentersNatgatewaysRulesDelete**](NATGatewaysApi.md#DatacentersNatgatewaysRulesDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Remove rule from NAT Gateway|
-|[**DatacentersNatgatewaysRulesFindByNatGatewayRuleId**](NATGatewaysApi.md#DatacentersNatgatewaysRulesFindByNatGatewayRuleId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Retrieve a NAT Gateway Rule|
-|[**DatacentersNatgatewaysRulesGet**](NATGatewaysApi.md#DatacentersNatgatewaysRulesGet) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | List NAT Gateways Rules|
-|[**DatacentersNatgatewaysRulesPatch**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially modify a rule of the NAT gateway|
-|[**DatacentersNatgatewaysRulesPost**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create a NAT Gateway Rule|
-|[**DatacentersNatgatewaysRulesPut**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify a rule of the NAT gateway|
+|[**DatacentersNatgatewaysPatch**](NATGatewaysApi.md#DatacentersNatgatewaysPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Partially modify NAT Gateways|
+|[**DatacentersNatgatewaysPost**](NATGatewaysApi.md#DatacentersNatgatewaysPost) | **Post** /datacenters/{datacenterId}/natgateways | Create NAT Gateways|
+|[**DatacentersNatgatewaysPut**](NATGatewaysApi.md#DatacentersNatgatewaysPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Modify NAT Gateways|
+|[**DatacentersNatgatewaysRulesDelete**](NATGatewaysApi.md#DatacentersNatgatewaysRulesDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Delete NAT Gateway rules|
+|[**DatacentersNatgatewaysRulesFindByNatGatewayRuleId**](NATGatewaysApi.md#DatacentersNatgatewaysRulesFindByNatGatewayRuleId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Retrieve NAT Gateway rules|
+|[**DatacentersNatgatewaysRulesGet**](NATGatewaysApi.md#DatacentersNatgatewaysRulesGet) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | List NAT Gateway rules|
+|[**DatacentersNatgatewaysRulesPatch**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially modify NAT Gateway rules|
+|[**DatacentersNatgatewaysRulesPost**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create NAT Gateway rules|
+|[**DatacentersNatgatewaysRulesPut**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify NAT Gateway rules|
 
 
 
@@ -35,7 +35,7 @@ var result  = DatacentersNatgatewaysDelete(ctx, datacenterId, natGatewayId)
                       .Execute()
 ```
 
-Remove a NAT gateway
+Delete NAT Gateways
 
 
 
@@ -53,7 +53,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -75,7 +75,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -109,7 +109,7 @@ var result NatGateway = DatacentersNatgatewaysFindByNatGatewayId(ctx, datacenter
                       .Execute()
 ```
 
-Retrieve a NAT gateway
+Retrieve NAT Gateways
 
 
 
@@ -127,7 +127,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -151,7 +151,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -184,7 +184,7 @@ var result  = DatacentersNatgatewaysFlowlogsDelete(ctx, datacenterId, natGateway
                       .Execute()
 ```
 
-Remove Flow Log from NAT Gateway
+Delete NAT Gateway Flow Logs
 
 
 
@@ -202,8 +202,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    flowLogId := "flowLogId_example" // string | The unique ID of the flow log
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -224,8 +224,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**flowLogId** | **string** | The unique ID of the flow log | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -257,7 +257,7 @@ var result FlowLog = DatacentersNatgatewaysFlowlogsFindByFlowLogId(ctx, datacent
                       .Execute()
 ```
 
-Retrieve a Flow Log of the NAT Gateway
+Retrieve NAT Gateway Flow Logs
 
 
 
@@ -275,8 +275,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    flowLogId := "flowLogId_example" // string | The unique ID of the flow log
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -299,8 +299,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**flowLogId** | **string** | The unique ID of the flow log | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -352,7 +352,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (use together with limit for pagination). (optional) (default to 0)
@@ -377,7 +377,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -412,7 +412,7 @@ var result FlowLog = DatacentersNatgatewaysFlowlogsPatch(ctx, datacenterId, natG
                       .Execute()
 ```
 
-Partially modify a Flow Log of the NAT Gateway
+Partially modify NAT Gateway Flow Logs
 
 
 
@@ -430,9 +430,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    flowLogId := "flowLogId_example" // string | The unique ID of the flow log
-    natGatewayFlowLogProperties := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | Properties of a Flow Log to be updated
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
+    natGatewayFlowLogProperties := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | The properties of the Flow Log to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -455,8 +455,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**flowLogId** | **string** | The unique ID of the flow log | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -465,7 +465,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysFlow
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayFlowLogProperties** | [**FlowLogProperties**](FlowLogProperties.md) | Properties of a Flow Log to be updated | |
+| **natGatewayFlowLogProperties** | [**FlowLogProperties**](FlowLogProperties.md) | The properties of the Flow Log to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 
@@ -490,7 +490,7 @@ var result FlowLog = DatacentersNatgatewaysFlowlogsPost(ctx, datacenterId, natGa
                       .Execute()
 ```
 
-Add a NAT Gateways Flow Log
+Create NAT Gateway Flow Logs
 
 
 
@@ -508,8 +508,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | Flow Log to add on NAT Gateway
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | The Flow Log to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -532,7 +532,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -541,7 +541,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysFlow
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayFlowLog** | [**FlowLog**](FlowLog.md) | Flow Log to add on NAT Gateway | |
+| **natGatewayFlowLog** | [**FlowLog**](FlowLog.md) | The Flow Log to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 
@@ -566,7 +566,7 @@ var result FlowLog = DatacentersNatgatewaysFlowlogsPut(ctx, datacenterId, natGat
                       .Execute()
 ```
 
-Modify a Flow Log of the NAT Gateway
+Modify NAT Gateway Flow Logs
 
 
 
@@ -584,9 +584,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    flowLogId := "flowLogId_example" // string | The unique ID of the flow log
-    natGatewayFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | Modified NAT Gateway Flow Log
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
+    natGatewayFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | The modified NAT Gateway Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -609,8 +609,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**flowLogId** | **string** | The unique ID of the flow log | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**flowLogId** | **string** | The unique ID of the Flow Log. | |
 
 ### Other Parameters
 
@@ -619,7 +619,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysFlow
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayFlowLog** | [**FlowLogPut**](FlowLogPut.md) | Modified NAT Gateway Flow Log | |
+| **natGatewayFlowLog** | [**FlowLogPut**](FlowLogPut.md) | The modified NAT Gateway Flow Log. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 
@@ -719,7 +719,7 @@ var result NatGateway = DatacentersNatgatewaysPatch(ctx, datacenterId, natGatewa
                       .Execute()
 ```
 
-Partially update a NAT gateway
+Partially modify NAT Gateways
 
 
 
@@ -737,8 +737,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayProperties := *openapiclient.NewNatGatewayProperties("My NAT Gateway", []string{"PublicIps_example"}) // NatGatewayProperties | NAT gateway properties to be updated
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayProperties := *openapiclient.NewNatGatewayProperties("My NAT Gateway", []string{"PublicIps_example"}) // NatGatewayProperties | The properties of the NAT Gateway to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -762,7 +762,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -771,7 +771,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysPatc
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayProperties** | [**NatGatewayProperties**](NatGatewayProperties.md) | NAT gateway properties to be updated | |
+| **natGatewayProperties** | [**NatGatewayProperties**](NatGatewayProperties.md) | The properties of the NAT Gateway to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -798,7 +798,7 @@ var result NatGateway = DatacentersNatgatewaysPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create a NAT Gateway
+Create NAT Gateways
 
 
 
@@ -816,7 +816,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGateway := *openapiclient.NewNatGateway(*openapiclient.NewNatGatewayProperties("My NAT Gateway", []string{"PublicIps_example"})) // NatGateway | NAT gateway to be created
+    natGateway := *openapiclient.NewNatGateway(*openapiclient.NewNatGatewayProperties("My NAT Gateway", []string{"PublicIps_example"})) // NatGateway | The NAT Gateway to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -848,7 +848,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysPost
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGateway** | [**NatGateway**](NatGateway.md) | NAT gateway to be created | |
+| **natGateway** | [**NatGateway**](NatGateway.md) | The NAT Gateway to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -875,7 +875,7 @@ var result NatGateway = DatacentersNatgatewaysPut(ctx, datacenterId, natGatewayI
                       .Execute()
 ```
 
-Update a NAT gateway
+Modify NAT Gateways
 
 
 
@@ -893,8 +893,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGateway := *openapiclient.NewNatGatewayPut(*openapiclient.NewNatGatewayProperties("My NAT Gateway", []string{"PublicIps_example"})) // NatGatewayPut | Modified NAT Gateway
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGateway := *openapiclient.NewNatGatewayPut(*openapiclient.NewNatGatewayProperties("My NAT Gateway", []string{"PublicIps_example"})) // NatGatewayPut | The modified NAT Gateway.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -918,7 +918,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -927,7 +927,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysPutR
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGateway** | [**NatGatewayPut**](NatGatewayPut.md) | Modified NAT Gateway | |
+| **natGateway** | [**NatGatewayPut**](NatGatewayPut.md) | The modified NAT Gateway. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -953,7 +953,7 @@ var result  = DatacentersNatgatewaysRulesDelete(ctx, datacenterId, natGatewayId,
                       .Execute()
 ```
 
-Remove rule from NAT Gateway
+Delete NAT Gateway rules
 
 
 
@@ -971,8 +971,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT gateway rule
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT Gateway rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -994,8 +994,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**natGatewayRuleId** | **string** | The unique ID of the NAT gateway rule | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**natGatewayRuleId** | **string** | The unique ID of the NAT Gateway rule. | |
 
 ### Other Parameters
 
@@ -1029,7 +1029,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesFindByNatGatewayRuleId(ct
                       .Execute()
 ```
 
-Retrieve a NAT Gateway Rule
+Retrieve NAT Gateway rules
 
 
 
@@ -1047,8 +1047,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT gateway rule
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT Gateway rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1072,8 +1072,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**natGatewayRuleId** | **string** | The unique ID of the NAT gateway rule | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**natGatewayRuleId** | **string** | The unique ID of the NAT Gateway rule. | |
 
 ### Other Parameters
 
@@ -1107,7 +1107,7 @@ var result NatGatewayRules = DatacentersNatgatewaysRulesGet(ctx, datacenterId, n
                       .Execute()
 ```
 
-List NAT Gateways Rules
+List NAT Gateway rules
 
 
 
@@ -1125,7 +1125,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1149,7 +1149,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -1184,7 +1184,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesPatch(ctx, datacenterId, 
                       .Execute()
 ```
 
-Partially modify a rule of the NAT gateway
+Partially modify NAT Gateway rules
 
 
 
@@ -1202,9 +1202,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT gateway rule
-    natGatewayRuleProperties := *openapiclient.NewNatGatewayRuleProperties("My NAT Gateway Rule", "10.0.1.0/24", "192.18.7.17") // NatGatewayRuleProperties | Properties of a NAT gateway rule to be updated
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT Gateway rule.
+    natGatewayRuleProperties := *openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "10.0.1.0/24", "192.18.7.17") // NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1228,8 +1228,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**natGatewayRuleId** | **string** | The unique ID of the NAT gateway rule | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**natGatewayRuleId** | **string** | The unique ID of the NAT Gateway rule. | |
 
 ### Other Parameters
 
@@ -1238,7 +1238,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysRule
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayRuleProperties** | [**NatGatewayRuleProperties**](NatGatewayRuleProperties.md) | Properties of a NAT gateway rule to be updated | |
+| **natGatewayRuleProperties** | [**NatGatewayRuleProperties**](NatGatewayRuleProperties.md) | The properties of the NAT Gateway rule to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1265,7 +1265,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesPost(ctx, datacenterId, n
                       .Execute()
 ```
 
-Create a NAT Gateway Rule
+Create NAT Gateway rules
 
 
 
@@ -1283,8 +1283,8 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayRule := *openapiclient.NewNatGatewayRule(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway Rule", "10.0.1.0/24", "192.18.7.17")) // NatGatewayRule | NAT gateway rule to be created
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayRule := *openapiclient.NewNatGatewayRule(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "10.0.1.0/24", "192.18.7.17")) // NatGatewayRule | The NAT Gateway rule to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1308,7 +1308,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
 
 ### Other Parameters
 
@@ -1317,7 +1317,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysRule
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayRule** | [**NatGatewayRule**](NatGatewayRule.md) | NAT gateway rule to be created | |
+| **natGatewayRule** | [**NatGatewayRule**](NatGatewayRule.md) | The NAT Gateway rule to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |
@@ -1344,7 +1344,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesPut(ctx, datacenterId, na
                       .Execute()
 ```
 
-Modify a rule of the NAT gateway
+Modify NAT Gateway rules
 
 
 
@@ -1362,9 +1362,9 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT gateway
-    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT gateway rule
-    natGatewayRule := *openapiclient.NewNatGatewayRulePut(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway Rule", "10.0.1.0/24", "192.18.7.17")) // NatGatewayRulePut | Modified NAT Gateway Rule
+    natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
+    natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT Gateway rule.
+    natGatewayRule := *openapiclient.NewNatGatewayRulePut(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "10.0.1.0/24", "192.18.7.17")) // NatGatewayRulePut | The modified NAT Gateway rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. (optional)
@@ -1388,8 +1388,8 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**datacenterId** | **string** | The unique ID of the data center. | |
-|**natGatewayId** | **string** | The unique ID of the NAT gateway | |
-|**natGatewayRuleId** | **string** | The unique ID of the NAT gateway rule | |
+|**natGatewayId** | **string** | The unique ID of the NAT Gateway. | |
+|**natGatewayRuleId** | **string** | The unique ID of the NAT Gateway rule. | |
 
 ### Other Parameters
 
@@ -1398,7 +1398,7 @@ Other parameters are passed through a pointer to a apiDatacentersNatgatewaysRule
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **natGatewayRule** | [**NatGatewayRulePut**](NatGatewayRulePut.md) | Modified NAT Gateway Rule | |
+| **natGatewayRule** | [**NatGatewayRulePut**](NatGatewayRulePut.md) | The modified NAT Gateway rule. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, against which all API requests are to be executed. | |

@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | A name of that resource | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Features** | Pointer to **[]string** | List of features supported by the location | [optional] [readonly] |
 |**ImageAliases** | Pointer to **[]string** | List of image aliases available for the location | [optional] [readonly] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
