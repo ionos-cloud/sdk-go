@@ -79,6 +79,15 @@ client := ionoscloud.NewAPIClient(ionoscloud.NewConfigurationFromEnv())
 
 **Caution**: You will want to ensure you follow security best practices when using credentials within your code or stored in a file.
 
+### Environment Variables
+
+Environment Variable | Description
+--- | --- 
+`IONOS_USERNAME` | Specify the username used to login, to authenticate against the IONOS Cloud API | 
+`IONOS_PASSWORD` | Specify the password used to login, to authenticate against the IONOS Cloud API | 
+`IONOS_TOKEN` | Specify the token used to login, if a token is being used instead of username and password |
+`IONOS_API_URL` | Specify the API URL. It will overwrite the API endpoint default value `api.ionos.com`. Note: the host URL does not contain the `/cloudapi/v5` path, so it should _not_ be included in the `IONOS_API_URL` environment variable | 
+
 ### Depth
 
 Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, however, it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
