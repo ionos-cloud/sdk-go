@@ -460,7 +460,7 @@ Each of these functions takes a value of the given basic type and returns a poin
 
 ## Debugging
 
-If you want to see the API call error messages as well, you need to set the Debug field in the Configuration struct:
+If you want to see the API call request and response messages, you need to set the Debug field in the Configuration struct:
 
 ```golang
 package main
