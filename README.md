@@ -468,12 +468,12 @@ package main
 import "github.com/ionos-cloud/sdk-go/v5"
 
 func main() {
-    //create your configuration. replace username, password, token and url with correct values, or use NewConfigurationFromEnv()
+    // create your configuration. replace username, password, token and url with correct values, or use NewConfigurationFromEnv()
     // if you have set your env variables as explained above
-    cfg := ionoscloud.NewConfiguration("username", "password", "token", "url")
-    //enable request and response logging
+    cfg := ionoscloud.NewConfiguration("username", "password", "token", "hostUrl")
+    // enable request and response logging
     cfg.Debug = true
-    //create you api client with the configuration
+    // create you api client with the configuration
     apiClient := ionoscloud.NewAPIClient(cfg)
 }
 ```
