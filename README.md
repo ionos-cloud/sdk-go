@@ -546,12 +546,12 @@ If you want to see the API call request and response messages, you need to set t
 package main
 import "github.com/ionos-cloud/sdk-go/v5"
 func main() {
-    / create your configuration. replace username, password, token and url with correct values, or use NewConfigurationFromEnv()
-    / if you have set your env variables as explained above
+    // create your configuration. replace username, password, token and url with correct values, or use NewConfigurationFromEnv()
+    // if you have set your env variables as explained above
     cfg := ionoscloud.NewConfiguration("username", "password", "token", "hostUrl")
-    / enable request and response logging
+    // enable request and response logging
     cfg.Debug = true
-    / create you api client with the configuration
+    // create you api client with the configuration
     apiClient := ionoscloud.NewAPIClient(cfg)
 }
 ```
