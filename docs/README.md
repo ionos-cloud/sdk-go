@@ -132,3 +132,23 @@ Bug reports and feature requests can be opened in the Issues repository: [https:
 
 Pure SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you require changes, please open an issue and we will try to address it.
 
+## Debugging
+
+If you want to see the API call request and response messages, you need to set the Debug field in the Configuration struct:
+
+```golang
+package main
+
+import "github.com/ionos-cloud/sdk-go/v5"
+
+func main() {
+    // create your configuration. replace username, password, token and url with correct values, or use NewConfigurationFromEnv()
+    // if you have set your env variables as explained above
+    cfg := ionoscloud.NewConfiguration("username", "password", "token", "hostUrl")
+    // enable request and response logging
+    cfg.Debug = true
+    // create you api client with the configuration
+    apiClient := ionoscloud.NewAPIClient(cfg)
+}
+```
+#### Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance.
