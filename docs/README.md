@@ -81,12 +81,12 @@ client := ionoscloud.NewAPIClient(ionoscloud.NewConfigurationFromEnv())
 
 ### Environment Variables
 
-Environment Variable | Description
---- | --- 
-`IONOS_USERNAME` | Specify the username used to login, to authenticate against the IONOS Cloud API | 
-`IONOS_PASSWORD` | Specify the password used to login, to authenticate against the IONOS Cloud API | 
-`IONOS_TOKEN` | Specify the token used to login, if a token is being used instead of username and password |
-`IONOS_API_URL` | Specify the API URL. It will overwrite the API endpoint default value `api.ionos.com`. Note: the host URL does not contain the `/cloudapi/v5` path, so it should _not_ be included in the `IONOS_API_URL` environment variable | 
+| Environment Variable | Description                                                                                                                                                                                                                    |
+|----------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `IONOS_USERNAME`     | Specify the username used to login, to authenticate against the IONOS Cloud API                                                                                                                                                | 
+| `IONOS_PASSWORD`     | Specify the password used to login, to authenticate against the IONOS Cloud API                                                                                                                                                | 
+| `IONOS_TOKEN`        | Specify the token used to login, if a token is being used instead of username and password                                                                                                                                     |
+| `IONOS_API_URL`      | Specify the API URL. It will overwrite the API endpoint default value `api.ionos.com`. Note: the host URL does not contain the `/cloudapi/v5` path, so it should _not_ be included in the `IONOS_API_URL` environment variable | 
 
 ### Depth
 
@@ -130,3 +130,22 @@ Bugs & feature requests can be open on the repository issues: [https://github.co
 
 Pure SDKs are automatically generated using OpenAPI Generator and don’t support manual changes. If you need changes please open an issue and we’ll try to take care of it.
 
+## Debugging
+
+If you want to see the API call request and response messages, you need to set the Debug field in the Configuration struct:
+
+```golang
+package main
+import "github.com/ionos-cloud/sdk-go/v5"
+func main() {
+    // create your configuration. replace username, password, token and url with correct values, or use NewConfigurationFromEnv()
+    // if you have set your env variables as explained above
+    cfg := ionoscloud.NewConfiguration("username", "password", "token", "hostUrl")
+    // enable request and response logging
+    cfg.Debug = true
+    // create you api client with the configuration
+    apiClient := ionoscloud.NewAPIClient(cfg)
+}
+```
+
+#### Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance.
