@@ -87,9 +87,9 @@ ctx = context.WithValue(context.Background(), sw.ContextOperationServerVariables
 | `IONOS_TOKEN`        | Specify the token used to login, if a token is being used instead of username and password                                                                                                                                     |
 | `IONOS_API_URL`      | Specify the API URL. It will overwrite the API endpoint default value `api.ionos.com`. Note: the host URL does not contain the `/cloudapi/v5` path, so it should _not_ be included in the `IONOS_API_URL` environment variable | 
 
-## Documentation for API Endpoints
-<details>
-<summary>Api Endpoints table</summary>
+<br/>
+<details >
+<summary ><h2 style="display: inline" title="Click to toggle">Documentation for API Endpoints</h2></summary>
 
 | Class                     | Method                                                                                                                                                                               | HTTP request                                                                                                           | Description                                                                 |
 |---------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------|
@@ -316,11 +316,12 @@ ctx = context.WithValue(context.Background(), sw.ContextOperationServerVariables
 | *VolumesApi*              | [**DatacentersVolumesRestoreSnapshotPost**](docs/api/VolumesApi.md#datacentersvolumesrestoresnapshotpost)                                                                            | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot                                               | Restore Volume Snapshot                                                     |
 )
 </details>
-All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
-## Documentation For Models
-<details>
-<summary>Api models list</summary>
+All URIs are relative to *https://api.ionos.com/cloudapi/v6*
+<br/><br/>
+
+<details >
+<summary><h2 style="display: inline" title="Click to toggle">Documentation For Models</h2></summary>
 
  - [AttachedVolumes](docs/models/AttachedVolumes.md)
  - [BackupUnit](docs/models/BackupUnit.md)
