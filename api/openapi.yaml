@@ -18410,7 +18410,7 @@ paths:
         content:
           application/json:
             schema:
-              $ref: '#/components/schemas/KubernetesNodePool'
+              $ref: '#/components/schemas/KubernetesNodePoolForPost'
         description: The Kubernetes node pool to create.
         required: true
       responses:
@@ -18453,7 +18453,7 @@ paths:
       summary: Create Kubernetes node pools
       tags:
       - Kubernetes
-      x-codegen-request-body-name: kubernetesNodePool
+      x-codegen-request-body-name: KubernetesNodePool
   /k8s/{k8sClusterId}/nodepools/{nodepoolId}:
     delete:
       description: Delete the specified Kubernetes node pool.
@@ -18672,7 +18672,7 @@ paths:
           application/json:
             schema:
               $ref: '#/components/schemas/KubernetesNodePoolForPut'
-        description: The modified Kubernetes node pool.
+        description: Details of the Kubernetes Node Pool
         required: true
       responses:
         "202":
@@ -18714,7 +18714,7 @@ paths:
       summary: Modify Kubernetes node pools
       tags:
       - Kubernetes
-      x-codegen-request-body-name: kubernetesNodePoolForPut
+      x-codegen-request-body-name: KubernetesNodePool
   /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes:
     get:
       description: List all the nodes, included in the specified Kubernetes node pool.
@@ -40179,6 +40179,7 @@ components:
     UserPropertiesPut:
       example:
         firstname: firstname
+        password: password
         administrator: true
         active: true
         forceSecAuth: true
@@ -40194,6 +40195,9 @@ components:
           type: string
         email:
           description: The email address of the user.
+          type: string
+        password:
+          description: password of the user
           type: string
         administrator:
           description: Indicates if the user has admin rights.
@@ -40417,6 +40421,7 @@ components:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
         properties:
           firstname: firstname
+          password: password
           administrator: true
           active: true
           forceSecAuth: true
@@ -45936,6 +45941,47 @@ components:
       - storageType
       type: object
     KubernetesNodePoolPropertiesForPost:
+      example:
+        autoScaling:
+          minNodeCount: 1
+          maxNodeCount: 1
+        datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+        lans:
+        - routes:
+          - gatewayIp: 10.1.5.16
+            network: 1.2.3.4/24
+          - gatewayIp: 10.1.5.16
+            network: 1.2.3.4/24
+          id: 3
+          dhcp: true
+        - routes:
+          - gatewayIp: 10.1.5.16
+            network: 1.2.3.4/24
+          - gatewayIp: 10.1.5.16
+            network: 1.2.3.4/24
+          id: 3
+          dhcp: true
+        annotations:
+          key: annotations
+        gatewayIp: 198.51.100.100
+        ramSize: 2048
+        availabilityZone: AUTO
+        k8sVersion: 1.15.4
+        labels:
+          key: labels
+        maintenanceWindow:
+          dayOfTheWeek: Monday
+          time: 13:00:00
+        coresCount: 4
+        storageSize: 100
+        name: k8s-node-pool
+        storageType: HDD
+        nodeCount: 2
+        cpuFamily: AMD_OPTERON
+        publicIps:
+        - 81.173.1.2
+        - 82.231.2.5
+        - 92.221.2.4
       properties:
         name:
           description: A Kubernetes node pool name. Valid Kubernetes node pool name
@@ -46130,7 +46176,6 @@ components:
             type: string
           type: array
       required:
-      - name
       - nodeCount
       type: object
     KubernetesNodePool:
@@ -46217,6 +46262,60 @@ components:
       - properties
       type: object
     KubernetesNodePoolForPost:
+      example:
+        metadata:
+          createdByUserId: user@example.com
+          createdDate: 2015-12-04T14:34:09.809Z
+          createdBy: user@example.com
+          lastModifiedDate: 2015-12-04T14:34:09.809Z
+          lastModifiedBy: user@example.com
+          etag: 45480eb3fbfc31f1d916c1eaa4abdcc3
+          state: AVAILABLE
+          lastModifiedByUserId: 63cef532-26fe-4a64-a4e0-de7c8a506c90
+        id: 1e072e52-2ed3-492f-b6b6-c6b116907527
+        href: <RESOURCE-URI>
+        type: nodepool
+        properties:
+          autoScaling:
+            minNodeCount: 1
+            maxNodeCount: 1
+          datacenterId: 1e072e52-2ed3-492f-b6b6-c6b116907521
+          lans:
+          - routes:
+            - gatewayIp: 10.1.5.16
+              network: 1.2.3.4/24
+            - gatewayIp: 10.1.5.16
+              network: 1.2.3.4/24
+            id: 3
+            dhcp: true
+          - routes:
+            - gatewayIp: 10.1.5.16
+              network: 1.2.3.4/24
+            - gatewayIp: 10.1.5.16
+              network: 1.2.3.4/24
+            id: 3
+            dhcp: true
+          annotations:
+            key: annotations
+          gatewayIp: 198.51.100.100
+          ramSize: 2048
+          availabilityZone: AUTO
+          k8sVersion: 1.15.4
+          labels:
+            key: labels
+          maintenanceWindow:
+            dayOfTheWeek: Monday
+            time: 13:00:00
+          coresCount: 4
+          storageSize: 100
+          name: k8s-node-pool
+          storageType: HDD
+          nodeCount: 2
+          cpuFamily: AMD_OPTERON
+          publicIps:
+          - 81.173.1.2
+          - 82.231.2.5
+          - 92.221.2.4
       properties:
         id:
           description: The resource's unique identifier.
