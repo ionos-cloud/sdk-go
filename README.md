@@ -6,6 +6,9 @@
 [![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
 [![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
 [![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Release](https://img.shields.io/github/v/release/ionos-cloud/sdk-go.svg)](https://github.com/ionos-cloud/sdk-go/releases/latest)
+[![Release Date](https://img.shields.io/github/release-date/ionos-cloud/sdk-go.svg)](https://github.com/ionos-cloud/sdk-go/releases/latest)
+[![Go](https://img.shields.io/github/go-mod/go-version/ionos-cloud/sdk-go.svg)](https://github.com/ionos-cloud/sdk-go)
 
 ![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
 
