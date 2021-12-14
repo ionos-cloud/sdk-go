@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
+|**Name** | Pointer to **string** | A Kubernetes Node Pool Name. Valid Kubernetes Node Pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | [optional] |
 |**NodeCount** | **int32** | Number of nodes part of the Node Pool | |
 |**K8sVersion** | Pointer to **string** | The kubernetes version in which a nodepool is running. This imposes restrictions on what kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all kubernetes versions are viable upgrade targets for all prior versions. | [optional] |
 |**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
@@ -18,7 +18,7 @@
 
 ### NewKubernetesNodePoolPropertiesForPut
 
-`func NewKubernetesNodePoolPropertiesForPut(name string, nodeCount int32, ) *KubernetesNodePoolPropertiesForPut`
+`func NewKubernetesNodePoolPropertiesForPut(nodeCount int32, ) *KubernetesNodePoolPropertiesForPut`
 
 NewKubernetesNodePoolPropertiesForPut instantiates a new KubernetesNodePoolPropertiesForPut object
 This constructor will assign default values to properties that have it defined,
@@ -52,6 +52,11 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+### HasName
+
+`func (o *KubernetesNodePoolPropertiesForPut) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetNodeCount
 

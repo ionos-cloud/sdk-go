@@ -7,6 +7,7 @@
 |**Firstname** | Pointer to **string** | first name of the user | [optional] |
 |**Lastname** | Pointer to **string** | last name of the user | [optional] |
 |**Email** | Pointer to **string** | email address of the user | [optional] |
+|**Password** | Pointer to **string** | password of the user | [optional] |
 |**Administrator** | Pointer to **bool** | indicates if the user has admin rights or not | [optional] |
 |**ForceSecAuth** | Pointer to **bool** | indicates if secure authentication should be forced on the user or not | [optional] |
 |**SecAuthActive** | Pointer to **bool** | indicates if secure authentication is active for the user or not | [optional] |
@@ -105,6 +106,31 @@ SetEmail sets Email field to given value.
 `func (o *UserPropertiesPut) HasEmail() bool`
 
 HasEmail returns a boolean if a field has been set.
+
+### GetPassword
+
+`func (o *UserPropertiesPut) GetPassword() string`
+
+GetPassword returns the Password field if non-nil, zero value otherwise.
+
+### GetPasswordOk
+
+`func (o *UserPropertiesPut) GetPasswordOk() (*string, bool)`
+
+GetPasswordOk returns a tuple with the Password field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPassword
+
+`func (o *UserPropertiesPut) SetPassword(v string)`
+
+SetPassword sets Password field to given value.
+
+### HasPassword
+
+`func (o *UserPropertiesPut) HasPassword() bool`
+
+HasPassword returns a boolean if a field has been set.
 
 ### GetAdministrator
 
