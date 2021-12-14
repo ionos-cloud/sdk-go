@@ -2,8 +2,13 @@
 
 ## v6.0.0 (December, 2021)
 
+### Enhancements:
+
 * changed structure `ApiK8sNodepoolsPostRequest`, changed name of `kubernetesNodePool` field from `KubernetesNodePool` to `KubernetesNodePoolForPost`
 * changed structure `ApiK8sNodepoolsPutRequest`, changed type of `KubernetesNodePoolForPut` field from `kubernetesNodePoolForPut` to `kubernetesNodePool`
+
+### Fixes:
+
 * fixed sporadic EOF error seen from server
 * fixed overwriting https with `http` for host endpoint that starts with `http`. It now allows user to enter a url that starts with `http`
 * added `Password` field to `UserPropertiesPut` to allow user password update
