@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## v5.1.11 (December, 2021)
+
+### Enhancements:
+
+* added `Password` field to `UserPropertiesPut` to allow user password update
+
+### Fixes:
+
+* fixed sporadic `EOF` error seen from server
+* fixed overwriting `https` with `http` for host endpoint that starts with `http`. It now supports both `http` and `https` schemas
+
+### Dependency-updates:
+
+* updated Go version from `1.13` to `1.17`
+
 ## 5.1.10 (November, 2021)
 
 ### Enhancements:
