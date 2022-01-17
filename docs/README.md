@@ -117,13 +117,13 @@ Using this method, the depth parameter will be set **on all the API calls**.
 
 *  When calling a method:
 ```go
-request := apiClient.DataCentersApi.DatacentersGet(context.Background()).Depth(1)
+request := apiClient.DataCenterApi.DatacentersGet(context.Background()).Depth(1)
 ```
 Using this method, the depth parameter will be set **on the current API call**.
 
 * Using the default value:
 
-If the depth parameter is not set, it will have the default value from the API that can be found [here](https://api.ionos.com/cloudapi/v6/swagger.json).
+If the depth parameter is not set, it will have the default value from the API that can be found [here](https://api.ionos.com/cloudapi/v5/swagger.json).
 
 > Note: The priority for setting the depth parameter is: *set on function call > set on configuration method > set using the default value from the API*
 
