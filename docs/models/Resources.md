@@ -7,7 +7,7 @@
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Type** | Pointer to [**Type**](Type.md) | The type of the resource. | [optional] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]Resource**](Resource.md) | Array of items in that collection. | [optional] [readonly] |
+|**Items** | Pointer to [**[]Resource**](Resource.md) | Array of items in the collection. | [optional] [readonly] |
 
 ## Methods
 

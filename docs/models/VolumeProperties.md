@@ -12,7 +12,7 @@
 |**ImagePassword** | Pointer to **string** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9. | [optional] |
 |**ImageAlias** | Pointer to **string** |  | [optional] |
 |**SshKeys** | Pointer to **[]string** | Public SSH keys are set on the image as authorized keys for appropriate SSH login to the instance using the corresponding private key. This field may only be set in creation requests. When reading, it always returns null. SSH keys are only supported if a public Linux image is used for the volume creation. | [optional] |
-|**Bus** | Pointer to **string** | The bus type of the volume. Default is VIRTIO | [optional] |
+|**Bus** | Pointer to **string** | The bus type for this volume; default is VIRTIO. | [optional] |
 |**LicenceType** | Pointer to **string** | OS type for this volume. | [optional] [readonly] |
 |**CpuHotPlug** | Pointer to **bool** | Hot-plug capable CPU (no reboot required). | [optional] |
 |**RamHotPlug** | Pointer to **bool** | Hot-plug capable RAM (no reboot required). | [optional] |
@@ -24,6 +24,7 @@
 |**PciSlot** | Pointer to **int32** | The PCI slot number of the storage volume. Null for volumes, not mounted to a VM. | [optional] [readonly] |
 |**BackupunitId** | Pointer to **string** | The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property. | [optional] |
 |**UserData** | Pointer to **string** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property. | [optional] |
+|**BootServer** | Pointer to **string** | The UUID of the attached server. | [optional] [readonly] |
 
 ## Methods
 
@@ -538,6 +539,31 @@ SetUserData sets UserData field to given value.
 `func (o *VolumeProperties) HasUserData() bool`
 
 HasUserData returns a boolean if a field has been set.
+
+### GetBootServer
+
+`func (o *VolumeProperties) GetBootServer() string`
+
+GetBootServer returns the BootServer field if non-nil, zero value otherwise.
+
+### GetBootServerOk
+
+`func (o *VolumeProperties) GetBootServerOk() (*string, bool)`
+
+GetBootServerOk returns a tuple with the BootServer field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBootServer
+
+`func (o *VolumeProperties) SetBootServer(v string)`
+
+SetBootServer sets BootServer field to given value.
+
+### HasBootServer
+
+`func (o *VolumeProperties) HasBootServer() bool`
+
+HasBootServer returns a boolean if a field has been set.
 
 
 

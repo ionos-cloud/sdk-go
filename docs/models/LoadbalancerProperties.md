@@ -5,7 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**Ip** | Pointer to **string** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically. | [optional] |
+|**Ip** | Pointer to **NullableString** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically. | [optional] |
 |**Dhcp** | Pointer to **bool** | Indicates if the loadbalancer will reserve an IP using DHCP. | [optional] |
 
 ## Methods
@@ -77,6 +77,16 @@ SetIp sets Ip field to given value.
 
 HasIp returns a boolean if a field has been set.
 
+### SetIpNil
+
+`func (o *LoadbalancerProperties) SetIpNil(b bool)`
+
+ SetIpNil sets the value for Ip to be an explicit nil
+
+### UnsetIp
+`func (o *LoadbalancerProperties) UnsetIp()`
+
+UnsetIp ensures that no value is present for Ip, not even an explicit nil
 ### GetDhcp
 
 `func (o *LoadbalancerProperties) GetDhcp() bool`

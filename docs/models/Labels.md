@@ -7,7 +7,7 @@
 |**Id** | Pointer to **string** | A unique representation of the label as a resource collection. | [optional] [readonly] |
 |**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
 |**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]Label**](Label.md) | Array of items in that collection. | [optional] [readonly] |
+|**Items** | Pointer to [**[]Label**](Label.md) | Array of items in the collection. | [optional] [readonly] |
 
 ## Methods
 

@@ -6,14 +6,14 @@
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Protocol** | **string** | The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests). | |
-|**SourceMac** | Pointer to **string** | Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address. | [optional] |
-|**SourceIp** | Pointer to **string** | Only traffic originating from the respective IPv4 address is allowed. Value null allows traffic from any IP address. | [optional] |
-|**TargetIp** | Pointer to **string** | If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address of the NIC is allowed. Value null Value null allows traffic to any target IP address. | [optional] |
-|**IcmpCode** | Pointer to **int32** | Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes. | [optional] |
-|**IcmpType** | Pointer to **int32** | Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types. | [optional] |
+|**SourceMac** | Pointer to **NullableString** | Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address. | [optional] |
+|**SourceIp** | Pointer to **NullableString** | Only traffic originating from the respective IPv4 address is allowed. Value null allows traffic from any IP address. | [optional] |
+|**TargetIp** | Pointer to **NullableString** | If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address of the NIC is allowed. Value null Value null allows traffic to any target IP address. | [optional] |
+|**IcmpCode** | Pointer to **NullableInt32** | Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes. | [optional] |
+|**IcmpType** | Pointer to **NullableInt32** | Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types. | [optional] |
 |**PortRangeStart** | Pointer to **int32** | Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports. | [optional] |
 |**PortRangeEnd** | Pointer to **int32** | Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports. | [optional] |
-|**Type** | Pointer to **string** | The type of firewall rule. If not specified, the default INGRESS value is taken. | [optional] |
+|**Type** | Pointer to **string** | The type of the firewall rule. If not specified, the default INGRESS value is used. | [optional] |
 
 ## Methods
 
@@ -104,6 +104,16 @@ SetSourceMac sets SourceMac field to given value.
 
 HasSourceMac returns a boolean if a field has been set.
 
+### SetSourceMacNil
+
+`func (o *FirewallruleProperties) SetSourceMacNil(b bool)`
+
+ SetSourceMacNil sets the value for SourceMac to be an explicit nil
+
+### UnsetSourceMac
+`func (o *FirewallruleProperties) UnsetSourceMac()`
+
+UnsetSourceMac ensures that no value is present for SourceMac, not even an explicit nil
 ### GetSourceIp
 
 `func (o *FirewallruleProperties) GetSourceIp() string`
@@ -129,6 +139,16 @@ SetSourceIp sets SourceIp field to given value.
 
 HasSourceIp returns a boolean if a field has been set.
 
+### SetSourceIpNil
+
+`func (o *FirewallruleProperties) SetSourceIpNil(b bool)`
+
+ SetSourceIpNil sets the value for SourceIp to be an explicit nil
+
+### UnsetSourceIp
+`func (o *FirewallruleProperties) UnsetSourceIp()`
+
+UnsetSourceIp ensures that no value is present for SourceIp, not even an explicit nil
 ### GetTargetIp
 
 `func (o *FirewallruleProperties) GetTargetIp() string`
@@ -154,6 +174,16 @@ SetTargetIp sets TargetIp field to given value.
 
 HasTargetIp returns a boolean if a field has been set.
 
+### SetTargetIpNil
+
+`func (o *FirewallruleProperties) SetTargetIpNil(b bool)`
+
+ SetTargetIpNil sets the value for TargetIp to be an explicit nil
+
+### UnsetTargetIp
+`func (o *FirewallruleProperties) UnsetTargetIp()`
+
+UnsetTargetIp ensures that no value is present for TargetIp, not even an explicit nil
 ### GetIcmpCode
 
 `func (o *FirewallruleProperties) GetIcmpCode() int32`
@@ -179,6 +209,16 @@ SetIcmpCode sets IcmpCode field to given value.
 
 HasIcmpCode returns a boolean if a field has been set.
 
+### SetIcmpCodeNil
+
+`func (o *FirewallruleProperties) SetIcmpCodeNil(b bool)`
+
+ SetIcmpCodeNil sets the value for IcmpCode to be an explicit nil
+
+### UnsetIcmpCode
+`func (o *FirewallruleProperties) UnsetIcmpCode()`
+
+UnsetIcmpCode ensures that no value is present for IcmpCode, not even an explicit nil
 ### GetIcmpType
 
 `func (o *FirewallruleProperties) GetIcmpType() int32`
@@ -204,6 +244,16 @@ SetIcmpType sets IcmpType field to given value.
 
 HasIcmpType returns a boolean if a field has been set.
 
+### SetIcmpTypeNil
+
+`func (o *FirewallruleProperties) SetIcmpTypeNil(b bool)`
+
+ SetIcmpTypeNil sets the value for IcmpType to be an explicit nil
+
+### UnsetIcmpType
+`func (o *FirewallruleProperties) UnsetIcmpType()`
+
+UnsetIcmpType ensures that no value is present for IcmpType, not even an explicit nil
 ### GetPortRangeStart
 
 `func (o *FirewallruleProperties) GetPortRangeStart() int32`

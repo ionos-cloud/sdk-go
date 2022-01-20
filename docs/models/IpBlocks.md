@@ -7,9 +7,9 @@
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]IpBlock**](IpBlock.md) | Array of items in that collection | [optional] [readonly] |
-|**Offset** | Pointer to **float32** | The offset specified in the request (or, if none was specified, the default offset of 0) | [optional] |
-|**Limit** | Pointer to **float32** | The limit specified in the request (if none was specified, use the endpoint&#39;s default pagination limit). | [optional] |
+|**Items** | Pointer to [**[]IpBlock**](IpBlock.md) | Array of items in the collection. | [optional] [readonly] |
+|**Offset** | Pointer to **float32** | The offset, specified in the request (if not is specified, 0 is used by default). | [optional] |
+|**Limit** | Pointer to **float32** | The limit, specified in the request (if not specified, the endpoint&#39;s default pagination limit is used). | [optional] |
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
 
 ## Methods

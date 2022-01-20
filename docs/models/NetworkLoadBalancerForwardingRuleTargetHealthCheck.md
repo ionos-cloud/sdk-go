@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Check** | Pointer to **bool** | Check specifies whether the target VM&#39;s health is checked. If turned off, a target VM is always considered available. If turned on, the target VM is available when accepting periodic TCP connections, to ensure that it is really able to serve requests. The address and port to send the tests to are those of the target VM. The health check only consists of a connection attempt. | [optional] |
-|**CheckInterval** | Pointer to **int32** | CheckInterval determines the duration (in milliseconds) between consecutive health checks. If unspecified a default of 2000 ms is used. | [optional] |
-|**Maintenance** | Pointer to **bool** | Maintenance specifies if a target VM should be marked as down, even if it is not. | [optional] |
+|**Check** | Pointer to **bool** | Makes the target available only if it accepts periodic health check TCP connection attempts; when turned off, the target is considered always available. The health check only consists of a connection attempt to the address and port of the target. | [optional] |
+|**CheckInterval** | Pointer to **int32** | The interval in milliseconds between consecutive health checks; default is 2000. | [optional] |
+|**Maintenance** | Pointer to **bool** | Maintenance mode prevents the target from receiving balanced traffic. | [optional] |
 
 ## Methods
 

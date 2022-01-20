@@ -6,7 +6,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**Name** | **string** | Name of the NAT Gateway. | |
 |**PublicIps** | **[]string** | Collection of public IP addresses of the NAT Gateway. Should be customer reserved IP addresses in that location. | |
-|**Lans** | Pointer to [**[]NatGatewayLanProperties**](NatGatewayLanProperties.md) | Collection of LANs connected to the NAT Gateway. IPs must contain valid subnet mask. If user will not provide any IP then system will generate an IP with /24 subnet. | [optional] |
+|**Lans** | Pointer to [**[]NatGatewayLanProperties**](NatGatewayLanProperties.md) | Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet. | [optional] |
 
 ## Methods
 

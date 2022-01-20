@@ -67,7 +67,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -139,14 +139,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -234,7 +234,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -296,7 +296,7 @@ paths:
   /datacenters/{datacenterId}:
     delete:
       description: Delete the specified data center and all the elements it contains.
-        This is method is destructive and should be used carefully.
+        This method is destructive and should be used carefully.
       operationId: datacentersDelete
       parameters:
       - description: The unique ID of the data center.
@@ -328,7 +328,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -411,7 +411,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -491,7 +491,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -584,7 +584,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -672,7 +672,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -752,7 +752,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -838,7 +838,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -923,14 +923,14 @@ paths:
         schema:
           type: boolean
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -1023,7 +1023,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1123,7 +1123,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1211,7 +1211,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1296,7 +1296,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1397,7 +1397,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1496,14 +1496,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -1604,7 +1604,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1709,7 +1709,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1803,7 +1803,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -1889,14 +1889,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -1994,7 +1994,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2099,7 +2099,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2193,7 +2193,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2281,7 +2281,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2370,7 +2370,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2461,7 +2461,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2552,7 +2552,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2643,7 +2643,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2734,7 +2734,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2823,7 +2823,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2910,7 +2910,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -2984,7 +2984,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3065,7 +3065,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3146,7 +3146,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3225,7 +3225,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3317,7 +3317,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3410,14 +3410,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -3509,7 +3509,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3609,7 +3609,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3697,7 +3697,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3783,7 +3783,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3881,7 +3881,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -3982,7 +3982,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4079,7 +4079,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4106,6 +4106,7 @@ paths:
                   - UNKNOWN
                   - WINDOWS
                   - WINDOWS2016
+                  - WINDOWS2022
                   - LINUX
                   - OTHER
                   type: string
@@ -4182,7 +4183,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4262,7 +4263,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4343,7 +4344,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4422,7 +4423,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4514,7 +4515,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4601,14 +4602,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -4693,7 +4694,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4786,7 +4787,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4867,7 +4868,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -4946,7 +4947,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5038,7 +5039,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5131,14 +5132,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -5229,7 +5230,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5328,7 +5329,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5415,7 +5416,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5500,7 +5501,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5598,7 +5599,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5697,14 +5698,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -5801,7 +5802,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5906,7 +5907,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -5992,14 +5993,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -6097,7 +6098,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6202,7 +6203,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6295,7 +6296,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6386,7 +6387,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6490,7 +6491,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6595,14 +6596,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -6705,7 +6706,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6816,7 +6817,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -6915,7 +6916,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -7012,7 +7013,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -7122,7 +7123,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -7227,7 +7228,7 @@ paths:
           minimum: 0
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -7805,14 +7806,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -7903,7 +7904,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8002,7 +8003,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8090,7 +8091,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8176,7 +8177,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8275,7 +8276,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8374,7 +8375,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8459,7 +8460,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8564,7 +8565,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8658,7 +8659,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8738,7 +8739,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8820,7 +8821,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -8919,7 +8920,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9007,7 +9008,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9093,7 +9094,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9187,7 +9188,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9281,7 +9282,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9366,7 +9367,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9471,7 +9472,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9564,7 +9565,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9655,7 +9656,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9754,7 +9755,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -9848,7 +9849,7 @@ paths:
           minimum: 0
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -10386,14 +10387,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -10484,7 +10485,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -10583,7 +10584,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -10671,7 +10672,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -10757,7 +10758,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -10851,7 +10852,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -10945,7 +10946,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11030,7 +11031,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11135,7 +11136,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11228,7 +11229,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11320,7 +11321,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11419,7 +11420,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11513,7 +11514,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11598,7 +11599,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11703,7 +11704,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11796,7 +11797,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11888,7 +11889,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -11987,7 +11988,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12075,14 +12076,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -12174,7 +12175,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12274,7 +12275,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12363,7 +12364,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12450,7 +12451,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12545,7 +12546,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12640,7 +12641,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12726,7 +12727,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12832,7 +12833,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -12926,7 +12927,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13019,7 +13020,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13119,7 +13120,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13214,7 +13215,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13300,7 +13301,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13406,7 +13407,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13500,7 +13501,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13593,7 +13594,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13693,7 +13694,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13776,11 +13777,30 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
+          type: integer
+      - description: The first element (from the complete list of the elements) to
+          include in the response (used together with <b><i>limit</i></b> for pagination).
+        in: query
+        name: offset
+        schema:
+          default: 0
+          format: int32
+          minimum: 0
+          type: integer
+      - description: The maximum number of elements to return (used together with
+          <b><i>offset</i></b> for pagination). It must not exceed <b><i>200</i></b>.
+        in: query
+        name: limit
+        schema:
+          default: 100
+          format: int32
+          maximum: 200
+          minimum: 1
           type: integer
       responses:
         "200":
@@ -13850,7 +13870,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -13944,7 +13964,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14026,7 +14046,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14106,7 +14126,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14194,7 +14214,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14283,7 +14303,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14357,7 +14377,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14442,7 +14462,7 @@ paths:
         schema:
           type: string
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -14534,7 +14554,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14609,7 +14629,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14683,14 +14703,14 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
           format: int32
           type: integer
       - description: The first element (from the complete list of the elements) to
-          include in the response (use together with limit for pagination).
+          include in the response (used together with <b><i>limit</i></b> for pagination).
         in: query
         name: offset
         schema:
@@ -14775,7 +14795,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14868,7 +14888,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -14950,7 +14970,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15029,7 +15049,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15124,7 +15144,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15206,7 +15226,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15280,7 +15300,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15353,7 +15373,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15446,7 +15466,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15529,7 +15549,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15608,7 +15628,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15701,7 +15721,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15781,7 +15801,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15860,7 +15880,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -15959,7 +15979,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16047,7 +16067,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16134,7 +16154,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16219,7 +16239,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16319,7 +16339,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16412,7 +16432,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16486,7 +16506,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16571,7 +16591,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16662,7 +16682,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16743,7 +16763,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16824,7 +16844,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -16915,7 +16935,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17005,7 +17025,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17090,7 +17110,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17170,7 +17190,7 @@ paths:
           default: true
           type: boolean
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17244,7 +17264,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17318,7 +17338,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17418,7 +17438,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17499,7 +17519,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17578,7 +17598,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17670,7 +17690,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17748,7 +17768,7 @@ paths:
           default: true
           type: boolean
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17822,7 +17842,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17895,7 +17915,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -17983,7 +18003,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18059,7 +18079,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18138,7 +18158,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18228,7 +18248,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18321,7 +18341,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18400,7 +18420,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18494,7 +18514,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18576,7 +18596,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18661,7 +18681,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18755,7 +18775,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18847,7 +18867,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -18935,7 +18955,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19030,7 +19050,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19187,7 +19207,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19260,7 +19280,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19354,7 +19374,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19437,7 +19457,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19516,7 +19536,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19603,7 +19623,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19691,7 +19711,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19771,7 +19791,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19850,7 +19870,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -19944,7 +19964,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20026,7 +20046,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20111,7 +20131,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20205,7 +20225,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20290,7 +20310,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20390,7 +20410,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20478,7 +20498,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20569,7 +20589,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20663,7 +20683,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20748,7 +20768,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20848,7 +20868,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -20936,7 +20956,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21027,7 +21047,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21115,7 +21135,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21194,7 +21214,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21288,7 +21308,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21370,7 +21390,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21455,7 +21475,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21543,7 +21563,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21622,7 +21642,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21716,7 +21736,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21798,7 +21818,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -21883,7 +21903,7 @@ paths:
           minimum: 0
           type: integer
       - description: Users with multiple contracts must provide the contract number,
-          against which all API requests are to be executed.
+          for which all API requests are to be executed.
         in: header
         name: X-Contract-Number
         schema:
@@ -22096,7 +22116,7 @@ components:
         type: boolean
     contractNumber:
       description: Users with multiple contracts must provide the contract number,
-        against which all API requests are to be executed.
+        for which all API requests are to be executed.
       in: header
       name: X-Contract-Number
       schema:
@@ -22139,7 +22159,7 @@ components:
         type: string
     offset:
       description: The first element (from the complete list of the elements) to include
-        in the response (use together with limit for pagination).
+        in the response (used together with <b><i>limit</i></b> for pagination).
       in: query
       name: offset
       schema:
@@ -22178,6 +22198,17 @@ components:
         default: 100
         format: int32
         maximum: 1000
+        minimum: 1
+        type: integer
+    limitDefault100MaxLimit200:
+      description: The maximum number of elements to return (used together with <b><i>offset</i></b>
+        for pagination). It must not exceed <b><i>200</i></b>.
+      in: query
+      name: limit
+      schema:
+        default: 100
+        format: int32
+        maximum: 200
         minimum: 1
         type: integer
   responses:
@@ -22238,6 +22269,7 @@ components:
             discVirtioHotUnplug: true
             deviceNumber: 3
             imagePassword: mypass123
+            bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
             size: 100.0
             nicHotPlug: true
             backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -22273,6 +22305,7 @@ components:
             discVirtioHotUnplug: true
             deviceNumber: 3
             imagePassword: mypass123
+            bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
             size: 100.0
             nicHotPlug: true
             backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -22300,7 +22333,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Volume'
           type: array
@@ -22530,6 +22563,7 @@ components:
         discVirtioHotUnplug: true
         deviceNumber: 3
         imagePassword: mypass123
+        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
         size: 100.0
         nicHotPlug: true
         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -22596,7 +22630,7 @@ components:
             type: string
           type: array
         bus:
-          description: The bus type of the volume. Default is VIRTIO
+          description: The bus type for this volume; default is VIRTIO.
           enum:
           - VIRTIO
           - IDE
@@ -22609,6 +22643,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -22667,6 +22702,11 @@ components:
             'imageAlias' that has cloud-init compatibility in conjunction with this
             property.
           type: string
+        bootServer:
+          description: The UUID of the attached server.
+          example: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
+          readOnly: true
+          type: string
       required:
       - size
       type: object
@@ -22699,6 +22739,7 @@ components:
           discVirtioHotUnplug: true
           deviceNumber: 3
           imagePassword: mypass123
+          bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
           size: 100.0
           nicHotPlug: true
           backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -22831,7 +22872,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Image'
           type: array
@@ -22997,6 +23038,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -23207,7 +23249,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Contract'
           readOnly: true
@@ -23635,7 +23677,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Nic'
           readOnly: true
@@ -24114,6 +24156,7 @@ components:
                     discVirtioHotUnplug: true
                     deviceNumber: 3
                     imagePassword: mypass123
+                    bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                     size: 100.0
                     nicHotPlug: true
                     backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -24149,6 +24192,7 @@ components:
                     discVirtioHotUnplug: true
                     deviceNumber: 3
                     imagePassword: mypass123
+                    bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                     size: 100.0
                     nicHotPlug: true
                     backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -24569,6 +24613,7 @@ components:
                     discVirtioHotUnplug: true
                     deviceNumber: 3
                     imagePassword: mypass123
+                    bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                     size: 100.0
                     nicHotPlug: true
                     backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -24604,6 +24649,7 @@ components:
                     discVirtioHotUnplug: true
                     deviceNumber: 3
                     imagePassword: mypass123
+                    bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                     size: 100.0
                     nicHotPlug: true
                     backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -24935,6 +24981,7 @@ components:
               discVirtioHotUnplug: true
               deviceNumber: 3
               imagePassword: mypass123
+              bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
               size: 100.0
               nicHotPlug: true
               backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -24970,6 +25017,7 @@ components:
               discVirtioHotUnplug: true
               deviceNumber: 3
               imagePassword: mypass123
+              bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
               size: 100.0
               nicHotPlug: true
               backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -26944,6 +26992,7 @@ components:
                       discVirtioHotUnplug: true
                       deviceNumber: 3
                       imagePassword: mypass123
+                      bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                       size: 100.0
                       nicHotPlug: true
                       backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -26979,6 +27028,7 @@ components:
                       discVirtioHotUnplug: true
                       deviceNumber: 3
                       imagePassword: mypass123
+                      bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                       size: 100.0
                       nicHotPlug: true
                       backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -27399,6 +27449,7 @@ components:
                       discVirtioHotUnplug: true
                       deviceNumber: 3
                       imagePassword: mypass123
+                      bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                       size: 100.0
                       nicHotPlug: true
                       backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -27434,6 +27485,7 @@ components:
                       discVirtioHotUnplug: true
                       deviceNumber: 3
                       imagePassword: mypass123
+                      bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                       size: 100.0
                       nicHotPlug: true
                       backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -27765,6 +27817,7 @@ components:
                 discVirtioHotUnplug: true
                 deviceNumber: 3
                 imagePassword: mypass123
+                bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                 size: 100.0
                 nicHotPlug: true
                 backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -27800,6 +27853,7 @@ components:
                 discVirtioHotUnplug: true
                 deviceNumber: 3
                 imagePassword: mypass123
+                bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                 size: 100.0
                 nicHotPlug: true
                 backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -29756,6 +29810,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -29791,6 +29846,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -30211,6 +30267,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -30246,6 +30303,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -30577,6 +30635,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -30612,6 +30671,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -32529,6 +32589,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -32564,6 +32625,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -32984,6 +33046,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -33019,6 +33082,7 @@ components:
                         discVirtioHotUnplug: true
                         deviceNumber: 3
                         imagePassword: mypass123
+                        bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                         size: 100.0
                         nicHotPlug: true
                         backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -33350,6 +33414,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -33385,6 +33450,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -34850,7 +34916,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Datacenter'
           readOnly: true
@@ -34993,7 +35059,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/FirewallRule'
           readOnly: true
@@ -35041,12 +35107,14 @@ components:
             allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from
             any MAC address.'
           example: 00:0a:95:9d:68:16
+          nullable: true
           pattern: ^([0-9A-Fa-f]{2}[:-]){5}([0-9A-Fa-f]{2})$
           type: string
         sourceIp:
           description: Only traffic originating from the respective IPv4 address is
             allowed. Value null allows traffic from any IP address.
           example: 22.231.113.64
+          nullable: true
           pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
           type: string
         targetIp:
@@ -35054,6 +35122,7 @@ components:
             directed to the respective IP address of the NIC is allowed. Value null
             Value null allows traffic to any target IP address.
           example: 22.231.113.64
+          nullable: true
           pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
           type: string
         icmpCode:
@@ -35063,6 +35132,7 @@ components:
           format: int32
           maximum: 254
           minimum: 0
+          nullable: true
           type: integer
         icmpType:
           description: Defines the allowed type (from 0 to 254) if the protocol ICMP
@@ -35071,6 +35141,7 @@ components:
           format: int32
           maximum: 254
           minimum: 0
+          nullable: true
           type: integer
         portRangeStart:
           description: Defines the start range of the allowed port (from 1 to 65534)
@@ -35091,8 +35162,8 @@ components:
           minimum: 1
           type: integer
         type:
-          description: The type of firewall rule. If not specified, the default INGRESS
-            value is taken.
+          description: The type of the firewall rule. If not specified, the default
+            INGRESS value is used.
           enum:
           - INGRESS
           - EGRESS
@@ -35243,7 +35314,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/FlowLog'
           readOnly: true
@@ -35864,7 +35935,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Nic'
           readOnly: true
@@ -37147,7 +37218,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Lan'
           readOnly: true
@@ -37759,6 +37830,7 @@ components:
           description: IPv4 address of the loadbalancer. All attached NICs will inherit
             this IP. Leaving value null will assign IP automatically.
           example: 22.231.113.64
+          nullable: true
           pattern: ^(?:(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(?:25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)$
           type: string
         dhcp:
@@ -38361,7 +38433,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Loadbalancer'
           readOnly: true
@@ -38672,6 +38744,7 @@ components:
             null or empty array will assign an IP address automatically.
           items:
             type: string
+          nullable: true
           type: array
         dhcp:
           description: Indicates if the NIC will reserve an IP using DHCP.
@@ -38692,7 +38765,7 @@ components:
           type: boolean
         firewallType:
           description: The type of firewall rules that will be allowed on the NIC.
-            If not specified, the default INGRESS value is taken.
+            If not specified, the default INGRESS value is used.
           enum:
           - INGRESS
           - EGRESS
@@ -38701,14 +38774,14 @@ components:
           type: string
         deviceNumber:
           description: The Logical Unit Number (LUN) of the storage volume. Null if
-            this NIC was create from CloudAPI and no DCD changes were done on the
-            Datacenter.
+            this NIC was created using Cloud API and no DCD changes were performed
+            on the Datacenter.
           example: 3
           format: int32
           readOnly: true
           type: integer
         pciSlot:
-          description: The PCI slot number of the NIC.
+          description: The PCI slot number for the NIC.
           example: 7
           format: int32
           readOnly: true
@@ -39001,7 +39074,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Nic'
           type: array
@@ -39199,6 +39272,7 @@ components:
               discVirtioHotUnplug: true
               deviceNumber: 3
               imagePassword: mypass123
+              bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
               size: 100.0
               nicHotPlug: true
               backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -39234,6 +39308,7 @@ components:
               discVirtioHotUnplug: true
               deviceNumber: 3
               imagePassword: mypass123
+              bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
               size: 100.0
               nicHotPlug: true
               backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -39724,7 +39799,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Group'
           readOnly: true
@@ -39914,7 +39989,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Group'
           readOnly: true
@@ -39961,7 +40036,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Resource'
           readOnly: true
@@ -40090,7 +40165,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Resource'
           readOnly: true
@@ -40610,7 +40685,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/User'
           readOnly: true
@@ -40755,7 +40830,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/GroupShare'
           readOnly: true
@@ -40854,7 +40929,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Image'
           readOnly: true
@@ -41033,19 +41108,19 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/IpBlock'
           readOnly: true
           type: array
         offset:
-          description: The offset specified in the request (or, if none was specified,
-            the default offset of 0)
+          description: The offset, specified in the request (if not is specified,
+            0 is used by default).
           example: 0
           type: number
         limit:
-          description: The limit specified in the request (if none was specified,
-            use the endpoint's default pagination limit).
+          description: The limit, specified in the request (if not specified, the
+            endpoint's default pagination limit is used).
           example: 1000
           type: number
         _links:
@@ -41281,7 +41356,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Location'
           readOnly: true
@@ -41483,7 +41558,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/PrivateCrossConnect'
           readOnly: true
@@ -41805,19 +41880,19 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Request'
           readOnly: true
           type: array
         offset:
-          description: The offset specified in the request (or, if none was specified,
-            the default offset of 0)
+          description: The offset, specified in the request (if not is specified,
+            0 is used by default).
           example: 0
           type: number
         limit:
-          description: The limit specified in the request (if none was specified,
-            use the endpoint's default pagination limit).
+          description: The limit, specified in the request (if not specified, the
+            endpoint's default pagination limit is used).
           example: 1000
           type: number
         _links:
@@ -41899,7 +41974,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Resource'
           readOnly: true
@@ -42076,6 +42151,7 @@ components:
                 discVirtioHotUnplug: true
                 deviceNumber: 3
                 imagePassword: mypass123
+                bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                 size: 100.0
                 nicHotPlug: true
                 backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -42111,6 +42187,7 @@ components:
                 discVirtioHotUnplug: true
                 deviceNumber: 3
                 imagePassword: mypass123
+                bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                 size: 100.0
                 nicHotPlug: true
                 backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -42570,6 +42647,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -42605,6 +42683,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -43025,6 +43104,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -43060,6 +43140,7 @@ components:
                   discVirtioHotUnplug: true
                   deviceNumber: 3
                   imagePassword: mypass123
+                  bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
                   size: 100.0
                   nicHotPlug: true
                   backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -43372,7 +43453,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Server'
           readOnly: true
@@ -43478,6 +43559,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -43622,7 +43704,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Snapshot'
           readOnly: true
@@ -43933,7 +44015,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/User'
           readOnly: true
@@ -43992,7 +44074,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/S3Key'
           readOnly: true
@@ -44037,6 +44119,7 @@ components:
             discVirtioHotUnplug: true
             deviceNumber: 3
             imagePassword: mypass123
+            bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
             size: 100.0
             nicHotPlug: true
             backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -44072,6 +44155,7 @@ components:
             discVirtioHotUnplug: true
             deviceNumber: 3
             imagePassword: mypass123
+            bootServer: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
             size: 100.0
             nicHotPlug: true
             backupunitId: 25f67991-0f51-4efc-a8ad-ef1fb31a481c
@@ -44099,7 +44183,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Volume'
           readOnly: true
@@ -44258,7 +44342,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/BackupUnit'
           readOnly: true
@@ -44397,7 +44481,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/label'
           readOnly: true
@@ -44518,7 +44602,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/LabelResource'
           readOnly: true
@@ -44605,13 +44689,12 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
-          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
             If no allowlist is specified, access is not restricted. If an IP without
-            subnet mask is provided, the default value will be used: 32 for IPv4 and
-            128 for IPv6.'
+            subnet mask is provided, the default value is used: 32 for IPv4 and 128
+            for IPv6.'
           example:
           - 1.2.3.4/32
           - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45608,7 +45691,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/KubernetesCluster'
           readOnly: true
@@ -45701,13 +45784,12 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
-          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
             If no allowlist is specified, access is not restricted. If an IP without
-            subnet mask is provided, the default value will be used: 32 for IPv4 and
-            128 for IPv6.'
+            subnet mask is provided, the default value is used: 32 for IPv4 and 128
+            for IPv6.'
           example:
           - 1.2.3.4/32
           - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45761,8 +45843,8 @@ components:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
             If no allowlist is specified, access is not restricted. If an IP without
-            subnet mask is provided, the default value will be used: 32 for IPv4 and
-            128 for IPv6.'
+            subnet mask is provided, the default value is used: 32 for IPv4 and 128
+            for IPv6.'
           example:
           - 1.2.3.4/32
           - 2002::1234:abcd:ffff:c0a8:101/64
@@ -45903,10 +45985,9 @@ components:
         publicIps:
           description: Optional array of reserved public IP addresses to be used by
             the nodes. IPs must be from same location as the data center used for
-            the node pool. The array must contain one extra IP than maximum number
-            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
-            if auto scaling is used) The extra provided IP Will be used during rebuilding
-            of nodes.
+            the node pool. The array must contain one more IP than maximum number
+            possible number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1
+            when auto scaling is used). The extra IP is used when the nodes are rebuilt.
           example:
           - 81.173.1.2
           - 82.231.2.5
@@ -45928,7 +46009,6 @@ components:
             the node pool belongs to a private cluster.
           example: 198.51.100.100
           type: string
-          x-prerelease: true
       required:
       - availabilityZone
       - coresCount
@@ -46060,10 +46140,9 @@ components:
         publicIps:
           description: Optional array of reserved public IP addresses to be used by
             the nodes. IPs must be from same location as the data center used for
-            the node pool. The array must contain one extra IP than maximum number
-            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
-            if auto scaling is used) The extra provided IP Will be used during rebuilding
-            of nodes.
+            the node pool. The array must contain one more IP than the maximum possible
+            number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1
+            when auto scaling is used). The extra IP is used when the nodes are rebuilt.
           example:
           - 81.173.1.2
           - 82.231.2.5
@@ -46077,7 +46156,6 @@ components:
             the node pool belongs to a private cluster.
           example: 198.51.100.100
           type: string
-          x-prerelease: true
       required:
       - availabilityZone
       - coresCount
@@ -46164,10 +46242,9 @@ components:
         publicIps:
           description: Optional array of reserved public IP addresses to be used by
             the nodes. IPs must be from same location as the data center used for
-            the node pool. The array must contain one extra IP than maximum number
-            of nodes could be. (nodeCount+1 if fixed node amount or maxNodeCount+1
-            if auto scaling is used) The extra provided IP Will be used during rebuilding
-            of nodes.
+            the node pool. The array must contain one more IP than the maximum possible
+            number of nodes (nodeCount+1 for fixed number of nodes or maxNodeCount+1
+            when auto scaling is used). The extra IP is used when the nodes are rebuilt.
           example:
           - 81.173.1.2
           - 82.231.2.5
@@ -46552,7 +46629,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/KubernetesNodePool'
           readOnly: true
@@ -46684,7 +46761,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/KubernetesNode'
           readOnly: true
@@ -46965,8 +47042,8 @@ components:
           type: array
         lans:
           description: Collection of LANs connected to the NAT Gateway. IPs must contain
-            valid subnet mask. If user will not provide any IP then system will generate
-            an IP with /24 subnet.
+            a valid subnet mask. If no IP is provided, the system will generate an
+            IP with /24 subnet.
           items:
             $ref: '#/components/schemas/NatGatewayLanProperties'
           type: array
@@ -47382,7 +47459,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/NatGateway'
           readOnly: true
@@ -47467,7 +47544,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/NatGatewayRule'
           readOnly: true
@@ -47860,9 +47937,9 @@ components:
           example: 1
           type: integer
         ips:
-          description: Collection of IP addresses of the Network Load Balancer. (Inbound
-            and outbound) IP of the listenerLan must be a customer reserved IP for
-            the public Load Balancer and private IP for the private Load balancer.
+          description: Collection of the Network Load Balancer IP addresses. (Inbound
+            and outbound) IPs of the listenerLan must be customer-reserved IPs for
+            public Load Balancers, and private IPs for private Load Balancers.
           example:
           - 81.173.1.2
           - 22.231.2.2
@@ -47876,8 +47953,8 @@ components:
           type: integer
         lbPrivateIps:
           description: Collection of private IP addresses with subnet mask of the
-            Network Load Balancer. IPs must contain valid subnet mask. If user will
-            not provide any IP then the system will generate one IP with /24 subnet.
+            Network Load Balancer. IPs must contain a valid subnet mask. If no IP
+            is provided, the system will generate an IP with /24 subnet.
           example:
           - 81.173.1.5/24
           - 22.231.2.5/24
@@ -48372,7 +48449,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/NetworkLoadBalancer'
           readOnly: true
@@ -48406,13 +48483,13 @@ components:
           example: My Application Load Balancer
           type: string
         listenerLan:
-          description: ID of the listening LAN (inbound).
+          description: ID of the listening (inbound) LAN.
           example: 1
           type: integer
         ips:
-          description: Collection of IP addresses of the Application Load Balancer.
-            (Inbound and outbound) IP of the listenerLan must be a customer reserved
-            IP for the public Load Balancer and private IP for the private Load Balancer.
+          description: Collection of the Application Load Balancer IP addresses. (Inbound
+            and outbound) IPs of the listenerLan are customer-reserved public IPs
+            for the public Load Balancers, and private IPs for the private Load Balancers.
           example:
           - 81.173.1.2
           - 22.231.2.2
@@ -48425,10 +48502,9 @@ components:
           example: 2
           type: integer
         lbPrivateIps:
-          description: Collection of private IP addresses with subnet mask of the
-            Application Load Balancer. IPs must contain valid subnet mask. If user
-            will not provide any IP then the system will generate one IP with /24
-            subnet.
+          description: Collection of private IP addresses with the subnet mask of
+            the Application Load Balancer. IPs must contain valid a subnet mask. If
+            no IP is provided, the system will generate an IP with /24 subnet.
           example:
           - 81.173.1.5/24
           - 22.231.2.5/24
@@ -49113,7 +49189,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/ApplicationLoadBalancer'
           readOnly: true
@@ -49435,7 +49511,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/NetworkLoadBalancerForwardingRule'
           readOnly: true
@@ -49484,7 +49560,7 @@ components:
           example: My Network Load Balancer forwarding rule
           type: string
         algorithm:
-          description: Algorithm for the balancing.
+          description: Balancing algorithm
           enum:
           - ROUND_ROBIN
           - LEAST_CONNECTION
@@ -49493,25 +49569,25 @@ components:
           example: ROUND_ROBIN
           type: string
         protocol:
-          description: Protocol of the balancing.
+          description: Balancing protocol
           enum:
           - HTTP
           - TCP
           example: HTTP
           type: string
         listenerIp:
-          description: Listening IP. (inbound)
+          description: Listening (inbound) IP
           example: 81.173.1.2
           type: string
         listenerPort:
-          description: 'Listening port number. (inbound) (range: 1 to 65535)'
+          description: Listening (inbound) port number; valid range is 1 to 65535.
           example: 8080
           format: int32
           type: integer
         healthCheck:
           $ref: '#/components/schemas/NetworkLoadBalancerForwardingRuleHealthCheck'
         targets:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/NetworkLoadBalancerForwardingRuleTarget'
           type: array
@@ -49531,29 +49607,27 @@ components:
         clientTimeout: 50
       properties:
         clientTimeout:
-          description: ClientTimeout is expressed in milliseconds. This inactivity
-            timeout applies when the client is expected to acknowledge or send data.
-            If unset the default of 50 seconds will be used.
+          description: The maximum time in milliseconds to wait for the client to
+            acknowledge or send data; default is 50,000 (50 seconds).
           example: 50
           format: int32
           type: integer
         connectTimeout:
-          description: It specifies the maximum time (in milliseconds) to wait for
-            a connection attempt to a target VM to succeed. If unset, the default
-            of 5 seconds will be used.
+          description: The maximum time in milliseconds to wait for a connection attempt
+            to a target to succeed; default is 5000 (five seconds).
           example: 5000
           format: int32
           type: integer
         targetTimeout:
-          description: TargetTimeout specifies the maximum inactivity time (in milliseconds)
-            on the target VM side. If unset, the default of 50 seconds will be used.
+          description: The maximum time in milliseconds that a target can remain inactive;
+            default is 50,000 (50 seconds).
           example: 50000
           format: int32
           type: integer
         retries:
-          description: 'Retries specifies the number of retries to perform on a target
-            VM after a connection failure. If unset, the default value of 3 will be
-            used. (valid range: [0, 65535])'
+          description: The maximum number of attempts to reconnect to a target after
+            a connection failure. Valid range is 0 to 65535 and default is three reconnection
+            attempts.
           example: 3
           format: int32
           type: integer
@@ -49569,24 +49643,22 @@ components:
         weight: 123
       properties:
         ip:
-          description: IP of a balanced target VM
+          description: The IP of the balanced target VM.
           example: 22.231.2.2
           type: string
         port:
-          description: 'Port of the balanced target service. (range: 1 to 65535)'
+          description: The port of the balanced target service; valid range is 1 to
+            65535.
           example: 8080
           format: int32
           type: integer
         weight:
-          description: Weight parameter is used to adjust the target VM's weight relative
-            to other target VMs. All target VMs will receive a load proportional to
-            their weight relative to the sum of all weights, so the higher the weight,
-            the higher the load. The default weight is 1, and the maximal value is
-            256. A value of 0 means the target VM will not participate in load-balancing
-            but will still accept persistent connections. If this parameter is used
-            to distribute the load according to target VM's capacity, it is recommended
-            to start with values which can both grow and shrink, for instance between
-            10 and 100 to leave enough room above and below for later adjustments.
+          description: Traffic is distributed in proportion to target weight, relative
+            to the combined weight of all targets. A target with higher weight receives
+            a greater share of traffic. Valid range is 0 to 256 and default is 1.
+            Targets with weight of 0 do not participate in load balancing but still
+            accept persistent connections. It is best to assign weights in the middle
+            of the range to leave room for later adjustments.
           example: 123
           format: int32
           type: integer
@@ -49604,22 +49676,20 @@ components:
         maintenance: true
       properties:
         check:
-          description: Check specifies whether the target VM's health is checked.
-            If turned off, a target VM is always considered available. If turned on,
-            the target VM is available when accepting periodic TCP connections, to
-            ensure that it is really able to serve requests. The address and port
-            to send the tests to are those of the target VM. The health check only
-            consists of a connection attempt.
+          description: Makes the target available only if it accepts periodic health
+            check TCP connection attempts; when turned off, the target is considered
+            always available. The health check only consists of a connection attempt
+            to the address and port of the target.
           type: boolean
         checkInterval:
-          description: CheckInterval determines the duration (in milliseconds) between
-            consecutive health checks. If unspecified a default of 2000 ms is used.
+          description: The interval in milliseconds between consecutive health checks;
+            default is 2000.
           example: 2000
           format: int32
           type: integer
         maintenance:
-          description: Maintenance specifies if a target VM should be marked as down,
-            even if it is not.
+          description: Maintenance mode prevents the target from receiving balanced
+            traffic.
           type: boolean
       type: object
     ApplicationLoadBalancerForwardingRule:
@@ -49864,7 +49934,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRule'
           readOnly: true
@@ -49937,24 +50007,24 @@ components:
           example: My Application Load Balancer forwarding rule
           type: string
         protocol:
-          description: Protocol of the balancing.
+          description: Balancing protocol
           enum:
           - HTTP
           example: HTTP
           type: string
         listenerIp:
-          description: Listening IP. (inbound)
+          description: Listening (inbound) IP
           example: 81.173.1.2
           type: string
         listenerPort:
-          description: 'Listening port number. (inbound) (range: 1 to 65535)'
+          description: Listening (inbound) port number; valid range is 1 to 65535.
           example: 8080
           format: int32
           type: integer
         healthCheck:
           $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleHealthCheck'
         serverCertificates:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           example:
           - 3839d24f-57bd-408e-96ee-8da3d2db5a03
           - a6b4f7d5-b23a-4f53-b83e-8a6528ab4612
@@ -49963,7 +50033,10 @@ components:
             type: string
           type: array
         httpRules:
-          description: Array of items in that collection.
+          description: An array of items in the collection. The original order of
+            rules is perserved during processing, except for Forward-type rules are
+            processed after the rules with other action defined. The relative order
+            of Forward-type rules is also preserved during the processing.
           items:
             $ref: '#/components/schemas/ApplicationLoadBalancerHttpRule'
           type: array
@@ -49979,9 +50052,8 @@ components:
         clientTimeout: 50
       properties:
         clientTimeout:
-          description: ClientTimeout is expressed in milliseconds. This inactivity
-            timeout applies when the client is expected to acknowledge or send data.
-            If unset the default of 50 seconds will be used.
+          description: The maximum time in milliseconds to wait for the client to
+            acknowledge or send data; default is 50,000 (50 seconds).
           example: 50
           format: int32
           type: integer
@@ -50010,8 +50082,7 @@ components:
         statusCode: 301
       properties:
         name:
-          description: The name of a Application Load Balancer HTTP rule; unique per
-            forwarding rule
+          description: The unique name of the Application Load Balancer HTTP rule.
           example: My Application Load Balancer HTTP rule
           type: string
         type:
@@ -50024,22 +50095,22 @@ components:
           type: string
         targetGroup:
           description: The ID of the target group; mandatory and only valid for FORWARD
-            action.
+            actions.
           example: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
           type: string
         dropQuery:
-          description: Default is false; valid only for REDIRECT action.
+          description: Default is false; valid only for REDIRECT actions.
           example: true
           type: boolean
         location:
           description: The location for redirecting; mandatory and valid only for
-            REDIRECT action.
+            REDIRECT actions.
           example: www.ionos.com
           type: string
         statusCode:
-          description: Valid only for action REDIRECT and STATIC; on REDIRECT action
-            default is 301 and it can take the values 301, 302, 303, 307, 308; on
-            STATIC action default is 503 and it can take a value between 200 and 599
+          description: Valid only for REDIRECT and STATIC actions. For REDIRECT actions,
+            default is 301 and possible values are 301, 302, 303, 307, and 308. For
+            STATIC actions, default is 503 and valid range is 200 to 599.
           enum:
           - 301
           - 302
@@ -50053,15 +50124,17 @@ components:
           format: int32
           type: integer
         responseMessage:
-          description: The response message of the request; mandatory for STATIC action
+          description: The response message of the request; mandatory for STATIC actions.
           example: Application Down
           type: string
         contentType:
-          description: Valid only for action STATIC
+          description: Valid only for STATIC actions.
           example: text/html
           type: string
         conditions:
-          description: Array of items in that collection.
+          description: An array of items in the collection.The action is only performed
+            if each and every condition is met; if no conditions are set, the rule
+            will always be performed.
           items:
             $ref: '#/components/schemas/ApplicationLoadBalancerHttpRuleCondition'
           type: array
@@ -50092,8 +50165,8 @@ components:
           type: string
         condition:
           description: Matching rule for the HTTP rule condition attribute; mandatory
-            for HEADER, PATH, QUERY, METHOD, HOST and COOKIE types; must be null when
-            type is SOURCE_IP.
+            for HEADER, PATH, QUERY, METHOD, HOST, and COOKIE types; must be null
+            when type is SOURCE_IP.
           enum:
           - EXISTS
           - CONTAINS
@@ -50104,13 +50177,13 @@ components:
           example: STARTS_WITH
           type: string
         negate:
-          description: 'Specifies whether the condition is negated or not; default:
-            false'
+          description: Specifies whether the condition is negated or not; the default
+            is False.
           example: false
           type: boolean
         key:
-          description: Must be null when type is PATH, METHOD, HOST or SOURCE_IP.
-            Key can only be set when type is COOKIES, HEADER, QUERY.
+          description: Must be null when type is PATH, METHOD, HOST, or SOURCE_IP.
+            Key can only be set when type is COOKIES, HEADER, or QUERY.
           example: forward-at
           type: string
         value:
@@ -50312,17 +50385,19 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/TargetGroup'
           readOnly: true
           type: array
         offset:
-          description: The offset (if specified in the request).
+          description: The offset, specified in the request (if not is specified,
+            0 is used by default).
           example: 0
           type: number
         limit:
-          description: The limit (if specified in the request).
+          description: The limit, specified in the request (if not specified, the
+            endpoint's default pagination limit is used).
           example: 1000
           type: number
         _links:
@@ -50427,7 +50502,7 @@ components:
           example: My target group
           type: string
         algorithm:
-          description: Algorithm for the balancing.
+          description: Balancing algorithm
           enum:
           - ROUND_ROBIN
           - LEAST_CONNECTION
@@ -50436,13 +50511,13 @@ components:
           example: ROUND_ROBIN
           type: string
         protocol:
-          description: Protocol of the balancing.
+          description: Balancing protocol
           enum:
           - HTTP
           example: HTTP
           type: string
         targets:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/TargetGroupTarget'
           type: array
@@ -50464,30 +50539,28 @@ components:
         connectTimeout: 5000
       properties:
         checkTimeout:
-          description: It specifies the time (in milliseconds) for a target VM in
-            this pool to answer the check. If a target VM has CheckInterval set and
-            CheckTimeout is set too, then the smaller value of the two is used after
-            the TCP connection is established.
+          description: The maximum time in milliseconds to wait for a target to respond
+            to a check. For target VMs with 'Check Interval' set, the lesser of the
+            two  values is used once the TCP connection is established.
           example: 2000
           format: int32
           type: integer
         connectTimeout:
-          description: It specifies the maximum time (in milliseconds) to wait for
-            a connection attempt to a target VM to succeed. If unset, the default
-            of 5 seconds will be used.
+          description: The maximum time in milliseconds to wait for a connection attempt
+            to a target to succeed; default is 5000 (five seconds).
           example: 5000
           format: int32
           type: integer
         targetTimeout:
-          description: TargetTimeout specifies the maximum inactivity time (in milliseconds)
-            on the target VM side. If unset, the default of 50 seconds will be used.
+          description: The maximum time in milliseconds for a target to remain inactive;
+            default is 50,000 (50 seconds).
           example: 50000
           format: int32
           type: integer
         retries:
-          description: 'Retries specifies the number of retries to perform on a target
-            VM after a connection failure. If unset, the default value of 3 will be
-            used. (valid range: [0, 65535])'
+          description: The maximum number of attempts to reconnect to a target after
+            a connection failure. Valid range is 0 to 65535, and default is three
+            reconnection attempts.
           example: 3
           format: int32
           type: integer
@@ -50503,7 +50576,8 @@ components:
         negate: false
       properties:
         path:
-          description: 'The path for the HTTP health check; default: /.'
+          description: The path (destination URL) for the HTTP health check request;
+            the default is /.
           example: /monitoring
           type: string
         method:
@@ -50526,7 +50600,8 @@ components:
           example: STATUS_CODE
           type: string
         response:
-          description: The response returned by the request
+          description: The response returned by the request, depending on the match
+            type.
           example: "200"
           type: string
         regex:
@@ -50553,24 +50628,22 @@ components:
         weight: 123
       properties:
         ip:
-          description: IP of a balanced target VM
+          description: The IP of the balanced target VM.
           example: 22.231.2.2
           type: string
         port:
-          description: 'Port of the balanced target service. (range: 1 to 65535)'
+          description: The port of the balanced target service; valid range is 1 to
+            65535.
           example: 8080
           format: int32
           type: integer
         weight:
-          description: Weight parameter is used to adjust the target VM's weight relative
-            to other target VMs. All target VMs will receive a load proportional to
-            their weight relative to the sum of all weights, so the higher the weight,
-            the higher the load. The default weight is 1, and the maximal value is
-            256. A value of 0 means the target VM will not participate in load-balancing
-            but will still accept persistent connections. If this parameter is used
-            to distribute the load according to target VM's capacity, it is recommended
-            to start with values which can both grow and shrink, for instance between
-            10 and 100 to leave enough room above and below for later adjustments.
+          description: Traffic is distributed in proportion to target weight, relative
+            to the combined weight of all targets. A target with higher weight receives
+            a greater share of traffic. Valid range is 0 to 256 and default is 1;
+            targets with weight of 0 do not participate in load balancing but still
+            accept persistent connections. It is best use values in the middle of
+            the range to leave room for later adjustments.
           example: 123
           format: int32
           type: integer
@@ -50589,23 +50662,20 @@ components:
         maintenance: true
       properties:
         check:
-          description: 'Check specifies whether the target VM''s health is checked.
-            If turned off, a target VM is always considered available. If turned on,
-            the target VM is available when accepting periodic TCP connections, to
-            ensure that it is really able to serve requests. The address and port
-            to send the tests to are those of the target VM. The health check only
-            consists of a connection attempt. If unspecified the default value: true
-            is used.'
+          description: Makes the target available only if it accepts periodic health
+            check TCP connection attempts; when turned off, the target is considered
+            always available. The health check only consists of a connection attempt
+            to the address and port of the target. Default is True.
           type: boolean
         checkInterval:
-          description: CheckInterval determines the duration (in milliseconds) between
-            consecutive health checks. If unspecified a default of 2000 ms is used.
+          description: The interval in milliseconds between consecutive health checks;
+            default is 2000.
           example: 2000
           format: int32
           type: integer
         maintenance:
-          description: Maintenance specifies if a target VM should be marked as down,
-            even if it is not.
+          description: Maintenance mode prevents the target from receiving balanced
+            traffic.
           type: boolean
       type: object
       x-prerelease: true
@@ -50668,7 +50738,7 @@ components:
           readOnly: true
           type: string
         items:
-          description: Array of items in that collection.
+          description: Array of items in the collection.
           items:
             $ref: '#/components/schemas/Template'
           readOnly: true
@@ -50846,7 +50916,7 @@ components:
           readOnly: true
           type: string
         message:
-          description: Human-readable message.
+          description: A human-readable message.
           example: Error message example.
           readOnly: true
           type: string
@@ -50888,13 +50958,13 @@ components:
       - target-group
       type: string
     PaginationOffsetMandatory:
-      description: The offset specified in the request (or, if none was specified,
-        the default offset of 0)
+      description: The offset, specified in the request (if not is specified, 0 is
+        used by default).
       example: 0
       type: number
     PaginationLimitMandatory:
-      description: The limit specified in the request (if none was specified, use
-        the endpoint's default pagination limit).
+      description: The limit, specified in the request (if not specified, the endpoint's
+        default pagination limit is used).
       example: 1000
       type: number
     PaginationOffsetOptional:
