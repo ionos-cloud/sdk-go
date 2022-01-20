@@ -47,7 +47,7 @@ For using other server than the one defined on index 0 set context value `sw.Con
 ctx := context.WithValue(context.Background(), sw.ContextServerIndex, 1)
 ```
 
-Note: To overwrite the api endpoint - `api.ionos.com`, the environment variable `$IONOS_API_URL` can be set, and used with `NewConfigurationFromEnv()` function.
+⚠️ **_Note: To overwrite the api endpoint - `api.ionos.com`, the environment variable `$IONOS_API_URL` can be set, and used with `NewConfigurationFromEnv()` function._**
 
 ### Templated Server URL
 
@@ -559,5 +559,5 @@ func main() {
 }
 ```
 
-#### Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance.
+⚠️ **_Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application's performance._**
 

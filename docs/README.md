@@ -90,7 +90,8 @@ client := ionoscloud.NewAPIClient(ionoscloud.NewConfigurationFromEnv())
 
 ### Depth
 
-Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, however, it generally follows this pattern. By default, the SDK sets the _depth_ argument to the maximum value.
+Many of the _List_ or _Get_ operations will accept an optional _depth_ argument. Setting this to a value between 0 and 5 affects the amount of data that is returned. The details returned vary depending on the resource being queried, however, it generally follows this pattern.
+
 
 | Depth | Description |
 | :--- | :--- |
@@ -101,6 +102,30 @@ Many of the _List_ or _Get_ operations will accept an optional _depth_ argument.
 | 4 | Direct properties, children's properties, and descendant's properties are returned. |
 | 5 | Returns all available properties. |
 
+
+#### How to set Depth parameter:
+
+⚠️ **_Please use this parameter with caution. We recommend using the default value and raising its value only if it is needed._**
+
+* On the configuration level:
+```go  
+configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "URL")  
+configuration.SetDepth(5)  
+```
+Using this method, the depth parameter will be set **on all the API calls**.
+
+*  When calling a method:
+```go
+request := apiClient.DataCentersApi.DatacentersGet(context.Background()).Depth(1)
+```
+Using this method, the depth parameter will be set **on the current API call**.
+
+* Using the default value:
+
+If the depth parameter is not set, it will have the default value from the API that can be found [here](https://api.ionos.com/cloudapi/v6/swagger.json).
+
+> Note: The priority for setting the depth parameter is: *set on function call > set on configuration level > set using the default value from the API*
+
 ### Pretty
 
 The operations will also accept an optional _pretty_ argument. Setting this to a value of `true` or `false` controls whether response is pretty-printed \(with indentation and new lines\). By default, the SDK sets the _pretty_ argument to `true`.
@@ -110,7 +135,7 @@ The operations will also accept an optional _pretty_ argument. Setting this to a
 Changing the base URL for the HTTP operation is possible by using the following function:
 
 ```go
-requestProperties.SetURL("https://api.ionos.com/cloudapi/v5")
+requestProperties.SetURL("https://api.ionos.com/cloudapi/v6")
 ```
 
 ## Feature Reference
@@ -148,4 +173,4 @@ func main() {
 }
 ```
 
-#### Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance.
+⚠️ **_Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance._**
