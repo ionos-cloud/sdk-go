@@ -108,6 +108,9 @@ Many of the _List_ or _Get_ operations will accept an optional _depth_ argument.
 
 
 #### How to set Depth parameter:
+
+⚠️ **_Please use this parameter with caution. We recommend using the default value and raising its value only if it is needed._**
+
 * On the configuration level:
 ```go  
 configuration := ionoscloud.NewConfiguration("USERNAME", "PASSWORD", "TOKEN", "URL")  
@@ -125,7 +128,7 @@ Using this method, the depth parameter will be set **on the current API call**.
 
 If the depth parameter is not set, it will have the default value from the API that can be found [here](https://api.ionos.com/cloudapi/v5/swagger.json).
 
-> Note: The priority for setting the depth parameter is: *set on function call > set on configuration method > set using the default value from the API*
+> Note: The priority for setting the depth parameter is: *set on function call > set on configuration level > set using the default value from the API*
 
 ### Pretty
 
@@ -175,4 +178,5 @@ func main() {
     apiClient := ionoscloud.NewAPIClient(cfg)
 }
 ```
-#### Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance.
+
+⚠️ **_Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application’s performance._**
