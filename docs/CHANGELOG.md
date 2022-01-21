@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## v6.0.1 (January, 2022)
+
+### Enhancements:
+- new parameter on KubernetesClusterProperties, KubernetesClusterPropertiesForPost: **public**
+- new parameter on KubernetesNodePoolProperties, KubernetesNodePoolPropertiesForPost: **gatewayIp**
+- allow fields that are explicitly nullable to be sent with null values
+- updated oauth import
+- depth parameter: 
+  - new method **SetDepth** on **configuration** that allows setting a value for the **depth** parameter on all the API calls for the client
+  - changed the default value of depth parameter from 10 to 0
+  - this affects the amount of data that is returned on GET methods. If there is a need to change the value, please do it with caution and only if it is needed. 
+
 ## v6.0.0 (December, 2021)
 
 ### Enhancements:
