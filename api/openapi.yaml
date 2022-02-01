@@ -10908,6 +10908,7 @@ paths:
                   - UNKNOWN
                   - WINDOWS
                   - WINDOWS2016
+                  - WINDOWS2022
                   - LINUX
                   - OTHER
                   type: string
@@ -15790,6 +15791,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -16170,6 +16172,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX
@@ -30245,6 +30248,7 @@ components:
           - UNKNOWN
           - WINDOWS
           - WINDOWS2016
+          - WINDOWS2022
           - LINUX
           - OTHER
           example: LINUX

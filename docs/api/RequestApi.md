@@ -43,8 +43,8 @@ func main() {
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.RequestApi.RequestsFindById(context.Background(), requestId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RequestApi.RequestsFindById(context.Background(), requestId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestApi.RequestsFindById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -75,7 +75,7 @@ Other parameters are passed through a pointer to a apiRequestsFindByIdRequest st
 
 ### Return type
 
-[**Request**](Request.md)
+[**Request**](../models/Request.md)
 
 ### HTTP request headers
 
@@ -142,8 +142,8 @@ func main() {
     limit := int32(56) // int32 | the maximum number of elements to return (use together with <code>offset</code> for pagination) (optional) (default to 1000)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.RequestApi.RequestsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).FilterCreatedDate(filterCreatedDate).FilterCreatedBy(filterCreatedBy).FilterEtag(filterEtag).FilterRequestStatus(filterRequestStatus).FilterMethod(filterMethod).FilterHeaders(filterHeaders).FilterBody(filterBody).FilterUrl(filterUrl).Offset(offset).Limit(limit).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RequestApi.RequestsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).FilterStatus(filterStatus).FilterCreatedAfter(filterCreatedAfter).FilterCreatedBefore(filterCreatedBefore).FilterCreatedDate(filterCreatedDate).FilterCreatedBy(filterCreatedBy).FilterEtag(filterEtag).FilterRequestStatus(filterRequestStatus).FilterMethod(filterMethod).FilterHeaders(filterHeaders).FilterBody(filterBody).FilterUrl(filterUrl).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestApi.RequestsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -183,7 +183,7 @@ Other parameters are passed through a pointer to a apiRequestsGetRequest struct 
 
 ### Return type
 
-[**Requests**](Requests.md)
+[**Requests**](../models/Requests.md)
 
 ### HTTP request headers
 
@@ -225,8 +225,8 @@ func main() {
     xContractNumber := int32(56) // int32 | Users having more than 1 contract need to provide contract number, against which all API requests should be executed (optional)
 
     configuration := openapiclient.NewConfiguration()
-    api_client := openapiclient.NewAPIClient(configuration)
-    resp, r, err := api_client.RequestApi.RequestsStatusGet(context.Background(), requestId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    apiClient := openapiclient.NewAPIClient(configuration)
+    resp, r, err := apiClient.RequestApi.RequestsStatusGet(context.Background(), requestId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `RequestApi.RequestsStatusGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -257,7 +257,7 @@ Other parameters are passed through a pointer to a apiRequestsStatusGetRequest s
 
 ### Return type
 
-[**RequestStatus**](RequestStatus.md)
+[**RequestStatus**](../models/RequestStatus.md)
 
 ### HTTP request headers
 
