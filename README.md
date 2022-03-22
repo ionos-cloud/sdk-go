@@ -1,3 +1,15 @@
+![CI](https://github.com/ionos-cloud/sdk-resources/workflows/%5B%20CI%20%5D%20CloudApi%20V6%20/%20Go/badge.svg)
+[![Gitter](https://img.shields.io/gitter/room/ionos-cloud/sdk-general)](https://gitter.im/ionos-cloud/sdk-general)
+[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=alert_status)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Bugs](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=bugs)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Reliability Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=reliability_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Security Rating](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=security_rating)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=ionos-cloud_sdk-go&metric=vulnerabilities)](https://sonarcloud.io/dashboard?id=ionos-cloud_sdk-go)
+[![Release](https://img.shields.io/github/v/release/ionos-cloud/sdk-go.svg)](https://github.com/ionos-cloud/sdk-go/releases/latest)
+[![Release Date](https://img.shields.io/github/release-date/ionos-cloud/sdk-go.svg)](https://github.com/ionos-cloud/sdk-go/releases/latest)
+[![Go](https://img.shields.io/github/go-mod/go-version/ionos-cloud/sdk-go.svg)](https://github.com/ionos-cloud/sdk-go)
+
 ![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
 
 # Go API client for ionoscloud
@@ -539,8 +551,6 @@ Each of these functions takes a value of the given basic type and returns a poin
 * `PtrString`
 * `PtrTime`
 
-## Author
-
 ## Debugging
 
 If you want to see the API call request and response messages, you need to set the Debug field in the Configuration struct:
@@ -561,3 +571,6 @@ func main() {
 
 ⚠️ **_Note: We recommend you only set this field for debugging purposes. Disable it in your production environments because it can log sensitive data. It logs the full request and response without encryption, even for an HTTPS call. Verbose request and response logging can also significantly impact your application's performance._**
 
+## License
+
+SDK Go is under the [Apache 2.0 License](LICENSE).
