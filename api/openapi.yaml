@@ -8,7 +8,7 @@ info:
     \ volumes, configuring networks, and so on."
   title: CLOUD API
   version: "6.0"
-  x-sdk-patch-level: 4
+  x-sdk-patch-level: 5
 servers:
 - url: https://api.ionos.com/cloudapi/v6
 tags:
@@ -1557,6 +1557,7 @@ paths:
             (maintenance).'
       security:
       - Basic Authentication: []
+      - Token Authentication: []
       summary: List attached volumes
       tags:
       - Servers
@@ -1658,6 +1659,7 @@ paths:
             (maintenance).'
       security:
       - Basic Authentication: []
+      - Token Authentication: []
       summary: Attach volumes
       tags:
       - Servers
@@ -48545,9 +48547,8 @@ components:
             properties:
               protocol: HTTP
               listenerIp: 81.173.1.2
-              healthCheck:
-                clientTimeout: 50
               name: My Application Load Balancer forwarding rule
+              clientTimeout: 50
               listenerPort: 8080
               serverCertificates:
               - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48606,9 +48607,8 @@ components:
             properties:
               protocol: HTTP
               listenerIp: 81.173.1.2
-              healthCheck:
-                clientTimeout: 50
               name: My Application Load Balancer forwarding rule
+              clientTimeout: 50
               listenerPort: 8080
               serverCertificates:
               - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48695,9 +48695,8 @@ components:
               properties:
                 protocol: HTTP
                 listenerIp: 81.173.1.2
-                healthCheck:
-                  clientTimeout: 50
                 name: My Application Load Balancer forwarding rule
+                clientTimeout: 50
                 listenerPort: 8080
                 serverCertificates:
                 - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48756,9 +48755,8 @@ components:
               properties:
                 protocol: HTTP
                 listenerIp: 81.173.1.2
-                healthCheck:
-                  clientTimeout: 50
                 name: My Application Load Balancer forwarding rule
+                clientTimeout: 50
                 listenerPort: 8080
                 serverCertificates:
                 - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48892,9 +48890,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -48953,9 +48950,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49049,9 +49045,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49110,9 +49105,8 @@ components:
                 properties:
                   protocol: HTTP
                   listenerIp: 81.173.1.2
-                  healthCheck:
-                    clientTimeout: 50
                   name: My Application Load Balancer forwarding rule
+                  clientTimeout: 50
                   listenerPort: 8080
                   serverCertificates:
                   - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49709,9 +49703,8 @@ components:
         properties:
           protocol: HTTP
           listenerIp: 81.173.1.2
-          healthCheck:
-            clientTimeout: 50
           name: My Application Load Balancer forwarding rule
+          clientTimeout: 50
           listenerPort: 8080
           serverCertificates:
           - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49808,9 +49801,8 @@ components:
           properties:
             protocol: HTTP
             listenerIp: 81.173.1.2
-            healthCheck:
-              clientTimeout: 50
             name: My Application Load Balancer forwarding rule
+            clientTimeout: 50
             listenerPort: 8080
             serverCertificates:
             - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49869,9 +49861,8 @@ components:
           properties:
             protocol: HTTP
             listenerIp: 81.173.1.2
-            healthCheck:
-              clientTimeout: 50
             name: My Application Load Balancer forwarding rule
+            clientTimeout: 50
             listenerPort: 8080
             serverCertificates:
             - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -49955,9 +49946,8 @@ components:
       example:
         protocol: HTTP
         listenerIp: 81.173.1.2
-        healthCheck:
-          clientTimeout: 50
         name: My Application Load Balancer forwarding rule
+        clientTimeout: 50
         listenerPort: 8080
         serverCertificates:
         - 3839d24f-57bd-408e-96ee-8da3d2db5a03
@@ -50021,8 +50011,12 @@ components:
           example: 8080
           format: int32
           type: integer
-        healthCheck:
-          $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRuleHealthCheck'
+        clientTimeout:
+          description: The maximum time in milliseconds to wait for the client to
+            acknowledge or send data; default is 50,000 (50 seconds).
+          example: 50
+          format: int32
+          type: integer
         serverCertificates:
           description: Array of items in the collection.
           example:
@@ -50045,18 +50039,6 @@ components:
       - listenerPort
       - name
       - protocol
-      type: object
-      x-prerelease: true
-    ApplicationLoadBalancerForwardingRuleHealthCheck:
-      example:
-        clientTimeout: 50
-      properties:
-        clientTimeout:
-          description: The maximum time in milliseconds to wait for the client to
-            acknowledge or send data; default is 50,000 (50 seconds).
-          example: 50
-          format: int32
-          type: integer
       type: object
       x-prerelease: true
     ApplicationLoadBalancerHttpRule:
@@ -50214,10 +50196,9 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
+            checkInterval: 2000
             retries: 3
-            targetTimeout: 50000
             checkTimeout: 2000
-            connectTimeout: 5000
           name: My target group
           httpHealthCheck:
             path: /monitoring
@@ -50227,19 +50208,15 @@ components:
             response: "200"
             negate: false
           targets:
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50295,10 +50272,9 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
+              checkInterval: 2000
               retries: 3
-              targetTimeout: 50000
               checkTimeout: 2000
-              connectTimeout: 5000
             name: My target group
             httpHealthCheck:
               path: /monitoring
@@ -50308,19 +50284,15 @@ components:
               response: "200"
               negate: false
             targets:
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
         - metadata:
@@ -50338,10 +50310,9 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
+              checkInterval: 2000
               retries: 3
-              targetTimeout: 50000
               checkTimeout: 2000
-              connectTimeout: 5000
             name: My target group
             httpHealthCheck:
               path: /monitoring
@@ -50351,19 +50322,15 @@ components:
               response: "200"
               negate: false
             targets:
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
       properties:
@@ -50412,10 +50379,9 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
+            checkInterval: 2000
             retries: 3
-            targetTimeout: 50000
             checkTimeout: 2000
-            connectTimeout: 5000
           name: My target group
           httpHealthCheck:
             path: /monitoring
@@ -50425,19 +50391,15 @@ components:
             response: "200"
             negate: false
           targets:
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50468,10 +50430,9 @@ components:
       example:
         protocol: HTTP
         healthCheck:
+          checkInterval: 2000
           retries: 3
-          targetTimeout: 50000
           checkTimeout: 2000
-          connectTimeout: 5000
         name: My target group
         httpHealthCheck:
           path: /monitoring
@@ -50481,19 +50442,15 @@ components:
           response: "200"
           negate: false
         targets:
-        - port: 8080
+        - healthCheckEnabled: true
+          port: 8080
+          maintenanceEnabled: true
           ip: 22.231.2.2
-          healthCheck:
-            checkInterval: 2000
-            check: true
-            maintenance: true
           weight: 123
-        - port: 8080
+        - healthCheckEnabled: true
+          port: 8080
+          maintenanceEnabled: true
           ip: 22.231.2.2
-          healthCheck:
-            checkInterval: 2000
-            check: true
-            maintenance: true
           weight: 123
         algorithm: ROUND_ROBIN
       properties:
@@ -50533,10 +50490,9 @@ components:
       x-prerelease: true
     TargetGroupHealthCheck:
       example:
+        checkInterval: 2000
         retries: 3
-        targetTimeout: 50000
         checkTimeout: 2000
-        connectTimeout: 5000
       properties:
         checkTimeout:
           description: The maximum time in milliseconds to wait for a target to respond
@@ -50545,16 +50501,10 @@ components:
           example: 2000
           format: int32
           type: integer
-        connectTimeout:
-          description: The maximum time in milliseconds to wait for a connection attempt
-            to a target to succeed; default is 5000 (five seconds).
-          example: 5000
-          format: int32
-          type: integer
-        targetTimeout:
-          description: The maximum time in milliseconds for a target to remain inactive;
-            default is 50,000 (50 seconds).
-          example: 50000
+        checkInterval:
+          description: The interval in milliseconds between consecutive health checks;
+            default is 2000.
+          example: 2000
           format: int32
           type: integer
         retries:
@@ -50619,12 +50569,10 @@ components:
       x-prerelease: true
     TargetGroupTarget:
       example:
+        healthCheckEnabled: true
         port: 8080
+        maintenanceEnabled: true
         ip: 22.231.2.2
-        healthCheck:
-          checkInterval: 2000
-          check: true
-          maintenance: true
         weight: 123
       properties:
         ip:
@@ -50647,36 +50595,20 @@ components:
           example: 123
           format: int32
           type: integer
-        healthCheck:
-          $ref: '#/components/schemas/TargetGroupTargetHealthCheck'
-      required:
-      - ip
-      - port
-      - weight
-      type: object
-      x-prerelease: true
-    TargetGroupTargetHealthCheck:
-      example:
-        checkInterval: 2000
-        check: true
-        maintenance: true
-      properties:
-        check:
+        healthCheckEnabled:
           description: Makes the target available only if it accepts periodic health
             check TCP connection attempts; when turned off, the target is considered
             always available. The health check only consists of a connection attempt
             to the address and port of the target. Default is True.
           type: boolean
-        checkInterval:
-          description: The interval in milliseconds between consecutive health checks;
-            default is 2000.
-          example: 2000
-          format: int32
-          type: integer
-        maintenance:
+        maintenanceEnabled:
           description: Maintenance mode prevents the target from receiving balanced
             traffic.
           type: boolean
+      required:
+      - ip
+      - port
+      - weight
       type: object
       x-prerelease: true
     Templates:
@@ -50752,9 +50684,8 @@ components:
         properties:
           protocol: HTTP
           listenerIp: 81.173.1.2
-          healthCheck:
-            clientTimeout: 50
           name: My Application Load Balancer forwarding rule
+          clientTimeout: 50
           listenerPort: 8080
           serverCertificates:
           - 3839d24f-57bd-408e-96ee-8da3d2db5a03
