@@ -44691,6 +44691,7 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
+          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
@@ -45786,6 +45787,7 @@ components:
           description: The indicator if the cluster is public or private. Be aware
             that setting it to false is currently in beta phase.
           type: boolean
+          x-prerelease: true
         apiSubnetAllowList:
           description: 'Access to the K8s API server is restricted to these CIDRs.
             Traffic, internal to the cluster, is not affected by this restriction.
@@ -46011,6 +46013,7 @@ components:
             the node pool belongs to a private cluster.
           example: 198.51.100.100
           type: string
+          x-prerelease: true
       required:
       - availabilityZone
       - coresCount
@@ -46158,6 +46161,7 @@ components:
             the node pool belongs to a private cluster.
           example: 198.51.100.100
           type: string
+          x-prerelease: true
       required:
       - availabilityZone
       - coresCount
@@ -50196,7 +50200,6 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
-            checkInterval: 2000
             retries: 3
             checkTimeout: 2000
           name: My target group
@@ -50208,15 +50211,19 @@ components:
             response: "200"
             negate: false
           targets:
-          - healthCheckEnabled: true
-            port: 8080
-            maintenanceEnabled: true
+          - port: 8080
             ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
             weight: 123
-          - healthCheckEnabled: true
-            port: 8080
-            maintenanceEnabled: true
+          - port: 8080
             ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50272,7 +50279,6 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
-              checkInterval: 2000
               retries: 3
               checkTimeout: 2000
             name: My target group
@@ -50284,15 +50290,19 @@ components:
               response: "200"
               negate: false
             targets:
-            - healthCheckEnabled: true
-              port: 8080
-              maintenanceEnabled: true
+            - port: 8080
               ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
               weight: 123
-            - healthCheckEnabled: true
-              port: 8080
-              maintenanceEnabled: true
+            - port: 8080
               ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
         - metadata:
@@ -50310,7 +50320,6 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
-              checkInterval: 2000
               retries: 3
               checkTimeout: 2000
             name: My target group
@@ -50322,15 +50331,19 @@ components:
               response: "200"
               negate: false
             targets:
-            - healthCheckEnabled: true
-              port: 8080
-              maintenanceEnabled: true
+            - port: 8080
               ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
               weight: 123
-            - healthCheckEnabled: true
-              port: 8080
-              maintenanceEnabled: true
+            - port: 8080
               ip: 22.231.2.2
+              healthCheck:
+                checkInterval: 2000
+                check: true
+                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
       properties:
@@ -50379,7 +50392,6 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
-            checkInterval: 2000
             retries: 3
             checkTimeout: 2000
           name: My target group
@@ -50391,15 +50403,19 @@ components:
             response: "200"
             negate: false
           targets:
-          - healthCheckEnabled: true
-            port: 8080
-            maintenanceEnabled: true
+          - port: 8080
             ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
             weight: 123
-          - healthCheckEnabled: true
-            port: 8080
-            maintenanceEnabled: true
+          - port: 8080
             ip: 22.231.2.2
+            healthCheck:
+              checkInterval: 2000
+              check: true
+              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50430,7 +50446,6 @@ components:
       example:
         protocol: HTTP
         healthCheck:
-          checkInterval: 2000
           retries: 3
           checkTimeout: 2000
         name: My target group
@@ -50442,15 +50457,19 @@ components:
           response: "200"
           negate: false
         targets:
-        - healthCheckEnabled: true
-          port: 8080
-          maintenanceEnabled: true
+        - port: 8080
           ip: 22.231.2.2
+          healthCheck:
+            checkInterval: 2000
+            check: true
+            maintenance: true
           weight: 123
-        - healthCheckEnabled: true
-          port: 8080
-          maintenanceEnabled: true
+        - port: 8080
           ip: 22.231.2.2
+          healthCheck:
+            checkInterval: 2000
+            check: true
+            maintenance: true
           weight: 123
         algorithm: ROUND_ROBIN
       properties:
@@ -50490,7 +50509,6 @@ components:
       x-prerelease: true
     TargetGroupHealthCheck:
       example:
-        checkInterval: 2000
         retries: 3
         checkTimeout: 2000
       properties:
@@ -50498,12 +50516,6 @@ components:
           description: The maximum time in milliseconds to wait for a target to respond
             to a check. For target VMs with 'Check Interval' set, the lesser of the
             two  values is used once the TCP connection is established.
-          example: 2000
-          format: int32
-          type: integer
-        checkInterval:
-          description: The interval in milliseconds between consecutive health checks;
-            default is 2000.
           example: 2000
           format: int32
           type: integer
@@ -50569,10 +50581,12 @@ components:
       x-prerelease: true
     TargetGroupTarget:
       example:
-        healthCheckEnabled: true
         port: 8080
-        maintenanceEnabled: true
         ip: 22.231.2.2
+        healthCheck:
+          checkInterval: 2000
+          check: true
+          maintenance: true
         weight: 123
       properties:
         ip:
@@ -50595,20 +50609,36 @@ components:
           example: 123
           format: int32
           type: integer
-        healthCheckEnabled:
+        healthCheck:
+          $ref: '#/components/schemas/TargetGroupTargetHealthCheck'
+      required:
+      - ip
+      - port
+      - weight
+      type: object
+      x-prerelease: true
+    TargetGroupTargetHealthCheck:
+      example:
+        checkInterval: 2000
+        check: true
+        maintenance: true
+      properties:
+        check:
           description: Makes the target available only if it accepts periodic health
             check TCP connection attempts; when turned off, the target is considered
             always available. The health check only consists of a connection attempt
             to the address and port of the target. Default is True.
           type: boolean
-        maintenanceEnabled:
+        checkInterval:
+          description: The interval in milliseconds between consecutive health checks;
+            default is 2000.
+          example: 2000
+          format: int32
+          type: integer
+        maintenance:
           description: Maintenance mode prevents the target from receiving balanced
             traffic.
           type: boolean
-      required:
-      - ip
-      - port
-      - weight
       type: object
       x-prerelease: true
     Templates:
