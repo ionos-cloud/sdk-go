@@ -10,3 +10,5 @@ require (
 	google.golang.org/appengine v1.6.6 // indirect
 	google.golang.org/protobuf v1.25.0 // indirect
 )
+
+retract v6.0.5851 // Published accidentally.

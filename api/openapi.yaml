@@ -12143,7 +12143,6 @@ paths:
       summary: List Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
     post:
       description: Create an Application Load Balancer within the datacenter.
       operationId: datacentersApplicationloadbalancersPost
@@ -12235,7 +12234,6 @@ paths:
       summary: Create Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancer
   /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}:
     delete:
@@ -12325,7 +12323,6 @@ paths:
       summary: Delete Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
     get:
       description: Retrieve the properties of the specified Application Load Balancer
         within the data center.
@@ -12412,7 +12409,6 @@ paths:
       summary: Retrieve Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
     patch:
       description: Update the properties of the specified Application Load Balancer
         within the data center.
@@ -12506,7 +12502,6 @@ paths:
       summary: Partially modify Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerProperties
     put:
       description: Modify the properties of the specified Application Load Balancer
@@ -12601,7 +12596,6 @@ paths:
       summary: Modify Application Load Balancers
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancer
   /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules:
     get:
@@ -12689,7 +12683,6 @@ paths:
       summary: List ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
     post:
       description: Create a forwarding rule for the Application Load Balancer.
       operationId: datacentersApplicationloadbalancersForwardingrulesPost
@@ -12787,7 +12780,6 @@ paths:
       summary: Create ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerForwardingRule
   /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/forwardingrules/{forwardingRuleId}:
     delete:
@@ -12883,7 +12875,6 @@ paths:
       summary: Delete ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
     get:
       description: Retrieve the specified Application Load Balancer forwarding rule.
       operationId: datacentersApplicationloadbalancersForwardingrulesFindByForwardingRuleId
@@ -12975,7 +12966,6 @@ paths:
       summary: Retrieve ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
     patch:
       description: Update the properties of the specified Application Load Balancer
         forwarding rule.
@@ -13075,7 +13065,6 @@ paths:
       summary: Partially modify ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerForwardingRuleProperties
     put:
       description: Modify the specified Application Load Balancer forwarding rule.
@@ -13175,7 +13164,6 @@ paths:
       summary: Modify ALB forwarding rules
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerForwardingRule
   /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs:
     get:
@@ -13263,7 +13251,6 @@ paths:
       summary: List ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
     post:
       description: Add a new Flow Log for the Application Load Balancer.
       operationId: datacentersApplicationloadbalancersFlowlogsPost
@@ -13361,7 +13348,6 @@ paths:
       summary: Create ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerFlowLog
   /datacenters/{datacenterId}/applicationloadbalancers/{applicationLoadBalancerId}/flowlogs/{flowLogId}:
     delete:
@@ -13457,7 +13443,6 @@ paths:
       summary: Delete ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
     get:
       description: Retrieve the specified Application Load Balancer Flow Log.
       operationId: datacentersApplicationloadbalancersFlowlogsFindByFlowLogId
@@ -13549,7 +13534,6 @@ paths:
       summary: Retrieve ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
     patch:
       description: Update the properties of the specified Application Load Balancer
         Flow Log.
@@ -13649,7 +13633,6 @@ paths:
       summary: Partially modify ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerFlowLogProperties
     put:
       description: Modify the specified Application Load Balancer Flow Log.
@@ -13749,7 +13732,6 @@ paths:
       summary: Modify ALB Flow Logs
       tags:
       - Application Load Balancers
-      x-prerelease: true
       x-codegen-request-body-name: applicationLoadBalancerFlowLog
   /targetgroups:
     get:
@@ -13844,7 +13826,6 @@ paths:
       summary: List target groups
       tags:
       - Target groups
-      x-prerelease: true
     post:
       description: Create a target group.
       operationId: targetgroupsPost
@@ -13930,7 +13911,6 @@ paths:
       summary: Create target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-codegen-request-body-name: targetGroup
   /targetgroups/{targetGroupId}:
     delete:
@@ -14014,7 +13994,6 @@ paths:
       summary: Remove target groups
       tags:
       - Target groups
-      x-prerelease: true
     get:
       description: Retrieve the properties of the specified target group.
       operationId: targetgroupsFindByTargetGroupId
@@ -14094,7 +14073,6 @@ paths:
       summary: Retrieve target groups
       tags:
       - Target groups
-      x-prerelease: true
     patch:
       description: Update the properties of the specified target group.
       operationId: targetgroupsPatch
@@ -14181,7 +14159,6 @@ paths:
       summary: Partially modify target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-codegen-request-body-name: targetGroupProperties
     put:
       description: Modify the properties of the specified target group.
@@ -14269,7 +14246,6 @@ paths:
       summary: Modify target groups
       tags:
       - Target groups
-      x-prerelease: true
       x-codegen-request-body-name: targetGroup
   /requests/{requestId}:
     get:
@@ -48522,7 +48498,6 @@ components:
       - name
       - targetLan
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerEntities:
       example:
         forwardingrules:
@@ -48660,7 +48635,6 @@ components:
         forwardingrules:
           $ref: '#/components/schemas/ApplicationLoadBalancerForwardingRules'
       type: object
-      x-prerelease: true
     ApplicationLoadBalancer:
       example:
         metadata:
@@ -48845,7 +48819,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     ApplicationLoadBalancers:
       example:
         offset: 0
@@ -49203,7 +49176,6 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
-      x-prerelease: true
     NetworkLoadBalancerPut:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -49282,7 +49254,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     NetworkLoadBalancerForwardingRule:
       example:
         metadata:
@@ -49777,7 +49748,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerForwardingRules:
       example:
         offset: 0
@@ -49945,7 +49915,6 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerForwardingRuleProperties:
       example:
         protocol: HTTP
@@ -50044,7 +50013,6 @@ components:
       - name
       - protocol
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerHttpRule:
       example:
         targetGroup: 96e514d0-73e4-4abd-8fbc-c0f53b79bfae
@@ -50128,7 +50096,6 @@ components:
       - name
       - type
       type: object
-      x-prerelease: true
     ApplicationLoadBalancerHttpRuleCondition:
       example:
         condition: STARTS_WITH
@@ -50182,7 +50149,6 @@ components:
       - condition
       - type
       type: object
-      x-prerelease: true
     TargetGroup:
       example:
         metadata:
@@ -50200,6 +50166,7 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
+            checkInterval: 2000
             retries: 3
             checkTimeout: 2000
           name: My target group
@@ -50211,19 +50178,15 @@ components:
             response: "200"
             negate: false
           targets:
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50251,7 +50214,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     TargetGroups:
       example:
         offset: 0
@@ -50279,6 +50241,7 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
+              checkInterval: 2000
               retries: 3
               checkTimeout: 2000
             name: My target group
@@ -50290,19 +50253,15 @@ components:
               response: "200"
               negate: false
             targets:
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
         - metadata:
@@ -50320,6 +50279,7 @@ components:
           properties:
             protocol: HTTP
             healthCheck:
+              checkInterval: 2000
               retries: 3
               checkTimeout: 2000
             name: My target group
@@ -50331,19 +50291,15 @@ components:
               response: "200"
               negate: false
             targets:
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
-            - port: 8080
+            - healthCheckEnabled: true
+              port: 8080
+              maintenanceEnabled: true
               ip: 22.231.2.2
-              healthCheck:
-                checkInterval: 2000
-                check: true
-                maintenance: true
               weight: 123
             algorithm: ROUND_ROBIN
       properties:
@@ -50383,7 +50339,6 @@ components:
         _links:
           $ref: '#/components/schemas/PaginationLinks'
       type: object
-      x-prerelease: true
     TargetGroupPut:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -50392,6 +50347,7 @@ components:
         properties:
           protocol: HTTP
           healthCheck:
+            checkInterval: 2000
             retries: 3
             checkTimeout: 2000
           name: My target group
@@ -50403,19 +50359,15 @@ components:
             response: "200"
             negate: false
           targets:
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
-          - port: 8080
+          - healthCheckEnabled: true
+            port: 8080
+            maintenanceEnabled: true
             ip: 22.231.2.2
-            healthCheck:
-              checkInterval: 2000
-              check: true
-              maintenance: true
             weight: 123
           algorithm: ROUND_ROBIN
       properties:
@@ -50441,11 +50393,11 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     TargetGroupProperties:
       example:
         protocol: HTTP
         healthCheck:
+          checkInterval: 2000
           retries: 3
           checkTimeout: 2000
         name: My target group
@@ -50457,19 +50409,15 @@ components:
           response: "200"
           negate: false
         targets:
-        - port: 8080
+        - healthCheckEnabled: true
+          port: 8080
+          maintenanceEnabled: true
           ip: 22.231.2.2
-          healthCheck:
-            checkInterval: 2000
-            check: true
-            maintenance: true
           weight: 123
-        - port: 8080
+        - healthCheckEnabled: true
+          port: 8080
+          maintenanceEnabled: true
           ip: 22.231.2.2
-          healthCheck:
-            checkInterval: 2000
-            check: true
-            maintenance: true
           weight: 123
         algorithm: ROUND_ROBIN
       properties:
@@ -50506,9 +50454,9 @@ components:
       - name
       - protocol
       type: object
-      x-prerelease: true
     TargetGroupHealthCheck:
       example:
+        checkInterval: 2000
         retries: 3
         checkTimeout: 2000
       properties:
@@ -50516,6 +50464,12 @@ components:
           description: The maximum time in milliseconds to wait for a target to respond
             to a check. For target VMs with 'Check Interval' set, the lesser of the
             two  values is used once the TCP connection is established.
+          example: 2000
+          format: int32
+          type: integer
+        checkInterval:
+          description: The interval in milliseconds between consecutive health checks;
+            default is 2000.
           example: 2000
           format: int32
           type: integer
@@ -50527,7 +50481,6 @@ components:
           format: int32
           type: integer
       type: object
-      x-prerelease: true
     TargetGroupHttpHealthCheck:
       example:
         path: /monitoring
@@ -50578,15 +50531,12 @@ components:
       - matchType
       - response
       type: object
-      x-prerelease: true
     TargetGroupTarget:
       example:
+        healthCheckEnabled: true
         port: 8080
+        maintenanceEnabled: true
         ip: 22.231.2.2
-        healthCheck:
-          checkInterval: 2000
-          check: true
-          maintenance: true
         weight: 123
       properties:
         ip:
@@ -50609,38 +50559,21 @@ components:
           example: 123
           format: int32
           type: integer
-        healthCheck:
-          $ref: '#/components/schemas/TargetGroupTargetHealthCheck'
+        healthCheckEnabled:
+          description: When the health check is enabled, the target is available only
+            when it accepts regular TCP or HTTP connection attempts for state checking.
+            The state check consists of one connection attempt with the target's address
+            and port. The default value is 'TRUE'.
+          type: boolean
+        maintenanceEnabled:
+          description: When the maintenance mode is enabled, the target is prevented
+            from receiving traffic; the default value is 'FALSE'.
+          type: boolean
       required:
       - ip
       - port
       - weight
       type: object
-      x-prerelease: true
-    TargetGroupTargetHealthCheck:
-      example:
-        checkInterval: 2000
-        check: true
-        maintenance: true
-      properties:
-        check:
-          description: Makes the target available only if it accepts periodic health
-            check TCP connection attempts; when turned off, the target is considered
-            always available. The health check only consists of a connection attempt
-            to the address and port of the target. Default is True.
-          type: boolean
-        checkInterval:
-          description: The interval in milliseconds between consecutive health checks;
-            default is 2000.
-          example: 2000
-          format: int32
-          type: integer
-        maintenance:
-          description: Maintenance mode prevents the target from receiving balanced
-            traffic.
-          type: boolean
-      type: object
-      x-prerelease: true
     Templates:
       example:
         id: 15f67991-0f51-4efc-a8ad-ef1fb31a480c
@@ -50782,7 +50715,6 @@ components:
       required:
       - properties
       type: object
-      x-prerelease: true
     Template:
       example:
         metadata:
