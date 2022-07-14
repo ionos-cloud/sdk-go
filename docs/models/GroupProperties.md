@@ -17,6 +17,7 @@
 |**CreateFlowLog** | Pointer to **bool** | Create Flow Logs privilege. | [optional] |
 |**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
 |**AccessAndManageCertificates** | Pointer to **bool** | Privilege for a group to access and manage certificates. | [optional] |
+|**ManageDbaas** | Pointer to **bool** | Privilege for a group to manage DBaaS related functionality. | [optional] |
 
 ## Methods
 
@@ -361,6 +362,31 @@ SetAccessAndManageCertificates sets AccessAndManageCertificates field to given v
 `func (o *GroupProperties) HasAccessAndManageCertificates() bool`
 
 HasAccessAndManageCertificates returns a boolean if a field has been set.
+
+### GetManageDbaas
+
+`func (o *GroupProperties) GetManageDbaas() bool`
+
+GetManageDbaas returns the ManageDbaas field if non-nil, zero value otherwise.
+
+### GetManageDbaasOk
+
+`func (o *GroupProperties) GetManageDbaasOk() (*bool, bool)`
+
+GetManageDbaasOk returns a tuple with the ManageDbaas field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManageDbaas
+
+`func (o *GroupProperties) SetManageDbaas(v bool)`
+
+SetManageDbaas sets ManageDbaas field to given value.
+
+### HasManageDbaas
+
+`func (o *GroupProperties) HasManageDbaas() bool`
+
+HasManageDbaas returns a boolean if a field has been set.
 
 
 

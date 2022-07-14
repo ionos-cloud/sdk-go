@@ -42,6 +42,8 @@ type GroupProperties struct {
 	AccessAndManageMonitoring *bool `json:"accessAndManageMonitoring,omitempty"`
 	// Privilege for a group to access and manage certificates.
 	AccessAndManageCertificates *bool `json:"accessAndManageCertificates,omitempty"`
+	// Privilege for a group to manage DBaaS related functionality.
+	ManageDbaas *bool `json:"manageDbaas,omitempty"`
 }
 
 // NewGroupProperties instantiates a new GroupProperties object
@@ -556,6 +558,44 @@ func (o *GroupProperties) HasAccessAndManageCertificates() bool {
 	return false
 }
 
+// GetManageDbaas returns the ManageDbaas field value
+// If the value is explicit nil, the zero value for bool will be returned
+func (o *GroupProperties) GetManageDbaas() *bool {
+	if o == nil {
+		return nil
+	}
+
+	return o.ManageDbaas
+
+}
+
+// GetManageDbaasOk returns a tuple with the ManageDbaas field value
+// and a boolean to check if the value has been set.
+// NOTE: If the value is an explicit nil, `nil, true` will be returned
+func (o *GroupProperties) GetManageDbaasOk() (*bool, bool) {
+	if o == nil {
+		return nil, false
+	}
+
+	return o.ManageDbaas, true
+}
+
+// SetManageDbaas sets field value
+func (o *GroupProperties) SetManageDbaas(v bool) {
+
+	o.ManageDbaas = &v
+
+}
+
+// HasManageDbaas returns a boolean if a field has been set.
+func (o *GroupProperties) HasManageDbaas() bool {
+	if o != nil && o.ManageDbaas != nil {
+		return true
+	}
+
+	return false
+}
+
 func (o GroupProperties) MarshalJSON() ([]byte, error) {
 	toSerialize := map[string]interface{}{}
 	if o.Name != nil {
@@ -596,6 +636,9 @@ func (o GroupProperties) MarshalJSON() ([]byte, error) {
 	}
 	if o.AccessAndManageCertificates != nil {
 		toSerialize["accessAndManageCertificates"] = o.AccessAndManageCertificates
+	}
+	if o.ManageDbaas != nil {
+		toSerialize["manageDbaas"] = o.ManageDbaas
 	}
 	return json.Marshal(toSerialize)
 }

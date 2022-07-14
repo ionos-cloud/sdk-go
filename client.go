@@ -23,7 +23,6 @@ import (
 	"fmt"
 	"io"
 	"io/ioutil"
-	"log"
 	"mime/multipart"
 	"net"
 	"net/http"
@@ -54,7 +53,7 @@ const (
 	RequestStatusFailed  = "FAILED"
 	RequestStatusDone    = "DONE"
 
-	Version = "6.1.0"
+	Version = "6.1.1"
 )
 
 // Constants for APIs
@@ -338,14 +337,14 @@ func (c *APIClient) callAPI(request *http.Request) (*http.Response, time.Duratio
 			}
 		}
 
-		if c.cfg.Debug {
+		if c.cfg.Debug || c.cfg.LogLevel.Satisfies(Trace) {
 			dump, err := httputil.DumpRequestOut(clonedRequest, true)
 			if err == nil {
-				log.Printf(" [DEBUG] DumpRequestOut : %s\n", string(dump))
+				c.cfg.Logger.Printf(" DumpRequestOut : %s\n", string(dump))
 			} else {
-				log.Println("[DEBUG] DumpRequestOut err: ", err)
+				c.cfg.Logger.Printf(" DumpRequestOut err: %+v", err)
 			}
-			log.Printf("\n try no: %d\n", retryCount)
+			c.cfg.Logger.Printf("\n try no: %d\n", retryCount)
 		}
 
 		httpRequestStartTime := time.Now()
@@ -356,12 +355,12 @@ func (c *APIClient) callAPI(request *http.Request) (*http.Response, time.Duratio
 			return resp, httpRequestTime, err
 		}
 
-		if c.cfg.Debug {
+		if c.cfg.Debug || c.cfg.LogLevel.Satisfies(Trace) {
 			dump, err := httputil.DumpResponse(resp, true)
 			if err == nil {
-				log.Printf("\n [DEBUG] DumpResponse : %s\n", string(dump))
+				c.cfg.Logger.Printf("\n DumpResponse : %s\n", string(dump))
 			} else {
-				log.Println("[DEBUG] DumpResponse err ", err)
+				c.cfg.Logger.Printf(" DumpResponse err %+v", err)
 			}
 		}
 
@@ -389,8 +388,8 @@ func (c *APIClient) callAPI(request *http.Request) (*http.Response, time.Duratio
 		}
 
 		if retryCount >= c.GetConfig().MaxRetries {
-			if c.cfg.Debug {
-				log.Printf("number of maximum retries exceeded (%d retries)\n", c.cfg.MaxRetries)
+			if c.cfg.Debug || c.cfg.LogLevel.Satisfies(Debug) {
+				c.cfg.Logger.Printf(" Number of maximum retries exceeded (%d retries)\n", c.cfg.MaxRetries)
 			}
 			break
 		} else {
@@ -405,8 +404,8 @@ func (c *APIClient) backOff(t time.Duration) {
 	if t > c.GetConfig().MaxWaitTime {
 		t = c.GetConfig().MaxWaitTime
 	}
-	if c.cfg.Debug {
-		log.Printf("sleeping %s before retrying request\n", t.String())
+	if c.cfg.Debug || c.cfg.LogLevel.Satisfies(Debug) {
+		c.cfg.Logger.Printf(" sleeping %s before retrying request\n", t.String())
 	}
 	time.Sleep(t)
 }

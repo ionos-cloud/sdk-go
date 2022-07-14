@@ -25,6 +25,7 @@
 |**BackupunitId** | Pointer to **string** | The ID of the backup unit that the user has access to. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; in conjunction with this property. | [optional] |
 |**UserData** | Pointer to **string** | The cloud-init configuration for the volume as base64 encoded string. The property is immutable and is only allowed to be set on creation of a new a volume. It is mandatory to provide either &#39;public image&#39; or &#39;imageAlias&#39; that has cloud-init compatibility in conjunction with this property. | [optional] |
 |**BootServer** | Pointer to **string** | The UUID of the attached server. | [optional] [readonly] |
+|**BootOrder** | Pointer to **string** | Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices. | [optional] [default to "AUTO"]|
 
 ## Methods
 
@@ -564,6 +565,31 @@ SetBootServer sets BootServer field to given value.
 `func (o *VolumeProperties) HasBootServer() bool`
 
 HasBootServer returns a boolean if a field has been set.
+
+### GetBootOrder
+
+`func (o *VolumeProperties) GetBootOrder() string`
+
+GetBootOrder returns the BootOrder field if non-nil, zero value otherwise.
+
+### GetBootOrderOk
+
+`func (o *VolumeProperties) GetBootOrderOk() (*string, bool)`
+
+GetBootOrderOk returns a tuple with the BootOrder field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBootOrder
+
+`func (o *VolumeProperties) SetBootOrder(v string)`
+
+SetBootOrder sets BootOrder field to given value.
+
+### HasBootOrder
+
+`func (o *VolumeProperties) HasBootOrder() bool`
+
+HasBootOrder returns a boolean if a field has been set.
 
 
 
