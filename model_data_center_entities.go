@@ -80,6 +80,18 @@ func (o *DataCenterEntities) HasServers() bool {
 	return false
 }
 
+// HasServersItems returns a boolean if the Items field of a Datacenter has been set.
+func (o *DataCenterEntities) HasServersItems() bool {
+	if o != nil && o.Servers != nil {
+		serverItems := *o.Servers.Items
+		if serverItems != nil && len(serverItems) > 0 {
+			return true
+		}
+	}
+
+	return false
+}
+
 // GetVolumes returns the Volumes field value
 // If the value is explicit nil, the zero value for Volumes will be returned
 func (o *DataCenterEntities) GetVolumes() *Volumes {
