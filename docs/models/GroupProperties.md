@@ -17,7 +17,7 @@
 |**CreateFlowLog** | Pointer to **bool** | Create Flow Logs privilege. | [optional] |
 |**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
 |**AccessAndManageCertificates** | Pointer to **bool** | Privilege for a group to access and manage certificates. | [optional] |
-|**ManageDbaas** | Pointer to **bool** | Privilege for a group to manage DBaaS related functionality. | [optional] |
+|**ManageDBaaS** | Pointer to **bool** | Privilege for a group to manage DBaaS related functionality. | [optional] |
 
 ## Methods
 
@@ -363,30 +363,30 @@ SetAccessAndManageCertificates sets AccessAndManageCertificates field to given v
 
 HasAccessAndManageCertificates returns a boolean if a field has been set.
 
-### GetManageDbaas
+### GetManageDBaaS
 
-`func (o *GroupProperties) GetManageDbaas() bool`
+`func (o *GroupProperties) GetManageDBaaS() bool`
 
-GetManageDbaas returns the ManageDbaas field if non-nil, zero value otherwise.
+GetManageDBaaS returns the ManageDBaaS field if non-nil, zero value otherwise.
 
-### GetManageDbaasOk
+### GetManageDBaaSOk
 
-`func (o *GroupProperties) GetManageDbaasOk() (*bool, bool)`
+`func (o *GroupProperties) GetManageDBaaSOk() (*bool, bool)`
 
-GetManageDbaasOk returns a tuple with the ManageDbaas field if it's non-nil, zero value otherwise
+GetManageDBaaSOk returns a tuple with the ManageDBaaS field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManageDbaas
+### SetManageDBaaS
 
-`func (o *GroupProperties) SetManageDbaas(v bool)`
+`func (o *GroupProperties) SetManageDBaaS(v bool)`
 
-SetManageDbaas sets ManageDbaas field to given value.
+SetManageDBaaS sets ManageDBaaS field to given value.
 
-### HasManageDbaas
+### HasManageDBaaS
 
-`func (o *GroupProperties) HasManageDbaas() bool`
+`func (o *GroupProperties) HasManageDBaaS() bool`
 
-HasManageDbaas returns a boolean if a field has been set.
+HasManageDBaaS returns a boolean if a field has been set.
 
 
 

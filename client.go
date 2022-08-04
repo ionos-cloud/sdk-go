@@ -53,7 +53,7 @@ const (
 	RequestStatusFailed  = "FAILED"
 	RequestStatusDone    = "DONE"
 
-	Version = "6.1.1"
+	Version = "6.1.2"
 )
 
 // Constants for APIs
@@ -715,7 +715,7 @@ func (c *APIClient) WaitForState(ctx context.Context, fn resourceGetCallFn, reso
 		case <-ticker.C:
 			resource, err := fn(c, resourceID)
 			if err != nil {
-				return false, fmt.Errorf("error occured when calling the fn function %w", err)
+				return false, fmt.Errorf("error occurred when calling the fn function: %w", err)
 			}
 			if resource == nil {
 				return false, errors.New("fail to get resource")
@@ -738,7 +738,7 @@ func (c *APIClient) WaitForState(ctx context.Context, fn resourceGetCallFn, reso
 }
 
 // fn() is a function that returns from the API the resource you want to check it's state
-// the channel is of type string and it represents the state of the resource. Successful states that can be checked: Available, or Active
+// the channel is of type StateChannel and it represents the state of the resource. Successful states that can be checked: Available, or Active
 func (c *APIClient) waitForStateWithChanel(ctx context.Context, fn resourceGetCallFn, resourceID string, ch chan<- StateChannel) {
 	ticker := time.NewTicker(1 * time.Second)
 	defer ticker.Stop()
@@ -751,6 +751,7 @@ func (c *APIClient) waitForStateWithChanel(ctx context.Context, fn resourceGetCa
 				"",
 				ctx.Err(),
 			}
+			return
 		case <-done:
 			return
 		case <-ticker.C:
@@ -758,33 +759,26 @@ func (c *APIClient) waitForStateWithChanel(ctx context.Context, fn resourceGetCa
 			if err != nil {
 				ch <- StateChannel{
 					"",
-					fmt.Errorf("error occured when calling the fn function", err),
+					fmt.Errorf("error occurred when calling the fn function: %w", err),
 				}
-				done <- true
-			}
-			if resource == nil {
+			} else if resource == nil {
 				ch <- StateChannel{
 					"",
 					errors.New("fail to get resource"),
 				}
-				done <- true
-			}
-
-			if metadata := resource.GetMetadata(); metadata != nil {
+			} else if metadata := resource.GetMetadata(); metadata != nil {
 				if state, ok := metadata.GetStateOk(); ok && state != nil {
 					if *state == Available || *state == Active {
 						ch <- StateChannel{
 							*state,
 							nil,
 						}
-						done <- true
 					}
 					if *state == Failed || *state == FailedSuspended || *state == FailedUpdating {
 						ch <- StateChannel{
 							"",
 							errors.New("state of the resource is " + *state),
 						}
-						done <- true
 					}
 				}
 			} else {
@@ -792,15 +786,15 @@ func (c *APIClient) waitForStateWithChanel(ctx context.Context, fn resourceGetCa
 					"",
 					errors.New("metadata could not be retrieved from the fn API call"),
 				}
-				done <- true
 			}
+			done <- true
 		}
 		continue
 	}
 }
 
 // fn() is a function that returns from the API the resource you want to check it's state
-// the channel is of type string and it represents the state of the resource. Successful states that can be checked: Available, or Active
+// the channel is of type StateChannel and it represents the state of the resource. Successful states that can be checked: Available, or Active
 func (c *APIClient) WaitForStateAsync(ctx context.Context, fn resourceGetCallFn, resourceID string, ch chan<- StateChannel) {
 	go c.waitForStateWithChanel(ctx, fn, resourceID, ch)
 }
@@ -819,7 +813,7 @@ func (c *APIClient) WaitForDeletion(ctx context.Context, fn resourceDeleteCallFn
 			apiResponse, err := fn(c, resourceID)
 			if err != nil {
 				if apiResponse == nil {
-					return false, fmt.Errorf("fail to get response %w", err)
+					return false, fmt.Errorf("fail to get response: %w", err)
 				}
 				if apiResp := apiResponse.Response; apiResp != nil {
 					if apiResp.StatusCode == http.StatusNotFound {
@@ -847,6 +841,7 @@ func (c *APIClient) waitForDeletionWithChannel(ctx context.Context, fn resourceD
 				0,
 				ctx.Err(),
 			}
+			return
 		case <-done:
 			return
 		case <-ticker.C:
@@ -855,24 +850,21 @@ func (c *APIClient) waitForDeletionWithChannel(ctx context.Context, fn resourceD
 				if apiResponse == nil {
 					ch <- DeleteStateChannel{
 						0,
-						fmt.Errorf("API Response from fn is empty %w ", err),
+						fmt.Errorf("API Response from fn is empty: %w ", err),
 					}
-					done <- true
-				}
-				if apiresp := apiResponse.Response; apiresp != nil {
+				} else if apiresp := apiResponse.Response; apiresp != nil {
 					if statusCode := apiresp.StatusCode; statusCode == http.StatusNotFound {
 						ch <- DeleteStateChannel{
 							statusCode,
 							nil,
 						}
-						done <- true
 					} else {
 						ch <- DeleteStateChannel{
 							statusCode,
 							err,
 						}
-						done <- true
 					}
+					done <- true
 				}
 			}
 		}
