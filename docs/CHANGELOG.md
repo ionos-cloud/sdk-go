@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## 6.1.3 \(August 30th, 2022\)
+### Fixes:
+- Fix return type of NewGenericOpenAPIError
+
+## 6.1.2 \(August 4th, 2022\)
+### Fixes :
+- Changed from `manageDbaas` to `manageDBaaS` field in `model_group_properties.go` : provides privilege for a group to manage DBaaS related functionality. Admin users already have it enabled by default.
+- Issue #26
+
+
+## 6.1.1 \(July 14th, 2022\)
+
+### Features :
+- Added `manageDbaas` field in `model_group_properties.go` : provides privilege for a group to manage DBaaS related functionality. Admin users already here this enabled by default.
+- Added `deleteVolumes` to `DatacentersServersDelete` function: If true, all attached storage volumes will also be deleted.
+- Added `bootOrder` to `model_volume_properties` : Determines whether the volume will be used as a boot volume. Set to &#x60;NONE&#x60;, the volume will not be used as boot volume. Set to &#x60;PRIMARY&#x60;, the volume will be used as boot volume and all other volumes must be set to &#x60;NONE&#x60;. Set to &#x60;AUTO&#x60; or &#x60;null&#x60; requires all volumes to be set to &#x60;AUTO&#x60; or &#x60;null&#x60;; this will use the legacy behavior, which is to use the volume as a boot volume only if there are no other volumes or cdrom devices. | [optional] [default to 'AUTO'] |
+- Logger interface with log levels for the sdk. Allows user to inject it's own logger that implements Printf. More information [here](https://github.com/ionos-cloud/sdk-go#debugging)
+- Added helper function `HttpNotFound` in `response.go`
 ## 6.1.0 \(June 16th, 2022\)
 
 ### Enhancements:
