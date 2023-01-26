@@ -8,6 +8,7 @@
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Cores** | **int32** | The total number of cores for the server. | |
 |**Ram** | **int32** | The memory size for the server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | |
+|**PlacementGroupId** | Pointer to **string** | The placement group ID that belongs to this server; Requires system privileges | [optional] |
 |**AvailabilityZone** | Pointer to **string** | The availability zone in which the server should be provisioned. | [optional] |
 |**VmState** | Pointer to **string** | Status of the virtual machine. | [optional] [readonly] |
 |**BootCdrom** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
@@ -123,6 +124,31 @@ and a boolean to check if the value has been set.
 
 SetRam sets Ram field to given value.
 
+
+### GetPlacementGroupId
+
+`func (o *ServerProperties) GetPlacementGroupId() string`
+
+GetPlacementGroupId returns the PlacementGroupId field if non-nil, zero value otherwise.
+
+### GetPlacementGroupIdOk
+
+`func (o *ServerProperties) GetPlacementGroupIdOk() (*string, bool)`
+
+GetPlacementGroupIdOk returns a tuple with the PlacementGroupId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlacementGroupId
+
+`func (o *ServerProperties) SetPlacementGroupId(v string)`
+
+SetPlacementGroupId sets PlacementGroupId field to given value.
+
+### HasPlacementGroupId
+
+`func (o *ServerProperties) HasPlacementGroupId() bool`
+
+HasPlacementGroupId returns a boolean if a field has been set.
 
 ### GetAvailabilityZone
 
