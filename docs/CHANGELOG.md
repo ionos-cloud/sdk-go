@@ -1,6 +1,6 @@
 # CHANGELOG
 
-##6.1.4 \(January 26th, 2022\)
+## 6.1.4 \(January 26th, 2022\)
 ### Features:
 - Added `placementGroupId` and `vnet` parameters.
  
