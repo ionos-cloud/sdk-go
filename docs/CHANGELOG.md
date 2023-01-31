@@ -1,5 +1,12 @@
 # CHANGELOG
 
+##6.1.4 \(January 26th, 2022\)
+### Features:
+- Added `placementGroupId` and `vnet` parameters.
+ 
+### Fixes:
+- Allow multiple values to be set for the same filter key
+
 ## 6.1.3 \(August 30th, 2022\)
 ### Fixes:
 - Fix return type of NewGenericOpenAPIError
