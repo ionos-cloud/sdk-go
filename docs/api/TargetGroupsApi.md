@@ -36,7 +36,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -45,8 +46,8 @@ func main() {
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.TargetGroupsApi.TargetGroupsDelete(context.Background(), targetGroupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetGroupsDelete``: %v\n", err)
@@ -108,7 +109,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -117,8 +119,8 @@ func main() {
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.TargetGroupsApi.TargetgroupsFindByTargetGroupId(context.Background(), targetGroupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsFindByTargetGroupId``: %v\n", err)
@@ -184,7 +186,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -194,8 +197,8 @@ func main() {
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination). (optional) (default to 0)
     limit := int32(56) // int32 | The maximum number of elements to return (used together with <b><i>offset</i></b> for pagination). It must not exceed <b><i>200</i></b>. (optional) (default to 100)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.TargetGroupsApi.TargetgroupsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsGet``: %v\n", err)
@@ -258,7 +261,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -268,8 +272,8 @@ func main() {
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.TargetGroupsApi.TargetgroupsPatch(context.Background(), targetGroupId).TargetGroupProperties(targetGroupProperties).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsPatch``: %v\n", err)
@@ -335,7 +339,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -344,8 +349,8 @@ func main() {
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.TargetGroupsApi.TargetgroupsPost(context.Background()).TargetGroup(targetGroup).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsPost``: %v\n", err)
@@ -407,7 +412,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -417,8 +423,8 @@ func main() {
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.TargetGroupsApi.TargetgroupsPut(context.Background(), targetGroupId).TargetGroup(targetGroup).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsPut``: %v\n", err)

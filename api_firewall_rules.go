@@ -144,7 +144,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesDeleteExecu
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -319,7 +319,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesFindByIdExe
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -562,7 +562,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesGetExecute(
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -757,7 +757,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesPatchExecut
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -948,7 +948,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesPostExecute
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1143,7 +1143,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesPutExecute(
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key

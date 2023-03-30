@@ -136,7 +136,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -303,7 +303,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -482,7 +482,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -653,7 +653,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -866,7 +866,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1057,7 +1057,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1244,7 +1244,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1435,7 +1435,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1614,7 +1614,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1785,7 +1785,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1998,7 +1998,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -2189,7 +2189,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -2376,7 +2376,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -2567,7 +2567,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -2802,7 +2802,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -2989,7 +2989,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -3172,7 +3172,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -3359,7 +3359,7 @@ func (a *ApplicationLoadBalancersApiService) DatacentersApplicationloadbalancers
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["Token Authentication"]; ok {
+			if apiKey, ok := auth["tokenAuth"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key

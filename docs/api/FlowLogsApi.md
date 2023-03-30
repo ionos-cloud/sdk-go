@@ -35,7 +35,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -46,8 +47,8 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsDelete(context.Background(), datacenterId, serverId, nicId, flowlogId).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsDelete``: %v\n", err)
@@ -110,7 +111,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -121,8 +123,8 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsFindById(context.Background(), datacenterId, serverId, nicId, flowlogId).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsFindById``: %v\n", err)
@@ -189,7 +191,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -201,8 +204,8 @@ func main() {
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination). (optional) (default to 0)
     limit := int32(56) // int32 | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsGet(context.Background(), datacenterId, serverId, nicId).Pretty(pretty).Depth(depth).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsGet``: %v\n", err)
@@ -269,7 +272,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -281,8 +285,8 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPatch(context.Background(), datacenterId, serverId, nicId, flowlogId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsPatch``: %v\n", err)
@@ -349,7 +353,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -360,8 +365,8 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPost(context.Background(), datacenterId, serverId, nicId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsPost``: %v\n", err)
@@ -427,7 +432,8 @@ import (
     "context"
     "fmt"
     "os"
-    openapiclient "./openapi"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
 )
 
 func main() {
@@ -439,8 +445,8 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
     resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPut(context.Background(), datacenterId, serverId, nicId, flowlogId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsPut``: %v\n", err)
