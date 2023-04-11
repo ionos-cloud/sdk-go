@@ -7,7 +7,7 @@
 |**Name** | **string** | The name of the Network Load Balancer forwarding rule. | |
 |**Algorithm** | **string** | Balancing algorithm | |
 |**Protocol** | **string** | Balancing protocol | |
-|**ListenerIp** | **string** | Listening (inbound) IP | |
+|**ListenerIp** | **string** | Listening (inbound) IP. | |
 |**ListenerPort** | **int32** | Listening (inbound) port number; valid range is 1 to 65535. | |
 |**HealthCheck** | Pointer to [**NetworkLoadBalancerForwardingRuleHealthCheck**](NetworkLoadBalancerForwardingRuleHealthCheck.md) |  | [optional] |
 |**Targets** | [**[]NetworkLoadBalancerForwardingRuleTarget**](NetworkLoadBalancerForwardingRuleTarget.md) | Array of items in the collection. | |

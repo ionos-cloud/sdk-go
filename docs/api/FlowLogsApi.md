@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersServersNicsFlowlogsFindById**](FlowLogsApi.md#DatacentersServersNicsFlowlogsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Retrieve Flow Logs|
 |[**DatacentersServersNicsFlowlogsGet**](FlowLogsApi.md#DatacentersServersNicsFlowlogsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | List Flow Logs|
 |[**DatacentersServersNicsFlowlogsPatch**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Partially modify Flow Logs|
-|[**DatacentersServersNicsFlowlogsPost**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create Flow Logs|
+|[**DatacentersServersNicsFlowlogsPost**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs | Create a Flow Log|
 |[**DatacentersServersNicsFlowlogsPut**](FlowLogsApi.md#DatacentersServersNicsFlowlogsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/flowlogs/{flowlogId} | Modify Flow Logs|
 
 
@@ -340,7 +340,7 @@ var result FlowLog = DatacentersServersNicsFlowlogsPost(ctx, datacenterId, serve
                       .Execute()
 ```
 
-Create Flow Logs
+Create a Flow Log
 
 
 

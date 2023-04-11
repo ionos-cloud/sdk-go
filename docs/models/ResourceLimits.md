@@ -4,28 +4,28 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**CoresPerServer** | **int32** | The maximum number of cores per server. | |
-|**CoresPerContract** | **int32** | The maximum number of cores per contract. | |
-|**CoresProvisioned** | **int32** | The number of cores provisioned. | |
-|**RamPerServer** | **int32** | The maximum RAM per server. | |
-|**RamPerContract** | **int32** | The maximum RAM per contract. | |
-|**RamProvisioned** | **int32** | RAM provisioned. | |
-|**HddLimitPerVolume** | **int64** | HDD limit per volume. | |
-|**HddLimitPerContract** | **int64** | HDD limit per contract. | |
-|**HddVolumeProvisioned** | **int64** | HDD volume provisioned. | |
-|**SsdLimitPerVolume** | **int64** | SSD limit per volume. | |
-|**SsdLimitPerContract** | **int64** | SSD limit per contract. | |
-|**SsdVolumeProvisioned** | **int64** | SSD volume provisioned. | |
-|**DasVolumeProvisioned** | **int64** | DAS (Direct Attached Storage) volume provisioned. | |
-|**ReservableIps** | **int32** | Total reservable IP limit for the customer. | |
-|**ReservedIpsOnContract** | **int32** | Reserved ips for the contract. | |
-|**ReservedIpsInUse** | **int32** | Reserved ips in use. | |
-|**K8sClusterLimitTotal** | **int32** | K8s clusters total limit. | |
-|**K8sClustersProvisioned** | **int32** | K8s clusters provisioned. | |
-|**NlbLimitTotal** | **int32** | NLB total limit. | |
-|**NlbProvisioned** | **int32** | NLBs provisioned. | |
-|**NatGatewayLimitTotal** | **int32** | NAT Gateway total limit. | |
-|**NatGatewayProvisioned** | **int32** | NAT Gateways provisioned. | |
+|**CoresPerServer** | **int32** | The maximum number of CPU cores per server. | |
+|**CoresPerContract** | **int32** | The maximum number of CPU cores per contract. | |
+|**CoresProvisioned** | **int32** | The number of CPU cores provisioned. | |
+|**RamPerServer** | **int32** | The maximum amount of RAM (in MB) that can be provisioned for a particular server under this contract. | |
+|**RamPerContract** | **int32** | The maximum amount of RAM (in MB) that can be provisioned under this contract. | |
+|**RamProvisioned** | **int32** | The amount of RAM (in MB) provisioned under this contract. | |
+|**HddLimitPerVolume** | **int64** | The maximum size (in MB) of an idividual hard disk volume. | |
+|**HddLimitPerContract** | **int64** | The maximum amount of disk space (in MB) that can be provided under this contract. | |
+|**HddVolumeProvisioned** | **int64** | The amount of hard disk space (in MB) that is currently provisioned. | |
+|**SsdLimitPerVolume** | **int64** | The maximum size (in MB) of an individual solid state disk volume. | |
+|**SsdLimitPerContract** | **int64** | The maximum amount of solid state disk space (in MB) that can be provisioned under this contract. | |
+|**SsdVolumeProvisioned** | **int64** | The amount of solid state disk space (in MB) that is currently provisioned. | |
+|**DasVolumeProvisioned** | **int64** | The amount of DAS disk space (in MB) in a Cube server that is currently provisioned. | |
+|**ReservableIps** | **int32** | The maximum number of static public IP addresses that can be reserved by this customer across contracts. | |
+|**ReservedIpsOnContract** | **int32** | The maximum number of static public IP addresses that can be reserved for this contract. | |
+|**ReservedIpsInUse** | **int32** | The number of static public IP addresses in use. | |
+|**K8sClusterLimitTotal** | **int32** | The maximum number of Kubernetes clusters that can be created under this contract. | |
+|**K8sClustersProvisioned** | **int32** | The amount of Kubernetes clusters that is currently provisioned. | |
+|**NlbLimitTotal** | **int32** | The NLB total limit. | |
+|**NlbProvisioned** | **int32** | The NLBs provisioned. | |
+|**NatGatewayLimitTotal** | **int32** | The NAT Gateway total limit. | |
+|**NatGatewayProvisioned** | **int32** | The NAT Gateways provisioned. | |
 
 ## Methods
 

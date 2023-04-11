@@ -7,10 +7,11 @@
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Protocol** | **string** | The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests). | |
 |**SourceMac** | Pointer to **NullableString** | Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address. | [optional] |
-|**SourceIp** | Pointer to **NullableString** | Only traffic originating from the respective IPv4 address is allowed. Value null allows traffic from any IP address. | [optional] |
-|**TargetIp** | Pointer to **NullableString** | If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address of the NIC is allowed. Value null Value null allows traffic to any target IP address. | [optional] |
-|**IcmpCode** | Pointer to **NullableInt32** | Defines the allowed code (from 0 to 254) if protocol ICMP is chosen. Value null allows all codes. | [optional] |
-|**IcmpType** | Pointer to **NullableInt32** | Defines the allowed type (from 0 to 254) if the protocol ICMP is chosen. Value null allows all types. | [optional] |
+|**IpVersion** | Pointer to **string** | The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic. | [optional] |
+|**SourceIp** | Pointer to **NullableString** | Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion). | [optional] |
+|**TargetIp** | Pointer to **NullableString** | If the target NIC has multiple IP addresses, only the traffic directed to the respective IP address (or CIDR block) of the NIC is allowed. Value null allows traffic to any target IP address (according to the selected ipVersion). | [optional] |
+|**IcmpCode** | Pointer to **NullableInt32** | Defines the allowed code (from 0 to 254) if protocol ICMP or ICMPv6 is chosen. Value null allows all codes. | [optional] |
+|**IcmpType** | Pointer to **NullableInt32** | Defines the allowed type (from 0 to 254) if the protocol ICMP or ICMPv6 is chosen. Value null allows all types. | [optional] |
 |**PortRangeStart** | Pointer to **int32** | Defines the start range of the allowed port (from 1 to 65534) if protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd value null to allow all ports. | [optional] |
 |**PortRangeEnd** | Pointer to **int32** | Defines the end range of the allowed port (from 1 to 65534) if the protocol TCP or UDP is chosen. Leave portRangeStart and portRangeEnd null to allow all ports. | [optional] |
 |**Type** | Pointer to **string** | The type of the firewall rule. If not specified, the default INGRESS value is used. | [optional] |
@@ -114,6 +115,31 @@ HasSourceMac returns a boolean if a field has been set.
 `func (o *FirewallruleProperties) UnsetSourceMac()`
 
 UnsetSourceMac ensures that no value is present for SourceMac, not even an explicit nil
+### GetIpVersion
+
+`func (o *FirewallruleProperties) GetIpVersion() string`
+
+GetIpVersion returns the IpVersion field if non-nil, zero value otherwise.
+
+### GetIpVersionOk
+
+`func (o *FirewallruleProperties) GetIpVersionOk() (*string, bool)`
+
+GetIpVersionOk returns a tuple with the IpVersion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpVersion
+
+`func (o *FirewallruleProperties) SetIpVersion(v string)`
+
+SetIpVersion sets IpVersion field to given value.
+
+### HasIpVersion
+
+`func (o *FirewallruleProperties) HasIpVersion() bool`
+
+HasIpVersion returns a boolean if a field has been set.
+
 ### GetSourceIp
 
 `func (o *FirewallruleProperties) GetSourceIp() string`

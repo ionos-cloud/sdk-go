@@ -12,8 +12,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersLoadbalancersFindById**](LoadBalancersApi.md#DatacentersLoadbalancersFindById) | **Get** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Retrieve Load Balancers|
 |[**DatacentersLoadbalancersGet**](LoadBalancersApi.md#DatacentersLoadbalancersGet) | **Get** /datacenters/{datacenterId}/loadbalancers | List Load Balancers|
 |[**DatacentersLoadbalancersPatch**](LoadBalancersApi.md#DatacentersLoadbalancersPatch) | **Patch** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Partially modify Load Balancers|
-|[**DatacentersLoadbalancersPost**](LoadBalancersApi.md#DatacentersLoadbalancersPost) | **Post** /datacenters/{datacenterId}/loadbalancers | Create Load Balancers|
-|[**DatacentersLoadbalancersPut**](LoadBalancersApi.md#DatacentersLoadbalancersPut) | **Put** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify Load Balancers|
+|[**DatacentersLoadbalancersPost**](LoadBalancersApi.md#DatacentersLoadbalancersPost) | **Post** /datacenters/{datacenterId}/loadbalancers | Create a Load Balancer|
+|[**DatacentersLoadbalancersPut**](LoadBalancersApi.md#DatacentersLoadbalancersPut) | **Put** /datacenters/{datacenterId}/loadbalancers/{loadbalancerId} | Modify a Load Balancer by ID|
 
 
 
@@ -654,7 +654,7 @@ var result Loadbalancer = DatacentersLoadbalancersPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create Load Balancers
+Create a Load Balancer
 
 
 
@@ -732,7 +732,7 @@ var result Loadbalancer = DatacentersLoadbalancersPut(ctx, datacenterId, loadbal
                       .Execute()
 ```
 
-Modify Load Balancers
+Modify a Load Balancer by ID
 
 
 

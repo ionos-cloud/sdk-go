@@ -9,8 +9,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersVolumesFindById**](VolumesApi.md#DatacentersVolumesFindById) | **Get** /datacenters/{datacenterId}/volumes/{volumeId} | Retrieve volumes|
 |[**DatacentersVolumesGet**](VolumesApi.md#DatacentersVolumesGet) | **Get** /datacenters/{datacenterId}/volumes | List volumes|
 |[**DatacentersVolumesPatch**](VolumesApi.md#DatacentersVolumesPatch) | **Patch** /datacenters/{datacenterId}/volumes/{volumeId} | Partially modify volumes|
-|[**DatacentersVolumesPost**](VolumesApi.md#DatacentersVolumesPost) | **Post** /datacenters/{datacenterId}/volumes | Create volumes|
-|[**DatacentersVolumesPut**](VolumesApi.md#DatacentersVolumesPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId} | Modify volumes|
+|[**DatacentersVolumesPost**](VolumesApi.md#DatacentersVolumesPost) | **Post** /datacenters/{datacenterId}/volumes | Create a Volume|
+|[**DatacentersVolumesPut**](VolumesApi.md#DatacentersVolumesPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId} | Modify a Volume by ID|
 |[**DatacentersVolumesRestoreSnapshotPost**](VolumesApi.md#DatacentersVolumesRestoreSnapshotPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/restore-snapshot | Restore volume snapshots|
 
 
@@ -428,7 +428,7 @@ var result Volume = DatacentersVolumesPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create volumes
+Create a Volume
 
 
 
@@ -506,7 +506,7 @@ var result Volume = DatacentersVolumesPut(ctx, datacenterId, volumeId)
                       .Execute()
 ```
 
-Modify volumes
+Modify a Volume by ID
 
 
 

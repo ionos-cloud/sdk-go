@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The name of the  resource. | |
+|**Name** | **string** | The resource name. | |
 |**Action** | **string** | Specifies the traffic action pattern. | |
 |**Direction** | **string** | Specifies the traffic direction pattern. | |
-|**Bucket** | **string** | S3 bucket name of an existing IONOS Cloud S3 bucket. | |
+|**Bucket** | **string** | The S3 bucket name of an existing IONOS Cloud S3 bucket. | |
 
 ## Methods
 

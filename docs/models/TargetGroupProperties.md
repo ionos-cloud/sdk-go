@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The name of the target group. | |
-|**Algorithm** | **string** | Balancing algorithm | |
-|**Protocol** | **string** | Balancing protocol | |
+|**Name** | **string** | The target group name. | |
+|**Algorithm** | **string** | The balancing algorithm. A balancing algorithm consists of predefined rules with the logic that a load balancer uses to distribute network traffic between servers.  - **Round Robin**: Targets are served alternately according to their weighting.  - **Least Connection**: The target with the least active connection is served.  - **Random**: The targets are served based on a consistent pseudorandom algorithm.  - **Source IP**: It is ensured that the same client IP address reaches the same target. | |
+|**Protocol** | **string** | The forwarding protocol. Only the value &#39;HTTP&#39; is allowed. | |
 |**Targets** | Pointer to [**[]TargetGroupTarget**](TargetGroupTarget.md) | Array of items in the collection. | [optional] |
 |**HealthCheck** | Pointer to [**TargetGroupHealthCheck**](TargetGroupHealthCheck.md) |  | [optional] |
 |**HttpHealthCheck** | Pointer to [**TargetGroupHttpHealthCheck**](TargetGroupHttpHealthCheck.md) |  | [optional] |

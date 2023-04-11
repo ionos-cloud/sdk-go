@@ -144,7 +144,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesDeleteExecu
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -319,7 +319,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesFindByIdExe
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -562,7 +562,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesGetExecute(
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -757,7 +757,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesPatchExecut
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -857,8 +857,8 @@ func (r ApiDatacentersServersNicsFirewallrulesPostRequest) Execute() (FirewallRu
 }
 
 /*
- * DatacentersServersNicsFirewallrulesPost Create firewall rules
- * Create a firewall rule for the specified NIC.
+ * DatacentersServersNicsFirewallrulesPost Create a Firewall Rule
+ * Creates a firewall rule for the specified NIC.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param datacenterId The unique ID of the data center.
  * @param serverId The unique ID of the server.
@@ -948,7 +948,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesPostExecute
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key
@@ -1049,8 +1049,8 @@ func (r ApiDatacentersServersNicsFirewallrulesPutRequest) Execute() (FirewallRul
 }
 
 /*
- * DatacentersServersNicsFirewallrulesPut Modify firewall rules
- * Modify the properties of the specified firewall rule.
+ * DatacentersServersNicsFirewallrulesPut Modify a Firewall Rule
+ * Modifies the properties of the specified firewall rule.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @param datacenterId The unique ID of the data center.
  * @param serverId The unique ID of the server.
@@ -1143,7 +1143,7 @@ func (a *FirewallRulesApiService) DatacentersServersNicsFirewallrulesPutExecute(
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key

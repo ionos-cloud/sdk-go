@@ -4,9 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | **int32** | The LAN ID of an existing LAN at the related datacenter | |
-|**Dhcp** | Pointer to **bool** | Indicates if the Kubernetes node pool LAN will reserve an IP using DHCP. | [optional] |
-|**Routes** | Pointer to [**[]KubernetesNodePoolLanRoutes**](KubernetesNodePoolLanRoutes.md) | array of additional LANs attached to worker nodes | [optional] |
+|**DatacenterId** | Pointer to **string** | The datacenter ID, requires system privileges, for internal usage only | [optional] |
+|**Id** | **int32** | The LAN ID of an existing LAN at the related data center | |
+|**Dhcp** | Pointer to **bool** | Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP. | [optional] |
+|**Routes** | Pointer to [**[]KubernetesNodePoolLanRoutes**](KubernetesNodePoolLanRoutes.md) | The array of additional LANs attached to worker nodes. | [optional] |
 
 ## Methods
 
@@ -26,6 +27,31 @@ will change when the set of required properties is changed
 NewKubernetesNodePoolLanWithDefaults instantiates a new KubernetesNodePoolLan object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDatacenterId
+
+`func (o *KubernetesNodePoolLan) GetDatacenterId() string`
+
+GetDatacenterId returns the DatacenterId field if non-nil, zero value otherwise.
+
+### GetDatacenterIdOk
+
+`func (o *KubernetesNodePoolLan) GetDatacenterIdOk() (*string, bool)`
+
+GetDatacenterIdOk returns a tuple with the DatacenterId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDatacenterId
+
+`func (o *KubernetesNodePoolLan) SetDatacenterId(v string)`
+
+SetDatacenterId sets DatacenterId field to given value.
+
+### HasDatacenterId
+
+`func (o *KubernetesNodePoolLan) HasDatacenterId() bool`
+
+HasDatacenterId returns a boolean if a field has been set.
 
 ### GetId
 

@@ -74,8 +74,8 @@ func (r ApiContractsGetRequest) Execute() (Contracts, *APIResponse, error) {
 }
 
 /*
- * ContractsGet Retrieve contracts
- * Retrieve the properties of the user's contract. In this version, the resource became a collection.
+ * ContractsGet Get Contract Information
+ * Retrieves the properties of the user's contract. This operation allows you to obtain the resource limits and the general contract information.
  * @param ctx _context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
  * @return ApiContractsGetRequest
  */
@@ -165,7 +165,7 @@ func (a *ContractResourcesApiService) ContractsGetExecute(r ApiContractsGetReque
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextAPIKeys).(map[string]APIKey); ok {
-			if apiKey, ok := auth["tokenAuth"]; ok {
+			if apiKey, ok := auth["Token Authentication"]; ok {
 				var key string
 				if apiKey.Prefix != "" {
 					key = apiKey.Prefix + " " + apiKey.Key

@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersServersNicsFirewallrulesFindById**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Retrieve firewall rules|
 |[**DatacentersServersNicsFirewallrulesGet**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | List firewall rules|
 |[**DatacentersServersNicsFirewallrulesPatch**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Partially modify firewall rules|
-|[**DatacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create firewall rules|
-|[**DatacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify firewall rules|
+|[**DatacentersServersNicsFirewallrulesPost**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules | Create a Firewall Rule|
+|[**DatacentersServersNicsFirewallrulesPut**](FirewallRulesApi.md#DatacentersServersNicsFirewallrulesPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId}/firewallrules/{firewallruleId} | Modify a Firewall Rule|
 
 
 
@@ -353,7 +353,7 @@ var result FirewallRule = DatacentersServersNicsFirewallrulesPost(ctx, datacente
                       .Execute()
 ```
 
-Create firewall rules
+Create a Firewall Rule
 
 
 
@@ -435,7 +435,7 @@ var result FirewallRule = DatacentersServersNicsFirewallrulesPut(ctx, datacenter
                       .Execute()
 ```
 
-Modify firewall rules
+Modify a Firewall Rule
 
 
 

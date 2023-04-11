@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**Name** | Pointer to **string** | The name of the resource. | [optional] |
 |**CreateDataCenter** | Pointer to **bool** | Create data center privilege. | [optional] |
 |**CreateSnapshot** | Pointer to **bool** | Create snapshot privilege. | [optional] |
 |**ReserveIp** | Pointer to **bool** | Reserve IP block privilege. | [optional] |
@@ -18,6 +18,9 @@
 |**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
 |**AccessAndManageCertificates** | Pointer to **bool** | Privilege for a group to access and manage certificates. | [optional] |
 |**ManageDBaaS** | Pointer to **bool** | Privilege for a group to manage DBaaS related functionality. | [optional] |
+|**AccessAndManageDns** | Pointer to **bool** | Privilege for a group to access and manage dns records. | [optional] |
+|**ManageRegistry** | Pointer to **bool** | Privilege for group accessing container registry related functionality. | [optional] |
+|**ManageDataplatform** | Pointer to **bool** | Privilege for a group to access and manage Data Platform. | [optional] |
 
 ## Methods
 
@@ -387,6 +390,81 @@ SetManageDBaaS sets ManageDBaaS field to given value.
 `func (o *GroupProperties) HasManageDBaaS() bool`
 
 HasManageDBaaS returns a boolean if a field has been set.
+
+### GetAccessAndManageDns
+
+`func (o *GroupProperties) GetAccessAndManageDns() bool`
+
+GetAccessAndManageDns returns the AccessAndManageDns field if non-nil, zero value otherwise.
+
+### GetAccessAndManageDnsOk
+
+`func (o *GroupProperties) GetAccessAndManageDnsOk() (*bool, bool)`
+
+GetAccessAndManageDnsOk returns a tuple with the AccessAndManageDns field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageDns
+
+`func (o *GroupProperties) SetAccessAndManageDns(v bool)`
+
+SetAccessAndManageDns sets AccessAndManageDns field to given value.
+
+### HasAccessAndManageDns
+
+`func (o *GroupProperties) HasAccessAndManageDns() bool`
+
+HasAccessAndManageDns returns a boolean if a field has been set.
+
+### GetManageRegistry
+
+`func (o *GroupProperties) GetManageRegistry() bool`
+
+GetManageRegistry returns the ManageRegistry field if non-nil, zero value otherwise.
+
+### GetManageRegistryOk
+
+`func (o *GroupProperties) GetManageRegistryOk() (*bool, bool)`
+
+GetManageRegistryOk returns a tuple with the ManageRegistry field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManageRegistry
+
+`func (o *GroupProperties) SetManageRegistry(v bool)`
+
+SetManageRegistry sets ManageRegistry field to given value.
+
+### HasManageRegistry
+
+`func (o *GroupProperties) HasManageRegistry() bool`
+
+HasManageRegistry returns a boolean if a field has been set.
+
+### GetManageDataplatform
+
+`func (o *GroupProperties) GetManageDataplatform() bool`
+
+GetManageDataplatform returns the ManageDataplatform field if non-nil, zero value otherwise.
+
+### GetManageDataplatformOk
+
+`func (o *GroupProperties) GetManageDataplatformOk() (*bool, bool)`
+
+GetManageDataplatformOk returns a tuple with the ManageDataplatform field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetManageDataplatform
+
+`func (o *GroupProperties) SetManageDataplatform(v bool)`
+
+SetManageDataplatform sets ManageDataplatform field to given value.
+
+### HasManageDataplatform
+
+`func (o *GroupProperties) HasManageDataplatform() bool`
+
+HasManageDataplatform returns a boolean if a field has been set.
 
 
 

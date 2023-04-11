@@ -4,23 +4,23 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**K8sDelete**](KubernetesApi.md#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete Kubernetes clusters|
-|[**K8sFindByClusterId**](KubernetesApi.md#K8sFindByClusterId) | **Get** /k8s/{k8sClusterId} | Retrieve Kubernetes clusters|
-|[**K8sGet**](KubernetesApi.md#K8sGet) | **Get** /k8s | List Kubernetes clusters|
-|[**K8sKubeconfigGet**](KubernetesApi.md#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Retrieve Kubernetes configuration files|
-|[**K8sNodepoolsDelete**](KubernetesApi.md#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete Kubernetes node pools|
-|[**K8sNodepoolsFindById**](KubernetesApi.md#K8sNodepoolsFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Retrieve Kubernetes node pools|
-|[**K8sNodepoolsGet**](KubernetesApi.md#K8sNodepoolsGet) | **Get** /k8s/{k8sClusterId}/nodepools | List Kubernetes node pools|
-|[**K8sNodepoolsNodesDelete**](KubernetesApi.md#K8sNodepoolsNodesDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete Kubernetes nodes|
-|[**K8sNodepoolsNodesFindById**](KubernetesApi.md#K8sNodepoolsNodesFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Retrieve Kubernetes nodes|
-|[**K8sNodepoolsNodesGet**](KubernetesApi.md#K8sNodepoolsNodesGet) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | List Kubernetes nodes|
-|[**K8sNodepoolsNodesReplacePost**](KubernetesApi.md#K8sNodepoolsNodesReplacePost) | **Post** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate Kubernetes nodes|
-|[**K8sNodepoolsPost**](KubernetesApi.md#K8sNodepoolsPost) | **Post** /k8s/{k8sClusterId}/nodepools | Create Kubernetes node pools|
-|[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify Kubernetes node pools|
-|[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create Kubernetes clusters|
-|[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify Kubernetes clusters|
-|[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Retrieve current default Kubernetes version|
-|[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | List Kubernetes versions|
+|[**K8sDelete**](KubernetesApi.md#K8sDelete) | **Delete** /k8s/{k8sClusterId} | Delete a Kubernetes Cluster by ID|
+|[**K8sFindByClusterId**](KubernetesApi.md#K8sFindByClusterId) | **Get** /k8s/{k8sClusterId} | Get a Kubernetes Cluster by ID|
+|[**K8sGet**](KubernetesApi.md#K8sGet) | **Get** /k8s | Get Kubernetes Clusters|
+|[**K8sKubeconfigGet**](KubernetesApi.md#K8sKubeconfigGet) | **Get** /k8s/{k8sClusterId}/kubeconfig | Get Kubernetes Configuration File|
+|[**K8sNodepoolsDelete**](KubernetesApi.md#K8sNodepoolsDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Delete a Kubernetes Node Pool by ID|
+|[**K8sNodepoolsFindById**](KubernetesApi.md#K8sNodepoolsFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Get a Kubernetes Node Pool by ID|
+|[**K8sNodepoolsGet**](KubernetesApi.md#K8sNodepoolsGet) | **Get** /k8s/{k8sClusterId}/nodepools | Get Kubernetes Node Pools|
+|[**K8sNodepoolsNodesDelete**](KubernetesApi.md#K8sNodepoolsNodesDelete) | **Delete** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Delete a Kubernetes Node by ID|
+|[**K8sNodepoolsNodesFindById**](KubernetesApi.md#K8sNodepoolsNodesFindById) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId} | Get Kubernetes Node by ID|
+|[**K8sNodepoolsNodesGet**](KubernetesApi.md#K8sNodepoolsNodesGet) | **Get** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes | Get Kubernetes Nodes|
+|[**K8sNodepoolsNodesReplacePost**](KubernetesApi.md#K8sNodepoolsNodesReplacePost) | **Post** /k8s/{k8sClusterId}/nodepools/{nodepoolId}/nodes/{nodeId}/replace | Recreate a Kubernetes Node by ID|
+|[**K8sNodepoolsPost**](KubernetesApi.md#K8sNodepoolsPost) | **Post** /k8s/{k8sClusterId}/nodepools | Create a Kubernetes Node Pool|
+|[**K8sNodepoolsPut**](KubernetesApi.md#K8sNodepoolsPut) | **Put** /k8s/{k8sClusterId}/nodepools/{nodepoolId} | Modify a Kubernetes Node Pool by ID|
+|[**K8sPost**](KubernetesApi.md#K8sPost) | **Post** /k8s | Create a Kubernetes Cluster|
+|[**K8sPut**](KubernetesApi.md#K8sPut) | **Put** /k8s/{k8sClusterId} | Modify a Kubernetes Cluster by ID|
+|[**K8sVersionsDefaultGet**](KubernetesApi.md#K8sVersionsDefaultGet) | **Get** /k8s/versions/default | Get Default Kubernetes Version|
+|[**K8sVersionsGet**](KubernetesApi.md#K8sVersionsGet) | **Get** /k8s/versions | Get Kubernetes Versions|
 
 
 
@@ -34,7 +34,7 @@ var result  = K8sDelete(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Delete Kubernetes clusters
+Delete a Kubernetes Cluster by ID
 
 
 
@@ -107,7 +107,7 @@ var result KubernetesCluster = K8sFindByClusterId(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Retrieve Kubernetes clusters
+Get a Kubernetes Cluster by ID
 
 
 
@@ -125,7 +125,7 @@ import (
 )
 
 func main() {
-    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
+    k8sClusterId := "k8sClusterId_example" // string | The unique ID of the K8s cluster to be retrieved.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -148,7 +148,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**k8sClusterId** | **string** | The unique ID of the Kubernetes cluster. | |
+|**k8sClusterId** | **string** | The unique ID of the K8s cluster to be retrieved. | |
 
 ### Other Parameters
 
@@ -182,7 +182,7 @@ var result KubernetesClusters = K8sGet(ctx)
                       .Execute()
 ```
 
-List Kubernetes clusters
+Get Kubernetes Clusters
 
 
 
@@ -252,7 +252,7 @@ var result string = K8sKubeconfigGet(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Retrieve Kubernetes configuration files
+Get Kubernetes Configuration File
 
 
 
@@ -327,7 +327,7 @@ var result  = K8sNodepoolsDelete(ctx, k8sClusterId, nodepoolId)
                       .Execute()
 ```
 
-Delete Kubernetes node pools
+Delete a Kubernetes Node Pool by ID
 
 
 
@@ -402,7 +402,7 @@ var result KubernetesNodePool = K8sNodepoolsFindById(ctx, k8sClusterId, nodepool
                       .Execute()
 ```
 
-Retrieve Kubernetes node pools
+Get a Kubernetes Node Pool by ID
 
 
 
@@ -479,7 +479,7 @@ var result KubernetesNodePools = K8sNodepoolsGet(ctx, k8sClusterId)
                       .Execute()
 ```
 
-List Kubernetes node pools
+Get Kubernetes Node Pools
 
 
 
@@ -554,7 +554,7 @@ var result  = K8sNodepoolsNodesDelete(ctx, k8sClusterId, nodepoolId, nodeId)
                       .Execute()
 ```
 
-Delete Kubernetes nodes
+Delete a Kubernetes Node by ID
 
 
 
@@ -631,7 +631,7 @@ var result KubernetesNode = K8sNodepoolsNodesFindById(ctx, k8sClusterId, nodepoo
                       .Execute()
 ```
 
-Retrieve Kubernetes nodes
+Get Kubernetes Node by ID
 
 
 
@@ -710,7 +710,7 @@ var result KubernetesNodes = K8sNodepoolsNodesGet(ctx, k8sClusterId, nodepoolId)
                       .Execute()
 ```
 
-List Kubernetes nodes
+Get Kubernetes Nodes
 
 
 
@@ -787,7 +787,7 @@ var result  = K8sNodepoolsNodesReplacePost(ctx, k8sClusterId, nodepoolId, nodeId
                       .Execute()
 ```
 
-Recreate Kubernetes nodes
+Recreate a Kubernetes Node by ID
 
 
 
@@ -865,7 +865,7 @@ var result KubernetesNodePool = K8sNodepoolsPost(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Create Kubernetes node pools
+Create a Kubernetes Node Pool
 
 
 
@@ -884,7 +884,7 @@ import (
 
 func main() {
     k8sClusterId := "k8sClusterId_example" // string | The unique ID of the Kubernetes cluster.
-    kubernetesNodePool := *openapiclient.NewKubernetesNodePoolForPost(*openapiclient.NewKubernetesNodePoolPropertiesForPost("k8s-node-pool", "1e072e52-2ed3-492f-b6b6-c6b116907521", int32(2), "AMD_OPTERON", int32(4), int32(2048), "AUTO", "HDD", int32(100))) // KubernetesNodePoolForPost | The Kubernetes node pool to create.
+    kubernetesNodePool := *openapiclient.NewKubernetesNodePoolForPost(*openapiclient.NewKubernetesNodePoolPropertiesForPost("K8s-node-pool", "1e072e52-2ed3-492f-b6b6-c6b116907521", int32(2), "AMD_OPTERON", int32(4), int32(2048), "AUTO", "HDD", int32(100))) // KubernetesNodePoolForPost | The Kubernetes node pool to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -943,7 +943,7 @@ var result KubernetesNodePool = K8sNodepoolsPut(ctx, k8sClusterId, nodepoolId)
                       .Execute()
 ```
 
-Modify Kubernetes node pools
+Modify a Kubernetes Node Pool by ID
 
 
 
@@ -1023,7 +1023,7 @@ var result KubernetesCluster = K8sPost(ctx)
                       .Execute()
 ```
 
-Create Kubernetes clusters
+Create a Kubernetes Cluster
 
 
 
@@ -1096,7 +1096,7 @@ var result KubernetesCluster = K8sPut(ctx, k8sClusterId)
                       .Execute()
 ```
 
-Modify Kubernetes clusters
+Modify a Kubernetes Cluster by ID
 
 
 
@@ -1170,7 +1170,7 @@ var result string = K8sVersionsDefaultGet(ctx)
                       .Execute()
 ```
 
-Retrieve current default Kubernetes version
+Get Default Kubernetes Version
 
 
 
@@ -1228,7 +1228,7 @@ var result []string = K8sVersionsGet(ctx)
                       .Execute()
 ```
 
-List Kubernetes versions
+Get Kubernetes Versions
 
 
 

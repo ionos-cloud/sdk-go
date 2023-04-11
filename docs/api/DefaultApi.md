@@ -4,7 +4,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**ApiInfoGet**](DefaultApi.md#ApiInfoGet) | **Get** / | Display API information|
+|[**ApiInfoGet**](DefaultApi.md#ApiInfoGet) | **Get** / | Get API information|
 
 
 
@@ -18,7 +18,7 @@ var result Info = ApiInfoGet(ctx)
                       .Execute()
 ```
 
-Display API information
+Get API information
 
 
 

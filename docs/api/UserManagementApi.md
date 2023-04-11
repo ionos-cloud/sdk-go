@@ -17,7 +17,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**UmGroupsSharesPut**](UserManagementApi.md#UmGroupsSharesPut) | **Put** /um/groups/{groupId}/shares/{resourceId} | Modify group share privileges|
 |[**UmGroupsUsersDelete**](UserManagementApi.md#UmGroupsUsersDelete) | **Delete** /um/groups/{groupId}/users/{userId} | Remove users from groups|
 |[**UmGroupsUsersGet**](UserManagementApi.md#UmGroupsUsersGet) | **Get** /um/groups/{groupId}/users | List group members|
-|[**UmGroupsUsersPost**](UserManagementApi.md#UmGroupsUsersPost) | **Post** /um/groups/{groupId}/users | Add group members|
+|[**UmGroupsUsersPost**](UserManagementApi.md#UmGroupsUsersPost) | **Post** /um/groups/{groupId}/users | Add a Group Member|
 |[**UmResourcesFindByType**](UserManagementApi.md#UmResourcesFindByType) | **Get** /um/resources/{resourceType} | List resources by type|
 |[**UmResourcesFindByTypeAndId**](UserManagementApi.md#UmResourcesFindByTypeAndId) | **Get** /um/resources/{resourceType}/{resourceId} | Retrieve resources by type|
 |[**UmResourcesGet**](UserManagementApi.md#UmResourcesGet) | **Get** /um/resources | List all resources|
@@ -1023,7 +1023,7 @@ var result User = UmGroupsUsersPost(ctx, groupId)
                       .Execute()
 ```
 
-Add group members
+Add a Group Member
 
 
 

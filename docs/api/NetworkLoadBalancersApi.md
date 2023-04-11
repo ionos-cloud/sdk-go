@@ -10,17 +10,17 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsFindByFlowLogId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Retrieve NLB Flow Logs|
 |[**DatacentersNetworkloadbalancersFlowlogsGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | List NLB Flow Logs|
 |[**DatacentersNetworkloadbalancersFlowlogsPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Partially modify NLB Flow Logs|
-|[**DatacentersNetworkloadbalancersFlowlogsPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Create NLB Flow Logs|
+|[**DatacentersNetworkloadbalancersFlowlogsPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs | Create a NLB Flow Log|
 |[**DatacentersNetworkloadbalancersFlowlogsPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersFlowlogsPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/flowlogs/{flowLogId} | Modify NLB Flow Logs|
 |[**DatacentersNetworkloadbalancersForwardingrulesDelete**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesDelete) | **Delete** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Delete NLB forwarding rules|
 |[**DatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesFindByForwardingRuleId) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Retrieve NLB forwarding rules|
 |[**DatacentersNetworkloadbalancersForwardingrulesGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | List NLB forwarding rules|
 |[**DatacentersNetworkloadbalancersForwardingrulesPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Partially modify NLB forwarding rules|
-|[**DatacentersNetworkloadbalancersForwardingrulesPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Create NLB forwarding rules|
+|[**DatacentersNetworkloadbalancersForwardingrulesPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules | Create a NLB Forwarding Rule|
 |[**DatacentersNetworkloadbalancersForwardingrulesPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersForwardingrulesPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId}/forwardingrules/{forwardingRuleId} | Modify NLB forwarding rules|
 |[**DatacentersNetworkloadbalancersGet**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersGet) | **Get** /datacenters/{datacenterId}/networkloadbalancers | List Network Load Balancers|
 |[**DatacentersNetworkloadbalancersPatch**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPatch) | **Patch** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Partially modify Network Load Balancers|
-|[**DatacentersNetworkloadbalancersPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers | Create Network Load Balancers|
+|[**DatacentersNetworkloadbalancersPost**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPost) | **Post** /datacenters/{datacenterId}/networkloadbalancers | Create a Network Load Balancer|
 |[**DatacentersNetworkloadbalancersPut**](NetworkLoadBalancersApi.md#DatacentersNetworkloadbalancersPut) | **Put** /datacenters/{datacenterId}/networkloadbalancers/{networkLoadBalancerId} | Modify Network Load Balancers|
 
 
@@ -503,7 +503,7 @@ var result FlowLog = DatacentersNetworkloadbalancersFlowlogsPost(ctx, datacenter
                       .Execute()
 ```
 
-Create NLB Flow Logs
+Create a NLB Flow Log
 
 
 
@@ -980,7 +980,7 @@ var result NetworkLoadBalancerForwardingRule = DatacentersNetworkloadbalancersFo
                       .Execute()
 ```
 
-Create NLB forwarding rules
+Create a NLB Forwarding Rule
 
 
 
@@ -1303,7 +1303,7 @@ var result NetworkLoadBalancer = DatacentersNetworkloadbalancersPost(ctx, datace
                       .Execute()
 ```
 
-Create Network Load Balancers
+Create a Network Load Balancer
 
 
 

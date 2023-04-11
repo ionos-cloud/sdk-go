@@ -5,8 +5,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**ContractNumber** | Pointer to **int64** | The contract number. | [optional] [readonly] |
-|**Owner** | Pointer to **string** | The owner of the contract. | [optional] [readonly] |
-|**Status** | Pointer to **string** | The status of the contract. | [optional] [readonly] |
+|**Owner** | Pointer to **string** | The contract owner&#39;s user name. | [optional] [readonly] |
+|**Status** | Pointer to **string** | The contract status. | [optional] [readonly] |
 |**RegDomain** | Pointer to **string** | The registration domain of the contract. | [optional] [readonly] |
 |**ResourceLimits** | Pointer to [**ResourceLimits**](ResourceLimits.md) |  | [optional] |
 

@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**SnapshotsFindById**](SnapshotsApi.md#SnapshotsFindById) | **Get** /snapshots/{snapshotId} | Retrieve snapshots by ID|
 |[**SnapshotsGet**](SnapshotsApi.md#SnapshotsGet) | **Get** /snapshots | List snapshots|
 |[**SnapshotsPatch**](SnapshotsApi.md#SnapshotsPatch) | **Patch** /snapshots/{snapshotId} | Partially modify snapshots|
-|[**SnapshotsPut**](SnapshotsApi.md#SnapshotsPut) | **Put** /snapshots/{snapshotId} | Modify snapshots|
+|[**SnapshotsPut**](SnapshotsApi.md#SnapshotsPut) | **Put** /snapshots/{snapshotId} | Modify a Snapshot by ID|
 
 
 
@@ -319,7 +319,7 @@ var result Snapshot = SnapshotsPut(ctx, snapshotId)
                       .Execute()
 ```
 
-Modify snapshots
+Modify a Snapshot by ID
 
 
 

@@ -6,7 +6,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
 |**Items** | Pointer to [**[]ApplicationLoadBalancer**](ApplicationLoadBalancer.md) | Array of items in the collection. | [optional] [readonly] |
 |**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
 |**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |

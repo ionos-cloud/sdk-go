@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**CheckTimeout** | Pointer to **int32** | The maximum time in milliseconds to wait for a target to respond to a check. For target VMs with &#39;Check Interval&#39; set, the lesser of the two  values is used once the TCP connection is established. | [optional] |
-|**CheckInterval** | Pointer to **int32** | The interval in milliseconds between consecutive health checks; default is 2000. | [optional] |
-|**Retries** | Pointer to **int32** | The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535, and default is three reconnection attempts. | [optional] |
+|**CheckTimeout** | Pointer to **int32** | The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a &#39;Check Interval&#39; set, the smaller of the two values is used once the TCP connection is established. | [optional] |
+|**CheckInterval** | Pointer to **int32** | The interval in milliseconds between consecutive health checks; the default value is &#39;2000&#39;. | [optional] |
+|**Retries** | Pointer to **int32** | The maximum number of attempts to reconnect to a target after a connection failure. The valid range is &#39;0 to 65535&#39;; the default value is &#39;3&#39;. | [optional] |
 
 ## Methods
 

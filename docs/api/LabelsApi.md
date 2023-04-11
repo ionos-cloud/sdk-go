@@ -7,30 +7,30 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersLabelsDelete**](LabelsApi.md#DatacentersLabelsDelete) | **Delete** /datacenters/{datacenterId}/labels/{key} | Delete data center labels|
 |[**DatacentersLabelsFindByKey**](LabelsApi.md#DatacentersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/labels/{key} | Retrieve data center labels|
 |[**DatacentersLabelsGet**](LabelsApi.md#DatacentersLabelsGet) | **Get** /datacenters/{datacenterId}/labels | List data center labels|
-|[**DatacentersLabelsPost**](LabelsApi.md#DatacentersLabelsPost) | **Post** /datacenters/{datacenterId}/labels | Create data center labels|
-|[**DatacentersLabelsPut**](LabelsApi.md#DatacentersLabelsPut) | **Put** /datacenters/{datacenterId}/labels/{key} | Modify data center labels|
+|[**DatacentersLabelsPost**](LabelsApi.md#DatacentersLabelsPost) | **Post** /datacenters/{datacenterId}/labels | Create a Data Center Label|
+|[**DatacentersLabelsPut**](LabelsApi.md#DatacentersLabelsPut) | **Put** /datacenters/{datacenterId}/labels/{key} | Modify a Data Center Label by Key|
 |[**DatacentersServersLabelsDelete**](LabelsApi.md#DatacentersServersLabelsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Delete server labels|
 |[**DatacentersServersLabelsFindByKey**](LabelsApi.md#DatacentersServersLabelsFindByKey) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Retrieve server labels|
 |[**DatacentersServersLabelsGet**](LabelsApi.md#DatacentersServersLabelsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/labels | List server labels|
-|[**DatacentersServersLabelsPost**](LabelsApi.md#DatacentersServersLabelsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/labels | Create server labels|
-|[**DatacentersServersLabelsPut**](LabelsApi.md#DatacentersServersLabelsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify server labels|
+|[**DatacentersServersLabelsPost**](LabelsApi.md#DatacentersServersLabelsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/labels | Create a Server Label|
+|[**DatacentersServersLabelsPut**](LabelsApi.md#DatacentersServersLabelsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/labels/{key} | Modify a Server Label|
 |[**DatacentersVolumesLabelsDelete**](LabelsApi.md#DatacentersVolumesLabelsDelete) | **Delete** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Delete volume labels|
 |[**DatacentersVolumesLabelsFindByKey**](LabelsApi.md#DatacentersVolumesLabelsFindByKey) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Retrieve volume labels|
 |[**DatacentersVolumesLabelsGet**](LabelsApi.md#DatacentersVolumesLabelsGet) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels|
-|[**DatacentersVolumesLabelsPost**](LabelsApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create volume labels|
-|[**DatacentersVolumesLabelsPut**](LabelsApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify volume labels|
+|[**DatacentersVolumesLabelsPost**](LabelsApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create a Volume Label|
+|[**DatacentersVolumesLabelsPut**](LabelsApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Volume Label|
 |[**IpblocksLabelsDelete**](LabelsApi.md#IpblocksLabelsDelete) | **Delete** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels|
 |[**IpblocksLabelsFindByKey**](LabelsApi.md#IpblocksLabelsFindByKey) | **Get** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels|
 |[**IpblocksLabelsGet**](LabelsApi.md#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List IP block labels|
 |[**IpblocksLabelsPost**](LabelsApi.md#IpblocksLabelsPost) | **Post** /ipblocks/{ipblockId}/labels | Create IP block labels|
-|[**IpblocksLabelsPut**](LabelsApi.md#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify IP block labels|
+|[**IpblocksLabelsPut**](LabelsApi.md#IpblocksLabelsPut) | **Put** /ipblocks/{ipblockId}/labels/{key} | Modify a IP Block Label by ID|
 |[**LabelsFindByUrn**](LabelsApi.md#LabelsFindByUrn) | **Get** /labels/{labelurn} | Retrieve labels by URN|
 |[**LabelsGet**](LabelsApi.md#LabelsGet) | **Get** /labels | List labels |
 |[**SnapshotsLabelsDelete**](LabelsApi.md#SnapshotsLabelsDelete) | **Delete** /snapshots/{snapshotId}/labels/{key} | Delete snapshot labels|
 |[**SnapshotsLabelsFindByKey**](LabelsApi.md#SnapshotsLabelsFindByKey) | **Get** /snapshots/{snapshotId}/labels/{key} | Retrieve snapshot labels|
 |[**SnapshotsLabelsGet**](LabelsApi.md#SnapshotsLabelsGet) | **Get** /snapshots/{snapshotId}/labels | List snapshot labels|
-|[**SnapshotsLabelsPost**](LabelsApi.md#SnapshotsLabelsPost) | **Post** /snapshots/{snapshotId}/labels | Create snapshot labels|
-|[**SnapshotsLabelsPut**](LabelsApi.md#SnapshotsLabelsPut) | **Put** /snapshots/{snapshotId}/labels/{key} | Modify snapshot labels|
+|[**SnapshotsLabelsPost**](LabelsApi.md#SnapshotsLabelsPost) | **Post** /snapshots/{snapshotId}/labels | Create a Snapshot Label|
+|[**SnapshotsLabelsPut**](LabelsApi.md#SnapshotsLabelsPut) | **Put** /snapshots/{snapshotId}/labels/{key} | Modify a Snapshot Label by ID|
 
 
 
@@ -272,7 +272,7 @@ var result LabelResource = DatacentersLabelsPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create data center labels
+Create a Data Center Label
 
 
 
@@ -350,7 +350,7 @@ var result LabelResource = DatacentersLabelsPut(ctx, datacenterId, key)
                       .Execute()
 ```
 
-Modify data center labels
+Modify a Data Center Label by Key
 
 
 
@@ -663,7 +663,7 @@ var result LabelResource = DatacentersServersLabelsPost(ctx, datacenterId, serve
                       .Execute()
 ```
 
-Create server labels
+Create a Server Label
 
 
 
@@ -743,7 +743,7 @@ var result LabelResource = DatacentersServersLabelsPut(ctx, datacenterId, server
                       .Execute()
 ```
 
-Modify server labels
+Modify a Server Label
 
 
 
@@ -1058,7 +1058,7 @@ var result LabelResource = DatacentersVolumesLabelsPost(ctx, datacenterId, volum
                       .Execute()
 ```
 
-Create volume labels
+Create a Volume Label
 
 
 
@@ -1138,7 +1138,7 @@ var result LabelResource = DatacentersVolumesLabelsPut(ctx, datacenterId, volume
                       .Execute()
 ```
 
-Modify volume labels
+Modify a Volume Label
 
 
 
@@ -1525,7 +1525,7 @@ var result LabelResource = IpblocksLabelsPut(ctx, ipblockId, key)
                       .Execute()
 ```
 
-Modify IP block labels
+Modify a IP Block Label by ID
 
 
 
@@ -1977,7 +1977,7 @@ var result LabelResource = SnapshotsLabelsPost(ctx, snapshotId)
                       .Execute()
 ```
 
-Create snapshot labels
+Create a Snapshot Label
 
 
 
@@ -2055,7 +2055,7 @@ var result LabelResource = SnapshotsLabelsPut(ctx, snapshotId, key)
                       .Execute()
 ```
 
-Modify snapshot labels
+Modify a Snapshot Label by ID
 
 
 

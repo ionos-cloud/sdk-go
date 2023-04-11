@@ -4,28 +4,28 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**DatacentersServersCdromsDelete**](ServersApi.md#DatacentersServersCdromsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach CD-ROMs|
-|[**DatacentersServersCdromsFindById**](ServersApi.md#DatacentersServersCdromsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Retrieve attached CD-ROMs|
-|[**DatacentersServersCdromsGet**](ServersApi.md#DatacentersServersCdromsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms | List attached CD-ROMs |
-|[**DatacentersServersCdromsPost**](ServersApi.md#DatacentersServersCdromsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach CD-ROMs|
+|[**DatacentersServersCdromsDelete**](ServersApi.md#DatacentersServersCdromsDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Detach a CD-ROM by ID|
+|[**DatacentersServersCdromsFindById**](ServersApi.md#DatacentersServersCdromsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms/{cdromId} | Get Attached CD-ROM by ID|
+|[**DatacentersServersCdromsGet**](ServersApi.md#DatacentersServersCdromsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Get Attached CD-ROMs |
+|[**DatacentersServersCdromsPost**](ServersApi.md#DatacentersServersCdromsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/cdroms | Attach a CD-ROM|
 |[**DatacentersServersDelete**](ServersApi.md#DatacentersServersDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId} | Delete servers|
 |[**DatacentersServersFindById**](ServersApi.md#DatacentersServersFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId} | Retrieve servers by ID|
 |[**DatacentersServersGet**](ServersApi.md#DatacentersServersGet) | **Get** /datacenters/{datacenterId}/servers | List servers |
 |[**DatacentersServersPatch**](ServersApi.md#DatacentersServersPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId} | Partially modify servers|
-|[**DatacentersServersPost**](ServersApi.md#DatacentersServersPost) | **Post** /datacenters/{datacenterId}/servers | Create servers|
-|[**DatacentersServersPut**](ServersApi.md#DatacentersServersPut) | **Put** /datacenters/{datacenterId}/servers/{serverId} | Modify servers|
+|[**DatacentersServersPost**](ServersApi.md#DatacentersServersPost) | **Post** /datacenters/{datacenterId}/servers | Create a Server|
+|[**DatacentersServersPut**](ServersApi.md#DatacentersServersPut) | **Put** /datacenters/{datacenterId}/servers/{serverId} | Modify a Server by ID|
 |[**DatacentersServersRebootPost**](ServersApi.md#DatacentersServersRebootPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/reboot | Reboot servers|
 |[**DatacentersServersRemoteConsoleGet**](ServersApi.md#DatacentersServersRemoteConsoleGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/remoteconsole | Get Remote Console link|
-|[**DatacentersServersResumePost**](ServersApi.md#DatacentersServersResumePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume Cubes instances|
-|[**DatacentersServersStartPost**](ServersApi.md#DatacentersServersStartPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/start | Start servers|
-|[**DatacentersServersStopPost**](ServersApi.md#DatacentersServersStopPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop VMs|
-|[**DatacentersServersSuspendPost**](ServersApi.md#DatacentersServersSuspendPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend Cubes instances|
+|[**DatacentersServersResumePost**](ServersApi.md#DatacentersServersResumePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/resume | Resume a Cube Server by ID|
+|[**DatacentersServersStartPost**](ServersApi.md#DatacentersServersStartPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/start | Start an Enterprise Server by ID|
+|[**DatacentersServersStopPost**](ServersApi.md#DatacentersServersStopPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop an Enterprise Server by ID|
+|[**DatacentersServersSuspendPost**](ServersApi.md#DatacentersServersSuspendPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server by ID|
 |[**DatacentersServersTokenGet**](ServersApi.md#DatacentersServersTokenGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token|
-|[**DatacentersServersUpgradePost**](ServersApi.md#DatacentersServersUpgradePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade servers|
-|[**DatacentersServersVolumesDelete**](ServersApi.md#DatacentersServersVolumesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach volumes|
-|[**DatacentersServersVolumesFindById**](ServersApi.md#DatacentersServersVolumesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Retrieve attached volumes|
-|[**DatacentersServersVolumesGet**](ServersApi.md#DatacentersServersVolumesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes | List attached volumes|
-|[**DatacentersServersVolumesPost**](ServersApi.md#DatacentersServersVolumesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach volumes|
+|[**DatacentersServersUpgradePost**](ServersApi.md#DatacentersServersUpgradePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server by ID|
+|[**DatacentersServersVolumesDelete**](ServersApi.md#DatacentersServersVolumesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a Volume by ID|
+|[**DatacentersServersVolumesFindById**](ServersApi.md#DatacentersServersVolumesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Get Attached Volume by ID|
+|[**DatacentersServersVolumesGet**](ServersApi.md#DatacentersServersVolumesGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes | Get Attached Volumes|
+|[**DatacentersServersVolumesPost**](ServersApi.md#DatacentersServersVolumesPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/volumes | Attach a Volume to a Server|
 
 
 
@@ -39,7 +39,7 @@ var result  = DatacentersServersCdromsDelete(ctx, datacenterId, serverId, cdromI
                       .Execute()
 ```
 
-Detach CD-ROMs
+Detach a CD-ROM by ID
 
 
 
@@ -116,7 +116,7 @@ var result Image = DatacentersServersCdromsFindById(ctx, datacenterId, serverId,
                       .Execute()
 ```
 
-Retrieve attached CD-ROMs
+Get Attached CD-ROM by ID
 
 
 
@@ -197,7 +197,7 @@ var result Cdroms = DatacentersServersCdromsGet(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-List attached CD-ROMs 
+Get Attached CD-ROMs 
 
 
 
@@ -279,7 +279,7 @@ var result Image = DatacentersServersCdromsPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Attach CD-ROMs
+Attach a CD-ROM
 
 
 
@@ -618,7 +618,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the server.
-    server := *openapiclient.NewServerProperties(int32(4), int32(4096)) // ServerProperties | The properties of the server to be updated.
+    server := *openapiclient.NewServerProperties() // ServerProperties | The properties of the server to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -678,7 +678,7 @@ var result Server = DatacentersServersPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create servers
+Create a Server
 
 
 
@@ -697,7 +697,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    server := *openapiclient.NewServer(*openapiclient.NewServerProperties(int32(4), int32(4096))) // Server | The server to create.
+    server := *openapiclient.NewServer(*openapiclient.NewServerProperties()) // Server | The server to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -756,7 +756,7 @@ var result Server = DatacentersServersPut(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Modify servers
+Modify a Server by ID
 
 
 
@@ -776,7 +776,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the server.
-    server := *openapiclient.NewServer(*openapiclient.NewServerProperties(int32(4), int32(4096))) // Server | The modified server
+    server := *openapiclient.NewServer(*openapiclient.NewServerProperties()) // Server | The modified server
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -987,7 +987,7 @@ var result  = DatacentersServersResumePost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Resume Cubes instances
+Resume a Cube Server by ID
 
 
 
@@ -1062,7 +1062,7 @@ var result  = DatacentersServersStartPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Start servers
+Start an Enterprise Server by ID
 
 
 
@@ -1137,7 +1137,7 @@ var result  = DatacentersServersStopPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Stop VMs
+Stop an Enterprise Server by ID
 
 
 
@@ -1212,7 +1212,7 @@ var result  = DatacentersServersSuspendPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Suspend Cubes instances
+Suspend a Cube Server by ID
 
 
 
@@ -1364,7 +1364,7 @@ var result  = DatacentersServersUpgradePost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Upgrade servers
+Upgrade a Server by ID
 
 
 
@@ -1439,7 +1439,7 @@ var result  = DatacentersServersVolumesDelete(ctx, datacenterId, serverId, volum
                       .Execute()
 ```
 
-Detach volumes
+Detach a Volume by ID
 
 
 
@@ -1516,7 +1516,7 @@ var result Volume = DatacentersServersVolumesFindById(ctx, datacenterId, serverI
                       .Execute()
 ```
 
-Retrieve attached volumes
+Get Attached Volume by ID
 
 
 
@@ -1597,7 +1597,7 @@ var result AttachedVolumes = DatacentersServersVolumesGet(ctx, datacenterId, ser
                       .Execute()
 ```
 
-List attached volumes
+Get Attached Volumes
 
 
 
@@ -1679,7 +1679,7 @@ var result Volume = DatacentersServersVolumesPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Attach volumes
+Attach a Volume to a Server
 
 
 

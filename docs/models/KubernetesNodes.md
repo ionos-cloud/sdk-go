@@ -5,8 +5,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Id** | Pointer to **string** | A unique representation of the Kubernetes node pool as a resource collection. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
-|**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
+|**Type** | Pointer to **string** | The resource type within a collection. | [optional] [readonly] |
+|**Href** | Pointer to **string** | The URL to the collection representation (absolute path). | [optional] [readonly] |
 |**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in the collection. | [optional] [readonly] |
 
 ## Methods

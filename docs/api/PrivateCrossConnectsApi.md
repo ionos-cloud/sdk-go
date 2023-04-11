@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**PccsFindById**](PrivateCrossConnectsApi.md#PccsFindById) | **Get** /pccs/{pccId} | Retrieve private Cross-Connects|
 |[**PccsGet**](PrivateCrossConnectsApi.md#PccsGet) | **Get** /pccs | List private Cross-Connects|
 |[**PccsPatch**](PrivateCrossConnectsApi.md#PccsPatch) | **Patch** /pccs/{pccId} | Partially modify private Cross-Connects|
-|[**PccsPost**](PrivateCrossConnectsApi.md#PccsPost) | **Post** /pccs | Create private Cross-Connects|
+|[**PccsPost**](PrivateCrossConnectsApi.md#PccsPost) | **Post** /pccs | Create a Private Cross-Connect|
 
 
 
@@ -319,7 +319,7 @@ var result PrivateCrossConnect = PccsPost(ctx)
                       .Execute()
 ```
 
-Create private Cross-Connects
+Create a Private Cross-Connect
 
 
 

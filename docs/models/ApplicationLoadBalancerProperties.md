@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The name of the Application Load Balancer. | |
-|**ListenerLan** | **int32** | ID of the listening (inbound) LAN. | |
-|**Ips** | Pointer to **[]string** | Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the listenerLan are customer-reserved public IPs for the public Load Balancers, and private IPs for the private Load Balancers. | [optional] |
-|**TargetLan** | **int32** | ID of the balanced private target LAN (outbound). | |
+|**Name** | **string** | The Application Load Balancer name. | |
+|**ListenerLan** | **int32** | The ID of the listening (inbound) LAN. | |
+|**Ips** | Pointer to **[]string** | Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the &#39;listenerLan&#39; are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers. | [optional] |
+|**TargetLan** | **int32** | The ID of the balanced private target LAN (outbound). | |
 |**LbPrivateIps** | Pointer to **[]string** | Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet. | [optional] |
 
 ## Methods

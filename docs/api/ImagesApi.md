@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**ImagesFindById**](ImagesApi.md#ImagesFindById) | **Get** /images/{imageId} | Retrieve images|
 |[**ImagesGet**](ImagesApi.md#ImagesGet) | **Get** /images | List images|
 |[**ImagesPatch**](ImagesApi.md#ImagesPatch) | **Patch** /images/{imageId} | Partially modify images|
-|[**ImagesPut**](ImagesApi.md#ImagesPut) | **Put** /images/{imageId} | Modify images|
+|[**ImagesPut**](ImagesApi.md#ImagesPut) | **Put** /images/{imageId} | Modify an Image by ID|
 
 
 
@@ -319,7 +319,7 @@ var result Image = ImagesPut(ctx, imageId)
                       .Execute()
 ```
 
-Modify images
+Modify an Image by ID
 
 
 

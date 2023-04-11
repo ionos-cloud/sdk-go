@@ -4,9 +4,9 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**LocationsFindByRegionId**](LocationsApi.md#LocationsFindByRegionId) | **Get** /locations/{regionId} | List locations within regions|
-|[**LocationsFindByRegionIdAndId**](LocationsApi.md#LocationsFindByRegionIdAndId) | **Get** /locations/{regionId}/{locationId} | Retrieve specified locations|
-|[**LocationsGet**](LocationsApi.md#LocationsGet) | **Get** /locations | List locations|
+|[**LocationsFindByRegionId**](LocationsApi.md#LocationsFindByRegionId) | **Get** /locations/{regionId} | Get Locations within a Region|
+|[**LocationsFindByRegionIdAndId**](LocationsApi.md#LocationsFindByRegionIdAndId) | **Get** /locations/{regionId}/{locationId} | Get Location by ID|
+|[**LocationsGet**](LocationsApi.md#LocationsGet) | **Get** /locations | Get Locations|
 
 
 
@@ -20,7 +20,7 @@ var result Locations = LocationsFindByRegionId(ctx, regionId)
                       .Execute()
 ```
 
-List locations within regions
+Get Locations within a Region
 
 
 
@@ -95,7 +95,7 @@ var result Location = LocationsFindByRegionIdAndId(ctx, regionId, locationId)
                       .Execute()
 ```
 
-Retrieve specified locations
+Get Location by ID
 
 
 
@@ -172,7 +172,7 @@ var result Locations = LocationsGet(ctx)
                       .Execute()
 ```
 
-List locations
+Get Locations
 
 
 

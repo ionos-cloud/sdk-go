@@ -8,7 +8,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersServersNicsFindById**](NetworkInterfacesApi.md#DatacentersServersNicsFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Retrieve NICs|
 |[**DatacentersServersNicsGet**](NetworkInterfacesApi.md#DatacentersServersNicsGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/nics | List NICs|
 |[**DatacentersServersNicsPatch**](NetworkInterfacesApi.md#DatacentersServersNicsPatch) | **Patch** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Partially modify NICs|
-|[**DatacentersServersNicsPost**](NetworkInterfacesApi.md#DatacentersServersNicsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics | Create NICs|
+|[**DatacentersServersNicsPost**](NetworkInterfacesApi.md#DatacentersServersNicsPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/nics | Create a NIC|
 |[**DatacentersServersNicsPut**](NetworkInterfacesApi.md#DatacentersServersNicsPut) | **Put** /datacenters/{datacenterId}/servers/{serverId}/nics/{nicId} | Modify NICs|
 
 
@@ -345,7 +345,7 @@ var result Nic = DatacentersServersNicsPost(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Create NICs
+Create a NIC
 
 
 

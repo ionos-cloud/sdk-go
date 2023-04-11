@@ -4,8 +4,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**TemplatesFindById**](TemplatesApi.md#TemplatesFindById) | **Get** /templates/{templateId} | Retrieve Cubes Templates|
-|[**TemplatesGet**](TemplatesApi.md#TemplatesGet) | **Get** /templates | List Cubes Templates|
+|[**TemplatesFindById**](TemplatesApi.md#TemplatesFindById) | **Get** /templates/{templateId} | Get Cubes Template by ID|
+|[**TemplatesGet**](TemplatesApi.md#TemplatesGet) | **Get** /templates | Get Cubes Templates|
 
 
 
@@ -17,7 +17,7 @@ var result Template = TemplatesFindById(ctx, templateId)
                       .Execute()
 ```
 
-Retrieve Cubes Templates
+Get Cubes Template by ID
 
 
 
@@ -35,7 +35,7 @@ import (
 )
 
 func main() {
-    templateId := "templateId_example" // string | The unique Template ID.
+    templateId := "templateId_example" // string | The unique template ID.
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
     configuration := ionoscloud.NewConfiguration()
@@ -56,7 +56,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**templateId** | **string** | The unique Template ID. | |
+|**templateId** | **string** | The unique template ID. | |
 
 ### Other Parameters
 
@@ -86,7 +86,7 @@ var result Templates = TemplatesGet(ctx)
                       .Execute()
 ```
 
-List Cubes Templates
+Get Cubes Templates
 
 
 

@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | A unique representation of the Kubernetes cluster as a resource collection. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
-|**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]KubernetesCluster**](KubernetesCluster.md) | Array of items in the collection. | [optional] [readonly] |
+|**Id** | Pointer to **string** | The unique representation of the K8s cluster as a resource collection. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The resource type within a collection. | [optional] [readonly] |
+|**Href** | Pointer to **string** | The URL to the collection representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]KubernetesCluster**](KubernetesCluster.md) | Array of K8s clusters in the collection. | [optional] [readonly] |
 
 ## Methods
 

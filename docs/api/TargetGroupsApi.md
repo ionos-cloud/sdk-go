@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**TargetGroupsDelete**](TargetGroupsApi.md#TargetGroupsDelete) | **Delete** /targetgroups/{targetGroupId} | Remove target groups|
-|[**TargetgroupsFindByTargetGroupId**](TargetGroupsApi.md#TargetgroupsFindByTargetGroupId) | **Get** /targetgroups/{targetGroupId} | Retrieve target groups|
-|[**TargetgroupsGet**](TargetGroupsApi.md#TargetgroupsGet) | **Get** /targetgroups | List target groups|
-|[**TargetgroupsPatch**](TargetGroupsApi.md#TargetgroupsPatch) | **Patch** /targetgroups/{targetGroupId} | Partially modify target groups|
-|[**TargetgroupsPost**](TargetGroupsApi.md#TargetgroupsPost) | **Post** /targetgroups | Create target groups|
-|[**TargetgroupsPut**](TargetGroupsApi.md#TargetgroupsPut) | **Put** /targetgroups/{targetGroupId} | Modify target groups|
+|[**TargetGroupsDelete**](TargetGroupsApi.md#TargetGroupsDelete) | **Delete** /targetgroups/{targetGroupId} | Delete a Target Group by ID|
+|[**TargetgroupsFindByTargetGroupId**](TargetGroupsApi.md#TargetgroupsFindByTargetGroupId) | **Get** /targetgroups/{targetGroupId} | Get a Target Group by ID|
+|[**TargetgroupsGet**](TargetGroupsApi.md#TargetgroupsGet) | **Get** /targetgroups | Get Target Groups|
+|[**TargetgroupsPatch**](TargetGroupsApi.md#TargetgroupsPatch) | **Patch** /targetgroups/{targetGroupId} | Partially Modify a Target Group by ID|
+|[**TargetgroupsPost**](TargetGroupsApi.md#TargetgroupsPost) | **Post** /targetgroups | Create a Target Group|
+|[**TargetgroupsPut**](TargetGroupsApi.md#TargetgroupsPut) | **Put** /targetgroups/{targetGroupId} | Modify a Target Group by ID|
 
 
 
@@ -23,7 +23,7 @@ var result  = TargetGroupsDelete(ctx, targetGroupId)
                       .Execute()
 ```
 
-Remove target groups
+Delete a Target Group by ID
 
 
 
@@ -96,7 +96,7 @@ var result TargetGroup = TargetgroupsFindByTargetGroupId(ctx, targetGroupId)
                       .Execute()
 ```
 
-Retrieve target groups
+Get a Target Group by ID
 
 
 
@@ -173,7 +173,7 @@ var result TargetGroups = TargetgroupsGet(ctx)
                       .Execute()
 ```
 
-List target groups
+Get Target Groups
 
 
 
@@ -248,7 +248,7 @@ var result TargetGroup = TargetgroupsPatch(ctx, targetGroupId)
                       .Execute()
 ```
 
-Partially modify target groups
+Partially Modify a Target Group by ID
 
 
 
@@ -326,7 +326,7 @@ var result TargetGroup = TargetgroupsPost(ctx)
                       .Execute()
 ```
 
-Create target groups
+Create a Target Group
 
 
 
@@ -399,7 +399,7 @@ var result TargetGroup = TargetgroupsPut(ctx, targetGroupId)
                       .Execute()
 ```
 
-Modify target groups
+Modify a Target Group by ID
 
 
 

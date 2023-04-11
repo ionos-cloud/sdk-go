@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | API entry point | [optional] [readonly] |
-|**Name** | Pointer to **string** | Name of the API | [optional] [readonly] |
-|**Version** | Pointer to **string** | Version of the API | [optional] [readonly] |
+|**Href** | Pointer to **string** | The API entry point. | [optional] [readonly] |
+|**Name** | Pointer to **string** | The API name. | [optional] [readonly] |
+|**Version** | Pointer to **string** | The API version. | [optional] [readonly] |
 
 ## Methods
 

@@ -8,8 +8,8 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**IpblocksFindById**](IPBlocksApi.md#IpblocksFindById) | **Get** /ipblocks/{ipblockId} | Retrieve IP blocks|
 |[**IpblocksGet**](IPBlocksApi.md#IpblocksGet) | **Get** /ipblocks | List IP blocks |
 |[**IpblocksPatch**](IPBlocksApi.md#IpblocksPatch) | **Patch** /ipblocks/{ipblockId} | Partially modify IP blocks|
-|[**IpblocksPost**](IPBlocksApi.md#IpblocksPost) | **Post** /ipblocks | Reserve IP blocks|
-|[**IpblocksPut**](IPBlocksApi.md#IpblocksPut) | **Put** /ipblocks/{ipblockId} | Modify IP blocks|
+|[**IpblocksPost**](IPBlocksApi.md#IpblocksPost) | **Post** /ipblocks | Reserve a IP Block|
+|[**IpblocksPut**](IPBlocksApi.md#IpblocksPut) | **Put** /ipblocks/{ipblockId} | Modify a IP Block by ID|
 
 
 
@@ -326,7 +326,7 @@ var result IpBlock = IpblocksPost(ctx)
                       .Execute()
 ```
 
-Reserve IP blocks
+Reserve a IP Block
 
 
 
@@ -399,7 +399,7 @@ var result IpBlock = IpblocksPut(ctx, ipblockId)
                       .Execute()
 ```
 
-Modify IP blocks
+Modify a IP Block by ID
 
 
 

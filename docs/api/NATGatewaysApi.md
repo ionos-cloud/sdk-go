@@ -10,18 +10,18 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersNatgatewaysFlowlogsFindByFlowLogId**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsFindByFlowLogId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Retrieve NAT Gateway Flow Logs|
 |[**DatacentersNatgatewaysFlowlogsGet**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsGet) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | List NAT Gateway Flow Logs|
 |[**DatacentersNatgatewaysFlowlogsPatch**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Partially modify NAT Gateway Flow Logs|
-|[**DatacentersNatgatewaysFlowlogsPost**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create NAT Gateway Flow Logs|
+|[**DatacentersNatgatewaysFlowlogsPost**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs | Create a NAT Gateway Flow Log|
 |[**DatacentersNatgatewaysFlowlogsPut**](NATGatewaysApi.md#DatacentersNatgatewaysFlowlogsPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/flowlogs/{flowLogId} | Modify NAT Gateway Flow Logs|
 |[**DatacentersNatgatewaysGet**](NATGatewaysApi.md#DatacentersNatgatewaysGet) | **Get** /datacenters/{datacenterId}/natgateways | List NAT Gateways|
 |[**DatacentersNatgatewaysPatch**](NATGatewaysApi.md#DatacentersNatgatewaysPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Partially modify NAT Gateways|
-|[**DatacentersNatgatewaysPost**](NATGatewaysApi.md#DatacentersNatgatewaysPost) | **Post** /datacenters/{datacenterId}/natgateways | Create NAT Gateways|
+|[**DatacentersNatgatewaysPost**](NATGatewaysApi.md#DatacentersNatgatewaysPost) | **Post** /datacenters/{datacenterId}/natgateways | Create a NAT Gateway|
 |[**DatacentersNatgatewaysPut**](NATGatewaysApi.md#DatacentersNatgatewaysPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId} | Modify NAT Gateways|
 |[**DatacentersNatgatewaysRulesDelete**](NATGatewaysApi.md#DatacentersNatgatewaysRulesDelete) | **Delete** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Delete NAT Gateway rules|
 |[**DatacentersNatgatewaysRulesFindByNatGatewayRuleId**](NATGatewaysApi.md#DatacentersNatgatewaysRulesFindByNatGatewayRuleId) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Retrieve NAT Gateway rules|
 |[**DatacentersNatgatewaysRulesGet**](NATGatewaysApi.md#DatacentersNatgatewaysRulesGet) | **Get** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | List NAT Gateway rules|
-|[**DatacentersNatgatewaysRulesPatch**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially modify NAT Gateway rules|
-|[**DatacentersNatgatewaysRulesPost**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create NAT Gateway rules|
-|[**DatacentersNatgatewaysRulesPut**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify NAT Gateway rules|
+|[**DatacentersNatgatewaysRulesPatch**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPatch) | **Patch** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Partially Modify a NAT Gateway Rule by ID|
+|[**DatacentersNatgatewaysRulesPost**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPost) | **Post** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules | Create a NAT Gateway Rule|
+|[**DatacentersNatgatewaysRulesPut**](NATGatewaysApi.md#DatacentersNatgatewaysRulesPut) | **Put** /datacenters/{datacenterId}/natgateways/{natGatewayId}/rules/{natGatewayRuleId} | Modify a NAT Gateway Rule by ID|
 
 
 
@@ -496,7 +496,7 @@ var result FlowLog = DatacentersNatgatewaysFlowlogsPost(ctx, datacenterId, natGa
                       .Execute()
 ```
 
-Create NAT Gateway Flow Logs
+Create a NAT Gateway Flow Log
 
 
 
@@ -808,7 +808,7 @@ var result NatGateway = DatacentersNatgatewaysPost(ctx, datacenterId)
                       .Execute()
 ```
 
-Create NAT Gateways
+Create a NAT Gateway
 
 
 
@@ -1199,7 +1199,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesPatch(ctx, datacenterId, 
                       .Execute()
 ```
 
-Partially modify NAT Gateway rules
+Partially Modify a NAT Gateway Rule by ID
 
 
 
@@ -1281,7 +1281,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesPost(ctx, datacenterId, n
                       .Execute()
 ```
 
-Create NAT Gateway rules
+Create a NAT Gateway Rule
 
 
 
@@ -1361,7 +1361,7 @@ var result NatGatewayRule = DatacentersNatgatewaysRulesPut(ctx, datacenterId, na
                       .Execute()
 ```
 
-Modify NAT Gateway rules
+Modify a NAT Gateway Rule by ID
 
 
 
