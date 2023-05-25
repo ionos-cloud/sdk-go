@@ -4,14 +4,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Firstname** | Pointer to **string** | The first name of the user. | [optional] |
-|**Lastname** | Pointer to **string** | The last name of the user. | [optional] |
-|**Email** | Pointer to **string** | The email address of the user. | [optional] |
-|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
-|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
-|**SecAuthActive** | Pointer to **bool** | Indicates if secure authentication is active for the user. | [optional] |
-|**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) ID of the user for a given identity. | [optional] |
 |**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
+|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
+|**Email** | Pointer to **string** | The email address of the user. | [optional] |
+|**Firstname** | Pointer to **string** | The first name of the user. | [optional] |
+|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
+|**Lastname** | Pointer to **string** | The last name of the user. | [optional] |
+|**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) ID of the user for a given identity. | [optional] |
+|**SecAuthActive** | Pointer to **bool** | Indicates if secure authentication is active for the user. | [optional] |
 
 ## Methods
 
@@ -32,80 +32,30 @@ NewUserPropertiesWithDefaults instantiates a new UserProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFirstname
+### GetActive
 
-`func (o *UserProperties) GetFirstname() string`
+`func (o *UserProperties) GetActive() bool`
 
-GetFirstname returns the Firstname field if non-nil, zero value otherwise.
+GetActive returns the Active field if non-nil, zero value otherwise.
 
-### GetFirstnameOk
+### GetActiveOk
 
-`func (o *UserProperties) GetFirstnameOk() (*string, bool)`
+`func (o *UserProperties) GetActiveOk() (*bool, bool)`
 
-GetFirstnameOk returns a tuple with the Firstname field if it's non-nil, zero value otherwise
+GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFirstname
+### SetActive
 
-`func (o *UserProperties) SetFirstname(v string)`
+`func (o *UserProperties) SetActive(v bool)`
 
-SetFirstname sets Firstname field to given value.
+SetActive sets Active field to given value.
 
-### HasFirstname
+### HasActive
 
-`func (o *UserProperties) HasFirstname() bool`
+`func (o *UserProperties) HasActive() bool`
 
-HasFirstname returns a boolean if a field has been set.
-
-### GetLastname
-
-`func (o *UserProperties) GetLastname() string`
-
-GetLastname returns the Lastname field if non-nil, zero value otherwise.
-
-### GetLastnameOk
-
-`func (o *UserProperties) GetLastnameOk() (*string, bool)`
-
-GetLastnameOk returns a tuple with the Lastname field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLastname
-
-`func (o *UserProperties) SetLastname(v string)`
-
-SetLastname sets Lastname field to given value.
-
-### HasLastname
-
-`func (o *UserProperties) HasLastname() bool`
-
-HasLastname returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *UserProperties) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *UserProperties) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *UserProperties) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *UserProperties) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
+HasActive returns a boolean if a field has been set.
 
 ### GetAdministrator
 
@@ -132,6 +82,56 @@ SetAdministrator sets Administrator field to given value.
 
 HasAdministrator returns a boolean if a field has been set.
 
+### GetEmail
+
+`func (o *UserProperties) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *UserProperties) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *UserProperties) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *UserProperties) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetFirstname
+
+`func (o *UserProperties) GetFirstname() string`
+
+GetFirstname returns the Firstname field if non-nil, zero value otherwise.
+
+### GetFirstnameOk
+
+`func (o *UserProperties) GetFirstnameOk() (*string, bool)`
+
+GetFirstnameOk returns a tuple with the Firstname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirstname
+
+`func (o *UserProperties) SetFirstname(v string)`
+
+SetFirstname sets Firstname field to given value.
+
+### HasFirstname
+
+`func (o *UserProperties) HasFirstname() bool`
+
+HasFirstname returns a boolean if a field has been set.
+
 ### GetForceSecAuth
 
 `func (o *UserProperties) GetForceSecAuth() bool`
@@ -157,30 +157,30 @@ SetForceSecAuth sets ForceSecAuth field to given value.
 
 HasForceSecAuth returns a boolean if a field has been set.
 
-### GetSecAuthActive
+### GetLastname
 
-`func (o *UserProperties) GetSecAuthActive() bool`
+`func (o *UserProperties) GetLastname() string`
 
-GetSecAuthActive returns the SecAuthActive field if non-nil, zero value otherwise.
+GetLastname returns the Lastname field if non-nil, zero value otherwise.
 
-### GetSecAuthActiveOk
+### GetLastnameOk
 
-`func (o *UserProperties) GetSecAuthActiveOk() (*bool, bool)`
+`func (o *UserProperties) GetLastnameOk() (*string, bool)`
 
-GetSecAuthActiveOk returns a tuple with the SecAuthActive field if it's non-nil, zero value otherwise
+GetLastnameOk returns a tuple with the Lastname field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecAuthActive
+### SetLastname
 
-`func (o *UserProperties) SetSecAuthActive(v bool)`
+`func (o *UserProperties) SetLastname(v string)`
 
-SetSecAuthActive sets SecAuthActive field to given value.
+SetLastname sets Lastname field to given value.
 
-### HasSecAuthActive
+### HasLastname
 
-`func (o *UserProperties) HasSecAuthActive() bool`
+`func (o *UserProperties) HasLastname() bool`
 
-HasSecAuthActive returns a boolean if a field has been set.
+HasLastname returns a boolean if a field has been set.
 
 ### GetS3CanonicalUserId
 
@@ -207,30 +207,30 @@ SetS3CanonicalUserId sets S3CanonicalUserId field to given value.
 
 HasS3CanonicalUserId returns a boolean if a field has been set.
 
-### GetActive
+### GetSecAuthActive
 
-`func (o *UserProperties) GetActive() bool`
+`func (o *UserProperties) GetSecAuthActive() bool`
 
-GetActive returns the Active field if non-nil, zero value otherwise.
+GetSecAuthActive returns the SecAuthActive field if non-nil, zero value otherwise.
 
-### GetActiveOk
+### GetSecAuthActiveOk
 
-`func (o *UserProperties) GetActiveOk() (*bool, bool)`
+`func (o *UserProperties) GetSecAuthActiveOk() (*bool, bool)`
 
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
+GetSecAuthActiveOk returns a tuple with the SecAuthActive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetActive
+### SetSecAuthActive
 
-`func (o *UserProperties) SetActive(v bool)`
+`func (o *UserProperties) SetSecAuthActive(v bool)`
 
-SetActive sets Active field to given value.
+SetSecAuthActive sets SecAuthActive field to given value.
 
-### HasActive
+### HasSecAuthActive
 
-`func (o *UserProperties) HasActive() bool`
+`func (o *UserProperties) HasSecAuthActive() bool`
 
-HasActive returns a boolean if a field has been set.
+HasSecAuthActive returns a boolean if a field has been set.
 
 
 

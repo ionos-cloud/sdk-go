@@ -4,16 +4,16 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The resource name. | |
 |**Action** | **string** | Specifies the traffic action pattern. | |
-|**Direction** | **string** | Specifies the traffic direction pattern. | |
 |**Bucket** | **string** | The S3 bucket name of an existing IONOS Cloud S3 bucket. | |
+|**Direction** | **string** | Specifies the traffic direction pattern. | |
+|**Name** | **string** | The resource name. | |
 
 ## Methods
 
 ### NewFlowLogProperties
 
-`func NewFlowLogProperties(name string, action string, direction string, bucket string, ) *FlowLogProperties`
+`func NewFlowLogProperties(action string, bucket string, direction string, name string, ) *FlowLogProperties`
 
 NewFlowLogProperties instantiates a new FlowLogProperties object
 This constructor will assign default values to properties that have it defined,
@@ -27,26 +27,6 @@ will change when the set of required properties is changed
 NewFlowLogPropertiesWithDefaults instantiates a new FlowLogProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *FlowLogProperties) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *FlowLogProperties) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *FlowLogProperties) SetName(v string)`
-
-SetName sets Name field to given value.
-
 
 ### GetAction
 
@@ -66,6 +46,26 @@ and a boolean to check if the value has been set.
 `func (o *FlowLogProperties) SetAction(v string)`
 
 SetAction sets Action field to given value.
+
+
+### GetBucket
+
+`func (o *FlowLogProperties) GetBucket() string`
+
+GetBucket returns the Bucket field if non-nil, zero value otherwise.
+
+### GetBucketOk
+
+`func (o *FlowLogProperties) GetBucketOk() (*string, bool)`
+
+GetBucketOk returns a tuple with the Bucket field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBucket
+
+`func (o *FlowLogProperties) SetBucket(v string)`
+
+SetBucket sets Bucket field to given value.
 
 
 ### GetDirection
@@ -88,24 +88,24 @@ and a boolean to check if the value has been set.
 SetDirection sets Direction field to given value.
 
 
-### GetBucket
+### GetName
 
-`func (o *FlowLogProperties) GetBucket() string`
+`func (o *FlowLogProperties) GetName() string`
 
-GetBucket returns the Bucket field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetBucketOk
+### GetNameOk
 
-`func (o *FlowLogProperties) GetBucketOk() (*string, bool)`
+`func (o *FlowLogProperties) GetNameOk() (*string, bool)`
 
-GetBucketOk returns a tuple with the Bucket field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBucket
+### SetName
 
-`func (o *FlowLogProperties) SetBucket(v string)`
+`func (o *FlowLogProperties) SetName(v string)`
 
-SetBucket sets Bucket field to given value.
+SetName sets Name field to given value.
 
 
 

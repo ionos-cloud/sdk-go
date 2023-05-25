@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | Label on a resource is identified using label key. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of object that has been created. | [optional] [readonly] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | Label on a resource is identified using label key. | [optional] [readonly] |
 |**Metadata** | Pointer to [**NoStateMetaData**](NoStateMetaData.md) |  | [optional] |
 |**Properties** | [**LabelResourceProperties**](LabelResourceProperties.md) |  | |
+|**Type** | Pointer to **string** | The type of object that has been created. | [optional] [readonly] |
 
 ## Methods
 
@@ -28,56 +28,6 @@ will change when the set of required properties is changed
 NewLabelResourceWithDefaults instantiates a new LabelResource object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *LabelResource) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *LabelResource) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *LabelResource) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *LabelResource) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *LabelResource) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *LabelResource) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *LabelResource) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *LabelResource) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -103,6 +53,31 @@ SetHref sets Href field to given value.
 `func (o *LabelResource) HasHref() bool`
 
 HasHref returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *LabelResource) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *LabelResource) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *LabelResource) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *LabelResource) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -148,6 +123,31 @@ and a boolean to check if the value has been set.
 
 SetProperties sets Properties field to given value.
 
+
+### GetType
+
+`func (o *LabelResource) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *LabelResource) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *LabelResource) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *LabelResource) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

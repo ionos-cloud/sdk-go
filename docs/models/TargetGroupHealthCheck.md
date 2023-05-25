@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**CheckTimeout** | Pointer to **int32** | The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a &#39;Check Interval&#39; set, the smaller of the two values is used once the TCP connection is established. | [optional] |
 |**CheckInterval** | Pointer to **int32** | The interval in milliseconds between consecutive health checks; the default value is &#39;2000&#39;. | [optional] |
+|**CheckTimeout** | Pointer to **int32** | The maximum time in milliseconds is to wait for a target to respond to a check. For target VMs with a &#39;Check Interval&#39; set, the smaller of the two values is used once the TCP connection is established. | [optional] |
 |**Retries** | Pointer to **int32** | The maximum number of attempts to reconnect to a target after a connection failure. The valid range is &#39;0 to 65535&#39;; the default value is &#39;3&#39;. | [optional] |
 
 ## Methods
@@ -26,31 +26,6 @@ will change when the set of required properties is changed
 NewTargetGroupHealthCheckWithDefaults instantiates a new TargetGroupHealthCheck object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetCheckTimeout
-
-`func (o *TargetGroupHealthCheck) GetCheckTimeout() int32`
-
-GetCheckTimeout returns the CheckTimeout field if non-nil, zero value otherwise.
-
-### GetCheckTimeoutOk
-
-`func (o *TargetGroupHealthCheck) GetCheckTimeoutOk() (*int32, bool)`
-
-GetCheckTimeoutOk returns a tuple with the CheckTimeout field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCheckTimeout
-
-`func (o *TargetGroupHealthCheck) SetCheckTimeout(v int32)`
-
-SetCheckTimeout sets CheckTimeout field to given value.
-
-### HasCheckTimeout
-
-`func (o *TargetGroupHealthCheck) HasCheckTimeout() bool`
-
-HasCheckTimeout returns a boolean if a field has been set.
 
 ### GetCheckInterval
 
@@ -76,6 +51,31 @@ SetCheckInterval sets CheckInterval field to given value.
 `func (o *TargetGroupHealthCheck) HasCheckInterval() bool`
 
 HasCheckInterval returns a boolean if a field has been set.
+
+### GetCheckTimeout
+
+`func (o *TargetGroupHealthCheck) GetCheckTimeout() int32`
+
+GetCheckTimeout returns the CheckTimeout field if non-nil, zero value otherwise.
+
+### GetCheckTimeoutOk
+
+`func (o *TargetGroupHealthCheck) GetCheckTimeoutOk() (*int32, bool)`
+
+GetCheckTimeoutOk returns a tuple with the CheckTimeout field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCheckTimeout
+
+`func (o *TargetGroupHealthCheck) SetCheckTimeout(v int32)`
+
+SetCheckTimeout sets CheckTimeout field to given value.
+
+### HasCheckTimeout
+
+`func (o *TargetGroupHealthCheck) HasCheckTimeout() bool`
+
+HasCheckTimeout returns a boolean if a field has been set.
 
 ### GetRetries
 

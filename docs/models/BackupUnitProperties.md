@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**Email** | Pointer to **string** | The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user. | [optional] |
 |**Name** | **string** | The name of the  resource (alphanumeric characters only). | |
 |**Password** | Pointer to **string** | The password associated with that resource. | [optional] |
-|**Email** | Pointer to **string** | The email associated with the backup unit. Bear in mind that this email does not be the same email as of the user. | [optional] |
 
 ## Methods
 
@@ -26,6 +26,31 @@ will change when the set of required properties is changed
 NewBackupUnitPropertiesWithDefaults instantiates a new BackupUnitProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEmail
+
+`func (o *BackupUnitProperties) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *BackupUnitProperties) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *BackupUnitProperties) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *BackupUnitProperties) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetName
 
@@ -71,31 +96,6 @@ SetPassword sets Password field to given value.
 `func (o *BackupUnitProperties) HasPassword() bool`
 
 HasPassword returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *BackupUnitProperties) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *BackupUnitProperties) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *BackupUnitProperties) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *BackupUnitProperties) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
 
 
 

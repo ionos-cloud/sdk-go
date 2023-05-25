@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**IpConsumers** | Pointer to [**[]IpConsumer**](IpConsumer.md) | Read-Only attribute. Lists consumption detail for an individual IP | [optional] [readonly] |
 |**Ips** | Pointer to **[]string** | Collection of IPs, associated with the IP Block. | [optional] [readonly] |
 |**Location** | **string** | Location of that IP block. Property cannot be modified after it is created (disallowed in update requests). | |
-|**Size** | **int32** | The size of the IP block. | |
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**IpConsumers** | Pointer to [**[]IpConsumer**](IpConsumer.md) | Read-Only attribute. Lists consumption detail for an individual IP | [optional] [readonly] |
+|**Size** | **int32** | The size of the IP block. | |
 
 ## Methods
 
@@ -28,6 +28,31 @@ will change when the set of required properties is changed
 NewIpBlockPropertiesWithDefaults instantiates a new IpBlockProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetIpConsumers
+
+`func (o *IpBlockProperties) GetIpConsumers() []IpConsumer`
+
+GetIpConsumers returns the IpConsumers field if non-nil, zero value otherwise.
+
+### GetIpConsumersOk
+
+`func (o *IpBlockProperties) GetIpConsumersOk() (*[]IpConsumer, bool)`
+
+GetIpConsumersOk returns a tuple with the IpConsumers field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpConsumers
+
+`func (o *IpBlockProperties) SetIpConsumers(v []IpConsumer)`
+
+SetIpConsumers sets IpConsumers field to given value.
+
+### HasIpConsumers
+
+`func (o *IpBlockProperties) HasIpConsumers() bool`
+
+HasIpConsumers returns a boolean if a field has been set.
 
 ### GetIps
 
@@ -74,26 +99,6 @@ and a boolean to check if the value has been set.
 SetLocation sets Location field to given value.
 
 
-### GetSize
-
-`func (o *IpBlockProperties) GetSize() int32`
-
-GetSize returns the Size field if non-nil, zero value otherwise.
-
-### GetSizeOk
-
-`func (o *IpBlockProperties) GetSizeOk() (*int32, bool)`
-
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSize
-
-`func (o *IpBlockProperties) SetSize(v int32)`
-
-SetSize sets Size field to given value.
-
-
 ### GetName
 
 `func (o *IpBlockProperties) GetName() string`
@@ -119,30 +124,25 @@ SetName sets Name field to given value.
 
 HasName returns a boolean if a field has been set.
 
-### GetIpConsumers
+### GetSize
 
-`func (o *IpBlockProperties) GetIpConsumers() []IpConsumer`
+`func (o *IpBlockProperties) GetSize() int32`
 
-GetIpConsumers returns the IpConsumers field if non-nil, zero value otherwise.
+GetSize returns the Size field if non-nil, zero value otherwise.
 
-### GetIpConsumersOk
+### GetSizeOk
 
-`func (o *IpBlockProperties) GetIpConsumersOk() (*[]IpConsumer, bool)`
+`func (o *IpBlockProperties) GetSizeOk() (*int32, bool)`
 
-GetIpConsumersOk returns a tuple with the IpConsumers field if it's non-nil, zero value otherwise
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetIpConsumers
+### SetSize
 
-`func (o *IpBlockProperties) SetIpConsumers(v []IpConsumer)`
+`func (o *IpBlockProperties) SetSize(v int32)`
 
-SetIpConsumers sets IpConsumers field to given value.
+SetSize sets Size field to given value.
 
-### HasIpConsumers
-
-`func (o *IpBlockProperties) HasIpConsumers() bool`
-
-HasIpConsumers returns a boolean if a field has been set.
 
 
 

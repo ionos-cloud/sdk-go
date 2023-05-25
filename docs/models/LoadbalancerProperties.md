@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**Ip** | Pointer to **NullableString** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically. | [optional] |
 |**Dhcp** | Pointer to **bool** | Indicates if the loadbalancer will reserve an IP using DHCP. | [optional] |
+|**Ip** | Pointer to **NullableString** | IPv4 address of the loadbalancer. All attached NICs will inherit this IP. Leaving value null will assign IP automatically. | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 
 ## Methods
 
@@ -27,30 +27,30 @@ NewLoadbalancerPropertiesWithDefaults instantiates a new LoadbalancerProperties 
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDhcp
 
-`func (o *LoadbalancerProperties) GetName() string`
+`func (o *LoadbalancerProperties) GetDhcp() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDhcpOk
 
-`func (o *LoadbalancerProperties) GetNameOk() (*string, bool)`
+`func (o *LoadbalancerProperties) GetDhcpOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDhcp
 
-`func (o *LoadbalancerProperties) SetName(v string)`
+`func (o *LoadbalancerProperties) SetDhcp(v bool)`
 
-SetName sets Name field to given value.
+SetDhcp sets Dhcp field to given value.
 
-### HasName
+### HasDhcp
 
-`func (o *LoadbalancerProperties) HasName() bool`
+`func (o *LoadbalancerProperties) HasDhcp() bool`
 
-HasName returns a boolean if a field has been set.
+HasDhcp returns a boolean if a field has been set.
 
 ### GetIp
 
@@ -79,38 +79,38 @@ HasIp returns a boolean if a field has been set.
 
 ### SetIpNil
 
-`func (o *LoadbalancerProperties) SetIpNil(b bool)`
+`func (o *LoadbalancerProperties) SetIpNil()`
 
- SetIpNil sets the value for Ip to be an explicit nil
+ SetIpNil sets the value for Ip to be marshalled as an explicit nil
+ Alternatively Ip can be set directly to the address `&Nilstring`, which is a sentinel value that is checked when marshalling.
 
 ### UnsetIp
 `func (o *LoadbalancerProperties) UnsetIp()`
 
-UnsetIp ensures that no value is present for Ip, not even an explicit nil
-### GetDhcp
+### GetName
 
-`func (o *LoadbalancerProperties) GetDhcp() bool`
+`func (o *LoadbalancerProperties) GetName() string`
 
-GetDhcp returns the Dhcp field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetDhcpOk
+### GetNameOk
 
-`func (o *LoadbalancerProperties) GetDhcpOk() (*bool, bool)`
+`func (o *LoadbalancerProperties) GetNameOk() (*string, bool)`
 
-GetDhcpOk returns a tuple with the Dhcp field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDhcp
+### SetName
 
-`func (o *LoadbalancerProperties) SetDhcp(v bool)`
+`func (o *LoadbalancerProperties) SetName(v string)`
 
-SetDhcp sets Dhcp field to given value.
+SetName sets Name field to given value.
 
-### HasDhcp
+### HasName
 
-`func (o *LoadbalancerProperties) HasDhcp() bool`
+`func (o *LoadbalancerProperties) HasName() bool`
 
-HasDhcp returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 

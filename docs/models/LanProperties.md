@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**IpFailover** | Pointer to [**[]IPFailover**](IPFailover.md) | IP failover configurations for lan | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Pcc** | Pointer to **string** | The unique identifier of the private Cross-Connect the LAN is connected to, if any. | [optional] |
 |**Public** | Pointer to **bool** | This LAN faces the public Internet. | [optional] |
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewLanPropertiesWithDefaults instantiates a new LanProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *LanProperties) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *LanProperties) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *LanProperties) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *LanProperties) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 ### GetIpFailover
 
@@ -77,6 +52,31 @@ SetIpFailover sets IpFailover field to given value.
 `func (o *LanProperties) HasIpFailover() bool`
 
 HasIpFailover returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *LanProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *LanProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *LanProperties) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *LanProperties) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetPcc
 

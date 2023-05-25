@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Target** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 |**Status** | Pointer to **string** |  | [optional] |
+|**Target** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewRequestTargetWithDefaults instantiates a new RequestTarget object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetTarget
-
-`func (o *RequestTarget) GetTarget() ResourceReference`
-
-GetTarget returns the Target field if non-nil, zero value otherwise.
-
-### GetTargetOk
-
-`func (o *RequestTarget) GetTargetOk() (*ResourceReference, bool)`
-
-GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTarget
-
-`func (o *RequestTarget) SetTarget(v ResourceReference)`
-
-SetTarget sets Target field to given value.
-
-### HasTarget
-
-`func (o *RequestTarget) HasTarget() bool`
-
-HasTarget returns a boolean if a field has been set.
 
 ### GetStatus
 
@@ -75,6 +50,31 @@ SetStatus sets Status field to given value.
 `func (o *RequestTarget) HasStatus() bool`
 
 HasStatus returns a boolean if a field has been set.
+
+### GetTarget
+
+`func (o *RequestTarget) GetTarget() ResourceReference`
+
+GetTarget returns the Target field if non-nil, zero value otherwise.
+
+### GetTargetOk
+
+`func (o *RequestTarget) GetTargetOk() (*ResourceReference, bool)`
+
+GetTargetOk returns a tuple with the Target field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTarget
+
+`func (o *RequestTarget) SetTarget(v ResourceReference)`
+
+SetTarget sets Target field to given value.
+
+### HasTarget
+
+`func (o *RequestTarget) HasTarget() bool`
+
+HasTarget returns a boolean if a field has been set.
 
 
 

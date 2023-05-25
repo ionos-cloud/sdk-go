@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
+|**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6. | [optional] |
 |**K8sVersion** | Pointer to **string** | The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster&#39;s node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional] |
 |**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
-|**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6. | [optional] |
+|**Name** | **string** | A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
 |**S3Buckets** | Pointer to [**[]S3Bucket**](S3Bucket.md) | List of S3 buckets configured for K8s usage. At the moment, it contains only one S3 bucket that is used to store K8s API audit logs. | [optional] |
 
 ## Methods
@@ -29,25 +29,30 @@ NewKubernetesClusterPropertiesForPutWithDefaults instantiates a new KubernetesCl
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetApiSubnetAllowList
 
-`func (o *KubernetesClusterPropertiesForPut) GetName() string`
+`func (o *KubernetesClusterPropertiesForPut) GetApiSubnetAllowList() []string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetApiSubnetAllowList returns the ApiSubnetAllowList field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetApiSubnetAllowListOk
 
-`func (o *KubernetesClusterPropertiesForPut) GetNameOk() (*string, bool)`
+`func (o *KubernetesClusterPropertiesForPut) GetApiSubnetAllowListOk() (*[]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetApiSubnetAllowListOk returns a tuple with the ApiSubnetAllowList field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetApiSubnetAllowList
 
-`func (o *KubernetesClusterPropertiesForPut) SetName(v string)`
+`func (o *KubernetesClusterPropertiesForPut) SetApiSubnetAllowList(v []string)`
 
-SetName sets Name field to given value.
+SetApiSubnetAllowList sets ApiSubnetAllowList field to given value.
 
+### HasApiSubnetAllowList
+
+`func (o *KubernetesClusterPropertiesForPut) HasApiSubnetAllowList() bool`
+
+HasApiSubnetAllowList returns a boolean if a field has been set.
 
 ### GetK8sVersion
 
@@ -99,30 +104,25 @@ SetMaintenanceWindow sets MaintenanceWindow field to given value.
 
 HasMaintenanceWindow returns a boolean if a field has been set.
 
-### GetApiSubnetAllowList
+### GetName
 
-`func (o *KubernetesClusterPropertiesForPut) GetApiSubnetAllowList() []string`
+`func (o *KubernetesClusterPropertiesForPut) GetName() string`
 
-GetApiSubnetAllowList returns the ApiSubnetAllowList field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetApiSubnetAllowListOk
+### GetNameOk
 
-`func (o *KubernetesClusterPropertiesForPut) GetApiSubnetAllowListOk() (*[]string, bool)`
+`func (o *KubernetesClusterPropertiesForPut) GetNameOk() (*string, bool)`
 
-GetApiSubnetAllowListOk returns a tuple with the ApiSubnetAllowList field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiSubnetAllowList
+### SetName
 
-`func (o *KubernetesClusterPropertiesForPut) SetApiSubnetAllowList(v []string)`
+`func (o *KubernetesClusterPropertiesForPut) SetName(v string)`
 
-SetApiSubnetAllowList sets ApiSubnetAllowList field to given value.
+SetName sets Name field to given value.
 
-### HasApiSubnetAllowList
-
-`func (o *KubernetesClusterPropertiesForPut) HasApiSubnetAllowList() bool`
-
-HasApiSubnetAllowList returns a boolean if a field has been set.
 
 ### GetS3Buckets
 

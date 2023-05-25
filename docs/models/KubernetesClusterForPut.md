@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of object. | [optional] [readonly] |
+|**Entities** | Pointer to [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  | [optional] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**KubernetesClusterPropertiesForPut**](KubernetesClusterPropertiesForPut.md) |  | |
-|**Entities** | Pointer to [**KubernetesClusterEntities**](KubernetesClusterEntities.md) |  | [optional] |
+|**Type** | Pointer to **string** | The type of object. | [optional] [readonly] |
 
 ## Methods
 
@@ -30,55 +30,30 @@ NewKubernetesClusterForPutWithDefaults instantiates a new KubernetesClusterForPu
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEntities
 
-`func (o *KubernetesClusterForPut) GetId() string`
+`func (o *KubernetesClusterForPut) GetEntities() KubernetesClusterEntities`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEntities returns the Entities field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEntitiesOk
 
-`func (o *KubernetesClusterForPut) GetIdOk() (*string, bool)`
+`func (o *KubernetesClusterForPut) GetEntitiesOk() (*KubernetesClusterEntities, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEntities
 
-`func (o *KubernetesClusterForPut) SetId(v string)`
+`func (o *KubernetesClusterForPut) SetEntities(v KubernetesClusterEntities)`
 
-SetId sets Id field to given value.
+SetEntities sets Entities field to given value.
 
-### HasId
+### HasEntities
 
-`func (o *KubernetesClusterForPut) HasId() bool`
+`func (o *KubernetesClusterForPut) HasEntities() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *KubernetesClusterForPut) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *KubernetesClusterForPut) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *KubernetesClusterForPut) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *KubernetesClusterForPut) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasEntities returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -104,6 +79,31 @@ SetHref sets Href field to given value.
 `func (o *KubernetesClusterForPut) HasHref() bool`
 
 HasHref returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *KubernetesClusterForPut) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *KubernetesClusterForPut) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *KubernetesClusterForPut) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *KubernetesClusterForPut) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -150,30 +150,30 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-### GetEntities
+### GetType
 
-`func (o *KubernetesClusterForPut) GetEntities() KubernetesClusterEntities`
+`func (o *KubernetesClusterForPut) GetType() string`
 
-GetEntities returns the Entities field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEntitiesOk
+### GetTypeOk
 
-`func (o *KubernetesClusterForPut) GetEntitiesOk() (*KubernetesClusterEntities, bool)`
+`func (o *KubernetesClusterForPut) GetTypeOk() (*string, bool)`
 
-GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEntities
+### SetType
 
-`func (o *KubernetesClusterForPut) SetEntities(v KubernetesClusterEntities)`
+`func (o *KubernetesClusterForPut) SetType(v string)`
 
-SetEntities sets Entities field to given value.
+SetType sets Type field to given value.
 
-### HasEntities
+### HasType
 
-`func (o *KubernetesClusterForPut) HasEntities() bool`
+`func (o *KubernetesClusterForPut) HasType() bool`
 
-HasEntities returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
 
 

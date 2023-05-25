@@ -4,15 +4,15 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**DatacenterId** | Pointer to **string** |  | [optional] |
+|**DatacenterName** | Pointer to **string** |  | [optional] |
 |**Ip** | Pointer to **string** |  | [optional] |
+|**K8sClusterUuid** | Pointer to **string** |  | [optional] |
+|**K8sNodePoolUuid** | Pointer to **string** |  | [optional] |
 |**Mac** | Pointer to **string** |  | [optional] |
 |**NicId** | Pointer to **string** |  | [optional] |
 |**ServerId** | Pointer to **string** |  | [optional] |
 |**ServerName** | Pointer to **string** |  | [optional] |
-|**DatacenterId** | Pointer to **string** |  | [optional] |
-|**DatacenterName** | Pointer to **string** |  | [optional] |
-|**K8sNodePoolUuid** | Pointer to **string** |  | [optional] |
-|**K8sClusterUuid** | Pointer to **string** |  | [optional] |
 
 ## Methods
 
@@ -32,6 +32,56 @@ will change when the set of required properties is changed
 NewIpConsumerWithDefaults instantiates a new IpConsumer object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetDatacenterId
+
+`func (o *IpConsumer) GetDatacenterId() string`
+
+GetDatacenterId returns the DatacenterId field if non-nil, zero value otherwise.
+
+### GetDatacenterIdOk
+
+`func (o *IpConsumer) GetDatacenterIdOk() (*string, bool)`
+
+GetDatacenterIdOk returns a tuple with the DatacenterId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDatacenterId
+
+`func (o *IpConsumer) SetDatacenterId(v string)`
+
+SetDatacenterId sets DatacenterId field to given value.
+
+### HasDatacenterId
+
+`func (o *IpConsumer) HasDatacenterId() bool`
+
+HasDatacenterId returns a boolean if a field has been set.
+
+### GetDatacenterName
+
+`func (o *IpConsumer) GetDatacenterName() string`
+
+GetDatacenterName returns the DatacenterName field if non-nil, zero value otherwise.
+
+### GetDatacenterNameOk
+
+`func (o *IpConsumer) GetDatacenterNameOk() (*string, bool)`
+
+GetDatacenterNameOk returns a tuple with the DatacenterName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDatacenterName
+
+`func (o *IpConsumer) SetDatacenterName(v string)`
+
+SetDatacenterName sets DatacenterName field to given value.
+
+### HasDatacenterName
+
+`func (o *IpConsumer) HasDatacenterName() bool`
+
+HasDatacenterName returns a boolean if a field has been set.
 
 ### GetIp
 
@@ -57,6 +107,56 @@ SetIp sets Ip field to given value.
 `func (o *IpConsumer) HasIp() bool`
 
 HasIp returns a boolean if a field has been set.
+
+### GetK8sClusterUuid
+
+`func (o *IpConsumer) GetK8sClusterUuid() string`
+
+GetK8sClusterUuid returns the K8sClusterUuid field if non-nil, zero value otherwise.
+
+### GetK8sClusterUuidOk
+
+`func (o *IpConsumer) GetK8sClusterUuidOk() (*string, bool)`
+
+GetK8sClusterUuidOk returns a tuple with the K8sClusterUuid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetK8sClusterUuid
+
+`func (o *IpConsumer) SetK8sClusterUuid(v string)`
+
+SetK8sClusterUuid sets K8sClusterUuid field to given value.
+
+### HasK8sClusterUuid
+
+`func (o *IpConsumer) HasK8sClusterUuid() bool`
+
+HasK8sClusterUuid returns a boolean if a field has been set.
+
+### GetK8sNodePoolUuid
+
+`func (o *IpConsumer) GetK8sNodePoolUuid() string`
+
+GetK8sNodePoolUuid returns the K8sNodePoolUuid field if non-nil, zero value otherwise.
+
+### GetK8sNodePoolUuidOk
+
+`func (o *IpConsumer) GetK8sNodePoolUuidOk() (*string, bool)`
+
+GetK8sNodePoolUuidOk returns a tuple with the K8sNodePoolUuid field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetK8sNodePoolUuid
+
+`func (o *IpConsumer) SetK8sNodePoolUuid(v string)`
+
+SetK8sNodePoolUuid sets K8sNodePoolUuid field to given value.
+
+### HasK8sNodePoolUuid
+
+`func (o *IpConsumer) HasK8sNodePoolUuid() bool`
+
+HasK8sNodePoolUuid returns a boolean if a field has been set.
 
 ### GetMac
 
@@ -157,106 +257,6 @@ SetServerName sets ServerName field to given value.
 `func (o *IpConsumer) HasServerName() bool`
 
 HasServerName returns a boolean if a field has been set.
-
-### GetDatacenterId
-
-`func (o *IpConsumer) GetDatacenterId() string`
-
-GetDatacenterId returns the DatacenterId field if non-nil, zero value otherwise.
-
-### GetDatacenterIdOk
-
-`func (o *IpConsumer) GetDatacenterIdOk() (*string, bool)`
-
-GetDatacenterIdOk returns a tuple with the DatacenterId field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDatacenterId
-
-`func (o *IpConsumer) SetDatacenterId(v string)`
-
-SetDatacenterId sets DatacenterId field to given value.
-
-### HasDatacenterId
-
-`func (o *IpConsumer) HasDatacenterId() bool`
-
-HasDatacenterId returns a boolean if a field has been set.
-
-### GetDatacenterName
-
-`func (o *IpConsumer) GetDatacenterName() string`
-
-GetDatacenterName returns the DatacenterName field if non-nil, zero value otherwise.
-
-### GetDatacenterNameOk
-
-`func (o *IpConsumer) GetDatacenterNameOk() (*string, bool)`
-
-GetDatacenterNameOk returns a tuple with the DatacenterName field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDatacenterName
-
-`func (o *IpConsumer) SetDatacenterName(v string)`
-
-SetDatacenterName sets DatacenterName field to given value.
-
-### HasDatacenterName
-
-`func (o *IpConsumer) HasDatacenterName() bool`
-
-HasDatacenterName returns a boolean if a field has been set.
-
-### GetK8sNodePoolUuid
-
-`func (o *IpConsumer) GetK8sNodePoolUuid() string`
-
-GetK8sNodePoolUuid returns the K8sNodePoolUuid field if non-nil, zero value otherwise.
-
-### GetK8sNodePoolUuidOk
-
-`func (o *IpConsumer) GetK8sNodePoolUuidOk() (*string, bool)`
-
-GetK8sNodePoolUuidOk returns a tuple with the K8sNodePoolUuid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetK8sNodePoolUuid
-
-`func (o *IpConsumer) SetK8sNodePoolUuid(v string)`
-
-SetK8sNodePoolUuid sets K8sNodePoolUuid field to given value.
-
-### HasK8sNodePoolUuid
-
-`func (o *IpConsumer) HasK8sNodePoolUuid() bool`
-
-HasK8sNodePoolUuid returns a boolean if a field has been set.
-
-### GetK8sClusterUuid
-
-`func (o *IpConsumer) GetK8sClusterUuid() string`
-
-GetK8sClusterUuid returns the K8sClusterUuid field if non-nil, zero value otherwise.
-
-### GetK8sClusterUuidOk
-
-`func (o *IpConsumer) GetK8sClusterUuidOk() (*string, bool)`
-
-GetK8sClusterUuidOk returns a tuple with the K8sClusterUuid field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetK8sClusterUuid
-
-`func (o *IpConsumer) SetK8sClusterUuid(v string)`
-
-SetK8sClusterUuid sets K8sClusterUuid field to given value.
-
-### HasK8sClusterUuid
-
-`func (o *IpConsumer) HasK8sClusterUuid() bool`
-
-HasK8sClusterUuid returns a boolean if a field has been set.
 
 
 

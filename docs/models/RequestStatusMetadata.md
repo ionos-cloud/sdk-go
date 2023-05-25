@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Status** | Pointer to **string** |  | [optional] |
-|**Message** | Pointer to **string** |  | [optional] |
 |**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
+|**Message** | Pointer to **string** |  | [optional] |
+|**Status** | Pointer to **string** |  | [optional] |
 |**Targets** | Pointer to [**[]RequestTarget**](RequestTarget.md) |  | [optional] |
 
 ## Methods
@@ -28,30 +28,30 @@ NewRequestStatusMetadataWithDefaults instantiates a new RequestStatusMetadata ob
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetStatus
+### GetEtag
 
-`func (o *RequestStatusMetadata) GetStatus() string`
+`func (o *RequestStatusMetadata) GetEtag() string`
 
-GetStatus returns the Status field if non-nil, zero value otherwise.
+GetEtag returns the Etag field if non-nil, zero value otherwise.
 
-### GetStatusOk
+### GetEtagOk
 
-`func (o *RequestStatusMetadata) GetStatusOk() (*string, bool)`
+`func (o *RequestStatusMetadata) GetEtagOk() (*string, bool)`
 
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetStatus
+### SetEtag
 
-`func (o *RequestStatusMetadata) SetStatus(v string)`
+`func (o *RequestStatusMetadata) SetEtag(v string)`
 
-SetStatus sets Status field to given value.
+SetEtag sets Etag field to given value.
 
-### HasStatus
+### HasEtag
 
-`func (o *RequestStatusMetadata) HasStatus() bool`
+`func (o *RequestStatusMetadata) HasEtag() bool`
 
-HasStatus returns a boolean if a field has been set.
+HasEtag returns a boolean if a field has been set.
 
 ### GetMessage
 
@@ -78,30 +78,30 @@ SetMessage sets Message field to given value.
 
 HasMessage returns a boolean if a field has been set.
 
-### GetEtag
+### GetStatus
 
-`func (o *RequestStatusMetadata) GetEtag() string`
+`func (o *RequestStatusMetadata) GetStatus() string`
 
-GetEtag returns the Etag field if non-nil, zero value otherwise.
+GetStatus returns the Status field if non-nil, zero value otherwise.
 
-### GetEtagOk
+### GetStatusOk
 
-`func (o *RequestStatusMetadata) GetEtagOk() (*string, bool)`
+`func (o *RequestStatusMetadata) GetStatusOk() (*string, bool)`
 
-GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtag
+### SetStatus
 
-`func (o *RequestStatusMetadata) SetEtag(v string)`
+`func (o *RequestStatusMetadata) SetStatus(v string)`
 
-SetEtag sets Etag field to given value.
+SetStatus sets Status field to given value.
 
-### HasEtag
+### HasStatus
 
-`func (o *RequestStatusMetadata) HasEtag() bool`
+`func (o *RequestStatusMetadata) HasStatus() bool`
 
-HasEtag returns a boolean if a field has been set.
+HasStatus returns a boolean if a field has been set.
 
 ### GetTargets
 

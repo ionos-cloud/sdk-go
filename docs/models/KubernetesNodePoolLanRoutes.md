@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Network** | Pointer to **string** | IPv4 or IPv6 CIDR to be routed via the interface. | [optional] |
 |**GatewayIp** | Pointer to **string** | IPv4 or IPv6 Gateway IP for the route. | [optional] |
+|**Network** | Pointer to **string** | IPv4 or IPv6 CIDR to be routed via the interface. | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewKubernetesNodePoolLanRoutesWithDefaults instantiates a new KubernetesNodePoolLanRoutes object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetNetwork
-
-`func (o *KubernetesNodePoolLanRoutes) GetNetwork() string`
-
-GetNetwork returns the Network field if non-nil, zero value otherwise.
-
-### GetNetworkOk
-
-`func (o *KubernetesNodePoolLanRoutes) GetNetworkOk() (*string, bool)`
-
-GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNetwork
-
-`func (o *KubernetesNodePoolLanRoutes) SetNetwork(v string)`
-
-SetNetwork sets Network field to given value.
-
-### HasNetwork
-
-`func (o *KubernetesNodePoolLanRoutes) HasNetwork() bool`
-
-HasNetwork returns a boolean if a field has been set.
 
 ### GetGatewayIp
 
@@ -75,6 +50,31 @@ SetGatewayIp sets GatewayIp field to given value.
 `func (o *KubernetesNodePoolLanRoutes) HasGatewayIp() bool`
 
 HasGatewayIp returns a boolean if a field has been set.
+
+### GetNetwork
+
+`func (o *KubernetesNodePoolLanRoutes) GetNetwork() string`
+
+GetNetwork returns the Network field if non-nil, zero value otherwise.
+
+### GetNetworkOk
+
+`func (o *KubernetesNodePoolLanRoutes) GetNetworkOk() (*string, bool)`
+
+GetNetworkOk returns a tuple with the Network field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNetwork
+
+`func (o *KubernetesNodePoolLanRoutes) SetNetwork(v string)`
+
+SetNetwork sets Network field to given value.
+
+### HasNetwork
+
+`func (o *KubernetesNodePoolLanRoutes) HasNetwork() bool`
+
+HasNetwork returns a boolean if a field has been set.
 
 
 

@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
-|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]Volume**](Volume.md) | Array of items in the collection. | [optional] |
-|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
-|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
+|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Items** | Pointer to [**[]Volume**](Volume.md) | Array of items in the collection. | [optional] |
+|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
+|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 
 ## Methods
 
@@ -31,55 +31,30 @@ NewAttachedVolumesWithDefaults instantiates a new AttachedVolumes object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetLinks
 
-`func (o *AttachedVolumes) GetId() string`
+`func (o *AttachedVolumes) GetLinks() PaginationLinks`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetLinksOk
 
-`func (o *AttachedVolumes) GetIdOk() (*string, bool)`
+`func (o *AttachedVolumes) GetLinksOk() (*PaginationLinks, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetLinks
 
-`func (o *AttachedVolumes) SetId(v string)`
+`func (o *AttachedVolumes) SetLinks(v PaginationLinks)`
 
-SetId sets Id field to given value.
+SetLinks sets Links field to given value.
 
-### HasId
+### HasLinks
 
-`func (o *AttachedVolumes) HasId() bool`
+`func (o *AttachedVolumes) HasLinks() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *AttachedVolumes) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *AttachedVolumes) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *AttachedVolumes) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *AttachedVolumes) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -106,6 +81,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *AttachedVolumes) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *AttachedVolumes) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *AttachedVolumes) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *AttachedVolumes) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetItems
 
 `func (o *AttachedVolumes) GetItems() []Volume`
@@ -130,31 +130,6 @@ SetItems sets Items field to given value.
 `func (o *AttachedVolumes) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetOffset
-
-`func (o *AttachedVolumes) GetOffset() float32`
-
-GetOffset returns the Offset field if non-nil, zero value otherwise.
-
-### GetOffsetOk
-
-`func (o *AttachedVolumes) GetOffsetOk() (*float32, bool)`
-
-GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOffset
-
-`func (o *AttachedVolumes) SetOffset(v float32)`
-
-SetOffset sets Offset field to given value.
-
-### HasOffset
-
-`func (o *AttachedVolumes) HasOffset() bool`
-
-HasOffset returns a boolean if a field has been set.
 
 ### GetLimit
 
@@ -181,30 +156,55 @@ SetLimit sets Limit field to given value.
 
 HasLimit returns a boolean if a field has been set.
 
-### GetLinks
+### GetOffset
 
-`func (o *AttachedVolumes) GetLinks() PaginationLinks`
+`func (o *AttachedVolumes) GetOffset() float32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetOffset returns the Offset field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetOffsetOk
 
-`func (o *AttachedVolumes) GetLinksOk() (*PaginationLinks, bool)`
+`func (o *AttachedVolumes) GetOffsetOk() (*float32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetOffset
 
-`func (o *AttachedVolumes) SetLinks(v PaginationLinks)`
+`func (o *AttachedVolumes) SetOffset(v float32)`
 
-SetLinks sets Links field to given value.
+SetOffset sets Offset field to given value.
 
-### HasLinks
+### HasOffset
 
-`func (o *AttachedVolumes) HasLinks() bool`
+`func (o *AttachedVolumes) HasOffset() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasOffset returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *AttachedVolumes) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *AttachedVolumes) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *AttachedVolumes) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *AttachedVolumes) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

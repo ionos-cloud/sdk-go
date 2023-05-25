@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**HealthCheck** | Pointer to [**NetworkLoadBalancerForwardingRuleTargetHealthCheck**](NetworkLoadBalancerForwardingRuleTargetHealthCheck.md) |  | [optional] |
 |**Ip** | **string** | The IP of the balanced target VM. | |
 |**Port** | **int32** | The port of the balanced target service; valid range is 1 to 65535. | |
 |**Weight** | **int32** | Traffic is distributed in proportion to target weight, relative to the combined weight of all targets. A target with higher weight receives a greater share of traffic. Valid range is 0 to 256 and default is 1. Targets with weight of 0 do not participate in load balancing but still accept persistent connections. It is best to assign weights in the middle of the range to leave room for later adjustments. | |
-|**HealthCheck** | Pointer to [**NetworkLoadBalancerForwardingRuleTargetHealthCheck**](NetworkLoadBalancerForwardingRuleTargetHealthCheck.md) |  | [optional] |
 
 ## Methods
 
@@ -27,6 +27,31 @@ will change when the set of required properties is changed
 NewNetworkLoadBalancerForwardingRuleTargetWithDefaults instantiates a new NetworkLoadBalancerForwardingRuleTarget object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetHealthCheck
+
+`func (o *NetworkLoadBalancerForwardingRuleTarget) GetHealthCheck() NetworkLoadBalancerForwardingRuleTargetHealthCheck`
+
+GetHealthCheck returns the HealthCheck field if non-nil, zero value otherwise.
+
+### GetHealthCheckOk
+
+`func (o *NetworkLoadBalancerForwardingRuleTarget) GetHealthCheckOk() (*NetworkLoadBalancerForwardingRuleTargetHealthCheck, bool)`
+
+GetHealthCheckOk returns a tuple with the HealthCheck field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHealthCheck
+
+`func (o *NetworkLoadBalancerForwardingRuleTarget) SetHealthCheck(v NetworkLoadBalancerForwardingRuleTargetHealthCheck)`
+
+SetHealthCheck sets HealthCheck field to given value.
+
+### HasHealthCheck
+
+`func (o *NetworkLoadBalancerForwardingRuleTarget) HasHealthCheck() bool`
+
+HasHealthCheck returns a boolean if a field has been set.
 
 ### GetIp
 
@@ -87,31 +112,6 @@ and a boolean to check if the value has been set.
 
 SetWeight sets Weight field to given value.
 
-
-### GetHealthCheck
-
-`func (o *NetworkLoadBalancerForwardingRuleTarget) GetHealthCheck() NetworkLoadBalancerForwardingRuleTargetHealthCheck`
-
-GetHealthCheck returns the HealthCheck field if non-nil, zero value otherwise.
-
-### GetHealthCheckOk
-
-`func (o *NetworkLoadBalancerForwardingRuleTarget) GetHealthCheckOk() (*NetworkLoadBalancerForwardingRuleTargetHealthCheck, bool)`
-
-GetHealthCheckOk returns a tuple with the HealthCheck field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHealthCheck
-
-`func (o *NetworkLoadBalancerForwardingRuleTarget) SetHealthCheck(v NetworkLoadBalancerForwardingRuleTargetHealthCheck)`
-
-SetHealthCheck sets HealthCheck field to given value.
-
-### HasHealthCheck
-
-`func (o *NetworkLoadBalancerForwardingRuleTarget) HasHealthCheck() bool`
-
-HasHealthCheck returns a boolean if a field has been set.
 
 
 

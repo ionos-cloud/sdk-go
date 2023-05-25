@@ -4,15 +4,16 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**Mac** | Pointer to **string** | The MAC address of the NIC. | [optional] [readonly] |
-|**Ips** | Pointer to **[]string** | Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically. | [optional] |
+|**DeviceNumber** | Pointer to **int32** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter. | [optional] [readonly] |
 |**Dhcp** | Pointer to **bool** | Indicates if the NIC will reserve an IP using DHCP. | [optional] [default to true]|
-|**Lan** | **int32** | The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created. | |
 |**FirewallActive** | Pointer to **bool** | Activate or deactivate the firewall. By default, an active firewall without any defined rules will block all incoming network traffic except for the firewall rules that explicitly allows certain protocols, IP addresses and ports. | [optional] |
 |**FirewallType** | Pointer to **string** | The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used. | [optional] |
-|**DeviceNumber** | Pointer to **int32** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter. | [optional] [readonly] |
+|**Ips** | Pointer to **[]string** | Collection of IP addresses, assigned to the NIC. Explicitly assigned public IPs need to come from reserved IP blocks. Passing value null or empty array will assign an IP address automatically. | [optional] |
+|**Lan** | **int32** | The LAN ID the NIC will be on. If the LAN ID does not exist, it will be implicitly created. | |
+|**Mac** | Pointer to **string** | The MAC address of the NIC. | [optional] [readonly] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**PciSlot** | Pointer to **int32** | The PCI slot number for the NIC. | [optional] [readonly] |
+|**Vnet** | Pointer to **string** | The vnet ID that belongs to this NIC; Requires system privileges | [optional] |
 
 ## Methods
 
@@ -33,91 +34,31 @@ NewNicPropertiesWithDefaults instantiates a new NicProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetDeviceNumber
 
-`func (o *NicProperties) GetName() string`
+`func (o *NicProperties) GetDeviceNumber() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetDeviceNumber returns the DeviceNumber field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetDeviceNumberOk
 
-`func (o *NicProperties) GetNameOk() (*string, bool)`
+`func (o *NicProperties) GetDeviceNumberOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetDeviceNumberOk returns a tuple with the DeviceNumber field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetDeviceNumber
 
-`func (o *NicProperties) SetName(v string)`
+`func (o *NicProperties) SetDeviceNumber(v int32)`
 
-SetName sets Name field to given value.
+SetDeviceNumber sets DeviceNumber field to given value.
 
-### HasName
+### HasDeviceNumber
 
-`func (o *NicProperties) HasName() bool`
+`func (o *NicProperties) HasDeviceNumber() bool`
 
-HasName returns a boolean if a field has been set.
+HasDeviceNumber returns a boolean if a field has been set.
 
-### GetMac
-
-`func (o *NicProperties) GetMac() string`
-
-GetMac returns the Mac field if non-nil, zero value otherwise.
-
-### GetMacOk
-
-`func (o *NicProperties) GetMacOk() (*string, bool)`
-
-GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMac
-
-`func (o *NicProperties) SetMac(v string)`
-
-SetMac sets Mac field to given value.
-
-### HasMac
-
-`func (o *NicProperties) HasMac() bool`
-
-HasMac returns a boolean if a field has been set.
-
-### GetIps
-
-`func (o *NicProperties) GetIps() []string`
-
-GetIps returns the Ips field if non-nil, zero value otherwise.
-
-### GetIpsOk
-
-`func (o *NicProperties) GetIpsOk() (*[]string, bool)`
-
-GetIpsOk returns a tuple with the Ips field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetIps
-
-`func (o *NicProperties) SetIps(v []string)`
-
-SetIps sets Ips field to given value.
-
-### HasIps
-
-`func (o *NicProperties) HasIps() bool`
-
-HasIps returns a boolean if a field has been set.
-
-### SetIpsNil
-
-`func (o *NicProperties) SetIpsNil(b bool)`
-
- SetIpsNil sets the value for Ips to be an explicit nil
-
-### UnsetIps
-`func (o *NicProperties) UnsetIps()`
-
-UnsetIps ensures that no value is present for Ips, not even an explicit nil
 ### GetDhcp
 
 `func (o *NicProperties) GetDhcp() bool`
@@ -142,26 +83,6 @@ SetDhcp sets Dhcp field to given value.
 `func (o *NicProperties) HasDhcp() bool`
 
 HasDhcp returns a boolean if a field has been set.
-
-### GetLan
-
-`func (o *NicProperties) GetLan() int32`
-
-GetLan returns the Lan field if non-nil, zero value otherwise.
-
-### GetLanOk
-
-`func (o *NicProperties) GetLanOk() (*int32, bool)`
-
-GetLanOk returns a tuple with the Lan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLan
-
-`func (o *NicProperties) SetLan(v int32)`
-
-SetLan sets Lan field to given value.
-
 
 ### GetFirewallActive
 
@@ -213,30 +134,100 @@ SetFirewallType sets FirewallType field to given value.
 
 HasFirewallType returns a boolean if a field has been set.
 
-### GetDeviceNumber
+### GetIps
 
-`func (o *NicProperties) GetDeviceNumber() int32`
+`func (o *NicProperties) GetIps() []string`
 
-GetDeviceNumber returns the DeviceNumber field if non-nil, zero value otherwise.
+GetIps returns the Ips field if non-nil, zero value otherwise.
 
-### GetDeviceNumberOk
+### GetIpsOk
 
-`func (o *NicProperties) GetDeviceNumberOk() (*int32, bool)`
+`func (o *NicProperties) GetIpsOk() (*[]string, bool)`
 
-GetDeviceNumberOk returns a tuple with the DeviceNumber field if it's non-nil, zero value otherwise
+GetIpsOk returns a tuple with the Ips field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDeviceNumber
+### SetIps
 
-`func (o *NicProperties) SetDeviceNumber(v int32)`
+`func (o *NicProperties) SetIps(v []string)`
 
-SetDeviceNumber sets DeviceNumber field to given value.
+SetIps sets Ips field to given value.
 
-### HasDeviceNumber
+### HasIps
 
-`func (o *NicProperties) HasDeviceNumber() bool`
+`func (o *NicProperties) HasIps() bool`
 
-HasDeviceNumber returns a boolean if a field has been set.
+HasIps returns a boolean if a field has been set.
+
+### GetLan
+
+`func (o *NicProperties) GetLan() int32`
+
+GetLan returns the Lan field if non-nil, zero value otherwise.
+
+### GetLanOk
+
+`func (o *NicProperties) GetLanOk() (*int32, bool)`
+
+GetLanOk returns a tuple with the Lan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLan
+
+`func (o *NicProperties) SetLan(v int32)`
+
+SetLan sets Lan field to given value.
+
+
+### GetMac
+
+`func (o *NicProperties) GetMac() string`
+
+GetMac returns the Mac field if non-nil, zero value otherwise.
+
+### GetMacOk
+
+`func (o *NicProperties) GetMacOk() (*string, bool)`
+
+GetMacOk returns a tuple with the Mac field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMac
+
+`func (o *NicProperties) SetMac(v string)`
+
+SetMac sets Mac field to given value.
+
+### HasMac
+
+`func (o *NicProperties) HasMac() bool`
+
+HasMac returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *NicProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *NicProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *NicProperties) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *NicProperties) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetPciSlot
 
@@ -262,6 +253,31 @@ SetPciSlot sets PciSlot field to given value.
 `func (o *NicProperties) HasPciSlot() bool`
 
 HasPciSlot returns a boolean if a field has been set.
+
+### GetVnet
+
+`func (o *NicProperties) GetVnet() string`
+
+GetVnet returns the Vnet field if non-nil, zero value otherwise.
+
+### GetVnetOk
+
+`func (o *NicProperties) GetVnetOk() (*string, bool)`
+
+GetVnetOk returns a tuple with the Vnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVnet
+
+`func (o *NicProperties) SetVnet(v string)`
+
+SetVnet sets Vnet field to given value.
+
+### HasVnet
+
+`func (o *NicProperties) HasVnet() bool`
+
+HasVnet returns a boolean if a field has been set.
 
 
 

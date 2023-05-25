@@ -4,19 +4,19 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The name of the Application Load Balancer forwarding rule. | |
-|**Protocol** | **string** | The balancing protocol. | |
+|**ClientTimeout** | Pointer to **int32** | The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds). | [optional] |
+|**HttpRules** | Pointer to [**[]ApplicationLoadBalancerHttpRule**](ApplicationLoadBalancerHttpRule.md) | An array of items in the collection. The original order of rules is preserved during processing, except that rules of the &#39;FORWARD&#39; type are processed after the rules with other defined actions. The relative order of the &#39;FORWARD&#39; type rules is also preserved during the processing. | [optional] |
 |**ListenerIp** | **string** | The listening (inbound) IP. | |
 |**ListenerPort** | **int32** | The listening (inbound) port number; the valid range is 1 to 65535. | |
-|**ClientTimeout** | Pointer to **int32** | The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds). | [optional] |
+|**Name** | **string** | The name of the Application Load Balancer forwarding rule. | |
+|**Protocol** | **string** | The balancing protocol. | |
 |**ServerCertificates** | Pointer to **[]string** | Array of items in the collection. | [optional] |
-|**HttpRules** | Pointer to [**[]ApplicationLoadBalancerHttpRule**](ApplicationLoadBalancerHttpRule.md) | An array of items in the collection. The original order of rules is preserved during processing, except that rules of the &#39;FORWARD&#39; type are processed after the rules with other defined actions. The relative order of the &#39;FORWARD&#39; type rules is also preserved during the processing. | [optional] |
 
 ## Methods
 
 ### NewApplicationLoadBalancerForwardingRuleProperties
 
-`func NewApplicationLoadBalancerForwardingRuleProperties(name string, protocol string, listenerIp string, listenerPort int32, ) *ApplicationLoadBalancerForwardingRuleProperties`
+`func NewApplicationLoadBalancerForwardingRuleProperties(listenerIp string, listenerPort int32, name string, protocol string, ) *ApplicationLoadBalancerForwardingRuleProperties`
 
 NewApplicationLoadBalancerForwardingRuleProperties instantiates a new ApplicationLoadBalancerForwardingRuleProperties object
 This constructor will assign default values to properties that have it defined,
@@ -31,45 +31,55 @@ NewApplicationLoadBalancerForwardingRulePropertiesWithDefaults instantiates a ne
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetClientTimeout
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetName() string`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetClientTimeout() int32`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetClientTimeout returns the ClientTimeout field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetClientTimeoutOk
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetNameOk() (*string, bool)`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetClientTimeoutOk() (*int32, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetClientTimeoutOk returns a tuple with the ClientTimeout field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetClientTimeout
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetName(v string)`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetClientTimeout(v int32)`
 
-SetName sets Name field to given value.
+SetClientTimeout sets ClientTimeout field to given value.
 
+### HasClientTimeout
 
-### GetProtocol
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) HasClientTimeout() bool`
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetProtocol() string`
+HasClientTimeout returns a boolean if a field has been set.
 
-GetProtocol returns the Protocol field if non-nil, zero value otherwise.
+### GetHttpRules
 
-### GetProtocolOk
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetHttpRules() []ApplicationLoadBalancerHttpRule`
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetProtocolOk() (*string, bool)`
+GetHttpRules returns the HttpRules field if non-nil, zero value otherwise.
 
-GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+### GetHttpRulesOk
+
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetHttpRulesOk() (*[]ApplicationLoadBalancerHttpRule, bool)`
+
+GetHttpRulesOk returns a tuple with the HttpRules field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetProtocol
+### SetHttpRules
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetProtocol(v string)`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetHttpRules(v []ApplicationLoadBalancerHttpRule)`
 
-SetProtocol sets Protocol field to given value.
+SetHttpRules sets HttpRules field to given value.
 
+### HasHttpRules
+
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) HasHttpRules() bool`
+
+HasHttpRules returns a boolean if a field has been set.
 
 ### GetListenerIp
 
@@ -111,30 +121,45 @@ and a boolean to check if the value has been set.
 SetListenerPort sets ListenerPort field to given value.
 
 
-### GetClientTimeout
+### GetName
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetClientTimeout() int32`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetName() string`
 
-GetClientTimeout returns the ClientTimeout field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetClientTimeoutOk
+### GetNameOk
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetClientTimeoutOk() (*int32, bool)`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetNameOk() (*string, bool)`
 
-GetClientTimeoutOk returns a tuple with the ClientTimeout field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetClientTimeout
+### SetName
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetClientTimeout(v int32)`
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetName(v string)`
 
-SetClientTimeout sets ClientTimeout field to given value.
+SetName sets Name field to given value.
 
-### HasClientTimeout
 
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) HasClientTimeout() bool`
+### GetProtocol
 
-HasClientTimeout returns a boolean if a field has been set.
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetProtocol() string`
+
+GetProtocol returns the Protocol field if non-nil, zero value otherwise.
+
+### GetProtocolOk
+
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetProtocolOk() (*string, bool)`
+
+GetProtocolOk returns a tuple with the Protocol field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProtocol
+
+`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetProtocol(v string)`
+
+SetProtocol sets Protocol field to given value.
+
 
 ### GetServerCertificates
 
@@ -160,31 +185,6 @@ SetServerCertificates sets ServerCertificates field to given value.
 `func (o *ApplicationLoadBalancerForwardingRuleProperties) HasServerCertificates() bool`
 
 HasServerCertificates returns a boolean if a field has been set.
-
-### GetHttpRules
-
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetHttpRules() []ApplicationLoadBalancerHttpRule`
-
-GetHttpRules returns the HttpRules field if non-nil, zero value otherwise.
-
-### GetHttpRulesOk
-
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) GetHttpRulesOk() (*[]ApplicationLoadBalancerHttpRule, bool)`
-
-GetHttpRulesOk returns a tuple with the HttpRules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHttpRules
-
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) SetHttpRules(v []ApplicationLoadBalancerHttpRule)`
-
-SetHttpRules sets HttpRules field to given value.
-
-### HasHttpRules
-
-`func (o *ApplicationLoadBalancerForwardingRuleProperties) HasHttpRules() bool`
-
-HasHttpRules returns a boolean if a field has been set.
 
 
 

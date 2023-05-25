@@ -4,17 +4,17 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Type** | **string** | The HTTP rule condition type. | |
 |**Condition** | **string** | The matching rule for the HTTP rule condition attribute; this parameter is mandatory for &#39;HEADER&#39;, &#39;PATH&#39;, &#39;QUERY&#39;, &#39;METHOD&#39;, &#39;HOST&#39;, and &#39;COOKIE&#39; types. It must be &#39;null&#39; if the type is &#39;SOURCE_IP&#39;. | |
-|**Negate** | Pointer to **bool** | Specifies whether the condition should be negated; the default value is &#39;FALSE&#39;. | [optional] |
 |**Key** | Pointer to **string** | The key can only be set when the HTTP rule condition type is &#39;COOKIES&#39;, &#39;HEADER&#39;, or &#39;QUERY&#39;. For the type &#39;PATH&#39;, &#39;METHOD&#39;, &#39;HOST&#39;, or &#39;SOURCE_IP&#39; the value must be &#39;null&#39;. | [optional] |
+|**Negate** | Pointer to **bool** | Specifies whether the condition should be negated; the default value is &#39;FALSE&#39;. | [optional] |
+|**Type** | **string** | The HTTP rule condition type. | |
 |**Value** | Pointer to **string** | This parameter is mandatory for the conditions &#39;CONTAINS&#39;, &#39;EQUALS&#39;, &#39;MATCHES&#39;, &#39;STARTS_WITH&#39;, &#39;ENDS_WITH&#39;, or if the type is &#39;SOURCE_IP&#39;. Specify a valid CIDR. If the condition is &#39;EXISTS&#39;, the value must be &#39;null&#39;. | [optional] |
 
 ## Methods
 
 ### NewApplicationLoadBalancerHttpRuleCondition
 
-`func NewApplicationLoadBalancerHttpRuleCondition(type_ string, condition string, ) *ApplicationLoadBalancerHttpRuleCondition`
+`func NewApplicationLoadBalancerHttpRuleCondition(condition string, type_ string, ) *ApplicationLoadBalancerHttpRuleCondition`
 
 NewApplicationLoadBalancerHttpRuleCondition instantiates a new ApplicationLoadBalancerHttpRuleCondition object
 This constructor will assign default values to properties that have it defined,
@@ -28,26 +28,6 @@ will change when the set of required properties is changed
 NewApplicationLoadBalancerHttpRuleConditionWithDefaults instantiates a new ApplicationLoadBalancerHttpRuleCondition object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetType
-
-`func (o *ApplicationLoadBalancerHttpRuleCondition) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *ApplicationLoadBalancerHttpRuleCondition) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *ApplicationLoadBalancerHttpRuleCondition) SetType(v string)`
-
-SetType sets Type field to given value.
-
 
 ### GetCondition
 
@@ -68,6 +48,31 @@ and a boolean to check if the value has been set.
 
 SetCondition sets Condition field to given value.
 
+
+### GetKey
+
+`func (o *ApplicationLoadBalancerHttpRuleCondition) GetKey() string`
+
+GetKey returns the Key field if non-nil, zero value otherwise.
+
+### GetKeyOk
+
+`func (o *ApplicationLoadBalancerHttpRuleCondition) GetKeyOk() (*string, bool)`
+
+GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetKey
+
+`func (o *ApplicationLoadBalancerHttpRuleCondition) SetKey(v string)`
+
+SetKey sets Key field to given value.
+
+### HasKey
+
+`func (o *ApplicationLoadBalancerHttpRuleCondition) HasKey() bool`
+
+HasKey returns a boolean if a field has been set.
 
 ### GetNegate
 
@@ -94,30 +99,25 @@ SetNegate sets Negate field to given value.
 
 HasNegate returns a boolean if a field has been set.
 
-### GetKey
+### GetType
 
-`func (o *ApplicationLoadBalancerHttpRuleCondition) GetKey() string`
+`func (o *ApplicationLoadBalancerHttpRuleCondition) GetType() string`
 
-GetKey returns the Key field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetKeyOk
+### GetTypeOk
 
-`func (o *ApplicationLoadBalancerHttpRuleCondition) GetKeyOk() (*string, bool)`
+`func (o *ApplicationLoadBalancerHttpRuleCondition) GetTypeOk() (*string, bool)`
 
-GetKeyOk returns a tuple with the Key field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetKey
+### SetType
 
-`func (o *ApplicationLoadBalancerHttpRuleCondition) SetKey(v string)`
+`func (o *ApplicationLoadBalancerHttpRuleCondition) SetType(v string)`
 
-SetKey sets Key field to given value.
+SetType sets Type field to given value.
 
-### HasKey
-
-`func (o *ApplicationLoadBalancerHttpRuleCondition) HasKey() bool`
-
-HasKey returns a boolean if a field has been set.
 
 ### GetValue
 

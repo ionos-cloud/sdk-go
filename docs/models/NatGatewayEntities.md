@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Rules** | Pointer to [**NatGatewayRules**](NatGatewayRules.md) |  | [optional] |
 |**Flowlogs** | Pointer to [**FlowLogs**](FlowLogs.md) |  | [optional] |
+|**Rules** | Pointer to [**NatGatewayRules**](NatGatewayRules.md) |  | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewNatGatewayEntitiesWithDefaults instantiates a new NatGatewayEntities object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetRules
-
-`func (o *NatGatewayEntities) GetRules() NatGatewayRules`
-
-GetRules returns the Rules field if non-nil, zero value otherwise.
-
-### GetRulesOk
-
-`func (o *NatGatewayEntities) GetRulesOk() (*NatGatewayRules, bool)`
-
-GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRules
-
-`func (o *NatGatewayEntities) SetRules(v NatGatewayRules)`
-
-SetRules sets Rules field to given value.
-
-### HasRules
-
-`func (o *NatGatewayEntities) HasRules() bool`
-
-HasRules returns a boolean if a field has been set.
 
 ### GetFlowlogs
 
@@ -75,6 +50,31 @@ SetFlowlogs sets Flowlogs field to given value.
 `func (o *NatGatewayEntities) HasFlowlogs() bool`
 
 HasFlowlogs returns a boolean if a field has been set.
+
+### GetRules
+
+`func (o *NatGatewayEntities) GetRules() NatGatewayRules`
+
+GetRules returns the Rules field if non-nil, zero value otherwise.
+
+### GetRulesOk
+
+`func (o *NatGatewayEntities) GetRulesOk() (*NatGatewayRules, bool)`
+
+GetRulesOk returns a tuple with the Rules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRules
+
+`func (o *NatGatewayEntities) SetRules(v NatGatewayRules)`
+
+SetRules sets Rules field to given value.
+
+### HasRules
+
+`func (o *NatGatewayEntities) HasRules() bool`
+
+HasRules returns a boolean if a field has been set.
 
 
 

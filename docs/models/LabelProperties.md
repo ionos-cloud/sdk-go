@@ -5,10 +5,10 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Key** | Pointer to **string** | A label key | [optional] |
-|**Value** | Pointer to **string** | A label value | [optional] |
+|**ResourceHref** | Pointer to **string** | URL to the Resource (absolute path) on which the label is applied. | [optional] |
 |**ResourceId** | Pointer to **string** | The ID of the resource. | [optional] |
 |**ResourceType** | Pointer to **string** | The type of the resource on which the label is applied. | [optional] |
-|**ResourceHref** | Pointer to **string** | URL to the Resource (absolute path) on which the label is applied. | [optional] |
+|**Value** | Pointer to **string** | A label value | [optional] |
 
 ## Methods
 
@@ -54,30 +54,30 @@ SetKey sets Key field to given value.
 
 HasKey returns a boolean if a field has been set.
 
-### GetValue
+### GetResourceHref
 
-`func (o *LabelProperties) GetValue() string`
+`func (o *LabelProperties) GetResourceHref() string`
 
-GetValue returns the Value field if non-nil, zero value otherwise.
+GetResourceHref returns the ResourceHref field if non-nil, zero value otherwise.
 
-### GetValueOk
+### GetResourceHrefOk
 
-`func (o *LabelProperties) GetValueOk() (*string, bool)`
+`func (o *LabelProperties) GetResourceHrefOk() (*string, bool)`
 
-GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
+GetResourceHrefOk returns a tuple with the ResourceHref field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetValue
+### SetResourceHref
 
-`func (o *LabelProperties) SetValue(v string)`
+`func (o *LabelProperties) SetResourceHref(v string)`
 
-SetValue sets Value field to given value.
+SetResourceHref sets ResourceHref field to given value.
 
-### HasValue
+### HasResourceHref
 
-`func (o *LabelProperties) HasValue() bool`
+`func (o *LabelProperties) HasResourceHref() bool`
 
-HasValue returns a boolean if a field has been set.
+HasResourceHref returns a boolean if a field has been set.
 
 ### GetResourceId
 
@@ -129,30 +129,30 @@ SetResourceType sets ResourceType field to given value.
 
 HasResourceType returns a boolean if a field has been set.
 
-### GetResourceHref
+### GetValue
 
-`func (o *LabelProperties) GetResourceHref() string`
+`func (o *LabelProperties) GetValue() string`
 
-GetResourceHref returns the ResourceHref field if non-nil, zero value otherwise.
+GetValue returns the Value field if non-nil, zero value otherwise.
 
-### GetResourceHrefOk
+### GetValueOk
 
-`func (o *LabelProperties) GetResourceHrefOk() (*string, bool)`
+`func (o *LabelProperties) GetValueOk() (*string, bool)`
 
-GetResourceHrefOk returns a tuple with the ResourceHref field if it's non-nil, zero value otherwise
+GetValueOk returns a tuple with the Value field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResourceHref
+### SetValue
 
-`func (o *LabelProperties) SetResourceHref(v string)`
+`func (o *LabelProperties) SetValue(v string)`
 
-SetResourceHref sets ResourceHref field to given value.
+SetValue sets Value field to given value.
 
-### HasResourceHref
+### HasValue
 
-`func (o *LabelProperties) HasResourceHref() bool`
+`func (o *LabelProperties) HasValue() bool`
 
-HasResourceHref returns a boolean if a field has been set.
+HasValue returns a boolean if a field has been set.
 
 
 

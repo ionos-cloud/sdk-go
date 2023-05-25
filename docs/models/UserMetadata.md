@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
 |**CreatedDate** | Pointer to [**time.Time**](time.Time.md) | The time the user was created. | [optional] [readonly] |
+|**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
 |**LastLogin** | Pointer to [**time.Time**](time.Time.md) | The time of the last login by the user. | [optional] [readonly] |
 
 ## Methods
@@ -26,31 +26,6 @@ will change when the set of required properties is changed
 NewUserMetadataWithDefaults instantiates a new UserMetadata object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEtag
-
-`func (o *UserMetadata) GetEtag() string`
-
-GetEtag returns the Etag field if non-nil, zero value otherwise.
-
-### GetEtagOk
-
-`func (o *UserMetadata) GetEtagOk() (*string, bool)`
-
-GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEtag
-
-`func (o *UserMetadata) SetEtag(v string)`
-
-SetEtag sets Etag field to given value.
-
-### HasEtag
-
-`func (o *UserMetadata) HasEtag() bool`
-
-HasEtag returns a boolean if a field has been set.
 
 ### GetCreatedDate
 
@@ -76,6 +51,31 @@ SetCreatedDate sets CreatedDate field to given value.
 `func (o *UserMetadata) HasCreatedDate() bool`
 
 HasCreatedDate returns a boolean if a field has been set.
+
+### GetEtag
+
+`func (o *UserMetadata) GetEtag() string`
+
+GetEtag returns the Etag field if non-nil, zero value otherwise.
+
+### GetEtagOk
+
+`func (o *UserMetadata) GetEtagOk() (*string, bool)`
+
+GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtag
+
+`func (o *UserMetadata) SetEtag(v string)`
+
+SetEtag sets Etag field to given value.
+
+### HasEtag
+
+`func (o *UserMetadata) HasEtag() bool`
+
+HasEtag returns a boolean if a field has been set.
 
 ### GetLastLogin
 

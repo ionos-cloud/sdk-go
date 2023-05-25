@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**Description** | Pointer to **string** | A description for the datacenter, such as staging, production. | [optional] |
-|**Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests). | |
-|**Version** | Pointer to **int32** | The version of the data center; incremented with every change. | [optional] [readonly] |
-|**Features** | Pointer to **[]string** | List of features supported by the location where this data center is provisioned. | [optional] [readonly] |
-|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
+|**Description** | Pointer to **string** | A description for the datacenter, such as staging, production. | [optional] |
+|**Features** | Pointer to **[]string** | List of features supported by the location where this data center is provisioned. | [optional] [readonly] |
+|**Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests). | |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |
+|**Version** | Pointer to **int32** | The version of the data center; incremented with every change. | [optional] [readonly] |
 
 ## Methods
 
@@ -31,30 +31,30 @@ NewDatacenterPropertiesWithDefaults instantiates a new DatacenterProperties obje
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCpuArchitecture
 
-`func (o *DatacenterProperties) GetName() string`
+`func (o *DatacenterProperties) GetCpuArchitecture() []CpuArchitectureProperties`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCpuArchitecture returns the CpuArchitecture field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCpuArchitectureOk
 
-`func (o *DatacenterProperties) GetNameOk() (*string, bool)`
+`func (o *DatacenterProperties) GetCpuArchitectureOk() (*[]CpuArchitectureProperties, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCpuArchitectureOk returns a tuple with the CpuArchitecture field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCpuArchitecture
 
-`func (o *DatacenterProperties) SetName(v string)`
+`func (o *DatacenterProperties) SetCpuArchitecture(v []CpuArchitectureProperties)`
 
-SetName sets Name field to given value.
+SetCpuArchitecture sets CpuArchitecture field to given value.
 
-### HasName
+### HasCpuArchitecture
 
-`func (o *DatacenterProperties) HasName() bool`
+`func (o *DatacenterProperties) HasCpuArchitecture() bool`
 
-HasName returns a boolean if a field has been set.
+HasCpuArchitecture returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -81,51 +81,6 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
-### GetLocation
-
-`func (o *DatacenterProperties) GetLocation() string`
-
-GetLocation returns the Location field if non-nil, zero value otherwise.
-
-### GetLocationOk
-
-`func (o *DatacenterProperties) GetLocationOk() (*string, bool)`
-
-GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocation
-
-`func (o *DatacenterProperties) SetLocation(v string)`
-
-SetLocation sets Location field to given value.
-
-
-### GetVersion
-
-`func (o *DatacenterProperties) GetVersion() int32`
-
-GetVersion returns the Version field if non-nil, zero value otherwise.
-
-### GetVersionOk
-
-`func (o *DatacenterProperties) GetVersionOk() (*int32, bool)`
-
-GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetVersion
-
-`func (o *DatacenterProperties) SetVersion(v int32)`
-
-SetVersion sets Version field to given value.
-
-### HasVersion
-
-`func (o *DatacenterProperties) HasVersion() bool`
-
-HasVersion returns a boolean if a field has been set.
-
 ### GetFeatures
 
 `func (o *DatacenterProperties) GetFeatures() []string`
@@ -150,6 +105,51 @@ SetFeatures sets Features field to given value.
 `func (o *DatacenterProperties) HasFeatures() bool`
 
 HasFeatures returns a boolean if a field has been set.
+
+### GetLocation
+
+`func (o *DatacenterProperties) GetLocation() string`
+
+GetLocation returns the Location field if non-nil, zero value otherwise.
+
+### GetLocationOk
+
+`func (o *DatacenterProperties) GetLocationOk() (*string, bool)`
+
+GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocation
+
+`func (o *DatacenterProperties) SetLocation(v string)`
+
+SetLocation sets Location field to given value.
+
+
+### GetName
+
+`func (o *DatacenterProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *DatacenterProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *DatacenterProperties) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *DatacenterProperties) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetSecAuthProtection
 
@@ -176,30 +176,30 @@ SetSecAuthProtection sets SecAuthProtection field to given value.
 
 HasSecAuthProtection returns a boolean if a field has been set.
 
-### GetCpuArchitecture
+### GetVersion
 
-`func (o *DatacenterProperties) GetCpuArchitecture() []CpuArchitectureProperties`
+`func (o *DatacenterProperties) GetVersion() int32`
 
-GetCpuArchitecture returns the CpuArchitecture field if non-nil, zero value otherwise.
+GetVersion returns the Version field if non-nil, zero value otherwise.
 
-### GetCpuArchitectureOk
+### GetVersionOk
 
-`func (o *DatacenterProperties) GetCpuArchitectureOk() (*[]CpuArchitectureProperties, bool)`
+`func (o *DatacenterProperties) GetVersionOk() (*int32, bool)`
 
-GetCpuArchitectureOk returns a tuple with the CpuArchitecture field if it's non-nil, zero value otherwise
+GetVersionOk returns a tuple with the Version field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCpuArchitecture
+### SetVersion
 
-`func (o *DatacenterProperties) SetCpuArchitecture(v []CpuArchitectureProperties)`
+`func (o *DatacenterProperties) SetVersion(v int32)`
 
-SetCpuArchitecture sets CpuArchitecture field to given value.
+SetVersion sets Version field to given value.
 
-### HasCpuArchitecture
+### HasVersion
 
-`func (o *DatacenterProperties) HasCpuArchitecture() bool`
+`func (o *DatacenterProperties) HasVersion() bool`
 
-HasCpuArchitecture returns a boolean if a field has been set.
+HasVersion returns a boolean if a field has been set.
 
 
 

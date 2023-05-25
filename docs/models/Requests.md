@@ -4,19 +4,19 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]Request**](Request.md) | Array of items in the collection. | [optional] [readonly] |
-|**Offset** | **float32** | The offset, specified in the request (if not is specified, 0 is used by default). | |
-|**Limit** | **float32** | The limit, specified in the request (if not specified, the endpoint&#39;s default pagination limit is used). | |
 |**Links** | [**PaginationLinks**](PaginationLinks.md) |  | |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Items** | Pointer to [**[]Request**](Request.md) | Array of items in the collection. | [optional] [readonly] |
+|**Limit** | **float32** | The limit, specified in the request (if not specified, the endpoint&#39;s default pagination limit is used). | |
+|**Offset** | **float32** | The offset, specified in the request (if not is specified, 0 is used by default). | |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 
 ## Methods
 
 ### NewRequests
 
-`func NewRequests(offset float32, limit float32, links PaginationLinks, ) *Requests`
+`func NewRequests(links PaginationLinks, limit float32, offset float32, ) *Requests`
 
 NewRequests instantiates a new Requests object
 This constructor will assign default values to properties that have it defined,
@@ -31,55 +31,25 @@ NewRequestsWithDefaults instantiates a new Requests object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetLinks
 
-`func (o *Requests) GetId() string`
+`func (o *Requests) GetLinks() PaginationLinks`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetLinksOk
 
-`func (o *Requests) GetIdOk() (*string, bool)`
+`func (o *Requests) GetLinksOk() (*PaginationLinks, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetLinks
 
-`func (o *Requests) SetId(v string)`
+`func (o *Requests) SetLinks(v PaginationLinks)`
 
-SetId sets Id field to given value.
+SetLinks sets Links field to given value.
 
-### HasId
-
-`func (o *Requests) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *Requests) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *Requests) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *Requests) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *Requests) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -106,6 +76,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *Requests) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *Requests) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *Requests) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *Requests) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetItems
 
 `func (o *Requests) GetItems() []Request`
@@ -131,26 +126,6 @@ SetItems sets Items field to given value.
 
 HasItems returns a boolean if a field has been set.
 
-### GetOffset
-
-`func (o *Requests) GetOffset() float32`
-
-GetOffset returns the Offset field if non-nil, zero value otherwise.
-
-### GetOffsetOk
-
-`func (o *Requests) GetOffsetOk() (*float32, bool)`
-
-GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOffset
-
-`func (o *Requests) SetOffset(v float32)`
-
-SetOffset sets Offset field to given value.
-
-
 ### GetLimit
 
 `func (o *Requests) GetLimit() float32`
@@ -171,25 +146,50 @@ and a boolean to check if the value has been set.
 SetLimit sets Limit field to given value.
 
 
-### GetLinks
+### GetOffset
 
-`func (o *Requests) GetLinks() PaginationLinks`
+`func (o *Requests) GetOffset() float32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetOffset returns the Offset field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetOffsetOk
 
-`func (o *Requests) GetLinksOk() (*PaginationLinks, bool)`
+`func (o *Requests) GetOffsetOk() (*float32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetOffset
 
-`func (o *Requests) SetLinks(v PaginationLinks)`
+`func (o *Requests) SetOffset(v float32)`
 
-SetLinks sets Links field to given value.
+SetOffset sets Offset field to given value.
 
+
+### GetType
+
+`func (o *Requests) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *Requests) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *Requests) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *Requests) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

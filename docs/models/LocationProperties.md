@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The location name. | [optional] |
+|**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | A list of available CPU types and related resources available in the location. | [optional] [readonly] |
 |**Features** | Pointer to **[]string** | A list of available features in the location. | [optional] [readonly] |
 |**ImageAliases** | Pointer to **[]string** | A list of image aliases available in the location. | [optional] [readonly] |
-|**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | A list of available CPU types and related resources available in the location. | [optional] [readonly] |
+|**Name** | Pointer to **string** | The location name. | [optional] |
 
 ## Methods
 
@@ -28,30 +28,30 @@ NewLocationPropertiesWithDefaults instantiates a new LocationProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetCpuArchitecture
 
-`func (o *LocationProperties) GetName() string`
+`func (o *LocationProperties) GetCpuArchitecture() []CpuArchitectureProperties`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetCpuArchitecture returns the CpuArchitecture field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetCpuArchitectureOk
 
-`func (o *LocationProperties) GetNameOk() (*string, bool)`
+`func (o *LocationProperties) GetCpuArchitectureOk() (*[]CpuArchitectureProperties, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetCpuArchitectureOk returns a tuple with the CpuArchitecture field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetCpuArchitecture
 
-`func (o *LocationProperties) SetName(v string)`
+`func (o *LocationProperties) SetCpuArchitecture(v []CpuArchitectureProperties)`
 
-SetName sets Name field to given value.
+SetCpuArchitecture sets CpuArchitecture field to given value.
 
-### HasName
+### HasCpuArchitecture
 
-`func (o *LocationProperties) HasName() bool`
+`func (o *LocationProperties) HasCpuArchitecture() bool`
 
-HasName returns a boolean if a field has been set.
+HasCpuArchitecture returns a boolean if a field has been set.
 
 ### GetFeatures
 
@@ -103,30 +103,30 @@ SetImageAliases sets ImageAliases field to given value.
 
 HasImageAliases returns a boolean if a field has been set.
 
-### GetCpuArchitecture
+### GetName
 
-`func (o *LocationProperties) GetCpuArchitecture() []CpuArchitectureProperties`
+`func (o *LocationProperties) GetName() string`
 
-GetCpuArchitecture returns the CpuArchitecture field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetCpuArchitectureOk
+### GetNameOk
 
-`func (o *LocationProperties) GetCpuArchitectureOk() (*[]CpuArchitectureProperties, bool)`
+`func (o *LocationProperties) GetNameOk() (*string, bool)`
 
-GetCpuArchitectureOk returns a tuple with the CpuArchitecture field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCpuArchitecture
+### SetName
 
-`func (o *LocationProperties) SetCpuArchitecture(v []CpuArchitectureProperties)`
+`func (o *LocationProperties) SetName(v string)`
 
-SetCpuArchitecture sets CpuArchitecture field to given value.
+SetName sets Name field to given value.
 
-### HasCpuArchitecture
+### HasName
 
-`func (o *LocationProperties) HasCpuArchitecture() bool`
+`func (o *LocationProperties) HasName() bool`
 
-HasCpuArchitecture returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 
 

@@ -4,17 +4,17 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The Application Load Balancer name. | |
-|**ListenerLan** | **int32** | The ID of the listening (inbound) LAN. | |
 |**Ips** | Pointer to **[]string** | Collection of the Application Load Balancer IP addresses. (Inbound and outbound) IPs of the &#39;listenerLan&#39; are customer-reserved public IPs for the public load balancers, and private IPs for the private load balancers. | [optional] |
-|**TargetLan** | **int32** | The ID of the balanced private target LAN (outbound). | |
 |**LbPrivateIps** | Pointer to **[]string** | Collection of private IP addresses with the subnet mask of the Application Load Balancer. IPs must contain valid a subnet mask. If no IP is provided, the system will generate an IP with /24 subnet. | [optional] |
+|**ListenerLan** | **int32** | The ID of the listening (inbound) LAN. | |
+|**Name** | **string** | The Application Load Balancer name. | |
+|**TargetLan** | **int32** | The ID of the balanced private target LAN (outbound). | |
 
 ## Methods
 
 ### NewApplicationLoadBalancerProperties
 
-`func NewApplicationLoadBalancerProperties(name string, listenerLan int32, targetLan int32, ) *ApplicationLoadBalancerProperties`
+`func NewApplicationLoadBalancerProperties(listenerLan int32, name string, targetLan int32, ) *ApplicationLoadBalancerProperties`
 
 NewApplicationLoadBalancerProperties instantiates a new ApplicationLoadBalancerProperties object
 This constructor will assign default values to properties that have it defined,
@@ -28,46 +28,6 @@ will change when the set of required properties is changed
 NewApplicationLoadBalancerPropertiesWithDefaults instantiates a new ApplicationLoadBalancerProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *ApplicationLoadBalancerProperties) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *ApplicationLoadBalancerProperties) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *ApplicationLoadBalancerProperties) SetName(v string)`
-
-SetName sets Name field to given value.
-
-
-### GetListenerLan
-
-`func (o *ApplicationLoadBalancerProperties) GetListenerLan() int32`
-
-GetListenerLan returns the ListenerLan field if non-nil, zero value otherwise.
-
-### GetListenerLanOk
-
-`func (o *ApplicationLoadBalancerProperties) GetListenerLanOk() (*int32, bool)`
-
-GetListenerLanOk returns a tuple with the ListenerLan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetListenerLan
-
-`func (o *ApplicationLoadBalancerProperties) SetListenerLan(v int32)`
-
-SetListenerLan sets ListenerLan field to given value.
-
 
 ### GetIps
 
@@ -94,26 +54,6 @@ SetIps sets Ips field to given value.
 
 HasIps returns a boolean if a field has been set.
 
-### GetTargetLan
-
-`func (o *ApplicationLoadBalancerProperties) GetTargetLan() int32`
-
-GetTargetLan returns the TargetLan field if non-nil, zero value otherwise.
-
-### GetTargetLanOk
-
-`func (o *ApplicationLoadBalancerProperties) GetTargetLanOk() (*int32, bool)`
-
-GetTargetLanOk returns a tuple with the TargetLan field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetTargetLan
-
-`func (o *ApplicationLoadBalancerProperties) SetTargetLan(v int32)`
-
-SetTargetLan sets TargetLan field to given value.
-
-
 ### GetLbPrivateIps
 
 `func (o *ApplicationLoadBalancerProperties) GetLbPrivateIps() []string`
@@ -138,6 +78,66 @@ SetLbPrivateIps sets LbPrivateIps field to given value.
 `func (o *ApplicationLoadBalancerProperties) HasLbPrivateIps() bool`
 
 HasLbPrivateIps returns a boolean if a field has been set.
+
+### GetListenerLan
+
+`func (o *ApplicationLoadBalancerProperties) GetListenerLan() int32`
+
+GetListenerLan returns the ListenerLan field if non-nil, zero value otherwise.
+
+### GetListenerLanOk
+
+`func (o *ApplicationLoadBalancerProperties) GetListenerLanOk() (*int32, bool)`
+
+GetListenerLanOk returns a tuple with the ListenerLan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetListenerLan
+
+`func (o *ApplicationLoadBalancerProperties) SetListenerLan(v int32)`
+
+SetListenerLan sets ListenerLan field to given value.
+
+
+### GetName
+
+`func (o *ApplicationLoadBalancerProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *ApplicationLoadBalancerProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *ApplicationLoadBalancerProperties) SetName(v string)`
+
+SetName sets Name field to given value.
+
+
+### GetTargetLan
+
+`func (o *ApplicationLoadBalancerProperties) GetTargetLan() int32`
+
+GetTargetLan returns the TargetLan field if non-nil, zero value otherwise.
+
+### GetTargetLanOk
+
+`func (o *ApplicationLoadBalancerProperties) GetTargetLanOk() (*int32, bool)`
+
+GetTargetLanOk returns a tuple with the TargetLan field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTargetLan
+
+`func (o *ApplicationLoadBalancerProperties) SetTargetLan(v int32)`
+
+SetTargetLan sets TargetLan field to given value.
+
 
 
 

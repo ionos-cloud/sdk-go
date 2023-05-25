@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**SecretKey** | Pointer to **string** | Secret of the S3 key. | [optional] [readonly] |
 |**Active** | Pointer to **bool** | Denotes weather the S3 key is active. | [optional] |
+|**SecretKey** | Pointer to **string** | Secret of the S3 key. | [optional] [readonly] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewS3KeyPropertiesWithDefaults instantiates a new S3KeyProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetSecretKey
-
-`func (o *S3KeyProperties) GetSecretKey() string`
-
-GetSecretKey returns the SecretKey field if non-nil, zero value otherwise.
-
-### GetSecretKeyOk
-
-`func (o *S3KeyProperties) GetSecretKeyOk() (*string, bool)`
-
-GetSecretKeyOk returns a tuple with the SecretKey field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetSecretKey
-
-`func (o *S3KeyProperties) SetSecretKey(v string)`
-
-SetSecretKey sets SecretKey field to given value.
-
-### HasSecretKey
-
-`func (o *S3KeyProperties) HasSecretKey() bool`
-
-HasSecretKey returns a boolean if a field has been set.
 
 ### GetActive
 
@@ -75,6 +50,31 @@ SetActive sets Active field to given value.
 `func (o *S3KeyProperties) HasActive() bool`
 
 HasActive returns a boolean if a field has been set.
+
+### GetSecretKey
+
+`func (o *S3KeyProperties) GetSecretKey() string`
+
+GetSecretKey returns the SecretKey field if non-nil, zero value otherwise.
+
+### GetSecretKeyOk
+
+`func (o *S3KeyProperties) GetSecretKeyOk() (*string, bool)`
+
+GetSecretKeyOk returns a tuple with the SecretKey field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecretKey
+
+`func (o *S3KeyProperties) SetSecretKey(v string)`
+
+SetSecretKey sets SecretKey field to given value.
+
+### HasSecretKey
+
+`func (o *S3KeyProperties) HasSecretKey() bool`
+
+HasSecretKey returns a boolean if a field has been set.
 
 
 

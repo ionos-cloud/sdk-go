@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**LocationProperties**](LocationProperties.md) |  | |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 
 ## Methods
 
@@ -28,56 +28,6 @@ will change when the set of required properties is changed
 NewLocationWithDefaults instantiates a new Location object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *Location) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *Location) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *Location) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *Location) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *Location) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *Location) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *Location) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *Location) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -103,6 +53,31 @@ SetHref sets Href field to given value.
 `func (o *Location) HasHref() bool`
 
 HasHref returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *Location) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *Location) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *Location) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *Location) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -148,6 +123,31 @@ and a boolean to check if the value has been set.
 
 SetProperties sets Properties field to given value.
 
+
+### GetType
+
+`func (o *Location) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *Location) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *Location) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *Location) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of object that has been created. | [optional] [readonly] |
 |**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Items** | Pointer to [**[]BackupUnit**](BackupUnit.md) | Array of items in the collection. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The type of object that has been created. | [optional] [readonly] |
 
 ## Methods
 
@@ -27,56 +27,6 @@ will change when the set of required properties is changed
 NewBackupUnitsWithDefaults instantiates a new BackupUnits object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *BackupUnits) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *BackupUnits) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *BackupUnits) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *BackupUnits) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *BackupUnits) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *BackupUnits) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *BackupUnits) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *BackupUnits) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -103,6 +53,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *BackupUnits) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *BackupUnits) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *BackupUnits) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *BackupUnits) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetItems
 
 `func (o *BackupUnits) GetItems() []BackupUnit`
@@ -127,6 +102,31 @@ SetItems sets Items field to given value.
 `func (o *BackupUnits) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *BackupUnits) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *BackupUnits) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *BackupUnits) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *BackupUnits) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

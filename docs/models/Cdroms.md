@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]Image**](Image.md) | Array of items in the collection. | [optional] |
-|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
-|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Items** | Pointer to [**[]Image**](Image.md) | Array of items in the collection. | [optional] |
+|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
+|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 
 ## Methods
 
@@ -31,55 +31,30 @@ NewCdromsWithDefaults instantiates a new Cdroms object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetLinks
 
-`func (o *Cdroms) GetId() string`
+`func (o *Cdroms) GetLinks() PaginationLinks`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetLinksOk
 
-`func (o *Cdroms) GetIdOk() (*string, bool)`
+`func (o *Cdroms) GetLinksOk() (*PaginationLinks, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetLinks
 
-`func (o *Cdroms) SetId(v string)`
+`func (o *Cdroms) SetLinks(v PaginationLinks)`
 
-SetId sets Id field to given value.
+SetLinks sets Links field to given value.
 
-### HasId
+### HasLinks
 
-`func (o *Cdroms) HasId() bool`
+`func (o *Cdroms) HasLinks() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *Cdroms) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *Cdroms) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *Cdroms) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *Cdroms) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -106,6 +81,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *Cdroms) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *Cdroms) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *Cdroms) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *Cdroms) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetItems
 
 `func (o *Cdroms) GetItems() []Image`
@@ -130,31 +130,6 @@ SetItems sets Items field to given value.
 `func (o *Cdroms) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetOffset
-
-`func (o *Cdroms) GetOffset() float32`
-
-GetOffset returns the Offset field if non-nil, zero value otherwise.
-
-### GetOffsetOk
-
-`func (o *Cdroms) GetOffsetOk() (*float32, bool)`
-
-GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOffset
-
-`func (o *Cdroms) SetOffset(v float32)`
-
-SetOffset sets Offset field to given value.
-
-### HasOffset
-
-`func (o *Cdroms) HasOffset() bool`
-
-HasOffset returns a boolean if a field has been set.
 
 ### GetLimit
 
@@ -181,30 +156,55 @@ SetLimit sets Limit field to given value.
 
 HasLimit returns a boolean if a field has been set.
 
-### GetLinks
+### GetOffset
 
-`func (o *Cdroms) GetLinks() PaginationLinks`
+`func (o *Cdroms) GetOffset() float32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetOffset returns the Offset field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetOffsetOk
 
-`func (o *Cdroms) GetLinksOk() (*PaginationLinks, bool)`
+`func (o *Cdroms) GetOffsetOk() (*float32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetOffset
 
-`func (o *Cdroms) SetLinks(v PaginationLinks)`
+`func (o *Cdroms) SetOffset(v float32)`
 
-SetLinks sets Links field to given value.
+SetOffset sets Offset field to given value.
 
-### HasLinks
+### HasOffset
 
-`func (o *Cdroms) HasLinks() bool`
+`func (o *Cdroms) HasOffset() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasOffset returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *Cdroms) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *Cdroms) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *Cdroms) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *Cdroms) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

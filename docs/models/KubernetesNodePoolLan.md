@@ -5,8 +5,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**DatacenterId** | Pointer to **string** | The datacenter ID, requires system privileges, for internal usage only | [optional] |
-|**Id** | **int32** | The LAN ID of an existing LAN at the related data center | |
 |**Dhcp** | Pointer to **bool** | Specifies whether the Kubernetes node pool LAN reserves an IP with DHCP. | [optional] |
+|**Id** | **int32** | The LAN ID of an existing LAN at the related data center | |
 |**Routes** | Pointer to [**[]KubernetesNodePoolLanRoutes**](KubernetesNodePoolLanRoutes.md) | The array of additional LANs attached to worker nodes. | [optional] |
 
 ## Methods
@@ -53,26 +53,6 @@ SetDatacenterId sets DatacenterId field to given value.
 
 HasDatacenterId returns a boolean if a field has been set.
 
-### GetId
-
-`func (o *KubernetesNodePoolLan) GetId() int32`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *KubernetesNodePoolLan) GetIdOk() (*int32, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *KubernetesNodePoolLan) SetId(v int32)`
-
-SetId sets Id field to given value.
-
-
 ### GetDhcp
 
 `func (o *KubernetesNodePoolLan) GetDhcp() bool`
@@ -97,6 +77,26 @@ SetDhcp sets Dhcp field to given value.
 `func (o *KubernetesNodePoolLan) HasDhcp() bool`
 
 HasDhcp returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *KubernetesNodePoolLan) GetId() int32`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *KubernetesNodePoolLan) GetIdOk() (*int32, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *KubernetesNodePoolLan) SetId(v int32)`
+
+SetId sets Id field to given value.
+
 
 ### GetRoutes
 

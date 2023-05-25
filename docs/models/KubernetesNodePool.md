@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The object type. | [optional] [readonly] |
 |**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**KubernetesNodePoolProperties**](KubernetesNodePoolProperties.md) |  | |
+|**Type** | Pointer to **string** | The object type. | [optional] [readonly] |
 
 ## Methods
 
@@ -28,56 +28,6 @@ will change when the set of required properties is changed
 NewKubernetesNodePoolWithDefaults instantiates a new KubernetesNodePool object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetId
-
-`func (o *KubernetesNodePool) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *KubernetesNodePool) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *KubernetesNodePool) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *KubernetesNodePool) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *KubernetesNodePool) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *KubernetesNodePool) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *KubernetesNodePool) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *KubernetesNodePool) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -103,6 +53,31 @@ SetHref sets Href field to given value.
 `func (o *KubernetesNodePool) HasHref() bool`
 
 HasHref returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *KubernetesNodePool) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *KubernetesNodePool) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *KubernetesNodePool) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *KubernetesNodePool) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -148,6 +123,31 @@ and a boolean to check if the value has been set.
 
 SetProperties sets Properties field to given value.
 
+
+### GetType
+
+`func (o *KubernetesNodePool) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *KubernetesNodePool) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *KubernetesNodePool) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *KubernetesNodePool) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

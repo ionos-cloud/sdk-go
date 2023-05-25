@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**Description** | Pointer to **string** | Human-readable description. | [optional] |
-|**Peers** | Pointer to [**[]Peer**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private Cross-Connect. | [optional] [readonly] |
 |**ConnectableDatacenters** | Pointer to [**[]ConnectableDatacenter**](ConnectableDatacenter.md) | Read-Only attribute. Lists data centers that can be joined to this private Cross-Connect. | [optional] [readonly] |
+|**Description** | Pointer to **string** | Human-readable description. | [optional] |
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**Peers** | Pointer to [**[]Peer**](Peer.md) | Read-Only attribute. Lists LAN&#39;s joined to this private Cross-Connect. | [optional] [readonly] |
 
 ## Methods
 
@@ -28,30 +28,30 @@ NewPrivateCrossConnectPropertiesWithDefaults instantiates a new PrivateCrossConn
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetConnectableDatacenters
 
-`func (o *PrivateCrossConnectProperties) GetName() string`
+`func (o *PrivateCrossConnectProperties) GetConnectableDatacenters() []ConnectableDatacenter`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetConnectableDatacenters returns the ConnectableDatacenters field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetConnectableDatacentersOk
 
-`func (o *PrivateCrossConnectProperties) GetNameOk() (*string, bool)`
+`func (o *PrivateCrossConnectProperties) GetConnectableDatacentersOk() (*[]ConnectableDatacenter, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetConnectableDatacentersOk returns a tuple with the ConnectableDatacenters field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetConnectableDatacenters
 
-`func (o *PrivateCrossConnectProperties) SetName(v string)`
+`func (o *PrivateCrossConnectProperties) SetConnectableDatacenters(v []ConnectableDatacenter)`
 
-SetName sets Name field to given value.
+SetConnectableDatacenters sets ConnectableDatacenters field to given value.
 
-### HasName
+### HasConnectableDatacenters
 
-`func (o *PrivateCrossConnectProperties) HasName() bool`
+`func (o *PrivateCrossConnectProperties) HasConnectableDatacenters() bool`
 
-HasName returns a boolean if a field has been set.
+HasConnectableDatacenters returns a boolean if a field has been set.
 
 ### GetDescription
 
@@ -78,6 +78,31 @@ SetDescription sets Description field to given value.
 
 HasDescription returns a boolean if a field has been set.
 
+### GetName
+
+`func (o *PrivateCrossConnectProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *PrivateCrossConnectProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *PrivateCrossConnectProperties) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *PrivateCrossConnectProperties) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
 ### GetPeers
 
 `func (o *PrivateCrossConnectProperties) GetPeers() []Peer`
@@ -102,31 +127,6 @@ SetPeers sets Peers field to given value.
 `func (o *PrivateCrossConnectProperties) HasPeers() bool`
 
 HasPeers returns a boolean if a field has been set.
-
-### GetConnectableDatacenters
-
-`func (o *PrivateCrossConnectProperties) GetConnectableDatacenters() []ConnectableDatacenter`
-
-GetConnectableDatacenters returns the ConnectableDatacenters field if non-nil, zero value otherwise.
-
-### GetConnectableDatacentersOk
-
-`func (o *PrivateCrossConnectProperties) GetConnectableDatacentersOk() (*[]ConnectableDatacenter, bool)`
-
-GetConnectableDatacentersOk returns a tuple with the ConnectableDatacenters field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetConnectableDatacenters
-
-`func (o *PrivateCrossConnectProperties) SetConnectableDatacenters(v []ConnectableDatacenter)`
-
-SetConnectableDatacenters sets ConnectableDatacenters field to given value.
-
-### HasConnectableDatacenters
-
-`func (o *PrivateCrossConnectProperties) HasConnectableDatacenters() bool`
-
-HasConnectableDatacenters returns a boolean if a field has been set.
 
 
 

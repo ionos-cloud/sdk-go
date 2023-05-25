@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
-|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]TargetGroup**](TargetGroup.md) | Array of items in the collection. | [optional] [readonly] |
-|**Offset** | Pointer to **float32** | The offset, specified in the request (if not is specified, 0 is used by default). | [optional] |
-|**Limit** | Pointer to **float32** | The limit, specified in the request (if not specified, the endpoint&#39;s default pagination limit is used). | [optional] |
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
+|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Items** | Pointer to [**[]TargetGroup**](TargetGroup.md) | Array of items in the collection. | [optional] [readonly] |
+|**Limit** | Pointer to **float32** | The limit, specified in the request (if not specified, the endpoint&#39;s default pagination limit is used). | [optional] |
+|**Offset** | Pointer to **float32** | The offset, specified in the request (if not is specified, 0 is used by default). | [optional] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 
 ## Methods
 
@@ -31,55 +31,30 @@ NewTargetGroupsWithDefaults instantiates a new TargetGroups object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetLinks
 
-`func (o *TargetGroups) GetId() string`
+`func (o *TargetGroups) GetLinks() PaginationLinks`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetLinksOk
 
-`func (o *TargetGroups) GetIdOk() (*string, bool)`
+`func (o *TargetGroups) GetLinksOk() (*PaginationLinks, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetLinks
 
-`func (o *TargetGroups) SetId(v string)`
+`func (o *TargetGroups) SetLinks(v PaginationLinks)`
 
-SetId sets Id field to given value.
+SetLinks sets Links field to given value.
 
-### HasId
+### HasLinks
 
-`func (o *TargetGroups) HasId() bool`
+`func (o *TargetGroups) HasLinks() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *TargetGroups) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *TargetGroups) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *TargetGroups) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *TargetGroups) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -106,6 +81,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *TargetGroups) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *TargetGroups) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *TargetGroups) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *TargetGroups) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetItems
 
 `func (o *TargetGroups) GetItems() []TargetGroup`
@@ -130,31 +130,6 @@ SetItems sets Items field to given value.
 `func (o *TargetGroups) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetOffset
-
-`func (o *TargetGroups) GetOffset() float32`
-
-GetOffset returns the Offset field if non-nil, zero value otherwise.
-
-### GetOffsetOk
-
-`func (o *TargetGroups) GetOffsetOk() (*float32, bool)`
-
-GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOffset
-
-`func (o *TargetGroups) SetOffset(v float32)`
-
-SetOffset sets Offset field to given value.
-
-### HasOffset
-
-`func (o *TargetGroups) HasOffset() bool`
-
-HasOffset returns a boolean if a field has been set.
 
 ### GetLimit
 
@@ -181,30 +156,55 @@ SetLimit sets Limit field to given value.
 
 HasLimit returns a boolean if a field has been set.
 
-### GetLinks
+### GetOffset
 
-`func (o *TargetGroups) GetLinks() PaginationLinks`
+`func (o *TargetGroups) GetOffset() float32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetOffset returns the Offset field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetOffsetOk
 
-`func (o *TargetGroups) GetLinksOk() (*PaginationLinks, bool)`
+`func (o *TargetGroups) GetOffsetOk() (*float32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetOffset
 
-`func (o *TargetGroups) SetLinks(v PaginationLinks)`
+`func (o *TargetGroups) SetOffset(v float32)`
 
-SetLinks sets Links field to given value.
+SetOffset sets Offset field to given value.
 
-### HasLinks
+### HasOffset
 
-`func (o *TargetGroups) HasLinks() bool`
+`func (o *TargetGroups) HasOffset() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasOffset returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *TargetGroups) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *TargetGroups) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *TargetGroups) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *TargetGroups) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

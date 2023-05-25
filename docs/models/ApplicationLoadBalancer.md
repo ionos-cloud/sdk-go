@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Entities** | Pointer to [**ApplicationLoadBalancerEntities**](ApplicationLoadBalancerEntities.md) |  | [optional] |
 |**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**ApplicationLoadBalancerProperties**](ApplicationLoadBalancerProperties.md) |  | |
-|**Entities** | Pointer to [**ApplicationLoadBalancerEntities**](ApplicationLoadBalancerEntities.md) |  | [optional] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 
 ## Methods
 
@@ -30,55 +30,30 @@ NewApplicationLoadBalancerWithDefaults instantiates a new ApplicationLoadBalance
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEntities
 
-`func (o *ApplicationLoadBalancer) GetId() string`
+`func (o *ApplicationLoadBalancer) GetEntities() ApplicationLoadBalancerEntities`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEntities returns the Entities field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEntitiesOk
 
-`func (o *ApplicationLoadBalancer) GetIdOk() (*string, bool)`
+`func (o *ApplicationLoadBalancer) GetEntitiesOk() (*ApplicationLoadBalancerEntities, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEntities
 
-`func (o *ApplicationLoadBalancer) SetId(v string)`
+`func (o *ApplicationLoadBalancer) SetEntities(v ApplicationLoadBalancerEntities)`
 
-SetId sets Id field to given value.
+SetEntities sets Entities field to given value.
 
-### HasId
+### HasEntities
 
-`func (o *ApplicationLoadBalancer) HasId() bool`
+`func (o *ApplicationLoadBalancer) HasEntities() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *ApplicationLoadBalancer) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *ApplicationLoadBalancer) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *ApplicationLoadBalancer) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *ApplicationLoadBalancer) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasEntities returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -104,6 +79,31 @@ SetHref sets Href field to given value.
 `func (o *ApplicationLoadBalancer) HasHref() bool`
 
 HasHref returns a boolean if a field has been set.
+
+### GetId
+
+`func (o *ApplicationLoadBalancer) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *ApplicationLoadBalancer) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *ApplicationLoadBalancer) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *ApplicationLoadBalancer) HasId() bool`
+
+HasId returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -150,30 +150,30 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-### GetEntities
+### GetType
 
-`func (o *ApplicationLoadBalancer) GetEntities() ApplicationLoadBalancerEntities`
+`func (o *ApplicationLoadBalancer) GetType() Type`
 
-GetEntities returns the Entities field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEntitiesOk
+### GetTypeOk
 
-`func (o *ApplicationLoadBalancer) GetEntitiesOk() (*ApplicationLoadBalancerEntities, bool)`
+`func (o *ApplicationLoadBalancer) GetTypeOk() (*Type, bool)`
 
-GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEntities
+### SetType
 
-`func (o *ApplicationLoadBalancer) SetEntities(v ApplicationLoadBalancerEntities)`
+`func (o *ApplicationLoadBalancer) SetType(v Type)`
 
-SetEntities sets Entities field to given value.
+SetType sets Type field to given value.
 
-### HasEntities
+### HasType
 
-`func (o *ApplicationLoadBalancer) HasEntities() bool`
+`func (o *ApplicationLoadBalancer) HasType() bool`
 
-HasEntities returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
 
 

@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**CreatedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the resource was created. | [optional] [readonly] |
 |**CreatedBy** | Pointer to **string** | The user who created the resource. | [optional] [readonly] |
+|**CreatedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the resource was created. | [optional] [readonly] |
 |**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
 |**RequestStatus** | Pointer to [**RequestStatus**](RequestStatus.md) |  | [optional] |
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewRequestMetadataWithDefaults instantiates a new RequestMetadata object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetCreatedDate
-
-`func (o *RequestMetadata) GetCreatedDate() time.Time`
-
-GetCreatedDate returns the CreatedDate field if non-nil, zero value otherwise.
-
-### GetCreatedDateOk
-
-`func (o *RequestMetadata) GetCreatedDateOk() (*time.Time, bool)`
-
-GetCreatedDateOk returns a tuple with the CreatedDate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedDate
-
-`func (o *RequestMetadata) SetCreatedDate(v time.Time)`
-
-SetCreatedDate sets CreatedDate field to given value.
-
-### HasCreatedDate
-
-`func (o *RequestMetadata) HasCreatedDate() bool`
-
-HasCreatedDate returns a boolean if a field has been set.
 
 ### GetCreatedBy
 
@@ -77,6 +52,31 @@ SetCreatedBy sets CreatedBy field to given value.
 `func (o *RequestMetadata) HasCreatedBy() bool`
 
 HasCreatedBy returns a boolean if a field has been set.
+
+### GetCreatedDate
+
+`func (o *RequestMetadata) GetCreatedDate() time.Time`
+
+GetCreatedDate returns the CreatedDate field if non-nil, zero value otherwise.
+
+### GetCreatedDateOk
+
+`func (o *RequestMetadata) GetCreatedDateOk() (*time.Time, bool)`
+
+GetCreatedDateOk returns a tuple with the CreatedDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedDate
+
+`func (o *RequestMetadata) SetCreatedDate(v time.Time)`
+
+SetCreatedDate sets CreatedDate field to given value.
+
+### HasCreatedDate
+
+`func (o *RequestMetadata) HasCreatedDate() bool`
+
+HasCreatedDate returns a boolean if a field has been set.
 
 ### GetEtag
 

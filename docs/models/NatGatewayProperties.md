@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**Lans** | Pointer to [**[]NatGatewayLanProperties**](NatGatewayLanProperties.md) | Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet. | [optional] |
 |**Name** | **string** | Name of the NAT Gateway. | |
 |**PublicIps** | **[]string** | Collection of public IP addresses of the NAT Gateway. Should be customer reserved IP addresses in that location. | |
-|**Lans** | Pointer to [**[]NatGatewayLanProperties**](NatGatewayLanProperties.md) | Collection of LANs connected to the NAT Gateway. IPs must contain a valid subnet mask. If no IP is provided, the system will generate an IP with /24 subnet. | [optional] |
 
 ## Methods
 
@@ -26,6 +26,31 @@ will change when the set of required properties is changed
 NewNatGatewayPropertiesWithDefaults instantiates a new NatGatewayProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetLans
+
+`func (o *NatGatewayProperties) GetLans() []NatGatewayLanProperties`
+
+GetLans returns the Lans field if non-nil, zero value otherwise.
+
+### GetLansOk
+
+`func (o *NatGatewayProperties) GetLansOk() (*[]NatGatewayLanProperties, bool)`
+
+GetLansOk returns a tuple with the Lans field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLans
+
+`func (o *NatGatewayProperties) SetLans(v []NatGatewayLanProperties)`
+
+SetLans sets Lans field to given value.
+
+### HasLans
+
+`func (o *NatGatewayProperties) HasLans() bool`
+
+HasLans returns a boolean if a field has been set.
 
 ### GetName
 
@@ -66,31 +91,6 @@ and a boolean to check if the value has been set.
 
 SetPublicIps sets PublicIps field to given value.
 
-
-### GetLans
-
-`func (o *NatGatewayProperties) GetLans() []NatGatewayLanProperties`
-
-GetLans returns the Lans field if non-nil, zero value otherwise.
-
-### GetLansOk
-
-`func (o *NatGatewayProperties) GetLansOk() (*[]NatGatewayLanProperties, bool)`
-
-GetLansOk returns a tuple with the Lans field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLans
-
-`func (o *NatGatewayProperties) SetLans(v []NatGatewayLanProperties)`
-
-SetLans sets Lans field to given value.
-
-### HasLans
-
-`func (o *NatGatewayProperties) HasLans() bool`
-
-HasLans returns a boolean if a field has been set.
 
 
 

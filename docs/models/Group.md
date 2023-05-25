@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Type** | Pointer to [**Type**](Type.md) | The type of the resource. | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
-|**Properties** | [**GroupProperties**](GroupProperties.md) |  | |
 |**Entities** | Pointer to [**GroupEntities**](GroupEntities.md) |  | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Properties** | [**GroupProperties**](GroupProperties.md) |  | |
+|**Type** | Pointer to [**Type**](Type.md) | The type of the resource. | [optional] |
 
 ## Methods
 
@@ -29,55 +29,30 @@ NewGroupWithDefaults instantiates a new Group object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetEntities
 
-`func (o *Group) GetId() string`
+`func (o *Group) GetEntities() GroupEntities`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetEntities returns the Entities field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetEntitiesOk
 
-`func (o *Group) GetIdOk() (*string, bool)`
+`func (o *Group) GetEntitiesOk() (*GroupEntities, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetEntities
 
-`func (o *Group) SetId(v string)`
+`func (o *Group) SetEntities(v GroupEntities)`
 
-SetId sets Id field to given value.
+SetEntities sets Entities field to given value.
 
-### HasId
+### HasEntities
 
-`func (o *Group) HasId() bool`
+`func (o *Group) HasEntities() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *Group) GetType() Type`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *Group) GetTypeOk() (*Type, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *Group) SetType(v Type)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *Group) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasEntities returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -104,6 +79,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *Group) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *Group) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *Group) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *Group) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetProperties
 
 `func (o *Group) GetProperties() GroupProperties`
@@ -124,30 +124,30 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-### GetEntities
+### GetType
 
-`func (o *Group) GetEntities() GroupEntities`
+`func (o *Group) GetType() Type`
 
-GetEntities returns the Entities field if non-nil, zero value otherwise.
+GetType returns the Type field if non-nil, zero value otherwise.
 
-### GetEntitiesOk
+### GetTypeOk
 
-`func (o *Group) GetEntitiesOk() (*GroupEntities, bool)`
+`func (o *Group) GetTypeOk() (*Type, bool)`
 
-GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEntities
+### SetType
 
-`func (o *Group) SetEntities(v GroupEntities)`
+`func (o *Group) SetType(v Type)`
 
-SetEntities sets Entities field to given value.
+SetType sets Type field to given value.
 
-### HasEntities
+### HasType
 
-`func (o *Group) HasEntities() bool`
+`func (o *Group) HasType() bool`
 
-HasEntities returns a boolean if a field has been set.
+HasType returns a boolean if a field has been set.
 
 
 

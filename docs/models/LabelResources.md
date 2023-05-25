@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** | A unique representation of the label as a resource collection. | [optional] [readonly] |
-|**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
-|**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
-|**Items** | Pointer to [**[]LabelResource**](LabelResource.md) | Array of items in the collection. | [optional] [readonly] |
-|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
-|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
 |**Links** | Pointer to [**PaginationLinks**](PaginationLinks.md) |  | [optional] |
+|**Href** | Pointer to **string** | URL to the collection representation (absolute path). | [optional] [readonly] |
+|**Id** | Pointer to **string** | A unique representation of the label as a resource collection. | [optional] [readonly] |
+|**Items** | Pointer to [**[]LabelResource**](LabelResource.md) | Array of items in the collection. | [optional] [readonly] |
+|**Limit** | Pointer to **float32** | The limit (if specified in the request). | [optional] |
+|**Offset** | Pointer to **float32** | The offset (if specified in the request). | [optional] |
+|**Type** | Pointer to **string** | The type of resource within a collection. | [optional] [readonly] |
 
 ## Methods
 
@@ -31,55 +31,30 @@ NewLabelResourcesWithDefaults instantiates a new LabelResources object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetId
+### GetLinks
 
-`func (o *LabelResources) GetId() string`
+`func (o *LabelResources) GetLinks() PaginationLinks`
 
-GetId returns the Id field if non-nil, zero value otherwise.
+GetLinks returns the Links field if non-nil, zero value otherwise.
 
-### GetIdOk
+### GetLinksOk
 
-`func (o *LabelResources) GetIdOk() (*string, bool)`
+`func (o *LabelResources) GetLinksOk() (*PaginationLinks, bool)`
 
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetId
+### SetLinks
 
-`func (o *LabelResources) SetId(v string)`
+`func (o *LabelResources) SetLinks(v PaginationLinks)`
 
-SetId sets Id field to given value.
+SetLinks sets Links field to given value.
 
-### HasId
+### HasLinks
 
-`func (o *LabelResources) HasId() bool`
+`func (o *LabelResources) HasLinks() bool`
 
-HasId returns a boolean if a field has been set.
-
-### GetType
-
-`func (o *LabelResources) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *LabelResources) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *LabelResources) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *LabelResources) HasType() bool`
-
-HasType returns a boolean if a field has been set.
+HasLinks returns a boolean if a field has been set.
 
 ### GetHref
 
@@ -106,6 +81,31 @@ SetHref sets Href field to given value.
 
 HasHref returns a boolean if a field has been set.
 
+### GetId
+
+`func (o *LabelResources) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *LabelResources) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *LabelResources) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *LabelResources) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
 ### GetItems
 
 `func (o *LabelResources) GetItems() []LabelResource`
@@ -130,31 +130,6 @@ SetItems sets Items field to given value.
 `func (o *LabelResources) HasItems() bool`
 
 HasItems returns a boolean if a field has been set.
-
-### GetOffset
-
-`func (o *LabelResources) GetOffset() float32`
-
-GetOffset returns the Offset field if non-nil, zero value otherwise.
-
-### GetOffsetOk
-
-`func (o *LabelResources) GetOffsetOk() (*float32, bool)`
-
-GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetOffset
-
-`func (o *LabelResources) SetOffset(v float32)`
-
-SetOffset sets Offset field to given value.
-
-### HasOffset
-
-`func (o *LabelResources) HasOffset() bool`
-
-HasOffset returns a boolean if a field has been set.
 
 ### GetLimit
 
@@ -181,30 +156,55 @@ SetLimit sets Limit field to given value.
 
 HasLimit returns a boolean if a field has been set.
 
-### GetLinks
+### GetOffset
 
-`func (o *LabelResources) GetLinks() PaginationLinks`
+`func (o *LabelResources) GetOffset() float32`
 
-GetLinks returns the Links field if non-nil, zero value otherwise.
+GetOffset returns the Offset field if non-nil, zero value otherwise.
 
-### GetLinksOk
+### GetOffsetOk
 
-`func (o *LabelResources) GetLinksOk() (*PaginationLinks, bool)`
+`func (o *LabelResources) GetOffsetOk() (*float32, bool)`
 
-GetLinksOk returns a tuple with the Links field if it's non-nil, zero value otherwise
+GetOffsetOk returns a tuple with the Offset field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLinks
+### SetOffset
 
-`func (o *LabelResources) SetLinks(v PaginationLinks)`
+`func (o *LabelResources) SetOffset(v float32)`
 
-SetLinks sets Links field to given value.
+SetOffset sets Offset field to given value.
 
-### HasLinks
+### HasOffset
 
-`func (o *LabelResources) HasLinks() bool`
+`func (o *LabelResources) HasOffset() bool`
 
-HasLinks returns a boolean if a field has been set.
+HasOffset returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *LabelResources) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *LabelResources) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *LabelResources) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *LabelResources) HasType() bool`
+
+HasType returns a boolean if a field has been set.
 
 
 

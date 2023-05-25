@@ -442,7 +442,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
     flowLogId := "flowLogId_example" // string | The unique ID of the flow log.
-    applicationLoadBalancerFlowLogProperties := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | The properties of the ALB flow log to be updated.
+    applicationLoadBalancerFlowLogProperties := *openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource") // FlowLogProperties | The properties of the ALB flow log to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -523,7 +523,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
-    applicationLoadBalancerFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | The flow log to create.
+    applicationLoadBalancerFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource")) // FlowLog | The flow log to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -604,7 +604,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
     flowLogId := "flowLogId_example" // string | The unique ID of the flow log.
-    applicationLoadBalancerFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | The modified ALB flow log.
+    applicationLoadBalancerFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource")) // FlowLogPut | The modified ALB flow log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -919,7 +919,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
     forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule.
-    applicationLoadBalancerForwardingRuleProperties := *openapiclient.NewApplicationLoadBalancerForwardingRuleProperties("My Application Load Balancer forwarding rule", "HTTP", "81.173.1.2", int32(8080)) // ApplicationLoadBalancerForwardingRuleProperties | The properties of the forwarding rule to be updated.
+    applicationLoadBalancerForwardingRuleProperties := *openapiclient.NewApplicationLoadBalancerForwardingRuleProperties("81.173.1.2", int32(8080), "My Application Load Balancer forwarding rule", "HTTP") // ApplicationLoadBalancerForwardingRuleProperties | The properties of the forwarding rule to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1000,7 +1000,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
-    applicationLoadBalancerForwardingRule := *openapiclient.NewApplicationLoadBalancerForwardingRule(*openapiclient.NewApplicationLoadBalancerForwardingRuleProperties("My Application Load Balancer forwarding rule", "HTTP", "81.173.1.2", int32(8080))) // ApplicationLoadBalancerForwardingRule | The forwarding rule to create.
+    applicationLoadBalancerForwardingRule := *openapiclient.NewApplicationLoadBalancerForwardingRule(*openapiclient.NewApplicationLoadBalancerForwardingRuleProperties("81.173.1.2", int32(8080), "My Application Load Balancer forwarding rule", "HTTP")) // ApplicationLoadBalancerForwardingRule | The forwarding rule to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1081,7 +1081,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
     forwardingRuleId := "forwardingRuleId_example" // string | The unique ID of the forwarding rule.
-    applicationLoadBalancerForwardingRule := *openapiclient.NewApplicationLoadBalancerForwardingRulePut(*openapiclient.NewApplicationLoadBalancerForwardingRuleProperties("My Application Load Balancer forwarding rule", "HTTP", "81.173.1.2", int32(8080))) // ApplicationLoadBalancerForwardingRulePut | The modified ALB forwarding rule.
+    applicationLoadBalancerForwardingRule := *openapiclient.NewApplicationLoadBalancerForwardingRulePut(*openapiclient.NewApplicationLoadBalancerForwardingRuleProperties("81.173.1.2", int32(8080), "My Application Load Balancer forwarding rule", "HTTP")) // ApplicationLoadBalancerForwardingRulePut | The modified ALB forwarding rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1243,7 +1243,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
-    applicationLoadBalancerProperties := *openapiclient.NewApplicationLoadBalancerProperties("My Application Load Balancer", int32(1), int32(2)) // ApplicationLoadBalancerProperties | The Application Load Balancer properties to be updated.
+    applicationLoadBalancerProperties := *openapiclient.NewApplicationLoadBalancerProperties(int32(1), "My Application Load Balancer", int32(2)) // ApplicationLoadBalancerProperties | The Application Load Balancer properties to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1322,7 +1322,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    applicationLoadBalancer := *openapiclient.NewApplicationLoadBalancer(*openapiclient.NewApplicationLoadBalancerProperties("My Application Load Balancer", int32(1), int32(2))) // ApplicationLoadBalancer | The Application Load Balancer to create.
+    applicationLoadBalancer := *openapiclient.NewApplicationLoadBalancer(*openapiclient.NewApplicationLoadBalancerProperties(int32(1), "My Application Load Balancer", int32(2))) // ApplicationLoadBalancer | The Application Load Balancer to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1401,7 +1401,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     applicationLoadBalancerId := "applicationLoadBalancerId_example" // string | The unique ID of the Application Load Balancer.
-    applicationLoadBalancer := *openapiclient.NewApplicationLoadBalancerPut(*openapiclient.NewApplicationLoadBalancerProperties("My Application Load Balancer", int32(1), int32(2))) // ApplicationLoadBalancerPut | The modified Application Load Balancer.
+    applicationLoadBalancer := *openapiclient.NewApplicationLoadBalancerPut(*openapiclient.NewApplicationLoadBalancerProperties(int32(1), "My Application Load Balancer", int32(2))) // ApplicationLoadBalancerPut | The modified Application Load Balancer.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)

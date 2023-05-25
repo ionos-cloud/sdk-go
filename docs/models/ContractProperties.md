@@ -6,9 +6,9 @@
 |------------ | ------------- | ------------- | -------------|
 |**ContractNumber** | Pointer to **int64** | The contract number. | [optional] [readonly] |
 |**Owner** | Pointer to **string** | The contract owner&#39;s user name. | [optional] [readonly] |
-|**Status** | Pointer to **string** | The contract status. | [optional] [readonly] |
 |**RegDomain** | Pointer to **string** | The registration domain of the contract. | [optional] [readonly] |
 |**ResourceLimits** | Pointer to [**ResourceLimits**](ResourceLimits.md) |  | [optional] |
+|**Status** | Pointer to **string** | The contract status. | [optional] [readonly] |
 
 ## Methods
 
@@ -79,31 +79,6 @@ SetOwner sets Owner field to given value.
 
 HasOwner returns a boolean if a field has been set.
 
-### GetStatus
-
-`func (o *ContractProperties) GetStatus() string`
-
-GetStatus returns the Status field if non-nil, zero value otherwise.
-
-### GetStatusOk
-
-`func (o *ContractProperties) GetStatusOk() (*string, bool)`
-
-GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStatus
-
-`func (o *ContractProperties) SetStatus(v string)`
-
-SetStatus sets Status field to given value.
-
-### HasStatus
-
-`func (o *ContractProperties) HasStatus() bool`
-
-HasStatus returns a boolean if a field has been set.
-
 ### GetRegDomain
 
 `func (o *ContractProperties) GetRegDomain() string`
@@ -153,6 +128,31 @@ SetResourceLimits sets ResourceLimits field to given value.
 `func (o *ContractProperties) HasResourceLimits() bool`
 
 HasResourceLimits returns a boolean if a field has been set.
+
+### GetStatus
+
+`func (o *ContractProperties) GetStatus() string`
+
+GetStatus returns the Status field if non-nil, zero value otherwise.
+
+### GetStatusOk
+
+`func (o *ContractProperties) GetStatusOk() (*string, bool)`
+
+GetStatusOk returns a tuple with the Status field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStatus
+
+`func (o *ContractProperties) SetStatus(v string)`
+
+SetStatus sets Status field to given value.
+
+### HasStatus
+
+`func (o *ContractProperties) HasStatus() bool`
+
+HasStatus returns a boolean if a field has been set.
 
 
 

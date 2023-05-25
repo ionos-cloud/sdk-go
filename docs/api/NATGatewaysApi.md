@@ -438,7 +438,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
-    natGatewayFlowLogProperties := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | The properties of the Flow Log to be updated.
+    natGatewayFlowLogProperties := *openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource") // FlowLogProperties | The properties of the Flow Log to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -516,7 +516,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
-    natGatewayFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | The Flow Log to create.
+    natGatewayFlowLog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource")) // FlowLog | The Flow Log to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -594,7 +594,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     flowLogId := "flowLogId_example" // string | The unique ID of the Flow Log.
-    natGatewayFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | The modified NAT Gateway Flow Log.
+    natGatewayFlowLog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource")) // FlowLogPut | The modified NAT Gateway Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -1220,7 +1220,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT Gateway rule.
-    natGatewayRuleProperties := *openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "10.0.1.0/24", "192.18.7.17") // NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
+    natGatewayRuleProperties := *openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "192.18.7.17", "10.0.1.0/24") // NatGatewayRuleProperties | The properties of the NAT Gateway rule to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1301,7 +1301,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
-    natGatewayRule := *openapiclient.NewNatGatewayRule(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "10.0.1.0/24", "192.18.7.17")) // NatGatewayRule | The NAT Gateway rule to create.
+    natGatewayRule := *openapiclient.NewNatGatewayRule(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "192.18.7.17", "10.0.1.0/24")) // NatGatewayRule | The NAT Gateway rule to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -1382,7 +1382,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     natGatewayId := "natGatewayId_example" // string | The unique ID of the NAT Gateway.
     natGatewayRuleId := "natGatewayRuleId_example" // string | The unique ID of the NAT Gateway rule.
-    natGatewayRule := *openapiclient.NewNatGatewayRulePut(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "10.0.1.0/24", "192.18.7.17")) // NatGatewayRulePut | The modified NAT Gateway rule.
+    natGatewayRule := *openapiclient.NewNatGatewayRulePut(*openapiclient.NewNatGatewayRuleProperties("My NAT Gateway rule", "192.18.7.17", "10.0.1.0/24")) // NatGatewayRulePut | The modified NAT Gateway rule.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)

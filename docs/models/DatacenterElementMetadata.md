@@ -4,13 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
-|**CreatedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the resource was created. | [optional] [readonly] |
 |**CreatedBy** | Pointer to **string** | The user who created the resource. | [optional] [readonly] |
 |**CreatedByUserId** | Pointer to **string** | The unique ID of the user who created the resource. | [optional] [readonly] |
-|**LastModifiedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the resource was modified. | [optional] [readonly] |
+|**CreatedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the resource was created. | [optional] [readonly] |
+|**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
 |**LastModifiedBy** | Pointer to **string** | The user who last modified the resource. | [optional] [readonly] |
 |**LastModifiedByUserId** | Pointer to **string** | The unique ID of the user who last modified the resource. | [optional] [readonly] |
+|**LastModifiedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the resource was modified. | [optional] [readonly] |
 |**State** | Pointer to **string** | State of the resource. *AVAILABLE* There are no pending modification requests for this item; *BUSY* There is at least one modification request pending and all following requests will be queued; *INACTIVE* Resource has been de-provisioned; *DEPLOYING* Resource state DEPLOYING - relevant for Kubernetes cluster/nodepool; *ACTIVE* Resource state ACTIVE - relevant for Kubernetes cluster/nodepool; *FAILED* Resource state FAILED - relevant for Kubernetes cluster/nodepool; *SUSPENDED* Resource state SUSPENDED - relevant for Kubernetes cluster/nodepool; *FAILED_SUSPENDED* Resource state FAILED_SUSPENDED - relevant for Kubernetes cluster; *UPDATING* Resource state UPDATING - relevant for Kubernetes cluster/nodepool; *FAILED_UPDATING* Resource state FAILED_UPDATING - relevant for Kubernetes cluster/nodepool; *DESTROYING* Resource state DESTROYING - relevant for Kubernetes cluster; *FAILED_DESTROYING* Resource state FAILED_DESTROYING - relevant for Kubernetes cluster/nodepool; *TERMINATED* Resource state TERMINATED - relevant for Kubernetes cluster/nodepool; *HIBERNATING* Resource state HIBERNATING - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool; *MAINTENANCE* Resource state MAINTENANCE - relevant for Kubernetes cluster/nodepool; *FAILED_HIBERNATING* Resource state FAILED_HIBERNATING - relevant for Kubernetes cluster/nodepool. | [optional] [readonly] |
 
 ## Methods
@@ -31,56 +31,6 @@ will change when the set of required properties is changed
 NewDatacenterElementMetadataWithDefaults instantiates a new DatacenterElementMetadata object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEtag
-
-`func (o *DatacenterElementMetadata) GetEtag() string`
-
-GetEtag returns the Etag field if non-nil, zero value otherwise.
-
-### GetEtagOk
-
-`func (o *DatacenterElementMetadata) GetEtagOk() (*string, bool)`
-
-GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEtag
-
-`func (o *DatacenterElementMetadata) SetEtag(v string)`
-
-SetEtag sets Etag field to given value.
-
-### HasEtag
-
-`func (o *DatacenterElementMetadata) HasEtag() bool`
-
-HasEtag returns a boolean if a field has been set.
-
-### GetCreatedDate
-
-`func (o *DatacenterElementMetadata) GetCreatedDate() time.Time`
-
-GetCreatedDate returns the CreatedDate field if non-nil, zero value otherwise.
-
-### GetCreatedDateOk
-
-`func (o *DatacenterElementMetadata) GetCreatedDateOk() (*time.Time, bool)`
-
-GetCreatedDateOk returns a tuple with the CreatedDate field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreatedDate
-
-`func (o *DatacenterElementMetadata) SetCreatedDate(v time.Time)`
-
-SetCreatedDate sets CreatedDate field to given value.
-
-### HasCreatedDate
-
-`func (o *DatacenterElementMetadata) HasCreatedDate() bool`
-
-HasCreatedDate returns a boolean if a field has been set.
 
 ### GetCreatedBy
 
@@ -132,30 +82,55 @@ SetCreatedByUserId sets CreatedByUserId field to given value.
 
 HasCreatedByUserId returns a boolean if a field has been set.
 
-### GetLastModifiedDate
+### GetCreatedDate
 
-`func (o *DatacenterElementMetadata) GetLastModifiedDate() time.Time`
+`func (o *DatacenterElementMetadata) GetCreatedDate() time.Time`
 
-GetLastModifiedDate returns the LastModifiedDate field if non-nil, zero value otherwise.
+GetCreatedDate returns the CreatedDate field if non-nil, zero value otherwise.
 
-### GetLastModifiedDateOk
+### GetCreatedDateOk
 
-`func (o *DatacenterElementMetadata) GetLastModifiedDateOk() (*time.Time, bool)`
+`func (o *DatacenterElementMetadata) GetCreatedDateOk() (*time.Time, bool)`
 
-GetLastModifiedDateOk returns a tuple with the LastModifiedDate field if it's non-nil, zero value otherwise
+GetCreatedDateOk returns a tuple with the CreatedDate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastModifiedDate
+### SetCreatedDate
 
-`func (o *DatacenterElementMetadata) SetLastModifiedDate(v time.Time)`
+`func (o *DatacenterElementMetadata) SetCreatedDate(v time.Time)`
 
-SetLastModifiedDate sets LastModifiedDate field to given value.
+SetCreatedDate sets CreatedDate field to given value.
 
-### HasLastModifiedDate
+### HasCreatedDate
 
-`func (o *DatacenterElementMetadata) HasLastModifiedDate() bool`
+`func (o *DatacenterElementMetadata) HasCreatedDate() bool`
 
-HasLastModifiedDate returns a boolean if a field has been set.
+HasCreatedDate returns a boolean if a field has been set.
+
+### GetEtag
+
+`func (o *DatacenterElementMetadata) GetEtag() string`
+
+GetEtag returns the Etag field if non-nil, zero value otherwise.
+
+### GetEtagOk
+
+`func (o *DatacenterElementMetadata) GetEtagOk() (*string, bool)`
+
+GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtag
+
+`func (o *DatacenterElementMetadata) SetEtag(v string)`
+
+SetEtag sets Etag field to given value.
+
+### HasEtag
+
+`func (o *DatacenterElementMetadata) HasEtag() bool`
+
+HasEtag returns a boolean if a field has been set.
 
 ### GetLastModifiedBy
 
@@ -206,6 +181,31 @@ SetLastModifiedByUserId sets LastModifiedByUserId field to given value.
 `func (o *DatacenterElementMetadata) HasLastModifiedByUserId() bool`
 
 HasLastModifiedByUserId returns a boolean if a field has been set.
+
+### GetLastModifiedDate
+
+`func (o *DatacenterElementMetadata) GetLastModifiedDate() time.Time`
+
+GetLastModifiedDate returns the LastModifiedDate field if non-nil, zero value otherwise.
+
+### GetLastModifiedDateOk
+
+`func (o *DatacenterElementMetadata) GetLastModifiedDateOk() (*time.Time, bool)`
+
+GetLastModifiedDateOk returns a tuple with the LastModifiedDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastModifiedDate
+
+`func (o *DatacenterElementMetadata) SetLastModifiedDate(v time.Time)`
+
+SetLastModifiedDate sets LastModifiedDate field to given value.
+
+### HasLastModifiedDate
+
+`func (o *DatacenterElementMetadata) HasLastModifiedDate() bool`
+
+HasLastModifiedDate returns a boolean if a field has been set.
 
 ### GetState
 

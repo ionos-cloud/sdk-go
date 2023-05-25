@@ -4,28 +4,28 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
-|**DatacenterId** | **string** | The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located. | |
-|**NodeCount** | **int32** | The number of worker nodes of the node pool. | |
-|**CpuFamily** | **string** | The CPU type for the nodes. | |
-|**CoresCount** | **int32** | The total number of cores for the nodes. | |
-|**RamSize** | **int32** | The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB. | |
-|**AvailabilityZone** | **string** | The availability zone in which the target VM should be provisioned. | |
-|**StorageType** | **string** | The storage type for the nodes. | |
-|**StorageSize** | **int32** | The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD. | |
-|**K8sVersion** | Pointer to **string** | The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional] |
-|**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
-|**AutoScaling** | Pointer to [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] |
-|**Lans** | Pointer to [**[]KubernetesNodePoolLan**](KubernetesNodePoolLan.md) | The array of existing private LANs to attach to worker nodes. | [optional] |
-|**Labels** | Pointer to **map[string]string** | The labels attached to the node pool. | [optional] |
 |**Annotations** | Pointer to **map[string]string** | The annotations attached to the node pool. | [optional] |
+|**AutoScaling** | Pointer to [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] |
+|**AvailabilityZone** | **string** | The availability zone in which the target VM should be provisioned. | |
+|**CoresCount** | **int32** | The total number of cores for the nodes. | |
+|**CpuFamily** | **string** | The CPU type for the nodes. | |
+|**DatacenterId** | **string** | The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located. | |
+|**K8sVersion** | Pointer to **string** | The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional] |
+|**Labels** | Pointer to **map[string]string** | The labels attached to the node pool. | [optional] |
+|**Lans** | Pointer to [**[]KubernetesNodePoolLan**](KubernetesNodePoolLan.md) | The array of existing private LANs to attach to worker nodes. | [optional] |
+|**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
+|**Name** | **string** | A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
+|**NodeCount** | **int32** | The number of worker nodes of the node pool. | |
 |**PublicIps** | Pointer to **[]string** | Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool&#39;s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt. | [optional] |
+|**RamSize** | **int32** | The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB. | |
+|**StorageSize** | **int32** | The allocated volume size in GB. The allocated volume size in GB. To achieve good performance, we recommend a size greater than 100GB for SSD. | |
+|**StorageType** | **string** | The storage type for the nodes. | |
 
 ## Methods
 
 ### NewKubernetesNodePoolPropertiesForPost
 
-`func NewKubernetesNodePoolPropertiesForPost(name string, datacenterId string, nodeCount int32, cpuFamily string, coresCount int32, ramSize int32, availabilityZone string, storageType string, storageSize int32, ) *KubernetesNodePoolPropertiesForPost`
+`func NewKubernetesNodePoolPropertiesForPost(availabilityZone string, coresCount int32, cpuFamily string, datacenterId string, name string, nodeCount int32, ramSize int32, storageSize int32, storageType string, ) *KubernetesNodePoolPropertiesForPost`
 
 NewKubernetesNodePoolPropertiesForPost instantiates a new KubernetesNodePoolPropertiesForPost object
 This constructor will assign default values to properties that have it defined,
@@ -40,84 +40,74 @@ NewKubernetesNodePoolPropertiesForPostWithDefaults instantiates a new Kubernetes
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetName
+### GetAnnotations
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetName() string`
+`func (o *KubernetesNodePoolPropertiesForPost) GetAnnotations() map[string]string`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetAnnotations returns the Annotations field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetAnnotationsOk
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetNameOk() (*string, bool)`
+`func (o *KubernetesNodePoolPropertiesForPost) GetAnnotationsOk() (*map[string]string, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetAnnotationsOk returns a tuple with the Annotations field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetAnnotations
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetName(v string)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetAnnotations(v map[string]string)`
 
-SetName sets Name field to given value.
+SetAnnotations sets Annotations field to given value.
 
+### HasAnnotations
 
-### GetDatacenterId
+`func (o *KubernetesNodePoolPropertiesForPost) HasAnnotations() bool`
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetDatacenterId() string`
+HasAnnotations returns a boolean if a field has been set.
 
-GetDatacenterId returns the DatacenterId field if non-nil, zero value otherwise.
+### GetAutoScaling
 
-### GetDatacenterIdOk
+`func (o *KubernetesNodePoolPropertiesForPost) GetAutoScaling() KubernetesAutoScaling`
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetDatacenterIdOk() (*string, bool)`
+GetAutoScaling returns the AutoScaling field if non-nil, zero value otherwise.
 
-GetDatacenterIdOk returns a tuple with the DatacenterId field if it's non-nil, zero value otherwise
+### GetAutoScalingOk
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetAutoScalingOk() (*KubernetesAutoScaling, bool)`
+
+GetAutoScalingOk returns a tuple with the AutoScaling field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDatacenterId
+### SetAutoScaling
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetDatacenterId(v string)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetAutoScaling(v KubernetesAutoScaling)`
 
-SetDatacenterId sets DatacenterId field to given value.
+SetAutoScaling sets AutoScaling field to given value.
 
+### HasAutoScaling
 
-### GetNodeCount
+`func (o *KubernetesNodePoolPropertiesForPost) HasAutoScaling() bool`
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetNodeCount() int32`
+HasAutoScaling returns a boolean if a field has been set.
 
-GetNodeCount returns the NodeCount field if non-nil, zero value otherwise.
+### GetAvailabilityZone
 
-### GetNodeCountOk
+`func (o *KubernetesNodePoolPropertiesForPost) GetAvailabilityZone() string`
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetNodeCountOk() (*int32, bool)`
+GetAvailabilityZone returns the AvailabilityZone field if non-nil, zero value otherwise.
 
-GetNodeCountOk returns a tuple with the NodeCount field if it's non-nil, zero value otherwise
+### GetAvailabilityZoneOk
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetAvailabilityZoneOk() (*string, bool)`
+
+GetAvailabilityZoneOk returns a tuple with the AvailabilityZone field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNodeCount
+### SetAvailabilityZone
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetNodeCount(v int32)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetAvailabilityZone(v string)`
 
-SetNodeCount sets NodeCount field to given value.
-
-
-### GetCpuFamily
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetCpuFamily() string`
-
-GetCpuFamily returns the CpuFamily field if non-nil, zero value otherwise.
-
-### GetCpuFamilyOk
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetCpuFamilyOk() (*string, bool)`
-
-GetCpuFamilyOk returns a tuple with the CpuFamily field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCpuFamily
-
-`func (o *KubernetesNodePoolPropertiesForPost) SetCpuFamily(v string)`
-
-SetCpuFamily sets CpuFamily field to given value.
+SetAvailabilityZone sets AvailabilityZone field to given value.
 
 
 ### GetCoresCount
@@ -140,84 +130,44 @@ and a boolean to check if the value has been set.
 SetCoresCount sets CoresCount field to given value.
 
 
-### GetRamSize
+### GetCpuFamily
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetRamSize() int32`
+`func (o *KubernetesNodePoolPropertiesForPost) GetCpuFamily() string`
 
-GetRamSize returns the RamSize field if non-nil, zero value otherwise.
+GetCpuFamily returns the CpuFamily field if non-nil, zero value otherwise.
 
-### GetRamSizeOk
+### GetCpuFamilyOk
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetRamSizeOk() (*int32, bool)`
+`func (o *KubernetesNodePoolPropertiesForPost) GetCpuFamilyOk() (*string, bool)`
 
-GetRamSizeOk returns a tuple with the RamSize field if it's non-nil, zero value otherwise
+GetCpuFamilyOk returns a tuple with the CpuFamily field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRamSize
+### SetCpuFamily
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetRamSize(v int32)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetCpuFamily(v string)`
 
-SetRamSize sets RamSize field to given value.
+SetCpuFamily sets CpuFamily field to given value.
 
 
-### GetAvailabilityZone
+### GetDatacenterId
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetAvailabilityZone() string`
+`func (o *KubernetesNodePoolPropertiesForPost) GetDatacenterId() string`
 
-GetAvailabilityZone returns the AvailabilityZone field if non-nil, zero value otherwise.
+GetDatacenterId returns the DatacenterId field if non-nil, zero value otherwise.
 
-### GetAvailabilityZoneOk
+### GetDatacenterIdOk
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetAvailabilityZoneOk() (*string, bool)`
+`func (o *KubernetesNodePoolPropertiesForPost) GetDatacenterIdOk() (*string, bool)`
 
-GetAvailabilityZoneOk returns a tuple with the AvailabilityZone field if it's non-nil, zero value otherwise
+GetDatacenterIdOk returns a tuple with the DatacenterId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAvailabilityZone
+### SetDatacenterId
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetAvailabilityZone(v string)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetDatacenterId(v string)`
 
-SetAvailabilityZone sets AvailabilityZone field to given value.
-
-
-### GetStorageType
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetStorageType() string`
-
-GetStorageType returns the StorageType field if non-nil, zero value otherwise.
-
-### GetStorageTypeOk
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetStorageTypeOk() (*string, bool)`
-
-GetStorageTypeOk returns a tuple with the StorageType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStorageType
-
-`func (o *KubernetesNodePoolPropertiesForPost) SetStorageType(v string)`
-
-SetStorageType sets StorageType field to given value.
-
-
-### GetStorageSize
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetStorageSize() int32`
-
-GetStorageSize returns the StorageSize field if non-nil, zero value otherwise.
-
-### GetStorageSizeOk
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetStorageSizeOk() (*int32, bool)`
-
-GetStorageSizeOk returns a tuple with the StorageSize field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetStorageSize
-
-`func (o *KubernetesNodePoolPropertiesForPost) SetStorageSize(v int32)`
-
-SetStorageSize sets StorageSize field to given value.
+SetDatacenterId sets DatacenterId field to given value.
 
 
 ### GetK8sVersion
@@ -245,55 +195,30 @@ SetK8sVersion sets K8sVersion field to given value.
 
 HasK8sVersion returns a boolean if a field has been set.
 
-### GetMaintenanceWindow
+### GetLabels
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetMaintenanceWindow() KubernetesMaintenanceWindow`
+`func (o *KubernetesNodePoolPropertiesForPost) GetLabels() map[string]string`
 
-GetMaintenanceWindow returns the MaintenanceWindow field if non-nil, zero value otherwise.
+GetLabels returns the Labels field if non-nil, zero value otherwise.
 
-### GetMaintenanceWindowOk
+### GetLabelsOk
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetMaintenanceWindowOk() (*KubernetesMaintenanceWindow, bool)`
+`func (o *KubernetesNodePoolPropertiesForPost) GetLabelsOk() (*map[string]string, bool)`
 
-GetMaintenanceWindowOk returns a tuple with the MaintenanceWindow field if it's non-nil, zero value otherwise
+GetLabelsOk returns a tuple with the Labels field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMaintenanceWindow
+### SetLabels
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetMaintenanceWindow(v KubernetesMaintenanceWindow)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetLabels(v map[string]string)`
 
-SetMaintenanceWindow sets MaintenanceWindow field to given value.
+SetLabels sets Labels field to given value.
 
-### HasMaintenanceWindow
+### HasLabels
 
-`func (o *KubernetesNodePoolPropertiesForPost) HasMaintenanceWindow() bool`
+`func (o *KubernetesNodePoolPropertiesForPost) HasLabels() bool`
 
-HasMaintenanceWindow returns a boolean if a field has been set.
-
-### GetAutoScaling
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetAutoScaling() KubernetesAutoScaling`
-
-GetAutoScaling returns the AutoScaling field if non-nil, zero value otherwise.
-
-### GetAutoScalingOk
-
-`func (o *KubernetesNodePoolPropertiesForPost) GetAutoScalingOk() (*KubernetesAutoScaling, bool)`
-
-GetAutoScalingOk returns a tuple with the AutoScaling field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAutoScaling
-
-`func (o *KubernetesNodePoolPropertiesForPost) SetAutoScaling(v KubernetesAutoScaling)`
-
-SetAutoScaling sets AutoScaling field to given value.
-
-### HasAutoScaling
-
-`func (o *KubernetesNodePoolPropertiesForPost) HasAutoScaling() bool`
-
-HasAutoScaling returns a boolean if a field has been set.
+HasLabels returns a boolean if a field has been set.
 
 ### GetLans
 
@@ -320,55 +245,70 @@ SetLans sets Lans field to given value.
 
 HasLans returns a boolean if a field has been set.
 
-### GetLabels
+### GetMaintenanceWindow
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetLabels() map[string]string`
+`func (o *KubernetesNodePoolPropertiesForPost) GetMaintenanceWindow() KubernetesMaintenanceWindow`
 
-GetLabels returns the Labels field if non-nil, zero value otherwise.
+GetMaintenanceWindow returns the MaintenanceWindow field if non-nil, zero value otherwise.
 
-### GetLabelsOk
+### GetMaintenanceWindowOk
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetLabelsOk() (*map[string]string, bool)`
+`func (o *KubernetesNodePoolPropertiesForPost) GetMaintenanceWindowOk() (*KubernetesMaintenanceWindow, bool)`
 
-GetLabelsOk returns a tuple with the Labels field if it's non-nil, zero value otherwise
+GetMaintenanceWindowOk returns a tuple with the MaintenanceWindow field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLabels
+### SetMaintenanceWindow
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetLabels(v map[string]string)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetMaintenanceWindow(v KubernetesMaintenanceWindow)`
 
-SetLabels sets Labels field to given value.
+SetMaintenanceWindow sets MaintenanceWindow field to given value.
 
-### HasLabels
+### HasMaintenanceWindow
 
-`func (o *KubernetesNodePoolPropertiesForPost) HasLabels() bool`
+`func (o *KubernetesNodePoolPropertiesForPost) HasMaintenanceWindow() bool`
 
-HasLabels returns a boolean if a field has been set.
+HasMaintenanceWindow returns a boolean if a field has been set.
 
-### GetAnnotations
+### GetName
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetAnnotations() map[string]string`
+`func (o *KubernetesNodePoolPropertiesForPost) GetName() string`
 
-GetAnnotations returns the Annotations field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAnnotationsOk
+### GetNameOk
 
-`func (o *KubernetesNodePoolPropertiesForPost) GetAnnotationsOk() (*map[string]string, bool)`
+`func (o *KubernetesNodePoolPropertiesForPost) GetNameOk() (*string, bool)`
 
-GetAnnotationsOk returns a tuple with the Annotations field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAnnotations
+### SetName
 
-`func (o *KubernetesNodePoolPropertiesForPost) SetAnnotations(v map[string]string)`
+`func (o *KubernetesNodePoolPropertiesForPost) SetName(v string)`
 
-SetAnnotations sets Annotations field to given value.
+SetName sets Name field to given value.
 
-### HasAnnotations
 
-`func (o *KubernetesNodePoolPropertiesForPost) HasAnnotations() bool`
+### GetNodeCount
 
-HasAnnotations returns a boolean if a field has been set.
+`func (o *KubernetesNodePoolPropertiesForPost) GetNodeCount() int32`
+
+GetNodeCount returns the NodeCount field if non-nil, zero value otherwise.
+
+### GetNodeCountOk
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetNodeCountOk() (*int32, bool)`
+
+GetNodeCountOk returns a tuple with the NodeCount field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNodeCount
+
+`func (o *KubernetesNodePoolPropertiesForPost) SetNodeCount(v int32)`
+
+SetNodeCount sets NodeCount field to given value.
+
 
 ### GetPublicIps
 
@@ -394,6 +334,66 @@ SetPublicIps sets PublicIps field to given value.
 `func (o *KubernetesNodePoolPropertiesForPost) HasPublicIps() bool`
 
 HasPublicIps returns a boolean if a field has been set.
+
+### GetRamSize
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetRamSize() int32`
+
+GetRamSize returns the RamSize field if non-nil, zero value otherwise.
+
+### GetRamSizeOk
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetRamSizeOk() (*int32, bool)`
+
+GetRamSizeOk returns a tuple with the RamSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRamSize
+
+`func (o *KubernetesNodePoolPropertiesForPost) SetRamSize(v int32)`
+
+SetRamSize sets RamSize field to given value.
+
+
+### GetStorageSize
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetStorageSize() int32`
+
+GetStorageSize returns the StorageSize field if non-nil, zero value otherwise.
+
+### GetStorageSizeOk
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetStorageSizeOk() (*int32, bool)`
+
+GetStorageSizeOk returns a tuple with the StorageSize field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStorageSize
+
+`func (o *KubernetesNodePoolPropertiesForPost) SetStorageSize(v int32)`
+
+SetStorageSize sets StorageSize field to given value.
+
+
+### GetStorageType
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetStorageType() string`
+
+GetStorageType returns the StorageType field if non-nil, zero value otherwise.
+
+### GetStorageTypeOk
+
+`func (o *KubernetesNodePoolPropertiesForPost) GetStorageTypeOk() (*string, bool)`
+
+GetStorageTypeOk returns a tuple with the StorageType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStorageType
+
+`func (o *KubernetesNodePoolPropertiesForPost) SetStorageType(v string)`
+
+SetStorageType sets StorageType field to given value.
+
 
 
 

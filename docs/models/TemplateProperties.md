@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The resource name. | |
 |**Cores** | **float32** | The CPU cores count. | |
+|**Name** | **string** | The resource name. | |
 |**Ram** | **float32** | The RAM size in MB. | |
 |**StorageSize** | **float32** | The storage size in GB. | |
 
@@ -13,7 +13,7 @@
 
 ### NewTemplateProperties
 
-`func NewTemplateProperties(name string, cores float32, ram float32, storageSize float32, ) *TemplateProperties`
+`func NewTemplateProperties(cores float32, name string, ram float32, storageSize float32, ) *TemplateProperties`
 
 NewTemplateProperties instantiates a new TemplateProperties object
 This constructor will assign default values to properties that have it defined,
@@ -27,26 +27,6 @@ will change when the set of required properties is changed
 NewTemplatePropertiesWithDefaults instantiates a new TemplateProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetName
-
-`func (o *TemplateProperties) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *TemplateProperties) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *TemplateProperties) SetName(v string)`
-
-SetName sets Name field to given value.
-
 
 ### GetCores
 
@@ -66,6 +46,26 @@ and a boolean to check if the value has been set.
 `func (o *TemplateProperties) SetCores(v float32)`
 
 SetCores sets Cores field to given value.
+
+
+### GetName
+
+`func (o *TemplateProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *TemplateProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *TemplateProperties) SetName(v string)`
+
+SetName sets Name field to given value.
 
 
 ### GetRam

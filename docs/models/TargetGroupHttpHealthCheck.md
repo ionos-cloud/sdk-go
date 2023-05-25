@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Path** | Pointer to **string** | The destination URL for HTTP the health check; the default is &#39;/&#39;. | [optional] |
-|**Method** | Pointer to **string** | The method used for the health check request. | [optional] |
 |**MatchType** | **string** | Specify the target&#39;s response type to match ALB&#39;s request. | |
-|**Response** | **string** | The response returned by the request. It can be a status code or a response body depending on the definition of &#39;matchType&#39;. | |
-|**Regex** | Pointer to **bool** | Specifies whether to use a regular expression to parse the response body; the default value is &#39;FALSE&#39;.  By using regular expressions, you can flexibly customize the expected response from a healthy server. | [optional] |
+|**Method** | Pointer to **string** | The method used for the health check request. | [optional] |
 |**Negate** | Pointer to **bool** | Specifies whether to negate an individual entry; the default value is &#39;FALSE&#39;. | [optional] |
+|**Path** | Pointer to **string** | The destination URL for HTTP the health check; the default is &#39;/&#39;. | [optional] |
+|**Regex** | Pointer to **bool** | Specifies whether to use a regular expression to parse the response body; the default value is &#39;FALSE&#39;.  By using regular expressions, you can flexibly customize the expected response from a healthy server. | [optional] |
+|**Response** | **string** | The response returned by the request. It can be a status code or a response body depending on the definition of &#39;matchType&#39;. | |
 
 ## Methods
 
@@ -30,30 +30,25 @@ NewTargetGroupHttpHealthCheckWithDefaults instantiates a new TargetGroupHttpHeal
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetPath
+### GetMatchType
 
-`func (o *TargetGroupHttpHealthCheck) GetPath() string`
+`func (o *TargetGroupHttpHealthCheck) GetMatchType() string`
 
-GetPath returns the Path field if non-nil, zero value otherwise.
+GetMatchType returns the MatchType field if non-nil, zero value otherwise.
 
-### GetPathOk
+### GetMatchTypeOk
 
-`func (o *TargetGroupHttpHealthCheck) GetPathOk() (*string, bool)`
+`func (o *TargetGroupHttpHealthCheck) GetMatchTypeOk() (*string, bool)`
 
-GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
+GetMatchTypeOk returns a tuple with the MatchType field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPath
+### SetMatchType
 
-`func (o *TargetGroupHttpHealthCheck) SetPath(v string)`
+`func (o *TargetGroupHttpHealthCheck) SetMatchType(v string)`
 
-SetPath sets Path field to given value.
+SetMatchType sets MatchType field to given value.
 
-### HasPath
-
-`func (o *TargetGroupHttpHealthCheck) HasPath() bool`
-
-HasPath returns a boolean if a field has been set.
 
 ### GetMethod
 
@@ -80,45 +75,55 @@ SetMethod sets Method field to given value.
 
 HasMethod returns a boolean if a field has been set.
 
-### GetMatchType
+### GetNegate
 
-`func (o *TargetGroupHttpHealthCheck) GetMatchType() string`
+`func (o *TargetGroupHttpHealthCheck) GetNegate() bool`
 
-GetMatchType returns the MatchType field if non-nil, zero value otherwise.
+GetNegate returns the Negate field if non-nil, zero value otherwise.
 
-### GetMatchTypeOk
+### GetNegateOk
 
-`func (o *TargetGroupHttpHealthCheck) GetMatchTypeOk() (*string, bool)`
+`func (o *TargetGroupHttpHealthCheck) GetNegateOk() (*bool, bool)`
 
-GetMatchTypeOk returns a tuple with the MatchType field if it's non-nil, zero value otherwise
+GetNegateOk returns a tuple with the Negate field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMatchType
+### SetNegate
 
-`func (o *TargetGroupHttpHealthCheck) SetMatchType(v string)`
+`func (o *TargetGroupHttpHealthCheck) SetNegate(v bool)`
 
-SetMatchType sets MatchType field to given value.
+SetNegate sets Negate field to given value.
 
+### HasNegate
 
-### GetResponse
+`func (o *TargetGroupHttpHealthCheck) HasNegate() bool`
 
-`func (o *TargetGroupHttpHealthCheck) GetResponse() string`
+HasNegate returns a boolean if a field has been set.
 
-GetResponse returns the Response field if non-nil, zero value otherwise.
+### GetPath
 
-### GetResponseOk
+`func (o *TargetGroupHttpHealthCheck) GetPath() string`
 
-`func (o *TargetGroupHttpHealthCheck) GetResponseOk() (*string, bool)`
+GetPath returns the Path field if non-nil, zero value otherwise.
 
-GetResponseOk returns a tuple with the Response field if it's non-nil, zero value otherwise
+### GetPathOk
+
+`func (o *TargetGroupHttpHealthCheck) GetPathOk() (*string, bool)`
+
+GetPathOk returns a tuple with the Path field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetResponse
+### SetPath
 
-`func (o *TargetGroupHttpHealthCheck) SetResponse(v string)`
+`func (o *TargetGroupHttpHealthCheck) SetPath(v string)`
 
-SetResponse sets Response field to given value.
+SetPath sets Path field to given value.
 
+### HasPath
+
+`func (o *TargetGroupHttpHealthCheck) HasPath() bool`
+
+HasPath returns a boolean if a field has been set.
 
 ### GetRegex
 
@@ -145,30 +150,25 @@ SetRegex sets Regex field to given value.
 
 HasRegex returns a boolean if a field has been set.
 
-### GetNegate
+### GetResponse
 
-`func (o *TargetGroupHttpHealthCheck) GetNegate() bool`
+`func (o *TargetGroupHttpHealthCheck) GetResponse() string`
 
-GetNegate returns the Negate field if non-nil, zero value otherwise.
+GetResponse returns the Response field if non-nil, zero value otherwise.
 
-### GetNegateOk
+### GetResponseOk
 
-`func (o *TargetGroupHttpHealthCheck) GetNegateOk() (*bool, bool)`
+`func (o *TargetGroupHttpHealthCheck) GetResponseOk() (*string, bool)`
 
-GetNegateOk returns a tuple with the Negate field if it's non-nil, zero value otherwise
+GetResponseOk returns a tuple with the Response field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetNegate
+### SetResponse
 
-`func (o *TargetGroupHttpHealthCheck) SetNegate(v bool)`
+`func (o *TargetGroupHttpHealthCheck) SetResponse(v string)`
 
-SetNegate sets Negate field to given value.
+SetResponse sets Response field to given value.
 
-### HasNegate
-
-`func (o *TargetGroupHttpHealthCheck) HasNegate() bool`
-
-HasNegate returns a boolean if a field has been set.
 
 
 
