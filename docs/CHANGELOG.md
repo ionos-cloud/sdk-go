@@ -1,5 +1,21 @@
 # CHANGELOG
 
+
+## 6.1.7 (June, 2023)
+### Features:
+- New licenceType supported: **RHEL**
+
+## 6.1.5 (March, 2023)
+### Features: 
+- Added generic functions for utility package
+
+### Fixes: 
+- Removed swagger
+
+### Updated: 
+- Library dependencies
+
+
 ## 6.1.4 \(January 26th, 2022\)
 ### Features:
 - Added `placementGroupId` and `vnet` parameters.
