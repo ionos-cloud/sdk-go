@@ -12,10 +12,15 @@
 
 ![Alt text](.github/IONOS.CLOUD.BLU.svg?raw=true "Title")
 
+
 # Go API client for ionoscloud
 
-**NOTE:
-_Please consider using SDK Go v6 releases that are using IONOS Cloud API Version 6, the latest stable API version. New features and improvements will be integrated in IONOS Cloud API Version 6._**
+**IMPORTANT NOTE**: 
+
+The Go SDK v5 is deprecated and no longer maintained. Please upgrade to v6, which uses the latest stable API version. 
+
+The Go SDK **v5 will reach End of Life by September 30, 2023**. After this date, the v5 API will not be accessible. If you require any assistance, please contact our support team.
+
 
 An enterprise-grade Infrastructure is provided as a Service (IaaS) solution that can be managed through a browser-based \"Data Center Designer\" (DCD) tool or via an easy-to-use API. 
 
