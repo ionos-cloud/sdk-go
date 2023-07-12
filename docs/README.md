@@ -2,8 +2,11 @@
 
 ## Overview
 
-**NOTE:
-_Please consider using SDK Go v6 releases that are using IONOS Cloud API Version 6, the latest stable API version. New features and improvements will be integrated in IONOS Cloud API Version 6._**
+**IMPORTANT NOTE**: 
+
+The Go SDK v5 is deprecated and no longer maintained. Please upgrade to v6, which uses the latest stable API version. 
+
+The Go SDK **v5 will reach End of Life by September 30, 2023**. After this date, the v5 API will not be accessible. If you require any assistance, please contact our support team.
 
 The IONOS Cloud SDK for GO provides you with access to the IONOS Cloud API. The client library supports both simple and complex requests. It is designed for developers who are building applications in GO . The SDK for GO wraps the IONOS Cloud API. All API operations are performed over SSL and authenticated using your IONOS Cloud portal credentials. The API can be accessed within an instance running in IONOS Cloud or directly over the Internet from any application that can send an HTTPS request and receive an HTTPS response.
 
