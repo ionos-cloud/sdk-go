@@ -40,7 +40,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TemplatesApi.TemplatesFindById(context.Background(), templateId).Depth(depth).Execute()
+    resource, resp, err := apiClient.TemplatesApi.TemplatesFindById(context.Background(), templateId).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TemplatesApi.TemplatesFindById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -108,7 +108,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TemplatesApi.TemplatesGet(context.Background()).Depth(depth).Execute()
+    resource, resp, err := apiClient.TemplatesApi.TemplatesGet(context.Background()).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TemplatesApi.TemplatesGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

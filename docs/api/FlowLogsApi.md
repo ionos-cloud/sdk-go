@@ -49,7 +49,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsDelete(context.Background(), datacenterId, serverId, nicId, flowlogId).Pretty(pretty).Depth(depth).Execute()
+    resp, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsDelete(context.Background(), datacenterId, serverId, nicId, flowlogId).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -125,7 +125,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsFindById(context.Background(), datacenterId, serverId, nicId, flowlogId).Pretty(pretty).Depth(depth).Execute()
+    resource, resp, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsFindById(context.Background(), datacenterId, serverId, nicId, flowlogId).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsFindById``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -206,7 +206,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsGet(context.Background(), datacenterId, serverId, nicId).Pretty(pretty).Depth(depth).Offset(offset).Limit(limit).Execute()
+    resource, resp, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsGet(context.Background(), datacenterId, serverId, nicId).Pretty(pretty).Depth(depth).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -287,7 +287,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPatch(context.Background(), datacenterId, serverId, nicId, flowlogId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
+    resource, resp, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPatch(context.Background(), datacenterId, serverId, nicId, flowlogId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsPatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -367,7 +367,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPost(context.Background(), datacenterId, serverId, nicId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
+    resource, resp, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPost(context.Background(), datacenterId, serverId, nicId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -447,7 +447,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPut(context.Background(), datacenterId, serverId, nicId, flowlogId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
+    resource, resp, err := apiClient.FlowLogsApi.DatacentersServersNicsFlowlogsPut(context.Background(), datacenterId, serverId, nicId, flowlogId).Flowlog(flowlog).Pretty(pretty).Depth(depth).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `FlowLogsApi.DatacentersServersNicsFlowlogsPut``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

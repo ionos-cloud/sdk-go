@@ -48,7 +48,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TargetGroupsApi.TargetGroupsDelete(context.Background(), targetGroupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resp, err := apiClient.TargetGroupsApi.TargetGroupsDelete(context.Background(), targetGroupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetGroupsDelete``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -121,7 +121,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TargetGroupsApi.TargetgroupsFindByTargetGroupId(context.Background(), targetGroupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resource, resp, err := apiClient.TargetGroupsApi.TargetgroupsFindByTargetGroupId(context.Background(), targetGroupId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsFindByTargetGroupId``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -199,7 +199,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TargetGroupsApi.TargetgroupsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+    resource, resp, err := apiClient.TargetGroupsApi.TargetgroupsGet(context.Background()).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -274,7 +274,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TargetGroupsApi.TargetgroupsPatch(context.Background(), targetGroupId).TargetGroupProperties(targetGroupProperties).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resource, resp, err := apiClient.TargetGroupsApi.TargetgroupsPatch(context.Background(), targetGroupId).TargetGroupProperties(targetGroupProperties).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsPatch``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -351,7 +351,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TargetGroupsApi.TargetgroupsPost(context.Background()).TargetGroup(targetGroup).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resource, resp, err := apiClient.TargetGroupsApi.TargetgroupsPost(context.Background()).TargetGroup(targetGroup).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -425,7 +425,7 @@ func main() {
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resp, r, err := apiClient.TargetGroupsApi.TargetgroupsPut(context.Background(), targetGroupId).TargetGroup(targetGroup).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    resource, resp, err := apiClient.TargetGroupsApi.TargetgroupsPut(context.Background(), targetGroupId).TargetGroup(targetGroup).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `TargetGroupsApi.TargetgroupsPut``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)

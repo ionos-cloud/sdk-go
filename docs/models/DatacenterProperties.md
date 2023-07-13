@@ -7,6 +7,7 @@
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
 |**Description** | Pointer to **string** | A description for the datacenter, such as staging, production. | [optional] |
 |**Features** | Pointer to **[]string** | List of features supported by the location where this data center is provisioned. | [optional] [readonly] |
+|**Ipv6CidrBlock** | Pointer to **NullableString** | [The IPv6 feature is in beta phase and not ready for production usage.] This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed. | [optional] [readonly] |
 |**Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests). | |
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |
@@ -105,6 +106,41 @@ SetFeatures sets Features field to given value.
 `func (o *DatacenterProperties) HasFeatures() bool`
 
 HasFeatures returns a boolean if a field has been set.
+
+### GetIpv6CidrBlock
+
+`func (o *DatacenterProperties) GetIpv6CidrBlock() string`
+
+GetIpv6CidrBlock returns the Ipv6CidrBlock field if non-nil, zero value otherwise.
+
+### GetIpv6CidrBlockOk
+
+`func (o *DatacenterProperties) GetIpv6CidrBlockOk() (*string, bool)`
+
+GetIpv6CidrBlockOk returns a tuple with the Ipv6CidrBlock field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetIpv6CidrBlock
+
+`func (o *DatacenterProperties) SetIpv6CidrBlock(v string)`
+
+SetIpv6CidrBlock sets Ipv6CidrBlock field to given value.
+
+### HasIpv6CidrBlock
+
+`func (o *DatacenterProperties) HasIpv6CidrBlock() bool`
+
+HasIpv6CidrBlock returns a boolean if a field has been set.
+
+### SetIpv6CidrBlockNil
+
+`func (o *DatacenterProperties) SetIpv6CidrBlockNil()`
+
+ SetIpv6CidrBlockNil sets the value for Ipv6CidrBlock to be marshalled as an explicit nil
+ Alternatively Ipv6CidrBlock can be set directly to the address `&Nilstring`, which is a sentinel value that is checked when marshalling.
+
+### UnsetIpv6CidrBlock
+`func (o *DatacenterProperties) UnsetIpv6CidrBlock()`
 
 ### GetLocation
 
