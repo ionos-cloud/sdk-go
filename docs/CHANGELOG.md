@@ -1,5 +1,20 @@
 # CHANGELOG
 
+## 6.1.8 (July, 2023)
+### Features:
+Added support for **IPv6**:
+
+- New parameter on `DatacenterProperties`: `Ipv6CidrBlock`
+- New parameter on `LanProperties` and `LanPropertiesPost`: `Ipv6CidrBlock`
+- New parameters on `NicProperties`: `Dhcpv6`, `Ipv6CidrBlock` and `Ipv6Ips`
+
+More details about IPv6 configuration can be found [here](https://docs.ionos.com/cloud/compute-engine/networks/ipv6).
+
+
+### Fixes:
+- Go client backoff now respects context cancellation
+
+**Full Changelog**: https://github.com/ionos-cloud/sdk-go/compare/v6.1.7...v6.1.8
 
 ## 6.1.7 (June, 2023)
 ### Features:
