@@ -1,5 +1,22 @@
 # CHANGELOG
 
+## 6.1.10 (December, 2023)
+### Features:
+- Add `proxyProtocol` parameter for ALB and NLB targets
+
+### Fixes:
+- Allow setting `Host` and `Scheme` when creating a client with a `serverUrl`
+
+### Enhancements
+- Remove usage of deprecated `ioutil` package
+
+### Documentation
+- Move docs for Url with context to `api_doc.mustache`
+
+## 6.1.9 (September, 2023)
+### Features:
+- Support injecting `x-contract-number` header through environment variable.
+
 
 ## 6.1.7 (June, 2023)
 ### Features:
