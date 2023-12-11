@@ -8,7 +8,7 @@
 - Allow setting `Host` and `Scheme` when creating a client with a `serverUrl` (@maxbischoff)
 
 ### Enhancements
-- Remove usage of deprecated `ioutil` package @(avorima)
+- Remove usage of deprecated `ioutil` package (@avorima)
 
 ### Documentation
 - Move docs for Url with context to `api_doc.mustache`
