@@ -7,7 +7,7 @@
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
 |**Description** | Pointer to **string** | A description for the datacenter, such as staging, production. | [optional] |
 |**Features** | Pointer to **[]string** | List of features supported by the location where this data center is provisioned. | [optional] [readonly] |
-|**Ipv6CidrBlock** | Pointer to **NullableString** | [The IPv6 feature is in beta phase and not ready for production usage.] This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed. | [optional] [readonly] |
+|**Ipv6CidrBlock** | Pointer to **NullableString** | This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed. | [optional] [readonly] |
 |**Location** | **string** | The physical location where the datacenter will be created. This will be where all of your servers live. Property cannot be modified after datacenter creation (disallowed in update requests). | |
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |

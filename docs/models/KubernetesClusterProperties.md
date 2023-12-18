@@ -7,8 +7,12 @@
 |**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6. | [optional] |
 |**AvailableUpgradeVersions** | Pointer to **[]string** | List of available versions for upgrading the cluster | [optional] |
 |**K8sVersion** | Pointer to **string** | The Kubernetes version the cluster is running. This imposes restrictions on what Kubernetes versions can be run in a cluster&#39;s nodepools. Additionally, not all Kubernetes versions are viable upgrade targets for all prior versions. | [optional] |
+|**Location** | Pointer to **string** | The location of the cluster if the cluster is private. This property is immutable. The location must be enabled for your contract or you must have a Datacenter within that location. This attribute is mandatory if the cluster is private. | [optional] |
 |**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
 |**Name** | **string** | A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
+|**NatGatewayIp** | Pointer to **string** | The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster&#39;s location. This attribute is mandatory if the cluster is private. | [optional] |
+|**NodeSubnet** | Pointer to **string** | The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length. | [optional] |
+|**Public** | Pointer to **bool** | The indicator if the cluster is public or private. Be aware that setting it to false is currently in beta phase. | [optional] [default to true]|
 |**S3Buckets** | Pointer to [**[]S3Bucket**](S3Bucket.md) | List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs | [optional] |
 |**ViableNodePoolVersions** | Pointer to **[]string** | List of versions that may be used for node pools under this cluster | [optional] |
 
@@ -106,6 +110,31 @@ SetK8sVersion sets K8sVersion field to given value.
 
 HasK8sVersion returns a boolean if a field has been set.
 
+### GetLocation
+
+`func (o *KubernetesClusterProperties) GetLocation() string`
+
+GetLocation returns the Location field if non-nil, zero value otherwise.
+
+### GetLocationOk
+
+`func (o *KubernetesClusterProperties) GetLocationOk() (*string, bool)`
+
+GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocation
+
+`func (o *KubernetesClusterProperties) SetLocation(v string)`
+
+SetLocation sets Location field to given value.
+
+### HasLocation
+
+`func (o *KubernetesClusterProperties) HasLocation() bool`
+
+HasLocation returns a boolean if a field has been set.
+
 ### GetMaintenanceWindow
 
 `func (o *KubernetesClusterProperties) GetMaintenanceWindow() KubernetesMaintenanceWindow`
@@ -150,6 +179,81 @@ and a boolean to check if the value has been set.
 
 SetName sets Name field to given value.
 
+
+### GetNatGatewayIp
+
+`func (o *KubernetesClusterProperties) GetNatGatewayIp() string`
+
+GetNatGatewayIp returns the NatGatewayIp field if non-nil, zero value otherwise.
+
+### GetNatGatewayIpOk
+
+`func (o *KubernetesClusterProperties) GetNatGatewayIpOk() (*string, bool)`
+
+GetNatGatewayIpOk returns a tuple with the NatGatewayIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNatGatewayIp
+
+`func (o *KubernetesClusterProperties) SetNatGatewayIp(v string)`
+
+SetNatGatewayIp sets NatGatewayIp field to given value.
+
+### HasNatGatewayIp
+
+`func (o *KubernetesClusterProperties) HasNatGatewayIp() bool`
+
+HasNatGatewayIp returns a boolean if a field has been set.
+
+### GetNodeSubnet
+
+`func (o *KubernetesClusterProperties) GetNodeSubnet() string`
+
+GetNodeSubnet returns the NodeSubnet field if non-nil, zero value otherwise.
+
+### GetNodeSubnetOk
+
+`func (o *KubernetesClusterProperties) GetNodeSubnetOk() (*string, bool)`
+
+GetNodeSubnetOk returns a tuple with the NodeSubnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNodeSubnet
+
+`func (o *KubernetesClusterProperties) SetNodeSubnet(v string)`
+
+SetNodeSubnet sets NodeSubnet field to given value.
+
+### HasNodeSubnet
+
+`func (o *KubernetesClusterProperties) HasNodeSubnet() bool`
+
+HasNodeSubnet returns a boolean if a field has been set.
+
+### GetPublic
+
+`func (o *KubernetesClusterProperties) GetPublic() bool`
+
+GetPublic returns the Public field if non-nil, zero value otherwise.
+
+### GetPublicOk
+
+`func (o *KubernetesClusterProperties) GetPublicOk() (*bool, bool)`
+
+GetPublicOk returns a tuple with the Public field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPublic
+
+`func (o *KubernetesClusterProperties) SetPublic(v bool)`
+
+SetPublic sets Public field to given value.
+
+### HasPublic
+
+`func (o *KubernetesClusterProperties) HasPublic() bool`
+
+HasPublic returns a boolean if a field has been set.
 
 ### GetS3Buckets
 
