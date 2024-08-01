@@ -4,14 +4,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
-|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
-|**Email** | Pointer to **string** | The email address of the user. | [optional] |
 |**Firstname** | Pointer to **string** | The first name of the user. | [optional] |
-|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
 |**Lastname** | Pointer to **string** | The last name of the user. | [optional] |
+|**Email** | Pointer to **string** | The email address of the user. | [optional] |
 |**Password** | Pointer to **string** | password of the user | [optional] |
+|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
+|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
 |**SecAuthActive** | Pointer to **bool** | Indicates if secure authentication is active for the user. | [optional] |
+|**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
 
 ## Methods
 
@@ -31,81 +31,6 @@ will change when the set of required properties is changed
 NewUserPropertiesPutWithDefaults instantiates a new UserPropertiesPut object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetActive
-
-`func (o *UserPropertiesPut) GetActive() bool`
-
-GetActive returns the Active field if non-nil, zero value otherwise.
-
-### GetActiveOk
-
-`func (o *UserPropertiesPut) GetActiveOk() (*bool, bool)`
-
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActive
-
-`func (o *UserPropertiesPut) SetActive(v bool)`
-
-SetActive sets Active field to given value.
-
-### HasActive
-
-`func (o *UserPropertiesPut) HasActive() bool`
-
-HasActive returns a boolean if a field has been set.
-
-### GetAdministrator
-
-`func (o *UserPropertiesPut) GetAdministrator() bool`
-
-GetAdministrator returns the Administrator field if non-nil, zero value otherwise.
-
-### GetAdministratorOk
-
-`func (o *UserPropertiesPut) GetAdministratorOk() (*bool, bool)`
-
-GetAdministratorOk returns a tuple with the Administrator field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdministrator
-
-`func (o *UserPropertiesPut) SetAdministrator(v bool)`
-
-SetAdministrator sets Administrator field to given value.
-
-### HasAdministrator
-
-`func (o *UserPropertiesPut) HasAdministrator() bool`
-
-HasAdministrator returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *UserPropertiesPut) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *UserPropertiesPut) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *UserPropertiesPut) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *UserPropertiesPut) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
 
 ### GetFirstname
 
@@ -132,31 +57,6 @@ SetFirstname sets Firstname field to given value.
 
 HasFirstname returns a boolean if a field has been set.
 
-### GetForceSecAuth
-
-`func (o *UserPropertiesPut) GetForceSecAuth() bool`
-
-GetForceSecAuth returns the ForceSecAuth field if non-nil, zero value otherwise.
-
-### GetForceSecAuthOk
-
-`func (o *UserPropertiesPut) GetForceSecAuthOk() (*bool, bool)`
-
-GetForceSecAuthOk returns a tuple with the ForceSecAuth field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetForceSecAuth
-
-`func (o *UserPropertiesPut) SetForceSecAuth(v bool)`
-
-SetForceSecAuth sets ForceSecAuth field to given value.
-
-### HasForceSecAuth
-
-`func (o *UserPropertiesPut) HasForceSecAuth() bool`
-
-HasForceSecAuth returns a boolean if a field has been set.
-
 ### GetLastname
 
 `func (o *UserPropertiesPut) GetLastname() string`
@@ -181,6 +81,31 @@ SetLastname sets Lastname field to given value.
 `func (o *UserPropertiesPut) HasLastname() bool`
 
 HasLastname returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *UserPropertiesPut) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *UserPropertiesPut) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *UserPropertiesPut) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *UserPropertiesPut) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
 
 ### GetPassword
 
@@ -207,6 +132,56 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
+### GetAdministrator
+
+`func (o *UserPropertiesPut) GetAdministrator() bool`
+
+GetAdministrator returns the Administrator field if non-nil, zero value otherwise.
+
+### GetAdministratorOk
+
+`func (o *UserPropertiesPut) GetAdministratorOk() (*bool, bool)`
+
+GetAdministratorOk returns a tuple with the Administrator field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdministrator
+
+`func (o *UserPropertiesPut) SetAdministrator(v bool)`
+
+SetAdministrator sets Administrator field to given value.
+
+### HasAdministrator
+
+`func (o *UserPropertiesPut) HasAdministrator() bool`
+
+HasAdministrator returns a boolean if a field has been set.
+
+### GetForceSecAuth
+
+`func (o *UserPropertiesPut) GetForceSecAuth() bool`
+
+GetForceSecAuth returns the ForceSecAuth field if non-nil, zero value otherwise.
+
+### GetForceSecAuthOk
+
+`func (o *UserPropertiesPut) GetForceSecAuthOk() (*bool, bool)`
+
+GetForceSecAuthOk returns a tuple with the ForceSecAuth field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetForceSecAuth
+
+`func (o *UserPropertiesPut) SetForceSecAuth(v bool)`
+
+SetForceSecAuth sets ForceSecAuth field to given value.
+
+### HasForceSecAuth
+
+`func (o *UserPropertiesPut) HasForceSecAuth() bool`
+
+HasForceSecAuth returns a boolean if a field has been set.
+
 ### GetSecAuthActive
 
 `func (o *UserPropertiesPut) GetSecAuthActive() bool`
@@ -231,6 +206,31 @@ SetSecAuthActive sets SecAuthActive field to given value.
 `func (o *UserPropertiesPut) HasSecAuthActive() bool`
 
 HasSecAuthActive returns a boolean if a field has been set.
+
+### GetActive
+
+`func (o *UserPropertiesPut) GetActive() bool`
+
+GetActive returns the Active field if non-nil, zero value otherwise.
+
+### GetActiveOk
+
+`func (o *UserPropertiesPut) GetActiveOk() (*bool, bool)`
+
+GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActive
+
+`func (o *UserPropertiesPut) SetActive(v bool)`
+
+SetActive sets Active field to given value.
+
+### HasActive
+
+`func (o *UserPropertiesPut) HasActive() bool`
+
+HasActive returns a boolean if a field has been set.
 
 
 

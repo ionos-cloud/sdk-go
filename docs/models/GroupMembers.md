@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Items** | Pointer to [**[]User**](User.md) | Array of items in the collection. | [optional] [readonly] |
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]User**](User.md) | Array of items in the collection. | [optional] [readonly] |
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewGroupMembersWithDefaults instantiates a new GroupMembers object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHref
-
-`func (o *GroupMembers) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *GroupMembers) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *GroupMembers) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *GroupMembers) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -78,31 +53,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetItems
-
-`func (o *GroupMembers) GetItems() []User`
-
-GetItems returns the Items field if non-nil, zero value otherwise.
-
-### GetItemsOk
-
-`func (o *GroupMembers) GetItemsOk() (*[]User, bool)`
-
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItems
-
-`func (o *GroupMembers) SetItems(v []User)`
-
-SetItems sets Items field to given value.
-
-### HasItems
-
-`func (o *GroupMembers) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
-
 ### GetType
 
 `func (o *GroupMembers) GetType() Type`
@@ -127,6 +77,56 @@ SetType sets Type field to given value.
 `func (o *GroupMembers) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *GroupMembers) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *GroupMembers) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *GroupMembers) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *GroupMembers) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
+
+### GetItems
+
+`func (o *GroupMembers) GetItems() []User`
+
+GetItems returns the Items field if non-nil, zero value otherwise.
+
+### GetItemsOk
+
+`func (o *GroupMembers) GetItemsOk() (*[]User, bool)`
+
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItems
+
+`func (o *GroupMembers) SetItems(v []User)`
+
+SetItems sets Items field to given value.
+
+### HasItems
+
+`func (o *GroupMembers) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 

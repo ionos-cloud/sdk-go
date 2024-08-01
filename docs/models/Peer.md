@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**DatacenterId** | Pointer to **string** |  | [optional] |
-|**DatacenterName** | Pointer to **string** |  | [optional] |
-|**Id** | Pointer to **string** |  | [optional] |
-|**Location** | Pointer to **string** |  | [optional] |
-|**Name** | Pointer to **string** |  | [optional] |
+|**Id** | Pointer to **string** | Identifier of the LAN connected to the Cross Connect. | [optional] |
+|**Name** | Pointer to **string** | Name of the LAN connected to the Cross Connect. | [optional] |
+|**DatacenterId** | Pointer to **string** | Identifier of the virtual data center connected to the Cross Connect. | [optional] |
+|**DatacenterName** | Pointer to **string** | Name of the virtual data center connected to the Cross Connect. | [optional] |
+|**Location** | Pointer to **string** | Location of the virtual data center connected to the Cross Connect. | [optional] |
 
 ## Methods
 
@@ -28,6 +28,56 @@ will change when the set of required properties is changed
 NewPeerWithDefaults instantiates a new Peer object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetId
+
+`func (o *Peer) GetId() string`
+
+GetId returns the Id field if non-nil, zero value otherwise.
+
+### GetIdOk
+
+`func (o *Peer) GetIdOk() (*string, bool)`
+
+GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetId
+
+`func (o *Peer) SetId(v string)`
+
+SetId sets Id field to given value.
+
+### HasId
+
+`func (o *Peer) HasId() bool`
+
+HasId returns a boolean if a field has been set.
+
+### GetName
+
+`func (o *Peer) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *Peer) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *Peer) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *Peer) HasName() bool`
+
+HasName returns a boolean if a field has been set.
 
 ### GetDatacenterId
 
@@ -79,31 +129,6 @@ SetDatacenterName sets DatacenterName field to given value.
 
 HasDatacenterName returns a boolean if a field has been set.
 
-### GetId
-
-`func (o *Peer) GetId() string`
-
-GetId returns the Id field if non-nil, zero value otherwise.
-
-### GetIdOk
-
-`func (o *Peer) GetIdOk() (*string, bool)`
-
-GetIdOk returns a tuple with the Id field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetId
-
-`func (o *Peer) SetId(v string)`
-
-SetId sets Id field to given value.
-
-### HasId
-
-`func (o *Peer) HasId() bool`
-
-HasId returns a boolean if a field has been set.
-
 ### GetLocation
 
 `func (o *Peer) GetLocation() string`
@@ -128,31 +153,6 @@ SetLocation sets Location field to given value.
 `func (o *Peer) HasLocation() bool`
 
 HasLocation returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *Peer) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *Peer) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *Peer) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *Peer) HasName() bool`
-
-HasName returns a boolean if a field has been set.
 
 
 

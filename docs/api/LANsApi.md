@@ -574,7 +574,7 @@ Other parameters are passed through a pointer to a apiDatacentersLansPatchReques
 ## DatacentersLansPost
 
 ```go
-var result LanPost = DatacentersLansPost(ctx, datacenterId)
+var result Lan = DatacentersLansPost(ctx, datacenterId)
                       .Lan(lan)
                       .Pretty(pretty)
                       .Depth(depth)
@@ -601,7 +601,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    lan := *openapiclient.NewLanPost(*openapiclient.NewLanPropertiesPost()) // LanPost | The LAN to create.
+    lan := *openapiclient.NewLan(*openapiclient.NewLanProperties()) // Lan | The LAN to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -613,7 +613,7 @@ func main() {
         fmt.Fprintf(os.Stderr, "Error when calling `LANsApi.DatacentersLansPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
     }
-    // response from `DatacentersLansPost`: LanPost
+    // response from `DatacentersLansPost`: Lan
     fmt.Fprintf(os.Stdout, "Response from `LANsApi.DatacentersLansPost`: %v\n", resp)
 }
 ```
@@ -633,14 +633,14 @@ Other parameters are passed through a pointer to a apiDatacentersLansPostRequest
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **lan** | [**LanPost**](../models/LanPost.md) | The LAN to create. | |
+| **lan** | [**Lan**](../models/Lan.md) | The LAN to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
 
 ### Return type
 
-[**LanPost**](../models/LanPost.md)
+[**Lan**](../models/Lan.md)
 
 ### HTTP request headers
 

@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Groups** | Pointer to [**GroupUsers**](GroupUsers.md) |  | [optional] |
 |**Owns** | Pointer to [**ResourcesUsers**](ResourcesUsers.md) |  | [optional] |
+|**Groups** | Pointer to [**GroupUsers**](GroupUsers.md) |  | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewUsersEntitiesWithDefaults instantiates a new UsersEntities object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetGroups
-
-`func (o *UsersEntities) GetGroups() GroupUsers`
-
-GetGroups returns the Groups field if non-nil, zero value otherwise.
-
-### GetGroupsOk
-
-`func (o *UsersEntities) GetGroupsOk() (*GroupUsers, bool)`
-
-GetGroupsOk returns a tuple with the Groups field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGroups
-
-`func (o *UsersEntities) SetGroups(v GroupUsers)`
-
-SetGroups sets Groups field to given value.
-
-### HasGroups
-
-`func (o *UsersEntities) HasGroups() bool`
-
-HasGroups returns a boolean if a field has been set.
 
 ### GetOwns
 
@@ -75,6 +50,31 @@ SetOwns sets Owns field to given value.
 `func (o *UsersEntities) HasOwns() bool`
 
 HasOwns returns a boolean if a field has been set.
+
+### GetGroups
+
+`func (o *UsersEntities) GetGroups() GroupUsers`
+
+GetGroups returns the Groups field if non-nil, zero value otherwise.
+
+### GetGroupsOk
+
+`func (o *UsersEntities) GetGroupsOk() (*GroupUsers, bool)`
+
+GetGroupsOk returns a tuple with the Groups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGroups
+
+`func (o *UsersEntities) SetGroups(v GroupUsers)`
+
+SetGroups sets Groups field to given value.
+
+### HasGroups
+
+`func (o *UsersEntities) HasGroups() bool`
+
+HasGroups returns a boolean if a field has been set.
 
 
 

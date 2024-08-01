@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Active** | Pointer to **bool** | Denotes weather the S3 key is active. | [optional] |
 |**SecretKey** | Pointer to **string** | Secret of the S3 key. | [optional] [readonly] |
+|**Active** | Pointer to **bool** | Denotes weather the S3 key is active. | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewS3KeyPropertiesWithDefaults instantiates a new S3KeyProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetActive
-
-`func (o *S3KeyProperties) GetActive() bool`
-
-GetActive returns the Active field if non-nil, zero value otherwise.
-
-### GetActiveOk
-
-`func (o *S3KeyProperties) GetActiveOk() (*bool, bool)`
-
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActive
-
-`func (o *S3KeyProperties) SetActive(v bool)`
-
-SetActive sets Active field to given value.
-
-### HasActive
-
-`func (o *S3KeyProperties) HasActive() bool`
-
-HasActive returns a boolean if a field has been set.
 
 ### GetSecretKey
 
@@ -75,6 +50,31 @@ SetSecretKey sets SecretKey field to given value.
 `func (o *S3KeyProperties) HasSecretKey() bool`
 
 HasSecretKey returns a boolean if a field has been set.
+
+### GetActive
+
+`func (o *S3KeyProperties) GetActive() bool`
+
+GetActive returns the Active field if non-nil, zero value otherwise.
+
+### GetActiveOk
+
+`func (o *S3KeyProperties) GetActiveOk() (*bool, bool)`
+
+GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetActive
+
+`func (o *S3KeyProperties) SetActive(v bool)`
+
+SetActive sets Active field to given value.
+
+### HasActive
+
+`func (o *S3KeyProperties) HasActive() bool`
+
+HasActive returns a boolean if a field has been set.
 
 
 

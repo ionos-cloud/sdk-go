@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Firewallrules** | Pointer to [**FirewallRules**](FirewallRules.md) |  | [optional] |
 |**Flowlogs** | Pointer to [**FlowLogs**](FlowLogs.md) |  | [optional] |
+|**Firewallrules** | Pointer to [**FirewallRules**](FirewallRules.md) |  | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewNicEntitiesWithDefaults instantiates a new NicEntities object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetFirewallrules
-
-`func (o *NicEntities) GetFirewallrules() FirewallRules`
-
-GetFirewallrules returns the Firewallrules field if non-nil, zero value otherwise.
-
-### GetFirewallrulesOk
-
-`func (o *NicEntities) GetFirewallrulesOk() (*FirewallRules, bool)`
-
-GetFirewallrulesOk returns a tuple with the Firewallrules field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetFirewallrules
-
-`func (o *NicEntities) SetFirewallrules(v FirewallRules)`
-
-SetFirewallrules sets Firewallrules field to given value.
-
-### HasFirewallrules
-
-`func (o *NicEntities) HasFirewallrules() bool`
-
-HasFirewallrules returns a boolean if a field has been set.
 
 ### GetFlowlogs
 
@@ -75,6 +50,31 @@ SetFlowlogs sets Flowlogs field to given value.
 `func (o *NicEntities) HasFlowlogs() bool`
 
 HasFlowlogs returns a boolean if a field has been set.
+
+### GetFirewallrules
+
+`func (o *NicEntities) GetFirewallrules() FirewallRules`
+
+GetFirewallrules returns the Firewallrules field if non-nil, zero value otherwise.
+
+### GetFirewallrulesOk
+
+`func (o *NicEntities) GetFirewallrulesOk() (*FirewallRules, bool)`
+
+GetFirewallrulesOk returns a tuple with the Firewallrules field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetFirewallrules
+
+`func (o *NicEntities) SetFirewallrules(v FirewallRules)`
+
+SetFirewallrules sets Firewallrules field to given value.
+
+### HasFirewallrules
+
+`func (o *NicEntities) HasFirewallrules() bool`
+
+HasFirewallrules returns a boolean if a field has been set.
 
 
 

@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Properties** | [**TargetGroupProperties**](TargetGroupProperties.md) |  | |
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
+|**Properties** | [**TargetGroupProperties**](TargetGroupProperties.md) |  | |
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewTargetGroupPutWithDefaults instantiates a new TargetGroupPut object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHref
-
-`func (o *TargetGroupPut) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *TargetGroupPut) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *TargetGroupPut) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *TargetGroupPut) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -78,26 +53,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetProperties
-
-`func (o *TargetGroupPut) GetProperties() TargetGroupProperties`
-
-GetProperties returns the Properties field if non-nil, zero value otherwise.
-
-### GetPropertiesOk
-
-`func (o *TargetGroupPut) GetPropertiesOk() (*TargetGroupProperties, bool)`
-
-GetPropertiesOk returns a tuple with the Properties field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProperties
-
-`func (o *TargetGroupPut) SetProperties(v TargetGroupProperties)`
-
-SetProperties sets Properties field to given value.
-
-
 ### GetType
 
 `func (o *TargetGroupPut) GetType() Type`
@@ -122,6 +77,51 @@ SetType sets Type field to given value.
 `func (o *TargetGroupPut) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *TargetGroupPut) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *TargetGroupPut) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *TargetGroupPut) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *TargetGroupPut) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
+
+### GetProperties
+
+`func (o *TargetGroupPut) GetProperties() TargetGroupProperties`
+
+GetProperties returns the Properties field if non-nil, zero value otherwise.
+
+### GetPropertiesOk
+
+`func (o *TargetGroupPut) GetPropertiesOk() (*TargetGroupProperties, bool)`
+
+GetPropertiesOk returns a tuple with the Properties field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProperties
+
+`func (o *TargetGroupPut) SetProperties(v TargetGroupProperties)`
+
+SetProperties sets Properties field to given value.
+
 
 
 

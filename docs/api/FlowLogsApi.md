@@ -281,7 +281,7 @@ func main() {
     serverId := "serverId_example" // string | The unique ID of the server.
     nicId := "nicId_example" // string | The unique ID of the NIC.
     flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log.
-    flowlog := *openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource") // FlowLogProperties | The Flow Log record to be updated.
+    flowlog := *openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key") // FlowLogProperties | The Flow Log record to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -361,7 +361,7 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the server.
     nicId := "nicId_example" // string | The unique ID of the NIC.
-    flowlog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource")) // FlowLog | The Flow Log to create.
+    flowlog := *openapiclient.NewFlowLog(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLog | The Flow Log to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 
@@ -441,7 +441,7 @@ func main() {
     serverId := "serverId_example" // string | The unique ID of the server.
     nicId := "nicId_example" // string | The unique ID of the NIC.
     flowlogId := "flowlogId_example" // string | The unique ID of the Flow Log.
-    flowlog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("ACCEPTED", "bucketName/key", "INGRESS", "My resource")) // FlowLogPut | The modified Flow Log.
+    flowlog := *openapiclient.NewFlowLogPut(*openapiclient.NewFlowLogProperties("My resource", "ACCEPTED", "INGRESS", "bucketName/key")) // FlowLogPut | The modified Flow Log.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
 

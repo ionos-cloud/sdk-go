@@ -4,11 +4,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**PccsDelete**](PrivateCrossConnectsApi.md#PccsDelete) | **Delete** /pccs/{pccId} | Delete private Cross-Connects|
-|[**PccsFindById**](PrivateCrossConnectsApi.md#PccsFindById) | **Get** /pccs/{pccId} | Retrieve private Cross-Connects|
-|[**PccsGet**](PrivateCrossConnectsApi.md#PccsGet) | **Get** /pccs | List private Cross-Connects|
-|[**PccsPatch**](PrivateCrossConnectsApi.md#PccsPatch) | **Patch** /pccs/{pccId} | Partially modify private Cross-Connects|
-|[**PccsPost**](PrivateCrossConnectsApi.md#PccsPost) | **Post** /pccs | Create a Private Cross-Connect|
+|[**PccsDelete**](PrivateCrossConnectsApi.md#PccsDelete) | **Delete** /pccs/{pccId} | Delete Cross Connects|
+|[**PccsFindById**](PrivateCrossConnectsApi.md#PccsFindById) | **Get** /pccs/{pccId} | Retrieve a Cross Connect|
+|[**PccsGet**](PrivateCrossConnectsApi.md#PccsGet) | **Get** /pccs | List Cross Connects|
+|[**PccsPatch**](PrivateCrossConnectsApi.md#PccsPatch) | **Patch** /pccs/{pccId} | Partially modify a Cross Connects|
+|[**PccsPost**](PrivateCrossConnectsApi.md#PccsPost) | **Post** /pccs | Create a Cross Connect|
 
 
 
@@ -22,7 +22,7 @@ var result  = PccsDelete(ctx, pccId)
                       .Execute()
 ```
 
-Delete private Cross-Connects
+Delete Cross Connects
 
 
 
@@ -40,7 +40,7 @@ import (
 )
 
 func main() {
-    pccId := "pccId_example" // string | The unique ID of the private Cross-Connect.
+    pccId := "pccId_example" // string | The unique ID of the Cross Connect.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -61,7 +61,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**pccId** | **string** | The unique ID of the private Cross-Connect. | |
+|**pccId** | **string** | The unique ID of the Cross Connect. | |
 
 ### Other Parameters
 
@@ -95,7 +95,7 @@ var result PrivateCrossConnect = PccsFindById(ctx, pccId)
                       .Execute()
 ```
 
-Retrieve private Cross-Connects
+Retrieve a Cross Connect
 
 
 
@@ -113,7 +113,7 @@ import (
 )
 
 func main() {
-    pccId := "pccId_example" // string | The unique ID of the private Cross-Connect.
+    pccId := "pccId_example" // string | The unique ID of the Cross Connect.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -136,7 +136,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**pccId** | **string** | The unique ID of the private Cross-Connect. | |
+|**pccId** | **string** | The unique ID of the Cross Connect. | |
 
 ### Other Parameters
 
@@ -170,7 +170,7 @@ var result PrivateCrossConnects = PccsGet(ctx)
                       .Execute()
 ```
 
-List private Cross-Connects
+List Cross Connects
 
 
 
@@ -241,7 +241,7 @@ var result PrivateCrossConnect = PccsPatch(ctx, pccId)
                       .Execute()
 ```
 
-Partially modify private Cross-Connects
+Partially modify a Cross Connects
 
 
 
@@ -259,8 +259,8 @@ import (
 )
 
 func main() {
-    pccId := "pccId_example" // string | The unique ID of the private Cross-Connect.
-    pcc := *openapiclient.NewPrivateCrossConnectProperties() // PrivateCrossConnectProperties | The properties of the private Cross-Connect to be updated.
+    pccId := "pccId_example" // string | The unique ID of the Cross Connect.
+    pcc := *openapiclient.NewPrivateCrossConnectProperties() // PrivateCrossConnectProperties | The properties of the Cross Connect to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -283,7 +283,7 @@ func main() {
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
-|**pccId** | **string** | The unique ID of the private Cross-Connect. | |
+|**pccId** | **string** | The unique ID of the Cross Connect. | |
 
 ### Other Parameters
 
@@ -292,7 +292,7 @@ Other parameters are passed through a pointer to a apiPccsPatchRequest struct vi
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **pcc** | [**PrivateCrossConnectProperties**](../models/PrivateCrossConnectProperties.md) | The properties of the private Cross-Connect to be updated. | |
+| **pcc** | [**PrivateCrossConnectProperties**](../models/PrivateCrossConnectProperties.md) | The properties of the Cross Connect to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
@@ -319,7 +319,7 @@ var result PrivateCrossConnect = PccsPost(ctx)
                       .Execute()
 ```
 
-Create a Private Cross-Connect
+Create a Cross Connect
 
 
 
@@ -337,7 +337,7 @@ import (
 )
 
 func main() {
-    pcc := *openapiclient.NewPrivateCrossConnect(*openapiclient.NewPrivateCrossConnectProperties()) // PrivateCrossConnect | The private Cross-Connect to create.
+    pcc := *openapiclient.NewPrivateCrossConnect(*openapiclient.NewPrivateCrossConnectProperties()) // PrivateCrossConnect | The Cross Connect to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -365,7 +365,7 @@ Other parameters are passed through a pointer to a apiPccsPostRequest struct via
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **pcc** | [**PrivateCrossConnect**](../models/PrivateCrossConnect.md) | The private Cross-Connect to create. | |
+| **pcc** | [**PrivateCrossConnect**](../models/PrivateCrossConnect.md) | The Cross Connect to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |

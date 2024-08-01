@@ -4,14 +4,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
-|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
-|**Email** | Pointer to **string** | The email address of the user. | [optional] |
 |**Firstname** | Pointer to **string** | The first name of the user. | [optional] |
-|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
 |**Lastname** | Pointer to **string** | The last name of the user. | [optional] |
-|**Password** | Pointer to **string** | User password. | [optional] |
+|**Email** | Pointer to **string** | The email address of the user. | [optional] |
+|**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
+|**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
 |**SecAuthActive** | Pointer to **bool** | Indicates if secure authentication is active for the user. | [optional] |
+|**Password** | Pointer to **string** | User password. | [optional] |
+|**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
 
 ## Methods
 
@@ -31,81 +31,6 @@ will change when the set of required properties is changed
 NewUserPropertiesPostWithDefaults instantiates a new UserPropertiesPost object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetActive
-
-`func (o *UserPropertiesPost) GetActive() bool`
-
-GetActive returns the Active field if non-nil, zero value otherwise.
-
-### GetActiveOk
-
-`func (o *UserPropertiesPost) GetActiveOk() (*bool, bool)`
-
-GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetActive
-
-`func (o *UserPropertiesPost) SetActive(v bool)`
-
-SetActive sets Active field to given value.
-
-### HasActive
-
-`func (o *UserPropertiesPost) HasActive() bool`
-
-HasActive returns a boolean if a field has been set.
-
-### GetAdministrator
-
-`func (o *UserPropertiesPost) GetAdministrator() bool`
-
-GetAdministrator returns the Administrator field if non-nil, zero value otherwise.
-
-### GetAdministratorOk
-
-`func (o *UserPropertiesPost) GetAdministratorOk() (*bool, bool)`
-
-GetAdministratorOk returns a tuple with the Administrator field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAdministrator
-
-`func (o *UserPropertiesPost) SetAdministrator(v bool)`
-
-SetAdministrator sets Administrator field to given value.
-
-### HasAdministrator
-
-`func (o *UserPropertiesPost) HasAdministrator() bool`
-
-HasAdministrator returns a boolean if a field has been set.
-
-### GetEmail
-
-`func (o *UserPropertiesPost) GetEmail() string`
-
-GetEmail returns the Email field if non-nil, zero value otherwise.
-
-### GetEmailOk
-
-`func (o *UserPropertiesPost) GetEmailOk() (*string, bool)`
-
-GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEmail
-
-`func (o *UserPropertiesPost) SetEmail(v string)`
-
-SetEmail sets Email field to given value.
-
-### HasEmail
-
-`func (o *UserPropertiesPost) HasEmail() bool`
-
-HasEmail returns a boolean if a field has been set.
 
 ### GetFirstname
 
@@ -132,6 +57,81 @@ SetFirstname sets Firstname field to given value.
 
 HasFirstname returns a boolean if a field has been set.
 
+### GetLastname
+
+`func (o *UserPropertiesPost) GetLastname() string`
+
+GetLastname returns the Lastname field if non-nil, zero value otherwise.
+
+### GetLastnameOk
+
+`func (o *UserPropertiesPost) GetLastnameOk() (*string, bool)`
+
+GetLastnameOk returns a tuple with the Lastname field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastname
+
+`func (o *UserPropertiesPost) SetLastname(v string)`
+
+SetLastname sets Lastname field to given value.
+
+### HasLastname
+
+`func (o *UserPropertiesPost) HasLastname() bool`
+
+HasLastname returns a boolean if a field has been set.
+
+### GetEmail
+
+`func (o *UserPropertiesPost) GetEmail() string`
+
+GetEmail returns the Email field if non-nil, zero value otherwise.
+
+### GetEmailOk
+
+`func (o *UserPropertiesPost) GetEmailOk() (*string, bool)`
+
+GetEmailOk returns a tuple with the Email field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEmail
+
+`func (o *UserPropertiesPost) SetEmail(v string)`
+
+SetEmail sets Email field to given value.
+
+### HasEmail
+
+`func (o *UserPropertiesPost) HasEmail() bool`
+
+HasEmail returns a boolean if a field has been set.
+
+### GetAdministrator
+
+`func (o *UserPropertiesPost) GetAdministrator() bool`
+
+GetAdministrator returns the Administrator field if non-nil, zero value otherwise.
+
+### GetAdministratorOk
+
+`func (o *UserPropertiesPost) GetAdministratorOk() (*bool, bool)`
+
+GetAdministratorOk returns a tuple with the Administrator field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAdministrator
+
+`func (o *UserPropertiesPost) SetAdministrator(v bool)`
+
+SetAdministrator sets Administrator field to given value.
+
+### HasAdministrator
+
+`func (o *UserPropertiesPost) HasAdministrator() bool`
+
+HasAdministrator returns a boolean if a field has been set.
+
 ### GetForceSecAuth
 
 `func (o *UserPropertiesPost) GetForceSecAuth() bool`
@@ -157,30 +157,30 @@ SetForceSecAuth sets ForceSecAuth field to given value.
 
 HasForceSecAuth returns a boolean if a field has been set.
 
-### GetLastname
+### GetSecAuthActive
 
-`func (o *UserPropertiesPost) GetLastname() string`
+`func (o *UserPropertiesPost) GetSecAuthActive() bool`
 
-GetLastname returns the Lastname field if non-nil, zero value otherwise.
+GetSecAuthActive returns the SecAuthActive field if non-nil, zero value otherwise.
 
-### GetLastnameOk
+### GetSecAuthActiveOk
 
-`func (o *UserPropertiesPost) GetLastnameOk() (*string, bool)`
+`func (o *UserPropertiesPost) GetSecAuthActiveOk() (*bool, bool)`
 
-GetLastnameOk returns a tuple with the Lastname field if it's non-nil, zero value otherwise
+GetSecAuthActiveOk returns a tuple with the SecAuthActive field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetLastname
+### SetSecAuthActive
 
-`func (o *UserPropertiesPost) SetLastname(v string)`
+`func (o *UserPropertiesPost) SetSecAuthActive(v bool)`
 
-SetLastname sets Lastname field to given value.
+SetSecAuthActive sets SecAuthActive field to given value.
 
-### HasLastname
+### HasSecAuthActive
 
-`func (o *UserPropertiesPost) HasLastname() bool`
+`func (o *UserPropertiesPost) HasSecAuthActive() bool`
 
-HasLastname returns a boolean if a field has been set.
+HasSecAuthActive returns a boolean if a field has been set.
 
 ### GetPassword
 
@@ -207,30 +207,30 @@ SetPassword sets Password field to given value.
 
 HasPassword returns a boolean if a field has been set.
 
-### GetSecAuthActive
+### GetActive
 
-`func (o *UserPropertiesPost) GetSecAuthActive() bool`
+`func (o *UserPropertiesPost) GetActive() bool`
 
-GetSecAuthActive returns the SecAuthActive field if non-nil, zero value otherwise.
+GetActive returns the Active field if non-nil, zero value otherwise.
 
-### GetSecAuthActiveOk
+### GetActiveOk
 
-`func (o *UserPropertiesPost) GetSecAuthActiveOk() (*bool, bool)`
+`func (o *UserPropertiesPost) GetActiveOk() (*bool, bool)`
 
-GetSecAuthActiveOk returns a tuple with the SecAuthActive field if it's non-nil, zero value otherwise
+GetActiveOk returns a tuple with the Active field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecAuthActive
+### SetActive
 
-`func (o *UserPropertiesPost) SetSecAuthActive(v bool)`
+`func (o *UserPropertiesPost) SetActive(v bool)`
 
-SetSecAuthActive sets SecAuthActive field to given value.
+SetActive sets Active field to given value.
 
-### HasSecAuthActive
+### HasActive
 
-`func (o *UserPropertiesPost) HasSecAuthActive() bool`
+`func (o *UserPropertiesPost) HasActive() bool`
 
-HasSecAuthActive returns a boolean if a field has been set.
+HasActive returns a boolean if a field has been set.
 
 
 

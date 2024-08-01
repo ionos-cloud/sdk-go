@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Items** | Pointer to [**[]NatGatewayRule**](NatGatewayRule.md) | Array of items in the collection. | [optional] [readonly] |
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]NatGatewayRule**](NatGatewayRule.md) | Array of items in the collection. | [optional] [readonly] |
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewNatGatewayRulesWithDefaults instantiates a new NatGatewayRules object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHref
-
-`func (o *NatGatewayRules) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *NatGatewayRules) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *NatGatewayRules) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *NatGatewayRules) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -78,31 +53,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetItems
-
-`func (o *NatGatewayRules) GetItems() []NatGatewayRule`
-
-GetItems returns the Items field if non-nil, zero value otherwise.
-
-### GetItemsOk
-
-`func (o *NatGatewayRules) GetItemsOk() (*[]NatGatewayRule, bool)`
-
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItems
-
-`func (o *NatGatewayRules) SetItems(v []NatGatewayRule)`
-
-SetItems sets Items field to given value.
-
-### HasItems
-
-`func (o *NatGatewayRules) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
-
 ### GetType
 
 `func (o *NatGatewayRules) GetType() Type`
@@ -127,6 +77,56 @@ SetType sets Type field to given value.
 `func (o *NatGatewayRules) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *NatGatewayRules) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *NatGatewayRules) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *NatGatewayRules) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *NatGatewayRules) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
+
+### GetItems
+
+`func (o *NatGatewayRules) GetItems() []NatGatewayRule`
+
+GetItems returns the Items field if non-nil, zero value otherwise.
+
+### GetItemsOk
+
+`func (o *NatGatewayRules) GetItemsOk() (*[]NatGatewayRule, bool)`
+
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItems
+
+`func (o *NatGatewayRules) SetItems(v []NatGatewayRule)`
+
+SetItems sets Items field to given value.
+
+### HasItems
+
+`func (o *NatGatewayRules) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 

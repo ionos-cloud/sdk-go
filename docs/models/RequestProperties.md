@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Body** | Pointer to **string** |  | [optional] |
-|**Headers** | Pointer to **map[string]string** |  | [optional] |
 |**Method** | Pointer to **string** |  | [optional] |
+|**Headers** | Pointer to **map[string]string** |  | [optional] |
+|**Body** | Pointer to **string** |  | [optional] |
 |**Url** | Pointer to **string** |  | [optional] |
 
 ## Methods
@@ -28,30 +28,30 @@ NewRequestPropertiesWithDefaults instantiates a new RequestProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetBody
+### GetMethod
 
-`func (o *RequestProperties) GetBody() string`
+`func (o *RequestProperties) GetMethod() string`
 
-GetBody returns the Body field if non-nil, zero value otherwise.
+GetMethod returns the Method field if non-nil, zero value otherwise.
 
-### GetBodyOk
+### GetMethodOk
 
-`func (o *RequestProperties) GetBodyOk() (*string, bool)`
+`func (o *RequestProperties) GetMethodOk() (*string, bool)`
 
-GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
+GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetBody
+### SetMethod
 
-`func (o *RequestProperties) SetBody(v string)`
+`func (o *RequestProperties) SetMethod(v string)`
 
-SetBody sets Body field to given value.
+SetMethod sets Method field to given value.
 
-### HasBody
+### HasMethod
 
-`func (o *RequestProperties) HasBody() bool`
+`func (o *RequestProperties) HasMethod() bool`
 
-HasBody returns a boolean if a field has been set.
+HasMethod returns a boolean if a field has been set.
 
 ### GetHeaders
 
@@ -78,30 +78,30 @@ SetHeaders sets Headers field to given value.
 
 HasHeaders returns a boolean if a field has been set.
 
-### GetMethod
+### GetBody
 
-`func (o *RequestProperties) GetMethod() string`
+`func (o *RequestProperties) GetBody() string`
 
-GetMethod returns the Method field if non-nil, zero value otherwise.
+GetBody returns the Body field if non-nil, zero value otherwise.
 
-### GetMethodOk
+### GetBodyOk
 
-`func (o *RequestProperties) GetMethodOk() (*string, bool)`
+`func (o *RequestProperties) GetBodyOk() (*string, bool)`
 
-GetMethodOk returns a tuple with the Method field if it's non-nil, zero value otherwise
+GetBodyOk returns a tuple with the Body field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMethod
+### SetBody
 
-`func (o *RequestProperties) SetMethod(v string)`
+`func (o *RequestProperties) SetBody(v string)`
 
-SetMethod sets Method field to given value.
+SetBody sets Body field to given value.
 
-### HasMethod
+### HasBody
 
-`func (o *RequestProperties) HasMethod() bool`
+`func (o *RequestProperties) HasBody() bool`
 
-HasMethod returns a boolean if a field has been set.
+HasBody returns a boolean if a field has been set.
 
 ### GetUrl
 

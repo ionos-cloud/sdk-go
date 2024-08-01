@@ -4,22 +4,23 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
+|**Description** | Pointer to **string** | Human-readable description. | [optional] |
+|**Location** | Pointer to **string** | Location of that image/snapshot.  | [optional] [readonly] |
+|**Size** | Pointer to **float32** | The size of the image in GB. | [optional] [readonly] |
+|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the snapshot requires extra protection, such as two-step verification. | [optional] |
 |**CpuHotPlug** | Pointer to **bool** | Hot-plug capable CPU (no reboot required). | [optional] |
 |**CpuHotUnplug** | Pointer to **bool** | Hot-unplug capable CPU (no reboot required). | [optional] |
-|**Description** | Pointer to **string** | Human-readable description. | [optional] |
-|**DiscScsiHotPlug** | Pointer to **bool** | Hot-plug capable SCSI drive (no reboot required). | [optional] |
-|**DiscScsiHotUnplug** | Pointer to **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
-|**DiscVirtioHotPlug** | Pointer to **bool** | Hot-plug capable Virt-IO drive (no reboot required). | [optional] |
-|**DiscVirtioHotUnplug** | Pointer to **bool** | Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs. | [optional] |
-|**LicenceType** | Pointer to **string** | OS type of this snapshot | [optional] |
-|**Location** | Pointer to **string** | Location of that image/snapshot.  | [optional] [readonly] |
-|**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**NicHotPlug** | Pointer to **bool** | Hot-plug capable NIC (no reboot required). | [optional] |
-|**NicHotUnplug** | Pointer to **bool** | Hot-unplug capable NIC (no reboot required). | [optional] |
 |**RamHotPlug** | Pointer to **bool** | Hot-plug capable RAM (no reboot required). | [optional] |
 |**RamHotUnplug** | Pointer to **bool** | Hot-unplug capable RAM (no reboot required). | [optional] |
-|**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the snapshot requires extra protection, such as two-step verification. | [optional] |
-|**Size** | Pointer to **float32** | The size of the image in GB. | [optional] [readonly] |
+|**NicHotPlug** | Pointer to **bool** | Hot-plug capable NIC (no reboot required). | [optional] |
+|**NicHotUnplug** | Pointer to **bool** | Hot-unplug capable NIC (no reboot required). | [optional] |
+|**DiscVirtioHotPlug** | Pointer to **bool** | Hot-plug capable Virt-IO drive (no reboot required). | [optional] |
+|**DiscVirtioHotUnplug** | Pointer to **bool** | Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs. | [optional] |
+|**DiscScsiHotPlug** | Pointer to **bool** | Hot-plug capable SCSI drive (no reboot required). | [optional] |
+|**ExposeSerial** | Pointer to **bool** | If set to &#x60;true&#x60; will expose the serial id of the disk attached to the server. If set to &#x60;false&#x60; will not expose the serial id. Some operating systems or software solutions require the serial id to be exposed to work properly. Exposing the serial  can influence licensed software (e.g. Windows) behavior | [optional] [default to false]|
+|**DiscScsiHotUnplug** | Pointer to **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
+|**LicenceType** | Pointer to **string** | OS type of this snapshot | [optional] |
 
 ## Methods
 
@@ -39,6 +40,131 @@ will change when the set of required properties is changed
 NewSnapshotPropertiesWithDefaults instantiates a new SnapshotProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetName
+
+`func (o *SnapshotProperties) GetName() string`
+
+GetName returns the Name field if non-nil, zero value otherwise.
+
+### GetNameOk
+
+`func (o *SnapshotProperties) GetNameOk() (*string, bool)`
+
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetName
+
+`func (o *SnapshotProperties) SetName(v string)`
+
+SetName sets Name field to given value.
+
+### HasName
+
+`func (o *SnapshotProperties) HasName() bool`
+
+HasName returns a boolean if a field has been set.
+
+### GetDescription
+
+`func (o *SnapshotProperties) GetDescription() string`
+
+GetDescription returns the Description field if non-nil, zero value otherwise.
+
+### GetDescriptionOk
+
+`func (o *SnapshotProperties) GetDescriptionOk() (*string, bool)`
+
+GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDescription
+
+`func (o *SnapshotProperties) SetDescription(v string)`
+
+SetDescription sets Description field to given value.
+
+### HasDescription
+
+`func (o *SnapshotProperties) HasDescription() bool`
+
+HasDescription returns a boolean if a field has been set.
+
+### GetLocation
+
+`func (o *SnapshotProperties) GetLocation() string`
+
+GetLocation returns the Location field if non-nil, zero value otherwise.
+
+### GetLocationOk
+
+`func (o *SnapshotProperties) GetLocationOk() (*string, bool)`
+
+GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocation
+
+`func (o *SnapshotProperties) SetLocation(v string)`
+
+SetLocation sets Location field to given value.
+
+### HasLocation
+
+`func (o *SnapshotProperties) HasLocation() bool`
+
+HasLocation returns a boolean if a field has been set.
+
+### GetSize
+
+`func (o *SnapshotProperties) GetSize() float32`
+
+GetSize returns the Size field if non-nil, zero value otherwise.
+
+### GetSizeOk
+
+`func (o *SnapshotProperties) GetSizeOk() (*float32, bool)`
+
+GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSize
+
+`func (o *SnapshotProperties) SetSize(v float32)`
+
+SetSize sets Size field to given value.
+
+### HasSize
+
+`func (o *SnapshotProperties) HasSize() bool`
+
+HasSize returns a boolean if a field has been set.
+
+### GetSecAuthProtection
+
+`func (o *SnapshotProperties) GetSecAuthProtection() bool`
+
+GetSecAuthProtection returns the SecAuthProtection field if non-nil, zero value otherwise.
+
+### GetSecAuthProtectionOk
+
+`func (o *SnapshotProperties) GetSecAuthProtectionOk() (*bool, bool)`
+
+GetSecAuthProtectionOk returns a tuple with the SecAuthProtection field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecAuthProtection
+
+`func (o *SnapshotProperties) SetSecAuthProtection(v bool)`
+
+SetSecAuthProtection sets SecAuthProtection field to given value.
+
+### HasSecAuthProtection
+
+`func (o *SnapshotProperties) HasSecAuthProtection() bool`
+
+HasSecAuthProtection returns a boolean if a field has been set.
 
 ### GetCpuHotPlug
 
@@ -90,205 +216,55 @@ SetCpuHotUnplug sets CpuHotUnplug field to given value.
 
 HasCpuHotUnplug returns a boolean if a field has been set.
 
-### GetDescription
+### GetRamHotPlug
 
-`func (o *SnapshotProperties) GetDescription() string`
+`func (o *SnapshotProperties) GetRamHotPlug() bool`
 
-GetDescription returns the Description field if non-nil, zero value otherwise.
+GetRamHotPlug returns the RamHotPlug field if non-nil, zero value otherwise.
 
-### GetDescriptionOk
+### GetRamHotPlugOk
 
-`func (o *SnapshotProperties) GetDescriptionOk() (*string, bool)`
+`func (o *SnapshotProperties) GetRamHotPlugOk() (*bool, bool)`
 
-GetDescriptionOk returns a tuple with the Description field if it's non-nil, zero value otherwise
+GetRamHotPlugOk returns a tuple with the RamHotPlug field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDescription
+### SetRamHotPlug
 
-`func (o *SnapshotProperties) SetDescription(v string)`
+`func (o *SnapshotProperties) SetRamHotPlug(v bool)`
 
-SetDescription sets Description field to given value.
+SetRamHotPlug sets RamHotPlug field to given value.
 
-### HasDescription
+### HasRamHotPlug
 
-`func (o *SnapshotProperties) HasDescription() bool`
+`func (o *SnapshotProperties) HasRamHotPlug() bool`
 
-HasDescription returns a boolean if a field has been set.
+HasRamHotPlug returns a boolean if a field has been set.
 
-### GetDiscScsiHotPlug
+### GetRamHotUnplug
 
-`func (o *SnapshotProperties) GetDiscScsiHotPlug() bool`
+`func (o *SnapshotProperties) GetRamHotUnplug() bool`
 
-GetDiscScsiHotPlug returns the DiscScsiHotPlug field if non-nil, zero value otherwise.
+GetRamHotUnplug returns the RamHotUnplug field if non-nil, zero value otherwise.
 
-### GetDiscScsiHotPlugOk
+### GetRamHotUnplugOk
 
-`func (o *SnapshotProperties) GetDiscScsiHotPlugOk() (*bool, bool)`
+`func (o *SnapshotProperties) GetRamHotUnplugOk() (*bool, bool)`
 
-GetDiscScsiHotPlugOk returns a tuple with the DiscScsiHotPlug field if it's non-nil, zero value otherwise
+GetRamHotUnplugOk returns a tuple with the RamHotUnplug field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetDiscScsiHotPlug
+### SetRamHotUnplug
 
-`func (o *SnapshotProperties) SetDiscScsiHotPlug(v bool)`
+`func (o *SnapshotProperties) SetRamHotUnplug(v bool)`
 
-SetDiscScsiHotPlug sets DiscScsiHotPlug field to given value.
+SetRamHotUnplug sets RamHotUnplug field to given value.
 
-### HasDiscScsiHotPlug
+### HasRamHotUnplug
 
-`func (o *SnapshotProperties) HasDiscScsiHotPlug() bool`
+`func (o *SnapshotProperties) HasRamHotUnplug() bool`
 
-HasDiscScsiHotPlug returns a boolean if a field has been set.
-
-### GetDiscScsiHotUnplug
-
-`func (o *SnapshotProperties) GetDiscScsiHotUnplug() bool`
-
-GetDiscScsiHotUnplug returns the DiscScsiHotUnplug field if non-nil, zero value otherwise.
-
-### GetDiscScsiHotUnplugOk
-
-`func (o *SnapshotProperties) GetDiscScsiHotUnplugOk() (*bool, bool)`
-
-GetDiscScsiHotUnplugOk returns a tuple with the DiscScsiHotUnplug field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDiscScsiHotUnplug
-
-`func (o *SnapshotProperties) SetDiscScsiHotUnplug(v bool)`
-
-SetDiscScsiHotUnplug sets DiscScsiHotUnplug field to given value.
-
-### HasDiscScsiHotUnplug
-
-`func (o *SnapshotProperties) HasDiscScsiHotUnplug() bool`
-
-HasDiscScsiHotUnplug returns a boolean if a field has been set.
-
-### GetDiscVirtioHotPlug
-
-`func (o *SnapshotProperties) GetDiscVirtioHotPlug() bool`
-
-GetDiscVirtioHotPlug returns the DiscVirtioHotPlug field if non-nil, zero value otherwise.
-
-### GetDiscVirtioHotPlugOk
-
-`func (o *SnapshotProperties) GetDiscVirtioHotPlugOk() (*bool, bool)`
-
-GetDiscVirtioHotPlugOk returns a tuple with the DiscVirtioHotPlug field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDiscVirtioHotPlug
-
-`func (o *SnapshotProperties) SetDiscVirtioHotPlug(v bool)`
-
-SetDiscVirtioHotPlug sets DiscVirtioHotPlug field to given value.
-
-### HasDiscVirtioHotPlug
-
-`func (o *SnapshotProperties) HasDiscVirtioHotPlug() bool`
-
-HasDiscVirtioHotPlug returns a boolean if a field has been set.
-
-### GetDiscVirtioHotUnplug
-
-`func (o *SnapshotProperties) GetDiscVirtioHotUnplug() bool`
-
-GetDiscVirtioHotUnplug returns the DiscVirtioHotUnplug field if non-nil, zero value otherwise.
-
-### GetDiscVirtioHotUnplugOk
-
-`func (o *SnapshotProperties) GetDiscVirtioHotUnplugOk() (*bool, bool)`
-
-GetDiscVirtioHotUnplugOk returns a tuple with the DiscVirtioHotUnplug field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetDiscVirtioHotUnplug
-
-`func (o *SnapshotProperties) SetDiscVirtioHotUnplug(v bool)`
-
-SetDiscVirtioHotUnplug sets DiscVirtioHotUnplug field to given value.
-
-### HasDiscVirtioHotUnplug
-
-`func (o *SnapshotProperties) HasDiscVirtioHotUnplug() bool`
-
-HasDiscVirtioHotUnplug returns a boolean if a field has been set.
-
-### GetLicenceType
-
-`func (o *SnapshotProperties) GetLicenceType() string`
-
-GetLicenceType returns the LicenceType field if non-nil, zero value otherwise.
-
-### GetLicenceTypeOk
-
-`func (o *SnapshotProperties) GetLicenceTypeOk() (*string, bool)`
-
-GetLicenceTypeOk returns a tuple with the LicenceType field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLicenceType
-
-`func (o *SnapshotProperties) SetLicenceType(v string)`
-
-SetLicenceType sets LicenceType field to given value.
-
-### HasLicenceType
-
-`func (o *SnapshotProperties) HasLicenceType() bool`
-
-HasLicenceType returns a boolean if a field has been set.
-
-### GetLocation
-
-`func (o *SnapshotProperties) GetLocation() string`
-
-GetLocation returns the Location field if non-nil, zero value otherwise.
-
-### GetLocationOk
-
-`func (o *SnapshotProperties) GetLocationOk() (*string, bool)`
-
-GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocation
-
-`func (o *SnapshotProperties) SetLocation(v string)`
-
-SetLocation sets Location field to given value.
-
-### HasLocation
-
-`func (o *SnapshotProperties) HasLocation() bool`
-
-HasLocation returns a boolean if a field has been set.
-
-### GetName
-
-`func (o *SnapshotProperties) GetName() string`
-
-GetName returns the Name field if non-nil, zero value otherwise.
-
-### GetNameOk
-
-`func (o *SnapshotProperties) GetNameOk() (*string, bool)`
-
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetName
-
-`func (o *SnapshotProperties) SetName(v string)`
-
-SetName sets Name field to given value.
-
-### HasName
-
-`func (o *SnapshotProperties) HasName() bool`
-
-HasName returns a boolean if a field has been set.
+HasRamHotUnplug returns a boolean if a field has been set.
 
 ### GetNicHotPlug
 
@@ -340,105 +316,155 @@ SetNicHotUnplug sets NicHotUnplug field to given value.
 
 HasNicHotUnplug returns a boolean if a field has been set.
 
-### GetRamHotPlug
+### GetDiscVirtioHotPlug
 
-`func (o *SnapshotProperties) GetRamHotPlug() bool`
+`func (o *SnapshotProperties) GetDiscVirtioHotPlug() bool`
 
-GetRamHotPlug returns the RamHotPlug field if non-nil, zero value otherwise.
+GetDiscVirtioHotPlug returns the DiscVirtioHotPlug field if non-nil, zero value otherwise.
 
-### GetRamHotPlugOk
+### GetDiscVirtioHotPlugOk
 
-`func (o *SnapshotProperties) GetRamHotPlugOk() (*bool, bool)`
+`func (o *SnapshotProperties) GetDiscVirtioHotPlugOk() (*bool, bool)`
 
-GetRamHotPlugOk returns a tuple with the RamHotPlug field if it's non-nil, zero value otherwise
+GetDiscVirtioHotPlugOk returns a tuple with the DiscVirtioHotPlug field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRamHotPlug
+### SetDiscVirtioHotPlug
 
-`func (o *SnapshotProperties) SetRamHotPlug(v bool)`
+`func (o *SnapshotProperties) SetDiscVirtioHotPlug(v bool)`
 
-SetRamHotPlug sets RamHotPlug field to given value.
+SetDiscVirtioHotPlug sets DiscVirtioHotPlug field to given value.
 
-### HasRamHotPlug
+### HasDiscVirtioHotPlug
 
-`func (o *SnapshotProperties) HasRamHotPlug() bool`
+`func (o *SnapshotProperties) HasDiscVirtioHotPlug() bool`
 
-HasRamHotPlug returns a boolean if a field has been set.
+HasDiscVirtioHotPlug returns a boolean if a field has been set.
 
-### GetRamHotUnplug
+### GetDiscVirtioHotUnplug
 
-`func (o *SnapshotProperties) GetRamHotUnplug() bool`
+`func (o *SnapshotProperties) GetDiscVirtioHotUnplug() bool`
 
-GetRamHotUnplug returns the RamHotUnplug field if non-nil, zero value otherwise.
+GetDiscVirtioHotUnplug returns the DiscVirtioHotUnplug field if non-nil, zero value otherwise.
 
-### GetRamHotUnplugOk
+### GetDiscVirtioHotUnplugOk
 
-`func (o *SnapshotProperties) GetRamHotUnplugOk() (*bool, bool)`
+`func (o *SnapshotProperties) GetDiscVirtioHotUnplugOk() (*bool, bool)`
 
-GetRamHotUnplugOk returns a tuple with the RamHotUnplug field if it's non-nil, zero value otherwise
+GetDiscVirtioHotUnplugOk returns a tuple with the DiscVirtioHotUnplug field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetRamHotUnplug
+### SetDiscVirtioHotUnplug
 
-`func (o *SnapshotProperties) SetRamHotUnplug(v bool)`
+`func (o *SnapshotProperties) SetDiscVirtioHotUnplug(v bool)`
 
-SetRamHotUnplug sets RamHotUnplug field to given value.
+SetDiscVirtioHotUnplug sets DiscVirtioHotUnplug field to given value.
 
-### HasRamHotUnplug
+### HasDiscVirtioHotUnplug
 
-`func (o *SnapshotProperties) HasRamHotUnplug() bool`
+`func (o *SnapshotProperties) HasDiscVirtioHotUnplug() bool`
 
-HasRamHotUnplug returns a boolean if a field has been set.
+HasDiscVirtioHotUnplug returns a boolean if a field has been set.
 
-### GetSecAuthProtection
+### GetDiscScsiHotPlug
 
-`func (o *SnapshotProperties) GetSecAuthProtection() bool`
+`func (o *SnapshotProperties) GetDiscScsiHotPlug() bool`
 
-GetSecAuthProtection returns the SecAuthProtection field if non-nil, zero value otherwise.
+GetDiscScsiHotPlug returns the DiscScsiHotPlug field if non-nil, zero value otherwise.
 
-### GetSecAuthProtectionOk
+### GetDiscScsiHotPlugOk
 
-`func (o *SnapshotProperties) GetSecAuthProtectionOk() (*bool, bool)`
+`func (o *SnapshotProperties) GetDiscScsiHotPlugOk() (*bool, bool)`
 
-GetSecAuthProtectionOk returns a tuple with the SecAuthProtection field if it's non-nil, zero value otherwise
+GetDiscScsiHotPlugOk returns a tuple with the DiscScsiHotPlug field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSecAuthProtection
+### SetDiscScsiHotPlug
 
-`func (o *SnapshotProperties) SetSecAuthProtection(v bool)`
+`func (o *SnapshotProperties) SetDiscScsiHotPlug(v bool)`
 
-SetSecAuthProtection sets SecAuthProtection field to given value.
+SetDiscScsiHotPlug sets DiscScsiHotPlug field to given value.
 
-### HasSecAuthProtection
+### HasDiscScsiHotPlug
 
-`func (o *SnapshotProperties) HasSecAuthProtection() bool`
+`func (o *SnapshotProperties) HasDiscScsiHotPlug() bool`
 
-HasSecAuthProtection returns a boolean if a field has been set.
+HasDiscScsiHotPlug returns a boolean if a field has been set.
 
-### GetSize
+### GetExposeSerial
 
-`func (o *SnapshotProperties) GetSize() float32`
+`func (o *SnapshotProperties) GetExposeSerial() bool`
 
-GetSize returns the Size field if non-nil, zero value otherwise.
+GetExposeSerial returns the ExposeSerial field if non-nil, zero value otherwise.
 
-### GetSizeOk
+### GetExposeSerialOk
 
-`func (o *SnapshotProperties) GetSizeOk() (*float32, bool)`
+`func (o *SnapshotProperties) GetExposeSerialOk() (*bool, bool)`
 
-GetSizeOk returns a tuple with the Size field if it's non-nil, zero value otherwise
+GetExposeSerialOk returns a tuple with the ExposeSerial field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetSize
+### SetExposeSerial
 
-`func (o *SnapshotProperties) SetSize(v float32)`
+`func (o *SnapshotProperties) SetExposeSerial(v bool)`
 
-SetSize sets Size field to given value.
+SetExposeSerial sets ExposeSerial field to given value.
 
-### HasSize
+### HasExposeSerial
 
-`func (o *SnapshotProperties) HasSize() bool`
+`func (o *SnapshotProperties) HasExposeSerial() bool`
 
-HasSize returns a boolean if a field has been set.
+HasExposeSerial returns a boolean if a field has been set.
+
+### GetDiscScsiHotUnplug
+
+`func (o *SnapshotProperties) GetDiscScsiHotUnplug() bool`
+
+GetDiscScsiHotUnplug returns the DiscScsiHotUnplug field if non-nil, zero value otherwise.
+
+### GetDiscScsiHotUnplugOk
+
+`func (o *SnapshotProperties) GetDiscScsiHotUnplugOk() (*bool, bool)`
+
+GetDiscScsiHotUnplugOk returns a tuple with the DiscScsiHotUnplug field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDiscScsiHotUnplug
+
+`func (o *SnapshotProperties) SetDiscScsiHotUnplug(v bool)`
+
+SetDiscScsiHotUnplug sets DiscScsiHotUnplug field to given value.
+
+### HasDiscScsiHotUnplug
+
+`func (o *SnapshotProperties) HasDiscScsiHotUnplug() bool`
+
+HasDiscScsiHotUnplug returns a boolean if a field has been set.
+
+### GetLicenceType
+
+`func (o *SnapshotProperties) GetLicenceType() string`
+
+GetLicenceType returns the LicenceType field if non-nil, zero value otherwise.
+
+### GetLicenceTypeOk
+
+`func (o *SnapshotProperties) GetLicenceTypeOk() (*string, bool)`
+
+GetLicenceTypeOk returns a tuple with the LicenceType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLicenceType
+
+`func (o *SnapshotProperties) SetLicenceType(v string)`
+
+SetLicenceType sets LicenceType field to given value.
+
+### HasLicenceType
+
+`func (o *SnapshotProperties) HasLicenceType() bool`
+
+HasLicenceType returns a boolean if a field has been set.
 
 
 

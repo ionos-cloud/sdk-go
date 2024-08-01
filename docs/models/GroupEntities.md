@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Resources** | Pointer to [**ResourceGroups**](ResourceGroups.md) |  | [optional] |
 |**Users** | Pointer to [**GroupMembers**](GroupMembers.md) |  | [optional] |
+|**Resources** | Pointer to [**ResourceGroups**](ResourceGroups.md) |  | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewGroupEntitiesWithDefaults instantiates a new GroupEntities object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetResources
-
-`func (o *GroupEntities) GetResources() ResourceGroups`
-
-GetResources returns the Resources field if non-nil, zero value otherwise.
-
-### GetResourcesOk
-
-`func (o *GroupEntities) GetResourcesOk() (*ResourceGroups, bool)`
-
-GetResourcesOk returns a tuple with the Resources field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetResources
-
-`func (o *GroupEntities) SetResources(v ResourceGroups)`
-
-SetResources sets Resources field to given value.
-
-### HasResources
-
-`func (o *GroupEntities) HasResources() bool`
-
-HasResources returns a boolean if a field has been set.
 
 ### GetUsers
 
@@ -75,6 +50,31 @@ SetUsers sets Users field to given value.
 `func (o *GroupEntities) HasUsers() bool`
 
 HasUsers returns a boolean if a field has been set.
+
+### GetResources
+
+`func (o *GroupEntities) GetResources() ResourceGroups`
+
+GetResources returns the Resources field if non-nil, zero value otherwise.
+
+### GetResourcesOk
+
+`func (o *GroupEntities) GetResourcesOk() (*ResourceGroups, bool)`
+
+GetResourcesOk returns a tuple with the Resources field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetResources
+
+`func (o *GroupEntities) SetResources(v ResourceGroups)`
+
+SetResources sets Resources field to given value.
+
+### HasResources
+
+`func (o *GroupEntities) HasResources() bool`
+
+HasResources returns a boolean if a field has been set.
 
 
 

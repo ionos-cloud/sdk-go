@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Properties** | [**ContractProperties**](ContractProperties.md) |  | |
 |**Type** | Pointer to [**Type**](Type.md) | The type of the resource. | [optional] |
+|**Properties** | [**ContractProperties**](ContractProperties.md) |  | |
 
 ## Methods
 
@@ -25,26 +25,6 @@ will change when the set of required properties is changed
 NewContractWithDefaults instantiates a new Contract object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetProperties
-
-`func (o *Contract) GetProperties() ContractProperties`
-
-GetProperties returns the Properties field if non-nil, zero value otherwise.
-
-### GetPropertiesOk
-
-`func (o *Contract) GetPropertiesOk() (*ContractProperties, bool)`
-
-GetPropertiesOk returns a tuple with the Properties field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetProperties
-
-`func (o *Contract) SetProperties(v ContractProperties)`
-
-SetProperties sets Properties field to given value.
-
 
 ### GetType
 
@@ -70,6 +50,26 @@ SetType sets Type field to given value.
 `func (o *Contract) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetProperties
+
+`func (o *Contract) GetProperties() ContractProperties`
+
+GetProperties returns the Properties field if non-nil, zero value otherwise.
+
+### GetPropertiesOk
+
+`func (o *Contract) GetPropertiesOk() (*ContractProperties, bool)`
+
+GetPropertiesOk returns a tuple with the Properties field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProperties
+
+`func (o *Contract) SetProperties(v ContractProperties)`
+
+SetProperties sets Properties field to given value.
+
 
 
 

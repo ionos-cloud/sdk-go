@@ -267,7 +267,7 @@ import (
 
 func main() {
     targetGroupId := "targetGroupId_example" // string | The unique ID of the target group.
-    targetGroupProperties := *openapiclient.NewTargetGroupProperties("ROUND_ROBIN", "My target group", "HTTP") // TargetGroupProperties | The target group properties to be updated.
+    targetGroupProperties := *openapiclient.NewTargetGroupProperties("My target group", "ROUND_ROBIN", "HTTP") // TargetGroupProperties | The target group properties to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -344,7 +344,7 @@ import (
 )
 
 func main() {
-    targetGroup := *openapiclient.NewTargetGroup(*openapiclient.NewTargetGroupProperties("ROUND_ROBIN", "My target group", "HTTP")) // TargetGroup | The target group to create.
+    targetGroup := *openapiclient.NewTargetGroup(*openapiclient.NewTargetGroupProperties("My target group", "ROUND_ROBIN", "HTTP")) // TargetGroup | The target group to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -418,7 +418,7 @@ import (
 
 func main() {
     targetGroupId := "targetGroupId_example" // string | The unique ID of the target group.
-    targetGroup := *openapiclient.NewTargetGroupPut(*openapiclient.NewTargetGroupProperties("ROUND_ROBIN", "My target group", "HTTP")) // TargetGroupPut | The modified target group.
+    targetGroup := *openapiclient.NewTargetGroupPut(*openapiclient.NewTargetGroupProperties("My target group", "ROUND_ROBIN", "HTTP")) // TargetGroupPut | The modified target group.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)

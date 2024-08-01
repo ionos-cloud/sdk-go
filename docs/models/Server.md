@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Entities** | Pointer to [**ServerEntities**](ServerEntities.md) |  | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**ServerProperties**](ServerProperties.md) |  | |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Entities** | Pointer to [**ServerEntities**](ServerEntities.md) |  | [optional] |
 
 ## Methods
 
@@ -29,56 +29,6 @@ will change when the set of required properties is changed
 NewServerWithDefaults instantiates a new Server object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEntities
-
-`func (o *Server) GetEntities() ServerEntities`
-
-GetEntities returns the Entities field if non-nil, zero value otherwise.
-
-### GetEntitiesOk
-
-`func (o *Server) GetEntitiesOk() (*ServerEntities, bool)`
-
-GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEntities
-
-`func (o *Server) SetEntities(v ServerEntities)`
-
-SetEntities sets Entities field to given value.
-
-### HasEntities
-
-`func (o *Server) HasEntities() bool`
-
-HasEntities returns a boolean if a field has been set.
-
-### GetHref
-
-`func (o *Server) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *Server) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *Server) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *Server) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -104,6 +54,56 @@ SetId sets Id field to given value.
 `func (o *Server) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *Server) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *Server) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *Server) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *Server) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *Server) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *Server) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *Server) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *Server) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -150,30 +150,30 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-### GetType
+### GetEntities
 
-`func (o *Server) GetType() Type`
+`func (o *Server) GetEntities() ServerEntities`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetEntities returns the Entities field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetEntitiesOk
 
-`func (o *Server) GetTypeOk() (*Type, bool)`
+`func (o *Server) GetEntitiesOk() (*ServerEntities, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetEntities
 
-`func (o *Server) SetType(v Type)`
+`func (o *Server) SetEntities(v ServerEntities)`
 
-SetType sets Type field to given value.
+SetEntities sets Entities field to given value.
 
-### HasType
+### HasEntities
 
-`func (o *Server) HasType() bool`
+`func (o *Server) HasEntities() bool`
 
-HasType returns a boolean if a field has been set.
+HasEntities returns a boolean if a field has been set.
 
 
 

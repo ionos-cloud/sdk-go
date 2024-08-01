@@ -4,14 +4,14 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6. | [optional] |
-|**K8sVersion** | Pointer to **string** | The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster&#39;s node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional] |
-|**Location** | Pointer to **string** | This attribute is mandatory if the cluster is private. The location must be enabled for your contract, or you must have a data center at that location. This property is not adjustable. | [optional] |
-|**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
 |**Name** | **string** | A Kubernetes cluster name. Valid Kubernetes cluster name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
+|**K8sVersion** | Pointer to **string** | The Kubernetes version that the cluster is running. This limits which Kubernetes versions can run in a cluster&#39;s node pools. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional] |
+|**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
+|**Public** | Pointer to **bool** | The indicator whether the cluster is public or private. Note that the status FALSE is still in the beta phase. | [optional] [default to true]|
+|**Location** | Pointer to **string** | This attribute is mandatory if the cluster is private and optional if the cluster is public. The location must be enabled for your contract, or you must have a data center at that location. This property is not adjustable. | [optional] |
 |**NatGatewayIp** | Pointer to **string** | The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster&#39;s location. This attribute is mandatory if the cluster is private. | [optional] |
 |**NodeSubnet** | Pointer to **string** | The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length. | [optional] |
-|**Public** | Pointer to **bool** | The indicator whether the cluster is public or private. Note that the status FALSE is still in the beta phase. | [optional] [default to true]|
+|**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Intra-cluster traffic is not affected by this restriction. If no AllowList is specified, access is not limited. If an IP is specified without a subnet mask, the default value is 32 for IPv4 and 128 for IPv6. | [optional] |
 |**S3Buckets** | Pointer to [**[]S3Bucket**](S3Bucket.md) | List of S3 buckets configured for K8s usage. At the moment, it contains only one S3 bucket that is used to store K8s API audit logs. | [optional] |
 
 ## Methods
@@ -33,30 +33,25 @@ NewKubernetesClusterPropertiesForPostWithDefaults instantiates a new KubernetesC
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetApiSubnetAllowList
+### GetName
 
-`func (o *KubernetesClusterPropertiesForPost) GetApiSubnetAllowList() []string`
+`func (o *KubernetesClusterPropertiesForPost) GetName() string`
 
-GetApiSubnetAllowList returns the ApiSubnetAllowList field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetApiSubnetAllowListOk
+### GetNameOk
 
-`func (o *KubernetesClusterPropertiesForPost) GetApiSubnetAllowListOk() (*[]string, bool)`
+`func (o *KubernetesClusterPropertiesForPost) GetNameOk() (*string, bool)`
 
-GetApiSubnetAllowListOk returns a tuple with the ApiSubnetAllowList field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetApiSubnetAllowList
+### SetName
 
-`func (o *KubernetesClusterPropertiesForPost) SetApiSubnetAllowList(v []string)`
+`func (o *KubernetesClusterPropertiesForPost) SetName(v string)`
 
-SetApiSubnetAllowList sets ApiSubnetAllowList field to given value.
+SetName sets Name field to given value.
 
-### HasApiSubnetAllowList
-
-`func (o *KubernetesClusterPropertiesForPost) HasApiSubnetAllowList() bool`
-
-HasApiSubnetAllowList returns a boolean if a field has been set.
 
 ### GetK8sVersion
 
@@ -83,31 +78,6 @@ SetK8sVersion sets K8sVersion field to given value.
 
 HasK8sVersion returns a boolean if a field has been set.
 
-### GetLocation
-
-`func (o *KubernetesClusterPropertiesForPost) GetLocation() string`
-
-GetLocation returns the Location field if non-nil, zero value otherwise.
-
-### GetLocationOk
-
-`func (o *KubernetesClusterPropertiesForPost) GetLocationOk() (*string, bool)`
-
-GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocation
-
-`func (o *KubernetesClusterPropertiesForPost) SetLocation(v string)`
-
-SetLocation sets Location field to given value.
-
-### HasLocation
-
-`func (o *KubernetesClusterPropertiesForPost) HasLocation() bool`
-
-HasLocation returns a boolean if a field has been set.
-
 ### GetMaintenanceWindow
 
 `func (o *KubernetesClusterPropertiesForPost) GetMaintenanceWindow() KubernetesMaintenanceWindow`
@@ -133,25 +103,55 @@ SetMaintenanceWindow sets MaintenanceWindow field to given value.
 
 HasMaintenanceWindow returns a boolean if a field has been set.
 
-### GetName
+### GetPublic
 
-`func (o *KubernetesClusterPropertiesForPost) GetName() string`
+`func (o *KubernetesClusterPropertiesForPost) GetPublic() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetPublic returns the Public field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetPublicOk
 
-`func (o *KubernetesClusterPropertiesForPost) GetNameOk() (*string, bool)`
+`func (o *KubernetesClusterPropertiesForPost) GetPublicOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetPublicOk returns a tuple with the Public field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetPublic
 
-`func (o *KubernetesClusterPropertiesForPost) SetName(v string)`
+`func (o *KubernetesClusterPropertiesForPost) SetPublic(v bool)`
 
-SetName sets Name field to given value.
+SetPublic sets Public field to given value.
 
+### HasPublic
+
+`func (o *KubernetesClusterPropertiesForPost) HasPublic() bool`
+
+HasPublic returns a boolean if a field has been set.
+
+### GetLocation
+
+`func (o *KubernetesClusterPropertiesForPost) GetLocation() string`
+
+GetLocation returns the Location field if non-nil, zero value otherwise.
+
+### GetLocationOk
+
+`func (o *KubernetesClusterPropertiesForPost) GetLocationOk() (*string, bool)`
+
+GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocation
+
+`func (o *KubernetesClusterPropertiesForPost) SetLocation(v string)`
+
+SetLocation sets Location field to given value.
+
+### HasLocation
+
+`func (o *KubernetesClusterPropertiesForPost) HasLocation() bool`
+
+HasLocation returns a boolean if a field has been set.
 
 ### GetNatGatewayIp
 
@@ -203,30 +203,30 @@ SetNodeSubnet sets NodeSubnet field to given value.
 
 HasNodeSubnet returns a boolean if a field has been set.
 
-### GetPublic
+### GetApiSubnetAllowList
 
-`func (o *KubernetesClusterPropertiesForPost) GetPublic() bool`
+`func (o *KubernetesClusterPropertiesForPost) GetApiSubnetAllowList() []string`
 
-GetPublic returns the Public field if non-nil, zero value otherwise.
+GetApiSubnetAllowList returns the ApiSubnetAllowList field if non-nil, zero value otherwise.
 
-### GetPublicOk
+### GetApiSubnetAllowListOk
 
-`func (o *KubernetesClusterPropertiesForPost) GetPublicOk() (*bool, bool)`
+`func (o *KubernetesClusterPropertiesForPost) GetApiSubnetAllowListOk() (*[]string, bool)`
 
-GetPublicOk returns a tuple with the Public field if it's non-nil, zero value otherwise
+GetApiSubnetAllowListOk returns a tuple with the ApiSubnetAllowList field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetPublic
+### SetApiSubnetAllowList
 
-`func (o *KubernetesClusterPropertiesForPost) SetPublic(v bool)`
+`func (o *KubernetesClusterPropertiesForPost) SetApiSubnetAllowList(v []string)`
 
-SetPublic sets Public field to given value.
+SetApiSubnetAllowList sets ApiSubnetAllowList field to given value.
 
-### HasPublic
+### HasApiSubnetAllowList
 
-`func (o *KubernetesClusterPropertiesForPost) HasPublic() bool`
+`func (o *KubernetesClusterPropertiesForPost) HasApiSubnetAllowList() bool`
 
-HasPublic returns a boolean if a field has been set.
+HasApiSubnetAllowList returns a boolean if a field has been set.
 
 ### GetS3Buckets
 

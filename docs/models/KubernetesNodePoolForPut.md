@@ -4,11 +4,11 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Type** | Pointer to **string** | The object type. | [optional] [readonly] |
+|**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**KubernetesNodePoolPropertiesForPut**](KubernetesNodePoolPropertiesForPut.md) |  | |
-|**Type** | Pointer to **string** | The object type. | [optional] [readonly] |
 
 ## Methods
 
@@ -28,31 +28,6 @@ will change when the set of required properties is changed
 NewKubernetesNodePoolForPutWithDefaults instantiates a new KubernetesNodePoolForPut object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHref
-
-`func (o *KubernetesNodePoolForPut) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *KubernetesNodePoolForPut) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *KubernetesNodePoolForPut) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *KubernetesNodePoolForPut) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -78,6 +53,56 @@ SetId sets Id field to given value.
 `func (o *KubernetesNodePoolForPut) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *KubernetesNodePoolForPut) GetType() string`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *KubernetesNodePoolForPut) GetTypeOk() (*string, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *KubernetesNodePoolForPut) SetType(v string)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *KubernetesNodePoolForPut) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *KubernetesNodePoolForPut) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *KubernetesNodePoolForPut) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *KubernetesNodePoolForPut) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *KubernetesNodePoolForPut) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -123,31 +148,6 @@ and a boolean to check if the value has been set.
 
 SetProperties sets Properties field to given value.
 
-
-### GetType
-
-`func (o *KubernetesNodePoolForPut) GetType() string`
-
-GetType returns the Type field if non-nil, zero value otherwise.
-
-### GetTypeOk
-
-`func (o *KubernetesNodePoolForPut) GetTypeOk() (*string, bool)`
-
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetType
-
-`func (o *KubernetesNodePoolForPut) SetType(v string)`
-
-SetType sets Type field to given value.
-
-### HasType
-
-`func (o *KubernetesNodePoolForPut) HasType() bool`
-
-HasType returns a boolean if a field has been set.
 
 
 

@@ -5,8 +5,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Cdroms** | Pointer to [**Cdroms**](Cdroms.md) |  | [optional] |
-|**Nics** | Pointer to [**Nics**](Nics.md) |  | [optional] |
 |**Volumes** | Pointer to [**AttachedVolumes**](AttachedVolumes.md) |  | [optional] |
+|**Nics** | Pointer to [**Nics**](Nics.md) |  | [optional] |
 
 ## Methods
 
@@ -52,31 +52,6 @@ SetCdroms sets Cdroms field to given value.
 
 HasCdroms returns a boolean if a field has been set.
 
-### GetNics
-
-`func (o *ServerEntities) GetNics() Nics`
-
-GetNics returns the Nics field if non-nil, zero value otherwise.
-
-### GetNicsOk
-
-`func (o *ServerEntities) GetNicsOk() (*Nics, bool)`
-
-GetNicsOk returns a tuple with the Nics field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNics
-
-`func (o *ServerEntities) SetNics(v Nics)`
-
-SetNics sets Nics field to given value.
-
-### HasNics
-
-`func (o *ServerEntities) HasNics() bool`
-
-HasNics returns a boolean if a field has been set.
-
 ### GetVolumes
 
 `func (o *ServerEntities) GetVolumes() AttachedVolumes`
@@ -101,6 +76,31 @@ SetVolumes sets Volumes field to given value.
 `func (o *ServerEntities) HasVolumes() bool`
 
 HasVolumes returns a boolean if a field has been set.
+
+### GetNics
+
+`func (o *ServerEntities) GetNics() Nics`
+
+GetNics returns the Nics field if non-nil, zero value otherwise.
+
+### GetNicsOk
+
+`func (o *ServerEntities) GetNicsOk() (*Nics, bool)`
+
+GetNicsOk returns a tuple with the Nics field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNics
+
+`func (o *ServerEntities) SetNics(v Nics)`
+
+SetNics sets Nics field to given value.
+
+### HasNics
+
+`func (o *ServerEntities) HasNics() bool`
+
+HasNics returns a boolean if a field has been set.
 
 
 

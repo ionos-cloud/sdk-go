@@ -4,12 +4,12 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Entities** | Pointer to [**LanEntities**](LanEntities.md) |  | [optional] |
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
+|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
 |**Properties** | [**LanProperties**](LanProperties.md) |  | |
-|**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Entities** | Pointer to [**LanEntities**](LanEntities.md) |  | [optional] |
 
 ## Methods
 
@@ -29,56 +29,6 @@ will change when the set of required properties is changed
 NewLanWithDefaults instantiates a new Lan object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetEntities
-
-`func (o *Lan) GetEntities() LanEntities`
-
-GetEntities returns the Entities field if non-nil, zero value otherwise.
-
-### GetEntitiesOk
-
-`func (o *Lan) GetEntitiesOk() (*LanEntities, bool)`
-
-GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetEntities
-
-`func (o *Lan) SetEntities(v LanEntities)`
-
-SetEntities sets Entities field to given value.
-
-### HasEntities
-
-`func (o *Lan) HasEntities() bool`
-
-HasEntities returns a boolean if a field has been set.
-
-### GetHref
-
-`func (o *Lan) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *Lan) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *Lan) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *Lan) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -104,6 +54,56 @@ SetId sets Id field to given value.
 `func (o *Lan) HasId() bool`
 
 HasId returns a boolean if a field has been set.
+
+### GetType
+
+`func (o *Lan) GetType() Type`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *Lan) GetTypeOk() (*Type, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *Lan) SetType(v Type)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *Lan) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *Lan) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *Lan) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *Lan) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *Lan) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
 
 ### GetMetadata
 
@@ -150,30 +150,30 @@ and a boolean to check if the value has been set.
 SetProperties sets Properties field to given value.
 
 
-### GetType
+### GetEntities
 
-`func (o *Lan) GetType() Type`
+`func (o *Lan) GetEntities() LanEntities`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetEntities returns the Entities field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetEntitiesOk
 
-`func (o *Lan) GetTypeOk() (*Type, bool)`
+`func (o *Lan) GetEntitiesOk() (*LanEntities, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetEntitiesOk returns a tuple with the Entities field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetEntities
 
-`func (o *Lan) SetType(v Type)`
+`func (o *Lan) SetEntities(v LanEntities)`
 
-SetType sets Type field to given value.
+SetEntities sets Entities field to given value.
 
-### HasType
+### HasEntities
 
-`func (o *Lan) HasType() bool`
+`func (o *Lan) HasEntities() bool`
 
-HasType returns a boolean if a field has been set.
+HasEntities returns a boolean if a field has been set.
 
 
 

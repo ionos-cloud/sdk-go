@@ -6,8 +6,8 @@
 |------------ | ------------- | ------------- | -------------|
 |**ClientTimeout** | Pointer to **int32** | The maximum time in milliseconds to wait for the client to acknowledge or send data; default is 50,000 (50 seconds). | [optional] |
 |**ConnectTimeout** | Pointer to **int32** | The maximum time in milliseconds to wait for a connection attempt to a target to succeed; default is 5000 (five seconds). | [optional] |
-|**Retries** | Pointer to **int32** | The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535 and default is three reconnection attempts. | [optional] |
 |**TargetTimeout** | Pointer to **int32** | The maximum time in milliseconds that a target can remain inactive; default is 50,000 (50 seconds). | [optional] |
+|**Retries** | Pointer to **int32** | The maximum number of attempts to reconnect to a target after a connection failure. Valid range is 0 to 65535 and default is three reconnection attempts. | [optional] |
 
 ## Methods
 
@@ -78,31 +78,6 @@ SetConnectTimeout sets ConnectTimeout field to given value.
 
 HasConnectTimeout returns a boolean if a field has been set.
 
-### GetRetries
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetRetries() int32`
-
-GetRetries returns the Retries field if non-nil, zero value otherwise.
-
-### GetRetriesOk
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetRetriesOk() (*int32, bool)`
-
-GetRetriesOk returns a tuple with the Retries field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetRetries
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) SetRetries(v int32)`
-
-SetRetries sets Retries field to given value.
-
-### HasRetries
-
-`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) HasRetries() bool`
-
-HasRetries returns a boolean if a field has been set.
-
 ### GetTargetTimeout
 
 `func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetTargetTimeout() int32`
@@ -127,6 +102,31 @@ SetTargetTimeout sets TargetTimeout field to given value.
 `func (o *NetworkLoadBalancerForwardingRuleHealthCheck) HasTargetTimeout() bool`
 
 HasTargetTimeout returns a boolean if a field has been set.
+
+### GetRetries
+
+`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetRetries() int32`
+
+GetRetries returns the Retries field if non-nil, zero value otherwise.
+
+### GetRetriesOk
+
+`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) GetRetriesOk() (*int32, bool)`
+
+GetRetriesOk returns a tuple with the Retries field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRetries
+
+`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) SetRetries(v int32)`
+
+SetRetries sets Retries field to given value.
+
+### HasRetries
+
+`func (o *NetworkLoadBalancerForwardingRuleHealthCheck) HasRetries() bool`
+
+HasRetries returns a boolean if a field has been set.
 
 
 

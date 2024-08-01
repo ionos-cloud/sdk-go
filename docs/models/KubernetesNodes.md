@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | The URL to the collection representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | A unique representation of the Kubernetes node pool as a resource collection. | [optional] [readonly] |
-|**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in the collection. | [optional] [readonly] |
 |**Type** | Pointer to **string** | The resource type within a collection. | [optional] [readonly] |
+|**Href** | Pointer to **string** | The URL to the collection representation (absolute path). | [optional] [readonly] |
+|**Items** | Pointer to [**[]KubernetesNode**](KubernetesNode.md) | Array of items in the collection. | [optional] [readonly] |
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewKubernetesNodesWithDefaults instantiates a new KubernetesNodes object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHref
-
-`func (o *KubernetesNodes) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *KubernetesNodes) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *KubernetesNodes) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *KubernetesNodes) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -78,31 +53,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetItems
-
-`func (o *KubernetesNodes) GetItems() []KubernetesNode`
-
-GetItems returns the Items field if non-nil, zero value otherwise.
-
-### GetItemsOk
-
-`func (o *KubernetesNodes) GetItemsOk() (*[]KubernetesNode, bool)`
-
-GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetItems
-
-`func (o *KubernetesNodes) SetItems(v []KubernetesNode)`
-
-SetItems sets Items field to given value.
-
-### HasItems
-
-`func (o *KubernetesNodes) HasItems() bool`
-
-HasItems returns a boolean if a field has been set.
-
 ### GetType
 
 `func (o *KubernetesNodes) GetType() string`
@@ -127,6 +77,56 @@ SetType sets Type field to given value.
 `func (o *KubernetesNodes) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *KubernetesNodes) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *KubernetesNodes) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *KubernetesNodes) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *KubernetesNodes) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
+
+### GetItems
+
+`func (o *KubernetesNodes) GetItems() []KubernetesNode`
+
+GetItems returns the Items field if non-nil, zero value otherwise.
+
+### GetItemsOk
+
+`func (o *KubernetesNodes) GetItemsOk() (*[]KubernetesNode, bool)`
+
+GetItemsOk returns a tuple with the Items field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetItems
+
+`func (o *KubernetesNodes) SetItems(v []KubernetesNode)`
+
+SetItems sets Items field to given value.
+
+### HasItems
+
+`func (o *KubernetesNodes) HasItems() bool`
+
+HasItems returns a boolean if a field has been set.
 
 
 

@@ -19,6 +19,11 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersVolumesLabelsGet**](LabelsApi.md#DatacentersVolumesLabelsGet) | **Get** /datacenters/{datacenterId}/volumes/{volumeId}/labels | List volume labels|
 |[**DatacentersVolumesLabelsPost**](LabelsApi.md#DatacentersVolumesLabelsPost) | **Post** /datacenters/{datacenterId}/volumes/{volumeId}/labels | Create a Volume Label|
 |[**DatacentersVolumesLabelsPut**](LabelsApi.md#DatacentersVolumesLabelsPut) | **Put** /datacenters/{datacenterId}/volumes/{volumeId}/labels/{key} | Modify a Volume Label|
+|[**ImagesLabelsDelete**](LabelsApi.md#ImagesLabelsDelete) | **Delete** /images/{imageId}/labels/{key} | Delete image label|
+|[**ImagesLabelsFindByKey**](LabelsApi.md#ImagesLabelsFindByKey) | **Get** /images/{imageId}/labels/{key} | Retrieve image labels|
+|[**ImagesLabelsGet**](LabelsApi.md#ImagesLabelsGet) | **Get** /images/{imageId}/labels | List image labels|
+|[**ImagesLabelsPost**](LabelsApi.md#ImagesLabelsPost) | **Post** /images/{imageId}/labels | Create an Image Label|
+|[**ImagesLabelsPut**](LabelsApi.md#ImagesLabelsPut) | **Put** /images/{imageId}/labels/{key} | Modify an Image Label by Key|
 |[**IpblocksLabelsDelete**](LabelsApi.md#IpblocksLabelsDelete) | **Delete** /ipblocks/{ipblockId}/labels/{key} | Delete IP block labels|
 |[**IpblocksLabelsFindByKey**](LabelsApi.md#IpblocksLabelsFindByKey) | **Get** /ipblocks/{ipblockId}/labels/{key} | Retrieve IP block labels|
 |[**IpblocksLabelsGet**](LabelsApi.md#IpblocksLabelsGet) | **Get** /ipblocks/{ipblockId}/labels | List IP block labels|
@@ -1189,6 +1194,391 @@ func main() {
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiDatacentersVolumesLabelsPutRequest struct via the builder pattern
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **label** | [**LabelResource**](../models/LabelResource.md) | The modified label | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
+
+### Return type
+
+[**LabelResource**](../models/LabelResource.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+
+## ImagesLabelsDelete
+
+```go
+var result  = ImagesLabelsDelete(ctx, imageId, key)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
+```
+
+Delete image label
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
+)
+
+func main() {
+    imageId := "imageId_example" // string | The unique ID of the image.
+    key := "key_example" // string | The label key
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
+    resp, err := apiClient.LabelsApi.ImagesLabelsDelete(context.Background(), imageId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LabelsApi.ImagesLabelsDelete``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+}
+```
+
+### Path Parameters
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**imageId** | **string** | The unique ID of the image. | |
+|**key** | **string** | The label key | |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiImagesLabelsDeleteRequest struct via the builder pattern
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
+
+### Return type
+
+ (empty response body)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+
+## ImagesLabelsFindByKey
+
+```go
+var result LabelResource = ImagesLabelsFindByKey(ctx, imageId, key)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
+```
+
+Retrieve image labels
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
+)
+
+func main() {
+    imageId := "imageId_example" // string | The unique ID of the image.
+    key := "key_example" // string | The label key
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
+    resource, resp, err := apiClient.LabelsApi.ImagesLabelsFindByKey(context.Background(), imageId, key).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LabelsApi.ImagesLabelsFindByKey``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ImagesLabelsFindByKey`: LabelResource
+    fmt.Fprintf(os.Stdout, "Response from `LabelsApi.ImagesLabelsFindByKey`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**imageId** | **string** | The unique ID of the image. | |
+|**key** | **string** | The label key | |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiImagesLabelsFindByKeyRequest struct via the builder pattern
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
+
+### Return type
+
+[**LabelResource**](../models/LabelResource.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+
+## ImagesLabelsGet
+
+```go
+var result LabelResources = ImagesLabelsGet(ctx, imageId)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
+```
+
+List image labels
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
+)
+
+func main() {
+    imageId := "imageId_example" // string | The unique ID of the image.
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
+    resource, resp, err := apiClient.LabelsApi.ImagesLabelsGet(context.Background(), imageId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LabelsApi.ImagesLabelsGet``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ImagesLabelsGet`: LabelResources
+    fmt.Fprintf(os.Stdout, "Response from `LabelsApi.ImagesLabelsGet`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**imageId** | **string** | The unique ID of the image. | |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiImagesLabelsGetRequest struct via the builder pattern
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
+
+### Return type
+
+[**LabelResources**](../models/LabelResources.md)
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+
+
+## ImagesLabelsPost
+
+```go
+var result LabelResource = ImagesLabelsPost(ctx, imageId)
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
+```
+
+Create an Image Label
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
+)
+
+func main() {
+    imageId := "imageId_example" // string | The unique ID of the image
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The label to create.
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
+    resource, resp, err := apiClient.LabelsApi.ImagesLabelsPost(context.Background(), imageId).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LabelsApi.ImagesLabelsPost``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ImagesLabelsPost`: LabelResource
+    fmt.Fprintf(os.Stdout, "Response from `LabelsApi.ImagesLabelsPost`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**imageId** | **string** | The unique ID of the image | |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiImagesLabelsPostRequest struct via the builder pattern
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+| **label** | [**LabelResource**](../models/LabelResource.md) | The label to create. | |
+| **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
+| **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
+| **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
+
+### Return type
+
+[**LabelResource**](../models/LabelResource.md)
+
+### HTTP request headers
+
+- **Content-Type**: application/json
+- **Accept**: application/json
+
+
+
+## ImagesLabelsPut
+
+```go
+var result LabelResource = ImagesLabelsPut(ctx, imageId, key)
+                      .Label(label)
+                      .Pretty(pretty)
+                      .Depth(depth)
+                      .XContractNumber(xContractNumber)
+                      .Execute()
+```
+
+Modify an Image Label by Key
+
+
+
+### Example
+
+```go
+package main
+
+import (
+    "context"
+    "fmt"
+    "os"
+
+    ionoscloud "github.com/ionos-cloud/sdk-go/v6"
+)
+
+func main() {
+    imageId := "imageId_example" // string | The unique ID of the image.
+    key := "key_example" // string | The label key
+    label := *openapiclient.NewLabelResource(*openapiclient.NewLabelResourceProperties()) // LabelResource | The modified label
+    pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
+    depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
+    xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
+
+    configuration := ionoscloud.NewConfiguration()
+    apiClient := ionoscloud.NewAPIClient(configuration)
+    resource, resp, err := apiClient.LabelsApi.ImagesLabelsPut(context.Background(), imageId, key).Label(label).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Execute()
+    if err != nil {
+        fmt.Fprintf(os.Stderr, "Error when calling `LabelsApi.ImagesLabelsPut``: %v\n", err)
+        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+    }
+    // response from `ImagesLabelsPut`: LabelResource
+    fmt.Fprintf(os.Stdout, "Response from `LabelsApi.ImagesLabelsPut`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+|Name | Type | Description  | Notes|
+|------------- | ------------- | ------------- | -------------|
+|**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
+|**imageId** | **string** | The unique ID of the image. | |
+|**key** | **string** | The label key | |
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiImagesLabelsPutRequest struct via the builder pattern
 
 
 |Name | Type | Description  | Notes|

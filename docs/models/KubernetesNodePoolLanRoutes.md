@@ -4,8 +4,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**GatewayIp** | Pointer to **string** | IPv4 or IPv6 Gateway IP for the route. | [optional] |
 |**Network** | Pointer to **string** | IPv4 or IPv6 CIDR to be routed via the interface. | [optional] |
+|**GatewayIp** | Pointer to **string** | IPv4 or IPv6 Gateway IP for the route. | [optional] |
 
 ## Methods
 
@@ -25,31 +25,6 @@ will change when the set of required properties is changed
 NewKubernetesNodePoolLanRoutesWithDefaults instantiates a new KubernetesNodePoolLanRoutes object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetGatewayIp
-
-`func (o *KubernetesNodePoolLanRoutes) GetGatewayIp() string`
-
-GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
-
-### GetGatewayIpOk
-
-`func (o *KubernetesNodePoolLanRoutes) GetGatewayIpOk() (*string, bool)`
-
-GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetGatewayIp
-
-`func (o *KubernetesNodePoolLanRoutes) SetGatewayIp(v string)`
-
-SetGatewayIp sets GatewayIp field to given value.
-
-### HasGatewayIp
-
-`func (o *KubernetesNodePoolLanRoutes) HasGatewayIp() bool`
-
-HasGatewayIp returns a boolean if a field has been set.
 
 ### GetNetwork
 
@@ -75,6 +50,31 @@ SetNetwork sets Network field to given value.
 `func (o *KubernetesNodePoolLanRoutes) HasNetwork() bool`
 
 HasNetwork returns a boolean if a field has been set.
+
+### GetGatewayIp
+
+`func (o *KubernetesNodePoolLanRoutes) GetGatewayIp() string`
+
+GetGatewayIp returns the GatewayIp field if non-nil, zero value otherwise.
+
+### GetGatewayIpOk
+
+`func (o *KubernetesNodePoolLanRoutes) GetGatewayIpOk() (*string, bool)`
+
+GetGatewayIpOk returns a tuple with the GatewayIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGatewayIp
+
+`func (o *KubernetesNodePoolLanRoutes) SetGatewayIp(v string)`
+
+SetGatewayIp sets GatewayIp field to given value.
+
+### HasGatewayIp
+
+`func (o *KubernetesNodePoolLanRoutes) HasGatewayIp() bool`
+
+HasGatewayIp returns a boolean if a field has been set.
 
 
 

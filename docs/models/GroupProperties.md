@@ -4,23 +4,23 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**AccessActivityLog** | Pointer to **bool** | Activity log access privilege. | [optional] |
-|**AccessAndManageCertificates** | Pointer to **bool** | Privilege for a group to access and manage certificates. | [optional] |
-|**AccessAndManageDns** | Pointer to **bool** | Privilege for a group to access and manage dns records. | [optional] |
-|**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
-|**CreateBackupUnit** | Pointer to **bool** | Create backup unit privilege. | [optional] |
+|**Name** | Pointer to **string** | The name of the resource. | [optional] |
 |**CreateDataCenter** | Pointer to **bool** | Create data center privilege. | [optional] |
-|**CreateFlowLog** | Pointer to **bool** | Create Flow Logs privilege. | [optional] |
+|**CreateSnapshot** | Pointer to **bool** | Create snapshot privilege. | [optional] |
+|**ReserveIp** | Pointer to **bool** | Reserve IP block privilege. | [optional] |
+|**AccessActivityLog** | Pointer to **bool** | Activity log access privilege. | [optional] |
+|**CreatePcc** | Pointer to **bool** | User privilege to create a cross connect. | [optional] |
+|**S3Privilege** | Pointer to **bool** | S3 privilege. | [optional] |
+|**CreateBackupUnit** | Pointer to **bool** | Create backup unit privilege. | [optional] |
 |**CreateInternetAccess** | Pointer to **bool** | Create internet access privilege. | [optional] |
 |**CreateK8sCluster** | Pointer to **bool** | Create Kubernetes cluster privilege. | [optional] |
-|**CreatePcc** | Pointer to **bool** | Create pcc privilege. | [optional] |
-|**CreateSnapshot** | Pointer to **bool** | Create snapshot privilege. | [optional] |
+|**CreateFlowLog** | Pointer to **bool** | Create Flow Logs privilege. | [optional] |
+|**AccessAndManageMonitoring** | Pointer to **bool** | Privilege for a group to access and manage monitoring related functionality (access metrics, CRUD on alarms, alarm-actions etc) using Monotoring-as-a-Service (MaaS). | [optional] |
+|**AccessAndManageCertificates** | Pointer to **bool** | Privilege for a group to access and manage certificates. | [optional] |
 |**ManageDBaaS** | Pointer to **bool** | Privilege for a group to manage DBaaS related functionality. | [optional] |
-|**ManageDataplatform** | Pointer to **bool** | Privilege for a group to access and manage the Data Platform. | [optional] |
+|**AccessAndManageDns** | Pointer to **bool** | Privilege for a group to access and manage dns records. | [optional] |
 |**ManageRegistry** | Pointer to **bool** | Privilege for group accessing container registry related functionality. | [optional] |
-|**Name** | Pointer to **string** | The name of the resource. | [optional] |
-|**ReserveIp** | Pointer to **bool** | Reserve IP block privilege. | [optional] |
-|**S3Privilege** | Pointer to **bool** | S3 privilege. | [optional] |
+|**ManageDataplatform** | Pointer to **bool** | Privilege for a group to access and manage the Data Platform. | [optional] |
 
 ## Methods
 
@@ -41,130 +41,30 @@ NewGroupPropertiesWithDefaults instantiates a new GroupProperties object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetAccessActivityLog
+### GetName
 
-`func (o *GroupProperties) GetAccessActivityLog() bool`
+`func (o *GroupProperties) GetName() string`
 
-GetAccessActivityLog returns the AccessActivityLog field if non-nil, zero value otherwise.
+GetName returns the Name field if non-nil, zero value otherwise.
 
-### GetAccessActivityLogOk
+### GetNameOk
 
-`func (o *GroupProperties) GetAccessActivityLogOk() (*bool, bool)`
+`func (o *GroupProperties) GetNameOk() (*string, bool)`
 
-GetAccessActivityLogOk returns a tuple with the AccessActivityLog field if it's non-nil, zero value otherwise
+GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetAccessActivityLog
+### SetName
 
-`func (o *GroupProperties) SetAccessActivityLog(v bool)`
+`func (o *GroupProperties) SetName(v string)`
 
-SetAccessActivityLog sets AccessActivityLog field to given value.
+SetName sets Name field to given value.
 
-### HasAccessActivityLog
+### HasName
 
-`func (o *GroupProperties) HasAccessActivityLog() bool`
+`func (o *GroupProperties) HasName() bool`
 
-HasAccessActivityLog returns a boolean if a field has been set.
-
-### GetAccessAndManageCertificates
-
-`func (o *GroupProperties) GetAccessAndManageCertificates() bool`
-
-GetAccessAndManageCertificates returns the AccessAndManageCertificates field if non-nil, zero value otherwise.
-
-### GetAccessAndManageCertificatesOk
-
-`func (o *GroupProperties) GetAccessAndManageCertificatesOk() (*bool, bool)`
-
-GetAccessAndManageCertificatesOk returns a tuple with the AccessAndManageCertificates field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessAndManageCertificates
-
-`func (o *GroupProperties) SetAccessAndManageCertificates(v bool)`
-
-SetAccessAndManageCertificates sets AccessAndManageCertificates field to given value.
-
-### HasAccessAndManageCertificates
-
-`func (o *GroupProperties) HasAccessAndManageCertificates() bool`
-
-HasAccessAndManageCertificates returns a boolean if a field has been set.
-
-### GetAccessAndManageDns
-
-`func (o *GroupProperties) GetAccessAndManageDns() bool`
-
-GetAccessAndManageDns returns the AccessAndManageDns field if non-nil, zero value otherwise.
-
-### GetAccessAndManageDnsOk
-
-`func (o *GroupProperties) GetAccessAndManageDnsOk() (*bool, bool)`
-
-GetAccessAndManageDnsOk returns a tuple with the AccessAndManageDns field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessAndManageDns
-
-`func (o *GroupProperties) SetAccessAndManageDns(v bool)`
-
-SetAccessAndManageDns sets AccessAndManageDns field to given value.
-
-### HasAccessAndManageDns
-
-`func (o *GroupProperties) HasAccessAndManageDns() bool`
-
-HasAccessAndManageDns returns a boolean if a field has been set.
-
-### GetAccessAndManageMonitoring
-
-`func (o *GroupProperties) GetAccessAndManageMonitoring() bool`
-
-GetAccessAndManageMonitoring returns the AccessAndManageMonitoring field if non-nil, zero value otherwise.
-
-### GetAccessAndManageMonitoringOk
-
-`func (o *GroupProperties) GetAccessAndManageMonitoringOk() (*bool, bool)`
-
-GetAccessAndManageMonitoringOk returns a tuple with the AccessAndManageMonitoring field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetAccessAndManageMonitoring
-
-`func (o *GroupProperties) SetAccessAndManageMonitoring(v bool)`
-
-SetAccessAndManageMonitoring sets AccessAndManageMonitoring field to given value.
-
-### HasAccessAndManageMonitoring
-
-`func (o *GroupProperties) HasAccessAndManageMonitoring() bool`
-
-HasAccessAndManageMonitoring returns a boolean if a field has been set.
-
-### GetCreateBackupUnit
-
-`func (o *GroupProperties) GetCreateBackupUnit() bool`
-
-GetCreateBackupUnit returns the CreateBackupUnit field if non-nil, zero value otherwise.
-
-### GetCreateBackupUnitOk
-
-`func (o *GroupProperties) GetCreateBackupUnitOk() (*bool, bool)`
-
-GetCreateBackupUnitOk returns a tuple with the CreateBackupUnit field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetCreateBackupUnit
-
-`func (o *GroupProperties) SetCreateBackupUnit(v bool)`
-
-SetCreateBackupUnit sets CreateBackupUnit field to given value.
-
-### HasCreateBackupUnit
-
-`func (o *GroupProperties) HasCreateBackupUnit() bool`
-
-HasCreateBackupUnit returns a boolean if a field has been set.
+HasName returns a boolean if a field has been set.
 
 ### GetCreateDataCenter
 
@@ -191,30 +91,155 @@ SetCreateDataCenter sets CreateDataCenter field to given value.
 
 HasCreateDataCenter returns a boolean if a field has been set.
 
-### GetCreateFlowLog
+### GetCreateSnapshot
 
-`func (o *GroupProperties) GetCreateFlowLog() bool`
+`func (o *GroupProperties) GetCreateSnapshot() bool`
 
-GetCreateFlowLog returns the CreateFlowLog field if non-nil, zero value otherwise.
+GetCreateSnapshot returns the CreateSnapshot field if non-nil, zero value otherwise.
 
-### GetCreateFlowLogOk
+### GetCreateSnapshotOk
 
-`func (o *GroupProperties) GetCreateFlowLogOk() (*bool, bool)`
+`func (o *GroupProperties) GetCreateSnapshotOk() (*bool, bool)`
 
-GetCreateFlowLogOk returns a tuple with the CreateFlowLog field if it's non-nil, zero value otherwise
+GetCreateSnapshotOk returns a tuple with the CreateSnapshot field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreateFlowLog
+### SetCreateSnapshot
 
-`func (o *GroupProperties) SetCreateFlowLog(v bool)`
+`func (o *GroupProperties) SetCreateSnapshot(v bool)`
 
-SetCreateFlowLog sets CreateFlowLog field to given value.
+SetCreateSnapshot sets CreateSnapshot field to given value.
 
-### HasCreateFlowLog
+### HasCreateSnapshot
 
-`func (o *GroupProperties) HasCreateFlowLog() bool`
+`func (o *GroupProperties) HasCreateSnapshot() bool`
 
-HasCreateFlowLog returns a boolean if a field has been set.
+HasCreateSnapshot returns a boolean if a field has been set.
+
+### GetReserveIp
+
+`func (o *GroupProperties) GetReserveIp() bool`
+
+GetReserveIp returns the ReserveIp field if non-nil, zero value otherwise.
+
+### GetReserveIpOk
+
+`func (o *GroupProperties) GetReserveIpOk() (*bool, bool)`
+
+GetReserveIpOk returns a tuple with the ReserveIp field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetReserveIp
+
+`func (o *GroupProperties) SetReserveIp(v bool)`
+
+SetReserveIp sets ReserveIp field to given value.
+
+### HasReserveIp
+
+`func (o *GroupProperties) HasReserveIp() bool`
+
+HasReserveIp returns a boolean if a field has been set.
+
+### GetAccessActivityLog
+
+`func (o *GroupProperties) GetAccessActivityLog() bool`
+
+GetAccessActivityLog returns the AccessActivityLog field if non-nil, zero value otherwise.
+
+### GetAccessActivityLogOk
+
+`func (o *GroupProperties) GetAccessActivityLogOk() (*bool, bool)`
+
+GetAccessActivityLogOk returns a tuple with the AccessActivityLog field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessActivityLog
+
+`func (o *GroupProperties) SetAccessActivityLog(v bool)`
+
+SetAccessActivityLog sets AccessActivityLog field to given value.
+
+### HasAccessActivityLog
+
+`func (o *GroupProperties) HasAccessActivityLog() bool`
+
+HasAccessActivityLog returns a boolean if a field has been set.
+
+### GetCreatePcc
+
+`func (o *GroupProperties) GetCreatePcc() bool`
+
+GetCreatePcc returns the CreatePcc field if non-nil, zero value otherwise.
+
+### GetCreatePccOk
+
+`func (o *GroupProperties) GetCreatePccOk() (*bool, bool)`
+
+GetCreatePccOk returns a tuple with the CreatePcc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatePcc
+
+`func (o *GroupProperties) SetCreatePcc(v bool)`
+
+SetCreatePcc sets CreatePcc field to given value.
+
+### HasCreatePcc
+
+`func (o *GroupProperties) HasCreatePcc() bool`
+
+HasCreatePcc returns a boolean if a field has been set.
+
+### GetS3Privilege
+
+`func (o *GroupProperties) GetS3Privilege() bool`
+
+GetS3Privilege returns the S3Privilege field if non-nil, zero value otherwise.
+
+### GetS3PrivilegeOk
+
+`func (o *GroupProperties) GetS3PrivilegeOk() (*bool, bool)`
+
+GetS3PrivilegeOk returns a tuple with the S3Privilege field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetS3Privilege
+
+`func (o *GroupProperties) SetS3Privilege(v bool)`
+
+SetS3Privilege sets S3Privilege field to given value.
+
+### HasS3Privilege
+
+`func (o *GroupProperties) HasS3Privilege() bool`
+
+HasS3Privilege returns a boolean if a field has been set.
+
+### GetCreateBackupUnit
+
+`func (o *GroupProperties) GetCreateBackupUnit() bool`
+
+GetCreateBackupUnit returns the CreateBackupUnit field if non-nil, zero value otherwise.
+
+### GetCreateBackupUnitOk
+
+`func (o *GroupProperties) GetCreateBackupUnitOk() (*bool, bool)`
+
+GetCreateBackupUnitOk returns a tuple with the CreateBackupUnit field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreateBackupUnit
+
+`func (o *GroupProperties) SetCreateBackupUnit(v bool)`
+
+SetCreateBackupUnit sets CreateBackupUnit field to given value.
+
+### HasCreateBackupUnit
+
+`func (o *GroupProperties) HasCreateBackupUnit() bool`
+
+HasCreateBackupUnit returns a boolean if a field has been set.
 
 ### GetCreateInternetAccess
 
@@ -266,55 +291,80 @@ SetCreateK8sCluster sets CreateK8sCluster field to given value.
 
 HasCreateK8sCluster returns a boolean if a field has been set.
 
-### GetCreatePcc
+### GetCreateFlowLog
 
-`func (o *GroupProperties) GetCreatePcc() bool`
+`func (o *GroupProperties) GetCreateFlowLog() bool`
 
-GetCreatePcc returns the CreatePcc field if non-nil, zero value otherwise.
+GetCreateFlowLog returns the CreateFlowLog field if non-nil, zero value otherwise.
 
-### GetCreatePccOk
+### GetCreateFlowLogOk
 
-`func (o *GroupProperties) GetCreatePccOk() (*bool, bool)`
+`func (o *GroupProperties) GetCreateFlowLogOk() (*bool, bool)`
 
-GetCreatePccOk returns a tuple with the CreatePcc field if it's non-nil, zero value otherwise
+GetCreateFlowLogOk returns a tuple with the CreateFlowLog field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreatePcc
+### SetCreateFlowLog
 
-`func (o *GroupProperties) SetCreatePcc(v bool)`
+`func (o *GroupProperties) SetCreateFlowLog(v bool)`
 
-SetCreatePcc sets CreatePcc field to given value.
+SetCreateFlowLog sets CreateFlowLog field to given value.
 
-### HasCreatePcc
+### HasCreateFlowLog
 
-`func (o *GroupProperties) HasCreatePcc() bool`
+`func (o *GroupProperties) HasCreateFlowLog() bool`
 
-HasCreatePcc returns a boolean if a field has been set.
+HasCreateFlowLog returns a boolean if a field has been set.
 
-### GetCreateSnapshot
+### GetAccessAndManageMonitoring
 
-`func (o *GroupProperties) GetCreateSnapshot() bool`
+`func (o *GroupProperties) GetAccessAndManageMonitoring() bool`
 
-GetCreateSnapshot returns the CreateSnapshot field if non-nil, zero value otherwise.
+GetAccessAndManageMonitoring returns the AccessAndManageMonitoring field if non-nil, zero value otherwise.
 
-### GetCreateSnapshotOk
+### GetAccessAndManageMonitoringOk
 
-`func (o *GroupProperties) GetCreateSnapshotOk() (*bool, bool)`
+`func (o *GroupProperties) GetAccessAndManageMonitoringOk() (*bool, bool)`
 
-GetCreateSnapshotOk returns a tuple with the CreateSnapshot field if it's non-nil, zero value otherwise
+GetAccessAndManageMonitoringOk returns a tuple with the AccessAndManageMonitoring field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCreateSnapshot
+### SetAccessAndManageMonitoring
 
-`func (o *GroupProperties) SetCreateSnapshot(v bool)`
+`func (o *GroupProperties) SetAccessAndManageMonitoring(v bool)`
 
-SetCreateSnapshot sets CreateSnapshot field to given value.
+SetAccessAndManageMonitoring sets AccessAndManageMonitoring field to given value.
 
-### HasCreateSnapshot
+### HasAccessAndManageMonitoring
 
-`func (o *GroupProperties) HasCreateSnapshot() bool`
+`func (o *GroupProperties) HasAccessAndManageMonitoring() bool`
 
-HasCreateSnapshot returns a boolean if a field has been set.
+HasAccessAndManageMonitoring returns a boolean if a field has been set.
+
+### GetAccessAndManageCertificates
+
+`func (o *GroupProperties) GetAccessAndManageCertificates() bool`
+
+GetAccessAndManageCertificates returns the AccessAndManageCertificates field if non-nil, zero value otherwise.
+
+### GetAccessAndManageCertificatesOk
+
+`func (o *GroupProperties) GetAccessAndManageCertificatesOk() (*bool, bool)`
+
+GetAccessAndManageCertificatesOk returns a tuple with the AccessAndManageCertificates field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageCertificates
+
+`func (o *GroupProperties) SetAccessAndManageCertificates(v bool)`
+
+SetAccessAndManageCertificates sets AccessAndManageCertificates field to given value.
+
+### HasAccessAndManageCertificates
+
+`func (o *GroupProperties) HasAccessAndManageCertificates() bool`
+
+HasAccessAndManageCertificates returns a boolean if a field has been set.
 
 ### GetManageDBaaS
 
@@ -341,30 +391,30 @@ SetManageDBaaS sets ManageDBaaS field to given value.
 
 HasManageDBaaS returns a boolean if a field has been set.
 
-### GetManageDataplatform
+### GetAccessAndManageDns
 
-`func (o *GroupProperties) GetManageDataplatform() bool`
+`func (o *GroupProperties) GetAccessAndManageDns() bool`
 
-GetManageDataplatform returns the ManageDataplatform field if non-nil, zero value otherwise.
+GetAccessAndManageDns returns the AccessAndManageDns field if non-nil, zero value otherwise.
 
-### GetManageDataplatformOk
+### GetAccessAndManageDnsOk
 
-`func (o *GroupProperties) GetManageDataplatformOk() (*bool, bool)`
+`func (o *GroupProperties) GetAccessAndManageDnsOk() (*bool, bool)`
 
-GetManageDataplatformOk returns a tuple with the ManageDataplatform field if it's non-nil, zero value otherwise
+GetAccessAndManageDnsOk returns a tuple with the AccessAndManageDns field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetManageDataplatform
+### SetAccessAndManageDns
 
-`func (o *GroupProperties) SetManageDataplatform(v bool)`
+`func (o *GroupProperties) SetAccessAndManageDns(v bool)`
 
-SetManageDataplatform sets ManageDataplatform field to given value.
+SetAccessAndManageDns sets AccessAndManageDns field to given value.
 
-### HasManageDataplatform
+### HasAccessAndManageDns
 
-`func (o *GroupProperties) HasManageDataplatform() bool`
+`func (o *GroupProperties) HasAccessAndManageDns() bool`
 
-HasManageDataplatform returns a boolean if a field has been set.
+HasAccessAndManageDns returns a boolean if a field has been set.
 
 ### GetManageRegistry
 
@@ -391,80 +441,30 @@ SetManageRegistry sets ManageRegistry field to given value.
 
 HasManageRegistry returns a boolean if a field has been set.
 
-### GetName
+### GetManageDataplatform
 
-`func (o *GroupProperties) GetName() string`
+`func (o *GroupProperties) GetManageDataplatform() bool`
 
-GetName returns the Name field if non-nil, zero value otherwise.
+GetManageDataplatform returns the ManageDataplatform field if non-nil, zero value otherwise.
 
-### GetNameOk
+### GetManageDataplatformOk
 
-`func (o *GroupProperties) GetNameOk() (*string, bool)`
+`func (o *GroupProperties) GetManageDataplatformOk() (*bool, bool)`
 
-GetNameOk returns a tuple with the Name field if it's non-nil, zero value otherwise
+GetManageDataplatformOk returns a tuple with the ManageDataplatform field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetName
+### SetManageDataplatform
 
-`func (o *GroupProperties) SetName(v string)`
+`func (o *GroupProperties) SetManageDataplatform(v bool)`
 
-SetName sets Name field to given value.
+SetManageDataplatform sets ManageDataplatform field to given value.
 
-### HasName
+### HasManageDataplatform
 
-`func (o *GroupProperties) HasName() bool`
+`func (o *GroupProperties) HasManageDataplatform() bool`
 
-HasName returns a boolean if a field has been set.
-
-### GetReserveIp
-
-`func (o *GroupProperties) GetReserveIp() bool`
-
-GetReserveIp returns the ReserveIp field if non-nil, zero value otherwise.
-
-### GetReserveIpOk
-
-`func (o *GroupProperties) GetReserveIpOk() (*bool, bool)`
-
-GetReserveIpOk returns a tuple with the ReserveIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetReserveIp
-
-`func (o *GroupProperties) SetReserveIp(v bool)`
-
-SetReserveIp sets ReserveIp field to given value.
-
-### HasReserveIp
-
-`func (o *GroupProperties) HasReserveIp() bool`
-
-HasReserveIp returns a boolean if a field has been set.
-
-### GetS3Privilege
-
-`func (o *GroupProperties) GetS3Privilege() bool`
-
-GetS3Privilege returns the S3Privilege field if non-nil, zero value otherwise.
-
-### GetS3PrivilegeOk
-
-`func (o *GroupProperties) GetS3PrivilegeOk() (*bool, bool)`
-
-GetS3PrivilegeOk returns a tuple with the S3Privilege field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetS3Privilege
-
-`func (o *GroupProperties) SetS3Privilege(v bool)`
-
-SetS3Privilege sets S3Privilege field to given value.
-
-### HasS3Privilege
-
-`func (o *GroupProperties) HasS3Privilege() bool`
-
-HasS3Privilege returns a boolean if a field has been set.
+HasManageDataplatform returns a boolean if a field has been set.
 
 
 

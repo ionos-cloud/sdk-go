@@ -4,10 +4,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
 |**Id** | Pointer to **string** | The resource&#39;s unique identifier. | [optional] [readonly] |
-|**Metadata** | Pointer to [**RequestStatusMetadata**](RequestStatusMetadata.md) |  | [optional] |
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
+|**Href** | Pointer to **string** | URL to the object representation (absolute path). | [optional] [readonly] |
+|**Metadata** | Pointer to [**RequestStatusMetadata**](RequestStatusMetadata.md) |  | [optional] |
 
 ## Methods
 
@@ -27,31 +27,6 @@ will change when the set of required properties is changed
 NewRequestStatusWithDefaults instantiates a new RequestStatus object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
-
-### GetHref
-
-`func (o *RequestStatus) GetHref() string`
-
-GetHref returns the Href field if non-nil, zero value otherwise.
-
-### GetHrefOk
-
-`func (o *RequestStatus) GetHrefOk() (*string, bool)`
-
-GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetHref
-
-`func (o *RequestStatus) SetHref(v string)`
-
-SetHref sets Href field to given value.
-
-### HasHref
-
-`func (o *RequestStatus) HasHref() bool`
-
-HasHref returns a boolean if a field has been set.
 
 ### GetId
 
@@ -78,31 +53,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetMetadata
-
-`func (o *RequestStatus) GetMetadata() RequestStatusMetadata`
-
-GetMetadata returns the Metadata field if non-nil, zero value otherwise.
-
-### GetMetadataOk
-
-`func (o *RequestStatus) GetMetadataOk() (*RequestStatusMetadata, bool)`
-
-GetMetadataOk returns a tuple with the Metadata field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMetadata
-
-`func (o *RequestStatus) SetMetadata(v RequestStatusMetadata)`
-
-SetMetadata sets Metadata field to given value.
-
-### HasMetadata
-
-`func (o *RequestStatus) HasMetadata() bool`
-
-HasMetadata returns a boolean if a field has been set.
-
 ### GetType
 
 `func (o *RequestStatus) GetType() Type`
@@ -127,6 +77,56 @@ SetType sets Type field to given value.
 `func (o *RequestStatus) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetHref
+
+`func (o *RequestStatus) GetHref() string`
+
+GetHref returns the Href field if non-nil, zero value otherwise.
+
+### GetHrefOk
+
+`func (o *RequestStatus) GetHrefOk() (*string, bool)`
+
+GetHrefOk returns a tuple with the Href field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetHref
+
+`func (o *RequestStatus) SetHref(v string)`
+
+SetHref sets Href field to given value.
+
+### HasHref
+
+`func (o *RequestStatus) HasHref() bool`
+
+HasHref returns a boolean if a field has been set.
+
+### GetMetadata
+
+`func (o *RequestStatus) GetMetadata() RequestStatusMetadata`
+
+GetMetadata returns the Metadata field if non-nil, zero value otherwise.
+
+### GetMetadataOk
+
+`func (o *RequestStatus) GetMetadataOk() (*RequestStatusMetadata, bool)`
+
+GetMetadataOk returns a tuple with the Metadata field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMetadata
+
+`func (o *RequestStatus) SetMetadata(v RequestStatusMetadata)`
+
+SetMetadata sets Metadata field to given value.
+
+### HasMetadata
+
+`func (o *RequestStatus) HasMetadata() bool`
+
+HasMetadata returns a boolean if a field has been set.
 
 
 

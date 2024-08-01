@@ -4,8 +4,13 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+|**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter. | [optional] [readonly] |
 |**CreatedDate** | Pointer to [**time.Time**](time.Time.md) | The time when the S3 key was created. | [optional] [readonly] |
-|**Etag** | Pointer to **string** | Resource&#39;s Entity Tag as defined in http://www.w3.org/Protocols/rfc2616/rfc2616-sec3.html#sec3.11  Entity Tag is also added as an &#39;ETag response header to requests which don&#39;t use &#39;depth&#39; parameter.  | [optional] [readonly] |
+|**CreatedBy** | Pointer to **string** | Unique name of the identity that created the resource. | [optional] [readonly] |
+|**CreatedByUserId** | Pointer to **string** | The unique ID of the user who created the S3 key. | [optional] [readonly] |
+|**LastModifiedDate** | Pointer to [**time.Time**](time.Time.md) | The last time the S3 key was modified. | [optional] [readonly] |
+|**LastModifiedBy** | Pointer to **string** | Unique name of the identity that last modified the S3 key. | [optional] [readonly] |
+|**LastModifiedByUserId** | Pointer to **string** | The unique ID of the user who last modified the S3 key. | [optional] [readonly] |
 
 ## Methods
 
@@ -25,6 +30,31 @@ will change when the set of required properties is changed
 NewS3KeyMetadataWithDefaults instantiates a new S3KeyMetadata object
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
+
+### GetEtag
+
+`func (o *S3KeyMetadata) GetEtag() string`
+
+GetEtag returns the Etag field if non-nil, zero value otherwise.
+
+### GetEtagOk
+
+`func (o *S3KeyMetadata) GetEtagOk() (*string, bool)`
+
+GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEtag
+
+`func (o *S3KeyMetadata) SetEtag(v string)`
+
+SetEtag sets Etag field to given value.
+
+### HasEtag
+
+`func (o *S3KeyMetadata) HasEtag() bool`
+
+HasEtag returns a boolean if a field has been set.
 
 ### GetCreatedDate
 
@@ -51,30 +81,130 @@ SetCreatedDate sets CreatedDate field to given value.
 
 HasCreatedDate returns a boolean if a field has been set.
 
-### GetEtag
+### GetCreatedBy
 
-`func (o *S3KeyMetadata) GetEtag() string`
+`func (o *S3KeyMetadata) GetCreatedBy() string`
 
-GetEtag returns the Etag field if non-nil, zero value otherwise.
+GetCreatedBy returns the CreatedBy field if non-nil, zero value otherwise.
 
-### GetEtagOk
+### GetCreatedByOk
 
-`func (o *S3KeyMetadata) GetEtagOk() (*string, bool)`
+`func (o *S3KeyMetadata) GetCreatedByOk() (*string, bool)`
 
-GetEtagOk returns a tuple with the Etag field if it's non-nil, zero value otherwise
+GetCreatedByOk returns a tuple with the CreatedBy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetEtag
+### SetCreatedBy
 
-`func (o *S3KeyMetadata) SetEtag(v string)`
+`func (o *S3KeyMetadata) SetCreatedBy(v string)`
 
-SetEtag sets Etag field to given value.
+SetCreatedBy sets CreatedBy field to given value.
 
-### HasEtag
+### HasCreatedBy
 
-`func (o *S3KeyMetadata) HasEtag() bool`
+`func (o *S3KeyMetadata) HasCreatedBy() bool`
 
-HasEtag returns a boolean if a field has been set.
+HasCreatedBy returns a boolean if a field has been set.
+
+### GetCreatedByUserId
+
+`func (o *S3KeyMetadata) GetCreatedByUserId() string`
+
+GetCreatedByUserId returns the CreatedByUserId field if non-nil, zero value otherwise.
+
+### GetCreatedByUserIdOk
+
+`func (o *S3KeyMetadata) GetCreatedByUserIdOk() (*string, bool)`
+
+GetCreatedByUserIdOk returns a tuple with the CreatedByUserId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreatedByUserId
+
+`func (o *S3KeyMetadata) SetCreatedByUserId(v string)`
+
+SetCreatedByUserId sets CreatedByUserId field to given value.
+
+### HasCreatedByUserId
+
+`func (o *S3KeyMetadata) HasCreatedByUserId() bool`
+
+HasCreatedByUserId returns a boolean if a field has been set.
+
+### GetLastModifiedDate
+
+`func (o *S3KeyMetadata) GetLastModifiedDate() time.Time`
+
+GetLastModifiedDate returns the LastModifiedDate field if non-nil, zero value otherwise.
+
+### GetLastModifiedDateOk
+
+`func (o *S3KeyMetadata) GetLastModifiedDateOk() (*time.Time, bool)`
+
+GetLastModifiedDateOk returns a tuple with the LastModifiedDate field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastModifiedDate
+
+`func (o *S3KeyMetadata) SetLastModifiedDate(v time.Time)`
+
+SetLastModifiedDate sets LastModifiedDate field to given value.
+
+### HasLastModifiedDate
+
+`func (o *S3KeyMetadata) HasLastModifiedDate() bool`
+
+HasLastModifiedDate returns a boolean if a field has been set.
+
+### GetLastModifiedBy
+
+`func (o *S3KeyMetadata) GetLastModifiedBy() string`
+
+GetLastModifiedBy returns the LastModifiedBy field if non-nil, zero value otherwise.
+
+### GetLastModifiedByOk
+
+`func (o *S3KeyMetadata) GetLastModifiedByOk() (*string, bool)`
+
+GetLastModifiedByOk returns a tuple with the LastModifiedBy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastModifiedBy
+
+`func (o *S3KeyMetadata) SetLastModifiedBy(v string)`
+
+SetLastModifiedBy sets LastModifiedBy field to given value.
+
+### HasLastModifiedBy
+
+`func (o *S3KeyMetadata) HasLastModifiedBy() bool`
+
+HasLastModifiedBy returns a boolean if a field has been set.
+
+### GetLastModifiedByUserId
+
+`func (o *S3KeyMetadata) GetLastModifiedByUserId() string`
+
+GetLastModifiedByUserId returns the LastModifiedByUserId field if non-nil, zero value otherwise.
+
+### GetLastModifiedByUserIdOk
+
+`func (o *S3KeyMetadata) GetLastModifiedByUserIdOk() (*string, bool)`
+
+GetLastModifiedByUserIdOk returns a tuple with the LastModifiedByUserId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLastModifiedByUserId
+
+`func (o *S3KeyMetadata) SetLastModifiedByUserId(v string)`
+
+SetLastModifiedByUserId sets LastModifiedByUserId field to given value.
+
+### HasLastModifiedByUserId
+
+`func (o *S3KeyMetadata) HasLastModifiedByUserId() bool`
+
+HasLastModifiedByUserId returns a boolean if a field has been set.
 
 
 

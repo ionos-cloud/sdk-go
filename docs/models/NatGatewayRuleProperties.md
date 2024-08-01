@@ -5,18 +5,18 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | **string** | The name of the NAT Gateway rule. | |
-|**Protocol** | Pointer to [**NatGatewayRuleProtocol**](NatGatewayRuleProtocol.md) | Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is &#39;ICMP&#39; then targetPortRange start and end cannot be set. | [optional] |
-|**PublicIp** | **string** | Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource | |
-|**SourceSubnet** | **string** | Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address. | |
-|**TargetPortRange** | Pointer to [**TargetPortRange**](TargetPortRange.md) |  | [optional] |
-|**TargetSubnet** | Pointer to **string** | Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address. | [optional] |
 |**Type** | Pointer to [**NatGatewayRuleType**](NatGatewayRuleType.md) | Type of the NAT Gateway rule. | [optional] |
+|**Protocol** | Pointer to [**NatGatewayRuleProtocol**](NatGatewayRuleProtocol.md) | Protocol of the NAT Gateway rule. Defaults to ALL. If protocol is &#39;ICMP&#39; then targetPortRange start and end cannot be set. | [optional] |
+|**SourceSubnet** | **string** | Source subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets source IP address. | |
+|**PublicIp** | **string** | Public IP address of the NAT Gateway rule. Specifies the address used for masking outgoing packets source address field. Should be one of the customer reserved IP address already configured on the NAT Gateway resource | |
+|**TargetSubnet** | Pointer to **string** | Target or destination subnet of the NAT Gateway rule. For SNAT rules it specifies which packets this translation rule applies to based on the packets destination IP address. If none is provided, rule will match any address. | [optional] |
+|**TargetPortRange** | Pointer to [**TargetPortRange**](TargetPortRange.md) |  | [optional] |
 
 ## Methods
 
 ### NewNatGatewayRuleProperties
 
-`func NewNatGatewayRuleProperties(name string, publicIp string, sourceSubnet string, ) *NatGatewayRuleProperties`
+`func NewNatGatewayRuleProperties(name string, sourceSubnet string, publicIp string, ) *NatGatewayRuleProperties`
 
 NewNatGatewayRuleProperties instantiates a new NatGatewayRuleProperties object
 This constructor will assign default values to properties that have it defined,
@@ -51,6 +51,31 @@ and a boolean to check if the value has been set.
 SetName sets Name field to given value.
 
 
+### GetType
+
+`func (o *NatGatewayRuleProperties) GetType() NatGatewayRuleType`
+
+GetType returns the Type field if non-nil, zero value otherwise.
+
+### GetTypeOk
+
+`func (o *NatGatewayRuleProperties) GetTypeOk() (*NatGatewayRuleType, bool)`
+
+GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetType
+
+`func (o *NatGatewayRuleProperties) SetType(v NatGatewayRuleType)`
+
+SetType sets Type field to given value.
+
+### HasType
+
+`func (o *NatGatewayRuleProperties) HasType() bool`
+
+HasType returns a boolean if a field has been set.
+
 ### GetProtocol
 
 `func (o *NatGatewayRuleProperties) GetProtocol() NatGatewayRuleProtocol`
@@ -76,26 +101,6 @@ SetProtocol sets Protocol field to given value.
 
 HasProtocol returns a boolean if a field has been set.
 
-### GetPublicIp
-
-`func (o *NatGatewayRuleProperties) GetPublicIp() string`
-
-GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
-
-### GetPublicIpOk
-
-`func (o *NatGatewayRuleProperties) GetPublicIpOk() (*string, bool)`
-
-GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetPublicIp
-
-`func (o *NatGatewayRuleProperties) SetPublicIp(v string)`
-
-SetPublicIp sets PublicIp field to given value.
-
-
 ### GetSourceSubnet
 
 `func (o *NatGatewayRuleProperties) GetSourceSubnet() string`
@@ -116,30 +121,25 @@ and a boolean to check if the value has been set.
 SetSourceSubnet sets SourceSubnet field to given value.
 
 
-### GetTargetPortRange
+### GetPublicIp
 
-`func (o *NatGatewayRuleProperties) GetTargetPortRange() TargetPortRange`
+`func (o *NatGatewayRuleProperties) GetPublicIp() string`
 
-GetTargetPortRange returns the TargetPortRange field if non-nil, zero value otherwise.
+GetPublicIp returns the PublicIp field if non-nil, zero value otherwise.
 
-### GetTargetPortRangeOk
+### GetPublicIpOk
 
-`func (o *NatGatewayRuleProperties) GetTargetPortRangeOk() (*TargetPortRange, bool)`
+`func (o *NatGatewayRuleProperties) GetPublicIpOk() (*string, bool)`
 
-GetTargetPortRangeOk returns a tuple with the TargetPortRange field if it's non-nil, zero value otherwise
+GetPublicIpOk returns a tuple with the PublicIp field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetTargetPortRange
+### SetPublicIp
 
-`func (o *NatGatewayRuleProperties) SetTargetPortRange(v TargetPortRange)`
+`func (o *NatGatewayRuleProperties) SetPublicIp(v string)`
 
-SetTargetPortRange sets TargetPortRange field to given value.
+SetPublicIp sets PublicIp field to given value.
 
-### HasTargetPortRange
-
-`func (o *NatGatewayRuleProperties) HasTargetPortRange() bool`
-
-HasTargetPortRange returns a boolean if a field has been set.
 
 ### GetTargetSubnet
 
@@ -166,30 +166,30 @@ SetTargetSubnet sets TargetSubnet field to given value.
 
 HasTargetSubnet returns a boolean if a field has been set.
 
-### GetType
+### GetTargetPortRange
 
-`func (o *NatGatewayRuleProperties) GetType() NatGatewayRuleType`
+`func (o *NatGatewayRuleProperties) GetTargetPortRange() TargetPortRange`
 
-GetType returns the Type field if non-nil, zero value otherwise.
+GetTargetPortRange returns the TargetPortRange field if non-nil, zero value otherwise.
 
-### GetTypeOk
+### GetTargetPortRangeOk
 
-`func (o *NatGatewayRuleProperties) GetTypeOk() (*NatGatewayRuleType, bool)`
+`func (o *NatGatewayRuleProperties) GetTargetPortRangeOk() (*TargetPortRange, bool)`
 
-GetTypeOk returns a tuple with the Type field if it's non-nil, zero value otherwise
+GetTargetPortRangeOk returns a tuple with the TargetPortRange field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetType
+### SetTargetPortRange
 
-`func (o *NatGatewayRuleProperties) SetType(v NatGatewayRuleType)`
+`func (o *NatGatewayRuleProperties) SetTargetPortRange(v TargetPortRange)`
 
-SetType sets Type field to given value.
+SetTargetPortRange sets TargetPortRange field to given value.
 
-### HasType
+### HasTargetPortRange
 
-`func (o *NatGatewayRuleProperties) HasType() bool`
+`func (o *NatGatewayRuleProperties) HasTargetPortRange() bool`
 
-HasType returns a boolean if a field has been set.
+HasTargetPortRange returns a boolean if a field has been set.
 
 
 

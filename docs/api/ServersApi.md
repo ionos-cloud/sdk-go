@@ -20,7 +20,7 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 |[**DatacentersServersStartPost**](ServersApi.md#DatacentersServersStartPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/start | Start an Enterprise Server by ID|
 |[**DatacentersServersStopPost**](ServersApi.md#DatacentersServersStopPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/stop | Stop an Enterprise Server by ID|
 |[**DatacentersServersSuspendPost**](ServersApi.md#DatacentersServersSuspendPost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/suspend | Suspend a Cube Server by ID|
-|[**DatacentersServersTokenGet**](ServersApi.md#DatacentersServersTokenGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/token | Get JASON Web Token|
+|[**DatacentersServersTokenGet**](ServersApi.md#DatacentersServersTokenGet) | **Get** /datacenters/{datacenterId}/servers/{serverId}/token | Get JSON Web Token|
 |[**DatacentersServersUpgradePost**](ServersApi.md#DatacentersServersUpgradePost) | **Post** /datacenters/{datacenterId}/servers/{serverId}/upgrade | Upgrade a Server by ID|
 |[**DatacentersServersVolumesDelete**](ServersApi.md#DatacentersServersVolumesDelete) | **Delete** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Detach a Volume by ID|
 |[**DatacentersServersVolumesFindById**](ServersApi.md#DatacentersServersVolumesFindById) | **Get** /datacenters/{datacenterId}/servers/{serverId}/volumes/{volumeId} | Get Attached Volume by ID|
@@ -509,7 +509,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersFindById
 var result Servers = DatacentersServersGet(ctx, datacenterId)
                       .Pretty(pretty)
                       .Depth(depth)
-                      .UpgradeNeeded(upgradeNeeded)
                       .XContractNumber(xContractNumber)
                       .Offset(offset)
                       .Limit(limit)
@@ -537,14 +536,13 @@ func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
-    upgradeNeeded := true // bool | Filter servers that can or that cannot be upgraded. (optional)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
     offset := int32(56) // int32 | The first element (from the complete list of the elements) to include in the response (used together with <b><i>limit</i></b> for pagination). (optional) (default to 0)
     limit := int32(56) // int32 | The maximum number of elements to return (use together with offset for pagination). (optional) (default to 1000)
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resource, resp, err := apiClient.ServersApi.DatacentersServersGet(context.Background(), datacenterId).Pretty(pretty).Depth(depth).UpgradeNeeded(upgradeNeeded).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
+    resource, resp, err := apiClient.ServersApi.DatacentersServersGet(context.Background(), datacenterId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Offset(offset).Limit(limit).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `ServersApi.DatacentersServersGet``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -571,7 +569,6 @@ Other parameters are passed through a pointer to a apiDatacentersServersGetReque
 |------------- | ------------- | ------------- | -------------|
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
-| **upgradeNeeded** | **bool** | Filter servers that can or that cannot be upgraded. | |
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
 | **offset** | **int32** | The first element (from the complete list of the elements) to include in the response (used together with &lt;b&gt;&lt;i&gt;limit&lt;/i&gt;&lt;/b&gt; for pagination). | [default to 0]|
 | **limit** | **int32** | The maximum number of elements to return (use together with offset for pagination). | [default to 1000]|
@@ -1287,7 +1284,7 @@ var result Token = DatacentersServersTokenGet(ctx, datacenterId, serverId)
                       .Execute()
 ```
 
-Get JASON Web Token
+Get JSON Web Token
 
 
 
@@ -1699,7 +1696,7 @@ import (
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
     serverId := "serverId_example" // string | The unique ID of the server.
-    volume := *openapiclient.NewVolume(*openapiclient.NewVolumeProperties(float32(100.0))) // Volume | The volume to be attached (or created and attached).
+    volume := *openapiclient.NewVolume(*openapiclient.NewVolumeProperties(float32(100))) // Volume | The volume to be attached (or created and attached).
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)

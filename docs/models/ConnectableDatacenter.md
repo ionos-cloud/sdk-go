@@ -4,9 +4,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Id** | Pointer to **string** |  | [optional] |
-|**Location** | Pointer to **string** |  | [optional] |
-|**Name** | Pointer to **string** |  | [optional] |
+|**Id** | Pointer to **string** | Identifier of the virtual data center that can be connected to the Cross Connect. | [optional] |
+|**Name** | Pointer to **string** | Name of the virtual data center that can be connected to the Cross Connect. | [optional] |
+|**Location** | Pointer to **string** | Location of the virtual data center that can be connected to the Cross Connect. | [optional] |
 
 ## Methods
 
@@ -52,31 +52,6 @@ SetId sets Id field to given value.
 
 HasId returns a boolean if a field has been set.
 
-### GetLocation
-
-`func (o *ConnectableDatacenter) GetLocation() string`
-
-GetLocation returns the Location field if non-nil, zero value otherwise.
-
-### GetLocationOk
-
-`func (o *ConnectableDatacenter) GetLocationOk() (*string, bool)`
-
-GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetLocation
-
-`func (o *ConnectableDatacenter) SetLocation(v string)`
-
-SetLocation sets Location field to given value.
-
-### HasLocation
-
-`func (o *ConnectableDatacenter) HasLocation() bool`
-
-HasLocation returns a boolean if a field has been set.
-
 ### GetName
 
 `func (o *ConnectableDatacenter) GetName() string`
@@ -101,6 +76,31 @@ SetName sets Name field to given value.
 `func (o *ConnectableDatacenter) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetLocation
+
+`func (o *ConnectableDatacenter) GetLocation() string`
+
+GetLocation returns the Location field if non-nil, zero value otherwise.
+
+### GetLocationOk
+
+`func (o *ConnectableDatacenter) GetLocationOk() (*string, bool)`
+
+GetLocationOk returns a tuple with the Location field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetLocation
+
+`func (o *ConnectableDatacenter) SetLocation(v string)`
+
+SetLocation sets Location field to given value.
+
+### HasLocation
+
+`func (o *ConnectableDatacenter) HasLocation() bool`
+
+HasLocation returns a boolean if a field has been set.
 
 
 
