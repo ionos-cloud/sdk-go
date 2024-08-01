@@ -1,5 +1,16 @@
 # CHANGELOG
 
+## 6.2.0 (August, 2024)
+### Changes
+- renamed `LanPost` and `LanPropertiesPost` to `Lan` and `LanProperties`
+
+### Features:
+- Add `ImagesLabelsDelete`, `ImagesLabelsFindByKey`, `ImagesLabelsGet`, `ImagesLabelsPost`, `ImagesLabelsPut`
+- New parameters on `NetworkLoadBalancerProperties`: `CentralLogging`, `LoggingFormat`
+- New parameters on `ApplicationBalancerProperties`: `CentralLogging`, `LoggingFormat`
+- New parameter on `TargetGroupProperties`: `ProtocolVersion`
+- New parameter on `ServerProperties`: `Hostname`
+
 ## 6.1.10 (December, 2023)
 ### Features:
 - Add `proxyProtocol` parameter for ALB and NLB targets
