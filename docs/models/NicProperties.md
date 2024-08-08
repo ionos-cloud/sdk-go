@@ -16,6 +16,7 @@
 |**FirewallType** | Pointer to **string** | The type of firewall rules that will be allowed on the NIC. If not specified, the default INGRESS value is used. | [optional] |
 |**DeviceNumber** | Pointer to **int32** | The Logical Unit Number (LUN) of the storage volume. Null if this NIC was created using Cloud API and no DCD changes were performed on the Datacenter. | [optional] [readonly] |
 |**PciSlot** | Pointer to **int32** | The PCI slot number for the NIC. | [optional] [readonly] |
+|**Vnet** | Pointer to **string** | The vnet ID that belongs to this NIC; Requires system privileges, for internal usage only | [optional] |
 
 ## Methods
 
@@ -350,6 +351,31 @@ SetPciSlot sets PciSlot field to given value.
 `func (o *NicProperties) HasPciSlot() bool`
 
 HasPciSlot returns a boolean if a field has been set.
+
+### GetVnet
+
+`func (o *NicProperties) GetVnet() string`
+
+GetVnet returns the Vnet field if non-nil, zero value otherwise.
+
+### GetVnetOk
+
+`func (o *NicProperties) GetVnetOk() (*string, bool)`
+
+GetVnetOk returns a tuple with the Vnet field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVnet
+
+`func (o *NicProperties) SetVnet(v string)`
+
+SetVnet sets Vnet field to given value.
+
+### HasVnet
+
+`func (o *NicProperties) HasVnet() bool`
+
+HasVnet returns a boolean if a field has been set.
 
 
 

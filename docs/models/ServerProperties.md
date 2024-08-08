@@ -15,6 +15,7 @@
 |**BootVolume** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 |**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE and VCPU servers. | [optional] |
 |**Type** | Pointer to **string** | Server type: CUBE, ENTERPRISE or VCPU. | [optional] |
+|**PlacementGroupId** | Pointer to **string** | The placement group ID that belongs to this server; Requires system privileges, for internal usage only | [optional] |
 
 ## Methods
 
@@ -309,6 +310,31 @@ SetType sets Type field to given value.
 `func (o *ServerProperties) HasType() bool`
 
 HasType returns a boolean if a field has been set.
+
+### GetPlacementGroupId
+
+`func (o *ServerProperties) GetPlacementGroupId() string`
+
+GetPlacementGroupId returns the PlacementGroupId field if non-nil, zero value otherwise.
+
+### GetPlacementGroupIdOk
+
+`func (o *ServerProperties) GetPlacementGroupIdOk() (*string, bool)`
+
+GetPlacementGroupIdOk returns a tuple with the PlacementGroupId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetPlacementGroupId
+
+`func (o *ServerProperties) SetPlacementGroupId(v string)`
+
+SetPlacementGroupId sets PlacementGroupId field to given value.
+
+### HasPlacementGroupId
+
+`func (o *ServerProperties) HasPlacementGroupId() bool`
+
+HasPlacementGroupId returns a boolean if a field has been set.
 
 
 
