@@ -14,7 +14,7 @@
 |**NatGatewayIp** | Pointer to **string** | The nat gateway IP of the cluster if the cluster is private. This property is immutable. Must be a reserved IP in the same location as the cluster&#39;s location. This attribute is mandatory if the cluster is private. | [optional] |
 |**NodeSubnet** | Pointer to **string** | The node subnet of the cluster, if the cluster is private. This property is optional and immutable. Must be a valid CIDR notation for an IPv4 network prefix of 16 bits length. | [optional] |
 |**ApiSubnetAllowList** | Pointer to **[]string** | Access to the K8s API server is restricted to these CIDRs. Traffic, internal to the cluster, is not affected by this restriction. If no allowlist is specified, access is not restricted. If an IP without subnet mask is provided, the default value is used: 32 for IPv4 and 128 for IPv6. | [optional] |
-|**S3Buckets** | Pointer to [**[]S3Bucket**](S3Bucket.md) | List of S3 bucket configured for K8s usage. For now it contains only an S3 bucket used to store K8s API audit logs | [optional] |
+|**S3Buckets** | Pointer to [**[]S3Bucket**](S3Bucket.md) | List of Object storage buckets configured for K8s usage. For now it contains only one bucket used to store K8s API audit logs | [optional] |
 
 ## Methods
 

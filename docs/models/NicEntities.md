@@ -6,6 +6,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**Flowlogs** | Pointer to [**FlowLogs**](FlowLogs.md) |  | [optional] |
 |**Firewallrules** | Pointer to [**FirewallRules**](FirewallRules.md) |  | [optional] |
+|**Securitygroups** | Pointer to [**SecurityGroups**](SecurityGroups.md) |  | [optional] |
 
 ## Methods
 
@@ -75,6 +76,31 @@ SetFirewallrules sets Firewallrules field to given value.
 `func (o *NicEntities) HasFirewallrules() bool`
 
 HasFirewallrules returns a boolean if a field has been set.
+
+### GetSecuritygroups
+
+`func (o *NicEntities) GetSecuritygroups() SecurityGroups`
+
+GetSecuritygroups returns the Securitygroups field if non-nil, zero value otherwise.
+
+### GetSecuritygroupsOk
+
+`func (o *NicEntities) GetSecuritygroupsOk() (*SecurityGroups, bool)`
+
+GetSecuritygroupsOk returns a tuple with the Securitygroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecuritygroups
+
+`func (o *NicEntities) SetSecuritygroups(v SecurityGroups)`
+
+SetSecuritygroups sets Securitygroups field to given value.
+
+### HasSecuritygroups
+
+`func (o *NicEntities) HasSecuritygroups() bool`
+
+HasSecuritygroups returns a boolean if a field has been set.
 
 
 

@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**Name** | **string** | The name of the S3 bucket. | |
+|**Name** | **string** | The name of the Object storage bucket. | |
 
 ## Methods
 

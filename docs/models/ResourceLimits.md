@@ -26,12 +26,15 @@
 |**NlbProvisioned** | **int32** | The NLBs provisioned. | |
 |**NatGatewayLimitTotal** | **int32** | The NAT Gateway total limit. | |
 |**NatGatewayProvisioned** | **int32** | The NAT Gateways provisioned. | |
+|**SecurityGroupsPerVdc** | **int32** | The maximum number of security groups per VDC. | |
+|**SecurityGroupsPerResource** | **int32** | The maximum number of security groups that can be attached to a NIC or a VM individually. For example, a user can have maximum 10 security groups per NIC and 10 per VM. | |
+|**RulesPerSecurityGroup** | **int32** | The maximum number of rules per security group. | |
 
 ## Methods
 
 ### NewResourceLimits
 
-`func NewResourceLimits(coresPerServer int32, coresPerContract int32, coresProvisioned int32, ramPerServer int32, ramPerContract int32, ramProvisioned int32, hddLimitPerVolume int64, hddLimitPerContract int64, hddVolumeProvisioned int64, ssdLimitPerVolume int64, ssdLimitPerContract int64, ssdVolumeProvisioned int64, dasVolumeProvisioned int64, reservableIps int32, reservedIpsOnContract int32, reservedIpsInUse int32, k8sClusterLimitTotal int32, k8sClustersProvisioned int32, nlbLimitTotal int32, nlbProvisioned int32, natGatewayLimitTotal int32, natGatewayProvisioned int32, ) *ResourceLimits`
+`func NewResourceLimits(coresPerServer int32, coresPerContract int32, coresProvisioned int32, ramPerServer int32, ramPerContract int32, ramProvisioned int32, hddLimitPerVolume int64, hddLimitPerContract int64, hddVolumeProvisioned int64, ssdLimitPerVolume int64, ssdLimitPerContract int64, ssdVolumeProvisioned int64, dasVolumeProvisioned int64, reservableIps int32, reservedIpsOnContract int32, reservedIpsInUse int32, k8sClusterLimitTotal int32, k8sClustersProvisioned int32, nlbLimitTotal int32, nlbProvisioned int32, natGatewayLimitTotal int32, natGatewayProvisioned int32, securityGroupsPerVdc int32, securityGroupsPerResource int32, rulesPerSecurityGroup int32, ) *ResourceLimits`
 
 NewResourceLimits instantiates a new ResourceLimits object
 This constructor will assign default values to properties that have it defined,
@@ -484,6 +487,66 @@ and a boolean to check if the value has been set.
 `func (o *ResourceLimits) SetNatGatewayProvisioned(v int32)`
 
 SetNatGatewayProvisioned sets NatGatewayProvisioned field to given value.
+
+
+### GetSecurityGroupsPerVdc
+
+`func (o *ResourceLimits) GetSecurityGroupsPerVdc() int32`
+
+GetSecurityGroupsPerVdc returns the SecurityGroupsPerVdc field if non-nil, zero value otherwise.
+
+### GetSecurityGroupsPerVdcOk
+
+`func (o *ResourceLimits) GetSecurityGroupsPerVdcOk() (*int32, bool)`
+
+GetSecurityGroupsPerVdcOk returns a tuple with the SecurityGroupsPerVdc field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecurityGroupsPerVdc
+
+`func (o *ResourceLimits) SetSecurityGroupsPerVdc(v int32)`
+
+SetSecurityGroupsPerVdc sets SecurityGroupsPerVdc field to given value.
+
+
+### GetSecurityGroupsPerResource
+
+`func (o *ResourceLimits) GetSecurityGroupsPerResource() int32`
+
+GetSecurityGroupsPerResource returns the SecurityGroupsPerResource field if non-nil, zero value otherwise.
+
+### GetSecurityGroupsPerResourceOk
+
+`func (o *ResourceLimits) GetSecurityGroupsPerResourceOk() (*int32, bool)`
+
+GetSecurityGroupsPerResourceOk returns a tuple with the SecurityGroupsPerResource field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecurityGroupsPerResource
+
+`func (o *ResourceLimits) SetSecurityGroupsPerResource(v int32)`
+
+SetSecurityGroupsPerResource sets SecurityGroupsPerResource field to given value.
+
+
+### GetRulesPerSecurityGroup
+
+`func (o *ResourceLimits) GetRulesPerSecurityGroup() int32`
+
+GetRulesPerSecurityGroup returns the RulesPerSecurityGroup field if non-nil, zero value otherwise.
+
+### GetRulesPerSecurityGroupOk
+
+`func (o *ResourceLimits) GetRulesPerSecurityGroupOk() (*int32, bool)`
+
+GetRulesPerSecurityGroupOk returns a tuple with the RulesPerSecurityGroup field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRulesPerSecurityGroup
+
+`func (o *ResourceLimits) SetRulesPerSecurityGroup(v int32)`
+
+SetRulesPerSecurityGroup sets RulesPerSecurityGroup field to given value.
 
 
 

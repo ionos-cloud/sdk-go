@@ -10,7 +10,7 @@
 |**Administrator** | Pointer to **bool** | Indicates if the user has admin rights. | [optional] |
 |**ForceSecAuth** | Pointer to **bool** | Indicates if secure authentication should be forced on the user. | [optional] |
 |**SecAuthActive** | Pointer to **bool** | Indicates if secure authentication is active for the user. | [optional] |
-|**S3CanonicalUserId** | Pointer to **string** | Canonical (S3) ID of the user for a given identity. | [optional] |
+|**S3CanonicalUserId** | Pointer to **string** | Canonical (Object storage) ID of the user for a given identity. | [optional] |
 |**Active** | Pointer to **bool** | Indicates if the user is active. | [optional] |
 
 ## Methods

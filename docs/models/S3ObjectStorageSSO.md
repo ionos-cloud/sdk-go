@@ -4,7 +4,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**SsoUrl** | Pointer to **string** | The S3 object storage single sign on url | [optional] [readonly] |
+|**SsoUrl** | Pointer to **string** | The Ionos object storage single sign on url | [optional] [readonly] |
 
 ## Methods
 

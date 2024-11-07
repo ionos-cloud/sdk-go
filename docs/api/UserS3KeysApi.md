@@ -4,12 +4,12 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**UmUsersS3keysDelete**](UserS3KeysApi.md#UmUsersS3keysDelete) | **Delete** /um/users/{userId}/s3keys/{keyId} | Delete S3 keys|
-|[**UmUsersS3keysFindByKeyId**](UserS3KeysApi.md#UmUsersS3keysFindByKeyId) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve user S3 keys by key ID|
-|[**UmUsersS3keysGet**](UserS3KeysApi.md#UmUsersS3keysGet) | **Get** /um/users/{userId}/s3keys | List user S3 keys|
-|[**UmUsersS3keysPost**](UserS3KeysApi.md#UmUsersS3keysPost) | **Post** /um/users/{userId}/s3keys | Create user S3 keys|
-|[**UmUsersS3keysPut**](UserS3KeysApi.md#UmUsersS3keysPut) | **Put** /um/users/{userId}/s3keys/{keyId} | Modify a S3 Key by Key ID|
-|[**UmUsersS3ssourlGet**](UserS3KeysApi.md#UmUsersS3ssourlGet) | **Get** /um/users/{userId}/s3ssourl | Retrieve S3 single sign-on URLs|
+|[**UmUsersS3keysDelete**](UserS3KeysApi.md#UmUsersS3keysDelete) | **Delete** /um/users/{userId}/s3keys/{keyId} | Delete Object storage keys|
+|[**UmUsersS3keysFindByKeyId**](UserS3KeysApi.md#UmUsersS3keysFindByKeyId) | **Get** /um/users/{userId}/s3keys/{keyId} | Retrieve user Object storage keys by key ID|
+|[**UmUsersS3keysGet**](UserS3KeysApi.md#UmUsersS3keysGet) | **Get** /um/users/{userId}/s3keys | List user Object storage keys|
+|[**UmUsersS3keysPost**](UserS3KeysApi.md#UmUsersS3keysPost) | **Post** /um/users/{userId}/s3keys | Create user Object storage keys|
+|[**UmUsersS3keysPut**](UserS3KeysApi.md#UmUsersS3keysPut) | **Put** /um/users/{userId}/s3keys/{keyId} | Modify a Object storage Key by Key ID|
+|[**UmUsersS3ssourlGet**](UserS3KeysApi.md#UmUsersS3ssourlGet) | **Get** /um/users/{userId}/s3ssourl | Retrieve Object storage single sign-on URLs|
 
 
 
@@ -23,7 +23,7 @@ var result  = UmUsersS3keysDelete(ctx, userId, keyId)
                       .Execute()
 ```
 
-Delete S3 keys
+Delete Object storage keys
 
 
 
@@ -42,7 +42,7 @@ import (
 
 func main() {
     userId := "userId_example" // string | The unique ID of the user.
-    keyId := "keyId_example" // string | The unique ID of the S3 key.
+    keyId := "keyId_example" // string | The unique ID of the Object storage key.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -64,7 +64,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**userId** | **string** | The unique ID of the user. | |
-|**keyId** | **string** | The unique ID of the S3 key. | |
+|**keyId** | **string** | The unique ID of the Object storage key. | |
 
 ### Other Parameters
 
@@ -98,7 +98,7 @@ var result S3Key = UmUsersS3keysFindByKeyId(ctx, userId, keyId)
                       .Execute()
 ```
 
-Retrieve user S3 keys by key ID
+Retrieve user Object storage keys by key ID
 
 
 
@@ -117,7 +117,7 @@ import (
 
 func main() {
     userId := "userId_example" // string | The unique ID of the user.
-    keyId := "keyId_example" // string | The unique ID of the S3 key.
+    keyId := "keyId_example" // string | The unique ID of the Object storage key.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -141,7 +141,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**userId** | **string** | The unique ID of the user. | |
-|**keyId** | **string** | The unique ID of the S3 key. | |
+|**keyId** | **string** | The unique ID of the Object storage key. | |
 
 ### Other Parameters
 
@@ -175,7 +175,7 @@ var result S3Keys = UmUsersS3keysGet(ctx, userId)
                       .Execute()
 ```
 
-List user S3 keys
+List user Object storage keys
 
 
 
@@ -250,7 +250,7 @@ var result S3Key = UmUsersS3keysPost(ctx, userId)
                       .Execute()
 ```
 
-Create user S3 keys
+Create user Object storage keys
 
 
 
@@ -326,7 +326,7 @@ var result S3Key = UmUsersS3keysPut(ctx, userId, keyId)
                       .Execute()
 ```
 
-Modify a S3 Key by Key ID
+Modify a Object storage Key by Key ID
 
 
 
@@ -345,8 +345,8 @@ import (
 
 func main() {
     userId := "userId_example" // string | The unique ID of the user.
-    keyId := "keyId_example" // string | The unique ID of the S3 key.
-    s3Key := *openapiclient.NewS3Key(*openapiclient.NewS3KeyProperties()) // S3Key | The modified S3 key.
+    keyId := "keyId_example" // string | The unique ID of the Object storage key.
+    s3Key := *openapiclient.NewS3Key(*openapiclient.NewS3KeyProperties()) // S3Key | The modified Object storage key.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -370,7 +370,7 @@ func main() {
 |------------- | ------------- | ------------- | -------------|
 |**ctx** | **context.Context** | context for authentication, logging, cancellation, deadlines, tracing, etc.|
 |**userId** | **string** | The unique ID of the user. | |
-|**keyId** | **string** | The unique ID of the S3 key. | |
+|**keyId** | **string** | The unique ID of the Object storage key. | |
 
 ### Other Parameters
 
@@ -379,7 +379,7 @@ Other parameters are passed through a pointer to a apiUmUsersS3keysPutRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **s3Key** | [**S3Key**](../models/S3Key.md) | The modified S3 key. | |
+| **s3Key** | [**S3Key**](../models/S3Key.md) | The modified Object storage key. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
@@ -404,7 +404,7 @@ var result S3ObjectStorageSSO = UmUsersS3ssourlGet(ctx, userId)
                       .Execute()
 ```
 
-Retrieve S3 single sign-on URLs
+Retrieve Object storage single sign-on URLs
 
 
 

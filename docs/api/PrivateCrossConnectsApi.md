@@ -4,10 +4,10 @@ All URIs are relative to *https://api.ionos.com/cloudapi/v6*
 
 |Method | HTTP request | Description|
 |------------- | ------------- | -------------|
-|[**PccsDelete**](PrivateCrossConnectsApi.md#PccsDelete) | **Delete** /pccs/{pccId} | Delete Cross Connects|
+|[**PccsDelete**](PrivateCrossConnectsApi.md#PccsDelete) | **Delete** /pccs/{pccId} | Delete Private Cross-Connects|
 |[**PccsFindById**](PrivateCrossConnectsApi.md#PccsFindById) | **Get** /pccs/{pccId} | Retrieve a Cross Connect|
-|[**PccsGet**](PrivateCrossConnectsApi.md#PccsGet) | **Get** /pccs | List Cross Connects|
-|[**PccsPatch**](PrivateCrossConnectsApi.md#PccsPatch) | **Patch** /pccs/{pccId} | Partially modify a Cross Connects|
+|[**PccsGet**](PrivateCrossConnectsApi.md#PccsGet) | **Get** /pccs | List Private Cross-Connects|
+|[**PccsPatch**](PrivateCrossConnectsApi.md#PccsPatch) | **Patch** /pccs/{pccId} | Partially modify a Private Cross-Connects|
 |[**PccsPost**](PrivateCrossConnectsApi.md#PccsPost) | **Post** /pccs | Create a Cross Connect|
 
 
@@ -22,7 +22,7 @@ var result  = PccsDelete(ctx, pccId)
                       .Execute()
 ```
 
-Delete Cross Connects
+Delete Private Cross-Connects
 
 
 
@@ -170,7 +170,7 @@ var result PrivateCrossConnects = PccsGet(ctx)
                       .Execute()
 ```
 
-List Cross Connects
+List Private Cross-Connects
 
 
 
@@ -241,7 +241,7 @@ var result PrivateCrossConnect = PccsPatch(ctx, pccId)
                       .Execute()
 ```
 
-Partially modify a Cross Connects
+Partially modify a Private Cross-Connects
 
 
 

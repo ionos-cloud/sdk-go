@@ -267,7 +267,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    datacenter := *openapiclient.NewDatacenterProperties("us/las") // DatacenterProperties | The properties of the data center to be updated.
+    datacenter := *openapiclient.NewDatacenterPropertiesPut("us/las") // DatacenterPropertiesPut | The properties of the data center to be updated.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -299,7 +299,7 @@ Other parameters are passed through a pointer to a apiDatacentersPatchRequest st
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **datacenter** | [**DatacenterProperties**](../models/DatacenterProperties.md) | The properties of the data center to be updated. | |
+| **datacenter** | [**DatacenterPropertiesPut**](../models/DatacenterPropertiesPut.md) | The properties of the data center to be updated. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
@@ -344,7 +344,7 @@ import (
 )
 
 func main() {
-    datacenter := *openapiclient.NewDatacenter(*openapiclient.NewDatacenterProperties("us/las")) // Datacenter | The data center to create.
+    datacenter := *openapiclient.NewDatacenterPost(*openapiclient.NewDatacenterPropertiesPost("us/las")) // DatacenterPost | The data center to create.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -372,7 +372,7 @@ Other parameters are passed through a pointer to a apiDatacentersPostRequest str
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **datacenter** | [**Datacenter**](../models/Datacenter.md) | The data center to create. | |
+| **datacenter** | [**DatacenterPost**](../models/DatacenterPost.md) | The data center to create. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
@@ -418,7 +418,7 @@ import (
 
 func main() {
     datacenterId := "datacenterId_example" // string | The unique ID of the data center.
-    datacenter := *openapiclient.NewDatacenter(*openapiclient.NewDatacenterProperties("us/las")) // Datacenter | The modified data center.
+    datacenter := *openapiclient.NewDatacenterPut(*openapiclient.NewDatacenterPropertiesPut("us/las")) // DatacenterPut | The modified data center.
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
@@ -450,7 +450,7 @@ Other parameters are passed through a pointer to a apiDatacentersPutRequest stru
 
 |Name | Type | Description  | Notes|
 |------------- | ------------- | ------------- | -------------|
-| **datacenter** | [**Datacenter**](../models/Datacenter.md) | The modified data center. | |
+| **datacenter** | [**DatacenterPut**](../models/DatacenterPut.md) | The modified data center. | |
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |

@@ -7,6 +7,7 @@
 |**Cdroms** | Pointer to [**Cdroms**](Cdroms.md) |  | [optional] |
 |**Volumes** | Pointer to [**AttachedVolumes**](AttachedVolumes.md) |  | [optional] |
 |**Nics** | Pointer to [**Nics**](Nics.md) |  | [optional] |
+|**Securitygroups** | Pointer to [**SecurityGroups**](SecurityGroups.md) |  | [optional] |
 
 ## Methods
 
@@ -101,6 +102,31 @@ SetNics sets Nics field to given value.
 `func (o *ServerEntities) HasNics() bool`
 
 HasNics returns a boolean if a field has been set.
+
+### GetSecuritygroups
+
+`func (o *ServerEntities) GetSecuritygroups() SecurityGroups`
+
+GetSecuritygroups returns the Securitygroups field if non-nil, zero value otherwise.
+
+### GetSecuritygroupsOk
+
+`func (o *ServerEntities) GetSecuritygroupsOk() (*SecurityGroups, bool)`
+
+GetSecuritygroupsOk returns a tuple with the Securitygroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecuritygroups
+
+`func (o *ServerEntities) SetSecuritygroups(v SecurityGroups)`
+
+SetSecuritygroups sets Securitygroups field to given value.
+
+### HasSecuritygroups
+
+`func (o *ServerEntities) HasSecuritygroups() bool`
+
+HasSecuritygroups returns a boolean if a field has been set.
 
 
 

@@ -8,12 +8,13 @@
 |**Cores** | **float32** | The CPU cores count. | |
 |**Ram** | **float32** | The RAM size in MB. | |
 |**StorageSize** | **float32** | The storage size in GB. | |
+|**Category** | **string** | The description of the template. | |
 
 ## Methods
 
 ### NewTemplateProperties
 
-`func NewTemplateProperties(name string, cores float32, ram float32, storageSize float32, ) *TemplateProperties`
+`func NewTemplateProperties(name string, cores float32, ram float32, storageSize float32, category string, ) *TemplateProperties`
 
 NewTemplateProperties instantiates a new TemplateProperties object
 This constructor will assign default values to properties that have it defined,
@@ -106,6 +107,26 @@ and a boolean to check if the value has been set.
 `func (o *TemplateProperties) SetStorageSize(v float32)`
 
 SetStorageSize sets StorageSize field to given value.
+
+
+### GetCategory
+
+`func (o *TemplateProperties) GetCategory() string`
+
+GetCategory returns the Category field if non-nil, zero value otherwise.
+
+### GetCategoryOk
+
+`func (o *TemplateProperties) GetCategoryOk() (*string, bool)`
+
+GetCategoryOk returns a tuple with the Category field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCategory
+
+`func (o *TemplateProperties) SetCategory(v string)`
+
+SetCategory sets Category field to given value.
 
 
 

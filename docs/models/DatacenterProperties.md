@@ -12,6 +12,7 @@
 |**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
 |**Ipv6CidrBlock** | Pointer to **NullableString** | This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed. | [optional] [readonly] |
+|**DefaultSecurityGroupId** | Pointer to **string** | Optional property to define the default security group of the datacenter. | [optional] |
 
 ## Methods
 
@@ -236,6 +237,31 @@ HasIpv6CidrBlock returns a boolean if a field has been set.
 
 ### UnsetIpv6CidrBlock
 `func (o *DatacenterProperties) UnsetIpv6CidrBlock()`
+
+### GetDefaultSecurityGroupId
+
+`func (o *DatacenterProperties) GetDefaultSecurityGroupId() string`
+
+GetDefaultSecurityGroupId returns the DefaultSecurityGroupId field if non-nil, zero value otherwise.
+
+### GetDefaultSecurityGroupIdOk
+
+`func (o *DatacenterProperties) GetDefaultSecurityGroupIdOk() (*string, bool)`
+
+GetDefaultSecurityGroupIdOk returns a tuple with the DefaultSecurityGroupId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetDefaultSecurityGroupId
+
+`func (o *DatacenterProperties) SetDefaultSecurityGroupId(v string)`
+
+SetDefaultSecurityGroupId sets DefaultSecurityGroupId field to given value.
+
+### HasDefaultSecurityGroupId
+
+`func (o *DatacenterProperties) HasDefaultSecurityGroupId() bool`
+
+HasDefaultSecurityGroupId returns a boolean if a field has been set.
 
 
 

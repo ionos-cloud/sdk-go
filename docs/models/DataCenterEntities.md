@@ -10,6 +10,7 @@
 |**Lans** | Pointer to [**Lans**](Lans.md) |  | [optional] |
 |**Networkloadbalancers** | Pointer to [**NetworkLoadBalancers**](NetworkLoadBalancers.md) |  | [optional] |
 |**Natgateways** | Pointer to [**NatGateways**](NatGateways.md) |  | [optional] |
+|**Securitygroups** | Pointer to [**SecurityGroups**](SecurityGroups.md) |  | [optional] |
 
 ## Methods
 
@@ -179,6 +180,31 @@ SetNatgateways sets Natgateways field to given value.
 `func (o *DataCenterEntities) HasNatgateways() bool`
 
 HasNatgateways returns a boolean if a field has been set.
+
+### GetSecuritygroups
+
+`func (o *DataCenterEntities) GetSecuritygroups() SecurityGroups`
+
+GetSecuritygroups returns the Securitygroups field if non-nil, zero value otherwise.
+
+### GetSecuritygroupsOk
+
+`func (o *DataCenterEntities) GetSecuritygroupsOk() (*SecurityGroups, bool)`
+
+GetSecuritygroupsOk returns a tuple with the Securitygroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSecuritygroups
+
+`func (o *DataCenterEntities) SetSecuritygroups(v SecurityGroups)`
+
+SetSecuritygroups sets Securitygroups field to given value.
+
+### HasSecuritygroups
+
+`func (o *DataCenterEntities) HasSecuritygroups() bool`
+
+HasSecuritygroups returns a boolean if a field has been set.
 
 
 

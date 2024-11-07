@@ -22,10 +22,7 @@ var result Snapshot = DatacentersVolumesCreateSnapshotPost(ctx, datacenterId, vo
                       .Pretty(pretty)
                       .Depth(depth)
                       .XContractNumber(xContractNumber)
-                      .Name(name)
-                      .Description(description)
-                      .SecAuthProtection(secAuthProtection)
-                      .LicenceType(licenceType)
+                      .Snapshot(snapshot)
                       .Execute()
 ```
 
@@ -52,14 +49,11 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
-    name := "name_example" // string | The name of the snapshot (optional)
-    description := "description_example" // string | The description of the snapshot (optional)
-    secAuthProtection := true // bool | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc. (optional)
-    licenceType := "licenceType_example" // string | OS type of this Snapshot (optional)
+    snapshot := *openapiclient.NewCreateSnapshot() // CreateSnapshot | The payload of the snapshot. (optional)
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resource, resp, err := apiClient.VolumesApi.DatacentersVolumesCreateSnapshotPost(context.Background(), datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Name(name).Description(description).SecAuthProtection(secAuthProtection).LicenceType(licenceType).Execute()
+    resource, resp, err := apiClient.VolumesApi.DatacentersVolumesCreateSnapshotPost(context.Background(), datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).Snapshot(snapshot).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `VolumesApi.DatacentersVolumesCreateSnapshotPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -88,10 +82,7 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesCreateSn
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
-| **name** | **string** | The name of the snapshot | |
-| **description** | **string** | The description of the snapshot | |
-| **secAuthProtection** | **bool** | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc. | |
-| **licenceType** | **string** | OS type of this Snapshot | |
+| **snapshot** | [**CreateSnapshot**](../models/CreateSnapshot.md) | The payload of the snapshot. | |
 
 ### Return type
 
@@ -99,7 +90,7 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesCreateSn
 
 ### HTTP request headers
 
-- **Content-Type**: application/x-www-form-urlencoded
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
@@ -582,7 +573,7 @@ var result  = DatacentersVolumesRestoreSnapshotPost(ctx, datacenterId, volumeId)
                       .Pretty(pretty)
                       .Depth(depth)
                       .XContractNumber(xContractNumber)
-                      .SnapshotId(snapshotId)
+                      .RestoreSnapshot(restoreSnapshot)
                       .Execute()
 ```
 
@@ -609,11 +600,11 @@ func main() {
     pretty := true // bool | Controls whether the response is pretty-printed (with indentations and new lines). (optional) (default to true)
     depth := int32(56) // int32 | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth=0: Only direct properties are included; children (servers and other elements) are not included.  - depth=1: Direct properties and children references are included.  - depth=2: Direct properties and children properties are included.  - depth=3: Direct properties and children properties and children's children are included.  - depth=... and so on (optional) (default to 0)
     xContractNumber := int32(56) // int32 | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. (optional)
-    snapshotId := "snapshotId_example" // string | The unique ID of the snapshot. (optional)
+    restoreSnapshot := *openapiclient.NewRestoreSnapshot() // RestoreSnapshot | The payload used to restore a snapshot. (optional)
 
     configuration := ionoscloud.NewConfiguration()
     apiClient := ionoscloud.NewAPIClient(configuration)
-    resource, resp, err := apiClient.VolumesApi.DatacentersVolumesRestoreSnapshotPost(context.Background(), datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).SnapshotId(snapshotId).Execute()
+    resource, resp, err := apiClient.VolumesApi.DatacentersVolumesRestoreSnapshotPost(context.Background(), datacenterId, volumeId).Pretty(pretty).Depth(depth).XContractNumber(xContractNumber).RestoreSnapshot(restoreSnapshot).Execute()
     if err != nil {
         fmt.Fprintf(os.Stderr, "Error when calling `VolumesApi.DatacentersVolumesRestoreSnapshotPost``: %v\n", err)
         fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -640,7 +631,7 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesRestoreS
 | **pretty** | **bool** | Controls whether the response is pretty-printed (with indentations and new lines). | [default to true]|
 | **depth** | **int32** | Controls the detail depth of the response objects.  GET /datacenters/[ID]  - depth&#x3D;0: Only direct properties are included; children (servers and other elements) are not included.  - depth&#x3D;1: Direct properties and children references are included.  - depth&#x3D;2: Direct properties and children properties are included.  - depth&#x3D;3: Direct properties and children properties and children&#39;s children are included.  - depth&#x3D;... and so on | [default to 0]|
 | **xContractNumber** | **int32** | Users with multiple contracts must provide the contract number, for which all API requests are to be executed. | |
-| **snapshotId** | **string** | The unique ID of the snapshot. | |
+| **restoreSnapshot** | [**RestoreSnapshot**](../models/RestoreSnapshot.md) | The payload used to restore a snapshot. | |
 
 ### Return type
 
@@ -648,7 +639,7 @@ Other parameters are passed through a pointer to a apiDatacentersVolumesRestoreS
 
 ### HTTP request headers
 
-- **Content-Type**: application/x-www-form-urlencoded
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 
