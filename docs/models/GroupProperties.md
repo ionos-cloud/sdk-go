@@ -21,6 +21,15 @@
 |**AccessAndManageDns** | Pointer to **bool** | Privilege for a group to access and manage dns records. | [optional] |
 |**ManageRegistry** | Pointer to **bool** | Privilege for group accessing container registry related functionality. | [optional] |
 |**ManageDataplatform** | Pointer to **bool** | Privilege for a group to access and manage the Data Platform. | [optional] |
+|**AccessAndManageLogging** | Pointer to **bool** | Privilege for a group to access and manage Logs. | [optional] |
+|**AccessAndManageCdn** | Pointer to **bool** | Privilege for a group to access and manage CDN. | [optional] |
+|**AccessAndManageVpn** | Pointer to **bool** | Privilege for a group to access and manage VPN. | [optional] |
+|**AccessAndManageApiGateway** | Pointer to **bool** | Privilege for a group to access and manage API Gateway. | [optional] |
+|**AccessAndManageKaas** | Pointer to **bool** | Privilege for a group to access and manage KaaS. | [optional] |
+|**AccessAndManageNetworkFileStorage** | Pointer to **bool** | Privilege for a group to access and manage Network File Storage. | [optional] |
+|**AccessAndManageAiModelHub** | Pointer to **bool** | Privilege for a group to access and manage AI Model Hub. | [optional] |
+|**AccessAndManageIamResources** | Pointer to **bool** | Privilege for a group to access and manage Password Policies. | [optional] |
+|**CreateNetworkSecurityGroups** | Pointer to **bool** | Privilege for a group to access and manage Network Security Groups. | [optional] |
 
 ## Methods
 
@@ -465,6 +474,231 @@ SetManageDataplatform sets ManageDataplatform field to given value.
 `func (o *GroupProperties) HasManageDataplatform() bool`
 
 HasManageDataplatform returns a boolean if a field has been set.
+
+### GetAccessAndManageLogging
+
+`func (o *GroupProperties) GetAccessAndManageLogging() bool`
+
+GetAccessAndManageLogging returns the AccessAndManageLogging field if non-nil, zero value otherwise.
+
+### GetAccessAndManageLoggingOk
+
+`func (o *GroupProperties) GetAccessAndManageLoggingOk() (*bool, bool)`
+
+GetAccessAndManageLoggingOk returns a tuple with the AccessAndManageLogging field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageLogging
+
+`func (o *GroupProperties) SetAccessAndManageLogging(v bool)`
+
+SetAccessAndManageLogging sets AccessAndManageLogging field to given value.
+
+### HasAccessAndManageLogging
+
+`func (o *GroupProperties) HasAccessAndManageLogging() bool`
+
+HasAccessAndManageLogging returns a boolean if a field has been set.
+
+### GetAccessAndManageCdn
+
+`func (o *GroupProperties) GetAccessAndManageCdn() bool`
+
+GetAccessAndManageCdn returns the AccessAndManageCdn field if non-nil, zero value otherwise.
+
+### GetAccessAndManageCdnOk
+
+`func (o *GroupProperties) GetAccessAndManageCdnOk() (*bool, bool)`
+
+GetAccessAndManageCdnOk returns a tuple with the AccessAndManageCdn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageCdn
+
+`func (o *GroupProperties) SetAccessAndManageCdn(v bool)`
+
+SetAccessAndManageCdn sets AccessAndManageCdn field to given value.
+
+### HasAccessAndManageCdn
+
+`func (o *GroupProperties) HasAccessAndManageCdn() bool`
+
+HasAccessAndManageCdn returns a boolean if a field has been set.
+
+### GetAccessAndManageVpn
+
+`func (o *GroupProperties) GetAccessAndManageVpn() bool`
+
+GetAccessAndManageVpn returns the AccessAndManageVpn field if non-nil, zero value otherwise.
+
+### GetAccessAndManageVpnOk
+
+`func (o *GroupProperties) GetAccessAndManageVpnOk() (*bool, bool)`
+
+GetAccessAndManageVpnOk returns a tuple with the AccessAndManageVpn field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageVpn
+
+`func (o *GroupProperties) SetAccessAndManageVpn(v bool)`
+
+SetAccessAndManageVpn sets AccessAndManageVpn field to given value.
+
+### HasAccessAndManageVpn
+
+`func (o *GroupProperties) HasAccessAndManageVpn() bool`
+
+HasAccessAndManageVpn returns a boolean if a field has been set.
+
+### GetAccessAndManageApiGateway
+
+`func (o *GroupProperties) GetAccessAndManageApiGateway() bool`
+
+GetAccessAndManageApiGateway returns the AccessAndManageApiGateway field if non-nil, zero value otherwise.
+
+### GetAccessAndManageApiGatewayOk
+
+`func (o *GroupProperties) GetAccessAndManageApiGatewayOk() (*bool, bool)`
+
+GetAccessAndManageApiGatewayOk returns a tuple with the AccessAndManageApiGateway field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageApiGateway
+
+`func (o *GroupProperties) SetAccessAndManageApiGateway(v bool)`
+
+SetAccessAndManageApiGateway sets AccessAndManageApiGateway field to given value.
+
+### HasAccessAndManageApiGateway
+
+`func (o *GroupProperties) HasAccessAndManageApiGateway() bool`
+
+HasAccessAndManageApiGateway returns a boolean if a field has been set.
+
+### GetAccessAndManageKaas
+
+`func (o *GroupProperties) GetAccessAndManageKaas() bool`
+
+GetAccessAndManageKaas returns the AccessAndManageKaas field if non-nil, zero value otherwise.
+
+### GetAccessAndManageKaasOk
+
+`func (o *GroupProperties) GetAccessAndManageKaasOk() (*bool, bool)`
+
+GetAccessAndManageKaasOk returns a tuple with the AccessAndManageKaas field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageKaas
+
+`func (o *GroupProperties) SetAccessAndManageKaas(v bool)`
+
+SetAccessAndManageKaas sets AccessAndManageKaas field to given value.
+
+### HasAccessAndManageKaas
+
+`func (o *GroupProperties) HasAccessAndManageKaas() bool`
+
+HasAccessAndManageKaas returns a boolean if a field has been set.
+
+### GetAccessAndManageNetworkFileStorage
+
+`func (o *GroupProperties) GetAccessAndManageNetworkFileStorage() bool`
+
+GetAccessAndManageNetworkFileStorage returns the AccessAndManageNetworkFileStorage field if non-nil, zero value otherwise.
+
+### GetAccessAndManageNetworkFileStorageOk
+
+`func (o *GroupProperties) GetAccessAndManageNetworkFileStorageOk() (*bool, bool)`
+
+GetAccessAndManageNetworkFileStorageOk returns a tuple with the AccessAndManageNetworkFileStorage field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageNetworkFileStorage
+
+`func (o *GroupProperties) SetAccessAndManageNetworkFileStorage(v bool)`
+
+SetAccessAndManageNetworkFileStorage sets AccessAndManageNetworkFileStorage field to given value.
+
+### HasAccessAndManageNetworkFileStorage
+
+`func (o *GroupProperties) HasAccessAndManageNetworkFileStorage() bool`
+
+HasAccessAndManageNetworkFileStorage returns a boolean if a field has been set.
+
+### GetAccessAndManageAiModelHub
+
+`func (o *GroupProperties) GetAccessAndManageAiModelHub() bool`
+
+GetAccessAndManageAiModelHub returns the AccessAndManageAiModelHub field if non-nil, zero value otherwise.
+
+### GetAccessAndManageAiModelHubOk
+
+`func (o *GroupProperties) GetAccessAndManageAiModelHubOk() (*bool, bool)`
+
+GetAccessAndManageAiModelHubOk returns a tuple with the AccessAndManageAiModelHub field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageAiModelHub
+
+`func (o *GroupProperties) SetAccessAndManageAiModelHub(v bool)`
+
+SetAccessAndManageAiModelHub sets AccessAndManageAiModelHub field to given value.
+
+### HasAccessAndManageAiModelHub
+
+`func (o *GroupProperties) HasAccessAndManageAiModelHub() bool`
+
+HasAccessAndManageAiModelHub returns a boolean if a field has been set.
+
+### GetAccessAndManageIamResources
+
+`func (o *GroupProperties) GetAccessAndManageIamResources() bool`
+
+GetAccessAndManageIamResources returns the AccessAndManageIamResources field if non-nil, zero value otherwise.
+
+### GetAccessAndManageIamResourcesOk
+
+`func (o *GroupProperties) GetAccessAndManageIamResourcesOk() (*bool, bool)`
+
+GetAccessAndManageIamResourcesOk returns a tuple with the AccessAndManageIamResources field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetAccessAndManageIamResources
+
+`func (o *GroupProperties) SetAccessAndManageIamResources(v bool)`
+
+SetAccessAndManageIamResources sets AccessAndManageIamResources field to given value.
+
+### HasAccessAndManageIamResources
+
+`func (o *GroupProperties) HasAccessAndManageIamResources() bool`
+
+HasAccessAndManageIamResources returns a boolean if a field has been set.
+
+### GetCreateNetworkSecurityGroups
+
+`func (o *GroupProperties) GetCreateNetworkSecurityGroups() bool`
+
+GetCreateNetworkSecurityGroups returns the CreateNetworkSecurityGroups field if non-nil, zero value otherwise.
+
+### GetCreateNetworkSecurityGroupsOk
+
+`func (o *GroupProperties) GetCreateNetworkSecurityGroupsOk() (*bool, bool)`
+
+GetCreateNetworkSecurityGroupsOk returns a tuple with the CreateNetworkSecurityGroups field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetCreateNetworkSecurityGroups
+
+`func (o *GroupProperties) SetCreateNetworkSecurityGroups(v bool)`
+
+SetCreateNetworkSecurityGroups sets CreateNetworkSecurityGroups field to given value.
+
+### HasCreateNetworkSecurityGroups
+
+`func (o *GroupProperties) HasCreateNetworkSecurityGroups() bool`
+
+HasCreateNetworkSecurityGroups returns a boolean if a field has been set.
 
 
 
