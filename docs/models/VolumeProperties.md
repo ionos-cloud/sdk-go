@@ -6,7 +6,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Type** | Pointer to **string** | Hardware type of the volume. DAS (Direct Attached Storage) could be used only in a composite call with a Cube server. | [optional] |
-|**Size** | **float32** | The size of the volume in GB. | |
+|**Size** | Pointer to **float32** | The size of the volume in GB. | [optional] |
 |**AvailabilityZone** | Pointer to **string** | The availability zone in which the volume should be provisioned. The storage volume will be provisioned on as few physical storage devices as possible, but this cannot be guaranteed upfront. This is uavailable for DAS (Direct Attached Storage), and subject to availability for SSD. | [optional] |
 |**Image** | Pointer to **string** | Image or snapshot ID to be used as template for this volume. | [optional] |
 |**ImagePassword** | Pointer to **string** | Initial password to be set for installed OS. Works with public images only. Not modifiable, forbidden in update requests. Password rules allows all characters from a-z, A-Z, 0-9. | [optional] |
@@ -32,7 +32,7 @@
 
 ### NewVolumeProperties
 
-`func NewVolumeProperties(size float32, ) *VolumeProperties`
+`func NewVolumeProperties() *VolumeProperties`
 
 NewVolumeProperties instantiates a new VolumeProperties object
 This constructor will assign default values to properties that have it defined,
@@ -116,6 +116,11 @@ and a boolean to check if the value has been set.
 
 SetSize sets Size field to given value.
 
+### HasSize
+
+`func (o *VolumeProperties) HasSize() bool`
+
+HasSize returns a boolean if a field has been set.
 
 ### GetAvailabilityZone
 

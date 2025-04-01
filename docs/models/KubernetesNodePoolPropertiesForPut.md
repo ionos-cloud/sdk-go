@@ -6,6 +6,7 @@
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | [optional] |
 |**NodeCount** | **int32** | The number of worker nodes of the node pool. | |
+|**ServerType** | Pointer to [**KubernetesNodePoolServerType**](KubernetesNodePoolServerType.md) |  | [optional] [default to DEDICATED_CORE]|
 |**K8sVersion** | Pointer to **string** | The Kubernetes version running in the node pool. Note that this imposes restrictions on which Kubernetes versions can run in the node pools of a cluster. Also, not all Kubernetes versions are suitable upgrade targets for all earlier versions. | [optional] |
 |**MaintenanceWindow** | Pointer to [**KubernetesMaintenanceWindow**](KubernetesMaintenanceWindow.md) |  | [optional] |
 |**AutoScaling** | Pointer to [**KubernetesAutoScaling**](KubernetesAutoScaling.md) |  | [optional] |
@@ -77,6 +78,31 @@ and a boolean to check if the value has been set.
 
 SetNodeCount sets NodeCount field to given value.
 
+
+### GetServerType
+
+`func (o *KubernetesNodePoolPropertiesForPut) GetServerType() KubernetesNodePoolServerType`
+
+GetServerType returns the ServerType field if non-nil, zero value otherwise.
+
+### GetServerTypeOk
+
+`func (o *KubernetesNodePoolPropertiesForPut) GetServerTypeOk() (*KubernetesNodePoolServerType, bool)`
+
+GetServerTypeOk returns a tuple with the ServerType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServerType
+
+`func (o *KubernetesNodePoolPropertiesForPut) SetServerType(v KubernetesNodePoolServerType)`
+
+SetServerType sets ServerType field to given value.
+
+### HasServerType
+
+`func (o *KubernetesNodePoolPropertiesForPut) HasServerType() bool`
+
+HasServerType returns a boolean if a field has been set.
 
 ### GetK8sVersion
 

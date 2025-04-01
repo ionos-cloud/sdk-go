@@ -5,7 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
-|**Protocol** | **string** | The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests). | |
+|**Protocol** | Pointer to **string** | The protocol for the rule. Property cannot be modified after it is created (disallowed in update requests). | [optional] |
 |**SourceMac** | Pointer to **NullableString** | Only traffic originating from the respective MAC address is allowed. Valid format: aa:bb:cc:dd:ee:ff. Value null allows traffic from any MAC address. | [optional] |
 |**IpVersion** | Pointer to **NullableString** | The IP version for this rule. If sourceIp or targetIp are specified, you can omit this value - the IP version will then be deduced from the IP address(es) used; if you specify it anyway, it must match the specified IP address(es). If neither sourceIp nor targetIp are specified, this rule allows traffic only for the specified IP version. If neither sourceIp, targetIp nor ipVersion are specified, this rule will only allow IPv4 traffic. | [optional] |
 |**SourceIp** | Pointer to **NullableString** | Only traffic originating from the respective IP address (or CIDR block) is allowed. Value null allows traffic from any IP address (according to the selected ipVersion). | [optional] |
@@ -20,7 +20,7 @@
 
 ### NewFirewallruleProperties
 
-`func NewFirewallruleProperties(protocol string, ) *FirewallruleProperties`
+`func NewFirewallruleProperties() *FirewallruleProperties`
 
 NewFirewallruleProperties instantiates a new FirewallruleProperties object
 This constructor will assign default values to properties that have it defined,
@@ -79,6 +79,11 @@ and a boolean to check if the value has been set.
 
 SetProtocol sets Protocol field to given value.
 
+### HasProtocol
+
+`func (o *FirewallruleProperties) HasProtocol() bool`
+
+HasProtocol returns a boolean if a field has been set.
 
 ### GetSourceMac
 

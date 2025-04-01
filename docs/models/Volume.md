@@ -8,13 +8,13 @@
 |**Type** | Pointer to [**Type**](Type.md) | The type of object that has been created. | [optional] |
 |**Href** | Pointer to **string** | The URL to the object representation (absolute path). | [optional] [readonly] |
 |**Metadata** | Pointer to [**DatacenterElementMetadata**](DatacenterElementMetadata.md) |  | [optional] |
-|**Properties** | [**VolumeProperties**](VolumeProperties.md) |  | |
+|**Properties** | Pointer to [**VolumeProperties**](VolumeProperties.md) |  | [optional] |
 
 ## Methods
 
 ### NewVolume
 
-`func NewVolume(properties VolumeProperties, ) *Volume`
+`func NewVolume() *Volume`
 
 NewVolume instantiates a new Volume object
 This constructor will assign default values to properties that have it defined,
@@ -148,6 +148,11 @@ and a boolean to check if the value has been set.
 
 SetProperties sets Properties field to given value.
 
+### HasProperties
+
+`func (o *Volume) HasProperties() bool`
+
+HasProperties returns a boolean if a field has been set.
 
 
 

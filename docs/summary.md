@@ -116,6 +116,7 @@
 * [KubernetesNodePoolProperties](models/KubernetesNodePoolProperties.md)
 * [KubernetesNodePoolPropertiesForPost](models/KubernetesNodePoolPropertiesForPost.md)
 * [KubernetesNodePoolPropertiesForPut](models/KubernetesNodePoolPropertiesForPut.md)
+* [KubernetesNodePoolServerType](models/KubernetesNodePoolServerType.md)
 * [KubernetesNodePools](models/KubernetesNodePools.md)
 * [KubernetesNodeProperties](models/KubernetesNodeProperties.md)
 * [KubernetesNodes](models/KubernetesNodes.md)

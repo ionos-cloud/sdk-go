@@ -7,7 +7,8 @@
 |**Name** | **string** | A Kubernetes node pool name. Valid Kubernetes node pool name must be 63 characters or less and must be empty or begin and end with an alphanumeric character ([a-z0-9A-Z]) with dashes (-), underscores (_), dots (.), and alphanumerics between. | |
 |**DatacenterId** | **string** | The unique identifier of the VDC where the worker nodes of the node pool are provisioned.Note that the data center is located in the exact place where the parent cluster of the node pool is located. | |
 |**NodeCount** | **int32** | The number of worker nodes of the node pool. | |
-|**CpuFamily** | **string** | The CPU type for the nodes. | |
+|**CpuFamily** | Pointer to **string** | The CPU type for the nodes. | [optional] |
+|**ServerType** | Pointer to [**KubernetesNodePoolServerType**](KubernetesNodePoolServerType.md) |  | [optional] [default to DEDICATED_CORE]|
 |**CoresCount** | **int32** | The total number of cores for the nodes. | |
 |**RamSize** | **int32** | The RAM size for the nodes. Must be specified in multiples of 1024 MB, with a minimum size of 2048 MB. | |
 |**AvailabilityZone** | **string** | The availability zone in which the target VM should be provisioned. | |
@@ -26,7 +27,7 @@
 
 ### NewKubernetesNodePoolProperties
 
-`func NewKubernetesNodePoolProperties(name string, datacenterId string, nodeCount int32, cpuFamily string, coresCount int32, ramSize int32, availabilityZone string, storageType string, storageSize int32, ) *KubernetesNodePoolProperties`
+`func NewKubernetesNodePoolProperties(name string, datacenterId string, nodeCount int32, coresCount int32, ramSize int32, availabilityZone string, storageType string, storageSize int32, ) *KubernetesNodePoolProperties`
 
 NewKubernetesNodePoolProperties instantiates a new KubernetesNodePoolProperties object
 This constructor will assign default values to properties that have it defined,
@@ -120,6 +121,36 @@ and a boolean to check if the value has been set.
 
 SetCpuFamily sets CpuFamily field to given value.
 
+### HasCpuFamily
+
+`func (o *KubernetesNodePoolProperties) HasCpuFamily() bool`
+
+HasCpuFamily returns a boolean if a field has been set.
+
+### GetServerType
+
+`func (o *KubernetesNodePoolProperties) GetServerType() KubernetesNodePoolServerType`
+
+GetServerType returns the ServerType field if non-nil, zero value otherwise.
+
+### GetServerTypeOk
+
+`func (o *KubernetesNodePoolProperties) GetServerTypeOk() (*KubernetesNodePoolServerType, bool)`
+
+GetServerTypeOk returns a tuple with the ServerType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetServerType
+
+`func (o *KubernetesNodePoolProperties) SetServerType(v KubernetesNodePoolServerType)`
+
+SetServerType sets ServerType field to given value.
+
+### HasServerType
+
+`func (o *KubernetesNodePoolProperties) HasServerType() bool`
+
+HasServerType returns a boolean if a field has been set.
 
 ### GetCoresCount
 
