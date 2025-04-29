@@ -19,8 +19,10 @@
 |**DiscVirtioHotUnplug** | Pointer to **bool** | Hot-unplug capable Virt-IO drive (no reboot required). Not supported with Windows VMs. | [optional] |
 |**DiscScsiHotPlug** | Pointer to **bool** | Hot-plug capable SCSI drive (no reboot required). | [optional] |
 |**ExposeSerial** | Pointer to **bool** | If set to &#x60;true&#x60; will expose the serial id of the disk attached to the server. If set to &#x60;false&#x60; will not expose the serial id. Some operating systems or software solutions require the serial id to be exposed to work properly. Exposing the serial  can influence licensed software (e.g. Windows) behavior | [optional] [default to false]|
+|**RequireLegacyBios** | Pointer to **bool** | Indicates if the image requires the legacy BIOS for compatibility or specific needs. | [optional] [default to true]|
 |**DiscScsiHotUnplug** | Pointer to **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
 |**LicenceType** | Pointer to **string** | OS type of this snapshot | [optional] |
+|**ApplicationType** | Pointer to **string** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] [default to "UNKNOWN"]|
 
 ## Methods
 
@@ -416,6 +418,31 @@ SetExposeSerial sets ExposeSerial field to given value.
 
 HasExposeSerial returns a boolean if a field has been set.
 
+### GetRequireLegacyBios
+
+`func (o *SnapshotProperties) GetRequireLegacyBios() bool`
+
+GetRequireLegacyBios returns the RequireLegacyBios field if non-nil, zero value otherwise.
+
+### GetRequireLegacyBiosOk
+
+`func (o *SnapshotProperties) GetRequireLegacyBiosOk() (*bool, bool)`
+
+GetRequireLegacyBiosOk returns a tuple with the RequireLegacyBios field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequireLegacyBios
+
+`func (o *SnapshotProperties) SetRequireLegacyBios(v bool)`
+
+SetRequireLegacyBios sets RequireLegacyBios field to given value.
+
+### HasRequireLegacyBios
+
+`func (o *SnapshotProperties) HasRequireLegacyBios() bool`
+
+HasRequireLegacyBios returns a boolean if a field has been set.
+
 ### GetDiscScsiHotUnplug
 
 `func (o *SnapshotProperties) GetDiscScsiHotUnplug() bool`
@@ -465,6 +492,31 @@ SetLicenceType sets LicenceType field to given value.
 `func (o *SnapshotProperties) HasLicenceType() bool`
 
 HasLicenceType returns a boolean if a field has been set.
+
+### GetApplicationType
+
+`func (o *SnapshotProperties) GetApplicationType() string`
+
+GetApplicationType returns the ApplicationType field if non-nil, zero value otherwise.
+
+### GetApplicationTypeOk
+
+`func (o *SnapshotProperties) GetApplicationTypeOk() (*string, bool)`
+
+GetApplicationTypeOk returns a tuple with the ApplicationType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplicationType
+
+`func (o *SnapshotProperties) SetApplicationType(v string)`
+
+SetApplicationType sets ApplicationType field to given value.
+
+### HasApplicationType
+
+`func (o *SnapshotProperties) HasApplicationType() bool`
+
+HasApplicationType returns a boolean if a field has been set.
 
 
 

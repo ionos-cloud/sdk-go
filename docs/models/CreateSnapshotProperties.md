@@ -8,6 +8,7 @@
 |**Description** | Pointer to **string** | The description of the snapshot | [optional] |
 |**SecAuthProtection** | Pointer to **bool** | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc. | [optional] |
 |**LicenceType** | Pointer to **string** | OS type of this Snapshot | [optional] |
+|**ApplicationType** | Pointer to **string** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] [default to "UNKNOWN"]|
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetLicenceType sets LicenceType field to given value.
 `func (o *CreateSnapshotProperties) HasLicenceType() bool`
 
 HasLicenceType returns a boolean if a field has been set.
+
+### GetApplicationType
+
+`func (o *CreateSnapshotProperties) GetApplicationType() string`
+
+GetApplicationType returns the ApplicationType field if non-nil, zero value otherwise.
+
+### GetApplicationTypeOk
+
+`func (o *CreateSnapshotProperties) GetApplicationTypeOk() (*string, bool)`
+
+GetApplicationTypeOk returns a tuple with the ApplicationType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetApplicationType
+
+`func (o *CreateSnapshotProperties) SetApplicationType(v string)`
+
+SetApplicationType sets ApplicationType field to given value.
+
+### HasApplicationType
+
+`func (o *CreateSnapshotProperties) HasApplicationType() bool`
+
+HasApplicationType returns a boolean if a field has been set.
 
 
 

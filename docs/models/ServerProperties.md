@@ -16,6 +16,7 @@
 |**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE and VCPU servers. | [optional] |
 |**Type** | Pointer to **string** | Server type: CUBE, ENTERPRISE or VCPU. | [optional] |
 |**PlacementGroupId** | Pointer to **string** | The placement group ID that belongs to this server; Requires system privileges, for internal usage only | [optional] |
+|**NicMultiQueue** | Pointer to **bool** | Activate or deactivate the Multi Queue feature on all NICs of this server. This feature is beneficial to  enable when the NICs are experiencing performance issues (e.g. low throughput). Toggling this feature will also initiate a restart of the server. If the specified value is &#x60;true&#x60;, the feature will  be activated; if it is not specified or set to &#x60;false&#x60;, the feature will be deactivated. It is not allowed for servers of type Cube. | [optional] [default to false]|
 
 ## Methods
 
@@ -335,6 +336,31 @@ SetPlacementGroupId sets PlacementGroupId field to given value.
 `func (o *ServerProperties) HasPlacementGroupId() bool`
 
 HasPlacementGroupId returns a boolean if a field has been set.
+
+### GetNicMultiQueue
+
+`func (o *ServerProperties) GetNicMultiQueue() bool`
+
+GetNicMultiQueue returns the NicMultiQueue field if non-nil, zero value otherwise.
+
+### GetNicMultiQueueOk
+
+`func (o *ServerProperties) GetNicMultiQueueOk() (*bool, bool)`
+
+GetNicMultiQueueOk returns a tuple with the NicMultiQueue field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetNicMultiQueue
+
+`func (o *ServerProperties) SetNicMultiQueue(v bool)`
+
+SetNicMultiQueue sets NicMultiQueue field to given value.
+
+### HasNicMultiQueue
+
+`func (o *ServerProperties) HasNicMultiQueue() bool`
+
+HasNicMultiQueue returns a boolean if a field has been set.
 
 
 
