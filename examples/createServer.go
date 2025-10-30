@@ -137,8 +137,8 @@ func (as apiService) createServerAndWaitUntilDone(dcId string) (*ionoscloud.Serv
 func (as apiService) createDatacenter(name, description, location string) (ionoscloud.Datacenter, *ionoscloud.APIResponse, error) {
 	// The required parameter for datacenter creation is: 'location'.
 	// Creates the datacenter structure and populates it
-	dc := ionoscloud.Datacenter{
-		Properties: &ionoscloud.DatacenterProperties{
+	dc := ionoscloud.DatacenterPost{
+		Properties: &ionoscloud.DatacenterPropertiesPost{
 			Name:        &name,
 			Description: &description,
 			Location:    &location,

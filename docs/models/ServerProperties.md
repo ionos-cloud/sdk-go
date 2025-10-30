@@ -16,7 +16,7 @@
 |**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE and VCPU servers. | [optional] |
 |**Type** | Pointer to **string** | Server type: CUBE, ENTERPRISE or VCPU. | [optional] |
 |**PlacementGroupId** | Pointer to **string** | The placement group ID that belongs to this server; Requires system privileges, for internal usage only | [optional] |
-|**NicMultiQueue** | Pointer to **bool** | Activate or deactivate the Multi Queue feature on all NICs of this server. This feature is beneficial to  enable when the NICs are experiencing performance issues (e.g. low throughput). Toggling this feature will also initiate a restart of the server. If the specified value is &#x60;true&#x60;, the feature will  be activated; if it is not specified or set to &#x60;false&#x60;, the feature will be deactivated. It is not allowed for servers of type Cube. | [optional] [default to false]|
+|**NicMultiQueue** | Pointer to **bool** | Activate or deactivate the Multi Queue feature on all NICs of this server. This feature is beneficial to  enable when the NICs are experiencing performance issues (e.g. low throughput). Toggling this feature will also initiate a restart of the server. If the specified value is &#x60;true&#x60;, the feature will  be activated; if it is not specified or set to &#x60;false&#x60;, the feature will be deactivated. It is not allowed for servers of type Cube. | [optional] |
 
 ## Methods
 

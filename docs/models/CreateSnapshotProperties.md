@@ -8,7 +8,7 @@
 |**Description** | Pointer to **string** | The description of the snapshot | [optional] |
 |**SecAuthProtection** | Pointer to **bool** | Flag representing if extra protection is enabled on snapshot e.g. Two Factor protection etc. | [optional] |
 |**LicenceType** | Pointer to **string** | OS type of this Snapshot | [optional] |
-|**ApplicationType** | Pointer to **string** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] [default to "UNKNOWN"]|
+|**ApplicationType** | Pointer to **string** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] |
 
 ## Methods
 

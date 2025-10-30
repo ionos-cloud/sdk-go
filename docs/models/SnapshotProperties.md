@@ -22,7 +22,7 @@
 |**RequireLegacyBios** | Pointer to **bool** | Indicates if the image requires the legacy BIOS for compatibility or specific needs. | [optional] [default to true]|
 |**DiscScsiHotUnplug** | Pointer to **bool** | Is capable of SCSI drive hot unplug (no reboot required). This works only for non-Windows virtual Machines. | [optional] |
 |**LicenceType** | Pointer to **string** | OS type of this snapshot | [optional] |
-|**ApplicationType** | Pointer to **string** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] [default to "UNKNOWN"]|
+|**ApplicationType** | Pointer to **string** | The type of application that is hosted on this resource.  Only public images can have an Application type different than UNKNOWN. | [optional] |
 
 ## Methods
 
