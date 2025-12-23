@@ -4,17 +4,17 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-|**TemplateUuid** | Pointer to **string** | The ID of the template for creating a CUBE server; the available templates for CUBE servers can be found on the templates resource. | [optional] |
+|**TemplateUuid** | Pointer to **string** | The ID of the template for creating CUBE or GPU servers. If a template has GPU cards assigned, then it can only be used to create GPU servers, otherwise it can only be used for CUBE servers. The available templates can be found on the templates resource. | [optional] |
 |**Name** | Pointer to **string** | The name of the  resource. | [optional] |
 |**Hostname** | Pointer to **string** | The hostname of the  resource. Allowed characters are a-z, 0-9 and - (minus). Hostname should not start with minus and should not be longer than 63 characters. | [optional] |
-|**Cores** | Pointer to **int32** | The total number of cores for the enterprise server. | [optional] |
-|**Ram** | Pointer to **int32** | The memory size for the enterprise server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. | [optional] |
-|**AvailabilityZone** | Pointer to **string** | The availability zone in which the server should be provisioned. | [optional] |
+|**Cores** | Pointer to **int32** | The total number of cores for the server. It can not be supplied for the VMs that have to be created based on templates. | [optional] |
+|**Ram** | Pointer to **int32** | The memory size for the enterprise server in MB, such as 2048. Size must be specified in multiples of 256 MB with a minimum of 256 MB; however, if you set ramHotPlug to TRUE then you must use a minimum of 1024 MB. If you set the RAM size more than 240GB, then ramHotPlug will be set to FALSE and can not be set to TRUE unless RAM size not set to less than 240GB. It can not be supplied for the VMs that have to be created based on templates. | [optional] |
+|**AvailabilityZone** | Pointer to **string** | The availability zone in which the server should be provisioned. For CUBE and GPU servers, the only value accepted is &#39;AUTO&#39; | [optional] |
 |**VmState** | Pointer to **string** | Status of the virtual machine. | [optional] [readonly] |
 |**BootCdrom** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 |**BootVolume** | Pointer to [**ResourceReference**](ResourceReference.md) |  | [optional] |
 |**CpuFamily** | Pointer to **string** | CPU architecture on which server gets provisioned; not all CPU architectures are available in all datacenter regions; available CPU architectures can be retrieved from the datacenter resource; must not be provided for CUBE and VCPU servers. | [optional] |
-|**Type** | Pointer to **string** | Server type: CUBE, ENTERPRISE or VCPU. | [optional] |
+|**Type** | Pointer to **string** | Server type: CUBE, ENTERPRISE, VCPU or GPU. | [optional] |
 |**PlacementGroupId** | Pointer to **string** | The placement group ID that belongs to this server; Requires system privileges, for internal usage only | [optional] |
 |**NicMultiQueue** | Pointer to **bool** | Activate or deactivate the Multi Queue feature on all NICs of this server. This feature is beneficial to  enable when the NICs are experiencing performance issues (e.g. low throughput). Toggling this feature will also initiate a restart of the server. If the specified value is &#x60;true&#x60;, the feature will  be activated; if it is not specified or set to &#x60;false&#x60;, the feature will be deactivated. It is not allowed for servers of type Cube. | [optional] |
 

@@ -11,6 +11,7 @@
 |**Features** | Pointer to **[]string** | List of features supported by the location where this data center is provisioned. | [optional] [readonly] |
 |**SecAuthProtection** | Pointer to **bool** | Boolean value representing if the data center requires extra protection, such as two-step verification. | [optional] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | Array of features and CPU families available in a location | [optional] [readonly] |
+|**GpuArchitecture** | Pointer to [**[]GpuArchitectureProperties**](GpuArchitectureProperties.md) | The types of GPU cards that are available in the location where the data center is provisioned. | [optional] [readonly] |
 |**Ipv6CidrBlock** | Pointer to **NullableString** | This value is either &#39;null&#39; or contains an automatically-assigned /56 IPv6 CIDR block if IPv6 is enabled on this virtual data center. It can neither be changed nor removed. | [optional] [readonly] |
 |**DefaultSecurityGroupId** | Pointer to **string** | Optional property to define the default security group of the datacenter. | [optional] |
 
@@ -202,6 +203,31 @@ SetCpuArchitecture sets CpuArchitecture field to given value.
 `func (o *DatacenterProperties) HasCpuArchitecture() bool`
 
 HasCpuArchitecture returns a boolean if a field has been set.
+
+### GetGpuArchitecture
+
+`func (o *DatacenterProperties) GetGpuArchitecture() []GpuArchitectureProperties`
+
+GetGpuArchitecture returns the GpuArchitecture field if non-nil, zero value otherwise.
+
+### GetGpuArchitectureOk
+
+`func (o *DatacenterProperties) GetGpuArchitectureOk() (*[]GpuArchitectureProperties, bool)`
+
+GetGpuArchitectureOk returns a tuple with the GpuArchitecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGpuArchitecture
+
+`func (o *DatacenterProperties) SetGpuArchitecture(v []GpuArchitectureProperties)`
+
+SetGpuArchitecture sets GpuArchitecture field to given value.
+
+### HasGpuArchitecture
+
+`func (o *DatacenterProperties) HasGpuArchitecture() bool`
+
+HasGpuArchitecture returns a boolean if a field has been set.
 
 ### GetIpv6CidrBlock
 

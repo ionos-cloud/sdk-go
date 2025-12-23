@@ -8,6 +8,7 @@
 |**Volumes** | Pointer to [**AttachedVolumes**](AttachedVolumes.md) |  | [optional] |
 |**Nics** | Pointer to [**Nics**](Nics.md) |  | [optional] |
 |**Securitygroups** | Pointer to [**SecurityGroups**](SecurityGroups.md) |  | [optional] |
+|**Gpus** | Pointer to [**Gpus**](Gpus.md) |  | [optional] |
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetSecuritygroups sets Securitygroups field to given value.
 `func (o *ServerEntities) HasSecuritygroups() bool`
 
 HasSecuritygroups returns a boolean if a field has been set.
+
+### GetGpus
+
+`func (o *ServerEntities) GetGpus() Gpus`
+
+GetGpus returns the Gpus field if non-nil, zero value otherwise.
+
+### GetGpusOk
+
+`func (o *ServerEntities) GetGpusOk() (*Gpus, bool)`
+
+GetGpusOk returns a tuple with the Gpus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGpus
+
+`func (o *ServerEntities) SetGpus(v Gpus)`
+
+SetGpus sets Gpus field to given value.
+
+### HasGpus
+
+`func (o *ServerEntities) HasGpus() bool`
+
+HasGpus returns a boolean if a field has been set.
 
 
 

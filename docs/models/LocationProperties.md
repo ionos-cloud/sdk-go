@@ -8,6 +8,7 @@
 |**Features** | Pointer to **[]string** | A list of available features in the location. | [optional] [readonly] |
 |**ImageAliases** | Pointer to **[]string** | A list of image aliases available in the location. | [optional] [readonly] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | A list of available CPU types and related resources available in the location. | [optional] [readonly] |
+|**GpuArchitecture** | Pointer to [**[]GpuArchitectureProperties**](GpuArchitectureProperties.md) | The types of GPU cards that are available in the location. | [optional] [readonly] |
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetCpuArchitecture sets CpuArchitecture field to given value.
 `func (o *LocationProperties) HasCpuArchitecture() bool`
 
 HasCpuArchitecture returns a boolean if a field has been set.
+
+### GetGpuArchitecture
+
+`func (o *LocationProperties) GetGpuArchitecture() []GpuArchitectureProperties`
+
+GetGpuArchitecture returns the GpuArchitecture field if non-nil, zero value otherwise.
+
+### GetGpuArchitectureOk
+
+`func (o *LocationProperties) GetGpuArchitectureOk() (*[]GpuArchitectureProperties, bool)`
+
+GetGpuArchitectureOk returns a tuple with the GpuArchitecture field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGpuArchitecture
+
+`func (o *LocationProperties) SetGpuArchitecture(v []GpuArchitectureProperties)`
+
+SetGpuArchitecture sets GpuArchitecture field to given value.
+
+### HasGpuArchitecture
+
+`func (o *LocationProperties) HasGpuArchitecture() bool`
+
+HasGpuArchitecture returns a boolean if a field has been set.
 
 
 

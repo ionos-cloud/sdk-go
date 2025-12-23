@@ -9,6 +9,7 @@
 |**Ram** | **float32** | The RAM size in MB. | |
 |**StorageSize** | **float32** | The storage size in GB. | |
 |**Category** | **string** | The description of the template. | |
+|**Gpus** | Pointer to [**[]GpuTemplate**](GpuTemplate.md) | List of GPUs assigned to the template | [optional] |
 
 ## Methods
 
@@ -128,6 +129,31 @@ and a boolean to check if the value has been set.
 
 SetCategory sets Category field to given value.
 
+
+### GetGpus
+
+`func (o *TemplateProperties) GetGpus() []GpuTemplate`
+
+GetGpus returns the Gpus field if non-nil, zero value otherwise.
+
+### GetGpusOk
+
+`func (o *TemplateProperties) GetGpusOk() (*[]GpuTemplate, bool)`
+
+GetGpusOk returns a tuple with the Gpus field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetGpus
+
+`func (o *TemplateProperties) SetGpus(v []GpuTemplate)`
+
+SetGpus sets Gpus field to given value.
+
+### HasGpus
+
+`func (o *TemplateProperties) HasGpus() bool`
+
+HasGpus returns a boolean if a field has been set.
 
 
 
