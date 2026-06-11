@@ -5,6 +5,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 |**Name** | Pointer to **string** | The location name. | [optional] |
+|**MetroRegion** | Pointer to **string** | the metro region, to which this datacenter location belongs to | [optional] |
 |**Features** | Pointer to **[]string** | A list of available features in the location. | [optional] [readonly] |
 |**ImageAliases** | Pointer to **[]string** | A list of image aliases available in the location. | [optional] [readonly] |
 |**CpuArchitecture** | Pointer to [**[]CpuArchitectureProperties**](CpuArchitectureProperties.md) | A list of available CPU types and related resources available in the location. | [optional] [readonly] |
@@ -53,6 +54,31 @@ SetName sets Name field to given value.
 `func (o *LocationProperties) HasName() bool`
 
 HasName returns a boolean if a field has been set.
+
+### GetMetroRegion
+
+`func (o *LocationProperties) GetMetroRegion() string`
+
+GetMetroRegion returns the MetroRegion field if non-nil, zero value otherwise.
+
+### GetMetroRegionOk
+
+`func (o *LocationProperties) GetMetroRegionOk() (*string, bool)`
+
+GetMetroRegionOk returns a tuple with the MetroRegion field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetMetroRegion
+
+`func (o *LocationProperties) SetMetroRegion(v string)`
+
+SetMetroRegion sets MetroRegion field to given value.
+
+### HasMetroRegion
+
+`func (o *LocationProperties) HasMetroRegion() bool`
+
+HasMetroRegion returns a boolean if a field has been set.
 
 ### GetFeatures
 
