@@ -8,6 +8,7 @@
 |**Cores** | **float32** | The CPU cores count. | |
 |**Ram** | **float32** | The RAM size in MB. | |
 |**StorageSize** | **float32** | The storage size in GB. | |
+|**StorageType** | Pointer to **string** | The performance class type for the storage. The only possible value is &#39;SSD Premium&#39; | [optional] [readonly] |
 |**Category** | **string** | The description of the template. | |
 |**Gpus** | Pointer to [**[]GpuTemplate**](GpuTemplate.md) | List of GPUs assigned to the template | [optional] |
 
@@ -109,6 +110,31 @@ and a boolean to check if the value has been set.
 
 SetStorageSize sets StorageSize field to given value.
 
+
+### GetStorageType
+
+`func (o *TemplateProperties) GetStorageType() string`
+
+GetStorageType returns the StorageType field if non-nil, zero value otherwise.
+
+### GetStorageTypeOk
+
+`func (o *TemplateProperties) GetStorageTypeOk() (*string, bool)`
+
+GetStorageTypeOk returns a tuple with the StorageType field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetStorageType
+
+`func (o *TemplateProperties) SetStorageType(v string)`
+
+SetStorageType sets StorageType field to given value.
+
+### HasStorageType
+
+`func (o *TemplateProperties) HasStorageType() bool`
+
+HasStorageType returns a boolean if a field has been set.
 
 ### GetCategory
 
