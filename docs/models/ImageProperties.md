@@ -25,6 +25,7 @@
 |**ImageType** | Pointer to **string** | The image type. | [optional] [readonly] |
 |**Public** | Pointer to **bool** | Indicates whether the image is part of a public repository. | [optional] [readonly] |
 |**ImageAliases** | Pointer to **[]string** | List of image aliases mapped for this image | [optional] [readonly] |
+|**RequiredFeatures** | Pointer to **[]string** | The list of features required by this image. If &#x60;SEV-SNP&#x60; is part of this list, then the image supports Confidential Computing. | [optional] [readonly] |
 |**CloudInit** | Pointer to **string** | Cloud init compatibility. | [optional] |
 
 ## Methods
@@ -565,6 +566,31 @@ SetImageAliases sets ImageAliases field to given value.
 `func (o *ImageProperties) HasImageAliases() bool`
 
 HasImageAliases returns a boolean if a field has been set.
+
+### GetRequiredFeatures
+
+`func (o *ImageProperties) GetRequiredFeatures() []string`
+
+GetRequiredFeatures returns the RequiredFeatures field if non-nil, zero value otherwise.
+
+### GetRequiredFeaturesOk
+
+`func (o *ImageProperties) GetRequiredFeaturesOk() (*[]string, bool)`
+
+GetRequiredFeaturesOk returns a tuple with the RequiredFeatures field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetRequiredFeatures
+
+`func (o *ImageProperties) SetRequiredFeatures(v []string)`
+
+SetRequiredFeatures sets RequiredFeatures field to given value.
+
+### HasRequiredFeatures
+
+`func (o *ImageProperties) HasRequiredFeatures() bool`
+
+HasRequiredFeatures returns a boolean if a field has been set.
 
 ### GetCloudInit
 

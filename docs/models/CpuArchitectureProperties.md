@@ -8,6 +8,7 @@
 |**MaxCores** | Pointer to **int32** | The maximum number of cores available. | [optional] |
 |**MaxRam** | Pointer to **int32** | The maximum RAM size in MB. | [optional] |
 |**Vendor** | Pointer to **string** | A valid CPU vendor name. | [optional] |
+|**EnabledFeatures** | Pointer to **[]string** | A list of enabled CPU features. | [optional] |
 
 ## Methods
 
@@ -127,6 +128,31 @@ SetVendor sets Vendor field to given value.
 `func (o *CpuArchitectureProperties) HasVendor() bool`
 
 HasVendor returns a boolean if a field has been set.
+
+### GetEnabledFeatures
+
+`func (o *CpuArchitectureProperties) GetEnabledFeatures() []string`
+
+GetEnabledFeatures returns the EnabledFeatures field if non-nil, zero value otherwise.
+
+### GetEnabledFeaturesOk
+
+`func (o *CpuArchitectureProperties) GetEnabledFeaturesOk() (*[]string, bool)`
+
+GetEnabledFeaturesOk returns a tuple with the EnabledFeatures field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetEnabledFeatures
+
+`func (o *CpuArchitectureProperties) SetEnabledFeatures(v []string)`
+
+SetEnabledFeatures sets EnabledFeatures field to given value.
+
+### HasEnabledFeatures
+
+`func (o *CpuArchitectureProperties) HasEnabledFeatures() bool`
+
+HasEnabledFeatures returns a boolean if a field has been set.
 
 
 
