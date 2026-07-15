@@ -13,6 +13,7 @@
 |**Lans** | Pointer to [**[]KubernetesNodePoolLan**](KubernetesNodePoolLan.md) | The array of existing private LANs to attach to worker nodes. | [optional] |
 |**Labels** | Pointer to **map[string]string** | The labels attached to the node pool. | [optional] |
 |**Annotations** | Pointer to **map[string]string** | The annotations attached to the node pool. | [optional] |
+|**Taints** | Pointer to [**[]KubernetesNodePoolTaint**](KubernetesNodePoolTaint.md) | Taints applied to nodes in this pool. A taint repels pods that do not have a matching toleration. Maximum 50 taints per node pool. | [optional] |
 |**PublicIps** | Pointer to **[]string** | Optional array of reserved public IP addresses to be used by the nodes. The IPs must be from the exact location of the node pool&#39;s data center. If autoscaling is used, the array must contain one more IP than the maximum possible number of nodes (nodeCount+1 for a fixed number of nodes or maxNodeCount+1). The extra IP is used when the nodes are rebuilt. | [optional] |
 
 ## Methods
@@ -253,6 +254,31 @@ SetAnnotations sets Annotations field to given value.
 `func (o *KubernetesNodePoolPropertiesForPut) HasAnnotations() bool`
 
 HasAnnotations returns a boolean if a field has been set.
+
+### GetTaints
+
+`func (o *KubernetesNodePoolPropertiesForPut) GetTaints() []KubernetesNodePoolTaint`
+
+GetTaints returns the Taints field if non-nil, zero value otherwise.
+
+### GetTaintsOk
+
+`func (o *KubernetesNodePoolPropertiesForPut) GetTaintsOk() (*[]KubernetesNodePoolTaint, bool)`
+
+GetTaintsOk returns a tuple with the Taints field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTaints
+
+`func (o *KubernetesNodePoolPropertiesForPut) SetTaints(v []KubernetesNodePoolTaint)`
+
+SetTaints sets Taints field to given value.
+
+### HasTaints
+
+`func (o *KubernetesNodePoolPropertiesForPut) HasTaints() bool`
+
+HasTaints returns a boolean if a field has been set.
 
 ### GetPublicIps
 
